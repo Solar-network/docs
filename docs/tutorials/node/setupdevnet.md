@@ -1,20 +1,20 @@
 ---
-title: "How to Setup Your Swipechain Devnet Node"
+title: "How to Setup Your Solar Devnet Node"
 ---
 
-# How to Setup Your Swipechain Devnet Node
+# How to Setup Your Solar Devnet Node
 
 [[toc]]
 
 ## Introduction
 
-Here we will help you set up an Swipechain Devnet Node, which relays transactions and is used for testing development on the Swipechain Devnet network.
+Here we will help you set up an Solar Devnet Node, which relays transactions and is used for testing development on the Solar Devnet network.
 
 ## Bare-Metal
 
 ### Minimum Requirements
 
-The setup is only suitable as a Delegate Devnet Node or an Swipechain relay Node.
+The setup is only suitable as a Delegate Devnet Node or an Solar relay Node.
 
 - 1 Dedicated CPU Core
 - 4GB Ram
@@ -32,7 +32,7 @@ The setup is only suitable as a Delegate Devnet Node or an Swipechain relay Node
 
 #### Provision a Linux Server
 
-Running an Swipechain Core Devnet node is not like Bitcoin mining, and thus there are more options to choose from. AWS, Linode, Digital Ocean, Vultr, Microsoft Azure, and OVH are just a few recommended choices.
+Running an Solar Core Devnet node is not like Bitcoin mining, and thus there are more options to choose from. AWS, Linode, Digital Ocean, Vultr, Microsoft Azure, and OVH are just a few recommended choices.
 
 Delegate Nodes have a higher minimum requirement on the hardware specifications. These nodes are the security of our network
 so their uptime is of most importance in making sure the network runs smoothly.
@@ -95,7 +95,7 @@ give you a temporary password.
 
 #### Create a User
 
-Executing this guide as the root user should be avoided. Instead create a new, dedicated user to manage Swipechain related software. On your server type the following into the command line and press enter. Where `username` is the name you want to log in with:
+Executing this guide as the root user should be avoided. Instead create a new, dedicated user to manage Solar related software. On your server type the following into the command line and press enter. Where `username` is the name you want to log in with:
 
 ```bash
 adduser username
@@ -105,15 +105,15 @@ You will be prompted to enter in the users `full name` and some other informatio
 Feel free to leave them all blank as they are optional. When prompted, type `Y` and press enter.
 
 ```bash
-Adding user 'swipechain' ...
-Adding new group 'swipechain' (1000) ...
-Adding new user 'swipechain' (1000) with group 'swipechain' ...
-Creating home directory '/home/swipechain' ...
+Adding user 'solar' ...
+Adding new group 'solar' (1000) ...
+Adding new user 'solar' (1000) with group 'solar' ...
+Creating home directory '/home/solar' ...
 Copying files from '/etc/skel' ...
 Enter new UNIX password:
 Retype new UNIX password:
 passwd: password updated successfully
-Changing the user information for swipechain
+Changing the user information for solar
 Enter the new value, or press ENTER for the default
     Full Name []:
     Room Number []:
@@ -136,36 +136,36 @@ By default, this is a `superuser`.
 usermod -a -G sudo username
 ```
 
-### Installing Swipechain Core for Developers
+### Installing Solar Core for Developers
 
-We're now ready to begin installing Swipechain. The initial install may take a while
+We're now ready to begin installing Solar. The initial install may take a while
 and at times appear not to be doing anything. Please have patience and let the process
 finish.
 
-#### Switch to the Swipechain User
+#### Switch to the Solar User
 
-While installing Swipechain Devnet Core, we should use the Swipechain user that we created above and go to the base directory. To switch to it, run:
+While installing Solar Devnet Core, we should use the Solar user that we created above and go to the base directory. To switch to it, run:
 
 ```bash
 sudo su - username
 cd ~
 ```
 
-#### Running Swipechain Core Installation Script for Developers
+#### Running Solar Core Installation Script for Developers
 
-Installing Swipechain Devnet Core is a straightforward process. We will use Swipechain installer script that will install all of the necessary dependencies, Swipechain Core onto your server and publish configuration files for it. To install essentials run this command:
+Installing Solar Devnet Core is a straightforward process. We will use Solar installer script that will install all of the necessary dependencies, Solar Core onto your server and publish configuration files for it. To install essentials run this command:
 
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/Swipechain/swipechain-core/develop/install.sh)
+bash <(curl -s https://raw.githubusercontent.com/Solar/solar-core/develop/install.sh)
 ```
 
 You will be asked to input your current users password for sudo privileges. Write or paste it and press `enter` to start installation process.
 
 Process might take a while, don't interrupt it and wait for it to finish.
 
-#### Selecting Swipechain Core Network
+#### Selecting Solar Core Network
 
-Once installation of dependencies and Swipechain Core is finished you will need to select on which network you wish to operate. This can be achieved by pressing `up` or `down` arrow keys and confirming selection with `enter`.
+Once installation of dependencies and Solar Core is finished you will need to select on which network you wish to operate. This can be achieved by pressing `up` or `down` arrow keys and confirming selection with `enter`.
 
 `Mainnet` is public network, `Devnet` is development network for testing and `Testnet` is our private testing network.
 
@@ -176,7 +176,7 @@ Once installation of dependencies and Swipechain Core is finished you will need 
    testnet
 ```
 
-Devnet is to play with Swipechain for the first time, select `devnet` and request DSXP coins in our [public Telegram](https://t.me/Swipechain) or [faucet] (https://faucet.swipechain.org/).
+Devnet is to play with Solar for the first time, select `devnet` and request DSXP coins in our [public Telegram](https://t.me/Solar) or [faucet] (https://faucet.solar.network/).
 
 After you made your selection you will need to confirm by pressing `y` and confirm with `enter`
 
@@ -184,11 +184,11 @@ After you made your selection you will need to confirm by pressing `y` and confi
 ? Can you confirm? › (y/N)
 ```
 
-With that we have successfully installed Swipechain Devnet Core and published our configuration options.
+With that we have successfully installed Solar Devnet Core and published our configuration options.
 
-#### Configuring Swipechain Devnet Core Database
+#### Configuring Solar Devnet Core Database
 
-The Swipechain Devnet Core essential configuration is to configure database parameters. You will be presented with a prompt:
+The Solar Devnet Core essential configuration is to configure database parameters. You will be presented with a prompt:
 
 ```bash
 Would you like to configure the database? [y/N]:
@@ -199,33 +199,33 @@ Press `y` and confirm with `enter`.
 You can input any custom database credentials you want to use or use the one provided below:
 
 ```bash
-Enter the database username: swipechain
-Enter the database password: swipechain
-Enter the database name: swipechain
+Enter the database username: solar
+Enter the database password: solar
+Enter the database name: solar
 ```
 
 This will create PostgreSQL role and database to be used for storing blockchain data. 
 
 #### Configuring New Transaction Types
 
-Since Swipechain Devnet Core is running on 2.6 with new transaction types you need to include these by opening the `plugin.js` file .
+Since Solar Devnet Core is running on 2.6 with new transaction types you need to include these by opening the `plugin.js` file .
 
 ```bash
-nano ~/.config/swipechain-core/devnet/plugins.js
+nano ~/.config/solar-core/devnet/plugins.js
 ```
 
-Then add: `"@swipechain/core-magistrate-transactions": {},`
-after `"@swipechain/core-state": {},`
+Then add: `"@solar-network/core-magistrate-transactions": {},`
+after `"@solar-network/core-state": {},`
 Press `ctrl+x` and `Y` to save and exit the file.
 It should look like this:
 
 ```bash
 module.exports = {
-    "@swipechain/core-event-emitter": {},
-    "@swipechain/core-logger-pino": {},
-    "@swipechain/core-state": {},
-    "@swipechain/core-magistrate-transactions": {},
-    "@swipechain/core-database-postgres": {        connection: {
+    "@solar-network/core-event-emitter": {},
+    "@solar-network/core-logger-pino": {},
+    "@solar-network/core-state": {},
+    "@solar-network/core-magistrate-transactions": {},
+    "@solar-network/core-database-postgres": {        connection: {
             host: process.env.CORE_DB_HOST || "localhost",
             port: process.env.CORE_DB_PORT || 5432,
             database: process.env.CORE_DB_DATABASE || `${process.env.CORE_TOKEN}_${process.env.CORE_NETWORK_NAME}`,
@@ -238,22 +238,22 @@ module.exports = {
 
 That's it, you are all set!
 
-#### Starting Swipechain Relay Process
+#### Starting Solar Relay Process
 
-To start Swipechain relay process and with it synchronization process with Swipechain blockchain we need to start relay process with our integrated CLI:
+To start Solar relay process and with it synchronization process with Solar blockchain we need to start relay process with our integrated CLI:
 
 ```bash
-swipechain relay:start
+solar relay:start
 ```
 
 If the process has started you will get a message:
 
 ```bash
-Starting swipechain-relay... done
+Starting solar-relay... done
 ```
 
 ::: tip
-All CLI commands with description can be viewed at [CLI Commands](/guidebook/core/cli.html#available-commands) or by running `swipechain help` command.
+All CLI commands with description can be viewed at [CLI Commands](/guidebook/core/cli.html#available-commands) or by running `solar help` command.
 :::
 
 #### Putting your Delegate Passphrase on your Devnet Node
@@ -262,14 +262,14 @@ Option 1
 Use the command below to insert your passphrase:
 
 ```bash
-swipechain config:forger:bip39 --bip39="..."
+solar config:forger:bip39 --bip39="..."
 ```
 
 Option 2
 Open the file below:
 
 ```bash
-nano ~/.config/swipechain-core/devnet/delegates.json
+nano ~/.config/solar-core/devnet/delegates.json
 ```
 
 and put your phassphrase between secrets: [] and add "", then it should look like this:
@@ -281,7 +281,7 @@ secrets: ["passphrase(12words)"]
 Check if your wallet adress is right in the log files:
 
 ```bash
-"swipechain forger:log"
+"solar forger:log"
 ```
 
 #### Checking to See if your Devnet Node is Syncing
@@ -289,17 +289,17 @@ Check if your wallet adress is right in the log files:
 Your Devnet Node probably isn't syncing with the other nodes at the moment, run the commands below to select the right channel.
 
 ```bash
-swipechain relay:stop`
-swipechain config:cli --channel=next`
-swipechain relay:start`
+solar relay:stop`
+solar config:cli --channel=next`
+solar relay:start`
 ```
 
 #### Checking to See if Everything Is Working
 
-Now we want to see if the Swipechain relay process has started the synchronization process you can do that by running one of these two commands
+Now we want to see if the Solar relay process has started the synchronization process you can do that by running one of these two commands
 
 ```bash
-swipechain relay:log
+solar relay:log
 ```
 
 or
@@ -332,7 +332,7 @@ Simple things like whitelists can already go a long way to limit the access of o
 
 The first thing that we recommend that should be done on a relay that is used by your forger to retrieve all forging related information is to limit the Public API access.
 
-Open the `~/.config/swipechain-core/{NETWORK}/plugins.js` file and locate the `@swipechain/core-api` entry. By default you will see an entry for `whitelist: ["*"]` which means everyone can access your Public API which is recommended for relays but as this part of the guide is about a relay used for a forger we will change this setting.
+Open the `~/.config/solar-core/{NETWORK}/plugins.js` file and locate the `@solar-network/core-api` entry. By default you will see an entry for `whitelist: ["*"]` which means everyone can access your Public API which is recommended for relays but as this part of the guide is about a relay used for a forger we will change this setting.
 
 We recommend to limit the whitelist to IPs/Servers that you control or know are trusted. Simply changed the `whitelist` setting to `whitelist: ["ip-you-trust", "ip-you-trust", "ip-you-trust", ...]` and restart your relay. Now only the trusted IPs will be able to access your Public API.
 
@@ -346,8 +346,8 @@ We recommend to limit the whitelist to IPs/Servers that you control or know are 
 Great! You have a working node, but now you should think about securing it.
 It is especially important if you plan on using a node as your delegate/forging node on mainnet.
 
-In our next section, we'll discuss making sure your Swipechain Devnet Node is as secure as possible.
-As the Swipechain network grows, hacking attempts on delegate and relay nodes will become
+In our next section, we'll discuss making sure your Solar Devnet Node is as secure as possible.
+As the Solar network grows, hacking attempts on delegate and relay nodes will become
 more prevalent. Defending against DDOS and other various attacks is extremely
 important in securing the network.
 

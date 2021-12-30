@@ -9,7 +9,7 @@ title: "How to Setup VSCode and PlatformIO"
 
 This section will discuss setting up your development environment using VSCode and PlatformIO.
 
-VSCode and PlatformIO offer one of the most well-developed and flexible development environments for using Swipechain and IoT.
+VSCode and PlatformIO offer one of the most well-developed and flexible development environments for using Solar and IoT.
 It even has quite a few helpful development plugins as well (linters, git, snippets, etc).
 
 This setup is geared more towards advanced users; those who already know their way around an IDE, have coding experience, a basic understanding of IoT, and want to have more control over their projects.

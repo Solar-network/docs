@@ -5,13 +5,13 @@ title: "Vote Report"
 # Vote Report
 
 ::: tip
-You can find the source code of this package at [packages/core-vote-report](https://github.com/Swipechain/swipechain-core/tree/develop/packages/core-vote-report).
+You can find the source code of this package at [packages/core-vote-report](https://github.com/solar-network/solar-core/tree/develop/packages/core-vote-report).
 :::
 
 ## Installation
 
 ```bash
-yarn add @swipechain/core-vote-report
+yarn add @solar-network/core-vote-report
 ```
 
 ## Alias

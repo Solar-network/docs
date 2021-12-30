@@ -5,13 +5,13 @@ title: "Public API"
 # Public API
 
 ::: tip
-You can find the source code of this package at [packages/core-api](https://github.com/Swipechain/swipechain-core/tree/develop/packages/core-api/).
+You can find the source code of this package at [packages/core-api](https://github.com/solar-network/solar-core/tree/develop/packages/core-api/).
 :::
 
 ## Installation
 
 ```bash
-yarn add @swipechain/core-api
+yarn add @solar-network/core-api
 ```
 
 ## Alias

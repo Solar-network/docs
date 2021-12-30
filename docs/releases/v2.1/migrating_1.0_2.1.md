@@ -1,6 +1,6 @@
 # Migrating from v1.0 to v2.1
 
-Shortly after the release of `v2.0`, Swipechain Core was rewritten in [TypeScript](https://www.typescriptlang.org/), a typed superset of JavaScript, well suited for large projects as it prevents an entire class of runtime bugs. If you are on `v1`, we recommend upgrading to `v2.1` and skipping `v2.0`.
+Shortly after the release of `v2.0`, Solar Core was rewritten in [TypeScript](https://www.typescriptlang.org/), a typed superset of JavaScript, well suited for large projects as it prevents an entire class of runtime bugs. If you are on `v1`, we recommend upgrading to `v2.1` and skipping `v2.0`.
 
 The process is mostly the same, where we will port our custom configurations to the appropriate files, alter some defaults and then letting our `v2.1` nodes sync before excluding old nodes from our network.
 
@@ -27,13 +27,13 @@ Experience teaches us that migrations are always troublesome and that supporting
 
 The new `v2.1` implementation is backward compatible with `v1`; thus we can deploy our new nodes without forcing a migration. Your BridgeChain configuration is defined by the following files, which we will use in our `v2.1` configuration as well.
 
-- [config.mainnet.json](https://github.com/SwipeChain/swipechain-node/blob/mainnet/config.mainnet.json)
-- [genesisBlock.json](https://github.com/SwipeChain/swipechain-node/blob/mainnet/genesisBlock.json)
+- [config.mainnet.json](https://github.com/solar-network/solar-node/blob/mainnet/config.mainnet.json)
+- [genesisBlock.json](https://github.com/solar-network/solar-node/blob/mainnet/genesisBlock.json)
 
-Clone [Swipechain Core](https://github.com/SwipeChain/swipechain-core) so that we can configure our network. Make sure to verify that you have the latest tag.
+Clone [Solar Core](https://github.com/solar-network/solar-core) so that we can configure our network. Make sure to verify that you have the latest tag.
 
 ```bash
-git clone git@github.com:SwipeChain/swipechain-core
+git clone git@github.com:Solar/solar-core
 git checkout tags/<2.1.X> -b <branch_name>
 cd core
 ```
@@ -66,7 +66,7 @@ To us, `peers.json` is most relevant. The latter should look something like this
     }
   ],
   "sources": [
-    "https://raw.githubusercontent.com/SwipeChain/peers/master/devnet.json"
+    "https://raw.githubusercontent.com/Solar/peers/master/devnet.json"
   ]
 }
 ```
@@ -77,8 +77,8 @@ The `list` specifies initial peers, which our node will use to [discover](https:
 
 ```js
 module.exports = {
-  "@swipechain/core-event-emitter": {},
-  "@swipechain/core-logger-winston": {
+  "@solar-network/core-event-emitter": {},
+  "@solar-network/core-logger-winston": {
     transports: {
       console: {
         options: {
@@ -92,7 +92,7 @@ module.exports = {
       }
     }
   },
-  "@swipechain/core-database-postgres": {
+  "@solar-network/core-database-postgres": {
     connection: {
       host: process.env.CORE_DB_HOST || "localhost",
       port: process.env.CORE_DB_PORT || 5432,
@@ -103,7 +103,7 @@ module.exports = {
       password: process.env.CORE_DB_PASSWORD || "password"
     }
   },
-  "@swipechain/core-transaction-pool": {
+  "@solar-network/core-transaction-pool": {
     enabled: !process.env.CORE_TRANSACTION_POOL_DISABLED,
     maxTransactionsPerSender:
       process.env.CORE_TRANSACTION_POOL_MAX_PER_SENDER || 300,
@@ -125,22 +125,22 @@ module.exports = {
       }
     }
   },
-  "@swipechain/core-p2p": {
+  "@solar-network/core-p2p": {
     host: process.env.CORE_P2P_HOST || "0.0.0.0",
     port: process.env.CORE_P2P_PORT || 4002,
     minimumNetworkReach: 5,
     coldStart: 5
   },
-  "@swipechain/core-blockchain": {
+  "@solar-network/core-blockchain": {
     fastRebuild: false
   },
-  "@swipechain/core-api": {
+  "@solar-network/core-api": {
     enabled: !process.env.CORE_API_DISABLED,
     host: process.env.CORE_API_HOST || "0.0.0.0",
     port: process.env.CORE_API_PORT || 4003,
     whitelist: ["*"]
   },
-  "@swipechain/core-webhooks": {
+  "@solar-network/core-webhooks": {
     enabled: process.env.CORE_WEBHOOKS_ENABLED,
     server: {
       enabled: process.env.CORE_WEBHOOKS_API_ENABLED,
@@ -149,22 +149,22 @@ module.exports = {
       whitelist: ["127.0.0.1", "::ffff:127.0.0.1"]
     }
   },
-  "@swipechain/core-graphql": {
+  "@solar-network/core-graphql": {
     enabled: process.env.CORE_GRAPHQL_ENABLED,
     host: process.env.CORE_GRAPHQL_HOST || "0.0.0.0",
     port: process.env.CORE_GRAPHQL_PORT || 4005
   },
-  "@swipechain/core-forger": {
+  "@solar-network/core-forger": {
     hosts: [`http://127.0.0.1:${process.env.CORE_P2P_PORT || 4002}`]
   },
-  "@swipechain/core-json-rpc": {
+  "@solar-network/core-json-rpc": {
     enabled: process.env.CORE_JSON_RPC_ENABLED,
     host: process.env.CORE_JSON_RPC_HOST || "0.0.0.0",
     port: process.env.CORE_JSON_RPC_PORT || 8080,
     allowRemote: false,
     whitelist: ["127.0.0.1", "::ffff:127.0.0.1"]
   },
-  "@swipechain/core-snapshots": {}
+  "@solar-network/core-snapshots": {}
 };
 ```
 
@@ -203,7 +203,7 @@ You can copy the `index.ts` and `network.json` from an existing directory (i.e.,
 }
 ```
 
-If your BridgeChain was created during `v1.0.X`, you most likely copied Swipechain's milestones. If not, edit this file according to your own milestones.
+If your BridgeChain was created during `v1.0.X`, you most likely copied Solar's milestones. If not, edit this file according to your own milestones.
 
 #### milestones.json
 
@@ -386,7 +386,7 @@ We are going to start a relay node, which is the equivalent of a standard `v1` n
 yarn setup
 ```
 
-This might take a while, as lerna obtains all dependencies required for `Swipechain Core`. Once the process is done, run the following command to start the synchronization process:
+This might take a while, as lerna obtains all dependencies required for `Solar Core`. Once the process is done, run the following command to start the synchronization process:
 
 ```bash
 (cd packages/core && yarn start:MyNet)

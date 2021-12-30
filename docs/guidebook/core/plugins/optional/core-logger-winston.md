@@ -5,13 +5,13 @@ title: "Logger - Winston"
 # Logger - Winston
 
 ::: tip
-You can find the source code of this package at [packages/core-logger-winston](https://github.com/Swipechain/swipechain-core/tree/develop/packages/core-logger-winston).
+You can find the source code of this package at [packages/core-logger-winston](https://github.com/solar-network/solar-core/tree/develop/packages/core-logger-winston).
 :::
 
 ## Installation
 
 ```bash
-yarn add @swipechain/core-logger-winston
+yarn add @solar-network/core-logger-winston
 ```
 
 ## Alias

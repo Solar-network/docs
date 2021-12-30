@@ -1,6 +1,6 @@
-# How to Send Your First Transaction Using the Swipechain SDK
+# How to Send Your First Transaction Using the Solar SDK
 
-We will use the client and crypto libraries to send an Swipechain transaction programmatically. You will see how the client and crypto libraries work together to provide a comprehensive base for any Swipechain project and learn how to configure the SDKs to work alongside your testnet.
+We will use the client and crypto libraries to send an Solar transaction programmatically. You will see how the client and crypto libraries work together to provide a comprehensive base for any Solar project and learn how to configure the SDKs to work alongside your testnet.
 
 ## Getting Started
 
@@ -12,7 +12,7 @@ Finally, to send a transaction, we need our testnet to be running. So before we 
 
 ## Connect to Testnet
 
-With our testnet up and running, the first thing we need to do is connect to it. All interactions between Swipechain Nodes and the outside world happen through the Public API, which is a REST API facilitating different [actions](/api/) on the blockchain.
+With our testnet up and running, the first thing we need to do is connect to it. All interactions between Solar Nodes and the outside world happen through the Public API, which is a REST API facilitating different [actions](/api/) on the blockchain.
 
 It is possible to interact with a node directly through HTTP without using any programming language at all. By default, the Public API for testnet opens a connection on your local machine at `http://0.0.0.0:4003/api`. We can check out newly forged [blocks](http://0.0.0.0:4003/api/blocks) in our browser with a running testnet. You should see a response showing you all the (empty) blocks your testnet forgers have recently created.
 
@@ -22,22 +22,22 @@ If the response you see is hard to read, consider downloading a JSON Viewer for 
 
 :::
 
-Sending complex requests directly in your browser's URL window by typing them out is neither fun nor efficient. Instead, we can leverage one of Swipechain's most popular features: the client SDKs available in virtually all major programming languages. These SDKs streamline interacting with the Swipechain blockchain no matter your language.
+Sending complex requests directly in your browser's URL window by typing them out is neither fun nor efficient. Instead, we can leverage one of Solar's most popular features: the client SDKs available in virtually all major programming languages. These SDKs streamline interacting with the Solar blockchain no matter your language.
 
 ::: tip
 
-We attempt to have code examples in all supported languages. If you find a mistake/missing snippet, add an issue or create a pull request in the [repository](https://github.com/SwipeChain/swipechain-docs).
+We attempt to have code examples in all supported languages. If you find a mistake/missing snippet, add an issue or create a pull request in the [repository](https://github.com/solar-network/docs).
 
 :::
 
-All SDK implementations are split into two libraries. The `client` library is responsible for sending requests and interpreting responses between your application and Swipechain nodes. By contrast, the `crypto` library is responsible for building and signing transactions and validating payloads.
+All SDK implementations are split into two libraries. The `client` library is responsible for sending requests and interpreting responses between your application and Solar nodes. By contrast, the `crypto` library is responsible for building and signing transactions and validating payloads.
 
 We'll make extensive use of both libraries. Instructions on installation and more can be found in the respective [client](/sdk/client) and [crypto](/sdk/cryptography) documentation.
 
 To connect to our testnet, we'll need two pieces of data to pass to our client:
 
 1. The URL containing the location of the node serving as Public API endpoint.
-2. The version of the Swipechain API we want to access. 1 is for API v1, 2 is for API v2. If possible, always go for v2.
+2. The version of the Solar API we want to access. 1 is for API v1, 2 is for API v2. If possible, always go for v2.
 
 ::: tip
 
@@ -52,7 +52,7 @@ As mentioned above, by default our testnet will connect its Public API to the [h
 ::: tab javascript
 
 ```js
-const { Connection } = require("@swipechain/client");
+const { Connection } = require("@solar-network/client");
 const connection = new Connection("http://0.0.0.0:4003/api/v2");
 ```
 
@@ -62,8 +62,8 @@ const connection = new Connection("http://0.0.0.0:4003/api/v2");
 
 ```java
 import com.google.gson.internal.LinkedTreeMap;
-import org.swipechain.client.Connection;
-import org.swipechain.client.api.two.Two;
+import org.solar.client.Connection;
+import org.solar.client.api.two.Two;
 
 import java.util.HashMap;
 import java.io.IOException;
@@ -83,8 +83,8 @@ public class Main {
 ::: tab .NET
 
 ```csharp
-using SwipeChain.Client;
-using SwipeChain.Client.API.Two;
+using Solar.Client;
+using Solar.Client.API.Two;
 
 static void Main(string[] args)
 {
@@ -107,7 +107,7 @@ static void Main(string[] args)
 
 require_once('vendor/autoload.php');
 
-use SwipeChain\Client\Connection;
+use Solar\Client\Connection;
 
 $connection = new Connection([
     'host' => 'http://0.0.0.0:4003/api/',
@@ -119,9 +119,9 @@ $connection = new Connection([
 ::: tab python
 
 ```python
-from client import SwipechainClient
+from client import SolarClient
 
-client = SwipechainClient('http://127.0.0.1:4003/api')
+client = SolarClient('http://127.0.0.1:4003/api')
 ```
 
 :::
@@ -134,16 +134,16 @@ package main
 import (
     "net/url"
 
-    swipechain "github.com/SwipeChain/go-client/client"
+    solar "github.com/Solar/go-client/client"
 )
 
 func main() {
     // OPTIONAL: client accepts a *http.Client.
     // Defaults to http.DefaultClient
-    client := swipechain.NewClient(nil)
+    client := solar.NewClient(nil)
 
     // OPTIONAL: You can specify the URL of your choice.
-    // Defaults to "https://dexplorer.swipechain.org:8443/api/"
+    // Defaults to "https://dexplorer.solar.network:8443/api/"
     url, _ := url.Parse("http://0.0.0.0:4003")
     client.BaseURL = url
 }
@@ -154,7 +154,7 @@ func main() {
 ::: tab C++
 
 ```cpp
-Swipechain::Client::Connection<Swipechain::Client::Api> connection("167.114.29.54", 4003);
+Solar::Client::Connection<Solar::Client::Api> connection("167.114.29.54", 4003);
 ```
 
 :::
@@ -162,11 +162,11 @@ Swipechain::Client::Connection<Swipechain::Client::Api> connection("167.114.29.5
 ::: tab ruby
 
 ```ruby
-require 'SwipeChain/swipechain-client'
+require 'Solar/solar-client'
 
-manager = SwipeChain::Client::ConnectionManager.new()
+manager = Solar::Client::ConnectionManager.new()
 
-manager.connect(SwipeChain::Client::Connection.new({
+manager.connect(Solar::Client::Connection.new({
   host: "http://0.0.0.0:4003/api/",
   version: 2
 }), 'main')
@@ -186,10 +186,10 @@ let conn = Connection(host: "http://0.0.0.0:4003/api")
 ::: tab rust
 
 ```rust
-extern crate swipechainecosystem_client;
+extern crate solarecosystem_client;
 
-use swipechainecosystem_client::connection::Connection;
-use swipechainecosystem_client::api::two::Two;
+use solarecosystem_client::connection::Connection;
+use solarecosystem_client::api::two::Two;
 
 fn main() {
     let v3 = Connection::<Two>::new("http://0.0.0.0:4003/api/");
@@ -203,7 +203,7 @@ fn main() {
 ::: tab elixir
 
 ```elixir
-iex > client = SwipeChain.Client.new(%{
+iex > client = Solar.Client.new(%{
 ... >             host: "http://0.0.0.0:4003/api",
 ... >             nethash: "578e820911f24e039733b45e4882b73e301f813a0d2c31330dafda84534ffa23",
 ... >             version: "1.1.1"
@@ -276,7 +276,7 @@ print(client.blocks.all(page=5, limit=10))
 
 ```go
 func main() {
-    query := &swipechainClient.Pagination{Limit: 10}
+    query := &solarClient.Pagination{Limit: 10}
     response, _, _ := client.Blocks.List(context.Background(), query)
 }
 ```
@@ -331,7 +331,7 @@ let blocks = v2.blocks.all(&params);
 ::: tab elixir
 
 ```elixir
-iex> SwipeChain.Client.API.Two.Blocks.list(client)
+iex> Solar.Client.API.Two.Blocks.list(client)
 ```
 
 :::
@@ -342,7 +342,7 @@ With any luck, the data you'll get back from that request will very closely rese
 
 ## Changing Config Manager
 
-At some point during the tutorial, you might run into some network-related bugs. By default, as of the time of writing, the `crypto` and `client` libraries are configured to work on devnet unless explicitly told otherwise. As devnet is the ecosystem-wide testing ground for the new Swipechain Core, setting devnet as the default ensures that community testers can set up nodes and applications with a minimum of overhead.
+At some point during the tutorial, you might run into some network-related bugs. By default, as of the time of writing, the `crypto` and `client` libraries are configured to work on devnet unless explicitly told otherwise. As devnet is the ecosystem-wide testing ground for the new Solar Core, setting devnet as the default ensures that community testers can set up nodes and applications with a minimum of overhead.
 
 However, there are some network-level differences between testnet and devnet that will cause some problems in our application if left unaddressed. To solve this, we need to tell our application to use the testnet settings.
 
@@ -355,8 +355,8 @@ To do so, import the `Managers` package from `crypto`, then tell it to use the  
 ::: tab javascript
 
 ```js
-const { Connection } = require("@swipechain/client");
-const { Managers } = require("@swipechain/crypto");
+const { Connection } = require("@solar-network/client");
+const { Managers } = require("@solar-network/crypto");
 Managers.configManager.setFromPreset("testnet");
 
 const connection = new Connection("http://my.node.ip:port/api/v2");
@@ -395,7 +395,7 @@ set_custom_network(epoch, version, wif)
 package main
 
 import (
-    crypto "github.com/SwipeChain/go-crypto/crypto"
+    crypto "github.com/Solar/go-crypto/crypto"
 )
 
 func main() {
@@ -427,7 +427,7 @@ Address address = Address::fromPassphrase(passphrase, devnetByte);
 ```
 
 ````cpp
-uint64_t epoch = Swipechain::Crypto::Utils::Slot::epoch(Swipechain::Crypto::Networks::Devnet);
+uint64_t epoch = Solar::Crypto::Utils::Slot::epoch(Solar::Crypto::Networks::Devnet);
 
 //  'epoch' output: 1490101200
 :::
@@ -452,9 +452,9 @@ After doing so, our set up is complete, and we are ready to start sending transa
 
 To send a transaction, we need two an account to send the transaction from, and an account to receive the transaction.
 
-Fortunately, our testnet comes equipped with 51 accounts out of the box: our forging delegates. By now, if your testnet has been running for more than a couple minutes, each of your delegates should have received forging rewards for creating blocks, so we can be sure that our accounts have enough Swipechain to send a transaction. We need to means of accessing those funds.
+Fortunately, our testnet comes equipped with 51 accounts out of the box: our forging delegates. By now, if your testnet has been running for more than a couple minutes, each of your delegates should have received forging rewards for creating blocks, so we can be sure that our accounts have enough Solar to send a transaction. We need to means of accessing those funds.
 
-To do so, we'll need to look in the directory containing our testnet files. There, in the `packages/core` directory, we'll find a `lib` folder containing all of the application files used by the `core` package. Included there is a `config` directory, which holds all of the configuration settings for each network supported by Swipechain Core out of the box. Inside the `testnet` config directory, we find a file called `delegates.json`.
+To do so, we'll need to look in the directory containing our testnet files. There, in the `packages/core` directory, we'll find a `lib` folder containing all of the application files used by the `core` package. Included there is a `config` directory, which holds all of the configuration settings for each network supported by Solar Core out of the box. Inside the `testnet` config directory, we find a file called `delegates.json`.
 
 If you open that file, you should see some information about dynamic fees, followed by a list of passphrases under the key `secrets`. Each of those passphrases represents a single delegate on our testnet. Using nothing more than the passphrase, we can use the `crypto` library to derive private keys, public keys, and addresses for a given delegate. If you're interested in learning how that's possible, the standard comes from [Bitcoin Improvement Proposal 39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki).
 
@@ -493,11 +493,11 @@ This object formats our transaction correctly so that our testnet node will acce
 ::: tab javascript
 
 ```js
-const { Transactions } = require("@swipechain/crypto");
+const { Transactions } = require("@solar-network/crypto");
 
 const transaction = Transactions.BuilderFactory
   .transfer() // specify 'transfer' as our AIP11 transaction type
-  .amount(20 * 1e8) // 20 Swipechain, multiplied by 10^8 to get swipechaintoshi value
+  .amount(20 * 1e8) // 20 Solar, multiplied by 10^8 to get solartoshi value
   .vendorField("your vendorField message here")
   .recipientId("your recipient's address here")
   .sign("your sender's passphrase here")
@@ -547,7 +547,7 @@ func main() {
 ::: tab C++
 
 ```cpp
-auto transfer = Swipechain::Crypto::Transactions::Builder::buildTransfer(
+auto transfer = Solar::Crypto::Transactions::Builder::buildTransfer(
     "recipientID",
     1000000000,
     "vendorfield",
@@ -573,7 +573,7 @@ auto transfer = Swipechain::Crypto::Transactions::Builder::buildTransfer(
 
 ## Send Transaction
 
-With everything in place, it's time to send some TSwipechain (testnet Swipechain) using the `client` package.
+With everything in place, it's time to send some TSolar (testnet Solar) using the `client` package.
 
 :::: tabs
 
@@ -611,7 +611,7 @@ tx_response = client.transactions.create([transaction])
 ::: tab golang
 
 ```go
-body := &swipechainClient.CreateTransactionRequest{
+body := &solarClient.CreateTransactionRequest{
     Transactions: []interface{}{
         *transaction,
     },

@@ -87,7 +87,7 @@ We will allow to specify a *business name* and a *website* in our custom transac
 A few things to notice:
 
 - `type` with value 100: for custom transactions we have to define a type above 99 - so we choose 100
-- `fee` of 5 Swipechain (or whatever your coin is): we decide that this is the fee we want for our transaction
+- `fee` of 5 Solar (or whatever your coin is): we decide that this is the fee we want for our transaction
 - `asset` is the property where we can define additional fields: here we have our *businessRegistration* object containing our two properties *name* and *website*
 - `nonce` is a sequential number of senders wallet transactions
 
@@ -109,7 +109,7 @@ The `BusinessRegistrationTransaction` class will:
 Here it is (with methods implementation skipped):
 
 ```ts
-import { Transactions } from "@swipechain/crypto";
+import { Transactions } from "@solar-network/crypto";
 import ByteBuffer from "bytebuffer";
 import { IBusinessRegistrationAsset } from "../interfaces";
 
@@ -179,7 +179,7 @@ public static getSchema(): Transactions.schemas.TransactionSchema {
 
 You can see we defined the asset property to have our *businessRegistration* object with *name* and *website* properties. Also we forced the amount to be zero, and the type to be our custom type 100.
 
-Notice we didn't set up any validation rule for the fee (that we decided to be 5 Swipechain). This will be done in another file, we will see it in the next sections.
+Notice we didn't set up any validation rule for the fee (that we decided to be 5 Solar). This will be done in another file, we will see it in the next sections.
 
 To understand how the validation engine works, I recommend you to check out the [AJV website](https://ajv.js.org/). We have set up some custom keywords that can be useful, like *address*, *publicKey*, *bignumber*, *base58*: you can check them all in `packages/crypto/src/validation/schemas.ts`.
 
@@ -263,10 +263,10 @@ The `BusinessRegistrationTransactionHandler` class handles:
 Here is how the class looks (without method implementation):
 
 ```ts
-import { Database, TransactionPool, State, EventEmitter } from "@swipechain/core-interfaces";
-import { Handlers, } from "@swipechain/core-transactions";
+import { Database, TransactionPool, State, EventEmitter } from "@solar-network/core-interfaces";
+import { Handlers, } from "@solar-network/core-transactions";
 import { BusinessRegistrationTransaction } from "../transactions";
-import { Transactions, Interfaces } from "@swipechain/crypto";
+import { Transactions, Interfaces } from "@solar-network/crypto";
 import { BusinessRegistrationAssetError, WalletIsAlreadyABusiness } from "../errors";
 
 export class BusinessRegistrationTransactionHandler extends Handlers.TransactionHandler {
@@ -482,8 +482,8 @@ public async revertForRecipient(transaction: Interfaces.ITransaction, walletMana
 Now all is left is some code for registering our plugin! This is done in `plugin.ts`.
 
 ```ts
-import { Container, Logger } from "@swipechain/core-interfaces";
-import { Handlers } from "@swipechain/core-transactions";
+import { Container, Logger } from "@solar-network/core-interfaces";
+import { Handlers } from "@solar-network/core-transactions";
 import { defaults } from "./defaults";
 import { BusinessRegistrationTransactionHandler } from "./handlers";
 
@@ -501,7 +501,7 @@ export const plugin: Container.IPluginDescriptor = {
 };
 ```
 
-We use `Handlers.Registry` from *@swipechain/core-transactions* to register and deregister our custom transaction handler.
+We use `Handlers.Registry` from *@solar-network/core-transactions* to register and deregister our custom transaction handler.
 
 ## Configuration
 
@@ -510,12 +510,12 @@ Updating the *plugins.js* which contains all the plugins parameters for our netw
 
 ### plugins.js
 
-**First**, let's add our plugin to `plugins.js`. Make sure to add your plug-in before `"@swipechain/core-state"` e.g.:
+**First**, let's add our plugin to `plugins.js`. Make sure to add your plug-in before `"@solar-network/core-state"` e.g.:
 
 ```js
 ...
 "custom-transactions": {},
-"@swipechain/core-state": {},
+"@solar-network/core-state": {},
 ...
 ```
 
@@ -524,7 +524,7 @@ Here *custom-transactions* is the alias we have chosen (plugin definition in `in
 **Second**, there is a change we need to make in *core-transaction-pool* plugin:
 
 ```js
-"@swipechain/core-transaction-pool": {
+"@solar-network/core-transaction-pool": {
     enabled: true,
     maxTransactionsPerSender: process.env.CORE_TRANSACTION_POOL_MAX_PER_SENDER || 300,
     allowedSenders: [],
@@ -561,7 +561,7 @@ Have a look at the `crypto/src/transactions/builder` folder where you will see h
 Based on this, we can create a `builder` directory inside our plugin, and implement our BusinessRegistrationBuilder:
 
 ```ts
-import { Interfaces, Transactions, Utils } from "@swipechain/crypto";
+import { Interfaces, Transactions, Utils } from "@solar-network/crypto";
 
 export class BusinessRegistrationBuilder extends Transactions.TransactionBuilder<BusinessRegistrationBuilder> {
     constructor() {
@@ -632,7 +632,7 @@ Create a directory inside the `unit` subfolder with your plugin name, and write 
 ### Including them inside your plugin directory
 
 Create a subfolder `__tests__` inside your custom-transaction.
-Then you have to include some framework for tasting you code, swipechain core uses jest, you can read more about it in the following link: [https://jestjs.io/](https://jestjs.io/)
+Then you have to include some framework for tasting you code, solar core uses jest, you can read more about it in the following link: [https://jestjs.io/](https://jestjs.io/)
 
 
 ## Wrapping It Up

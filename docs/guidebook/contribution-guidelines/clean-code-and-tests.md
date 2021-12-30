@@ -4,7 +4,7 @@ title: "Clean Code & Tests"
 
 # Clean Code & Tests
 
-While the following guidelines are not an absolute requirement, writing your code by these standards will ensure greater compatibility with the Swipechain and increases the likelihood your pull request will be accepted.
+While the following guidelines are not an absolute requirement, writing your code by these standards will ensure greater compatibility with the Solar and increases the likelihood your pull request will be accepted.
 
 ## Clean Code
 

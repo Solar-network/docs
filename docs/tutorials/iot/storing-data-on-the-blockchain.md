@@ -6,7 +6,7 @@ You can store, prove, verify, or reference data in a way that suits your use cas
 [[toc]]
 
 The example sketch we will be building works on both, the [Arduino IDE](/tutorials/iot/environment/arduino) and with [PlatformIO](/tutorials/iot/environment/os).
-We will be using Swipechain Cpp-Client, Cpp-Crypto, and an Adafruit ESP32 Feather to post a SHA256 hash of your boards 'Chip ID' to the [Swipechain blockchain](/introduction/blockchain).
+We will be using Solar Cpp-Client, Cpp-Crypto, and an Adafruit ESP32 Feather to post a SHA256 hash of your boards 'Chip ID' to the [Solar blockchain](/introduction/blockchain).
 
 ## Step 1: Project Setup
 
@@ -27,7 +27,7 @@ If you're using PlatformIO, your `platformio.ini` file should look like this:
 platform = espressif32
 board = featheresp32
 framework = arduino
-lib_deps = Swipechain-Cpp-Client, Swipechain-Cpp-Crypto
+lib_deps = Solar-Cpp-Client, Solar-Cpp-Crypto
 upload_speed = 921600
 monitor_speed = 115200
 ```
@@ -37,13 +37,13 @@ monitor_speed = 115200
 ---
 
 Open a new sketch using the [Arduino IDE](/tutorials/iot/environment/arduino), or your 'main.cpp' file if using PlatformIO.
-Start by adding the headers to import Arduino, Swipechain Cpp-Client, and Cpp-Crypto.
+Start by adding the headers to import Arduino, Solar Cpp-Client, and Cpp-Crypto.
 
 ```cpp
 #"Include <Arduino.h>"
 
-#include <swipechainClient.h>
-#include <swipechainCrypto.h>
+#include <solarClient.h>
+#include <solarCrypto.h>
 
 void setup() {
     // put your setup code here, to run once:
@@ -77,19 +77,19 @@ const char* password = "yourWiFiPassword";
 We will also need a Devnet peer to connect to.
 
 ::: tip
-You can find more Swipechain peers here: [https://github.com/SwipeChain/peers](https://github.com/SwipeChain/peers)
+You can find more Solar peers here: [https://github.com/solar-network/peers](https://github.com/solar-network/peers)
 :::
 
 ```cpp
-const char* dswipechainIp = "167.114.29.49";
-int dswipechainPort = 4003;
+const char* dsolarIp = "167.114.29.49";
+int dsolarPort = 4003;
 ```
 
-Now, we'll add your Swipechain Devnet [(DSXP) address](/glossary/#dswipechain-address) and your [passphrase](/faq/passphrases.html#passphrases).
+Now, we'll add your Solar Devnet [(DSXP) address](/glossary/#dsolar-address) and your [passphrase](/faq/passphrases.html#passphrases).
 Make sure to delete this passphrase from your sketch when we're finished.
 
 ```cpp
-const char* recipientId = "yourSwipechainDevnetAddress";
+const char* recipientId = "yourSolarDevnetAddress";
 const char* yourSecretPassphrase = "yourSecretPassphrase";
 ```
 
@@ -134,8 +134,8 @@ Your sketch should now look something like this:
 ```cpp
 #include <Arduino.h>
 
-#include <swipechainClient.h>
-#include <swipechainCrypto.h>
+#include <solarClient.h>
+#include <solarCrypto.h>
 
 #include <WiFi.h>
 
@@ -144,10 +144,10 @@ Your sketch should now look something like this:
 const char* ssid = "yourSDID";
 const char* password = "yourPassword";
 
-const char* dswipechainIp = "167.114.29.49";
-int dswipechainPort = 4003;
+const char* dsolarIp = "167.114.29.49";
+int dsolarPort = 4003;
 
-const char* recipientId = "yourSwipechainDevnetAddress";
+const char* recipientId = "yourSolarDevnetAddress";
 const char* yourSecretPassphrase = "yourSecretPassphrase";
 
 void setupWiFi() {
@@ -234,7 +234,7 @@ void idHashToBuffer(char hashBuffer[64]) {
 
 ## Step 3: Build the Transaction
 
-Here, we will build the transaction using your Swipechain Devnet [(DSXP) address](/glossary/#dswipechain-address), 0.00000001 DSXP, your boards 'Chip ID' SHA256 hash, and your [secret passphrase](/faq/passphrases.html#passphrases).
+Here, we will build the transaction using your Solar Devnet [(DSXP) address](/glossary/#dsolar-address), 0.00000001 DSXP, your boards 'Chip ID' SHA256 hash, and your [secret passphrase](/faq/passphrases.html#passphrases).
 
 Lets create another method to handle this.
 
@@ -246,14 +246,14 @@ Transaction txFromHash(char hashBuffer[64]) {
 'return' the line to build the transaction.
 
 ```cpp
-return Swipechain::Crypto::Transactions::Builder::buildTransfer(recipientId, 1, hashBuffer, yourSecretPassphrase);
+return Solar::Crypto::Transactions::Builder::buildTransfer(recipientId, 1, hashBuffer, yourSecretPassphrase);
 ```
 
 It should look like this when you're finished:
 
 ```cpp
 Transaction txFromHash(char hashBuffer[64]) {
-   return Swipechain::Crypto::Transactions::Builder::buildTransfer(recipientId, 1, hashBuffer, yourSecretPassphrase);
+   return Solar::Crypto::Transactions::Builder::buildTransfer(recipientId, 1, hashBuffer, yourSecretPassphrase);
 };
 ```
 
@@ -274,7 +274,7 @@ Transaction transaction = txFromHash(hashBuffer);
 ```
 
 Now that the Transaction has been built, let's get the Transactions' JSON and "snprintf' that into a Transactions JSON array buffer.
-We'll then copy that buffer into a std::string for passing to the Swipechain-Client API.
+We'll then copy that buffer into a std::string for passing to the Solar-Client API.
 
 ```cpp
 char jsonBuffer[576] = { '\0' };
@@ -282,13 +282,13 @@ snprintf(&jsonBuffer[0], 576, "{\"transactions\":[%s]}", transaction.toJson().c_
 std::string jsonStr(jsonBuffer);
 ```
 
-This is where we will use Swipechain Cpp-Client to create an API connection using the 'dswipechainIp' and 'dswipechainPort' we declared earlier.
+This is where we will use Solar Cpp-Client to create an API connection using the 'dsolarIp' and 'dsolarPort' we declared earlier.
 
 ```cpp
-Swipechain::Client::Connection<Swipechain::Client::Api> connection(dswipechainIp, dswipechainPort);
+Solar::Client::Connection<Solar::Client::Api> connection(dsolarIp, dsolarPort);
 ```
 
-Next we send the transactions array to the Swipechain network!
+Next we send the transactions array to the Solar network!
 
 ```cpp
 std::string txSendResponse = connection.api.transactions.send(jsonStr);
@@ -315,7 +315,7 @@ void loop() {
     snprintf(&jsonBuffer[0], 576, "{\"transactions\":[%s]}", transaction.toJson().c_str());
     std::string jsonStr(jsonBuffer);
 
-    Swipechain::Client::Connection<Swipechain::Client::Api> connection(dswipechainIp, dswipechainPort);
+    Solar::Client::Connection<Solar::Client::Api> connection(dsolarIp, dsolarPort);
 
     std::string txSendResponse = connection.api.transactions.send(jsonStr);
         Serial.print("\ntxSendResponse: ");
@@ -330,8 +330,8 @@ The final sketch should look something like this
 ```cpp
 #include <Arduino.h>
 
-#include <swipechainClient.h>
-#include <swipechainCrypto.h>
+#include <solarClient.h>
+#include <solarCrypto.h>
 
 #include <WiFi.h>
 
@@ -340,10 +340,10 @@ The final sketch should look something like this
 const char* ssid = "yourWiFiSSID";
 const char* password = "yourWiFiPassword";
 
-const char* dswipechainIp = "167.114.29.49";
-int dswipechainPort = 4003;
+const char* dsolarIp = "167.114.29.49";
+int dsolarPort = 4003;
 
-const char* recipientId = "yourSwipechainDevnetAddress";
+const char* recipientId = "yourSolarDevnetAddress";
 const char* yourSecretPassphrase = "yourSecretPassphrase";
 
 void idHashToBuffer(char hashBuffer[64]) {
@@ -359,7 +359,7 @@ void idHashToBuffer(char hashBuffer[64]) {
 }
 
 Transaction txFromHash(char hashBuffer[64]) {
-    return Swipechain::Crypto::Transactions::Builder::buildTransfer(recipientId, 1, hashBuffer, yourSecretPassphrase);
+    return Solar::Crypto::Transactions::Builder::buildTransfer(recipientId, 1, hashBuffer, yourSecretPassphrase);
 }
 
 void setupWiFi() {
@@ -390,7 +390,7 @@ void loop() {
     snprintf(&jsonBuffer[0], 576, "{\"transactions\":[%s]}", transaction.toJson().c_str());
     std::string jsonStr(jsonBuffer);
 
-    Swipechain::Client::Connection<Swipechain::Client::Api> connection(dswipechainIp, dswipechainPort);
+    Solar::Client::Connection<Solar::Client::Api> connection(dsolarIp, dsolarPort);
 
     std::string txSendResponse = connection.api.transactions.send(jsonStr);
         Serial.print("\ntxSendResponse: ");
@@ -442,11 +442,11 @@ This is what a successfully POSTed Transaction response will look like:
 
 ---
 
-Congrats, you just used IoT and the Swipechain to store sensor data on a public blockchain! :tada: :confetti_ball:
+Congrats, you just used IoT and the Solar to store sensor data on a public blockchain! :tada: :confetti_ball:
 
 Keep in mind, we don't have to always "stick to the script."
 Now that we have a basic understanding of how to post data to the blockchain,
 we can get creative and store or reference nearly any type of information we please.
 We could serialize or encode information, we could reference an IPFS hash, or simply send a friendly message with our transaction.
 
-The [VendorField](/glossary/#smartbridge) is a very simple but powerful [concept](https://docs.swipechain.org/introduction/swipechain/how-does-swipechain-smartbridge-work.html).
+The [VendorField](/glossary/#smartbridge) is a very simple but powerful [concept](https://docs.solar.network/introduction/solar/how-does-solar-smartbridge-work.html).

@@ -2,19 +2,19 @@
 title: "IoT Tutorials"
 ---
 
-# Swipechain IoT
+# Solar IoT
 
-**Swipechain IoT** is a growing ecosystem of _"things"_ interoperability that aims to make using IoT and blockchain technology easier.
+**Solar IoT** is a growing ecosystem of _"things"_ interoperability that aims to make using IoT and blockchain technology easier.
 
 If you previously wanted to use IoT and Crypto tech in general, you had to try dozens of libraries; wasting countless hours of tweaking and debugging.
 It's a lot like getting a 5,000-piece puzzle with no picture and no edges.
 
-Much like in crypto, Swipechain's approach to a _"framework for mass adoption"_ fit's perfectly here.
+Much like in crypto, Solar's approach to a _"framework for mass adoption"_ fit's perfectly here.
 
 Even if you have the "big picture" in your head, you may not know where to start.
-Swipechain provides the "edge pieces"--or starting point--for your project; so you can spend less time debugging, and more time building.
+Solar provides the "edge pieces"--or starting point--for your project; so you can spend less time debugging, and more time building.
 
-Swipechain IoT features the first crypto SDK's designed to support IoT architecture, enabling novel use-cases on platforms with otherwise constrained resources.
+Solar IoT features the first crypto SDK's designed to support IoT architecture, enabling novel use-cases on platforms with otherwise constrained resources.
 
 ## Currently Supported Boards
 

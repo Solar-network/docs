@@ -5,13 +5,13 @@ title: "Error Tracker - Rollbar"
 # Error Tracker - Rollbar
 
 ::: tip
-You can find the source code of this package at [packages/core-error-tracker-rollbar](https://github.com/Swipechain/swipechain-core/tree/develop/packages/core-error-tracker-rollbar).
+You can find the source code of this package at [packages/core-error-tracker-rollbar](https://github.com/solar-network/solar-core/tree/develop/packages/core-error-tracker-rollbar).
 :::
 
 ## Installation
 
 ```bash
-yarn add @swipechain/core-error-tracker-rollbar
+yarn add @solar-network/core-error-tracker-rollbar
 ```
 
 ## Configuration

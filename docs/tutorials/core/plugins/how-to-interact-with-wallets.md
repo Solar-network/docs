@@ -17,7 +17,7 @@ Almost all plugins will need to access wallets in one way or another. Core rebui
 Below you can find a few examples of how to access wallets in different ways and perform checks on them.
 
 ```ts
-import { app } from "@swipechain/core-container";
+import { app } from "@solar-network/core-container";
 
 const walletManager = app.resolvePlugin("database").walletManager;
 

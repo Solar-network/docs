@@ -11,7 +11,7 @@ Docker supports all major operating systems but functions best when ran and cont
 The deployer is bundled with a Dockerfile and its dependencies, which we will build ourselves into an image. Clone the deployer to get started.
 
 ```bash
-git clone git@github.com:SwipeChain/swipechain-deployer
+git clone git@github.com:Solar/solar-deployer
 cd deployer
 ```
 

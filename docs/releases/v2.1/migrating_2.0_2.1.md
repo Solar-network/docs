@@ -7,14 +7,14 @@ running `git pull && yarn setup` inside the installation directory. In a big app
 be more things to consider, which are explained in the following.
 
 ::: tip
-This guide assumes you have Core installed inside the `~/swipechain-core` directory with your configuration being located at `~/.swipechain`. If you are using different locations, you will need to adjust those inside the examples which can be found below.
+This guide assumes you have Core installed inside the `~/solar-core` directory with your configuration being located at `~/.solar`. If you are using different locations, you will need to adjust those inside the examples which can be found below.
 
 Upgrading a complex software project always comes at the risk of breaking something, so make sure you have a backup.
 :::
 
 ### Notes
 
-It is recommended to start your relay and forger through the [Core Commander](https://github.com/SwipeChain/core-commander). If you wish to run them on your own, you should take a look at how commander executes them via `pm2`.
+It is recommended to start your relay and forger through the [Core Commander](https://github.com/solar-network/core-commander). If you wish to run them on your own, you should take a look at how commander executes them via `pm2`.
 
 After upgrading you should check whether your application still works as expected and no plugins are broken. See the following notes on which changes to consider when upgrading from one version to another.
 
@@ -22,14 +22,14 @@ After upgrading you should check whether your application still works as expecte
 
 ### Upgrade Script
 
-You can either run `bash <(curl -s https://raw.githubusercontent.com/Swipechain/swipechain-core/master/upgrade/2.1.0/normal.sh)` or run below commands manually.
+You can either run `bash <(curl -s https://raw.githubusercontent.com/Solar/solar-core/master/upgrade/2.1.0/normal.sh)` or run below commands manually.
 
 #### Relay Runners & Delegates
 
 ```bash
 #!/usr/bin/env bash
 
-cd ~/swipechain-core
+cd ~/solar-core
 pm2 delete all
 git reset --hard
 git pull
@@ -47,21 +47,21 @@ bash commander.sh
 
 #### Exchanges
 
-You can either run `bash <(curl -s https://raw.githubusercontent.com/Swipechain/swipechain-core/master/upgrade/2.1.0/exchange.sh)` or run below commands manually.
+You can either run `bash <(curl -s https://raw.githubusercontent.com/Solar/solar-core/master/upgrade/2.1.0/exchange.sh)` or run below commands manually.
 
 ```bash
 #!/usr/bin/env bash
 
-cd ~/swipechain-core
-pm2 delete swipechain-core
-pm2 delete swipechain-core-relay
+cd ~/solar-core
+pm2 delete solar-core
+pm2 delete solar-core-relay
 git reset --hard
 git pull
 git checkout master
 yarn run bootstrap
 yarn run upgrade
 
-pm2 --name 'swipechain-core-relay' start ~/swipechain-core/packages/core/dist/index.js -- relay --network mainnet
+pm2 --name 'solar-core-relay' start ~/solar-core/packages/core/dist/index.js -- relay --network mainnet
 ```
 
 #### Notes
@@ -72,7 +72,7 @@ pm2 --name 'swipechain-core-relay' start ~/swipechain-core/packages/core/dist/in
 
 #### Configuration
 
-- If you have been using custom dynamic fees, open the `~/.config/swipechain-core/<network>/plugins.js` file and locate the `@swipechain/core-transaction-pool` plugin. Add below code to it and enter your desired values.
+- If you have been using custom dynamic fees, open the `~/.config/solar-core/<network>/plugins.js` file and locate the `@solar-network/core-transaction-pool` plugin. Add below code to it and enter your desired values.
 
 ```js
 dynamicFees: {
@@ -99,12 +99,12 @@ From version 2.1 onwards Core will make use of system specific paths to support 
 
 | Old             | New                                  |
 | :-------------- | :----------------------------------- |
-| ~/.swipechain/database | $HOME/.local/share/swipechain-core/$network |
-| ~/.swipechain/config   | $HOME/.config/swipechain-core/$network      |
-| n/a             | $HOME/.cache/swipechain-core/$network       |
-| ~/.swipechain/logs     | $HOME/.local/state/swipechain-core/$network |
-| n/a             | /tmp/$USER/swipechain-core/$network         |
-| ~/.swipechain/.env     | $HOME/.config/swipechain-core/$network/.env |
+| ~/.solar/database | $HOME/.local/share/solar-core/$network |
+| ~/.solar/config   | $HOME/.config/solar-core/$network      |
+| n/a             | $HOME/.cache/solar-core/$network       |
+| ~/.solar/logs     | $HOME/.local/state/solar-core/$network |
+| n/a             | /tmp/$USER/solar-core/$network         |
+| ~/.solar/.env     | $HOME/.config/solar-core/$network/.env |
 
 You can read more about those paths at [https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html](https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html).
 
@@ -112,6 +112,6 @@ You can read more about those paths at [https://specifications.freedesktop.org/b
 
 Once all these changes have been made you will need to restart your relay and forger _(if you are a delegate)_ for these changes to take effect.
 
-If you've been running your relay and forger manually you need to change `packages/core/bin/swipechain` to `packages/core/dist/index.js` to ensure that the JavaScript files, created by the TypeScript Compiler, are executed.
+If you've been running your relay and forger manually you need to change `packages/core/bin/solar` to `packages/core/dist/index.js` to ensure that the JavaScript files, created by the TypeScript Compiler, are executed.
 
 _Also make sure that you are no longer passing in the `--data` and `--config` flags so core can pick up the system paths. Those flags are only intended for development or custom setups._

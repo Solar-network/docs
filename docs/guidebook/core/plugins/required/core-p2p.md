@@ -5,13 +5,13 @@ title: "P2P API"
 # P2P API
 
 ::: tip
-You can find the source code of this package at [packages/core-p2p](https://github.com/Swipechain/swipechain-core/tree/develop/packages/core-p2p).
+You can find the source code of this package at [packages/core-p2p](https://github.com/solar-network/solar-core/tree/develop/packages/core-p2p).
 :::
 
 ## Installation
 
 ```bash
-yarn add @swipechain/core-p2p
+yarn add @solar-network/core-p2p
 ```
 
 ## Alias

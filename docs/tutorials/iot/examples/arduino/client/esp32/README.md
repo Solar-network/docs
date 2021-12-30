@@ -8,9 +8,9 @@ title: "Arduino Cpp-Client - ESP32 Example"
 
 ```cpp
 /**
- * This file is part of Swipechain Cpp Client.
+ * This file is part of Solar Cpp Client.
  *
- * (c) Swipechain <info@swipechain.org>
+ * (c) Solar <info@solar.network>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -18,7 +18,7 @@ title: "Arduino Cpp-Client - ESP32 Example"
 
 /**
  * This sketch covers how to use the Cpp-Client API.
- * It allows your ESP32 to send requests to an Swipechain node
+ * It allows your ESP32 to send requests to an Solar node
  */
 
  /**
@@ -29,10 +29,10 @@ title: "Arduino Cpp-Client - ESP32 Example"
 /****************************************/
 
 /**
- * This is where you include the 'swipechainClient.h' header.
- * This allows your project to use Swipechain Cpp-Client.
+ * This is where you include the 'solarClient.h' header.
+ * This allows your project to use Solar Cpp-Client.
  */
-#include <swipechainClient.h>
+#include <solarClient.h>
 /**/
 
 /****************************************/
@@ -54,11 +54,11 @@ const char* password = "yourWiFiPassword";
 /****************************************/
 
 /**
- *  This is the IP address of an Swipechain node
+ *  This is the IP address of an Solar node
  *  Specifically, this is a Devnet V2 node IP
- *  You can find more peers here: https://github.com/SwipeChain/peers
+ *  You can find more peers here: https://github.com/solar-network/peers
  *
- *  The Public API port for the V2 Swipechain network is '4003'
+ *  The Public API port for the V2 Solar network is '4003'
  */
 const char* peer = "167.114.29.55";
 int port = 4003;
@@ -70,7 +70,7 @@ int port = 4003;
  * This is how you define a connection while speficying the API class as a 'template argument'
  * You instantiate a connection by passing a IP address as a 'c_string', and the port as an 'int'.
  */
-Swipechain::Client::Connection<Swipechain::Client::Api> connection(peer, port);
+Solar::Client::Connection<Solar::Client::Api> connection(peer, port);
 /**/
 
 /****************************************/
@@ -78,7 +78,7 @@ Swipechain::Client::Connection<Swipechain::Client::Api> connection(peer, port);
 void checkAPI() {
   /**
    * This is how you can check the Version of the API
-   * In this example, it should return '2' as an 'int' for V2 of Swipechains' API.
+   * In this example, it should return '2' as an 'int' for V2 of Solars' API.
    */
   auto apiVersion = connection.api.version();
     Serial.print("\nAPI Version: ");
@@ -124,7 +124,7 @@ void checkAPI() {
    *        "length": 0
    *      },
    *      "generator": {
-   *        "username": "dswipechaincrow",
+   *        "username": "dsolarcrow",
    *        "address": "DFSUsSmcVUhVZYQ1nowciWmmtnj1kvZK5Z",
    *        "publicKey": "03a8ff0a3cbdcb3bfbdb84dbf83226f338ba1452047ac5b8228a1513f7f1de80de"
    *      },
@@ -403,7 +403,7 @@ void checkAPI() {
   /********************/
 
   /**
-   * This method can be used to get a list of 'Top' 'Wallets' (Wallets with the most Swipechain).
+   * This method can be used to get a list of 'Top' 'Wallets' (Wallets with the most Solar).
    * The '2' and '1' refer to the pagination (e.g. response limit and how many pages)
    *
    * This is equivalant to calling '167.114.29.49:4003/api/v2/wallets/top?limit=2&page=1'

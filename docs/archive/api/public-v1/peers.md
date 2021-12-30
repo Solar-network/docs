@@ -47,7 +47,7 @@ GET /api/peers
 
 <request-example>
 ```bash
-curl -X GET https://explorer.swipechain.org:8443/api/peers \
+curl -X GET https://explorer.solar.network:8443/api/peers \
   -H "API-Version: 1"
 ```
 </request-example>
@@ -87,7 +87,7 @@ GET /api/peers/get
 
 <request-example>
 ```bash
-curl -X GET https://explorer.swipechain.org:8443/api/peers/get?ip=185.233.104.31&port=4001 \
+curl -X GET https://explorer.solar.network:8443/api/peers/get?ip=185.233.104.31&port=4001 \
   -H "API-Version: 1"
 ```
 </request-example>
@@ -113,7 +113,7 @@ GET /api/peers/version
 
 <request-example>
 ```bash
-curl -X GET https://explorer.swipechain.org:8443/api/peers/version \
+curl -X GET https://explorer.solar.network:8443/api/peers/version \
   -H "API-Version: 1"
 ```
 </request-example>

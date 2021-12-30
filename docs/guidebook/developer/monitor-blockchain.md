@@ -1,6 +1,6 @@
 # How to Monitor the Blockchain
 
-In this recipe, we will build an Swipechain Core plugin to monitor our blockchain and trigger an action whenever a given delegate forges a block. You are going to learn how to integrate custom functionality into your Swipechain Core node by writing plugins to react to network events as they occur.
+In this recipe, we will build an Solar Core plugin to monitor our blockchain and trigger an action whenever a given delegate forges a block. You are going to learn how to integrate custom functionality into your Solar Core node by writing plugins to react to network events as they occur.
 
 ## Define the Problem
 
@@ -11,11 +11,11 @@ Generally speaking, there are two primary contexts in which you might want to mo
 
 Monitoring to the blockchain on a node is useful in combination with a local wallet to trigger actions as soon as possible after an event occurs. External applications might want to listen to the blockchain to synchronize their database with the network's current state.
 
-Within Swipechain Core (that is, on a particular node), monitoring can be done in a custom plugin. In this approach, the recommended strategy involves subscribing to events created by the `core-event-emitter` module.
+Within Solar Core (that is, on a particular node), monitoring can be done in a custom plugin. In this approach, the recommended strategy involves subscribing to events created by the `core-event-emitter` module.
 
-By contrast, monitoring your blockchain from an external application is best done by subscribing to a webhook. Under this model, Swipechain Core nodes `POST` a payload to your application with relevant information whenever a subscribed event is triggered.
+By contrast, monitoring your blockchain from an external application is best done by subscribing to a webhook. Under this model, Solar Core nodes `POST` a payload to your application with relevant information whenever a subscribed event is triggered.
 
-This recipe will cover the first approach — monitoring with a custom plugin installed in Swipechain Core. Implementing webhooks can differ substantially depending on the languages and frameworks you use. A detailed webhook recipe is in the works with examples across SDKs. For now, if you're looking to get started with webhooks in your application, the [Webhooks](/guidebook/core/webhooks.html) chapter of the Guidebook is an excellent place to start.
+This recipe will cover the first approach — monitoring with a custom plugin installed in Solar Core. Implementing webhooks can differ substantially depending on the languages and frameworks you use. A detailed webhook recipe is in the works with examples across SDKs. For now, if you're looking to get started with webhooks in your application, the [Webhooks](/guidebook/core/webhooks.html) chapter of the Guidebook is an excellent place to start.
 
 This example assumes you have a working testnet running, and we'll need to create a custom plugin. Make sure you have a correctly set up development environment.
 
@@ -121,10 +121,10 @@ The first thing we will do is scaffold out a custom plugin called `core-delegate
 
 ```bash
 cd plugins/
-git submodule add -f https://github.com/SwipeChain/core-plugin-skeleton
+git submodule add -f https://github.com/solar-network/core-plugin-skeleton
 ```
 
-Once the submodule is added, rename the `core-plugin-skeleton` directory to `core-delegate-monitor`. Make sure to rename your plugin to `@swipechain/core-delegate-monitor` in your plugin's new `package.json`, and to add the necessary configuration to your `plugins.js` file. It is also convenient to alter the remote URL of the repository; so you can manage your plugin as a separate repository.
+Once the submodule is added, rename the `core-plugin-skeleton` directory to `core-delegate-monitor`. Make sure to rename your plugin to `@solar-network/core-delegate-monitor` in your plugin's new `package.json`, and to add the necessary configuration to your `plugins.js` file. It is also convenient to alter the remote URL of the repository; so you can manage your plugin as a separate repository.
 
 Next, let us get our solution into code. We will create a file in our plugin's `lib` folder called `delegate-monitor.js` and drop our solution inside.
 
@@ -159,14 +159,14 @@ function listenToDelegate(block) {
 Now we use `event-emitter` as a listener object. We will do so by loading our container, then resolving our plugin out of it:
 
 ```js
-const container = require("@swipechain/core-container");
+const container = require("@solar-network/core-container");
 const emitter = container.resolvePlugin("event-emitter");
 ```
 
 Now, because we want to attach our listener when our node boots up and detach our listener when our node shuts down, we want to export functions that we can use in our plugin's `register` and `deregister` hooks. Let's add two functions to our `module.exports`:
 
 ```js
-const container = require("@swipechain/core-container");
+const container = require("@solar-network/core-container");
 const emitter = container.resolvePlugin("event-emitter");
 
 module.exports = {

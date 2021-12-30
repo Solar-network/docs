@@ -1,12 +1,12 @@
 # Public Disclosure
 
-After we have assessed the risk and mitigated a vulnerability, it is publicly disclosed in our [dedicated repository](https://github.com/SwipeChain/security-vulnerabilities).
+After we have assessed the risk and mitigated a vulnerability, it is publicly disclosed in our [dedicated repository](https://github.com/solar-network/security-vulnerabilities).
 
 ## Rewards Program
 
-Our rewards program encourages researchers to contribute to the security of the Swipechain through the following bounties:
+Our rewards program encourages researchers to contribute to the security of the Solar through the following bounties:
 
-We know that software will always have flaws that are hard to notice initially. As we take security of our network as a top priority, we provide a security/vulnerability bounty for bugs or errors in the Swipechain Core that could potentially harm or exploit the [Swipechain network](https://github.com/SwipeChain/core).
+We know that software will always have flaws that are hard to notice initially. As we take security of our network as a top priority, we provide a security/vulnerability bounty for bugs or errors in the Solar Core that could potentially harm or exploit the [Solar network](https://github.com/solar-network/core).
 
 ### Critical: $5,000-$10,000
 
@@ -14,12 +14,12 @@ The worst of the worst security vulnerabilities related to funds or taking contr
 
 Examples:
 
-- Making Swipechain out of thin air.
-- Spending someone else's Swipechain without the need of their private keys
+- Making Solar out of thin air.
+- Spending someone else's Solar without the need of their private keys
 - Replaying the same transaction multiple times without the need of private keys.
 - Exposing private keys via public methods.
 - Taking control of the entire network.
-- Permanently forking the network or a way to permanently destroy the integrity of the Swipechain blockchain without requiring a malicious delegate.
+- Permanently forking the network or a way to permanently destroy the integrity of the Solar blockchain without requiring a malicious delegate.
 
 ### High: $2,000-$3,000
 
@@ -56,11 +56,11 @@ The size of the bonus is determined at the sole discretion of the Core Developer
 ## Eligibility
 
 1. Never publicly disclose any exploit or vulnerability.
-2. Never maliciously initiate an exploit on the Swipechain public network, if you need to validate your setup use your own local Swipechain network or use the Swipechain development network
-3. To receive the bounty, you must send an in-depth explanation in an email to [security@swipechain.org](mailto:security@swipechain.org) with the steps to reproduce the vulnerability and if possible a patch or PoC to negate the security vulnerability in question.
+2. Never maliciously initiate an exploit on the Solar public network, if you need to validate your setup use your own local Solar network or use the Solar development network
+3. To receive the bounty, you must send an in-depth explanation in an email to [security@solar.network](mailto:security@solar.network) with the steps to reproduce the vulnerability and if possible a patch or PoC to negate the security vulnerability in question.
 
-_Security bounty can fall in higher or lower tier than you anticipated, all our decisions are final. Exploits which make indirect use of already known issues might not be eligible for a security bounty. Do not take every word literal and examples serve as a basis on what you can expect (it also depends a lot on circumstances of how you can exploit it, what's the impact and every security vulnerability is evaluated on a case by case basis). Security vulnerabilities are paid in Swipechain based on the daily average rate before the payout._
+_Security bounty can fall in higher or lower tier than you anticipated, all our decisions are final. Exploits which make indirect use of already known issues might not be eligible for a security bounty. Do not take every word literal and examples serve as a basis on what you can expect (it also depends a lot on circumstances of how you can exploit it, what's the impact and every security vulnerability is evaluated on a case by case basis). Security vulnerabilities are paid in Solar based on the daily average rate before the payout._
 
 ## Disclaimer
 
-The Swipechain team may decide to deviate from the rewards program and security procedure without disclosing the underlying reasons.
+The Solar team may decide to deviate from the rewards program and security procedure without disclosing the underlying reasons.

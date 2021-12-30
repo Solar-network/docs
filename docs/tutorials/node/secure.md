@@ -1,12 +1,12 @@
 ---
-title: "How to Secure Your Swipechain Node"
+title: "How to Secure Your Solar Node"
 ---
 
-# How to Secure Your Swipechain Node
+# How to Secure Your Solar Node
 
-When running an Swipechain node, especially a Delegate Node, you should consider your server's security as your main priority. This guide will walk you through securing your nodes. It is not an exhaustive guide, and highly platform dependent, but it is a good start.
+When running an Solar node, especially a Delegate Node, you should consider your server's security as your main priority. This guide will walk you through securing your nodes. It is not an exhaustive guide, and highly platform dependent, but it is a good start.
 
-We assume you completed all the steps as outlined in the previous guide: [Setup Your Swipechain Node]().
+We assume you completed all the steps as outlined in the previous guide: [Setup Your Solar Node]().
 
 [[toc]]
 
@@ -147,7 +147,7 @@ exit
 ssh user@yournode -p 55555
 ```
 
-If everything was setup successfully, you should be reconnected to your Swipechain node. Replace `55555` with the port you chose when setting up your `sshd_config`.
+If everything was setup successfully, you should be reconnected to your Solar node. Replace `55555` with the port you chose when setting up your `sshd_config`.
 
 ### Install Fail2Ban
 
@@ -368,7 +368,7 @@ sudo apt-get install knockd
 
 Logs for knockd appear in `syslog` and will be crucial if you need to troubleshoot.
 
-Run the following command on your Swipechain node server.
+Run the following command on your Solar node server.
 
 ```bash
 tail -f /var/log/syslog
@@ -397,7 +397,7 @@ Apr 17 04:02:18 node1 knockd: openSSH: running command: ufw allow 55555/tcp
 Running `sudo ufw status` should list your SSH port as enabled.
 
 ```bash
-swipechainoar@node1:~$ sudo ufw status
+solaroar@node1:~$ sudo ufw status
 Status: active
 
 To                         Action      From
@@ -467,7 +467,7 @@ Windows users can generate their ssh key using [PuTTY Key Generator](https://www
 
 ##### Copy your **PUBLIC KEY** to your Server
 
-Copy the contents of your `id_rsa.pub` file on your local machine to your `~/.ssh/authorized_keys` on your Swipechain node server.
+Copy the contents of your `id_rsa.pub` file on your local machine to your `~/.ssh/authorized_keys` on your Solar node server.
 
 #### Disable Password Authentication
 
@@ -522,8 +522,8 @@ if you name your files something different.
 server {
   listen 443 ssl;
   server_name node.yoursite.com;
-  ssl_certificate /etc/nginx/ssl/swipechain.crt;
-  ssl_certificate_key /etc/nginx/ssl/swipechain.key;
+  ssl_certificate /etc/nginx/ssl/solar.crt;
+  ssl_certificate_key /etc/nginx/ssl/solar.key;
   ssl_verify_client off;
   ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
   ssl_ciphers EECDH+CHACHA20:EECDH+AES128:RSA+AES128:EECDH+AES256:RSA+AES256:EECDH+3DES:RSA+3DES:!MD5;
@@ -557,17 +557,17 @@ Scroll down to `Origin Certificates` and click the `Create Certificate` button. 
 
 ![cloudflare origin certificate](./assets/secure/cloudflare_certificate.png)
 
-Open Terminal on your Swipechain node server
+Open Terminal on your Solar node server
 
 We need to create a new folder and copy our keys to our server.
 
 ```bash
 mkdir /etc/nginx/ssl
 cd /etc/nginx/ssl
-touch swipechain.crt swipechain.key
+touch solar.crt solar.key
 ```
 
-Copy the `PRIVATE KEY` to the file `swipechain.key` and the `CERTIFICATE` to `swipechain.crt`.
+Copy the `PRIVATE KEY` to the file `solar.key` and the `CERTIFICATE` to `solar.crt`.
 
 ##### Start Nginx
 
@@ -575,7 +575,7 @@ Copy the `PRIVATE KEY` to the file `swipechain.key` and the `CERTIFICATE` to `sw
 sudo service nginx start
 ```
 
-If everything started fine, you should be able to access your Swipechain node API's
+If everything started fine, you should be able to access your Solar node API's
 behind SSL. Giving you the bonus of Cloudflare DDOS protection.
 
 Otherwise, if you get any errors run the following command to troubleshoot nginx.

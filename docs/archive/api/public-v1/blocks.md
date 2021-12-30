@@ -65,7 +65,7 @@ GET /api/blocks
 
 <request-example>
 ```bash
-curl -X GET https://explorer.swipechain.org:8443/api/blocks \
+curl -X GET https://explorer.solar.network:8443/api/blocks \
   -H "API-Version: 1"
 ```
 </request-example>
@@ -112,7 +112,7 @@ GET /api/blocks/get
 
 <request-example>
 ```bash
-curl -X GET https://explorer.swipechain.org:8443/api/blocks/get?id=7087584057375728132 \
+curl -X GET https://explorer.solar.network:8443/api/blocks/get?id=7087584057375728132 \
   -H "API-Version: 1"
 ```
 </request-example>
@@ -135,7 +135,7 @@ GET /api/blocks/getFees
 
 <request-example>
 ```bash
-curl -X GET https://explorer.swipechain.org:8443/api/blocks/getFees \
+curl -X GET https://explorer.solar.network:8443/api/blocks/getFees \
   -H "API-Version: 1"
 ```
 </request-example>
@@ -161,7 +161,7 @@ GET /api/blocks/getFee
 
 <request-example>
 ```bash
-curl -X GET https://explorer.swipechain.org:8443/api/blocks/getFee \
+curl -X GET https://explorer.solar.network:8443/api/blocks/getFee \
   -H "API-Version: 1"
 ```
 </request-example>
@@ -187,7 +187,7 @@ GET /api/blocks/getEpoch
 
 <request-example>
 ```bash
-curl -X GET https://explorer.swipechain.org:8443/api/blocks/getEpoch \
+curl -X GET https://explorer.solar.network:8443/api/blocks/getEpoch \
   -H "API-Version: 1"
 ```
 </request-example>
@@ -214,7 +214,7 @@ GET /api/blocks/getHeight
 
 <request-example>
 ```bash
-curl -X GET https://explorer.swipechain.org:8443/api/blocks/getHeight \
+curl -X GET https://explorer.solar.network:8443/api/blocks/getHeight \
   -H "API-Version: 1"
 ```
 </request-example>
@@ -240,7 +240,7 @@ GET /api/blocks/getMilestone
 
 <request-example>
 ```bash
-curl -X GET https://explorer.swipechain.org:8443/api/blocks/getMilestone \
+curl -X GET https://explorer.solar.network:8443/api/blocks/getMilestone \
   -H "API-Version: 1"
 ```
 </request-example>
@@ -266,7 +266,7 @@ GET /api/blocks/getNethash
 
 <request-example>
 ```bash
-curl -X GET https://explorer.swipechain.org:8443/api/blocks/getNethash \
+curl -X GET https://explorer.solar.network:8443/api/blocks/getNethash \
   -H "API-Version: 1"
 ```
 </request-example>
@@ -292,7 +292,7 @@ GET /api/blocks/getReward
 
 <request-example>
 ```bash
-curl -X GET https://explorer.swipechain.org:8443/api/blocks/getReward \
+curl -X GET https://explorer.solar.network:8443/api/blocks/getReward \
   -H "API-Version: 1"
 ```
 </request-example>
@@ -324,7 +324,7 @@ GET /api/blocks/getStatus
 
 <request-example>
 ```bash
-curl -X GET https://explorer.swipechain.org:8443/api/blocks/getStatus \
+curl -X GET https://explorer.solar.network:8443/api/blocks/getStatus \
   -H "API-Version: 1"
 ```
 </request-example>
@@ -350,7 +350,7 @@ GET /api/blocks/getSupply
 
 <request-example>
 ```bash
-curl -X GET https://explorer.swipechain.org:8443/api/blocks/getSupply \
+curl -X GET https://explorer.solar.network:8443/api/blocks/getSupply \
   -H "API-Version: 1"
 ```
 </request-example>

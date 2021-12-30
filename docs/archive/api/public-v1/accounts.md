@@ -42,7 +42,7 @@ GET /api/accounts/getAllAccounts
 
 <request-example>
 ```bash
-curl -X GET https://explorer.swipechain.org:8443/api/accounts/getAllAccounts \
+curl -X GET https://explorer.solar.network:8443/api/accounts/getAllAccounts \
   -H "API-Version: 1"
 ```
 </request-example>
@@ -82,7 +82,7 @@ GET /api/accounts
 
 <request-example>
 ```bash
-curl -X GET https://explorer.swipechain.org:8443/api/accounts?address=AUDud8tvyVZa67p3QY7XPRUTjRGnWQQ9Xv \
+curl -X GET https://explorer.solar.network:8443/api/accounts?address=AUDud8tvyVZa67p3QY7XPRUTjRGnWQQ9Xv \
   -H "API-Version: 1"
 ```
 </request-example>
@@ -121,7 +121,7 @@ GET /api/accounts/top
 
 <request-example>
 ```bash
-curl -X GET https://explorer.swipechain.org:8443/api/accounts/top \
+curl -X GET https://explorer.solar.network:8443/api/accounts/top \
   -H "API-Version: 1"
 ```
 </request-example>
@@ -154,7 +154,7 @@ GET /api/accounts/getBalance
 
 <request-example>
 ```bash
-curl -X GET https://explorer.swipechain.org:8443/api/accounts/getBalance?address=AUDud8tvyVZa67p3QY7XPRUTjRGnWQQ9Xv \
+curl -X GET https://explorer.solar.network:8443/api/accounts/getBalance?address=AUDud8tvyVZa67p3QY7XPRUTjRGnWQQ9Xv \
   -H "API-Version: 1"
 ```
 </request-example>
@@ -180,7 +180,7 @@ GET /api/accounts/delegates/fee
 
 <request-example>
 ```bash
-curl -X GET https://explorer.swipechain.org:8443/api/accounts/delegates/fee \
+curl -X GET https://explorer.solar.network:8443/api/accounts/delegates/fee \
   -H "API-Version: 1"
 ```
 </request-example>
@@ -212,7 +212,7 @@ GET /api/accounts/getPublicKey
 
 <request-example>
 ```bash
-curl -X GET https://explorer.swipechain.org:8443/api/accounts/getPublicKey?address=AUDud8tvyVZa67p3QY7XPRUTjRGnWQQ9Xv \
+curl -X GET https://explorer.solar.network:8443/api/accounts/getPublicKey?address=AUDud8tvyVZa67p3QY7XPRUTjRGnWQQ9Xv \
   -H "API-Version: 1"
 ```
 </request-example>
@@ -239,7 +239,7 @@ GET /api/accounts/count
 
 <request-example>
 ```bash
-curl -X GET https://explorer.swipechain.org:8443/api/accounts/count \
+curl -X GET https://explorer.solar.network:8443/api/accounts/count \
   -H "API-Version: 1"
 ```
 </request-example>
@@ -283,7 +283,7 @@ GET /api/accounts/delegates
 
 <request-example>
 ```bash
-curl -X GET https://explorer.swipechain.org:8443/api/accounts/delegates?address=AUDud8tvyVZa67p3QY7XPRUTjRGnWQQ9Xv \
+curl -X GET https://explorer.solar.network:8443/api/accounts/delegates?address=AUDud8tvyVZa67p3QY7XPRUTjRGnWQQ9Xv \
   -H "API-Version: 1"
 ```
 </request-example>

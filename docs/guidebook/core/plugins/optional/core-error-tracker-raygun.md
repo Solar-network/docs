@@ -5,13 +5,13 @@ title: "Error Tracker - Raygun"
 # Error Tracker - Raygun
 
 ::: tip
-You can find the source code of this package at [packages/core-error-tracker-raygun](https://github.com/Swipechain/swipechain-core/tree/develop/packages/core-error-tracker-raygun).
+You can find the source code of this package at [packages/core-error-tracker-raygun](https://github.com/solar-network/solar-core/tree/develop/packages/core-error-tracker-raygun).
 :::
 
 ## Installation
 
 ```bash
-yarn add @swipechain/core-error-tracker-raygun
+yarn add @solar-network/core-error-tracker-raygun
 ```
 
 ## Configuration

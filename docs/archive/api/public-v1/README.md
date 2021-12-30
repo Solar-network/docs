@@ -8,7 +8,7 @@ title: "Public API 1.0"
 All HTTP requests have to be sent with the `Content-Type: application/json` header. If the header is not present it will result in malformed responses or request rejections.
 :::
 
-This describes the resources that make up the official Public API v1. If you have any problems or requests please [open an issue](https://github.com/Swipechain/swipechain-core/issues/new/choose).
+This describes the resources that make up the official Public API v1. If you have any problems or requests please [open an issue](https://github.com/solar-network/solar-core/issues/new/choose).
 
 ## Current Version
 
@@ -20,4 +20,4 @@ Requests that return multiple items will be paginated to 50 items by default. Yo
 
 ## Public Testing Relay
 
-If you are not running a relay yourself you can use [https://api.swipechain.org/api/](https://api.swipechain.org/api/) to test API calls. Happy developing!
+If you are not running a relay yourself you can use [https://api.solar.network/api/](https://api.solar.network/api/) to test API calls. Happy developing!

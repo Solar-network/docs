@@ -15,7 +15,7 @@ It holds all of the information that is important to know when you want to see w
 ## Interacting With the State of the Blockchain
 
 ```ts
-import { app } from "@swipechain/core-container";
+import { app } from "@solar-network/core-container";
 
 const blockchain = app.resolvePlugin("blockchain");
 

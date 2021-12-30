@@ -1,6 +1,6 @@
 # Patching a Vulnerability
 
-Swipechain maintains strict code quality guidelines to ensure ease of development, but also lower the risk of vulnerabilities due to unclear code errors. When patching a vulnerability, we are even more strict concerning quality.
+Solar maintains strict code quality guidelines to ensure ease of development, but also lower the risk of vulnerabilities due to unclear code errors. When patching a vulnerability, we are even more strict concerning quality.
 
 First of all, a patch must conform to our usual coding standards, which may be found [here](/guidebook/contribution-guidelines/clean-code-and-tests.html). To summarize:
 
@@ -26,8 +26,8 @@ However, over time such patches become cumbersome, difficult to maintain or are 
 To be eligible for the [rewards program](/security/discovering/public-disclosure.md) and a bonus of up to 50%, ensure your patch satisfies the following conditions:
 
 1. It describes the vulnerability in depth, including the cause and possible solutions. Do not forget to support your choice of a particular solution.
-2. Complies with all Swipechain coding standards.
+2. Complies with all Solar coding standards.
 3. Provides adequate tests, ensuring the vulnerability has been fixed, and no new vulnerabilities have been introduced.
 4. Makes use of the `git format-patch` feature by providing us with `git patch files`.
 
-If these requirements daunt you, contact our developers on [telegram](https://t.me/Swipechain) (after having properly disclosed the vulnerability). We will be able to assist you.
+If these requirements daunt you, contact our developers on [telegram](https://t.me/Solar) (after having properly disclosed the vulnerability). We will be able to assist you.

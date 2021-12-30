@@ -1,6 +1,6 @@
 # Summary
 
-Swipechain `v2.5` is a minor update and backward compatible with `v2.5.X`. This update removes the legacy public API that was ported from `swipechain-node`.
+Solar `v2.5` is a minor update and backward compatible with `v2.5.X`. This update removes the legacy public API that was ported from `solar-node`.
 
 - **Upgrade time**: low - upgrading to `v2.5` requires no changes.
 - **Complexity**: low - only legacy code was removed and numerical format issues resolved.

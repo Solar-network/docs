@@ -4,7 +4,7 @@ title: "How to Write a Core Plugin"
 
 # How to Write a Core Plugin
 
-In this guide, you will find information to enable you to write a proper Swipechain Core plugin, for use in your own Swipechain deployments; both in the case of Swipechain Core nodes a `BridgeChain` nodes.
+In this guide, you will find information to enable you to write a proper Solar Core plugin, for use in your own Solar deployments; both in the case of Solar Core nodes a `BridgeChain` nodes.
 
 [[toc]]
 
@@ -13,8 +13,8 @@ In this guide, you will find information to enable you to write a proper Swipech
 Plugins are very simple to write. At their core they are an object with a register property, that is a function with the signature async function. Additionally the plugin object has a required `pkg` property and several optional properties including version.
 
 ```ts
-import { Container } from "@swipechain/core-interfaces";
-import { LogManager } from "@swipechain/core-logger";
+import { Container } from "@solar-network/core-interfaces";
+import { LogManager } from "@solar-network/core-logger";
 import { defaults } from "./defaults";
 import { PinoLogger } from "./driver";
 
@@ -22,7 +22,7 @@ export const plugin: Container.PluginDescriptor = {
   pkg: require("../package.json"),
   defaults,
   alias: "logger",
-  extends: "@swipechain/core-logger",
+  extends: "@solar-network/core-logger",
   async register(container: Container.IContainer, options) {
     const logManager: LogManager = container.resolvePlugin("log-manager");
     await logManager.makeDriver(new PinoLogger(options));
@@ -42,7 +42,7 @@ All of the settings that your plugin provides should come with a default value s
 
 ### Alias
 
-In the above example you've probably noticed the `alias: "logger"` line. This serves as an alias to allow us quick access to the plugin via `container.resolvePlugin("logger")` instead of having to type the exact name of the logger we are using, e.g. `container.resolvePlugin("@swipechain/core-logger-pino")`.
+In the above example you've probably noticed the `alias: "logger"` line. This serves as an alias to allow us quick access to the plugin via `container.resolvePlugin("logger")` instead of having to type the exact name of the logger we are using, e.g. `container.resolvePlugin("@solar-network/core-logger-pino")`.
 
 ::: warning
 Aliases should be used with caution if you are using a lot of plugins as you might overwrite something that you did not intend to overwrite which can cause unwanted behaviours.
@@ -66,19 +66,19 @@ The **options** parameter is whatever options the user passes to your plugin whe
 
 ## Setup
 
-Many components are required to have a proper environment setup for the development of your Swipechain Core plugin.
+Many components are required to have a proper environment setup for the development of your Solar Core plugin.
 
 You can view instructions on how to setup your development environment in the [here](./setup-dev-environment.md).
 
 ### Plugin Skeleton
 
-Make sure you are in the Swipechain Core folder cloned from the official [repo](https://github.com/SwipeChain/core).
+Make sure you are in the Solar Core folder cloned from the official [repo](https://github.com/solar-network/core).
 
 Add a submodule for the plugin skeleton.
 
 ```bash
 cd plugins/
-git submodule add -f https://github.com/SwipeChain/core-plugin-skeleton
+git submodule add -f https://github.com/solar-network/core-plugin-skeleton
 cd core-plugin-skeleton
 ```
 
@@ -122,7 +122,7 @@ The file we'll be writing our vendor code in is called `demo.ts` and it's locate
 The sample code we will use for this demo is
 
 ```ts
-import { app } from "@swipechain/core-container";
+import { app } from "@solar-network/core-container";
 
 export class Demo {
   public log(message) {
@@ -146,7 +146,7 @@ export class Demo {
 Before writing tests, it is essential to correctly set up the registration and deregistration of our plugin in the `plugin.ts` file of the `src/` folder.
 
 ```ts
-import { Container } from "@swipechain/core-interfaces";
+import { Container } from "@solar-network/core-interfaces";
 import { defaults } from "./defaults";
 import { Demo } from "./demo";
 
@@ -175,4 +175,4 @@ You can read about testing details in [the testing documentation](../../../guide
 
 ## Conclusion
 
-In the end, you should be able to write your plugin for Swipechain Core, with full interoperability with the existing core packages and other dependencies that might be required for your project.
+In the end, you should be able to write your plugin for Solar Core, with full interoperability with the existing core packages and other dependencies that might be required for your project.

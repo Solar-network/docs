@@ -1,8 +1,8 @@
 # Releases
 
-Here you will find overviews of each minor release of Swipechain Core, and corresponding documentation on the changes, migrations and upgrade, and descriptions on design decisions and further improvements.
+Here you will find overviews of each minor release of Solar Core, and corresponding documentation on the changes, migrations and upgrade, and descriptions on design decisions and further improvements.
 
-Swipechain adheres to standard versioning that using the Semver model:
+Solar adheres to standard versioning that using the Semver model:
 
 - **MAJOR**: 2.0.0 was the initial non-backwards compatible release on the Mainnet.
 - **MINOR**: 2.x.0 will add new functionality and cover bigger changes and new features that introduce higher end impacts (2.1.0, 2.2.0, …).
@@ -10,7 +10,7 @@ Swipechain adheres to standard versioning that using the Semver model:
 
 ### Changelog
 
-The official changelog of Swipechain Core is hosted in the [core repository](https://github.com/Swipechain/swipechain-core/blob/master/CHANGELOG.md).
+The official changelog of Solar Core is hosted in the [core repository](https://github.com/solar-network/solar-core/blob/master/CHANGELOG.md).
 
 ## Channels
 

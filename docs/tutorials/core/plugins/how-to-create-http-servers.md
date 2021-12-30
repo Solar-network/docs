@@ -10,18 +10,18 @@ title: "How to Create HTTP Servers"
 
 A common use-case for a plugin is that you process some data from within core and want to make use of that data with an external application. The easiest way to do this is through an HTTP server that exposes an API from which you request the data.
 
-Core provides a package called [core-http-utils](https://github.com/Swipechain/swipechain-core/tree/develop/packages/core-http-utils/src) which provides everything you will need to run an HTTP server with plugins. Core uses [hapi](https://hapijs.com/) for all its HTTP based services as it enables developers to focus on writing reusable application logic instead of spending time building infrastructure.
+Core provides a package called [core-http-utils](https://github.com/solar-network/solar-core/tree/develop/packages/core-http-utils/src) which provides everything you will need to run an HTTP server with plugins. Core uses [hapi](https://hapijs.com/) for all its HTTP based services as it enables developers to focus on writing reusable application logic instead of spending time building infrastructure.
 
 ## Installing Dependencies
 
-As you've learned in [How to write a Core Plugin](/tutorials/core/plugins/how-to-write-a-core-plugin.html) you will need to install the required dependencies. For the example we will use we need `core-http-utils` which you can install with `lerna add @swipechain/core-http-utils --scope=@vendor/demo-plugin`.
+As you've learned in [How to write a Core Plugin](/tutorials/core/plugins/how-to-write-a-core-plugin.html) you will need to install the required dependencies. For the example we will use we need `core-http-utils` which you can install with `lerna add @solar-network/core-http-utils --scope=@vendor/demo-plugin`.
 
 ## Creating Our Server
 
 Now that `core-http-utils` is installed we can get started with starting our HTTP server, which is fairly simple.
 
 ```ts
-import { createServer, mountServer } from "@swipechain/core-http-utils";
+import { createServer, mountServer } from "@solar-network/core-http-utils";
 
 export async function startServer(config) {
   const server = await createServer({

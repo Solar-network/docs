@@ -13,7 +13,7 @@ Blocks and transactions are the bread and butter of every blockchain. Core store
 ## Retrieving Blocks & Transactions
 
 ```ts
-import { app } from "@swipechain/core-container";
+import { app } from "@solar-network/core-container";
 
 const database = app.resolvePlugin("database");
 

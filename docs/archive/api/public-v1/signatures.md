@@ -25,7 +25,7 @@ GET /api/signatures/fee
 
 <request-example>
 ```bash
-curl -X GET https://explorer.swipechain.org:8443/api/signatures/fee \
+curl -X GET https://explorer.solar.network:8443/api/signatures/fee \
   -H "API-Version: 1"
 ```
 </request-example>

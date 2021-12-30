@@ -40,7 +40,7 @@ They will be most useful to verify peer-to-peer interaction and running scenario
 
 ## Code Organization
 
-Before all, let's see and understand how the code is organized. When you open the swipechain repository, you should see the following directory structure:
+Before all, let's see and understand how the code is organized. When you open the solar repository, you should see the following directory structure:
 
 ```
 /__tests__
@@ -110,7 +110,7 @@ Have a look at it and don't hesitate to improve. Here are some examples of what 
 
 Core provides a variety of matchers for [Jest](https://jestjs.io/) that can be used in combination with `expect()`.
 
-If you plan to use them simply run `yarn add @swipechain/core-jest-matchers --dev` and include them with `import "@swipechain/core-jest-matchers";` on top of your tests.
+If you plan to use them simply run `yarn add @solar-network/core-jest-matchers --dev` and include them with `import "@solar-network/core-jest-matchers";` on top of your tests.
 
 ### Transactions
 
@@ -272,7 +272,7 @@ Assert that the given value is a delegate wallet.
 
 ```ts
 expect({
-  username: "swipechainxdev",
+  username: "solarxdev",
   address: "DQ7VAW7u171hwDW75R1BqfHbA9yiKRCBSh",
   publicKey:
     "0310ad026647eed112d1a46145eed58b8c19c67c505a67f1199361a511ce7860c0"

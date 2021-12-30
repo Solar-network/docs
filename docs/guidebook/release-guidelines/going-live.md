@@ -19,7 +19,7 @@ To make sure that everything is working as intended you should follow these chec
 - Test explorer with the `develop` branch of `core`
 - Test that whitelist features are still working
 - Test `core-json-rpc` to ensure it works for exchanges
-- Run benchmswipechains on `master` and `develop` to see if there are crypto performance regressions
+- Run benchmsolars on `master` and `develop` to see if there are crypto performance regressions
 
 ### Transactions
 
@@ -48,7 +48,7 @@ To make sure that everything is working as intended you should follow these chec
 - Setup the wallet from 0 **(delete the database / cache)**
 - Browse news
 - Switch networks
-- Connect to custom peers and networks outside of Swipechain
+- Connect to custom peers and networks outside of Solar
 - Test screenshot protection
 - Create, browse, edit and remove contacts
 

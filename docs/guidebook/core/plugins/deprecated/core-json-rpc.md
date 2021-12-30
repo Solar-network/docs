@@ -13,13 +13,13 @@ This package is deprecated and is no longer maintained and supported.
 :::
 
 ::: tip
-You can find the source code of this package at [core-plugins-deprecated/core-json-rpc]( https://github.com/SwipeChain/swipechain-core-plugins-deprecated/tree/master/core-json-rpc).
+You can find the source code of this package at [core-plugins-deprecated/core-json-rpc]( https://github.com/solar-network/solar-core-plugins-deprecated/tree/master/core-json-rpc).
 :::
 
 ## Installation
 
 ```bash
-yarn add @swipechain/core-json-rpc
+yarn add @solar-network/core-json-rpc
 ```
 
 ## Alias

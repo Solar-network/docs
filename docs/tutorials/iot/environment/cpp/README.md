@@ -2,15 +2,15 @@
 title: "How to Setup the Cpp SDK's"
 ---
 
-# Swipechain Cpp SDK Setup
+# Solar Cpp SDK Setup
 
-Swipechain IoT features the first crypto SDK's designed to support IoT architecture, enabling novel use-cases on platforms with otherwise constrained resources.
+Solar IoT features the first crypto SDK's designed to support IoT architecture, enabling novel use-cases on platforms with otherwise constrained resources.
 
-Currently, the Swipechain [Cpp-Client](https://github.com/SwipeChain/cpp-client) and [Cpp-Crypto](https://github.com/SwipeChain/cpp-crypto) SDK's are designed to run on boards and platforms like [Espressif](https://www.espressif.com/), [Arduino](https://www.arduino.cc/), [PlatformIO](https://platformio.org/).
+Currently, the Solar [Cpp-Client](https://github.com/solar-network/cpp-client) and [Cpp-Crypto](https://github.com/solar-network/cpp-crypto) SDK's are designed to run on boards and platforms like [Espressif](https://www.espressif.com/), [Arduino](https://www.arduino.cc/), [PlatformIO](https://platformio.org/).
 
-The [**Cpp-Client**](https://github.com/SwipeChain/cpp-client) SDK helps developers fetch information from the [Swipechain blockchain](/introduction/blockchain) about its current state: which [Delegates](/glossary/#delegate) are currently forging, what transactions are associated with a given wallet, and so on.
+The [**Cpp-Client**](https://github.com/solar-network/cpp-client) SDK helps developers fetch information from the [Solar blockchain](/introduction/blockchain) about its current state: which [Delegates](/glossary/#delegate) are currently forging, what transactions are associated with a given wallet, and so on.
 
-The [**Cpp-Crypto**](https://github.com/SwipeChain/cpp-crypto) SDK, by contrast, assists developers in working with transactions: signing, serializing, deserializing, etc.
+The [**Cpp-Crypto**](https://github.com/solar-network/cpp-crypto) SDK, by contrast, assists developers in working with transactions: signing, serializing, deserializing, etc.
 
 [[toc]]
 
@@ -29,7 +29,7 @@ Open the Arduino Library Manager:
 
 > Sketch >> Include Library >> Manage Libraries
 
-Search for and install both, Swipechain Cpp-Client and Swipechain Cpp-Crypto.
+Search for and install both, Solar Cpp-Client and Solar Cpp-Crypto.
 
 Be sure to install the "-arduino" versions as pictured.
 
@@ -69,7 +69,7 @@ Cpp-Crypto uses "micro-ecc" and "ArduinoJson"; use the Arduino Library Manager t
 1). Clone the Cpp-Client from GitHub.
 
 ```asciidoc
-git clone --branch arduino https://github.com/SwipeChain/cpp-client.git
+git clone --branch arduino https://github.com/solar-network/cpp-client.git
 ```
 
 2). Copy the Cpp-Client folder to your Arduino "/libraries" folder.
@@ -81,7 +81,7 @@ git clone --branch arduino https://github.com/SwipeChain/cpp-client.git
 1). Clone the Cpp-Crypto from GitHub.
 
 ```asciidoc
-git clone --branch arduino  https://github.com/SwipeChain/swipechain-cpp-crypto.git
+git clone --branch arduino  https://github.com/solar-network/solar-cpp-crypto.git
 ```
 
 2). Copy the Cpp-Crypto folder to your Arduino "/libraries" folder.
@@ -106,11 +106,11 @@ None! There are currently no external dependencies for using Cpp-Client in the A
 
 #### Load example Sketches directly from the Arduino 'Examples' dropdown menu
 
-> **Files** >> **Examples** >> **Swipechain-Cpp-Client** >> **arduino** >> **api** >> **ESP32** > **Files** >> **Examples** >> **Swipechain-Cpp-Crypto** >> **arduino** >> **api** >> **ESP32**
+> **Files** >> **Examples** >> **Solar-Cpp-Client** >> **arduino** >> **api** >> **ESP32** > **Files** >> **Examples** >> **Solar-Cpp-Crypto** >> **arduino** >> **api** >> **ESP32**
 
 ![Sketch Select](.././assets/cpp-sdk/arduino-ide-cpp-sdk-sketch-select.jpeg)
 
-These are example usage "Sketches" that introduce you to the basic functionality of Swipechain and IoT.
+These are example usage "Sketches" that introduce you to the basic functionality of Solar and IoT.
 
 ---
 
@@ -118,12 +118,12 @@ These are example usage "Sketches" that introduce you to the basic functionality
 
 ![PlatformIO](.././assets/os/platformio.png)
 
-The easiest way to use the Swipechain SDK's in your PlatformIO project is to use the 'platformio.ini' configuration file. This file is included in every PlatformIO project.
+The easiest way to use the Solar SDK's in your PlatformIO project is to use the 'platformio.ini' configuration file. This file is included in every PlatformIO project.
 
 If we want to use both, the Cpp-Client and Cpp-Crypto libraries, we could simply add the following line to the 'platformio.ini' file.
 
 ```asciidoc
-lib_deps = Swipechain-Cpp-Client, Swipechain-Cpp-Crypto
+lib_deps = Solar-Cpp-Client, Solar-Cpp-Crypto
 ```
 
 Our 'platformio.ini' file would look like this for an Adafruit ESP32 Feather:
@@ -142,7 +142,7 @@ Our 'platformio.ini' file would look like this for an Adafruit ESP32 Feather:
 [env:featheresp32]platform = espressif32
 board = featheresp32
 framework = arduino
-lib_deps = Swipechain-Cpp-Client, Swipechain-Cpp-Crypto
+lib_deps = Solar-Cpp-Client, Solar-Cpp-Crypto
 upload_speed = 921600
 monitor_speed = 115200
 
@@ -161,9 +161,9 @@ Or... if we would prefer to use the command line:
 - **Using library Id:**
   > `platformio lib install 5900`
 - **Using library Name:**
-  > `platformio lib install "Swipechain-Cpp-Client"`
+  > `platformio lib install "Solar-Cpp-Client"`
 - **Install specific version:**
-  > `platformio lib install 5900@1.2.0` > `platformio lib install "Swipechain-Cpp-Client@1.2.0"`
+  > `platformio lib install 5900@1.2.0` > `platformio lib install "Solar-Cpp-Client@1.2.0"`
 
 **Dependencies:**
 The Dependencies should install after you install the Cpp-Client package.
@@ -179,9 +179,9 @@ but in case you need to install those dependencies manually:
 - **Using library Id:**
   > `platformio lib install 5899`
 - **Using library Name:**
-  > `platformio lib install "Swipechain-Cpp-Crypto"`
+  > `platformio lib install "Solar-Cpp-Crypto"`
 - **Install specific version:**
-  > `platformio lib install 5899@0.3.2` > `platformio lib install "Swipechain-Cpp-Crypto@0.3.2"`
+  > `platformio lib install 5899@0.3.2` > `platformio lib install "Solar-Cpp-Crypto@0.3.2"`
 
 **Dependencies:**
 The Dependencies should install after you install the Cpp-Client package.

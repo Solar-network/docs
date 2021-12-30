@@ -1,7 +1,7 @@
 /**
- * This file is part of Swipechain Cpp Crypto.
+ * This file is part of Solar Cpp Crypto.
  *
- * (c) Swipechain <info@swipechain.org>
+ * (c) Solar <info@solar.network>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -11,7 +11,7 @@
  * ESP8266 Cpp-Crypto Usage Sketch
  *
  * This sketch covers how to use the Cpp-Crypto library.
- * It allows your ESP8266 use Swipechain cryptographic protocols.
+ * It allows your ESP8266 use Solar cryptographic protocols.
  */
 
  /**
@@ -22,10 +22,10 @@
 /****************************************/
 
 /**
- * This is where you include the 'swipechainCrypto.h' header.
- * This allows your project to use Swipechain Cpp-Crypto.
+ * This is where you include the 'solarCrypto.h' header.
+ * This allows your project to use Solar Cpp-Crypto.
  */
-#include <swipechainCrypto.h>
+#include <solarCrypto.h>
 /**/
 
 /****************************************/
@@ -35,7 +35,7 @@ void checkCrypto() {
    * This is how you can check the default 'Network' "Transaction 'Fees' by type.
    * In this example, it should return a 'uint64_t' integer of '10000000' as the default 'Fee' for a 'Transaction' of 'Type' '0'.
    */
-    Swipechain::Crypto::Configuration::Fee fee;
+    Solar::Crypto::Configuration::Fee fee;
     unsigned long typeZeroTransactionFee = fee.get(0);
     Serial.print("\n Type 0 default Transaction Fee: ");
     Serial.println(typeZeroTransactionFee); // The response is a 'uint64_t' integer.
@@ -45,19 +45,19 @@ void checkCrypto() {
   /********************/
 
   /**
-   * The following methods allows you to create an Swipechain address.
+   * The following methods allows you to create an Solar address.
    * This is done by passing a 12-word 'Passphrase' and the 'Network' 'Version' "byte".
-   * The 'Version" "byte" is a BASE58 P2PKH byte. Swipechain Devnet is '0x1E'; Swipechain Mainnet is '0x17'.
+   * The 'Version" "byte" is a BASE58 P2PKH byte. Solar Devnet is '0x1E'; Solar Mainnet is '0x17'.
    *
    * Given the passphrase ""bullet parade snow bacon mutual deposit brass floor staff list concert ask",
-   * and the 'Devnet' 'Version' byte (0x1E); the Swipechain address should be "DStZXkgpEjxbG355nQ26vnkp95p24U9tsV"
+   * and the 'Devnet' 'Version' byte (0x1E); the Solar address should be "DStZXkgpEjxbG355nQ26vnkp95p24U9tsV"
    */
   const auto passphrase = "bullet parade snow bacon mutual deposit brass floor staff list concert ask";
   const uint8_t networkVersion = 0x1E;
 
-  Address swipechainAddress = Address::fromPassphrase(passphrase, networkVersion);
-    Serial.print("\nSwipechain Address: ");
-    Serial.println(swipechainAddress.toString().c_str()); // The 'Address' object is a type. Use 'toString()' to view the output. Arduino requires a 'c_str()' to 'print'.
+  Address solarAddress = Address::fromPassphrase(passphrase, networkVersion);
+    Serial.print("\nSolar Address: ");
+    Serial.println(solarAddress.toString().c_str()); // The 'Address' object is a type. Use 'toString()' to view the output. Arduino requires a 'c_str()' to 'print'.
   /**/
 
 
@@ -98,7 +98,7 @@ void checkCrypto() {
    * The following methods allows create a 'WIF'-style "PrivateKey".
    * 'WIF' stands for "Wallet Import Format"
    * This is done by passing a 12-word 'Passphrase' and the 'Network' 'WIF' "byte".
-   * The 'WIF" "byte" is a BASE58 WIF byte. Swipechain Devnet is '0xaa'; Swipechain Mainnet is also '0xaa'.
+   * The 'WIF" "byte" is a BASE58 WIF byte. Solar Devnet is '0xaa'; Solar Mainnet is also '0xaa'.
 
    *
    * Given the passphrase ""bullet parade snow bacon mutual deposit brass floor staff list concert ask",

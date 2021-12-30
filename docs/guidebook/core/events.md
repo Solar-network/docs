@@ -10,10 +10,10 @@ Effective integrations in your backend can be achieved using events, similar to 
 
 ## Emitting Events
 
-Emitting events is pretty straightforward. Just resolve the `event-emitter` from `@swipechain/core-container` and call the `emit` method with a name and data to be emitted.
+Emitting events is pretty straightforward. Just resolve the `event-emitter` from `@solar-network/core-container` and call the `emit` method with a name and data to be emitted.
 
 ```js
-const container = require("@swipechain/core-container");
+const container = require("@solar-network/core-container");
 const emitter = container.resolvePlugin("event-emitter");
 
 emitter.emit("block.forged", {
@@ -25,15 +25,15 @@ emitter.emit("block.forged", {
 
 ## Listening to Events
 
-Listening to events is as straightforward as emitting them. Just resolve the `event-emitter` from `@swipechain/core-container` and call the `on` method with a name and then process the incoming data.
+Listening to events is as straightforward as emitting them. Just resolve the `event-emitter` from `@solar-network/core-container` and call the `on` method with a name and then process the incoming data.
 
 ```js
-const container = require("@swipechain/core-container");
+const container = require("@solar-network/core-container");
 const emitter = container.resolvePlugin("event-emitter");
 
 emitter.on("block.forged", block => {
   if (block.generatorPublicKey === "fake-generator-public-key") {
-    console.log(`You just forged a block for ${block.amount} Swipechain`);
+    console.log(`You just forged a block for ${block.amount} Solar`);
   }
 });
 ```
@@ -179,7 +179,7 @@ The `error` message causing the failure.
 ### forger.started
 
 ::: warning
-This event is currently [disabled](https://github.com/Swipechain/swipechain-core/blob/a71f007fe13e5465f2a5ecc20203ded04b2bc783/packages/core-forger/lib/manager.js#L197-L203) due to a bug in the implementation.
+This event is currently [disabled](https://github.com/solar-network/solar-core/blob/a71f007fe13e5465f2a5ecc20203ded04b2bc783/packages/core-forger/lib/manager.js#L197-L203) due to a bug in the implementation.
 :::
 
 #### Event

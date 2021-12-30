@@ -14,4 +14,4 @@ Use the sidebar to navigate this section, or follow the links below:
 - [Bounties](/faq/bounties.html)
 - [Roadmap & Updates](/faq/roadmap-updates.html)
 
-[open an issue](https://github.com/Swipechain/swipechain-docs).
+[open an issue](https://github.com/solar-network/docs).

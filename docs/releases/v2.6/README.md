@@ -1,6 +1,6 @@
 # Summary
 
-Swipechain `v2.6` is a minor update but not backward compatible with `v2.5.X`. This update introduces implementations of AIP11 and AIP18.
+Solar `v2.6` is a minor update but not backward compatible with `v2.5.X`. This update introduces implementations of AIP11 and AIP18.
 
 - **Upgrade time**: low - upgrading to `v2.6` only requires minimal configuration changes.
 - **Complexity**: high - AIP11 and AIP18 were implemented which bring various cryptography changes after a milestone is reached.

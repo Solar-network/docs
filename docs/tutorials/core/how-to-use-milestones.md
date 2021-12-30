@@ -5,7 +5,7 @@ title: "How to Use Milestones"
 # How to Use Milestones
 
 ::: tip
-**This article will base everything on the official [Swipechain Devnet Milestones](https://github.com/Swipechain/swipechain-core/blob/develop/packages/crypto/src/networks/devnet/milestones.json).**
+**This article will base everything on the official [Solar Devnet Milestones](https://github.com/solar-network/solar-core/blob/develop/packages/crypto/src/networks/devnet/milestones.json).**
 
 When you fork Core and plan to run your own network this milestone configuration will be the one of the most interest to you to test your network before going live in production.
 :::

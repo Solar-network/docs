@@ -31,7 +31,7 @@ Orchestrators with Docker as a first class citizen:
 
 ## Production
 
-- Swipechain Core Production ready Docker images are now available at [Docker Hub](https://hub.docker.com/r/SwipeChain/swipechain-core)
+- Solar Core Production ready Docker images are now available at [Docker Hub](https://hub.docker.com/r/Solar/solar-core)
 
 ### Run Relay Only
 
@@ -106,30 +106,30 @@ docker-compose up -d
 
 #### Where Are the Config Files and Logs Located?
 
-Swipechain Core container mounts by default the following local paths as volumes:
+Solar Core container mounts by default the following local paths as volumes:
 
 ```bash
-~/.config/swipechain-core
-~/.local/share/swipechain-core
-~/.local/state/swipechain-core
+~/.config/solar-core
+~/.local/share/solar-core
+~/.local/state/solar-core
 ```
 
 Having that said, your config files are locally accessible under:
 
 ```bash
-~/.config/swipechain-core/$NETWORK/
+~/.config/solar-core/$NETWORK/
 ```
 
 Pool database as well as db snapshots are locally accessible under:
 
 ```bash
-~/.local/share/swipechain-core/$NETWORK/
+~/.local/share/solar-core/$NETWORK/
 ```
 
 Log files are locally accessible under:
 
 ```bash
-~/.local/state/swipechain-core/$NETWORK/
+~/.local/state/solar-core/$NETWORK/
 ```
 
 Alternative way of following the logs would be, by using the command:
@@ -142,21 +142,21 @@ docker exec -it core-$NETWORK pm2 logs
 
 Just use the **`purge_all.sh`** script.
 
-### Building Your Own Swipechain Core Docker Image
+### Building Your Own Solar Core Docker Image
 
-Custom Docker image builds of Swipechain Core are possible by using the file `docker-compose-build.yml`.
-Make your own modifications of Swipechain Core source code and run your custom container by executing:
+Custom Docker image builds of Solar Core are possible by using the file `docker-compose-build.yml`.
+Make your own modifications of Solar Core source code and run your custom container by executing:
 
 ```bash
 cd docker/production/$NETWORK     # (NETWORK = devnet || mainnet)
 docker-compose -f docker-compose-build.yml up -d
 ```
 
-This will build your Swipechain Core Docker image and run two separate containers. One for Core itself and another one for PostgreSQL.
+This will build your Solar Core Docker image and run two separate containers. One for Core itself and another one for PostgreSQL.
 
 ## Update
 
-### Docker Live Updates Are Now Possible With [CLI](https://docs.swipechain.org/guidebook/core/cli.html)
+### Docker Live Updates Are Now Possible With [CLI](https://docs.solar.network/guidebook/core/cli.html)
 
 As a preliminary step, installation of development tools is necessary (only needed once, when doing initial update):
 
@@ -167,7 +167,7 @@ docker exec -it core-$NETWORK sudo apk add make gcc g++ git python
 > We are all set! Run the update and follow instructions:
 
 ```bash
-docker exec -it core-$NETWORK swipechain update
+docker exec -it core-$NETWORK solar update
 ```
 
 ::: tip
@@ -192,12 +192,12 @@ docker-compose up -d core
 
 ### Generate the Configurations
 
-Swipechain Core include several `Dockerfile` and `docker-compose.yml` templates to ease development. They can be used to generate different configurations, depending on the network and token.
+Solar Core include several `Dockerfile` and `docker-compose.yml` templates to ease development. They can be used to generate different configurations, depending on the network and token.
 
 For instance, you could use this command:
 
 ```bash
-yarn docker swipechain
+yarn docker solar
 ```
 
 This command creates a new directory (`docker`) that contains 1 folder per network.
@@ -206,7 +206,7 @@ This command creates a new directory (`docker`) that contains 1 folder per netwo
 
 **Run a PostgreSQL container while using NodeJS from your local environment.**
 
-This configuration is well suited when you are not developing Swipechain Core, but instead working with the API. By tearing down the PostgreSQL container, you reset the Nodes blockchain.
+This configuration is well suited when you are not developing Solar Core, but instead working with the API. By tearing down the PostgreSQL container, you reset the Nodes blockchain.
 
 ::: warning
 PostgreSQL is run in a separate container and it's port gets mapped to your `localhost`, so you should not have PostgreSQL running locally.
@@ -230,14 +230,14 @@ docker-compose down -v
 docker-compose up -d
 ```
 
-### Serve Swipechain Core as a Collection of Containers
+### Serve Solar Core as a Collection of Containers
 
-**Run a PostgreSQL container, build and run Swipechain-Core using a mounted volume.**
+**Run a PostgreSQL container, build and run Solar-Core using a mounted volume.**
 
-When a container is built, all files are copied inside the container. It cannot interact with the host's filesystem unless a directory is specifically [mounted](https://docs.docker.com/storage/volumes/) during container start. This configuration works well when developing Swipechain Core itself, as you do not need to rebuild the container to test your changes.
+When a container is built, all files are copied inside the container. It cannot interact with the host's filesystem unless a directory is specifically [mounted](https://docs.docker.com/storage/volumes/) during container start. This configuration works well when developing Solar Core itself, as you do not need to rebuild the container to test your changes.
 
 ::: tip
-Along with PostgreSQL container, now you also have a NodeJS container which mounts your local swipechain-core git folder inside the container and installs all NPM prerequisites.
+Along with PostgreSQL container, now you also have a NodeJS container which mounts your local solar-core git folder inside the container and installs all NPM prerequisites.
 :::
 
 ```bash
@@ -245,14 +245,14 @@ cd docker/development/$NETWORK      # (NETWORK = testnet || devnet)
 docker-compose up -d
 ```
 
-_You can now enter your swipechain-core container and use NodeJS in a Docker container (Linux environment)._
+_You can now enter your solar-core container and use NodeJS in a Docker container (Linux environment)._
 
 ```bash
-docker exec -it swipechain-$NETWORK-core bash
+docker exec -it solar-$NETWORK-core bash
 ```
 
 _Need to start everything from scratch and make sure there are no remaining cached containers, images or volumes left? Just use the **purge_all.sh** script._
 
 ::: warning
-Development files/presets are not Production ready. Official Production Swipechain-Core Docker images are now available at [Docker Hub](https://hub.docker.com/r/SwipeChain/swipechain-core).
+Development files/presets are not Production ready. Official Production Solar-Core Docker images are now available at [Docker Hub](https://hub.docker.com/r/Solar/solar-core).
 :::

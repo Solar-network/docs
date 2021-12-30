@@ -4,13 +4,13 @@ This tutorial outlines how to configure a Delegate Node to accept dynamic fees. 
 
 ## Why Dynamic Fees
 
-Although it might seem that a Delegate Node obtains the highest profit by increasing his/her fee; doing so might decrease the total amount of fees collected, as the transaction volume of the Swipechain network decreases. Dynamic fees ensure users and delegates find a natural middle ground, as Delegate Nodes compete with each other over transactions.
+Although it might seem that a Delegate Node obtains the highest profit by increasing his/her fee; doing so might decrease the total amount of fees collected, as the transaction volume of the Solar network decreases. Dynamic fees ensure users and delegates find a natural middle ground, as Delegate Nodes compete with each other over transactions.
 
 Dynamic fees were introduced initially in [Bitcoin](https://en.bitcoin.it/wiki/Miner_fees), where it is a vital part of its mining economy.
 
 ## Find Your Config Directory
 
-First things first, you need to find your config directory. If you installed Swipechain Core using the `core-commander`, you can typically find this folder at `~/.config/swipechain-core/{network}/`.
+First things first, you need to find your config directory. If you installed Solar Core using the `core-commander`, you can typically find this folder at `~/.config/solar-core/{network}/`.
 
 The file we'll access from this folder is `plugins.js`. If you see it, you're in the right place.
 
@@ -19,19 +19,19 @@ The file we'll access from this folder is `plugins.js`. If you see it, you're in
 Your node needs to signal to the network that it accepts dynamic fees. For this, open up your `plugins.js` file:
 
 ```bash
-nano ~/.config/swipechain-core/{network}/plugins.js
+nano ~/.config/solar-core/{network}/plugins.js
 ```
 
-There are two separate settings here worth configuring: the `dynamicFees` constants, which is found under the `@swipechain/core-transaction-pool` key, and the dynamic fees themselves.
+There are two separate settings here worth configuring: the `dynamicFees` constants, which is found under the `@solar-network/core-transaction-pool` key, and the dynamic fees themselves.
 
-You can use dynamic fee constants to alter how the dynamic fee formula is applied in your Swipechain Core node. The `dynamicFees` config key in your `@swipechain/core-transaction-pool` section should look like this:
+You can use dynamic fee constants to alter how the dynamic fee formula is applied in your Solar Core node. The `dynamicFees` config key in your `@solar-network/core-transaction-pool` section should look like this:
 
-##### file: ~/.config/swipechain-core/{network}/plugins.js
+##### file: ~/.config/solar-core/{network}/plugins.js
 
 ```js
 {
     // packages...
-    "@swipechain/core-transaction-pool": {
+    "@solar-network/core-transaction-pool": {
         dynamicFees: {
             enabled: true,
             minFeePool: 1000,
@@ -76,7 +76,7 @@ Note that, as fee transactions are only executed upon block creation, removing a
 
 By default, the max transaction pool size is set to 100000. To change this value, edit your `.env` file:
 
-##### file: ~/.config/swipechain-core/{network}/.env
+##### file: ~/.config/solar-core/{network}/.env
 
 ```
 CORE_MAX_TRANSACTIONS_IN_POOL=100000

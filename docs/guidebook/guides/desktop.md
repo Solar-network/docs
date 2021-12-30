@@ -1,29 +1,29 @@
 ---
-title: "Swipechain Desktop Wallet v2.x.x"
+title: "Solar Desktop Wallet v2.x.x"
 ---
 
 # Desktop Wallet
 
-<!-- ![Swipechain Desktop](./assets/desktop/banner.png) -->
+<!-- ![Solar Desktop](./assets/desktop/banner.png) -->
 
-[![Build Status](https://badgen.now.sh/circleci/github/SwipeChain/swipechain-desktop-wallet)](https://circleci.com/gh/SwipeChain/swipechain-desktop-wallet)
-[![Latest Version](https://badgen.now.sh/github/release/SwipeChain/desktop-wallet)](https://github.com/SwipeChain/desktop-wallet/releases)
+[![Build Status](https://badgen.now.sh/circleci/github/Solar/solar-desktop-wallet)](https://circleci.com/gh/Solar/solar-desktop-wallet)
+[![Latest Version](https://badgen.now.sh/github/release/Solar/desktop-wallet)](https://github.com/solar-network/desktop-wallet/releases)
 [![License: MIT](https://badgen.now.sh/badge/license/MIT/green)](https://opensource.org/licenses/MIT)
 
 ## Download
 
-[Latest Release](https://github.com/SwipeChain/swipechain-desktop/releases)
+[Latest Release](https://github.com/solar-network/solar-desktop/releases)
 
 ## Installing via Package Managers
 
 ### Arch Linux
 
-Install via [AUR](https://aur.archlinux.org/packages/swipechain-desktop):
+Install via [AUR](https://aur.archlinux.org/packages/solar-desktop):
 
 > Manjaro
 
 ```shell
-pamac build swipechain-desktop
+pamac build solar-desktop
 ```
 
 ### Mac OS X
@@ -31,12 +31,12 @@ pamac build swipechain-desktop
 Install via [Homebrew](https://brew.sh/):
 
 ```shell
-brew cask install swipechain-desktop-wallet
+brew cask install solar-desktop-wallet
 ```
 
 ## Translations
 
-Translations are part of our [Swipechain Development and Security Bounty Program](https://blog.swipechain.org/swipechain-development-and-security-bounty-program-a95122d06879).
+Translations are part of our [Solar Development and Security Bounty Program](https://blog.solar.network/solar-development-and-security-bounty-program-a95122d06879).
 
 Full translations are considered to be `Tier 3`, while grammar fixes, typos, etc. are considered to be `Tier 6`.
 
@@ -46,12 +46,12 @@ Full translations are considered to be `Tier 3`, while grammar fixes, typos, etc
 </summary>
 
 - Create a pull request for the language you are going to translate. If you have doubts about something, use English to explain them.
-- Translate the textual content of the application, using the [English language file](https://github.com/SwipeChain/desktop-wallet/blob/develop/src/renderer/i18n/locales/en-US.js) as the reference. To do that, a new file, with the language locale code should be created. The name of the file should be a valid [RFC 5646](https://tools.ietf.org/html/rfc5646) and should be located at `src/renderer/i18n/locales/LANGUAGE.js`. Thanks to [vue-i18n-extract](https://github.com/pixari/vue-i18n-extract), it is possible to execute `yarn i18n src/renderer/i18n/locales/LANGUAGE.js` to find suggestions of missing translations.
-- Add the language to the [English language file](https://github.com/SwipeChain/desktop-wallet/blob/develop/src/renderer/i18n/locales/en-US.js) at the `LANGUAGES` key.
-- Update the [date and time formats file](https://github.com/SwipeChain/desktop-wallet/blob/develop/src/renderer/i18n/date-time-formats.js) to include the short and long format that are used commonly by native speakers.
-- Update the [number formats file](https://github.com/SwipeChain/desktop-wallet/blob/develop/src/renderer/i18n/number-formats.js) to include the preferred way of displaying currencies used commonly by native speakers.
-- Add the language at the `I18N.enabledLocales` array at the [main configuration file](https://github.com/SwipeChain/desktop-wallet/blob/develop/config/index.js). This step is necessary to make the language would not be available.
-- Execute the application. Go to the [ development section](https://github.com/SwipeChain/desktop-wallet#development) to learn how to install the requirements and execute it.
+- Translate the textual content of the application, using the [English language file](https://github.com/solar-network/desktop-wallet/blob/develop/src/renderer/i18n/locales/en-US.js) as the reference. To do that, a new file, with the language locale code should be created. The name of the file should be a valid [RFC 5646](https://tools.ietf.org/html/rfc5646) and should be located at `src/renderer/i18n/locales/LANGUAGE.js`. Thanks to [vue-i18n-extract](https://github.com/pixari/vue-i18n-extract), it is possible to execute `yarn i18n src/renderer/i18n/locales/LANGUAGE.js` to find suggestions of missing translations.
+- Add the language to the [English language file](https://github.com/solar-network/desktop-wallet/blob/develop/src/renderer/i18n/locales/en-US.js) at the `LANGUAGES` key.
+- Update the [date and time formats file](https://github.com/solar-network/desktop-wallet/blob/develop/src/renderer/i18n/date-time-formats.js) to include the short and long format that are used commonly by native speakers.
+- Update the [number formats file](https://github.com/solar-network/desktop-wallet/blob/develop/src/renderer/i18n/number-formats.js) to include the preferred way of displaying currencies used commonly by native speakers.
+- Add the language at the `I18N.enabledLocales` array at the [main configuration file](https://github.com/solar-network/desktop-wallet/blob/develop/config/index.js). This step is necessary to make the language would not be available.
+- Execute the application. Go to the [ development section](https://github.com/solar-network/desktop-wallet#development) to learn how to install the requirements and execute it.
 
 </details>
 
@@ -161,7 +161,7 @@ yarn i18n:all
 
 ## Plugins
 
-You can find a plugin template [here](https://github.com/swipechain-ecosystem-desktop-plugins/template) which will help get you started.
+You can find a plugin template [here](https://github.com/solar-network-ecosystem-desktop-plugins/template) which will help get you started.
 
 ### File Structure
 
@@ -172,9 +172,9 @@ All plugins require at least the following files in order to work:
 
 ### Installation
 
-Plugins are to be installed inside of the `~/.swipechain-desktop/plugins` folder.
+Plugins are to be installed inside of the `~/.solar-desktop/plugins` folder.
 
-**Note: If running in development mode, the path used is `~/.swipechain-desktop/plugins-dev`.**
+**Note: If running in development mode, the path used is `~/.solar-desktop/plugins-dev`.**
 
 ### Permissions
 
@@ -505,7 +505,7 @@ Get or set the binary type for the websocket.
 
 ## Security
 
-If you discover a security vulnerability within this project, please send an e-mail to security@swipechain.org. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this project, please send an e-mail to security@solar.network. All security vulnerabilities will be promptly addressed.
 
 ## Credits
 
@@ -515,4 +515,4 @@ If you discover a security vulnerability within this project, please send an e-m
 
 ## License
 
-[MIT](LICENSE) © [Swipechain](https://swipechain.org)
+[MIT](LICENSE) © [Solar](https://solar.network)

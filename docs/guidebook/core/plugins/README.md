@@ -8,11 +8,11 @@ title: "Plugins"
 
 ## Introduction
 
-Swipechain Core has an extensive and powerful plugin system that allows you to very easily break your application up into isolated pieces of business logic, and reusable utilities.
+Solar Core has an extensive and powerful plugin system that allows you to very easily break your application up into isolated pieces of business logic, and reusable utilities.
 
 ## Installing Plugins
 
-Since 2.2.0 we ship Core as an NPM package that provides a global bin to manage core via the `swipechain` command. A few changes come with that in regards to how you install plugins.
+Since 2.2.0 we ship Core as an NPM package that provides a global bin to manage core via the `solar` command. A few changes come with that in regards to how you install plugins.
 
 ### npm / Yarn
 
@@ -30,22 +30,22 @@ If you're plugins are written in TypeScript it is recommended to run `yarn build
 
 ### Registering the Plugin
 
-In order to make sure that your plugin is registered you need to modify the `/.config/swipechain-core/{network}/plugins.json` file and add your plugin to a specific point in the application lifecycle.
+In order to make sure that your plugin is registered you need to modify the `/.config/solar-core/{network}/plugins.json` file and add your plugin to a specific point in the application lifecycle.
 
 ```js
 module.exports = {
-  "@swipechain/core-event-emitter": {},
-  "@swipechain/core-logger": {},
-  "@swipechain/core-logger-pino": {},
-  "@swipechain/core-database": {},
-  "@swipechain/core-database-postgres": {},
-  "@swipechain/core-transaction-pool": {},
-  "@swipechain/core-p2p": {},
-  "@swipechain/core-blockchain": {},
-  "@swipechain/core-api": {},
-  "@swipechain/core-webhooks": {},
-  "@swipechain/core-forger": {},
-  "@swipechain/core-json-rpc": {}
+  "@solar-network/core-event-emitter": {},
+  "@solar-network/core-logger": {},
+  "@solar-network/core-logger-pino": {},
+  "@solar-network/core-database": {},
+  "@solar-network/core-database-postgres": {},
+  "@solar-network/core-transaction-pool": {},
+  "@solar-network/core-p2p": {},
+  "@solar-network/core-blockchain": {},
+  "@solar-network/core-api": {},
+  "@solar-network/core-webhooks": {},
+  "@solar-network/core-forger": {},
+  "@solar-network/core-json-rpc": {}
 };
 ```
 

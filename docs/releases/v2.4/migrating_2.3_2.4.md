@@ -13,27 +13,27 @@ After upgrading you should check whether your application still works as expecte
 ## Upgrade Steps
 
 ::: tip
-Be sure to complete all of the following steps before you continue to upgrade with the `swipechain update` command to the latest version.
+Be sure to complete all of the following steps before you continue to upgrade with the `solar update` command to the latest version.
 :::
 
 ### Step 1. Add `core-state` Package
 
-1. Open `~/.config/swipechain-core/mainnet/plugins.js`
-2. Locate the `@swipechain/core-database-postgres` entry.
+1. Open `~/.config/solar-core/mainnet/plugins.js`
+2. Locate the `@solar-network/core-database-postgres` entry.
 3. Add this package addition line before it (see below):
 
    ```js
-   "@swipechain/core-state": {}, // Add this line before it
+   "@solar-network/core-state": {}, // Add this line before it
    ```
 
 4. Save the changes. Your configuration file should look like this:
 
    ```js
    module.exports = {
-       "@swipechain/core-event-emitter": {},
-       "@swipechain/core-logger-pino": {},
-       "@swipechain/core-state": {},
-       "@swipechain/core-database-postgres": {},
+       "@solar-network/core-event-emitter": {},
+       "@solar-network/core-logger-pino": {},
+       "@solar-network/core-state": {},
+       "@solar-network/core-database-postgres": {},
        ...
        ...
        ...
@@ -46,12 +46,12 @@ Be sure to complete all of the following steps before you continue to upgrade wi
 It's especially important to register this plugin as this is what the Desktop and Mobile wallet will use to communicate with nodes.
 :::
 
-1. Open `~/.config/swipechain-core/mainnet/plugins.js`
-2. Locate the `@swipechain/core-blockchain` entry.
+1. Open `~/.config/solar-core/mainnet/plugins.js`
+2. Locate the `@solar-network/core-blockchain` entry.
 3. Add this package addition line after it (see below):
 
    ```js
-   "@swipechain/core-wallet-api": {}, // Add this line after it
+   "@solar-network/core-wallet-api": {}, // Add this line after it
    ```
 
 4. Save the changes. Your configuration file should look like this:
@@ -60,8 +60,8 @@ It's especially important to register this plugin as this is what the Desktop an
    module.exports = {
        ...
        ...
-       "@swipechain/core-blockchain": {},
-       "@swipechain/core-wallet-api": {},
+       "@solar-network/core-blockchain": {},
+       "@solar-network/core-wallet-api": {},
        ...
        ...
    }
@@ -79,15 +79,15 @@ It's especially important to register this plugin as this is what the Desktop an
 
 ### Step 3. Update `core-p2p` Configuration
 
-1. Open `~/.config/swipechain-core/mainnet/plugins.js`
-2. Locate the `@swipechain/core-p2p` entry and replace the block like shown below.
+1. Open `~/.config/solar-core/mainnet/plugins.js`
+2. Locate the `@solar-network/core-p2p` entry and replace the block like shown below.
 
    **Old**
 
    ```js
    module.exports = {
        ...
-       "@swipechain/core-p2p": {
+       "@solar-network/core-p2p": {
            host: process.env.CORE_P2P_HOST || "0.0.0.0",
            port: process.env.CORE_P2P_PORT || 4001,
        },
@@ -100,7 +100,7 @@ It's especially important to register this plugin as this is what the Desktop an
    ```js
    module.exports = {
        ...
-       "@swipechain/core-p2p": {
+       "@solar-network/core-p2p": {
            server: {
                port: process.env.CORE_P2P_PORT || 4001,
            },
@@ -114,15 +114,15 @@ It's especially important to register this plugin as this is what the Desktop an
 
 ### Step 4. Update `core-forger` Configuration
 
-1. Open `~/.config/swipechain-core/mainnet/plugins.js`
-2. Locate the `@swipechain/core-forger` entry and replace the block like shown below.
+1. Open `~/.config/solar-core/mainnet/plugins.js`
+2. Locate the `@solar-network/core-forger` entry and replace the block like shown below.
 
    **Old**
 
    ```js
    module.exports = {
        ...
-       "@swipechain/core-forger": {
+       "@solar-network/core-forger": {
           hosts: [`http://127.0.0.1:${process.env.CORE_P2P_PORT || 4001}`],
        },
        ...
@@ -134,7 +134,7 @@ It's especially important to register this plugin as this is what the Desktop an
    ```js
    module.exports = {
        ...
-       "@swipechain/core-forger": {
+       "@solar-network/core-forger": {
            hosts: [
               {
                  hostname: "127.0.0.1",
@@ -155,30 +155,30 @@ This only applies if you have the JSON-RPC registered in your `plugins.js` file,
 :::
 
 ```sh
-sed -i 's/CORE_JSONRPC/CORE_EXCHANGE_JSON_RPC/g' ~/.config/swipechain-core/mainnet/.env
-sed -i 's/CORE_JSON_RPC/CORE_EXCHANGE_JSON_RPC/g' ~/.config/swipechain-core/mainnet/.env
-sed -i 's/CORE_JSONRPC/CORE_EXCHANGE_JSON_RPC/g' ~/.config/swipechain-core/mainnet/plugins.js
-sed -i 's/CORE_JSON_RPC/CORE_EXCHANGE_JSON_RPC/g' ~/.config/swipechain-core/mainnet/plugins.js
-sed -i 's/core-json-rpc/core-exchange-json-rpc/g' ~/.config/swipechain-core/mainnet/plugins.js
+sed -i 's/CORE_JSONRPC/CORE_EXCHANGE_JSON_RPC/g' ~/.config/solar-core/mainnet/.env
+sed -i 's/CORE_JSON_RPC/CORE_EXCHANGE_JSON_RPC/g' ~/.config/solar-core/mainnet/.env
+sed -i 's/CORE_JSONRPC/CORE_EXCHANGE_JSON_RPC/g' ~/.config/solar-core/mainnet/plugins.js
+sed -i 's/CORE_JSON_RPC/CORE_EXCHANGE_JSON_RPC/g' ~/.config/solar-core/mainnet/plugins.js
+sed -i 's/core-json-rpc/core-exchange-json-rpc/g' ~/.config/solar-core/mainnet/plugins.js
 ```
 
-### Step 6. Running the Update Command via the `swipechain` CLI
+### Step 6. Running the Update Command via the `solar` CLI
 
 ::: warning
 Do not run any of the mentioned commands with `sudo` unless explicitly stated.
 :::
 
-Make sure that [Step 1](#step-1-add-core-state-package), [Step 2](#step-2-add-core-wallet-api-package), [Step 3](#step-3-update-core-p2p-configuration), [Step 4](#step-4-update-core-forger-configuration) and [Step 5](#step-5-update-core-json-rpc-to-core-exchange-json-rpc) were successfully completed before running the `swipechain update` command via the cli.
+Make sure that [Step 1](#step-1-add-core-state-package), [Step 2](#step-2-add-core-wallet-api-package), [Step 3](#step-3-update-core-p2p-configuration), [Step 4](#step-4-update-core-forger-configuration) and [Step 5](#step-5-update-core-json-rpc-to-core-exchange-json-rpc) were successfully completed before running the `solar update` command via the cli.
 
 **To update to v2.4 run the following command:**
 
 ```bash
-swipechain update
+solar update
 ```
 
 ## Developer Related Information
 
-This section addresses developers and lists notable changes during this version upgrade. For more details make sure you checkout the [CHANGELOG]( https://github.com/SwipeChain/swipechain-core/blob/master/CHANGELOG.md) document. The following breaking changes where introduced in v2.4:
+This section addresses developers and lists notable changes during this version upgrade. For more details make sure you checkout the [CHANGELOG]( https://github.com/solar-network/solar-core/blob/master/CHANGELOG.md) document. The following breaking changes where introduced in v2.4:
 
 ### 1. Fee Statistics Removed from `node/configuration` Endpoint
 
@@ -186,4 +186,4 @@ The fee statistic are no longer included in the response of the `node/configurat
 
 ## Reporting Problems
 
-If you happen to experience any issues please [open an issue](https://github.com/Swipechain/swipechain-core/issues/new?template=Bug_report.md) with a detailed description of the problem, steps to reproduce it and info about your environment.
+If you happen to experience any issues please [open an issue](https://github.com/solar-network/solar-core/issues/new?template=Bug_report.md) with a detailed description of the problem, steps to reproduce it and info about your environment.

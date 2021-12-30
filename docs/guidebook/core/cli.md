@@ -8,20 +8,20 @@ title: "Command Line Interface"
 
 ## Installation
 
-Since Version 2.2.0 we distribute the Swipechain Core as an npm package, which has to be globally installed, which provides a built-in CLI.
+Since Version 2.2.0 we distribute the Solar Core as an npm package, which has to be globally installed, which provides a built-in CLI.
 
 ### Prerequisites
 
-In the next sections we will run you through an automated setup of a new server with a Core installation at the end of it but if you prefer to do a manual setup, take a look at [install.sh](https://raw.githubusercontent.com/Swipechain/swipechain-core/develop/install.sh) to see what dependencies need to be installed and configured.
+In the next sections we will run you through an automated setup of a new server with a Core installation at the end of it but if you prefer to do a manual setup, take a look at [install.sh](https://raw.githubusercontent.com/Solar/solar-core/develop/install.sh) to see what dependencies need to be installed and configured.
 
-**A global `pm2` installation is required as the CLI uses it to manage processes. Take a look at the [process manager](https://github.com/Swipechain/swipechain-core/blob/master/packages/core/src/process-manager.ts) to see how it works under the hood.**
+**A global `pm2` installation is required as the CLI uses it to manage processes. Take a look at the [process manager](https://github.com/solar-network/solar-core/blob/master/packages/core/src/process-manager.ts) to see how it works under the hood.**
 
 ### Existing Installation
 
 If you are already owning a server that runs Core 2.1.0 or newer you can simply execute the following command.
 
 ```bash
-yarn global add @swipechain/core
+yarn global add @solar-network/core
 ```
 
 This command might take a while since all packages and dependencies need to be installed as well.
@@ -33,23 +33,23 @@ Once this command has finished you should stop all your existing core processes 
 If you are planning to setup a new server you can execute the following steps.
 
 ```bash
-adduser swipechain
-usermod -aG sudo swipechain
-su swipechain
+adduser solar
+usermod -aG sudo solar
+su solar
 cd ~
-bash <(curl -s https://raw.githubusercontent.com/Swipechain/swipechain-core/master/install.sh)
+bash <(curl -s https://raw.githubusercontent.com/Solar/solar-core/master/install.sh)
 ```
 
 Once this command has finished you should start your relay and forger with one of the commands that are documented further down on this page. If you are having any issues with the CLI, head down to the **Troubleshoot** section which covers the most common issues we know about.
 
-> You can check [https://www.npmjs.com/package/@swipechain/core](https://www.npmjs.com/package/@swipechain/core) for new releases or use `swipechain update` to check for updates.
+> You can check [https://www.npmjs.com/package/@solar-network/core](https://www.npmjs.com/package/@solar-network/core) for new releases or use `solar update` to check for updates.
 
 ## Configuration
 
-Before you can start using Swipechain Core you will need to publish the configuration of the network you wish to operate on.
+Before you can start using Solar Core you will need to publish the configuration of the network you wish to operate on.
 
 ```bash
-swipechain config:publish
+solar config:publish
 ```
 
 This will bring up an interactive UI which will ask a few questions to help you with the setup process. Once you have published the configuration you can start using the CLI. It will automatically detect which network you have configured.
@@ -66,7 +66,7 @@ If this doesn't help, read the known issues below and see if any of those solve 
 
 ### Command Not Found
 
-If you are receiving a message to the effect of `swipechain command not found` your bash environment most likely doesn't have the yarn bin path registered. Execute the following command to resolve the issue.
+If you are receiving a message to the effect of `solar command not found` your bash environment most likely doesn't have the yarn bin path registered. Execute the following command to resolve the issue.
 
 `echo 'export PATH=$(yarn global bin):$PATH' >> ~/.bashrc && source ~/.bashrc`
 
@@ -76,7 +76,7 @@ If you are using a shell other then the default bash, like zsh, you will need to
 
 If the processes fail to start or restart after an update it is most likely an issue with pm2. Running `pm2 update` should usually resolve the issue.
 
-If this doesn't resolve the issue you should run `pm2 delete all && swipechain relay:start && pm2 logs`, also `swipechain forger:start` if you are a delegate.
+If this doesn't resolve the issue you should run `pm2 delete all && solar relay:start && pm2 logs`, also `solar forger:start` if you are a delegate.
 
 ### Process Has Entered an Unknown State
 
@@ -86,12 +86,12 @@ If you are receiving a message to the effect of `The "..." process has entered a
 
 ### autocomplete <!-- markdown-title-case: skip-line -->
 
-You might be used to tab completion, which the Swipechain CLI does support. Using this command does not configure autocompletion, but does show you instructions.
+You might be used to tab completion, which the Solar CLI does support. Using this command does not configure autocompletion, but does show you instructions.
 
 #### Usage
 
 ```bash
-swipechain autocomplete
+solar autocomplete
 ```
 
 ### config:cli
@@ -101,7 +101,7 @@ Configure the CLI
 #### Usage
 
 ```bash
-swipechain config:cli
+solar config:cli
 ```
 
 #### Flags
@@ -116,13 +116,13 @@ swipechain config:cli
 ##### Use the "mine" token for configuration
 
 ```bash
-swipechain config:cli --token="mine"
+solar config:cli --token="mine"
 ```
 
 ##### Switch to the Beta Channel
 
 ```bash
-swipechain config:cli --channel="beta"
+solar config:cli --channel="beta"
 ```
 
 ### config:database
@@ -132,7 +132,7 @@ Configure the database
 #### Usage
 
 ```bash
-swipechain config:database
+solar config:database
 ```
 
 ::: tip
@@ -154,7 +154,7 @@ Omitting all flags will start the configuration in an interactive mode.
 #### Examples
 
 ```bash
-swipechain config:database --host=localhost --port=5432 --database=ark_mainnet --username=swipechain --password=password
+solar config:database --host=localhost --port=5432 --database=ark_mainnet --username=solar --password=password
 ```
 
 ### config:forger
@@ -164,7 +164,7 @@ Configure the forging delegate
 #### Usage
 
 ```bash
-swipechain config:forger
+solar config:forger
 ```
 
 ::: tip
@@ -186,13 +186,13 @@ Omitting all flags will start the configuration in an interactive mode.
 ##### Configure a Delegate Using an Encrypted BIP38
 
 ```bash
-swipechain config:forger --method=bip38 --bip39="..." --password="..."
+solar config:forger --method=bip38 --bip39="..." --password="..."
 ```
 
 ##### Configure a Delegate Using a BIP39 Passphrase
 
 ```bash
-swipechain config:forger --method=bip39 --bip39="..."
+solar config:forger --method=bip39 --bip39="..."
 ```
 
 ### config:forger:bip38
@@ -202,7 +202,7 @@ Configure a delegate using an encrypted BIP38
 #### Usage
 
 ```bash
-swipechain config:forger:bip38
+solar config:forger:bip38
 ```
 
 #### Flags
@@ -217,7 +217,7 @@ swipechain config:forger:bip38
 #### Examples
 
 ```bash
-swipechain config:forger:bip38 --bip38="..." --password="..."
+solar config:forger:bip38 --bip38="..." --password="..."
 ```
 
 ### config:forger:bip39
@@ -227,7 +227,7 @@ Configure a delegate using a BIP39 passphrase
 #### Usage
 
 ```bash
-swipechain config:forger:bip39
+solar config:forger:bip39
 ```
 
 #### Flags
@@ -241,7 +241,7 @@ swipechain config:forger:bip39
 #### Examples
 
 ```bash
-swipechain config:forger:bip39 --bip39="..."
+solar config:forger:bip39 --bip39="..."
 ```
 
 ### config:publish
@@ -251,7 +251,7 @@ Publish the configuration
 #### Usage
 
 ```bash
-swipechain config:publish
+solar config:publish
 ```
 
 #### Flags
@@ -266,7 +266,7 @@ swipechain config:publish
 ##### Publish the Configuration
 
 ```bash
-swipechain config:publish
+solar config:publish
 ```
 
 ### config:reset
@@ -276,7 +276,7 @@ Reset the configuration
 #### Usage
 
 ```bash
-swipechain config:reset
+solar config:reset
 ```
 
 #### Flags
@@ -291,7 +291,7 @@ swipechain config:reset
 ##### Reset the Configuration for the Mainnet Network
 
 ```bash
-swipechain config:reset --network=mainnet
+solar config:reset --network=mainnet
 ```
 
 ### core:log
@@ -301,7 +301,7 @@ Show the core log
 #### Usage
 
 ```bash
-swipechain core:log
+solar core:log
 ```
 
 #### Flags
@@ -315,7 +315,7 @@ swipechain core:log
 #### Examples
 
 ```bash
-swipechain core:log
+solar core:log
 ```
 
 ### core:restart
@@ -325,7 +325,7 @@ Restart the core
 #### Usage
 
 ```bash
-swipechain core:restart
+solar core:restart
 ```
 
 #### Flags
@@ -340,7 +340,7 @@ swipechain core:restart
 ##### Restart the Core
 
 ```bash
-swipechain core:restart
+solar core:restart
 ```
 
 ### core:start
@@ -350,7 +350,7 @@ Start the core
 #### Usage
 
 ```bash
-swipechain core:start
+solar core:start
 ```
 
 #### Flags
@@ -374,49 +374,49 @@ swipechain core:start
 ##### Run Core With a Daemon
 
 ```bash
-swipechain core:start
+solar core:start
 ```
 
 ##### Run Core as Genesis
 
 ```bash
-swipechain core:start --networkStart
+solar core:start --networkStart
 ```
 
 ##### Disable Any Discovery by Other Peers
 
 ```bash
-swipechain core:start --disableDiscovery
+solar core:start --disableDiscovery
 ```
 
 ##### Skip the Initial Discovery
 
 ```bash
-swipechain core:start --skipDiscovery
+solar core:start --skipDiscovery
 ```
 
 ##### Ignore the Minimum Network Reach
 
 ```bash
-swipechain core:start --ignoreMinimumNetworkReach
+solar core:start --ignoreMinimumNetworkReach
 ```
 
 ##### Start a Seed
 
 ```bash
-swipechain core:start --launchMode=seed
+solar core:start --launchMode=seed
 ```
 
 ##### Run Core Without a Daemon
 
 ```bash
-swipechain core:start --no-daemon
+solar core:start --no-daemon
 ```
 
 or use the following command, which supports the same set of flags.:
 
 ```bash
-swipechain core:run
+solar core:run
 ```
 
 ### core:stop
@@ -426,7 +426,7 @@ Stop the core
 #### Usage
 
 ```bash
-swipechain core:stop
+solar core:stop
 ```
 
 #### Flags
@@ -442,13 +442,13 @@ swipechain core:stop
 ##### Stop the Core
 
 ```bash
-swipechain core:stop
+solar core:stop
 ```
 
 ##### Stop the Core Daemon
 
 ```bash
-swipechain core:stop --daemon
+solar core:stop --daemon
 ```
 
 ### env:get
@@ -458,7 +458,7 @@ Get the value of an environment variable
 #### Usage
 
 ```bash
-swipechain env:get KEY
+solar env:get KEY
 ```
 
 #### Flags
@@ -473,7 +473,7 @@ swipechain env:get KEY
 ##### Get the Log Level
 
 ```bash
-swipechain env:get CORE_LOG_LEVEL
+solar env:get CORE_LOG_LEVEL
 ```
 
 ### env:list
@@ -483,7 +483,7 @@ List all environment variables
 #### Usage
 
 ```bash
-swipechain env:list
+solar env:list
 ```
 
 #### Flags
@@ -498,7 +498,7 @@ swipechain env:list
 ##### List All Environment Variables
 
 ```bash
-swipechain env:list
+solar env:list
 ```
 
 ### env:paths
@@ -508,7 +508,7 @@ Get all of the environment paths
 #### Usage
 
 ```bash
-swipechain env:paths
+solar env:paths
 ```
 
 #### Flags
@@ -523,7 +523,7 @@ swipechain env:paths
 ##### List All Environment Paths
 
 ```bash
-swipechain env:paths
+solar env:paths
 ```
 
 ### env:set
@@ -533,7 +533,7 @@ Set the value of an environment variable
 #### Usage
 
 ```bash
-swipechain env:set KEY VALUE
+solar env:set KEY VALUE
 ```
 
 #### Flags
@@ -548,7 +548,7 @@ swipechain env:set KEY VALUE
 ##### Set the Log Level
 
 ```bash
-swipechain env:set CORE_LOG_LEVEL info
+solar env:set CORE_LOG_LEVEL info
 ```
 
 ### forger:log
@@ -558,7 +558,7 @@ Show the forger log
 #### Usage
 
 ```bash
-swipechain forger:log
+solar forger:log
 ```
 
 #### Flags
@@ -572,7 +572,7 @@ swipechain forger:log
 #### Examples
 
 ```bash
-swipechain forger:log
+solar forger:log
 ```
 
 ### forger:restart
@@ -582,7 +582,7 @@ Restart the forger
 #### Usage
 
 ```bash
-swipechain forger:restart
+solar forger:restart
 ```
 
 #### Flags
@@ -597,7 +597,7 @@ swipechain forger:restart
 ##### Restart the Forger
 
 ```bash
-swipechain forger:restart
+solar forger:restart
 ```
 
 ### forger:start
@@ -607,13 +607,13 @@ Start the forger
 #### Usage
 
 ```bash
-swipechain forger:start
+solar forger:start
 ```
 
 or the equivalent, without invoking pm2:
 
 ```bash
-swipechain forger:run
+solar forger:run
 ```
 
 #### Flags
@@ -632,19 +632,19 @@ swipechain forger:run
 ##### Run a Forger With a bip39 Passphrase
 
 ```bash
-swipechain forger:start --bip39="..."
+solar forger:start --bip39="..."
 ```
 
 ##### Run a Forger With an Encrypted bip38
 
 ```bash
-swipechain forger:start --bip38="..." --password="..."
+solar forger:start --bip38="..." --password="..."
 ```
 
 ##### Run a Forger Without a Daemon
 
 ```bash
-swipechain forger:start --no-daemon
+solar forger:start --no-daemon
 ```
 
 ### forger:stop
@@ -654,7 +654,7 @@ Stop the forger
 #### Usage
 
 ```bash
-swipechain forger:stop
+solar forger:stop
 ```
 
 #### Flags
@@ -670,13 +670,13 @@ swipechain forger:stop
 ##### Stop the Forger
 
 ```bash
-swipechain forger:stop
+solar forger:stop
 ```
 
 ##### Stop the Forger Daemon
 
 ```bash
-swipechain forger:stop --daemon
+solar forger:stop --daemon
 ```
 
 ### forger:status
@@ -686,7 +686,7 @@ Show the forger status.
 #### Usage
 
 ```bash
-swipechain forger:status
+solar forger:status
 ```
 
 #### Flags
@@ -699,7 +699,7 @@ swipechain forger:status
 #### Example
 
 ```bash
-swipechain forger:status
+solar forger:status
 ```
 
 ### relay:log
@@ -709,7 +709,7 @@ Show the relay log
 #### Usage
 
 ```bash
-swipechain relay:log
+solar relay:log
 ```
 
 #### Flags
@@ -723,7 +723,7 @@ swipechain relay:log
 #### Examples
 
 ```bash
-swipechain relay:log
+solar relay:log
 ```
 
 ### relay:restart
@@ -733,7 +733,7 @@ Restart the relay
 #### Usage
 
 ```bash
-swipechain relay:restart
+solar relay:restart
 ```
 
 #### Flags
@@ -748,7 +748,7 @@ swipechain relay:restart
 ##### Restart the Relay
 
 ```bash
-swipechain relay:restart
+solar relay:restart
 ```
 
 ### relay:start
@@ -758,13 +758,13 @@ Start the relay
 #### Usage
 
 ```bash
-swipechain relay:start
+solar relay:start
 ```
 
 or the equivalent without using pm2:
 
 ```bash
-swipechain relay:run
+solar relay:run
 ```
 
 #### Flags
@@ -785,43 +785,43 @@ swipechain relay:run
 ##### Run a Relay With a pm2 Daemon
 
 ```bash
-swipechain relay:start --network=mainnet
+solar relay:start --network=mainnet
 ```
 
 ##### Run a Genesis Relay
 
 ```bash
-swipechain relay:start --networkStart
+solar relay:start --networkStart
 ```
 
 ##### Disable Any Discovery by Other Peers
 
 ```bash
-swipechain relay:start --disableDiscovery
+solar relay:start --disableDiscovery
 ```
 
 ##### Skip the Initial Discovery
 
 ```bash
-swipechain relay:start --skipDiscovery
+solar relay:start --skipDiscovery
 ```
 
 ##### Ignore the Minimum Network Reach
 
 ```bash
-swipechain relay:start --ignoreMinimumNetworkReach
+solar relay:start --ignoreMinimumNetworkReach
 ```
 
 ##### Start a Seed
 
 ```bash
-swipechain relay:start --launchMode=seed
+solar relay:start --launchMode=seed
 ```
 
 ##### Run a Relay Without a Daemon
 
 ```bash
-swipechain relay:start --no-daemon
+solar relay:start --no-daemon
 ```
 
 ### relay:stop
@@ -831,7 +831,7 @@ Stop the relay
 #### Usage
 
 ```bash
-swipechain relay:stop
+solar relay:stop
 ```
 
 #### Flags
@@ -847,13 +847,13 @@ swipechain relay:stop
 ##### Stop the Relay
 
 ```bash
-swipechain relay:stop
+solar relay:stop
 ```
 
 ##### Stop the Relay Daemon
 
 ```bash
-swipechain relay:stop --daemon
+solar relay:stop --daemon
 ```
 
 ### top <!-- markdown-title-case: skip-line -->
@@ -863,7 +863,7 @@ List all core daemons
 #### Usage
 
 ```bash
-swipechain top
+solar top
 ```
 
 #### Examples
@@ -871,7 +871,7 @@ swipechain top
 ##### List All Core Daemons
 
 ```bash
-swipechain top
+solar top
 ```
 
 ### snapshot:dump
@@ -881,7 +881,7 @@ Create a dump of the database
 #### Usage
 
 ```bash
-swipechain snapshot:dump
+solar snapshot:dump
 ```
 
 #### Flags
@@ -903,7 +903,7 @@ Restore the database from a dump
 #### Usage
 
 ```bash
-swipechain snapshot:restore
+solar snapshot:restore
 ```
 
 #### Flags
@@ -927,7 +927,7 @@ Roll back the database to a specific height or by a specified number of blocks
 #### Usage
 
 ```bash
-swipechain snapshot:rollback
+solar snapshot:rollback
 ```
 
 #### Flags
@@ -951,7 +951,7 @@ Truncate the database
 #### Usage
 
 ```bash
-swipechain snapshot:truncate
+solar snapshot:truncate
 ```
 
 | Name      | Description                                 | Required |
@@ -966,7 +966,7 @@ Create a new snapshot
 #### Usage
 
 ```bash
-swipechain snapshot:verify
+solar snapshot:verify
 ```
 
 #### Flags
@@ -984,7 +984,7 @@ swipechain snapshot:verify
 
 ## Plugins
 
-Core itself is composed of multiple plugins that once stitched together provide the full system needed to interact with the Swipechain blockchain but any developer can create their own plugins and publish them.
+Core itself is composed of multiple plugins that once stitched together provide the full system needed to interact with the Solar blockchain but any developer can create their own plugins and publish them.
 
 ### Publishment
 
@@ -992,27 +992,27 @@ The first step to make your plugin available to the world after completing devel
 
 ### Integration
 
-Once your plugin is published it will be available to everyone via `yarn add`. Let's use the official, but optional, package `@swipechain/core-vote-report` as an example of how to install and configure a plugin.
+Once your plugin is published it will be available to everyone via `yarn add`. Let's use the official, but optional, package `@solar-network/core-vote-report` as an example of how to install and configure a plugin.
 
 #### Installation
 
 First we will need to install the package using `yarn global add`. Since Release `2.2.0` Core is a global package that exposes a CLI, this is why we need to use `yarn global add` instead of `yarn add`, which is meant to be used during development.
 
 ```
-yarn global add @swipechain/core-vote-report
+yarn global add @solar-network/core-vote-report
 ```
 
 Give it a second to download and install the plugin, once finished you can continue to the registration and configuration.
 
 #### Configuration
 
-Now that the plugin is downloaded and installed we can go ahead and register it in our `~/.config/swipechain-core/{NETWORK}/plugins.js` file. Open the file in your editor of choice, append the following contents and save the changes.
+Now that the plugin is downloaded and installed we can go ahead and register it in our `~/.config/solar-core/{NETWORK}/plugins.js` file. Open the file in your editor of choice, append the following contents and save the changes.
 
 ```js
 {
     // some plugins...
-    "@swipechain/core-vote-report": {},
+    "@solar-network/core-vote-report": {},
 }
 ```
 
-Now run `swipechain relay:restart` and visit `http://ip:4006/` and you should see a vote report, that's it.
+Now run `solar relay:restart` and visit `http://ip:4006/` and you should see a vote report, that's it.

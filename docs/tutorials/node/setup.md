@@ -1,14 +1,14 @@
 ---
-title: "How to Setup Your Swipechain Node"
+title: "How to Setup Your Solar Node"
 ---
 
-# How to Setup Your Swipechain Node
+# How to Setup Your Solar Node
 
 [[toc]]
 
 ## Introduction
 
-Here we will help you set up an Swipechain relay node, which relays transactions and secures the Swipechain network.
+Here we will help you set up an Solar relay node, which relays transactions and secures the Solar network.
 
 ## Bare-Metal
 
@@ -32,7 +32,7 @@ The setup is not suitable as a Delegate Node, but can function as a Relay Node.
 
 #### Provision a Linux Server
 
-Running an Swipechain Core node is not like Bitcoin mining, and thus there are more options to choose from. AWS, Linode, Digital Ocean, Vultr, Microsoft Azure, and OVH are just a few recommended choices.
+Running an Solar Core node is not like Bitcoin mining, and thus there are more options to choose from. AWS, Linode, Digital Ocean, Vultr, Microsoft Azure, and OVH are just a few recommended choices.
 
 Delegate Nodes have a higher minimum requirement on the hardware specifications. These nodes are the security of our network
 so their uptime is of most importance in making sure the network runs smoothly.
@@ -96,7 +96,7 @@ give you a temporary password.
 
 #### Create a User
 
-Executing this guide as the root user should be avoided. Instead create a new, dedicated user to manage Swipechain related software. On your server type the following into the command line and press enter. Where `username` is the name you want to log in with:
+Executing this guide as the root user should be avoided. Instead create a new, dedicated user to manage Solar related software. On your server type the following into the command line and press enter. Where `username` is the name you want to log in with:
 
 ```bash
 adduser username
@@ -106,15 +106,15 @@ You will be prompted to enter in the users `full name` and some other informatio
 Feel free to leave them all blank as they are optional. When prompted, type `Y` and press enter.
 
 ```bash
-Adding user 'swipechain' ...
-Adding new group 'swipechain' (1000) ...
-Adding new user 'swipechain' (1000) with group 'swipechain' ...
-Creating home directory '/home/swipechain' ...
+Adding user 'solar' ...
+Adding new group 'solar' (1000) ...
+Adding new user 'solar' (1000) with group 'solar' ...
+Creating home directory '/home/solar' ...
 Copying files from '/etc/skel' ...
 Enter new UNIX password:
 Retype new UNIX password:
 passwd: password updated successfully
-Changing the user information for swipechain
+Changing the user information for solar
 Enter the new value, or press ENTER for the default
     Full Name []:
     Room Number []:
@@ -137,36 +137,36 @@ By default, this is a `superuser`.
 usermod -a -G sudo username
 ```
 
-### Installing Swipechain Core
+### Installing Solar Core
 
-We're now ready to begin installing Swipechain. The initial install may take a while
+We're now ready to begin installing Solar. The initial install may take a while
 and at times appear not to be doing anything. Please have patience and let the process
 finish.
 
-#### Switch to the Swipechain User
+#### Switch to the Solar User
 
-While installing Swipechain Core, we should use the Swipechain user that we created above and go to the base directory. To switch to it, run:
+While installing Solar Core, we should use the Solar user that we created above and go to the base directory. To switch to it, run:
 
 ```bash
 sudo su - username
 cd ~
 ```
 
-#### Running Swipechain Core Installation Script
+#### Running Solar Core Installation Script
 
-Installing Swipechain Core is a straightforward process. We will use Swipechain installer script that will install all of the necessary dependencies, Swipechain Core onto your server and publish configuration files for it. To install essentials run this command:
+Installing Solar Core is a straightforward process. We will use Solar installer script that will install all of the necessary dependencies, Solar Core onto your server and publish configuration files for it. To install essentials run this command:
 
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/Swipechain/swipechain-core/master/install.sh)
+bash <(curl -s https://raw.githubusercontent.com/Solar/solar-core/master/install.sh)
 ```
 
 You will be asked to input your current users password for sudo privileges. Write or paste it and press `enter` to start installation process.
 
 Process might take a while, don't interrupt it and wait for it to finish.
 
-#### Selecting Swipechain Core Network
+#### Selecting Solar Core Network
 
-Once installation of dependencies and Swipechain Core is finished you will need to select on which network you wish to operate. This can be achieved by pressing `up` or `down` arrow keys and confirming selection with `enter`.
+Once installation of dependencies and Solar Core is finished you will need to select on which network you wish to operate. This can be achieved by pressing `up` or `down` arrow keys and confirming selection with `enter`.
 
 `Mainnet` is public network, `Devnet` is development network for testing and `Testnet` is our private testing network.
 
@@ -177,7 +177,7 @@ Once installation of dependencies and Swipechain Core is finished you will need 
    testnet
 ```
 
-If you are tinkering and want to play with Swipechain for the first time, select `devnet` and request DSXP coins in our [public Telegram](https://t.me/Swipechain).
+If you are tinkering and want to play with Solar for the first time, select `devnet` and request DSXP coins in our [public Telegram](https://t.me/Solar).
 
 After you made your selection you will need to confirm by pressing `y` and confirm with `enter`
 
@@ -185,11 +185,11 @@ After you made your selection you will need to confirm by pressing `y` and confi
 ? Can you confirm? › (y/N)
 ```
 
-With that we have sucessfully installed Swipechain Core and published our configuration options.
+With that we have sucessfully installed Solar Core and published our configuration options.
 
-#### Configuring Swipechain Core Database
+#### Configuring Solar Core Database
 
-Last step of the Swipechain Core essential configuration is to configure database parameters. You will be presented with a prompt:
+Last step of the Solar Core essential configuration is to configure database parameters. You will be presented with a prompt:
 
 ```bash
 Would you like to configure the database? [y/N]:
@@ -200,37 +200,37 @@ Press `y` and confirm with `enter`.
 You can input any custom database credentials you want to use or use the one provided below:
 
 ```bash
-Enter the database username: swipechain
-Enter the database password: swipechain
-Enter the database name: swipechain
+Enter the database username: solar
+Enter the database password: solar
+Enter the database name: solar
 ```
 
 This will create PostgreSQL role and database to be used for storing blockchain data. That's it, you are all set!
 
-#### Starting Swipechain Relay Process
+#### Starting Solar Relay Process
 
-To start Swipechain relay process and with it synchronization process with Swipechain blockchain we need to start relay process with our integrated CLI:
+To start Solar relay process and with it synchronization process with Solar blockchain we need to start relay process with our integrated CLI:
 
 ```bash
-swipechain relay:start
+solar relay:start
 ```
 
 If the process has started you will get a message:
 
 ```bash
-Starting swipechain-relay... done
+Starting solar-relay... done
 ```
 
 ::: tip
-All CLI commands with description can be viewed at [CLI Commands](/guidebook/core/cli.html#available-commands) or by running `swipechain help` command.
+All CLI commands with description can be viewed at [CLI Commands](/guidebook/core/cli.html#available-commands) or by running `solar help` command.
 :::
 
 #### Checking to See if Everything Is Working
 
-Now we want to see if the Swipechain relay process has started the synchronization process you can do that by running one of these two commands
+Now we want to see if the Solar relay process has started the synchronization process you can do that by running one of these two commands
 
 ```bash
-swipechain relay:log
+solar relay:log
 ```
 
 or
@@ -263,7 +263,7 @@ Simple things like whitelists can already go a long way to limit the access of o
 
 The first thing that we recommend that should be done on a relay that is used by your forger to retrieve all forging related information is to limit the Public API access.
 
-Open the `~/.config/swipechain-core/{NETWORK}/plugins.js` file and locate the `@swipechain/core-api` entry. By default you will see an entry for `whitelist: ["*"]` which means everyone can access your Public API which is recommended for relays but as this part of the guide is about a relay used for a forger we will change this setting.
+Open the `~/.config/solar-core/{NETWORK}/plugins.js` file and locate the `@solar-network/core-api` entry. By default you will see an entry for `whitelist: ["*"]` which means everyone can access your Public API which is recommended for relays but as this part of the guide is about a relay used for a forger we will change this setting.
 
 We recommend to limit the whitelist to IPs/Servers that you control or know are trusted. Simply changed the `whitelist` setting to `whitelist: ["ip-you-trust", "ip-you-trust", "ip-you-trust", ...]` and restart your relay. Now only the trusted IPs will be able to access your Public API.
 
@@ -277,8 +277,8 @@ We recommend to limit the whitelist to IPs/Servers that you control or know are 
 Great! You have a working node, but now you should think about securing it.
 It is especially important if you plan on using this as your delegate/forging node.
 
-In our next section, we'll discuss making sure your Swipechain node is as secure as possible.
-As the Swipechain network grows, hacking attempts on delegate and relay nodes will become
+In our next section, we'll discuss making sure your Solar node is as secure as possible.
+As the Solar network grows, hacking attempts on delegate and relay nodes will become
 more prevalent. Defending against DDOS and other various attacks is extremely
 important in securing the network.
 

@@ -19,28 +19,28 @@ Do not run any of the mentioned commands with `sudo` unless explicitly stated.
 **To update to v2.6 run the following command:**
 
 ```bash
-swipechain update
+solar update
 ```
 
 ### Step 1. Add `core-magistrate-transactions` Package
 
-1. Open `~/.config/swipechain-core/mainnet/plugins.js`
-2. Locate the `@swipechain/core-database-postgres` entry.
+1. Open `~/.config/solar-core/mainnet/plugins.js`
+2. Locate the `@solar-network/core-database-postgres` entry.
 3. Add this package addition line before it (see below):
 
    ```js
-   "@swipechain/core-magistrate-transactions": {}, // Add this line before it
+   "@solar-network/core-magistrate-transactions": {}, // Add this line before it
    ```
 
 4. Save the changes. Your configuration file should look like this:
 
    ```js
    module.exports = {
-       "@swipechain/core-event-emitter": {},
-       "@swipechain/core-logger-pino": {},
-       "@swipechain/core-state": {},
-       "@swipechain/core-magistrate-transactions": {},
-       "@swipechain/core-database-postgres": {},
+       "@solar-network/core-event-emitter": {},
+       "@solar-network/core-logger-pino": {},
+       "@solar-network/core-state": {},
+       "@solar-network/core-magistrate-transactions": {},
+       "@solar-network/core-database-postgres": {},
        ...
        ...
        ...
@@ -49,4 +49,4 @@ swipechain update
 
 ## Reporting Problems
 
-If you happen to experience any issues please [open an issue](https://github.com/Swipechain/swipechain-core/issues/new?template=Bug_report.md) with a detailed description of the problem, steps to reproduce it and info about your environment.
+If you happen to experience any issues please [open an issue](https://github.com/solar-network/solar-core/issues/new?template=Bug_report.md) with a detailed description of the problem, steps to reproduce it and info about your environment.

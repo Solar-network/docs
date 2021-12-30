@@ -1,7 +1,7 @@
 ---
-title: "Swipechain Node"
+title: "Solar Node"
 ---
 
-# Swipechain Node Recipes
+# Solar Node Recipes
 
-This section of the Swipechain tutorials is dedicated to helping you setup and secure your own node on the Swipechain blockchain.
+This section of the Solar tutorials is dedicated to helping you setup and secure your own node on the Solar blockchain.

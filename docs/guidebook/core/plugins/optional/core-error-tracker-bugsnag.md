@@ -5,13 +5,13 @@ title: "Error Tracker - Bugsnag"
 # Error Tracker - Bugsnag
 
 ::: tip
-You can find the source code of this package at [packages/core-error-tracker-bugsnag](https://github.com/Swipechain/swipechain-core/tree/develop/packages/core-error-tracker-bugsnag).
+You can find the source code of this package at [packages/core-error-tracker-bugsnag](https://github.com/solar-network/solar-core/tree/develop/packages/core-error-tracker-bugsnag).
 :::
 
 ## Installation
 
 ```bash
-yarn add @swipechain/core-error-tracker-bugsnag
+yarn add @solar-network/core-error-tracker-bugsnag
 ```
 
 ## Alias

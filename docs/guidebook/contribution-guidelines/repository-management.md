@@ -4,7 +4,7 @@ title: "Repository Management"
 
 # Repository Management
 
-While the following guidelines are not an absolute requirement, writing your code by these standards will ensure greater compatibility with the Swipechain and increases the likelihood your pull request will be accepted.
+While the following guidelines are not an absolute requirement, writing your code by these standards will ensure greater compatibility with the Solar and increases the likelihood your pull request will be accepted.
 
 ## Structure
 
@@ -41,9 +41,9 @@ To make everyone's life easier when looking for issues or pull requests of speci
 **Notes**
 
 - The `Type: Bug` label always has to be combined with a `Priority: *` and `Severity: *` label to indicate how severe the problem caused by the bug is and how many users are affected by it. _The combination of those determines how fast the bug needs to be fixed._
-- Bounty tiers need to be assigned _before_ a pull request is merged. If no tier is assigned or is assigned to a team member the SwipeChain Bot will comment in the affected issue.
+- Bounty tiers need to be assigned _before_ a pull request is merged. If no tier is assigned or is assigned to a team member the Solar Bot will comment in the affected issue.
 - For issues that are tasks a `Difficulty: *` label should be assigned to provide developers a sense of how much work it will be.
-- The `Complexity: *` labels should never be assigned manually as the SwipeChain Bot will evaluate the complexity of a pull request and assign a label.
+- The `Complexity: *` labels should never be assigned manually as the Solar Bot will evaluate the complexity of a pull request and assign a label.
 
 **Bounty**
 
@@ -389,7 +389,7 @@ Examples of this include a new API endpoint, resolving structural issues that ca
 
 This tier covers medium features and improvements to the codebase that bring in new functionality, have a big impact on the performance of the product or significant optimizations and refactors of the code.
 
-An example would be optimizing some parts of the Core for improved performance of a specific function, implementing a medium, non-critical new feature in the desktop wallet or writing large documentation files that require an understanding of the Swipechain code.
+An example would be optimizing some parts of the Core for improved performance of a specific function, implementing a medium, non-critical new feature in the desktop wallet or writing large documentation files that require an understanding of the Solar code.
 
 **Tier 3 - \$25**
 
@@ -415,8 +415,8 @@ An example would be a typo, language corrections, grammar corrections, dependenc
 
 **Tier 0 - Custom**
 
-If you want to work on much more significant changes or custom projects that you don’t think fit any of the above tiers contact us at bounty@swipechain.org.
+If you want to work on much more significant changes or custom projects that you don’t think fit any of the above tiers contact us at bounty@solar.network.
 
 Some examples of what a custom tier 0 could cover — developing new modules for `core` that bring in new functionalities (PoW module instead of DPoS), different voting systems, proxy voting, implementing AIPs …
 
-Some issues will also have labels with custom (usually higher) values that you can take on. Labels on those issues will have a defined monetary value, so if you see these available you can request to take point on resolving them. Upon completion and review you will receive payment in Swipechain.
+Some issues will also have labels with custom (usually higher) values that you can take on. Labels on those issues will have a defined monetary value, so if you see these available you can request to take point on resolving them. Upon completion and review you will receive payment in Solar.

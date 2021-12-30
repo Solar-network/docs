@@ -8,13 +8,13 @@ This tutorial is compatible with v2.1+, for older guides, check the [archive](/a
 
 ## Why Dynamic Fees
 
-Although it might seem that a Delegate Node obtains the highest profit by increasing his/her fee; doing so might decrease the total amount of fees collected, as the transaction volume of the Swipechain network decreases. Dynamic fees ensure users and delegates find a natural middle ground, as Delegate Nodes compete with each other over transactions.
+Although it might seem that a Delegate Node obtains the highest profit by increasing his/her fee; doing so might decrease the total amount of fees collected, as the transaction volume of the Solar network decreases. Dynamic fees ensure users and delegates find a natural middle ground, as Delegate Nodes compete with each other over transactions.
 
 Dynamic fees were introduced initially in [Bitcoin](https://en.bitcoin.it/wiki/Miner_fees), where it is a vital part of its mining economy.
 
 ## Finding the Configuration
 
-Transactions are ordered by fee inside the mempool, and thus the configurations for dynamic fees are found inside [packages/core/src/config/mainnet/plugins.js](https://github.com/Swipechain/swipechain-core/blob/master/packages/core/src/config/mainnet/plugins.js) under the `"@swipechain/core-transaction-pool"` key.
+Transactions are ordered by fee inside the mempool, and thus the configurations for dynamic fees are found inside [packages/core/src/config/mainnet/plugins.js](https://github.com/solar-network/solar-core/blob/master/packages/core/src/config/mainnet/plugins.js) under the `"@solar-network/core-transaction-pool"` key.
 
 ## Edit Your Dynamic Fee Constants
 
@@ -24,14 +24,14 @@ Your node needs to signal to the network that it accepts dynamic fees. For this,
 nano packages/core/src/config/mainnet/plugins.js
 ```
 
-There are two separate settings here worth configuring: the `dynamicFees` constants, which is found under the `@swipechain/core-transaction-pool` key, and the dynamic fees themselves.
+There are two separate settings here worth configuring: the `dynamicFees` constants, which is found under the `@solar-network/core-transaction-pool` key, and the dynamic fees themselves.
 
-You can use dynamic fee constants to alter how the dynamic fee formula is applied in your Swipechain Core node. The `dynamicFees` config key in your `@swipechain/core-transaction-pool` section should look like this:
+You can use dynamic fee constants to alter how the dynamic fee formula is applied in your Solar Core node. The `dynamicFees` config key in your `@solar-network/core-transaction-pool` section should look like this:
 
 ##### File: packages/core/src/config/mainnet/plugins.js
 
 ```js
-"@swipechain/core-transaction-pool": {
+"@solar-network/core-transaction-pool": {
         enabled: !process.env.CORE_TRANSACTION_POOL_DISABLED,
         maxTransactionsPerSender: process.env.CORE_TRANSACTION_POOL_MAX_PER_SENDER || 300,
         allowedSenders: [],
@@ -58,13 +58,13 @@ You can use dynamic fee constants to alter how the dynamic fee formula is applie
 
 The `maxTransactionsPerSender` is a protection against spam attacks. For delegates, it might be useful to increase this value to 3000 (or their number of voters). `allowedSenders` is a specific whitelist.
 
-`dynamicFees` is of special interest here. If `enabled` is set to `false`, your node will fall back to static fees. `minFeePool` value represents the minimum fee in Swipechaintoshi per byte a transaction should have to be included in the configured node's transaction pool. Similarly, `minFeeBroadcast` represents the minimum fee in Swipechaintoshi per byte a transaction should have to be broadcasted to peers for possible inclusion elsewhere in the network. Differentiating between these two values can allow forgers to filter out low-fee transactions from their nodes without rejecting them from the system altogether.
+`dynamicFees` is of special interest here. If `enabled` is set to `false`, your node will fall back to static fees. `minFeePool` value represents the minimum fee in Solartoshi per byte a transaction should have to be included in the configured node's transaction pool. Similarly, `minFeeBroadcast` represents the minimum fee in Solartoshi per byte a transaction should have to be broadcasted to peers for possible inclusion elsewhere in the network. Differentiating between these two values can allow forgers to filter out low-fee transactions from their nodes without rejecting them from the system altogether.
 
-Below `minFeeBroadcast` you'll find the `addonBytes` object, which sets byte values to be added onto specific transaction types when calculating fees. The minimum fee calculation adds this addonBytes value to each transaction's length in bytes before multiplying by the node's swipechaintoshi-per-byte value:
+Below `minFeeBroadcast` you'll find the `addonBytes` object, which sets byte values to be added onto specific transaction types when calculating fees. The minimum fee calculation adds this addonBytes value to each transaction's length in bytes before multiplying by the node's solartoshi-per-byte value:
 
 ```js
 const calculatedFee =
-  (addonBytesValue + transactionSizeInBytes) * swipechaintoshiPerByte;
+  (addonBytesValue + transactionSizeInBytes) * solartoshiPerByte;
 ```
 
 ## Changing the Transaction Pool Size

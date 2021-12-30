@@ -19,7 +19,7 @@ And run the explorer in the background:
 Or run the explorer in the foreground:
 
 ```bash
-cd ~/swipechain-explorer
+cd ~/solar-explorer
 npm run bridgechain
 ```
 

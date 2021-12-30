@@ -5,13 +5,13 @@ title: "Forger"
 # Forger
 
 ::: tip
-You can find the source code of this package at [packages/core-forger](https://github.com/Swipechain/swipechain-core/tree/develop/packages/core-forger).
+You can find the source code of this package at [packages/core-forger](https://github.com/solar-network/solar-core/tree/develop/packages/core-forger).
 :::
 
 ## Installation
 
 ```bash
-yarn add @swipechain/core-forger
+yarn add @solar-network/core-forger
 ```
 
 ## Alias
@@ -20,7 +20,7 @@ yarn add @swipechain/core-forger
 
 ## Summary
 
-`core-forger` offers a top-level wrapper around the forging process. While not directly responsible for the block creation logic (that can be found in the Delegate model), `core-forger` coordinates the environment in which forging occurs and updates other Swipechain Core packages on its own forging status.
+`core-forger` offers a top-level wrapper around the forging process. While not directly responsible for the block creation logic (that can be found in the Delegate model), `core-forger` coordinates the environment in which forging occurs and updates other Solar Core packages on its own forging status.
 
 ## Usage
 
@@ -30,17 +30,17 @@ The `core-forger` package is enabled by default in full nodes and forging nodes,
 yarn full:mainnet
 ```
 
-Swap out the node type and network as necessary by using the scripts in `core`'s [package.json](https://github.com/Swipechain/swipechain-core/blob/develop/packages/core/package.json) file.
+Swap out the node type and network as necessary by using the scripts in `core`'s [package.json](https://github.com/solar-network/solar-core/blob/develop/packages/core/package.json) file.
 
 ## Forging and the Network
 
-`core-forger` needs to have a host to connect to. As the forger holds no information about the blockchain state, it must make REST calls to an Swipechain Core node's P2P API to determine when to forge.
+`core-forger` needs to have a host to connect to. As the forger holds no information about the blockchain state, it must make REST calls to an Solar Core node's P2P API to determine when to forge.
 
-The `core-forger` package generalizes its peer connection in the [client](https://github.com/Swipechain/swipechain-core/blob/develop/packages/core-forger/src/client.ts) class, which handles communication between the forging process and the rest of the node. The client establishes peers based on the `hosts` config.
+The `core-forger` package generalizes its peer connection in the [client](https://github.com/solar-network/solar-core/blob/develop/packages/core-forger/src/client.ts) class, which handles communication between the forging process and the rest of the node. The client establishes peers based on the `hosts` config.
 
 By default, your `hosts` config includes a link to the default P2P API port. This assumes that you are running a full node, or a node with both relay and forging capabilities.
 
-If you are running a forging node without relay capacities, you will not have an internal P2P API available to you. In this case, you must connect to an Swipechain Core node with a P2P interface.
+If you are running a forging node without relay capacities, you will not have an internal P2P API available to you. In this case, you must connect to an Solar Core node with a P2P interface.
 
 ## Behind the Scenes
 

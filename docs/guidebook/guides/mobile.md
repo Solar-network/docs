@@ -2,23 +2,23 @@
 title: "Mobile Wallet"
 ---
 
-# Swipechain Mobile Wallet
+# Solar Mobile Wallet
 
 <!-- ![Mobile Wallet](./assets/mobile/banner.png) -->
 
 > A Wallet for Everyone
 
-[![Build Status](https://badgen.now.sh/circleci/github/SwipeChain/swipechain-mobile-wallet)](https://circleci.com/gh/SwipeChain/swipechain-mobile-wallet)
-[![Codecov](https://badgen.now.sh/codecov/c/github/SwipeChain/swipechain-mobile-wallet)](https://codecov.io/gh/SwipeChain/swipechain-mobile-wallet)
-[![Latest Version](https://badgen.now.sh/github/release/SwipeChain/mobile-wallet)](https://github.com/SwipeChain/mobile-wallet/releases/latest)
+[![Build Status](https://badgen.now.sh/circleci/github/Solar/solar-mobile-wallet)](https://circleci.com/gh/Solar/solar-mobile-wallet)
+[![Codecov](https://badgen.now.sh/codecov/c/github/Solar/solar-mobile-wallet)](https://codecov.io/gh/Solar/solar-mobile-wallet)
+[![Latest Version](https://badgen.now.sh/github/release/Solar/mobile-wallet)](https://github.com/solar-network/mobile-wallet/releases/latest)
 [![License: MIT](https://badgen.now.sh/badge/license/MIT/green)](https://opensource.org/licenses/MIT)
 
-Swipechain's Mobile Wallet is a hybrid application built for both Android and iOS. Created using Ionic framework and Swipechain's [TypeScript API](https://github.com/SwipeChain/swipechain-ts) to interact with the Swipechain network via your mobile phone, anytime, anywhere (as long as you have an internet connection).
+Solar's Mobile Wallet is a hybrid application built for both Android and iOS. Created using Ionic framework and Solar's [TypeScript API](https://github.com/solar-network/solar-ts) to interact with the Solar network via your mobile phone, anytime, anywhere (as long as you have an internet connection).
 
 ## Download
 
-- [Google Play](https://play.google.com/store/apps/details?id=io.swipechain.wallet.mobile)
-- [App Store](https://itunes.apple.com/us/app/mobile-swipechain/id1324625967)
+- [Google Play](https://play.google.com/store/apps/details?id=io.solar.wallet.mobile)
+- [App Store](https://itunes.apple.com/us/app/mobile-solar/id1324625967)
 
 ## Features
 
@@ -27,14 +27,14 @@ Swipechain's Mobile Wallet is a hybrid application built for both Android and iO
 - Encrypt access to your profile with a custom 6 digit PIN (AES256+PBKDF2).
 - Most transaction types are available: send, receive, vote, unvote, register a delegate.
 - Connects to both mainnet and devnet.
-- Option for additional profiles (separate profiles for different Swipechain addresses or networks).
+- Option for additional profiles (separate profiles for different Solar addresses or networks).
 - Option to add contacts and easily transact with them.
-- Total balance of your combined Swipechain addresses.
+- Total balance of your combined Solar addresses.
 - Wallet backup - input your selected PIN to decrypt your wallet and gain view of your private data.
 - Change PIN - if you want to change your encryption/decryption PIN you can easily do so..
 - Clear Data — you can clear all your data from the phone.
 - Overview of network status with an option to change peer.
-- Current mswipechainet value, along with weekly movements.
+- Current msolaret value, along with weekly movements.
 - Support for showing data in different FIAT currencies.
 
 ## Build
@@ -88,21 +88,21 @@ $ npm run test:e2e
 
 ## Security
 
-If you discover a security vulnerability within this application, please send an e-mail to security@swipechain.org. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this application, please send an e-mail to security@solar.network. All security vulnerabilities will be promptly addressed.
 
 ## Contributing
 
-- If you find any bugs, submit an [issue](https://github.com/SwipeChain/mobile-wallet/issues) or open [pull-request](https://github.com/SwipeChain/mobile-wallet/pulls), helping us catch and fix them.
-- Join to our [telegram](https://t.me/Swipechain).
+- If you find any bugs, submit an [issue](https://github.com/solar-network/mobile-wallet/issues) or open [pull-request](https://github.com/solar-network/mobile-wallet/pulls), helping us catch and fix them.
+- Join to our [telegram](https://t.me/Solar).
 - [Contribution bounties](/guidebook/contribution-guidelines/contributing.html).
-- [Help translate](https://github.com/SwipeChain/mobile-wallet/blob/master/TRANSLATING.md).
+- [Help translate](https://github.com/solar-network/mobile-wallet/blob/master/TRANSLATING.md).
 
 ## Credits
 
 - [Lúcio Rubens](https://github.com/luciorubeens)
 - [Alex Barnsley](https://github.com/alexbarnsley)
-- [All Contributors](https://github.com/SwipeChain/mobile-wallet/contributors)
+- [All Contributors](https://github.com/solar-network/mobile-wallet/contributors)
 
 ## License
 
-[MIT](https://github.com/SwipeChain/mobile-wallet/blob/master/LICENSE) © [Swipechain](https://swipechain.org)
+[MIT](https://github.com/solar-network/mobile-wallet/blob/master/LICENSE) © [Solar](https://solar.network)

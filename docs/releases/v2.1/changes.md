@@ -10,7 +10,7 @@ The major change in `v2.1` is a full migration to TypeScript, a typed flavor of 
 
 ## Debranding
 
-BridgeChains and private chains reusing the Swipechain codebase previously had to debrand the codebase themselves, meaning they had to remove mentions of `Swipechain` from their configuration files and other hardcoded locations. `v2.1` is blockchain-brand agnostic. In general, all variables are named the same, except that the Swipechain has been removed from the name.
+BridgeChains and private chains reusing the Solar codebase previously had to debrand the codebase themselves, meaning they had to remove mentions of `Solar` from their configuration files and other hardcoded locations. `v2.1` is blockchain-brand agnostic. In general, all variables are named the same, except that the Solar has been removed from the name.
 
 For example:
 
@@ -24,11 +24,11 @@ has now been renamed to
 CORE_DB_XXX
 ```
 
-in `~/.swipechain/.env` and other files. We have also made editing these easier by collapsing different configuration files into a single network config.
+in `~/.solar/.env` and other files. We have also made editing these easier by collapsing different configuration files into a single network config.
 
 ### Comprehensive Variable Changelist
 
-The following variables were renamed/added to the configuration of a network. The changes can be found in your `~/.swipechain/.env` and `plugins.js` file.
+The following variables were renamed/added to the configuration of a network. The changes can be found in your `~/.solar/.env` and `plugins.js` file.
 
 Note:
 
@@ -43,7 +43,7 @@ Note:
 | core-database-postgres.connection.host                   | SWIPECHAIN_DB_HOST                         | CORE_DB_HOST                         | 'localhost'                                                 |
 | core-database-postgres.connection.port                   | SWIPECHAIN_DB_PORT                         | CORE_DB_PORT                         | 5432                                                        |
 | core-database-postgres.connection.database               | SWIPECHAIN_DB_DATABASE                     | CORE_DB_DATABASE                     | ${process.env.CORE_TOKEN}\_${process.env.CORE_NETWORK_NAME} |
-| core-database-postgres.connection.user                   | SWIPECHAIN_DB_USERNAME                     | CORE_DB_USERNAME                     | 'swipechain'                                                       |
+| core-database-postgres.connection.user                   | SWIPECHAIN_DB_USERNAME                     | CORE_DB_USERNAME                     | 'solar'                                                       |
 | core-database-postgres.connection.password               | SWIPECHAIN_DB_PASSWORD                     | CORE_DB_PASSWORD                     | 'password'                                                  |
 | core-transaction-pool.enabled                            | SWIPECHAIN_TRANSACTION_POOL_DISABLED       | CORE_TRANSACTION_POOL_DISABLED       | true                                                        |
 | core-transaction-pool. enabled                           | SWIPECHAIN_TRANSACTION_POOL_MAX_PER_SENDER | CORE_TRANSACTION_POOL_MAX_PER_SENDER | 300                                                         |
@@ -69,5 +69,5 @@ Note:
 | core-json-rpc.port                                       | SWIPECHAIN_JSON_RPC_PORT                   | CORE_JSON_RPC_PORT                   | 8080                                                        |
 | core-json-rpc.allowRemote                                |                                     |                                      | false                                                       |
 | core-json-rpc.whitelist                                  |                                     |                                      | ["127.0.0.1", "::ffff:127.0.0.1"]                           |
-| ~/.swipechain/.env                                              | SWIPECHAIN_NETWORK_NAME                    | CORE_NETWORK_NAME                    | 'swipechain'                                                       |
-| ~/.swipechain/.env                                              |                                     | CORE_TOKEN                           | Ѧ                                                           |
+| ~/.solar/.env                                              | SWIPECHAIN_NETWORK_NAME                    | CORE_NETWORK_NAME                    | 'solar'                                                       |
+| ~/.solar/.env                                              |                                     | CORE_TOKEN                           | Ѧ                                                           |

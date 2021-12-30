@@ -4,9 +4,9 @@
 This is an archived guide. `v2.0.X` has been deprecated.
 :::
 
-Initially, you might have created your BridgeChain using [Swipechain Node](https://github.com/SwipeChain/swipechain-node), the official v1 implementation. Now that [Swipechain Core](https://github.com/SwipeChain/swipechain-core) (v2) has reached a stable, production-ready release, you will want to upgrade your network.
+Initially, you might have created your BridgeChain using [Solar Node](https://github.com/solar-network/solar-node), the official v1 implementation. Now that [Solar Core](https://github.com/solar-network/solar-core) (v2) has reached a stable, production-ready release, you will want to upgrade your network.
 
-Depending on the size of your BridgeChain network, upgrading to `Swipechain Core` may need more or less preparation. Upgrading is a breaking change, and all `v1` nodes will become incompatible with your new network. You should ensure that your users are aware of the upgrade, and node operators have time to adequately prepare for the migration, as they will need to update their tools and code bases.
+Depending on the size of your BridgeChain network, upgrading to `Solar Core` may need more or less preparation. Upgrading is a breaking change, and all `v1` nodes will become incompatible with your new network. You should ensure that your users are aware of the upgrade, and node operators have time to adequately prepare for the migration, as they will need to update their tools and code bases.
 
 [[toc]]
 
@@ -27,13 +27,13 @@ Together with your node operators, it would be best if you decided on a cutoff b
 
 The new `v2` implementation is backward compatible with `v1`; thus we can deploy our new nodes without forcing a migration. Your BridgeChain configuration is defined by the following files, which are needed by `v2` as well.
 
-- [config.mainnet.json](https://github.com/SwipeChain/swipechain-node/blob/mainnet/config.mainnet.json)
-- [genesisBlock.json](https://github.com/SwipeChain/swipechain-node/blob/mainnet/genesisBlock.json)
+- [config.mainnet.json](https://github.com/solar-network/solar-node/blob/mainnet/config.mainnet.json)
+- [genesisBlock.json](https://github.com/solar-network/solar-node/blob/mainnet/genesisBlock.json)
 
-Clone [Swipechain Core](https://github.com/SwipeChain/swipechain-core) so that we can configure our network. Make sure to verify that you have the latest tag.
+Clone [Solar Core](https://github.com/solar-network/solar-core) so that we can configure our network. Make sure to verify that you have the latest tag.
 
 ```bash
-git clone git@github.com:SwipeChain/swipechain-core
+git clone git@github.com:Solar/solar-core
 git checkout tags/<2.0.X> -b <branch_name>
 cd core
 ```
@@ -71,8 +71,8 @@ The following files are required to make `v2` compatible with your custom networ
 
 ```js
 module.exports = {
-  "@swipechain/core-event-emitter": {},
-  "@swipechain/core-logger-winston": {
+  "@solar-network/core-event-emitter": {},
+  "@solar-network/core-logger-winston": {
     transports: {
       console: {
         options: {
@@ -86,37 +86,37 @@ module.exports = {
       }
     }
   },
-  "@swipechain/core-database-postgres": {
+  "@solar-network/core-database-postgres": {
     connection: {
       host: process.env.SWIPECHAIN_DB_HOST || "localhost",
       port: process.env.SWIPECHAIN_DB_PORT || 5432,
       database:
-        process.env.SWIPECHAIN_DB_DATABASE || `swipechain_${process.env.SWIPECHAIN_NETWORK_NAME}`,
-      user: process.env.SWIPECHAIN_DB_USERNAME || "swipechain",
+        process.env.SWIPECHAIN_DB_DATABASE || `solar_${process.env.SWIPECHAIN_NETWORK_NAME}`,
+      user: process.env.SWIPECHAIN_DB_USERNAME || "solar",
       password: process.env.SWIPECHAIN_DB_PASSWORD || "password"
     }
   },
-  "@swipechain/core-transaction-pool-mem": {
+  "@solar-network/core-transaction-pool-mem": {
     enabled: !process.env.SWIPECHAIN_TRANSACTION_POOL_DISABLED,
     maxTransactionsPerSender:
       process.env.SWIPECHAIN_TRANSACTION_POOL_MAX_PER_SENDER || 300,
     allowedSenders: []
   },
-  "@swipechain/core-p2p": {
+  "@solar-network/core-p2p": {
     host: process.env.SWIPECHAIN_P2P_HOST || "0.0.0.0",
     port: process.env.SWIPECHAIN_P2P_PORT || 4001,
     whitelist: ["127.0.0.1", "::ffff:127.0.0.1"]
   },
-  "@swipechain/core-blockchain": {
+  "@solar-network/core-blockchain": {
     fastRebuild: false
   },
-  "@swipechain/core-api": {
+  "@solar-network/core-api": {
     enabled: !process.env.SWIPECHAIN_API_DISABLED,
     host: process.env.SWIPECHAIN_API_HOST || "0.0.0.0",
     port: process.env.SWIPECHAIN_API_PORT || 4003,
     whitelist: ["*"]
   },
-  "@swipechain/core-webhooks": {
+  "@solar-network/core-webhooks": {
     enabled: process.env.SWIPECHAIN_WEBHOOKS_ENABLED,
     server: {
       enabled: process.env.SWIPECHAIN_WEBHOOKS_API_ENABLED,
@@ -125,62 +125,62 @@ module.exports = {
       whitelist: ["127.0.0.1", "::ffff:127.0.0.1"]
     }
   },
-  "@swipechain/core-graphql": {
+  "@solar-network/core-graphql": {
     enabled: process.env.SWIPECHAIN_GRAPHQL_ENABLED,
     host: process.env.SWIPECHAIN_GRAPHQL_HOST || "0.0.0.0",
     port: process.env.SWIPECHAIN_GRAPHQL_PORT || 4005
   },
-  "@swipechain/core-forger": {
+  "@solar-network/core-forger": {
     hosts: [`http://127.0.0.1:${process.env.SWIPECHAIN_P2P_PORT || 4001}`]
   },
-  "@swipechain/core-json-rpc": {
+  "@solar-network/core-json-rpc": {
     enabled: process.env.SWIPECHAIN_JSON_RPC_ENABLED,
     host: process.env.SWIPECHAIN_JSON_RPC_HOST || "0.0.0.0",
     port: process.env.SWIPECHAIN_JSON_RPC_PORT || 8080,
     allowRemote: false,
     whitelist: ["127.0.0.1", "::ffff:127.0.0.1"]
   },
-  "@swipechain/core-snapshots": {}
+  "@solar-network/core-snapshots": {}
 };
 ```
 
 Your directory `MyNet` should now contain `genesisBlock.json`, `peers.json`, and a `plugins.js`. If you use the terms `mainnet`, `devnet` and `testnet` in your BridgeChain, you should create configuration directories for each of these networks, overriding the existing directories.
 
-Next, we need to edit our scripts to use the new configurations. From your git root, open `packages/core/bin/swipechain`. Edit the file, removing references of swipechain and replacing it with your BridgeChain name. These changes are for cosmetic purposes only.
+Next, we need to edit our scripts to use the new configurations. From your git root, open `packages/core/bin/solar`. Edit the file, removing references of solar and replacing it with your BridgeChain name. These changes are for cosmetic purposes only.
 
 Open `packages/core/package.json`. Here the common startup scripts are defined. You can read more on how these work in the [node lifecycle](/guidebook/core/node-lifecycle.md) section. We are interested in the `scripts` key.
 
 ```json
 "scripts": {
-    "debug:start": "node --inspect-brk ./bin/swipechain start",
-    "debug:relay": "node --inspect-brk ./bin/swipechain relay",
-    "debug:forger": "node --inspect-brk ./bin/swipechain forger",
-    "debug:snapshot": "node --inspect-brk ./bin/swipechain snapshot",
-    "start": "./bin/swipechain start",
-    "start:mainnet": "./bin/swipechain start --config ./lib/config/mainnet --network mainnet",
-    "start:devnet": "./bin/swipechain start --config ./lib/config/devnet --network devnet",
-    "start:testnet": "cross-env SWIPECHAIN_ENV=test ./bin/swipechain start --config ./lib/config/testnet --network testnet",
-    "start:testnet:live": "./bin/swipechain start --config ./lib/config/testnet.live --network testnet",
-    "relay": "./bin/swipechain relay",
-    "relay:mainnet": "./bin/swipechain relay --config ./lib/config/mainnet --network mainnet",
-    "relay:devnet": "./bin/swipechain relay --config ./lib/config/devnet --network devnet",
-    "relay:testnet": "cross-env SWIPECHAIN_ENV=test ./bin/swipechain relay --config ./lib/config/testnet --network testnet",
-    "relay:testnet:live": "./bin/swipechain relay --config ./lib/config/testnet.live --network testnet",
-    "forger": "./bin/swipechain forger",
-    "forger:mainnet": "./bin/swipechain forger --config ./lib/config/mainnet --network mainnet",
-    "forger:devnet": "./bin/swipechain forger --config ./lib/config/devnet --network devnet",
-    "forger:testnet": "cross-env SWIPECHAIN_ENV=test ./bin/swipechain forger --config ./lib/config/testnet --network testnet",
-    "forger:testnet:live": "./bin/swipechain forger --config ./lib/config/testnet.live --network testnet",
-    "snapshot": "./bin/swipechain snapshot",
-    "snapshot:mainnet": "./bin/swipechain snapshot --config ./lib/config/mainnet --network mainnet",
-    "snapshot:devnet": "./bin/swipechain snapshot --config ./lib/config/devnet --network devnet",
-    "snapshot:testnet": "./bin/swipechain snapshot --config ./lib/config/testnet --network testnet",
-    "snapshot:testnet:live": "./bin/swipechain snapshot --config ./lib/config/testnet.live --network testnet",
-    "full:testnet": "cross-env SWIPECHAIN_ENV=test ./bin/swipechain start --config ./lib/config/testnet --network testnet --network-start",
-    "full:testnet:live": "./bin/swipechain start --config ./lib/config/testnet.live --network testnet --network-start",
-    "full:testnet:2tier:2": "cross-env SWIPECHAIN_ENV=test ./bin/swipechain start --config ./lib/config/testnet.2 --network testnet --network-start",
-    "full:testnet:2tier:1": "cross-env SWIPECHAIN_ENV=test ./bin/swipechain start --config ./lib/config/testnet.1 --network testnet --network-start",
-    "full:testnet:2tier": "cross-env SWIPECHAIN_ENV=test ./bin/swipechain start --config ./lib/config/testnet.1 --network testnet --network-start && ./bin/swipechain start --config ./lib/config/testnet.2 --network testnet --network-start",
+    "debug:start": "node --inspect-brk ./bin/solar start",
+    "debug:relay": "node --inspect-brk ./bin/solar relay",
+    "debug:forger": "node --inspect-brk ./bin/solar forger",
+    "debug:snapshot": "node --inspect-brk ./bin/solar snapshot",
+    "start": "./bin/solar start",
+    "start:mainnet": "./bin/solar start --config ./lib/config/mainnet --network mainnet",
+    "start:devnet": "./bin/solar start --config ./lib/config/devnet --network devnet",
+    "start:testnet": "cross-env SWIPECHAIN_ENV=test ./bin/solar start --config ./lib/config/testnet --network testnet",
+    "start:testnet:live": "./bin/solar start --config ./lib/config/testnet.live --network testnet",
+    "relay": "./bin/solar relay",
+    "relay:mainnet": "./bin/solar relay --config ./lib/config/mainnet --network mainnet",
+    "relay:devnet": "./bin/solar relay --config ./lib/config/devnet --network devnet",
+    "relay:testnet": "cross-env SWIPECHAIN_ENV=test ./bin/solar relay --config ./lib/config/testnet --network testnet",
+    "relay:testnet:live": "./bin/solar relay --config ./lib/config/testnet.live --network testnet",
+    "forger": "./bin/solar forger",
+    "forger:mainnet": "./bin/solar forger --config ./lib/config/mainnet --network mainnet",
+    "forger:devnet": "./bin/solar forger --config ./lib/config/devnet --network devnet",
+    "forger:testnet": "cross-env SWIPECHAIN_ENV=test ./bin/solar forger --config ./lib/config/testnet --network testnet",
+    "forger:testnet:live": "./bin/solar forger --config ./lib/config/testnet.live --network testnet",
+    "snapshot": "./bin/solar snapshot",
+    "snapshot:mainnet": "./bin/solar snapshot --config ./lib/config/mainnet --network mainnet",
+    "snapshot:devnet": "./bin/solar snapshot --config ./lib/config/devnet --network devnet",
+    "snapshot:testnet": "./bin/solar snapshot --config ./lib/config/testnet --network testnet",
+    "snapshot:testnet:live": "./bin/solar snapshot --config ./lib/config/testnet.live --network testnet",
+    "full:testnet": "cross-env SWIPECHAIN_ENV=test ./bin/solar start --config ./lib/config/testnet --network testnet --network-start",
+    "full:testnet:live": "./bin/solar start --config ./lib/config/testnet.live --network testnet --network-start",
+    "full:testnet:2tier:2": "cross-env SWIPECHAIN_ENV=test ./bin/solar start --config ./lib/config/testnet.2 --network testnet --network-start",
+    "full:testnet:2tier:1": "cross-env SWIPECHAIN_ENV=test ./bin/solar start --config ./lib/config/testnet.1 --network testnet --network-start",
+    "full:testnet:2tier": "cross-env SWIPECHAIN_ENV=test ./bin/solar start --config ./lib/config/testnet.1 --network testnet --network-start && ./bin/solar start --config ./lib/config/testnet.2 --network testnet --network-start",
     "lint": "eslint ./ --fix"
   },
 ```
@@ -190,10 +190,10 @@ Some of these commands use the `--config` option. This accepts a relative direct
 We will continue this guide using the name `MyNet`, as that means we cover all options and places to edit. Add the following lines to `scripts`:
 
 ```json
-"start:MyNet": "./bin/swipechain start --config ./lib/config/MyNet --network MyNet",
-"relay:MyNet": "./bin/swipechain relay --config ./lib/config/MyNet --network MyNet",
-"forger:MyNet": "./bin/swipechain forger --config ./lib/config/MyNet --network MyNet",
-"snapshot:MyNet": "./bin/swipechain snapshot --config ./lib/config/MyNet --network MyNet",
+"start:MyNet": "./bin/solar start --config ./lib/config/MyNet --network MyNet",
+"relay:MyNet": "./bin/solar relay --config ./lib/config/MyNet --network MyNet",
+"forger:MyNet": "./bin/solar forger --config ./lib/config/MyNet --network MyNet",
+"snapshot:MyNet": "./bin/solar snapshot --config ./lib/config/MyNet --network MyNet",
 ```
 
 These shortcut commands will use your custom configurations.
@@ -255,7 +255,7 @@ We are going to start a relay node, which is the equivalent of a standard `v1` n
 lerna bootstrap
 ```
 
-This might take a while, as lerna obtains all dependencies required for `Swipechain Core`. Once the process is done, run the following command to start the synchronization process:
+This might take a while, as lerna obtains all dependencies required for `Solar Core`. Once the process is done, run the following command to start the synchronization process:
 
 ```bash
 (cd packages/core && yarn start:MyNet)

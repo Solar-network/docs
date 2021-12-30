@@ -8,7 +8,7 @@ title: "Development"
 
 ## Introduction
 
-Swipechain Core is now written in [TypeScript](https://github.com/microsoft/typescript), and it has been using [Lerna](https://github.com/lerna/lerna) to manage the development and publication of its packages.
+Solar Core is now written in [TypeScript](https://github.com/microsoft/typescript), and it has been using [Lerna](https://github.com/lerna/lerna) to manage the development and publication of its packages.
 
 These tools make it easy for us to set up the development environment, everything is handled by scripts provided in the Core's `package.json` file.
 
@@ -19,7 +19,7 @@ Firstly, you should have [git](https://git-scm.com) installed.
 With git installed, the first step is to clone the repository so we can have access to some important files locally:
 
 ```git
-git clone https://github.com/SwipeChain/swipechain-core
+git clone https://github.com/solar-network/solar-core
 cd core
 ```
 
@@ -41,16 +41,16 @@ The next important required dependency is a global installation of yarn through 
 npm i -g yarn
 ```
 
-[Yarn](https://yarnpkg.com) is the package manager used by Swipechain Core; it replaces npm from here on out.
+[Yarn](https://yarnpkg.com) is the package manager used by Solar Core; it replaces npm from here on out.
 
-With yarn installed globally, we can proceed to set up the Swipechain Core repository.
+With yarn installed globally, we can proceed to set up the Solar Core repository.
 
 Before we install all the JavaScript and TypeScript packages, we need to make sure we are on the develop branch.
 
 If the output of `git branch` doesn't show 'develop' as the current branch, but shows 'master' in green (current branch), you need to run the following:
 
 ```git
-git fetch https://github.com/SwipeChain/swipechain-core develop:develop
+git fetch https://github.com/solar-network/solar-core develop:develop
 git checkout develop
 ```
 
@@ -68,7 +68,7 @@ Just follow those steps and you are ready to get started. Happy Hacking!
 
 ## Database
 
-Swipechain Core stores all the blockchain data in a database. You could read more about it, in the [database section](/guidebook/core/development.html#database).
+Solar Core stores all the blockchain data in a database. You could read more about it, in the [database section](/guidebook/core/development.html#database).
 
 For development, you could use our ready-to-use [Docker Compose](https://docs.docker.com/compose/) configurations, following the instructions at [Docker section](/guidebook/core/docker.html).
 

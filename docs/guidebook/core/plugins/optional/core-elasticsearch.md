@@ -5,13 +5,13 @@ title: "Elasticsearch"
 # Elasticsearch
 
 ::: tip
-You can find the source code of this package at [packages/core-elasticsearch](https://github.com/Swipechain/swipechain-core/tree/develop/packages/core-elasticsearch).
+You can find the source code of this package at [packages/core-elasticsearch](https://github.com/solar-network/solar-core/tree/develop/packages/core-elasticsearch).
 :::
 
 ## Installation
 
 ```bash
-yarn add @swipechain/core-elasticsearch
+yarn add @solar-network/core-elasticsearch
 ```
 
 ## Alias

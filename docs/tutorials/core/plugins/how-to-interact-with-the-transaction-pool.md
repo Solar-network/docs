@@ -15,7 +15,7 @@ The `core-transaction-pool` package manages everything that is related to transa
 ## Interacting With the Transaction Pool
 
 ```ts
-import { app } from "@swipechain/core-container";
+import { app } from "@solar-network/core-container";
 
 const transactionPool = app.resolvePlugin("transaction-pool");
 
@@ -29,11 +29,11 @@ async function callTransactionPoolMethods() {
   // Get the number of transactions in the pool from a specific sender.
   transactionPool.getSenderSize();
 
-  // Add many transactions to the pool. The input should be an array of Transaction model instances from the @swipechain/crypto package.
+  // Add many transactions to the pool. The input should be an array of Transaction model instances from the @solar-network/crypto package.
   // Internally only data that has been verified by the transaction guard will enter the pool so make sure all of your data is verified.
   transactionPool.addTransactions([transaction, transaction, transaction]);
 
-  // Add a transaction to the pool. The input should be a Transaction model instance from the @swipechain/crypto package.
+  // Add a transaction to the pool. The input should be a Transaction model instance from the @solar-network/crypto package.
   transactionPool.addTransaction(transaction);
 
   // Remove a transaction from the pool based on a Transaction model instance.

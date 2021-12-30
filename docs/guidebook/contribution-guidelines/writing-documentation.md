@@ -1,20 +1,20 @@
-# Writing Documentation for Swipechain
+# Writing Documentation for Solar
 
-On this page, you will find all the details necessary for writing compliant documentation for Swipechain.
+On this page, you will find all the details necessary for writing compliant documentation for Solar.
 
-![swipechain-docs-banner](https://github.com/Swipechain/swipechain-docs/blob/master/banner.png?raw=true)
+![docs-banner](https://github.com/solar-network/docs/blob/master/banner.png?raw=true)
 
 [[toc]]
 
 ## Style Guide
 
-As Swipechain originates from an online community, different writing styles have been used in formal and community writings. It is important to have a uniform style across our documentation to avoid misunderstandings and provide consistency to developers.
+As Solar originates from an online community, different writing styles have been used in formal and community writings. It is important to have a uniform style across our documentation to avoid misunderstandings and provide consistency to developers.
 
-Writing documentation is quite simple, often the last 10% of a project. Regardless the last 10% can consume 90% of the effort. Proper documentation requires fluency in English and a well thought out objective. Swipechain's documentation is written for the semi-knowledgeable. However, beginners should be able to follow most of the tutorials and learn from the docs. Well documented, average software is more usable than poorly documented, fantastic software.
+Writing documentation is quite simple, often the last 10% of a project. Regardless the last 10% can consume 90% of the effort. Proper documentation requires fluency in English and a well thought out objective. Solar's documentation is written for the semi-knowledgeable. However, beginners should be able to follow most of the tutorials and learn from the docs. Well documented, average software is more usable than poorly documented, fantastic software.
 
 ### Language
 
-Swipechain's official language is American English, which is used in nearly all writings. This conforms to most technical documentation and writings, as often programming languages adhere to American English as well.
+Solar's official language is American English, which is used in nearly all writings. This conforms to most technical documentation and writings, as often programming languages adhere to American English as well.
 
 ### Keep in Mind
 
@@ -27,8 +27,8 @@ Use a clear, semi-formal tone in writing. There is no need to go as far as acade
 - Avoid using abbreviations.
 
 ## Pending Projects
-The Swipechain Blockchain Platform is continuously expanding with it's modular Core design and extensive range of peripherals accompanying it. At this stage of development, we feel it would now be the appropriate time to apply for the [Google Season of Docs program](https://developers.google.com/season-of-docs/).
-This initiative will allow aspiring technical writers to hone their skills in the art of technical writing, as well as helping to evaluate and improve our documentation. You will be able to to work tightly with the Swipechain Team and our large technical community. Swipechain has always felt a huge amount of pride with our Open Source approach and we feel that participating in Open Source programs such as GSoD is not only important for Swipechain, but also for the wider Open Source community.
+The Solar Blockchain Platform is continuously expanding with it's modular Core design and extensive range of peripherals accompanying it. At this stage of development, we feel it would now be the appropriate time to apply for the [Google Season of Docs program](https://developers.google.com/season-of-docs/).
+This initiative will allow aspiring technical writers to hone their skills in the art of technical writing, as well as helping to evaluate and improve our documentation. You will be able to to work tightly with the Solar Team and our large technical community. Solar has always felt a huge amount of pride with our Open Source approach and we feel that participating in Open Source programs such as GSoD is not only important for Solar, but also for the wider Open Source community.
 
 [Detailed information about the program can be found here](gsod.html).
 
@@ -63,7 +63,7 @@ If a code snippet is relevant in multiple languages, create tabs for all languag
 
 ::: tab javascript
 
-Javascript is placed in the front, as it is widely used, and the primary language used in Swipechain.
+Javascript is placed in the front, as it is widely used, and the primary language used in Solar.
 
 :::
 
@@ -87,7 +87,7 @@ PHP is a conventional programming language. We also support two dedicated PHP fr
 
 ::: tab python
 
-Python is an academic language. Swipechain aims to collaborate with Universities and researchers.
+Python is an academic language. Solar aims to collaborate with Universities and researchers.
 
 :::
 
@@ -111,7 +111,7 @@ Ruby, powered by Rails, is a great tool for developing backends.
 
 ::: tab swift
 
-Apple's official language. Currently not used in the Swipechain mobile wallet.
+Apple's official language. Currently not used in the Solar mobile wallet.
 
 :::
 
@@ -157,17 +157,17 @@ Most markdown linters will warn you of these common issues.
 
 ## Terminology
 
-There are many terms commonly used when describing aspects of Swipechain and related technologies. To standardize how documentation is presented to the user and to remove differences across different texts, we have established the following rules for using Swipechain terminology.
+There are many terms commonly used when describing aspects of Solar and related technologies. To standardize how documentation is presented to the user and to remove differences across different texts, we have established the following rules for using Solar terminology.
 
 ### Commonly Used Technological Concepts and Project Names
 
-Firstly, the term "Swipechain" refers to an entire umbrella of concepts and is mainly used as a prefix to describe projects it maintains or supports.
+Firstly, the term "Solar" refers to an entire umbrella of concepts and is mainly used as a prefix to describe projects it maintains or supports.
 
-For example, the most basic form of this is writing "Swipechain"; this can be used interchangeably with "Swipechain".
+For example, the most basic form of this is writing "Solar"; this can be used interchangeably with "Solar".
 
-> Writing documentation for Swipechain
+> Writing documentation for Solar
 
-> Writing documentation for the Swipechain
+> Writing documentation for the Solar
 
 Both are acceptable.
 
@@ -175,37 +175,37 @@ A complete list of definitions is found in the [glossary](/glossary/).
 
 For certain cases (docs, website, forum), it is acceptable to use the actual URL subdomain.domain.tld format if it's intuitive:
 
-- _"Find all relevant information on the [docs.swipechain.org](https://docs.swipechain.org)"_
-- _"Blog, Forums, Roadmap and more can be found at the [swipechain.org](https://swipechain.org) website"_
-- _"I love the community over at the [forum.swipechain.org](https://forum.swipechain.org)"_
+- _"Find all relevant information on the [docs.solar.network](https://docs.solar.network)"_
+- _"Blog, Forums, Roadmap and more can be found at the [solar.network](https://solar.network) website"_
+- _"I love the community over at the [forum.solar.network](https://forum.solar.network)"_
 
 :::danger
-When talking about Swipechain's native currency, you MUST refer to it as Swipechain - it is commonly used as the currency ticker on exchanges and within Swipechain projects like the Swipechain Desktop Wallet and Swipechain Explorer. The currency symbol for Swipechain is "Ѧ". It can be represented with the decimal Unicode 1126 or `\&#1126;` in HTML.
+When talking about Solar's native currency, you MUST refer to it as Solar - it is commonly used as the currency ticker on exchanges and within Solar projects like the Solar Desktop Wallet and Solar Explorer. The currency symbol for Solar is "Ѧ". It can be represented with the decimal Unicode 1126 or `\&#1126;` in HTML.
 :::
 
 Generic terms like "address", "wallet", "transaction", "delegate", "vote", "blockchain", "currency" SHOULD NOT be capitalized, alongside the three above terms which mainly refer to concepts and not necessarily rigid implementations.
 
-The scopes of each category might change to include or exclude new or old concepts at any given time, due to the continually evolving Swipechain (Ecosystem) landscape.
+The scopes of each category might change to include or exclude new or old concepts at any given time, due to the continually evolving Solar (Ecosystem) landscape.
 
-Although it would be ideal, not all documents can afford only to mention Swipechain's projects and concepts.
+Although it would be ideal, not all documents can afford only to mention Solar's projects and concepts.
 
 We encourage you always to follow other projects' standards for writing about them when you mention them in a document:
 
-> The Swipechain blockchain was created later than the Bitcoin blockchain
+> The Solar blockchain was created later than the Bitcoin blockchain
 
 In addition, please refrain from capitalizing terms like "blockchain", as it would imply some unencouraged buzz-wordiness.
 
 ## Linking
 
-An essential part of documenting for the open source Swipechain is to offer the reader an unintrusive option to go to another branch of resources and learn without breaking the underlying reading experience.
+An essential part of documenting for the open source Solar is to offer the reader an unintrusive option to go to another branch of resources and learn without breaking the underlying reading experience.
 
-It is acceptable to link once to Swipechain or other technological projects mentioned in the document you write unless mentioned in succession within a list. Linking the first occurrence of a technical project mention is good practice.
+It is acceptable to link once to Solar or other technological projects mentioned in the document you write unless mentioned in succession within a list. Linking the first occurrence of a technical project mention is good practice.
 
 Additionally, you are encouraged to provide a list of references at the end of your written document. This helps streamline the user's experience when wanting to read resources on the aforementioned projects without having to scroll back through the material.
 
 ### URLs
 
-To provide an easy to access and clean reference to a website, especially when dealing with websites external to the Swipechain, the writer MUST include a link to the URL with an appropriate name rather than the plain, unclickable, URL.
+To provide an easy to access and clean reference to a website, especially when dealing with websites external to the Solar, the writer MUST include a link to the URL with an appropriate name rather than the plain, unclickable, URL.
 :::danger
 answers can be searched for on https://google.com
 :::
@@ -220,9 +220,9 @@ As an essential part of online documentation, images must be used with respect t
 
 To unify the look and feel of the documentation, images or other branded content available and relevant to your document SHOULD be included.
 
-If writing a document for an Swipechain project, like the Swipechain Mobile Wallet, you MUST use the official banner image for it (located on GitHub) at the start of the document.
+If writing a document for an Solar project, like the Solar Mobile Wallet, you MUST use the official banner image for it (located on GitHub) at the start of the document.
 
-When needing to use official Swipechain imagery, you may find suitable media assets at [swipechain.org/mediakit](https://swipechain.org/mediakit). Otherwise, you are encouraged to design your images, use external images with proper attribution in as references or outsource the graphical design task to someone else.
+When needing to use official Solar imagery, you may find suitable media assets at [solar.network/mediakit](https://solar.network/mediakit). Otherwise, you are encouraged to design your images, use external images with proper attribution in as references or outsource the graphical design task to someone else.
 
 When writing technical guides; do not take screenshots of the console. Add the textual output from commands as code snippets, either using the `bash` tag or omitting the tag altogether. Screenshots are difficult to update, requiring the maintainers to go through the guide step-by-step.
 
@@ -236,17 +236,17 @@ Please use this template for every document which has any reference at all:
 
 | Project                         | Repository                                                                                       | Description                                                                                                              |
 | :------------------------------ | :----------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------- |
-| Swipechain Core                        | [https://github.com/SwipeChain/swipechain-core ](https://github.com/SwipeChain/swipechain-core)                    | The reference implementation of the Swipechain blockchain, also refered to as Swipechain v3                                            |
-| Swipechain Node                        | [https://github.com/SwipeChain/swipechain-swipechain-node ](https://github.com/SwipeChain/swipechain-swipechain-node)            | Deprecated implementation of Swipechain v1                                                                                      |
-| Swipechain Mobile Wallet               | [https://github.com/SwipeChain/swipechain-mobile-wallet ](https://github.com/SwipeChain/swipechain-mobile-wallet)  | Cross platform mobile wallet built using ionic.                                                                          |
-| Swipechain Explorer                    | [https://github.com/SwipeChain/swipechain-explorer ](https://github.com/SwipeChain/swipechain-explorer)            | Official blockchain explorer, hosted at explorer.swipechain.org.                                                                 |
-| Swipechain Desktop Wallet              | [https://github.com/SwipeChain/swipechain-desktop-wallet](https://github.com/SwipeChain/swipechain-desktop-wallet) | Cross platform desktop wallet.                                                                                           |
-| AIPs, Swipechain Improvement Proposals | [https://github.com/SwipeChain/swipechain-aips](https://github.com/SwipeChain/swipechain-aips)                     | Proposals related to altering/upgrading Swipechain. AIP set standards for best practices, implementations and breaking changes. |
-| Swipechain (LANG) Client               | [https://github.com/SwipeChain/swipechain-php-client](https://github.com/SwipeChain/swipechain-php-client)         | Each SDK has its own client repository, used for all API interactions.                                                   |
-| Swipechain (LANG) Crypto               | [https://github.com/SwipeChain/swipechain-php-crypto ](https://github.com/SwipeChain/swipechain-php-crypto)        | As with the client SDKs, there are many crypto SDKs, providing signing and serialization functionalities.                |
-| Swipechain Deployer                    | [https://github.com/SwipeChain/swipechain-swipechain-deployer](https://github.com/SwipeChain/swipechain-deployer)         | Deployment scripts based on Docker and Vagrant.                                                                          |
-| Swipechain website                     | [https://swipechain.org](https://swipechain.org)                                                                 | The official website hosted at swipechain.org                                                                                    |
-| Swipechain documentation               | [https://docs.swipechain.org ](https://docs.swipechain.org)                                                      | A complete set of technical documentation on Swipechain and blockchain.                                                         |
-| Swipechain forum                       | [https://forum.swipechain.org ](https://forum.swipechain.org)                                                    | A self hosted forum.                                                                                                     |
-| Swipechain mediakit                    | [https://swipechain.org/mediakit ](https://swipechain.org/mediakit)                                              | A collection of reusable media assets.                                                                                   |
-| Swipechain blog                        | [https://blog.swipechain.org ](https://blog.swipechain.org)                                                      | One of the official channels of communication between the Swipechain team and the community.                                    |
+| Solar Core                        | [https://github.com/solar-network/solar-core ](https://github.com/solar-network/solar-core)                    | The reference implementation of the Solar blockchain, also refered to as Solar v3                                            |
+| Solar Node                        | [https://github.com/solar-network/solar-solar-node ](https://github.com/solar-network/solar-solar-node)            | Deprecated implementation of Solar v1                                                                                      |
+| Solar Mobile Wallet               | [https://github.com/solar-network/solar-mobile-wallet ](https://github.com/solar-network/solar-mobile-wallet)  | Cross platform mobile wallet built using ionic.                                                                          |
+| Solar Explorer                    | [https://github.com/solar-network/solar-explorer ](https://github.com/solar-network/solar-explorer)            | Official blockchain explorer, hosted at explorer.solar.network.                                                                 |
+| Solar Desktop Wallet              | [https://github.com/solar-network/solar-desktop-wallet](https://github.com/solar-network/solar-desktop-wallet) | Cross platform desktop wallet.                                                                                           |
+| AIPs, Solar Improvement Proposals | [https://github.com/solar-network/solar-aips](https://github.com/solar-network/solar-aips)                     | Proposals related to altering/upgrading Solar. AIP set standards for best practices, implementations and breaking changes. |
+| Solar (LANG) Client               | [https://github.com/solar-network/solar-php-client](https://github.com/solar-network/solar-php-client)         | Each SDK has its own client repository, used for all API interactions.                                                   |
+| Solar (LANG) Crypto               | [https://github.com/solar-network/solar-php-crypto ](https://github.com/solar-network/solar-php-crypto)        | As with the client SDKs, there are many crypto SDKs, providing signing and serialization functionalities.                |
+| Solar Deployer                    | [https://github.com/solar-network/solar-solar-deployer](https://github.com/solar-network/solar-deployer)         | Deployment scripts based on Docker and Vagrant.                                                                          |
+| Solar website                     | [https://solar.network](https://solar.network)                                                                 | The official website hosted at solar.network                                                                                    |
+| Solar documentation               | [https://docs.solar.network ](https://docs.solar.network)                                                      | A complete set of technical documentation on Solar and blockchain.                                                         |
+| Solar forum                       | [https://forum.solar.network ](https://forum.solar.network)                                                    | A self hosted forum.                                                                                                     |
+| Solar mediakit                    | [https://solar.network/mediakit ](https://solar.network/mediakit)                                              | A collection of reusable media assets.                                                                                   |
+| Solar blog                        | [https://blog.solar.network ](https://blog.solar.network)                                                      | One of the official channels of communication between the Solar team and the community.                                    |

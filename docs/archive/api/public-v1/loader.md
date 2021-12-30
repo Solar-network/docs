@@ -21,7 +21,7 @@ GET /api/loader/autoconfigure
         "nethash": "6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988",
         "token": "SXP",
         "symbol": "SXP",
-        "explorer": "https://explorer.swipechain.org",
+        "explorer": "https://explorer.solar.network",
         "version": 23
     }
 }
@@ -31,7 +31,7 @@ GET /api/loader/autoconfigure
 
 <request-example>
 ```bash
-curl -X GET https://explorer.swipechain.org:8443/api/loader/autoconfigure \
+curl -X GET https://explorer.solar.network:8443/api/loader/autoconfigure \
   -H "API-Version: 1"
 ```
 </request-example>
@@ -59,7 +59,7 @@ GET /api/loader/status
 
 <request-example>
 ```bash
-curl -X GET https://explorer.swipechain.org:8443/api/loader/status \
+curl -X GET https://explorer.solar.network:8443/api/loader/status \
   -H "API-Version: 1"
 ```
 </request-example>
@@ -88,7 +88,7 @@ GET /api/loader/status/sync
 
 <request-example>
 ```bash
-curl -X GET https://explorer.swipechain.org:8443/api/loader/status/sync \
+curl -X GET https://explorer.solar.network:8443/api/loader/status/sync \
   -H "API-Version: 1"
 ```
 </request-example>

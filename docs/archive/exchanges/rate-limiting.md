@@ -1,16 +1,16 @@
 # Configuring Rate Limits
 
-Swipechain Core is mainly used in the context of public services, providing desktop wallets with the necessary endpoints to function. Since they serve anonymous users and to protect against DDoS attacks, Swipechain Core nodes have strict rate limits. Enterprise users (such as exchanges) might encounter a problem creating large batches of transactions and broadcasting them. The rate limit can be configured in multiple ways to solve these problems.
+Solar Core is mainly used in the context of public services, providing desktop wallets with the necessary endpoints to function. Since they serve anonymous users and to protect against DDoS attacks, Solar Core nodes have strict rate limits. Enterprise users (such as exchanges) might encounter a problem creating large batches of transactions and broadcasting them. The rate limit can be configured in multiple ways to solve these problems.
 
 ## Exceeding the Rate Limit
 
-By default, rate limits are enabled on Swipechain Core nodes. When the rate limit is exceeded; a `429` HTTP status is returned.
+By default, rate limits are enabled on Solar Core nodes. When the rate limit is exceeded; a `429` HTTP status is returned.
 
 ## Configuring the Rate Limit
 
-The default way to configure the node's rate limit is by editing the .env file found at `~/.config/swipechain-core/{network}/.env`. Two keys interest us here:
+The default way to configure the node's rate limit is by editing the .env file found at `~/.config/solar-core/{network}/.env`. Two keys interest us here:
 
-#### file: ~/.config/swipechain-core/{network}/.env
+#### file: ~/.config/solar-core/{network}/.env
 
 ```json
 CORE_API_RATE_LIMIT=true
@@ -21,10 +21,10 @@ Setting `CORE_API_RATE_LIMIT` to false will globally disable all rate limits. Fo
 
 ## Configuration Through a Plugin
 
-Lower access to the rate limiting can be obtained by writing a plugin at `~/.config/swipechain-core/{network}/plugin.js`. We can define custom behavior and [monkey patch](https://en.wikipedia.org/wiki/Monkey_patch) the Swipechain Core rate limiter.
+Lower access to the rate limiting can be obtained by writing a plugin at `~/.config/solar-core/{network}/plugin.js`. We can define custom behavior and [monkey patch](https://en.wikipedia.org/wiki/Monkey_patch) the Solar Core rate limiter.
 
 ```js
-"@swipechain/core-api": {
+"@solar-network/core-api": {
     enabled: !process.env.CORE_API_DISABLED,
     host: process.env.CORE_API_HOST || "0.0.0.0",
     port: process.env.CORE_API_PORT || 4003,
@@ -38,7 +38,7 @@ Cache timeouts can be disabled, which is especially useful on resource-strained 
 
 ## Further Reference
 
-Swipechain Core uses the [hapi](https://hapijs.com/) framework for its API internals and more specifically [hapi-rate-limit](https://github.com/wraithgar/hapi-rate-limit). This ratelimiter can be configured by setting/altering [core-api](https://github.com/Swipechain/swipechain-core/tree/develop/packages/core-api/src/defaults.js#L48-L56).
+Solar Core uses the [hapi](https://hapijs.com/) framework for its API internals and more specifically [hapi-rate-limit](https://github.com/wraithgar/hapi-rate-limit). This ratelimiter can be configured by setting/altering [core-api](https://github.com/solar-network/solar-core/tree/develop/packages/core-api/src/defaults.js#L48-L56).
 
 ```ts
 rateLimit: {

@@ -5,13 +5,13 @@ title: "Error Tracker - Sentry"
 # Error Tracker - Sentry
 
 ::: tip
-You can find the source code of this package at [packages/core-error-tracker-sentry](https://github.com/Swipechain/swipechain-core/tree/develop/packages/core-error-tracker-sentry).
+You can find the source code of this package at [packages/core-error-tracker-sentry](https://github.com/solar-network/solar-core/tree/develop/packages/core-error-tracker-sentry).
 :::
 
 ## Installation
 
 ```bash
-yarn add @swipechain/core-error-tracker-sentry
+yarn add @solar-network/core-error-tracker-sentry
 ```
 
 ## Alias

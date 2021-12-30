@@ -1,15 +1,15 @@
-# Swipechain Docs
+# Solar Docs
 
 <p align="center">
-    <img src="https://github.com/Swipechain/swipechain-docs/blob/master/banner.png" />
+    <img src="https://github.com/solar-network/docs/blob/master/banner.png" />
 </p>
 
-> Official documentation for the Swipechain powered by VuePress.
+> Official documentation for the Solar powered by VuePress.
 
 ## Development
 
 ```
-git clone https://github.com/SwipeChain/swipechain-docs
+git clone https://github.com/solar-network/docs
 cd docs
 yarn install
 yarn dev
@@ -17,7 +17,7 @@ yarn dev
 
 ## Security
 
-If you discover a security vulnerability within this package, please send an e-mail to security@swipechain.org. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this package, please send an e-mail to security@solar.network. All security vulnerabilities will be promptly addressed.
 
 ## License
 

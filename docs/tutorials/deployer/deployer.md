@@ -14,13 +14,13 @@ user@user:~$ ssh user@myserver
 Last login: Thu Jan 17 13:18:41 2019 from 94.215.141.65
 ```
 
-Download Swipechain Deployer. Git should be installed as it is bundled with Ubuntu and other Linux based distributions.
+Download Solar Deployer. Git should be installed as it is bundled with Ubuntu and other Linux based distributions.
 
 ```bash
-$ git clone https://github.com/SwipeChain/swipechain-deployer.git \
-  && cd swipechain-deployer
+$ git clone https://github.com/solar-network/solar-deployer.git \
+  && cd solar-deployer
 
-Cloning into 'swipechain-deployer'...
+Cloning into 'solar-deployer'...
 remote: Enumerating objects: 6, done.
 remote: Counting objects: 100% (6/6), done.
 remote: Compressing objects: 100% (6/6), done.
@@ -29,7 +29,7 @@ Receiving objects: 100% (694/694), 116.61 KiB | 612.00 KiB/s, done.
 Resolving deltas: 100% (447/447), done.
 ```
 
-`NodeJS` and `NPM` are required for most of the products produced by Swipechain. `nvm` is especially useful for managing different `NodeJS` versions on the same machine.
+`NodeJS` and `NPM` are required for most of the products produced by Solar. `nvm` is especially useful for managing different `NodeJS` versions on the same machine.
 
 ```bash
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
@@ -43,7 +43,7 @@ Install and set up your BridgeChain. Note that you must replace the IP address w
 ```bash
 $ ./bridgechain.sh install-node \
       --name MyTest \
-      --database swipechain_mytest \
+      --database solar_mytest \
       --token MYTEST \
       --symbol MT \
       --node-ip 51.141.3.209 \
@@ -61,7 +61,7 @@ $ ./bridgechain.sh install-node \
 ...
 ```
 
-There are many more options available when installing the node, which can be found [here](https://github.com/SwipeChain/swipechain-deployer#optional-parameters). You can also use a JSON config file, which you can learn about [here](https://github.com/SwipeChain/swipechain-deployer#json-config).
+There are many more options available when installing the node, which can be found [here](https://github.com/solar-network/solar-deployer#optional-parameters). You can also use a JSON config file, which you can learn about [here](https://github.com/solar-network/solar-deployer#json-config).
 
 ::: warning
 
@@ -110,7 +110,7 @@ First, install a node using the official [core-commander](/exchanges/relay.html)
 
 in `core-commander/ecosystem.config.js` we can see what parameters are passed to the startup command when running the `relay`, `forger` or `explorer`.
 
-The `--config` flag is of particular interest to us, as it passed the config files we wish to use. You can find real-world configurations in the [core repository](https://github.com/Swipechain/swipechain-core/tree/master/packages/core/bin/config). Each of the directories contains a full set of configuration files needed to run a node.
+The `--config` flag is of particular interest to us, as it passed the config files we wish to use. You can find real-world configurations in the [core repository](https://github.com/solar-network/solar-core/tree/master/packages/core/bin/config). Each of the directories contains a full set of configuration files needed to run a node.
 
 Edit/copy the `peers.json` and add the IP and port of your first node.
 
@@ -129,7 +129,7 @@ Edit/copy the `peers.json` and add the IP and port of your first node.
     }
   ],
   "sources": [
-    "https://raw.githubusercontent.com/SwipeChain/peers/master/mainnet.json"
+    "https://raw.githubusercontent.com/Solar/peers/master/mainnet.json"
   ]
 }
 ```

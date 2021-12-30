@@ -5,12 +5,12 @@ If you are a developer, the following steps will help you to validate your insta
 ## Run Tests for the First Time (Core)
 
 * Ensure primary dependencies installed:
-  * Ensure `node -v` returns a version higher than or equal to the [minimum recommended version]( https://github.com/SwipeChain/swipechain-core/blob/master/.nvmrc)
+  * Ensure `node -v` returns a version higher than or equal to the [minimum recommended version]( https://github.com/solar-network/solar-core/blob/master/.nvmrc)
   * Ensure yarn is installed. If yarn is not found, you may need to close, exit, and re-open your terminal.
-* checkout git repository for core, located here: [ https://github.com/SwipeChain/swipechain-core]( https://github.com/SwipeChain/swipechain-core)
+* checkout git repository for core, located here: [ https://github.com/solar-network/solar-core]( https://github.com/solar-network/solar-core)
 * `cd core`
 * `yarn setup`
-* `yarn docker swipechain`
+* `yarn docker solar`
 * `(cd docker/environments/unitnet && docker-up -d postgres)`
   * Note: if you do not use the parentheses in this command, you will need to ensure you return back to the core/ directory. 
 * `yarn test:unit`
@@ -25,7 +25,7 @@ If you are a developer, the following steps will help you to validate your insta
 * Try the above steps again.
 * If still failing, draft an email that contains your node version, your operating system version, your level of general experience, and anything that might be odd about your system.
 * Copy and paste the error that appears. (More info is better!)
-* Send it to: gsod@swipechain.org 
+* Send it to: gsod@solar.network 
 
 ## Further testing commands
 

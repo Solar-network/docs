@@ -1,10 +1,10 @@
-# How to Send Transactions Using the Swipechain Core Tester CLI
+# How to Send Transactions Using the Solar Core Tester CLI
 
 ## Prerequisites
 
-Ensure you have a working copy of the most recent [GitHub repo for Swipechain Core](https://github.com/SwipeChain/swipechain-core). If you're using Swipechain Core Commander, it will be installed at `~/swipechain-core`.
+Ensure you have a working copy of the most recent [GitHub repo for Solar Core](https://github.com/solar-network/solar-core). If you're using Solar Core Commander, it will be installed at `~/solar-core`.
 
-The commands shown in the next examples are all run in the `~/swipechain-core/packages/core-tester-cli/` folder.
+The commands shown in the next examples are all run in the `~/solar-core/packages/core-tester-cli/` folder.
 
 ## Basics
 
@@ -84,7 +84,7 @@ the output should be similar to
 
 In my case, three transfers were made: one from my original wallet, and two to the randomly picked recipient (sending to itself).
 
-[More details](https://dexplorer.swipechain.org/wallets/D97JHmrxQ4Q4SzKRKq89pGDwJ4JaokPcmk).
+[More details](https://dexplorer.solar.network/wallets/D97JHmrxQ4Q4SzKRKq89pGDwJ4JaokPcmk).
 
 ## Delegate Registration
 
@@ -118,7 +118,7 @@ Which sent a transaction to a random address which registered itself as a delega
 
 The new delegate's credentials are saved in `./test-wallets`.
 
-You can view the delegate this transaction registered on the [dexplorer.swipechain.org](https://dexplorer.swipechain.org/wallets/DEPu5PezAvSZ5DhMHTNjBFq7n5KfaLSQVE).
+You can view the delegate this transaction registered on the [dexplorer.solar.network](https://dexplorer.solar.network/wallets/DEPu5PezAvSZ5DhMHTNjBFq7n5KfaLSQVE).
 
 ## Vote
 
@@ -150,7 +150,7 @@ An errorless yield looks like
 
 Again, this will first send a transfer to a random address and save it to the `./test-wallets` file; then that address will issue a vote for the delegate with the specified public key.
 
-Here's [a link to the specific voting transaction in question](https://dexplorer.swipechain.org/transaction/48b423b8afd31b7e0bfaa92d2c5430f6e892463679fcc6cf33a5783fd16258f0), on the dexplorer.
+Here's [a link to the specific voting transaction in question](https://dexplorer.solar.network/transaction/48b423b8afd31b7e0bfaa92d2c5430f6e892463679fcc6cf33a5783fd16258f0), on the dexplorer.
 
 ## Second Signature Registration
 
@@ -177,7 +177,7 @@ And the associated output:
 [INFO]: Waiting 20 seconds to apply second-signature transactions
 ```
 
-[For your convenience](https://dexplorer.swipechain.org/wallets/DHS2SvNtdzyvcPccQKV8h17azuREW8pUHB), a link to the new address which has a second signature registration transaction.
+[For your convenience](https://dexplorer.solar.network/wallets/DHS2SvNtdzyvcPccQKV8h17azuREW8pUHB), a link to the new address which has a second signature registration transaction.
 
 ## Multisignature Registration
 
@@ -221,7 +221,7 @@ Finally, we receive as a response.
 [INFO]: Waiting 20 seconds to apply transactions
 ```
 
-From which we can easily track the flow by looking at [the created address' transactions](https://dexplorer.swipechain.org/wallets/DGdddVsyBmKz7SyzMsZBm1MHepkqZ3JjKy).
+From which we can easily track the flow by looking at [the created address' transactions](https://dexplorer.solar.network/wallets/DGdddVsyBmKz7SyzMsZBm1MHepkqZ3JjKy).
 
 ## Dynamic Fees
 
@@ -249,7 +249,7 @@ will produce output showing two transactions with different fees
 1 ==> 663867b8452388002b3e47118ca67d94e17ba9f82399c057b910c6358c371a43, D9mwARuRihGV8hNyEFvrsTttBKnrmewfHM (fee: 39493)
 ```
 
-the 0th transaction can be viewed on the [dexplorer.swipechain.org](https://dexplorer.swipechain.org/transaction/9ac41285c42573913e4a78a81b251e8c1d99515b4864db038a78ae58ccdd354b).
+the 0th transaction can be viewed on the [dexplorer.solar.network](https://dexplorer.solar.network/transaction/9ac41285c42573913e4a78a81b251e8c1d99515b4864db038a78ae58ccdd354b).
 
 As with the transfer transaction type, other types also follow the same model. When specifying a dynamic fee or range of fees for a given transaction to the tester-cli, the transaction will only be accepted if a delegate has set a minimum fee for its type equal to or lower than the specified value/range.
 
@@ -283,8 +283,8 @@ For the output
 [ERROR]: Delegate count incorrect. '120' but should be '121'
 ```
 
-Now, despite the error, the newly registered delegate can still be found [here](https://dexplorer.swipechain.org/wallets/D7qKmPXo21PvwVKjbEQ85N7vPqods6anXD); with a registration fee of 100 000 000 swipechaintoshi (1 Swipechain only). This is due to the blockchain having to spin more than 2.5 blocks, or 20 seconds, before reaching this low delegate dynamic fee threshold, while the Swipechain Core Tester CLI only waits a strict 20 seconds before determining whether the transaction was successful or not.
+Now, despite the error, the newly registered delegate can still be found [here](https://dexplorer.solar.network/wallets/D7qKmPXo21PvwVKjbEQ85N7vPqods6anXD); with a registration fee of 100 000 000 solartoshi (1 Solar only). This is due to the blockchain having to spin more than 2.5 blocks, or 20 seconds, before reaching this low delegate dynamic fee threshold, while the Solar Core Tester CLI only waits a strict 20 seconds before determining whether the transaction was successful or not.
 
 ## Conclusion
 
-You should now be able to properly manage your test transactions with the help of the tester cli utility! If you have any questions or signals to present, please do so either on [Telegram](https://t.me/Swipechain) with a message or [GitHub](https://github.com/Swipechain/swipechain-docs) with an issue.
+You should now be able to properly manage your test transactions with the help of the tester cli utility! If you have any questions or signals to present, please do so either on [Telegram](https://t.me/Solar) with a message or [GitHub](https://github.com/solar-network/docs) with an issue.

@@ -8,15 +8,15 @@ title: "How to Interact With Events"
 
 ## Getting Started
 
-Core provides a package called [core-event-emitter](https://github.com/Swipechain/swipechain-core/tree/develop/packages/core-event-emitter/src) which exposes an instance of the [Node.js EventEmitter](https://nodejs.org/api/events.html). This plugin should not be installed manually but rather be resolved from the app container.
+Core provides a package called [core-event-emitter](https://github.com/solar-network/solar-core/tree/develop/packages/core-event-emitter/src) which exposes an instance of the [Node.js EventEmitter](https://nodejs.org/api/events.html). This plugin should not be installed manually but rather be resolved from the app container.
 
 ## Listening for Events
 
 A common use-case is that your plugin will listen to events that core emitted in order to process the data for monitoring.
 
 ```ts
-import { app } from "@swipechain/core-container";
-import { EventEmitter, Logger } from "@swipechain/core-interfaces";
+import { app } from "@solar-network/core-container";
+import { EventEmitter, Logger } from "@solar-network/core-interfaces";
 
 const logger = app.resolvePlugin<Logger.ILogger>("logger");
 const emitter = app.resolvePlugin<EventEmitter.EventEmitter>("event-emitter");
@@ -40,8 +40,8 @@ In a real world use-case you should send notifications via telegram, email, SMS 
 A less common use-case is that your plugin will emit events that can be listened to by other plugins _(or your own for internal use, core-snapshots does this)_ rather then your plugin itself listening and reacting to events that core emitted. The steps are basically the same as for the listener.
 
 ```ts
-import { app } from "@swipechain/core-container";
-import { EventEmitter, Logger } from "@swipechain/core-interfaces";
+import { app } from "@solar-network/core-container";
+import { EventEmitter, Logger } from "@solar-network/core-interfaces";
 
 const logger = app.resolvePlugin<Logger.ILogger>("logger");
 const emitter = app.resolvePlugin<EventEmitter.EventEmitter>("event-emitter");

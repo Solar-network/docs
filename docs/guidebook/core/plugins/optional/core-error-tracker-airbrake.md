@@ -5,13 +5,13 @@ title: "Error Tracker - Airbrake"
 # Error Tracker - Airbrake
 
 ::: tip
-You can find the source code of this package at [packages/core-error-tracker-airbrake](https://github.com/Swipechain/swipechain-core/tree/develop/packages/core-error-tracker-airbrake).
+You can find the source code of this package at [packages/core-error-tracker-airbrake](https://github.com/solar-network/solar-core/tree/develop/packages/core-error-tracker-airbrake).
 :::
 
 ## Installation
 
 ```bash
-yarn add @swipechain/core-error-tracker-airbrake
+yarn add @solar-network/core-error-tracker-airbrake
 ```
 
 ## Configuration
