@@ -377,7 +377,7 @@ To make everyone's life easier when looking for issues or pull requests of speci
 
 ## Assigning Bounty Tiers Before Merging a Pull Request
 
-Before a developer merges a PR, it is _required_ to assign one of the seven bounty labels. Those labels will be used by the _SwipeChain Bot_ to calculate bounty rewards and inform the contributors about those and other activities or requests.
+Before a developer merges a PR, it is _required_ to assign one of the seven bounty labels. Those labels will be used by the _Solar Bot_ to calculate bounty rewards and inform the contributors about those and other activities or requests.
 
 **Tier 1 - \$100**
 

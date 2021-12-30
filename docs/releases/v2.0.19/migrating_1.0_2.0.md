@@ -76,67 +76,67 @@ module.exports = {
     transports: {
       console: {
         options: {
-          level: process.env.SWIPECHAIN_LOG_LEVEL || "debug"
+          level: process.env.SOLAR_LOG_LEVEL || "debug"
         }
       },
       dailyRotate: {
         options: {
-          level: process.env.SWIPECHAIN_LOG_LEVEL || "debug"
+          level: process.env.SOLAR_LOG_LEVEL || "debug"
         }
       }
     }
   },
   "@solar-network/core-database-postgres": {
     connection: {
-      host: process.env.SWIPECHAIN_DB_HOST || "localhost",
-      port: process.env.SWIPECHAIN_DB_PORT || 5432,
+      host: process.env.SOLAR_DB_HOST || "localhost",
+      port: process.env.SOLAR_DB_PORT || 5432,
       database:
-        process.env.SWIPECHAIN_DB_DATABASE || `solar_${process.env.SWIPECHAIN_NETWORK_NAME}`,
-      user: process.env.SWIPECHAIN_DB_USERNAME || "solar",
-      password: process.env.SWIPECHAIN_DB_PASSWORD || "password"
+        process.env.SOLAR_DB_DATABASE || `solar_${process.env.SOLAR_NETWORK_NAME}`,
+      user: process.env.SOLAR_DB_USERNAME || "solar",
+      password: process.env.SOLAR_DB_PASSWORD || "password"
     }
   },
   "@solar-network/core-transaction-pool-mem": {
-    enabled: !process.env.SWIPECHAIN_TRANSACTION_POOL_DISABLED,
+    enabled: !process.env.SOLAR_TRANSACTION_POOL_DISABLED,
     maxTransactionsPerSender:
-      process.env.SWIPECHAIN_TRANSACTION_POOL_MAX_PER_SENDER || 300,
+      process.env.SOLAR_TRANSACTION_POOL_MAX_PER_SENDER || 300,
     allowedSenders: []
   },
   "@solar-network/core-p2p": {
-    host: process.env.SWIPECHAIN_P2P_HOST || "0.0.0.0",
-    port: process.env.SWIPECHAIN_P2P_PORT || 4001,
+    host: process.env.SOLAR_P2P_HOST || "0.0.0.0",
+    port: process.env.SOLAR_P2P_PORT || 4001,
     whitelist: ["127.0.0.1", "::ffff:127.0.0.1"]
   },
   "@solar-network/core-blockchain": {
     fastRebuild: false
   },
   "@solar-network/core-api": {
-    enabled: !process.env.SWIPECHAIN_API_DISABLED,
-    host: process.env.SWIPECHAIN_API_HOST || "0.0.0.0",
-    port: process.env.SWIPECHAIN_API_PORT || 4003,
+    enabled: !process.env.SOLAR_API_DISABLED,
+    host: process.env.SOLAR_API_HOST || "0.0.0.0",
+    port: process.env.SOLAR_API_PORT || 4003,
     whitelist: ["*"]
   },
   "@solar-network/core-webhooks": {
-    enabled: process.env.SWIPECHAIN_WEBHOOKS_ENABLED,
+    enabled: process.env.SOLAR_WEBHOOKS_ENABLED,
     server: {
-      enabled: process.env.SWIPECHAIN_WEBHOOKS_API_ENABLED,
-      host: process.env.SWIPECHAIN_WEBHOOKS_HOST || "0.0.0.0",
-      port: process.env.SWIPECHAIN_WEBHOOKS_PORT || 4004,
+      enabled: process.env.SOLAR_WEBHOOKS_API_ENABLED,
+      host: process.env.SOLAR_WEBHOOKS_HOST || "0.0.0.0",
+      port: process.env.SOLAR_WEBHOOKS_PORT || 4004,
       whitelist: ["127.0.0.1", "::ffff:127.0.0.1"]
     }
   },
   "@solar-network/core-graphql": {
-    enabled: process.env.SWIPECHAIN_GRAPHQL_ENABLED,
-    host: process.env.SWIPECHAIN_GRAPHQL_HOST || "0.0.0.0",
-    port: process.env.SWIPECHAIN_GRAPHQL_PORT || 4005
+    enabled: process.env.SOLAR_GRAPHQL_ENABLED,
+    host: process.env.SOLAR_GRAPHQL_HOST || "0.0.0.0",
+    port: process.env.SOLAR_GRAPHQL_PORT || 4005
   },
   "@solar-network/core-forger": {
-    hosts: [`http://127.0.0.1:${process.env.SWIPECHAIN_P2P_PORT || 4001}`]
+    hosts: [`http://127.0.0.1:${process.env.SOLAR_P2P_PORT || 4001}`]
   },
   "@solar-network/core-json-rpc": {
-    enabled: process.env.SWIPECHAIN_JSON_RPC_ENABLED,
-    host: process.env.SWIPECHAIN_JSON_RPC_HOST || "0.0.0.0",
-    port: process.env.SWIPECHAIN_JSON_RPC_PORT || 8080,
+    enabled: process.env.SOLAR_JSON_RPC_ENABLED,
+    host: process.env.SOLAR_JSON_RPC_HOST || "0.0.0.0",
+    port: process.env.SOLAR_JSON_RPC_PORT || 8080,
     allowRemote: false,
     whitelist: ["127.0.0.1", "::ffff:127.0.0.1"]
   },
@@ -159,28 +159,28 @@ Open `packages/core/package.json`. Here the common startup scripts are defined. 
     "start": "./bin/solar start",
     "start:mainnet": "./bin/solar start --config ./lib/config/mainnet --network mainnet",
     "start:devnet": "./bin/solar start --config ./lib/config/devnet --network devnet",
-    "start:testnet": "cross-env SWIPECHAIN_ENV=test ./bin/solar start --config ./lib/config/testnet --network testnet",
+    "start:testnet": "cross-env SOLAR_ENV=test ./bin/solar start --config ./lib/config/testnet --network testnet",
     "start:testnet:live": "./bin/solar start --config ./lib/config/testnet.live --network testnet",
     "relay": "./bin/solar relay",
     "relay:mainnet": "./bin/solar relay --config ./lib/config/mainnet --network mainnet",
     "relay:devnet": "./bin/solar relay --config ./lib/config/devnet --network devnet",
-    "relay:testnet": "cross-env SWIPECHAIN_ENV=test ./bin/solar relay --config ./lib/config/testnet --network testnet",
+    "relay:testnet": "cross-env SOLAR_ENV=test ./bin/solar relay --config ./lib/config/testnet --network testnet",
     "relay:testnet:live": "./bin/solar relay --config ./lib/config/testnet.live --network testnet",
     "forger": "./bin/solar forger",
     "forger:mainnet": "./bin/solar forger --config ./lib/config/mainnet --network mainnet",
     "forger:devnet": "./bin/solar forger --config ./lib/config/devnet --network devnet",
-    "forger:testnet": "cross-env SWIPECHAIN_ENV=test ./bin/solar forger --config ./lib/config/testnet --network testnet",
+    "forger:testnet": "cross-env SOLAR_ENV=test ./bin/solar forger --config ./lib/config/testnet --network testnet",
     "forger:testnet:live": "./bin/solar forger --config ./lib/config/testnet.live --network testnet",
     "snapshot": "./bin/solar snapshot",
     "snapshot:mainnet": "./bin/solar snapshot --config ./lib/config/mainnet --network mainnet",
     "snapshot:devnet": "./bin/solar snapshot --config ./lib/config/devnet --network devnet",
     "snapshot:testnet": "./bin/solar snapshot --config ./lib/config/testnet --network testnet",
     "snapshot:testnet:live": "./bin/solar snapshot --config ./lib/config/testnet.live --network testnet",
-    "full:testnet": "cross-env SWIPECHAIN_ENV=test ./bin/solar start --config ./lib/config/testnet --network testnet --network-start",
+    "full:testnet": "cross-env SOLAR_ENV=test ./bin/solar start --config ./lib/config/testnet --network testnet --network-start",
     "full:testnet:live": "./bin/solar start --config ./lib/config/testnet.live --network testnet --network-start",
-    "full:testnet:2tier:2": "cross-env SWIPECHAIN_ENV=test ./bin/solar start --config ./lib/config/testnet.2 --network testnet --network-start",
-    "full:testnet:2tier:1": "cross-env SWIPECHAIN_ENV=test ./bin/solar start --config ./lib/config/testnet.1 --network testnet --network-start",
-    "full:testnet:2tier": "cross-env SWIPECHAIN_ENV=test ./bin/solar start --config ./lib/config/testnet.1 --network testnet --network-start && ./bin/solar start --config ./lib/config/testnet.2 --network testnet --network-start",
+    "full:testnet:2tier:2": "cross-env SOLAR_ENV=test ./bin/solar start --config ./lib/config/testnet.2 --network testnet --network-start",
+    "full:testnet:2tier:1": "cross-env SOLAR_ENV=test ./bin/solar start --config ./lib/config/testnet.1 --network testnet --network-start",
+    "full:testnet:2tier": "cross-env SOLAR_ENV=test ./bin/solar start --config ./lib/config/testnet.1 --network testnet --network-start && ./bin/solar start --config ./lib/config/testnet.2 --network testnet --network-start",
     "lint": "eslint ./ --fix"
   },
 ```
@@ -219,11 +219,11 @@ We will also need to edit our snapshot commands, which we will use later on to j
     "truncate:mainnet": "./bin/snapshot truncate --config ../core/lib/config/mainnet --network mainnet",
     "truncate:devnet": "./bin/snapshot truncate --config ../core/lib/config/devnet --network devnet",
     "truncate:testnet": "./bin/snapshot truncate --config ../core/lib/config/testnet --network testnet",
-    "test": "cross-env SWIPECHAIN_ENV=test jest --runInBand --detectOpenHandles",
-    "test:coverage": "cross-env SWIPECHAIN_ENV=test jest --coverage --runInBand --detectOpenHandles",
-    "test:debug": "cross-env SWIPECHAIN_ENV=test node --inspect-brk ../../node_modules/.bin/jest --runInBand --watch",
-    "test:watch": "cross-env SWIPECHAIN_ENV=test jest --runInBand --watch",
-    "test:watch:all": "cross-env SWIPECHAIN_ENV=test jest --runInBand --watchAll",
+    "test": "cross-env SOLAR_ENV=test jest --runInBand --detectOpenHandles",
+    "test:coverage": "cross-env SOLAR_ENV=test jest --coverage --runInBand --detectOpenHandles",
+    "test:debug": "cross-env SOLAR_ENV=test node --inspect-brk ../../node_modules/.bin/jest --runInBand --watch",
+    "test:watch": "cross-env SOLAR_ENV=test jest --runInBand --watch",
+    "test:watch:all": "cross-env SOLAR_ENV=test jest --runInBand --watchAll",
     "lint": "eslint ./ --fix"
   },
 ```
