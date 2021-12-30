@@ -1,0 +1,3 @@
+# Introduction to Blockchain
+
+Although blockchain technology is not particularly complicated or brand new, some people struggle to understand the core concepts. This is mainly due to the distributed nature, wide variety of different technologies and the lack of formal courses on the subject. In this chapter, we will provide a beginner-friendly introduction to many different blockchain-related subjects.

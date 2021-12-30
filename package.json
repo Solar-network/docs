@@ -1,0 +1,58 @@
+{
+  "name": "@swipechain/docs",
+  "description": "Official documentation for the Swipechain",
+  "contributors": [
+    "Swipechain Community <community@swipechain.org>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "swipechain",
+    "blockchain",
+    "crypto",
+    "dpos",
+    "docs",
+    "api"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SwipeChain/swipechain-docs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SwipeChain/swipechain-docs/issues"
+  },
+  "homepage": "https://github.com/SwipeChain/swipechain-docs",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "lint": "eslint --ext .js,.vue -f ./node_modules/eslint-friendly-formatter docs/.vuepress",
+    "lint:fix": "eslint --ext .js,.vue -f ./node_modules/eslint-friendly-formatter docs/.vuepress --fix",
+    "titles": "markdown-title-case docs -r",
+    "titles:fix": "markdown-title-case docs -r --fix"
+  },
+  "devDependencies": {
+    "@dated/markdown-title-case": "^0.1.7",
+    "axios": "^0.19.0",
+    "eslint": "^6.0.0",
+    "eslint-config-standard": "^14.0.0",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^6.0.0",
+    "highlight.js": "^9.13.1",
+    "husky": "^4.0.0",
+    "lint-staged": "^9.0.0",
+    "nprogress": "^0.2.0",
+    "sweetalert": "^2.1.0",
+    "vue": "^2.5.21",
+    "vue-tabs-component": "^1.5.0",
+    "vuepress": "^1.0.0-alpha.44",
+    "vuepress-plugin-tabs": "^0.2.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}

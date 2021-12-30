@@ -1,0 +1,102 @@
+@require '~vuepress-plugin-tabs/dist/themes/default.styl'
+
+table {
+    display: table !important;
+    width: 100% !important;
+}
+
+.action-button {
+    background-color: #ef192d;
+    border-bottom: 1px solid #ef192d;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.2rem;
+    padding: .8rem 1.6rem;
+    transition: background-color .1s ease;
+}
+
+.tabs-component-panels {
+    background-color: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+.tabs-component-tab {
+    border: none !important;
+    border-bottom: 2px solid transparent !important;
+    border-radius: 0 !important;
+    text-transform: capitalize;
+}
+
+.tabs-component-tab-a {
+    color: #2c3e50 !important;
+}
+
+.tabs-component-tab-a:hover {
+    text-decoration: none !important;
+}
+
+.tabs-component-tab.is-active {
+    border-color: #f02b3e !important;
+}
+
+.custom-block.danger,
+.custom-block.tip,
+.custom-block.warning {
+  border-radius: 4px;
+}
+
+details {
+  background-color: #eee;
+  display: block;
+  position: relative;
+  border-radius: 4px;
+  margin: 1.6em 0;
+  padding: 1.6em;
+}
+
+details > figure:last-child,
+details > p:last-child,
+details > ul:last-child {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important; 
+}
+
+details > pre:last-child {
+  margin-bottom: 0 !important;
+}
+
+details:not([open]) summary::after {
+  content: "...";
+}
+
+details:not([open]) summary:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+summary {
+  cursor: pointer;
+  padding: 1.6em;
+  margin: -1.6em;
+  outline: none;
+}
+
+summary > h4 {
+  display: inline-block;
+  margin: 0;
+  margin-right: .4em;
+  word-wrap: normal;
+}
+
+tr:nth-child(2n-1) {
+  background-color: white;
+}
+
+tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
