@@ -19,7 +19,7 @@ Below you can read short summaries of each chapter and the topics you'll find wi
 This is our introduction to the world of blockchain and Solar's place within it.
 
 [_Blockchain_](/introduction/blockchain/) is a good place to begin if you have little prior experience with blockchain. It answers many common questions about what blockchain is, why it's useful, and how Solar helps make blockchain easier.
-The [_SWIPECHAIN_](/introduction/solar/) section highlights the philosophy behind the Solar blockchain, and how that compares against some of the sector's most popular projects (Bitcoin, Ethereum, etc.)
+The [_SOLAR_](/introduction/solar/) section highlights the philosophy behind the Solar blockchain, and how that compares against some of the sector's most popular projects (Bitcoin, Ethereum, etc.)
 
 ### [The Solar Guidebook](/guidebook/)
 
