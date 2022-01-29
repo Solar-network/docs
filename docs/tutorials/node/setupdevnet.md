@@ -176,7 +176,7 @@ Once installation of dependencies and Solar Core is finished you will need to se
    testnet
 ```
 
-Devnet is to play with Solar for the first time, select `devnet` and request DSXP coins in our [public Telegram](https://t.me/Solar) or [faucet] (https://faucet.solar.network/).
+Devnet is to play with Solar for the first time, select `devnet` and request DSXP coins in our [public Telegram](https://t.me/Solar) or [faucet] (https://t.me/dSXP_bot).
 
 After you made your selection you will need to confirm by pressing `y` and confirm with `enter`
 
@@ -200,8 +200,8 @@ You can input any custom database credentials you want to use or use the one pro
 
 ```bash
 Enter the database username: solar
-Enter the database password: solar
-Enter the database name: solar
+Enter the database password: password
+Enter the database name: solar_devnet
 ```
 
 This will create PostgreSQL role and database to be used for storing blockchain data. 
