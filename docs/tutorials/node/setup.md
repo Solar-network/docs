@@ -18,15 +18,15 @@ The setup is not suitable as a Delegate Node, but can function as a Relay Node.
 
 - 1 Dedicated CPU Core
 - 4GB Ram
-- Linux
-- 20GB Free HD Space
+- Ubuntu 18.04 or 20.04 LTS
+- 20GB SSD (or NVMe)
 
 ### Recommended Specifications
 
-- 2 CPU Cores+
+- 2 Dedicated CPU Cores+
 - 8GB Ram+
-- Ubuntu 16.04
-- 40GB+ SSD
+- Ubuntu 18.04 or 20.04 LTS
+- 40GB+ SSD (or NVMe)
 
 ### Prerequisite Setup
 
@@ -201,8 +201,8 @@ You can input any custom database credentials you want to use or use the one pro
 
 ```bash
 Enter the database username: solar
-Enter the database password: solar
-Enter the database name: solar
+Enter the database password: password
+Enter the database name: solar_mainnet
 ```
 
 This will create PostgreSQL role and database to be used for storing blockchain data. That's it, you are all set!
