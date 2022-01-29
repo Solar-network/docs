@@ -224,7 +224,7 @@ Port knocking is a technique used which obscures the port you're connecting on t
 
 #### Disable UFW
 
-By default, UFW comes enabled with Ubuntu 16.04. If you get `ufw command not found` then run.
+By default, UFW comes enabled with Ubuntu 18.04. If you get `ufw command not found` then run.
 
 ```bash
 sudo apt-get install ufw
@@ -241,13 +241,13 @@ sudo ufw default deny incoming
 
 #### Enable Node Port
 
-Depending which network this node is for will determine what port you open here. For mainnet use `4001`, devnet use `4002`, and testnet use `4000` and public API which is by default located on port `4003`.
+Depending which network this node is for will determine what port you open here. For mainnet use `6001`, devnet use `6002`, and testnet use `6000` and public API which is by default located on port `6003`.
 
 We don't want to open any more ports than required to operate securely so we will open P2P port depending on the network (in our example for mainnet) and public API port.
 
 ```bash
-sudo ufw allow 4001/tcp
-sudo ufw allow 4003/tcp
+sudo ufw allow 6001/tcp
+sudo ufw allow 6003/tcp
 ```
 
 #### Install Knockd on Server
@@ -349,7 +349,7 @@ Install a client for your operating system to make knocking easier. There are ev
 
 After knocking your port will remain open until you send the closing knock sequence.
 
-##### Ubuntu 16.04
+##### Ubuntu 18.04
 
 ```bash
 sudo apt-get install knockd
@@ -403,10 +403,10 @@ Status: active
 To                         Action      From
 --                         ------      ----
 2086/tcp                   ALLOW       Anywhere
-4002/tcp                   ALLOW       Anywhere
+6002/tcp                   ALLOW       Anywhere
 55555/tcp                  ALLOW       Anywhere
 2086/tcp (v6)              ALLOW       Anywhere (v6)
-4002/tcp (v6)              ALLOW       Anywhere (v6)
+6002/tcp (v6)              ALLOW       Anywhere (v6)
 55555/tcp (v6)             ALLOW       Anywhere (v6)
 ```
 
@@ -532,7 +532,7 @@ location / {
     proxy_set_header X-Real-IP $remote_addr;
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-NginX-Proxy true;
-    proxy_pass http://localhost:4001/;
+    proxy_pass http://localhost:6001/;
     proxy_ssl_session_reuse off;
     proxy_set_header Host $http_host;
     proxy_cache_bypass $http_upgrade;
