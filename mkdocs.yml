@@ -90,13 +90,6 @@ theme:
 plugins:
   - swagger
   - search
-  - redirects:
-      redirect_maps:
-        changelog/insiders.md: insiders/changelog.md
-        reference/meta-tags.md: reference/index.md
-        reference/variables.md: https://mkdocs-macros-plugin.readthedocs.io/
-        sponsorship.md: insiders/index.md
-        upgrading.md: upgrade.md
   - minify:
       minify_html: true
 
@@ -159,13 +152,18 @@ nav:
     - index.md
 #  - Core:
 #    - core/intro.md
+#  - SLP:
+#    - slp/intro.md
+#  - API:
+#    - api/intro.md
+#  - Wallets:
+#    - wallets/intro.md
   - Exchanges:
     - Introduction:
       - exchanges/intro.md
     - Core Node Introduction:
       - exchanges/node-installation/hardware-requirements.md
       - exchanges/node-installation/baremetal-instructions.md
-      - exchanges/node-installation/docker-installation.md
     - JSON-RPC:
       - exchanges/json-rpc/getting-started.md
       - Endpoints: 

@@ -20,7 +20,7 @@ yarn global add @arkecosystem/exchange-json-rpc-cli
 
 ```bash
 $ exchange-json-rpc
-A JSON-RPC 2.0 specification compliant server for Exchanges to interact with the ARK Blockchain.
+A JSON-RPC 2.0 specification compliant server for Exchanges to interact with the Solar Blockchain.
 
 VERSION
   @arkecosystem/exchange-json-rpc-cli/1.0.0 darwin-x64 node-v10.16.0
@@ -54,7 +54,7 @@ exchange-json-rpc start
 | :------------------- | :--------------------------------------------------------------------------- | :------------------------- | :------- |
 | `--[no-]allowRemote` | allow remote connections which are filtered by a whitelist                   | n/a                        | No       |
 | `--network=`         | the name of the network that should be used                                  | mainnet                    | No       |
-| `--token=`           | the name of the token that should be used                                    | ark                        | No       |
+| `--token=`           | the name of the token that should be used                                    | sxp                        | No       |
 | `--host=`            | the host that should be used to expose the RPC                               | 0.0.0.0                    | No       |
 | `--port=`            | the port that should be used to expose the RPC                               | 8008                       | No       |
 | `--peer=`            | the peer you want to use for communication, defaults to random network peers | n/a                        | No       |
@@ -92,7 +92,7 @@ exchange-json-rpc run
 | :------------------- | :--------------------------------------------------------------------------- | :------------------------- | :------- |
 | `--[no-]allowRemote` | allow remote connections which are filtered by a whitelist                   | n/a                        | No       |
 | `--network=`         | the name of the network that should be used                                  | mainnet                    | No       |
-| `--token=`           | the name of the token that should be used                                    | ark                        | No       |
+| `--token=`           | the name of the token that should be used                                    | sxp                        | No       |
 | `--host=`            | the host that should be used to expose the RPC                               | 0.0.0.0                    | No       |
 | `--port=`            | the port that should be used to expose the RPC                               | 8008                       | No       |
 | `--peer=`            | the peer you want to use for communication, defaults to random network peers | n/a                        | No       |
@@ -129,4 +129,4 @@ exchange-json-rpc log
 
 ## Security
 
-If you discover a security vulnerability within this package, please send an e-mail to [security@ark.io](mailto:security@ark.io). All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this package, please send an e-mail to [security@solar.network](mailto:security@solar.network). All security vulnerabilities will be promptly addressed.

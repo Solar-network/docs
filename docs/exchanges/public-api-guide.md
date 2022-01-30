@@ -15,23 +15,23 @@ Connecting to the PUBLIC API is done via the [Crypto and Client SDKs](/docs/sdk/
 
 At a surface level, the two SDKs are separated by their functions and intended use cases:
 
-* The Crypto SDK provides the cryptographic functions necessary to authenticate and validate ARK transactions.
-* The Client SDK provides wrapper functions to unify and streamline API calls between your application and the ARK blockchain.
+* The Crypto SDK provides the cryptographic functions necessary to authenticate and validate Solar transactions.
+* The Client SDK provides wrapper functions to unify and streamline API calls between your application and the Solar blockchain.
 
-Put another way, the Crypto SDK structures your data in a format that all ARK nodes can understand, while the Client SDK handles the actual communication between your application and an ARK node. Where the Crypto SDK is internal, the Client SDK is external, as the below diagram illustrates:
+Put another way, the Crypto SDK structures your data in a format that all Solar nodes can understand, while the Client SDK handles the actual communication between your application and an Solar node. Where the Crypto SDK is internal, the Client SDK is external, as the below diagram illustrates:
 
 ![clientCrypto](/storage/docs/docs/exchanges/assets/client-crypto.png)
 
-> Note that the [Public API](https://github.com/ArkEcosystem/gitbooks-exchange/tree/8af5049dc3d84a5f24ac80597529f2d656c651df/api/public/README.md) is only available after a node has fully synced. This ensures your data on the blockchain is up to date.
+> Note that the [Public API](https://github.com/solar-network/gitbooks-exchange/tree/8af5049dc3d84a5f24ac80597529f2d656c651df/api/public/README.md) is only available after a node has fully synced. This ensures your data on the blockchain is up to date.
 
 ## Setup
 
 These quick actions will all assume you've loaded a Client instance with the IP address of your node and the API version you're requesting.
 
-> ARK Node (v1) has been deprecated. Some references to V1 client constructors may remain for legacy purposes. However, no current clients require you to specify the API Version (defaults to v2).
+> Solar Node (v1) has been deprecated. Some references to V1 client constructors may remain for legacy purposes. However, no current clients require you to specify the API Version (defaults to v2).
 
 ```javascript
-const Client = require("@arkecosystem/client");
+const Client = require("@solar/client");
 const exchangeClient = new Client("YOUR.NODE.IP", 2);
 ```
 
@@ -47,23 +47,23 @@ Connection<Two> connection = new Connection(map);
 package main
 
 import (
-  ark "github.com/ArkEcosystem/go-client/client"
+  sxp "github.com/solar/go-client/client"
   "net/url"
   )
 
 func main() {
-  client := ark.NewClient(nil)
+  client := sxp.NewClient(nil)
   client.BaseURL, _ = url.Parse("http://{NODE_IP}:{NODE_HOST}/api")
 ```
 
 ```python
 from client import ArkClient
-client = ArkClient('http://127.0.0.1:4003/api')
+client = ArkClient('http://127.0.0.1:6003/api')
 ```
 
 ## Check Wallet Balance
 
-Checking a wallet balance involves using the `wallets` resource to `GET` the wallet corresponding to a given ARK address.
+Checking a wallet balance involves using the `wallets` resource to `GET` the wallet corresponding to a given Solar address.
 
 ```javascript
 const walletAddress = "ARyNwFj7nQUCip5gYt4gSWG6F8evL93eBL";
@@ -175,9 +175,9 @@ exchangeClient
 ```go
 func main() {
   ...
-  responseStruct, _, err := client.Blocks.Search(context.TODO(), ark.BlocksSearchRequest{
-    Height: ark.FromTo{From: 720, To: 735},
-    TotalFee: ark.FromTo{From: 0, To: 2000},
+  responseStruct, _, err := client.Blocks.Search(context.TODO(), sxp.BlocksSearchRequest{
+    Height: sxp.FromTo{From: 720, To: 735},
+    TotalFee: sxp.FromTo{From: 0, To: 2000},
   })
   if err != nil {
     log.Panic(err)
@@ -195,18 +195,18 @@ pprint(client.blocks.search({
 
 ## Create and Broadcast Transactions
 
-To create transactions, make use of the **transactionBuilder** module of `@arkecosystem/crypto`. First, install the package from npm or your language's equivalent:
+To create transactions, make use of the **transactionBuilder** module of `@solar/crypto`. First, install the package from npm or your language's equivalent:
 
 ```bash
-yarn add @arkecosystem/crypto
+yarn add @solar/crypto
 ```
 
 ```bash
-go get -u github.com/arkecosystem/go-crypto/crypto
+go get -u github.com/solar/go-crypto/crypto
 ```
 
 ```bash
-pip install arkecosystem-crypto
+pip install solar-crypto
 ```
 
 The `crypto` package functionality we'll use here is the transactionBuilder, which provides a series of "chainable" methods that can be called, one after another, to produce a transaction object. These methods create and define your transaction: its type, its amount in arktoshi, its signature, and more.
@@ -218,7 +218,7 @@ After making one or more of these transaction objects, you can combine them into
 With all the steps together, here is an example of how to send a transaction for approval:
 
 ```javascript
-const crypto = require("@arkecosystem/crypto");
+const crypto = require("@solar/crypto");
 const transactionBuilder = crypto.transactionBuilder;
 
 const transaction = transactionBuilder
@@ -249,7 +249,7 @@ exchangeClient
 
 ```go
 ...
-import ark_crypto "github.com/arkecosystem/go-crypto/crypto"
+import ark_crypto "github.com/solar/go-crypto/crypto"
 
 func main() {
   ...
@@ -283,7 +283,7 @@ pprint(client.transactions.create([tx]))
 There are a few things worth noticing about the above code. Firstly, the code assumes that you have declared two variables already:
 
 1. `passphrase` - the passphrase of the sending account, used to sign the transaction. This should come from somewhere secure, such as a `.env` file.
-2. `recipientId` - the ARK address of the receiving account. Should be provided by the exchange user when submitting withdrawal requests.
+2. `recipientId` - the Solar address of the receiving account. Should be provided by the exchange user when submitting withdrawal requests.
 
 Second, when sending your request using the `exchangeClient`, ensure that the value of `transactions` is an array, even if you have only one transaction object.
 
@@ -419,4 +419,4 @@ By running this code, you'd see the output in your console resembling the follow
 }
 ```
 
-If `synced` is true, your node is operating as expected and fully synced with the ARK network. Otherwise, use the `blocksCount` key to get an estimation of how long your node will take to sync.
+If `synced` is true, your node is operating as expected and fully synced with the Solar network. Otherwise, use the `blocksCount` key to get an estimation of how long your node will take to sync.

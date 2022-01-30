@@ -4,17 +4,17 @@ title: Configuring Rate Limits
 
 # Configuring Rate Limits
 
-ARK Core is mainly used in the context of public services, providing desktop wallets with the necessary endpoints to function. Since they serve anonymous users and to protect against DDoS attacks, ARK Core nodes have strict rate limits. Enterprise users (such as exchanges) might encounter a problem creating large batches of transactions and broadcasting them. The rate limit can be configured in multiple ways to solve these problems.
+Solar Core is mainly used in the context of public services, providing desktop wallets with the necessary endpoints to function. Since they serve anonymous users and to protect against DDoS attacks, Solar Core nodes have strict rate limits. Enterprise users (such as exchanges) might encounter a problem creating large batches of transactions and broadcasting them. The rate limit can be configured in multiple ways to solve these problems.
 
 ## Exceeding the Rate Limit <a id="exceeding-the-rate-limit"></a>
 
-By default, rate limits are enabled on ARK Core nodes. When the rate limit is exceeded; a `429` HTTP status is returned.
+By default, rate limits are enabled on Solar Core nodes. When the rate limit is exceeded; a `429` HTTP status is returned.
 
 ## Configuring the Rate Limit <a id="configuring-the-rate-limit"></a>
 
-You can fine tune or completely disable the node's rate limit by editing the .env file found at `~/.config/ark-core/{network}/.env`. Find most important parameters below:
+You can fine tune or completely disable the node's rate limit by editing the .env file found at `~/.config/solar-core/{network}/.env`. Find most important parameters below:
 
-### file: ~/.config/ark-core/{network}/.env <a id="file-config-ark-core-network-env"></a>
+### file: ~/.config/solar-core/{network}/.env <a id="file-config-solar-core-network-env"></a>
 
 ```javascript
 CORE_API_RATE_LIMIT_DISABLED=true

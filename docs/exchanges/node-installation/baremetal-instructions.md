@@ -21,9 +21,9 @@ sudo apt-get update && sudo apt-get upgrade
 It is best to create a specific ARK-related user, which can later own the required databases as well.
 
 ```bash
-# replace 'your_username' with the username of your choosing
-sudo adduser your_username
-sudo usermod -aG sudo your_username
+# add 'solar' user
+sudo adduser solar
+sudo usermod -aG sudo solar
 ```
 
 ### 3. Switch to the New User
@@ -31,32 +31,32 @@ sudo usermod -aG sudo your_username
 Switch to the new user account and go to the base directory.
 
 ```bash
-# replace 'your_username' with your chosen username
-sudo su - your_username
+# change to solar user and solar directory
+sudo su - solar
 cd ~
 ```
 
-### 4. Install Dependencies and ARK Core
+### 4. Install Dependencies and Solar Core
 
-We will use ARK installer script that will install all of the necessary dependencies, ARK Core onto your server and publish configuration files for it. To install essentials run this command.
+We will use Solar installer script that will install all of the necessary dependencies, Solar Core onto your server and publish configuration files for it. To install essentials run this command.
 
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/ArkEcosystem/core/master/install.sh)
+bash <(curl -s https://raw.githubusercontent.com/solar-network/core/main/install.sh)
 ```
 
 You will be asked to input your current users password for sudo privileges. Write or paste it and press enter to start installation process.
 
 Process might take a while, don't interrupt it and wait for it to finish.
 
-### 5. Selecting ARK Core Network
+### 5. Selecting Solar Core Network
 
-Once installation of dependencies and ARK Core is finished you will need to select on which network you wish to operate, since we are setting `mainnet` node select it. This can be achieved by pressing `up` or `down` arrow keys and confirming selection with `enter`.
+Once installation of dependencies and Solar Core is finished you will need to select on which network you wish to operate, since we are setting `mainnet` node select it. This can be achieved by pressing `up` or `down` arrow keys and confirming selection with `enter`.
 
 After you made your selection you will need to confirm by pressing `y` and confirm with `enter`.
 
-### 6. Configuring ARK Core Database
+### 6. Configuring Solar Core Database
 
-Last step of the ARK Core essential configuration is to configure database parameters. You will be presented with a prompt:
+Last step of the Solar Core essential configuration is to configure database parameters. You will be presented with a prompt:
 
 ```bash
 Would you like to configure the database? [y/N]:
@@ -67,37 +67,37 @@ Press `y` and confirm with `enter`.
 You can input any custom database credentials you want to use or use the one provided below:
 
 ```bash
-Enter the database username: ark
+Enter the database username: solar
 Enter the database password: password
-Enter the database name: ark_mainnet
+Enter the database name: solar_mainnet
 ```
 
 This will create PostgreSQL role and database to be used for storing blockchain data.
 
-### 7. Starting ARK Relay Process
+### 7. Starting Solar Relay Process
 
-To start ARK relay process and with it synchronization process with ARK blockchain we need to start relay process with our integrated CLI:
+To start Solar relay process and with it synchronization process with Solar blockchain we need to start relay process with our integrated CLI:
 
 ```bash
-ark relay:start
+solar relay:start
 ```
 
 If the process has started you will get a message:
 
 ```bash
-Starting ark-relay... done
+Starting solar-relay... done
 ```
 
 <x-alert type="info">
-All of the CLI commands with a description can be viewed in our [Core CLI](/docs/core/deployment/cli) documentation or by executing the `ark help`command.
+All of the CLI commands with a description can be viewed in our [Core CLI](/docs/core/deployment/cli) documentation or by executing the `solar help`command.
 </x-alert>
 
 ### 8. Checking to See if Everything Is Working
 
-Now we want to see if the ARK relay process has started the synchronization process you can do that by running one of these two commands
+Now we want to see if the Solar relay process has started the synchronization process you can do that by running one of these two commands
 
 ```bash
-ark relay:log
+solar relay:log
 ```
 
 or

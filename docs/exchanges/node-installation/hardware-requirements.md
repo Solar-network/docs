@@ -4,7 +4,7 @@ title: Hardware Requirements
 
 # Hardware Requirements
 
-A Relay Node is a full node in the ARK network; it maintains a complete copy of the ledger (blockchain). These nodes serve as Public API endpoint, use an internal service discovery mechanism to locate other nodes and keep each other in sync.
+A Relay Node is a full node in the Solar network; it maintains a complete copy of the ledger (blockchain). These nodes serve as Public API endpoint, use an internal service discovery mechanism to locate other nodes and keep each other in sync.
 
 ## Recommended Hardware Requirements
 
@@ -37,6 +37,6 @@ ARK Nodes execute many query intensive operations. The most cost-effective appro
 
 | Service    | Port | Required | Enabled by default |                           Documentation                           |
 | :--------- | :--: | :------: | :----------------: | :---------------------------------------------------------------: |
-| p2p        | 4001 |     ✅    |          ✅         |     [reference](/docs/core/installation/variables#corep2pport)    |
-| public API | 4003 |     ❌    |          ✅         |    [reference](https://ark.dev/docs/exchanges/public-api-guide)   |
-| webhook    | 4004 |     ❌    |          ❌         | [reference](https://ark.dev/docs/api/webhook-api/getting-started) |
+| p2p        | 6001 |     ✅    |          ✅         |     [reference](https://docs.solar.network/core/installation/variables#corep2pport)    |
+| public API | 6003 |     ❌    |          ✅         |    [reference](https://docs.solar.network/exchanges/public-api-guide)   |
+| webhook    | 6004 |     ❌    |          ❌         | [reference](https://docs.solar.network/api/webhook-api/getting-started) |
