@@ -1,0 +1,18 @@
+{
+  "git.ignoreLimitWarning": true,
+  "search.exclude": {
+    "**/material": true,
+    "**/node_modules": true,
+    "**/package-lock.json": true
+  },
+  "search.followSymlinks": false,
+  "stylelint.validate": ["css", "scss"],
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "yaml.schemas": {
+    "docs/schema.json": "mkdocs.yml"
+  },
+  "yaml.customTags": [
+    "!ENV scalar",
+    "!ENV sequence"
+  ]
+}
