@@ -6,6 +6,12 @@
 </p>
 
 
+## Requirements
+
+- Node 14.17.0
+- Python
+
+
 ## Quick start
 
 Documentation can be installed with `pip`:
@@ -16,12 +22,22 @@ pip install mkdocs-material
 mkdocs serve
 ```
 
+Push to production
+
+``` sh
+mkdocs build
+mkdocs gh-deploy --force
+```
 
 ## License
 
 **MIT License**
 
-Copyright (c) 2016-2022 Martin Donath
+Copyright (c) 2022 Solar (solar.network)
+
+Credits | ArkEcosystem (ark.io)
+
+Author | Martin Donath - mkdocs - mkdocs material
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to
