@@ -2,72 +2,72 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.solar.network/</loc>
-         <lastmod>2022-01-30</lastmod>
+         <lastmod>2022-02-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.network/license/</loc>
-         <lastmod>2022-01-30</lastmod>
+         <lastmod>2022-02-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.network/core/intro/</loc>
-         <lastmod>2022-01-30</lastmod>
+         <lastmod>2022-02-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.network/exchanges/configuring-rate-limits/</loc>
-         <lastmod>2022-01-30</lastmod>
+         <lastmod>2022-02-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.network/exchanges/intro/</loc>
-         <lastmod>2022-01-30</lastmod>
+         <lastmod>2022-02-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.network/exchanges/public-api-guide/</loc>
-         <lastmod>2022-01-30</lastmod>
+         <lastmod>2022-02-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.network/exchanges/json-rpc/examples/</loc>
-         <lastmod>2022-01-30</lastmod>
+         <lastmod>2022-02-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.network/exchanges/json-rpc/getting-started/</loc>
-         <lastmod>2022-01-30</lastmod>
+         <lastmod>2022-02-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.network/exchanges/json-rpc/endpoints/blocks/</loc>
-         <lastmod>2022-01-30</lastmod>
+         <lastmod>2022-02-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.network/exchanges/json-rpc/endpoints/intro/</loc>
-         <lastmod>2022-01-30</lastmod>
+         <lastmod>2022-02-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.network/exchanges/json-rpc/endpoints/transactions/</loc>
-         <lastmod>2022-01-30</lastmod>
+         <lastmod>2022-02-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.network/exchanges/json-rpc/endpoints/wallets/</loc>
-         <lastmod>2022-01-30</lastmod>
+         <lastmod>2022-02-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.network/exchanges/node-installation/baremetal-instructions/</loc>
-         <lastmod>2022-01-30</lastmod>
+         <lastmod>2022-02-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.network/exchanges/node-installation/hardware-requirements/</loc>
-         <lastmod>2022-01-30</lastmod>
+         <lastmod>2022-02-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
