@@ -1,7 +1,7 @@
 ---
 title: Relay node installation instructions (Bare Metal or VM)
 ---
-
+(Only Devnet is currently available)
 # BareMetal or VM Install (APN | Mainnet)
 
 ## Installation Using the Official `Installation Script`
@@ -50,7 +50,7 @@ Process might take a while, don't interrupt it and wait for it to finish.
 
 ### 5. Selecting Solar Core Network
 
-Once installation of dependencies and Solar Core is finished you will need to select on which network you wish to operate, since we are setting `mainnet` node select it. This can be achieved by pressing `up` or `down` arrow keys and confirming selection with `enter`.
+Once installation of dependencies and Solar Core is finished you will need to select on which network you wish to operate, since we are setting `mainnet` node select it (Only Devnet is currently available). This can be achieved by pressing `up` or `down` arrow keys and confirming selection with `enter`.
 
 After you made your selection you will need to confirm by pressing `y` and confirm with `enter`.
 
@@ -69,7 +69,7 @@ You can input any custom database credentials you want to use or use the one pro
 ```bash
 Enter the database username: solar
 Enter the database password: password
-Enter the database name: solar_mainnet
+Enter the database name: solar_mainnet # or solar_devnet
 ```
 
 This will create PostgreSQL role and database to be used for storing blockchain data.
