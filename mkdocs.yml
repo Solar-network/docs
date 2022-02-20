@@ -257,3 +257,19 @@ nav:
         - api/manager-api/endpoints/snapshots.md
         - api/manager-api/endpoints/watcher.md
         - api/manager-api/endpoints/plugin.md
+  - SwipeSwap:
+    - swipeswap/introduction.md
+    - Swap / Migration:
+      - Users:
+        - swipeswap/users/getting-started.md
+      - Exchanges:
+        - swipeswap/exchanges/getting-started.md
+    - Technical Details:
+      - swipeswap/technical-details/introduction.md
+      - swipeswap/technical-details/security.md
+      - BEP20:
+        - swipeswap/technical-details/bep20/introduction.md
+      - ERC20:
+        - swipeswap/technical-details/erc20/introduction.md
+      - Mainnet:
+        - swipeswap/technical-details/mainnet/introduction.md

@@ -35,7 +35,7 @@ mkdocs gh-deploy --force
 
 Copyright (c) 2022 Solar (solar.network)
 
-Credits | ArkEcosystem (solar.io)
+Credits | ArkEcosystem (ark.io)
 
 Author | Martin Donath - mkdocs - mkdocs material
 
