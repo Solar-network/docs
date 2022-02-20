@@ -6,7 +6,7 @@ title: Transaction Types - Vote / Unvote
 
 A key feature of the SXP DPoS model is that each address can vote for one delegate of their choosing to secure the network. A vote and unvote transaction type is therefore necessary to enable this functionality. Once an address votes for a delegate, funds can enter and leave the address as needed, and vote weight adjusts automatically. Voting does not send funds to the delegate’s SXP address in question - it only assigns vote weight
 
-Holders of SXP vote through their wallets for delegates who secure the network, insert blocks into the ledger, and create new SXP. The top 51 vote earners are named elected forging delegates. Number of delegates is related to [DPOS mechanism configuration](https://whitepaper.solar.io/public-network#4-2-consensus-mechanism).
+Holders of SXP vote through their wallets for delegates who secure the network, insert blocks into the ledger, and create new SXP. The top 53 vote earners are named elected forging delegates. Number of delegates is related to [DPOS mechanism configuration](https://whitepaper.solar.io/public-network#4-2-consensus-mechanism).
 
 | References |  |
 | :--- | :--- |
