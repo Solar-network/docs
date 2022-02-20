@@ -177,7 +177,7 @@ Enter the database name: <network_name> # your chosen network name
 ```
 
 <x-alert type="warning">
-Replace `<network_name>` with the appropriate custom or pre-defined network name (e.g. '**ark_mainnet**', '**ark_devnet**', '**ark_testnet**').
+Replace `<network_name>` with the appropriate custom or pre-defined network name (e.g. '**sxp_mainnet**', '**sxp_devnet**', '**sxp_testnet**').
 </x-alert>
 
 This will create a PostgreSQL role and database to be used for storing blockchain data. That’s it, you are all set!

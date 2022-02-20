@@ -147,8 +147,8 @@ If you don't want to install and run docker on your local computer you can still
 ```bash
 sudo apt-get install postgresql postgresql-contrib -y
 sudo -i -u postgres psql -c "CREATE USER solar  WITH PASSWORD 'password' CREATEDB;"
-sudo -i -u postgres psql -c "CREATE DATABASE ark_testnet WITH OWNER solar;"
-sudo -i -u postgres psql -c "CREATE DATABASE ark_devnet WITH OWNER solar;"
+sudo -i -u postgres psql -c "CREATE DATABASE sxp_testnet WITH OWNER solar;"
+sudo -i -u postgres psql -c "CREATE DATABASE sxp_devnet WITH OWNER solar;"
 ```
 
 The commands above install PostgreSQL database locally and create databases for running testnet and devnet networks with user `solar` as the database owner. If you have skipped the Step 1: User setup, you have to change `solar` user to your development username, usually the logged in username.

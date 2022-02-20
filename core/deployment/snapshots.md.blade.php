@@ -27,7 +27,7 @@ solar snapshot:dump
 This will start up the snapshot process. Don’t interrupt it, as it might take a while, depending on the size of the blockchain. You’ll see a message, something along these lines, as time goes on:
 
 ```bash
-[2021-06-29 08:11:28.398] INFO : Connecting to database: ark_mainnet
+[2021-06-29 08:11:28.398] INFO : Connecting to database: sxp_mainnet
 [2021-06-29 08:11:28.469] DEBUG: Connection established.
 [2021-06-29 08:11:28.473] INFO : Running DUMP for network: mainnet
 [2021-06-29 08:11:28.474] INFO : Start counting blocks, rounds and transactions
@@ -89,7 +89,7 @@ solar snapshot:restore --blocks=1-153
 You will see a message similar to this. It will take some time, so leave it running:
 
 ```bash
-[2021-06-29 08:26:19.515] INFO : Connecting to database: ark_testnet
+[2021-06-29 08:26:19.515] INFO : Connecting to database: sxp_testnet
 [2021-06-29 08:26:19.576] DEBUG: Connection established.
 [2021-06-29 08:26:19.582] INFO : Running RESTORE for network: testnet
 ⠸ Blocks: 100.00 % Transactions: 100.00 % Rounds: 100.00 %
@@ -137,7 +137,7 @@ solar snapshot:rollback --height=7738000
 You’ll see a message similar to this:
 
 ```bash
-[2021-06-29 08:41:03.467] INFO : Connecting to database: ark_testnet
+[2021-06-29 08:41:03.467] INFO : Connecting to database: sxp_testnet
 [2021-06-29 08:41:03.571] DEBUG: Connection established.
 [2021-06-29 08:41:03.575] INFO : Running ROLLBACK
 [2021-06-29 08:41:03.666] INFO : Last block height is: 7,740,000
@@ -171,7 +171,7 @@ solar snapshot:rollback --number=2000
 You’ll see a message similar to this:
 
 ```bash
-[2021-06-29 08:41:03.467] INFO : Connecting to database: ark_testnet
+[2021-06-29 08:41:03.467] INFO : Connecting to database: sxp_testnet
 [2021-06-29 08:41:03.571] DEBUG: Connection established.
 [2021-06-29 08:41:03.575] INFO : Running ROLLBACK
 [2021-06-29 08:41:03.666] INFO : Last block height is: 7,740,000

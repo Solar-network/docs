@@ -173,7 +173,7 @@ Press `y` and confirm with `enter`.
 Input the database credentials of your choosing.
 
 <x-alert type="warning">
-Replace `<network_name>` with the appropriate custom or pre-defined network name (e.g. '**ark_mainnet**', '**ark_devnet**', '**ark_testnet**').
+Replace `<network_name>` with the appropriate custom or pre-defined network name (e.g. '**sxp_mainnet**', '**sxp_devnet**', '**sxp_testnet**').
 </x-alert>
 
 ```bash

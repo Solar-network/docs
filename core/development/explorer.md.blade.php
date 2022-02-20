@@ -45,7 +45,7 @@ For our simple task of viewing, browsing and searching the local Testnet blockch
 yarn serve:testnet
 ```
 
-This command will start the Explorer in dev mode and it will search for a localhost core node, that should be running on `127.0.0.1:4003` by default.
+This command will start the Explorer in dev mode and it will search for a localhost core node, that should be running on `127.0.0.1:6003` by default.
 
 After running `yarn serve:testnet` command, you should see the following:
 

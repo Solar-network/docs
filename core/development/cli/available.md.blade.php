@@ -76,7 +76,7 @@ solar config:database
 #### Examples
 
 ```bash
-solar config:database --host=localhost --port=5432 --database=ark_mainnet --username=solar --password=password
+solar config:database --host=localhost --port=5432 --database=sxp_mainnet --username=solar --password=password
 ```
 
 ### config:forger

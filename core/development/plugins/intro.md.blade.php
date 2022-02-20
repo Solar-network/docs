@@ -32,7 +32,7 @@ When Core starts it will look at the `app.json` configuration for a key called `
                     "connection": {
                         "host": "127.0.0.1",
                         "port": 5432,
-                        "database": "ark_testnet",
+                        "database": "sxp_testnet",
                         "user": "solar",
                         "password": "password",
                     },

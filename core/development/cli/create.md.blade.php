@@ -46,7 +46,7 @@ export class Command extends Commands.Command {
     public configure(): void {
         this.definition
             .setFlag("proto", "Choose one of the available protocols (http|tcp|tls).", Joi.string().default("http"))
-            .setFlag("addr", "Port or network address.", Joi.string().default(4003))
+            .setFlag("addr", "Port or network address.", Joi.string().default(6003))
             .setFlag("auth", "HTTP basic authentication for tunnel.", Joi.string())
             .setFlag("subdomain", "Reserved tunnel name https://core.ngrok.io.", Joi.string())
             .setFlag("authtoken", "Your authtoken from ngrok.com.", Joi.string())

@@ -61,7 +61,7 @@ Send your new transaction type payload to the local blockchain node with the fol
 
 ```bash
 curl --request POST \
-    --url http://127.0.0.1:4003/api/v2/transactions \
+    --url http://127.0.0.1:6003/api/v2/transactions \
     --header 'content-type: application/json' \
     --data '    {
                     "transactions":

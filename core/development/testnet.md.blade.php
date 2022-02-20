@@ -33,8 +33,8 @@ yarn run v1.22.10
 $ cross-env CORE_PATH_CONFIG=./bin/config/testnet yarn solar core:run --networkStart --env=test
 $ node ./bin/run core:run --networkStart --env=test
 The jemalloc library was not found on your system. It is recommended to install it for better memory management. Falling back to the system default...
-[2021-07-07 13:42:17.512] INFO : Connecting to database: ark_testnet
-[2021-07-07 13:42:18.109] INFO : P2P Server started at http://127.0.0.1:4000
+[2021-07-07 13:42:17.512] INFO : Connecting to database: sxp_testnet
+[2021-07-07 13:42:18.109] INFO : P2P Server started at http://127.0.0.1:6000
 [2021-07-07 13:42:18.110] INFO : Starting Blockchain Manager
 [2021-07-07 13:42:18.115] INFO : Verifying database integrity
 [2021-07-07 13:42:18.149] INFO : Verified database integrity
@@ -50,14 +50,14 @@ This means that you core node is now running and simulating a blockchain on your
 
 With our testnet up and running, the first thing we need to do is connect to it. All interactions between SXP Nodes and the outside world happen through the Public API, which is a [REST API facilitating different](/docs/api/) actions on the blockchain.
 
-It is possible to interact with a node directly through HTTP without using any programming language at all. By default, the Public API for testnet opens a connection on your local machine at `http://0.0.0.0:4003/api`. We can check out newly forged [blocks](http://0.0.0.0:4003/api/blocks) in our browser with a running testnet. You should see a response showing you all the (empty) blocks your testnet forgers have recently created.
+It is possible to interact with a node directly through HTTP without using any programming language at all. By default, the Public API for testnet opens a connection on your local machine at `http://0.0.0.0:6003/api`. We can check out newly forged [blocks](http://0.0.0.0:6003/api/blocks) in our browser with a running testnet. You should see a response showing you all the (empty) blocks your testnet forgers have recently created.
 
 Let's try to retrieve the latest block and supply by calling  the [GET api/blockchain](/docs/api/public-rest-api/endpoints/blockchain/) endpoint with `curl`.  Run the following request from console via `curl` command or via browser.
 
 **Request:**
 
 ```curl
-curl http://127.0.0.1:4003/api/blockchain
+curl http://127.0.0.1:6003/api/blockchain
 ```
 
 We should get the following **response**:
