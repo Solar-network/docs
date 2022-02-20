@@ -18,7 +18,7 @@ sudo apt-get update && sudo apt-get upgrade
 
 ### 2. Add a New User and Add to the Sudo Group
 
-It is best to create a specific ARK-related user, which can later own the required databases as well.
+It is best to create a specific SXP-related user, which can later own the required databases as well.
 
 ```bash
 # add 'solar' user
@@ -132,6 +132,6 @@ Now that the relay node has been configured, you should head over to the JSON-RP
 
 ## Notes
 
-Please read the documentation pages for all of our [ARK SDK clients and cryptography libraries](/docs/sdk/) (offered in many programming languages).
+Please read the documentation pages for all of our [SXP SDK clients and cryptography libraries](/docs/sdk/) (offered in many programming languages).
 
 Also, read the [API documentation.](/docs/api)

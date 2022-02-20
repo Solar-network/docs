@@ -52,14 +52,14 @@ theme:
   language: en
   features:
     - content.code.annotate
-    # - content.tabs.link
-    # - header.autohide
-    # - navigation.expand
+    - content.tabs.link
+    - header.autohide
+    #- navigation.expand
     - navigation.indexes
-    # - navigation.instant
+    - navigation.instant
     - navigation.sections
     - navigation.tabs
-    # - navigation.tabs.sticky
+    - navigation.tabs.sticky
     - navigation.top
     - navigation.tracking
     - search.highlight
@@ -158,7 +158,57 @@ nav:
 #    - api/intro.md
 #  - Wallets:
 #    - wallets/intro.md
-  - Exchanges:
+  - Project:
+    - project/intro.md
+    - project/whitepaper.md
+    - project/blockchain.md
+    - project/team.md
+    - project/dao.md
+  - Brand:
+    - brand/intro.md
+    - brand/guideline.md
+    - brand/mediakit.md
+  - SDK:
+    - sdk/documentation.md
+    - Guidelines:
+      - sdk/guidelines/documentation.md
+      - sdk/guidelines/crypto.md
+      - sdk/guidelines/client.md
+    - Typescript:
+      - sdk/typescript/installation.md
+      - sdk/typescript/complementary-examples.md
+      - Crypto:
+        - sdk/typescript/crypto/getting-started.md
+        - sdk/typescript/crypto/intro.md
+        - sdk/typescript/crypto/api-documentation.md
+        - sdk/typescript/crypto/examples.md
+      - Client:
+        - sdk/typescript/client/getting-started.md
+        - sdk/typescript/client/intro.md
+        - sdk/typescript/client/api-documentation.md
+        - sdk/typescript/client/examples.md
+    - Python:
+      - sdk/python/client/getting-started.md   
+      - Client:
+        - sdk/python/client/intro.md
+        - sdk/python/installation.md
+        - sdk/python/client/api-documentation.md
+        - sdk/python/client/examples.md
+      - Crypto:
+        - sdk/python/crypto/intro.md  
+        - sdk/python/crypto/api-documentation.md
+        - sdk/python/crypto/examples.md
+      - sdk/python/complementary-examples.md 
+    - Javascript:
+      - sdk/javascript/installation.md
+      - Client:
+        - sdk/javascript/client/intro.md
+        - sdk/javascript/client/api-documentation.md
+        - sdk/javascript/client/examples.md
+      - Crypto:
+        - sdk/javascript/crypto/intro.md
+        - sdk/javascript/crypto/examples.md
+  - Exchange Integration:
     - Introduction:
       - exchanges/intro.md
     - Core Node Introduction:
@@ -167,6 +217,7 @@ nav:
     - JSON-RPC:
       - exchanges/json-rpc/getting-started.md
       - Endpoints: 
+        - exchanges/json-rpc/endpoints/intro.md
         - exchanges/json-rpc/endpoints/blocks.md
         - exchanges/json-rpc/endpoints/transactions.md
         - exchanges/json-rpc/endpoints/wallets.md        
@@ -175,3 +226,34 @@ nav:
     - PUBLIC API:
       - exchanges/public-api-guide.md
       - exchanges/configuring-rate-limits.md
+  - API:
+    - api/index.md
+    - Public REST-API:
+      - api/public-rest-api/getting-started.md
+      - Endpoints:
+        - api/public-rest-api/endpoints/intro.md
+        - api/public-rest-api/endpoints/blockchain.md
+        - api/public-rest-api/endpoints/blocks.md
+        - api/public-rest-api/endpoints/delegates.md
+        - api/public-rest-api/endpoints/node.md
+        - api/public-rest-api/endpoints/peers.md
+        - api/public-rest-api/endpoints/transactions.md
+        - api/public-rest-api/endpoints/votes.md
+        # - api/public-rest-api/endpoints/locks.md
+        - api/public-rest-api/endpoints/wallets.md
+      - api/public-rest-api/modify-response.md
+      - api/public-rest-api/troubleshooting.md
+    - WEBHOOK API:
+      - api/webhook-api/getting-started.md
+      - api/webhook-api/usage.md
+      - api/webhook-api/endpoints.md
+    - MANAGER API:
+      - api/manager-api/getting-started.md
+      - Endpoints:
+        - api/manager-api/endpoints/configuration.md
+        - api/manager-api/endpoints/info.md
+        - api/manager-api/endpoints/log.md
+        - api/manager-api/endpoints/process.md
+        - api/manager-api/endpoints/snapshots.md
+        - api/manager-api/endpoints/watcher.md
+        - api/manager-api/endpoints/plugin.md

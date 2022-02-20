@@ -28,7 +28,7 @@ Ubuntu 16.x and older is **no longer** supported.
 
 ---
 
-ARK Nodes execute many query intensive operations. The most cost-effective approach for running a high-performance node is choosing SSD over HDD. Increasing the total RAM improves cache performance.
+SXP Nodes execute many query intensive operations. The most cost-effective approach for running a high-performance node is choosing SSD over HDD. Increasing the total RAM improves cache performance.
 
 ## Configuration Requirements
 

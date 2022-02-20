@@ -290,7 +290,7 @@ const body = {
   id: 31
   params: {
     recipientId: "AMv3iLrvyvpi6d4wEfLqX8kzMxaRvxAcHT" // the address you want to send to,
-    amount: "200000000", // 2 Solar * 100,000,000 arktoshi/ARK
+    amount: "200000000", // 2 Solar * 100,000,000 arktoshi/SXP
     passphrase: "craft imitate step mixture patch forest volcano business charge around girl confirm"
   }
 }
@@ -316,7 +316,7 @@ func main() {
             ID:      31,
             Params: transaction{
                 Address:    "AMv3iLrvyvpi6d4wEfLqX8kzMxaRvxAcHT",
-                Amount:     "200000000", // 2 Solar * 100,000,000 arktoshi/ARK
+                Amount:     "200000000", // 2 Solar * 100,000,000 arktoshi/SXP
                 Passphrase: "craft imitate step mixture patch forest volcano business charge around girl confirm",
             },
         },
@@ -330,7 +330,7 @@ r = requests.post(
   json={"jsonrpc": "2.0", "method": "transactions.create", "id": 31,
         "params": {
             "recipientId": "AMv3iLrvyvpi6d4wEfLqX8kzMxaRvxAcHT" # the address you want to send to,
-            "amount": "200000000", # 2 Solar * 100,000,000 arktoshi/ARK
+            "amount": "200000000", # 2 Solar * 100,000,000 arktoshi/SXP
             "passphrase": "craft imitate step mixture patch forest volcano business charge around girl confirm"
       },
     }
