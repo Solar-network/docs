@@ -77,7 +77,7 @@ log.search
                 "id": 1,
                 "process": "core",
                 "level": "info",
-                "content": "Connecting to database: ark_testnet",
+                "content": "Connecting to database: sxp_testnet",
                 "timestamp": 1605705110,
             },
             {
@@ -195,12 +195,12 @@ log.archived
         {
             "name": "2020-12-14_17-38-00.log.gz",
             "size": 2,
-            "downloadLink": "http://127.0.0.1:4003/log/archived/2020-12-14_17-38-00.log.gz"
+            "downloadLink": "http://127.0.0.1:6003/log/archived/2020-12-14_17-38-00.log.gz"
         },
         {
             "name": "2020-12-15_12-38-12.log.gz",
             "size": 2766,
-            "downloadLink": "http://127.0.0.1:4003/log/archived/2020-12-15_12-38-12.log.gz"
+            "downloadLink": "http://127.0.0.1:6003/log/archived/2020-12-15_12-38-12.log.gz"
         }
     ]
 }

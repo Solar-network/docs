@@ -202,7 +202,7 @@ Each node is connected to a set of peers, which are Relay or Delegate Nodes as w
 peers = client.peers.all()
 
 # With parameters
-peers = client.peers.all(os="", status="", port=4002, version="", orderBy="latency", page=1, limit=10)
+peers = client.peers.all(os="", status="", port=6002, version="", orderBy="latency", page=1, limit=10)
 
 print(peers)
 
