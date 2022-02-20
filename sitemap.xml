@@ -370,4 +370,44 @@
          <lastmod>2022-02-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
+    <url>
+         <loc>https://docs.solar.network/swipeswap/introduction/</loc>
+         <lastmod>2022-02-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.solar.network/swipeswap/exchanges/getting-started/</loc>
+         <lastmod>2022-02-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.solar.network/swipeswap/technical-details/introduction/</loc>
+         <lastmod>2022-02-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.solar.network/swipeswap/technical-details/security/</loc>
+         <lastmod>2022-02-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.solar.network/swipeswap/technical-details/bep20/introduction/</loc>
+         <lastmod>2022-02-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.solar.network/swipeswap/technical-details/erc20/introduction/</loc>
+         <lastmod>2022-02-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.solar.network/swipeswap/technical-details/mainnet/introduction/</loc>
+         <lastmod>2022-02-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.solar.network/swipeswap/users/getting-started/</loc>
+         <lastmod>2022-02-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
 </urlset>
