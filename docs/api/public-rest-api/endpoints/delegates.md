@@ -4,7 +4,8 @@ title: Delegates
 
 # Delegates
 
-Delegates are regular wallets (addresses) which have registered themselves eligible to become a Delegate by a [registration transaction](/docs/core/transactions/types/delegate-registration). If a Delegate is among the top 51 highest voted (by staked SXP), it may run a forging Node, which produces a single block per round, awarding the Delegate 2 SXP + any transaction fees included in that block.
+Delegates are regular wallets (addresses) which have registered themselves eligible to become a Delegate by a [registration transaction](/docs/core/transactions/types/delegate-registration). If a Delegate is among the top 53 highest voted (by staked SXP), it may run a forging Node, which produces a single block per round, awarding the Delegate with Forged SXP + any transaction fees included in that block.
+The forging rewards are dynamic, based on the rank in the top 53. The total block reward per round (53 blocks) is 530 SXP.
 
 Genesis Delegates are the initial, virtualized Delegates. They were not registered nor voted in, and in the SXP `mainnet` has been replaced by actual Delegates a long time ago.
 
@@ -25,7 +26,7 @@ GET: "https://sxp.mainnet.sh/api/delegates"
     ```json
     {
         "title": "List All Delegates",
-        "description": "You can obtain all Delegates through this paginated API. Note that all registered Delegates are returned in this response, not just the top 51 forging Delegates.\nIf a Delegate Node is offline, it is still returned through this API; as the `delegate` resource is not concerned with the actual nodes, only with the on-chain registrations and wallets.",
+        "description": "You can obtain all Delegates through this paginated API. Note that all registered Delegates are returned in this response, not just the top 53 forging Delegates.\nIf a Delegate Node is offline, it is still returned through this API; as the `delegate` resource is not concerned with the actual nodes, only with the on-chain registrations and wallets.",
         "method": "GET",
         "path": "delegates",
         "parameters": {
