@@ -34,8 +34,8 @@ There are 3 validation controls for the SXP mainnet address that check for a 34 
 3. Validation by the forging nodes that accept or deny the transaction created by the backend tool.<br />
 
 <span style="color:red">
-There is no validation on contract level. This means that anyone interacting with the contract directly and entering a wrong address by accident will lose access to their SXP tokens on BEP20/ERC20 and SXP mainnet.<br />
-There is no way to recover these tokens.
+Interacting with the contract directly and entering a wrong address by accident or on purpose will result in loss of funds.<br />
+There is no way to recover the tokens from a contract and sending new SXP tokens on mainnet is impossible without a valid transaction on the contract side.
 </span>
 
 #### Notes

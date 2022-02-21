@@ -6,7 +6,7 @@ title: Mainnet Procedure
 
 Phase 3 relates to transactions from the Swap Master Address to the new SXP mainnet address.<br />
 <br />
-The forging nodes (53 delegates) are equipped with a plugin that validates and processes transactions sent by the Swap Master Address.<br />
+All nodes on mainnet are equipped with a plugin that validates and processes transactions sent by the Swap Master Address.<br />
 
 !!! vendorField on mainnet transaction
 
@@ -25,9 +25,5 @@ The node validates the following data to either accept or deny the transaction.<
 4. Validate if the SwipeSwap contract has the right contract ID for SXP.<br />
 5. Verify that the transaction hasn't been executed earlier.<br />
 
-Once all validations are passed, the node will accept the transaction and broadcast a message to other nodes with the following data:<br />
-1. API that was used to validate the transaction.<br />
-2. Time processed to validate the transaction.<br />
-
-All delegates and nodes will have to validate this transaction in order to accept the block.<br />
+All nodes including forging nodes, relays, and seed peers will have to validate this transaction in order to accept the block.<br />
 Nodes that have latency issues, bad or manipulated API or wrong data will fork from the network and from the seed peers.
