@@ -263,11 +263,9 @@ nav:
       - Exchanges:
         - swipeswap/exchanges/getting-started.md
     - Technical Details:
-      - swipeswap/technical-details/introduction.md
-      - swipeswap/technical-details/security.md
-      - BEP20:
-        - swipeswap/technical-details/bep20/introduction.md
-      - ERC20:
-        - swipeswap/technical-details/erc20/introduction.md
-      - Mainnet:
-        - swipeswap/technical-details/mainnet/introduction.md
+      - Security:
+        - swipeswap/technical-details/security/introduction.md
+        - swipeswap/technical-details/security/contract-procedure.md
+        - swipeswap/technical-details/security/broadcast-procedure.md
+        - swipeswap/technical-details/security/mainnet-procedure.md
+
