@@ -4,14 +4,14 @@ title: Contract Procedure
 
 
 
-## Phase 1 - Sending tokens to SwipeSwap Contract (BSC/ETH)
+## Phase 1 - Sending tokens to SXPSwap Contract (BSC/ETH)
 
 In order to facilitate a successful migration, the Swipe (SXP) tokens on BEP20/ERC20 are meant to enter a contract and never leave the contract ever again.<br />
 This is facilitated by a contract on BEP20 and ERC20. 
 
 The process consists on 2 main functions.<br />
-1. The first function "approve", which exists on the Swipe (SXP) token contract, this serves for the purpose of approving the SwipeSwap contract to move the Swipe tokens over the new SwipeSwap Contract.<br />
-2. The second function "transferTokenToContract", this serves for the purpose of sending the tokens that were previously approved to SwipeSwap.<br />
+1. The first function "approve", which exists on the Swipe (SXP) token contract, this serves for the purpose of approving the SXPSwap contract to move the Swipe tokens over the new SXPSwap Contract.<br />
+2. The second function "transferTokenToContract", this serves for the purpose of sending the tokens that were previously approved to SXPSwap.<br />
 
 Functions on the new contract.<br />
 The function "transferTokenToContract" is only accepted if the following parameters are included.<br />
@@ -29,7 +29,7 @@ These parameters are:<br />
 #### New Wallet Address Validation
 
 There are 3 validation controls for the SXP mainnet address that check for a 34 character address with the S prefix.<br />
-1. Validation on the frontend for Metamask users that are using the official SwipeSwap tool.<br />
+1. Validation on the frontend for Metamask users that are using the official SXPSwap tool.<br />
 2. Validation on the backend program that sends the mainnet SXP to the new address.<br />
 3. Validation by the forging nodes that accept or deny the transaction created by the backend tool.<br />
 
@@ -40,7 +40,7 @@ There is no way to recover the tokens from a contract and sending new SXP tokens
 
 #### Notes
 
-Other tokens can be sent to the SwipeSwap contract. <br />
+Other tokens can be sent to the SXPSwap contract. <br />
 These tokens can not be recovered and will not be accepted by the backend program that broadcasts the swap to the forging delegates.<br />
 Due to the validation by the backend program and the validation from the forging delegates, trying to send "fake" SXP tokens with a correct SXP mainnet address will have no impact on the swap procedure.<br />
 

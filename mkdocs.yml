@@ -255,17 +255,17 @@ nav:
         - api/manager-api/endpoints/snapshots.md
         - api/manager-api/endpoints/watcher.md
         - api/manager-api/endpoints/plugin.md
-  - SwipeSwap:
-    - swipeswap/introduction.md
+  - SXPSwap:
+    - sxpswap/introduction.md
     - Swap / Migration:
       - Users:
-        - swipeswap/users/getting-started.md
+        - sxpswap/users/getting-started.md
       - Exchanges:
-        - swipeswap/exchanges/getting-started.md
+        - sxpswap/exchanges/getting-started.md
     - Technical Details:
       - Security:
-        - swipeswap/technical-details/security/introduction.md
-        - swipeswap/technical-details/security/contract-procedure.md
-        - swipeswap/technical-details/security/broadcast-procedure.md
-        - swipeswap/technical-details/security/mainnet-procedure.md
+        - sxpswap/technical-details/security/introduction.md
+        - sxpswap/technical-details/security/contract-procedure.md
+        - sxpswap/technical-details/security/broadcast-procedure.md
+        - sxpswap/technical-details/security/mainnet-procedure.md
 
