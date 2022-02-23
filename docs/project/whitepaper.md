@@ -2,14 +2,12 @@
 title: Whitepaper
 ---
 
-### Whitepaper v2 by Solar (February 2022)
+### Initial Whitepaper by Solar (February 2022)
 
-To be released.
+The following whitepaper is referred to goals and mission statements made by Solar.
+Click on the link below to view or download the whitepaper.
 
+Please keep in mind that the Whitepaper will be updated with more detailed information upon mainnet release.
 
-### Whitepaper v1 (December 2021)
+1. [View/Download Whitepaper February 2022](/assets/documents/whitepaper-february-2022.pdf)
 
-The following whitepaper is referred to goals and mission statements made by Swipechain. Which is prior the rebrand to Solar.
-A new whitepaper is being created and will be released on the 23rd of February 2022.
-
-1. [Whitepaper December 2021](/assets/documents/whitepaper-december-2021.pdf)
