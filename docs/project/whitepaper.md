@@ -9,5 +9,6 @@ Click on the link below to view or download the whitepaper.
 
 Please keep in mind that the Whitepaper will be updated with more detailed information upon mainnet release.
 
-1. [View/Download Whitepaper February 2022](/assets/documents/whitepaper-february-2022.pdf)
+1. [English Whitepaper February 2022](/assets/documents/whitepaper-february-2022.pdf)
+2. [Korean Whitepaper February 2022](/assets/documents/kr-whitepaper-february-2022.pdf)
 
