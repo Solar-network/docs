@@ -129,4 +129,4 @@ exchange-json-rpc log
 
 ## Security
 
-If you discover a security vulnerability within this package, please send an e-mail to [security@solar.network](mailto:security@solar.network). All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this package, please send an e-mail to [security@solar.org](mailto:security@solar.org). All security vulnerabilities will be promptly addressed.

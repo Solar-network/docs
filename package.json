@@ -7,10 +7,10 @@
         "documentation",
         "solar"
     ],
-    "homepage": "https://docs.solar.network",
+    "homepage": "https://docs.solar.org",
     "bugs": {
         "url": "https://github.com/solar-network/docs/issues",
-        "email": "hello@solar.network"
+        "email": "hello@solar.org"
     },
     "license": "MIT",
     "private": true,

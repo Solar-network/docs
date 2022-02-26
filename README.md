@@ -1,7 +1,7 @@
 
 <p align="center">
   <strong>
-    <a href="https://docs.solar.network/">Documentation for Solar Network</a>
+    <a href="https://docs.solar.org/">Documentation for Solar Network</a>
   </strong>
 </p>
 
@@ -33,7 +33,7 @@ mkdocs gh-deploy --force
 
 **MIT License**
 
-Copyright (c) 2022 Solar (solar.network)
+Copyright (c) 2022 Solar (solar.org)
 
 Credits | ArkEcosystem (ark.io)
 

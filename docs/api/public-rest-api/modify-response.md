@@ -12,7 +12,7 @@ In this chapter we will go trough process step by step and describe how to remov
 {
     "data": {
         "symbol": "dSXP",
-        "explorer": "http://dexplorer.solar.network",
+        "explorer": "http://dexplorer.solar.org",
         "version": 30,
     }
 }

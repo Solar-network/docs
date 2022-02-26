@@ -11,5 +11,5 @@ This is a reference guide for the available Core APIs. APIs expose different res
 3. [Manager API](/docs/api/manager-api/getting-started)
 
 <x-alert type="info">
-Each Core server (node) has its own internal blockchain and state, meaning it may have forked or be out of sync, causing queries to fail. Monitor your node by comparing it to different public nodes, such as the official [explorer](https://explorer.solar.network) to ensure you are in sync.
+Each Core server (node) has its own internal blockchain and state, meaning it may have forked or be out of sync, causing queries to fail. Monitor your node by comparing it to different public nodes, such as the official [explorer](https://explorer.solar.org) to ensure you are in sync.
 </x-alert>

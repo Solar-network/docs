@@ -10,8 +10,8 @@ All HTTP requests have to be sent with the `Content-Type: application/json` head
 
 This is the reference guide for the Public API. This API exposes all resources and data provided by an Solar Core node; and is the preferred way of interacting with the Solar Network. Note that each node has its own internal blockchain and state, meaning it may have forked or be out of sync, causing queries to fail. Monitor your node by comparing it to different public nodes, such as an official explorer to ensure you are in sync.
 
-* Mainnet: [https://explorer.solar.network](https://explorer.solar.network)
-* Devnet: [https://dexplorer.solar.network](https://dexplorer.solar.network)
+* Mainnet: [https://explorer.solar.org](https://explorer.solar.org)
+* Devnet: [https://dexplorer.solar.org](https://dexplorer.solar.org)
 
 > If you have any problems or requests please [open an issue](https://github.com/solar-network/core/issues/new/choose).
 
