@@ -94,10 +94,6 @@ If the process has started you will get a message:
 Starting solar-relay... done
 ```
 
-<x-alert type="info">
-All of the CLI commands with a description can be viewed in our [Core CLI](/docs/core/deployment/cli) documentation or by executing the `solar help`command.
-</x-alert>
-
 ### 8. Checking to See if Everything Is Working
 
 Now we want to see if the Solar relay process has started the synchronization process you can do that by running one of these two commands

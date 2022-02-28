@@ -212,7 +212,6 @@ nav:
     - JSON-RPC:
       - exchanges/json-rpc/getting-started.md
       - Endpoints: 
-        - exchanges/json-rpc/endpoints/intro.md
         - exchanges/json-rpc/endpoints/blocks.md
         - exchanges/json-rpc/endpoints/transactions.md
         - exchanges/json-rpc/endpoints/wallets.md        

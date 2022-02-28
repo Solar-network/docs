@@ -8,6 +8,8 @@ A Relay Node is a full node in the Solar network; it maintains a complete copy o
 
 ## Recommended Hardware Requirements
 
+NodeJS 16
+
 | Relay Specification | Minimum | Recommended   |
 | :-----------------: | :-----: | :-----------: |
 | **CPUs**            | 2       | 4             |
