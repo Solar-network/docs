@@ -118,7 +118,7 @@ Installing Solar Core is a straightforward process. We will use the SXP installe
 ```bash
 sudo apt-get install curl
 
-bash <(curl -s https://raw.githubusercontent.com/ArkEcosystem/core/master/install.sh)
+bash <(curl -s https://raw.githubusercontent.com/solar-network/core/master/install.sh)
 ```
 
 You will be asked to input your current users password for sudo privileges:

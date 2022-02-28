@@ -11,7 +11,7 @@ The Exchange JSON-RPC is only maintained for exchanges, as the name suggests. **
 ## Installation via Yarn
 
 ```bash
-yarn global add @arkecosystem/exchange-json-rpc-cli
+yarn global add @solar-network/exchange-json-rpc-cli
 ```
 
 ## Usage instructions
@@ -23,7 +23,7 @@ $ exchange-json-rpc
 A JSON-RPC 2.0 specification compliant server for Exchanges to interact with the Solar Blockchain.
 
 VERSION
-  @arkecosystem/exchange-json-rpc-cli/1.0.0 darwin-x64 node-v10.16.0
+  @solar-network/exchange-json-rpc-cli/1.0.0 darwin-x64 node-v10.16.0
 
 USAGE
   $ exchange-json-rpc [COMMAND]

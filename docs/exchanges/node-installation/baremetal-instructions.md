@@ -40,6 +40,12 @@ cd ~
 
 We will use Solar installer script that will install all of the necessary dependencies, Solar Core onto your server and publish configuration files for it. To install essentials run this command.
 
+1. For Devnet
+```bash
+bash <(curl -s https://raw.githubusercontent.com/solar-network/core/develop/install-next.sh)
+```
+
+2. For Mainnet
 ```bash
 bash <(curl -s https://raw.githubusercontent.com/solar-network/core/main/install.sh)
 ```
@@ -50,7 +56,7 @@ Process might take a while, don't interrupt it and wait for it to finish.
 
 ### 5. Selecting Solar Core Network
 
-Once installation of dependencies and Solar Core is finished you will need to select on which network you wish to operate, since we are setting `mainnet` node select it (Only Devnet is currently available). This can be achieved by pressing `up` or `down` arrow keys and confirming selection with `enter`.
+Once installation of dependencies and Solar Core is finished you will need to select on which network you wish to operate, since we are setting `mainnet` node select it (Only `devnet` is currently available). This can be achieved by pressing `up` or `down` arrow keys and confirming selection with `enter`.
 
 After you made your selection you will need to confirm by pressing `y` and confirm with `enter`.
 

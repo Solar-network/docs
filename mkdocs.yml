@@ -161,9 +161,6 @@ nav:
   - Project:
     - project/intro.md
     - project/whitepaper.md
-    - project/blockchain.md
-    - project/team.md
-    - project/dao.md
   - Brand:
     - brand/intro.md
   - SDK:
