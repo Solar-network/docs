@@ -82,11 +82,6 @@ brew install python3
 > You can verify that`pip` was installed properly by running the following command in your terminal : `pip -V` which
 > should returns the version of the installed `pip` program.
 
-### Install package with `pip`
-
-```bash
-pip install arkecosystem-client
-```
 
 ## Development
 

@@ -4,11 +4,6 @@ title: Getting Started
 
 # Client
 
-## Install package with `pip`
-
-```bash
-pip install arkecosystem-client
-```
 
 ## Development
 

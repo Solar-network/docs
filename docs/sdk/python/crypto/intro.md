@@ -4,12 +4,6 @@ title: Getting Started
 
 # Crypto
 
-## Install package with `pip`
-
-```bash
-pip install arkecosystem-crypto
-```
-
 ## Development
 
 1. Fork the [package](https://github.com/solar-network/python-crypto).

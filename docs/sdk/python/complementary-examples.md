@@ -10,12 +10,7 @@ Before we get started we need to make sure that all of the required dependencies
 
 Open your project and execute the following commands to install both SDKs. Make sure that those complete without any errors. If you encounter any errors, please open an issue with as much information as you can provide so that our developers can have a look and get to the bottom of the issue.
 
-```bash
-pip install arkecosystem-crypto
-pip install arkecosystem-client
-```
-
-Now that we're setup and ready to go we'll look into some examples for the most common tasks you'll encounter when wanting to interact with the SXP Blockchain.
+https://github.com/solar-network/python-client
 
 ## Creating and Broadcasting a Transfer
 
@@ -31,7 +26,7 @@ from crypto.transactions.builder.transfer import Transfer
 set_network(Devnet)
 
 # Configure our API client
-client = ArkClient('https://dexplorer.solar.io/api')
+client = ArkClient('https://sxp.testnet.sh/api')
 
 # Step 1: Retrieve the incremental nonce of the sender wallet
 senderWallet = client.wallets.get('YOUR_SENDER_WALLET_ADDRESS')
@@ -75,7 +70,7 @@ from crypto.transactions.builder.second_signature_registration import SecondSign
 set_network(Devnet)
 
 # Configure our API client
-client = ArkClient('https://dexplorer.solar.io/api')
+client = ArkClient('https://sxp.testnet.sh/api')
 
 # Step 1: Retrieve the incremental nonce of the sender wallet
 senderWallet = client.wallets.get('YOUR_SENDER_WALLET_ADDRESS')
@@ -112,7 +107,7 @@ from crypto.transactions.builder.delegate_registration import DelegateRegistrati
 set_network(Devnet)
 
 # Configure our API client
-client = ArkClient('https://dexplorer.solar.io/api')
+client = ArkClient('https://sxp.testnet.sh/api')
 
 # Step 1: Retrieve the incremental nonce of the sender wallet
 senderWallet = client.wallets.get('YOUR_SENDER_WALLET_ADDRESS')
@@ -149,7 +144,7 @@ from crypto.transactions.builder.vote import Vote
 set_network(Devnet)
 
 # Configure our API client
-client = ArkClient('https://dexplorer.solar.io/api')
+client = ArkClient('https://sxp.testnet.sh/api')
 
 # Step 1: Retrieve the incremental nonce of the sender wallet
 senderWallet = client.wallets.get('YOUR_SENDER_WALLET_ADDRESS')
@@ -190,7 +185,7 @@ from crypto.transactions.builder.vote import Vote
 set_network(Devnet)
 
 # Configure our API client
-client = ArkClient('https://dexplorer.solar.io/api')
+client = ArkClient('https://sxp.testnet.sh/api')
 
 # Step 1: Retrieve the incremental nonce of the sender wallet
 senderWallet = client.wallets.get('YOUR_SENDER_WALLET_ADDRESS')
@@ -231,7 +226,7 @@ from crypto.transactions.builder.multi_signature_registration import MultiSignat
 set_network(Devnet)
 
 # Configure our API client
-client = ArkClient('https://dexplorer.solar.io/api')
+client = ArkClient('https://sxp.testnet.sh/api')
 
 # Step 1: Retrieve the incremental nonce of the sender wallet
 senderWallet = client.wallets.get('YOUR_SENDER_WALLET_ADDRESS')
@@ -277,7 +272,7 @@ from crypto.transactions.builder.ipfs import IPFS
 set_network(Devnet)
 
 # Configure our API client
-client = ArkClient('https://dexplorer.solar.io/api')
+client = ArkClient('https://sxp.testnet.sh/api')
 
 # Step 1: Retrieve the incremental nonce of the sender wallet
 senderWallet = client.wallets.get('YOUR_SENDER_WALLET_ADDRESS')
@@ -314,7 +309,7 @@ from crypto.transactions.builder.multi_payment import MultiPayment
 set_network(Devnet)
 
 # Configure our API client
-client = ArkClient('https://dexplorer.solar.io/api')
+client = ArkClient('https://sxp.testnet.sh/api')
 
 # Step 1: Retrieve the incremental nonce of the sender wallet
 senderWallet = client.wallets.get('YOUR_SENDER_WALLET_ADDRESS')
@@ -353,7 +348,7 @@ from crypto.transactions.builder.delegate_resignation import DelegateResignation
 set_network(Devnet)
 
 # Configure our API client
-client = ArkClient('https://dexplorer.solar.io/api')
+client = ArkClient('https://sxp.testnet.sh/api')
 
 # Step 1: Retrieve the incremental nonce of the sender wallet
 senderWallet = client.wallets.get('YOUR_SENDER_WALLET_ADDRESS')
@@ -395,7 +390,7 @@ import hashlib
 set_network(Devnet)
 
 # Configure our API client
-client = ArkClient('https://dexplorer.solar.io/api')
+client = ArkClient('https://sxp.testnet.sh/api')
 
 # Step 1: Retrieve the incremental nonce of the sender wallet
 senderWallet = client.wallets.get('YOUR_SENDER_WALLET_ADDRESS')
@@ -442,7 +437,7 @@ import hashlib
 set_network(Devnet)
 
 # Configure our API client
-client = ArkClient('https://dexplorer.solar.io/api')
+client = ArkClient('https://sxp.testnet.sh/api')
 
 # Step 1: Retrieve the incremental nonce of the sender wallet
 senderWallet = client.wallets.get('YOUR_SENDER_WALLET_ADDRESS')
@@ -486,7 +481,7 @@ from crypto.transactions.builder.htlc_refund import HtlcRefund
 set_network(Devnet)
 
 # Configure our API client
-client = ArkClient('https://dexplorer.solar.io/api')
+client = ArkClient('https://sxp.testnet.sh/api')
 
 # Step 1: Retrieve the incremental nonce of the sender wallet
 senderWallet = client.wallets.get('YOUR_SENDER_WALLET_ADDRESS')

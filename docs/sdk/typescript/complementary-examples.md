@@ -71,7 +71,7 @@ const { Transactions, Managers, Utils } = require("@solar-network/crypto");
 const { Connection } = require("@solar-network/client");
 
 // Configure our API client
-const client = new Connection("https://dexplorer.solar.io/api");
+const client = new Connection("https://sxp.testnet.sh/api");
 
 // Ensure AIP11 is enabled for the Crypto SDK
 Managers.configManager.setFromPreset("devnet");
@@ -110,7 +110,7 @@ const { Transactions, Managers, Utils } = require("@solar-network/crypto");
 const { Connection } = require("@solar-network/client");
 
 // Configure our API client
-const client = new Connection("https://dexplorer.solar.io/api");
+const client = new Connection("https://sxp.testnet.sh/api");
 
 // Ensure AIP11 is enabled for the Crypto SDK
 Managers.configManager.setFromPreset("devnet");
@@ -143,7 +143,7 @@ const { Transactions, Managers, Utils } = require("@solar-network/crypto");
 const { Connection } = require("@solar-network/client");
 
 // Configure our API client
-const client = new Connection("https://dexplorer.solar.io/api");
+const client = new Connection("https://sxp.testnet.sh/api");
 
 // Ensure AIP11 is enabled for the Crypto SDK
 Managers.configManager.setFromPreset("devnet");
@@ -176,7 +176,7 @@ const { Transactions, Managers, Utils } = require("@solar-network/crypto");
 const { Connection } = require("@solar-network/client");
 
 // Configure our API client
-const client = new Connection("https://dexplorer.solar.io/api");
+const client = new Connection("https://sxp.testnet.sh/api");
 
 // Ensure AIP11 is enabled for the Crypto SDK
 Managers.configManager.setFromPreset("devnet");
@@ -213,7 +213,7 @@ const { Transactions, Managers, Utils } = require("@solar-network/crypto");
 const { Connection } = require("@solar-network/client");
 
 // Configure our API client
-const client = new Connection("https://dexplorer.solar.io/api");
+const client = new Connection("https://sxp.testnet.sh/api");
 
 // Ensure AIP11 is enabled for the Crypto SDK
 Managers.configManager.setFromPreset("devnet");
@@ -250,7 +250,7 @@ const { Transactions, Managers, Utils } = require("@solar-network/crypto");
 const { Connection } = require("@solar-network/client");
 
 // Configure our API client
-const client = new Connection("https://dexplorer.solar.io/api");
+const client = new Connection("https://sxp.testnet.sh/api");
 
 // Ensure AIP11 is enabled for the Crypto SDK
 Managers.configManager.setFromPreset("devnet");
@@ -294,7 +294,7 @@ const { Transactions, Managers, Utils } = require("@solar-network/crypto");
 const { Connection } = require("@solar-network/client");
 
 // Configure our API client
-const client = new Connection("https://dexplorer.solar.io/api");
+const client = new Connection("https://sxp.testnet.sh/api");
 
 // Ensure AIP11 is enabled for the Crypto SDK
 Managers.configManager.setFromPreset("devnet");
@@ -327,7 +327,7 @@ const { Transactions, Managers, Utils } = require("@solar-network/crypto");
 const { Connection } = require("@solar-network/client");
 
 // Configure our API client
-const client = new Connection("https://dexplorer.solar.io/api");
+const client = new Connection("https://sxp.testnet.sh/api");
 
 // Ensure AIP11 is enabled for the Crypto SDK
 Managers.configManager.setFromPreset("devnet");
@@ -362,7 +362,7 @@ const { Transactions, Managers, Utils } = require("@solar-network/crypto");
 const { Connection } = require("@solar-network/client");
 
 // Configure our API client
-const client = new Connection("https://dexplorer.solar.io/api");
+const client = new Connection("https://sxp.testnet.sh/api");
 
 // Ensure AIP11 is enabled for the Crypto SDK
 Managers.configManager.setFromPreset("devnet");
@@ -398,7 +398,7 @@ const { Transactions, Managers, Utils } = require("@solar-network/crypto");
 const { Connection } = require("@solar-network/client");
 
 // Configure our API client
-const client = new Connection("https://dexplorer.solar.io/api");
+const client = new Connection("https://sxp.testnet.sh/api");
 
 // Ensure AIP11 is enabled for the Crypto SDK
 Managers.configManager.setFromPreset("devnet");
@@ -438,7 +438,7 @@ const { Transactions, Managers, Utils } = require("@solar-network/crypto");
 const { Connection } = require("@solar-network/client");
 
 // Configure our API client
-const client = new Connection("https://dexplorer.solar.io/api");
+const client = new Connection("https://sxp.testnet.sh/api");
 
 // Ensure AIP11 is enabled for the Crypto SDK
 Managers.configManager.setFromPreset("devnet");
@@ -478,7 +478,7 @@ const { Transactions, Managers, Utils } = require("@solar-network/crypto");
 const { Connection } = require("@solar-network/client");
 
 // Configure our API client
-const client = new Connection("https://dexplorer.solar.io/api");
+const client = new Connection("https://sxp.testnet.sh/api");
 
 // Ensure AIP11 is enabled for the Crypto SDK
 Managers.configManager.setFromPreset("devnet");
