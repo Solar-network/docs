@@ -64,7 +64,7 @@ Due to the validation by the backend program and the validation from the forging
     1. [BEP20 Token Contract](https://testnet.bscscan.com/address/0x8b06059234080fcb3e5f32598bf256d6d911fc26#code)
     2. [ERC20 Token Contract](https://kovan.etherscan.io/address/0x3DD5CfbC967593E8D7C7f391F131E44c0A8a6892#code)
     3. [BEP20 Swap Contract](https://testnet.bscscan.com/address/0xB2C07186bF2a85f2a08C5354e02609eB3D7360eD#code)
-    4. [ERC20 Swap Contract](https://kovan.etherscan.io/address/0x8f2a4be3fcd3a3451f9a89dcc88c6fd38514e704#code)
+    4. [ERC20 Swap Contract](https://kovan.etherscan.io/address/0xb86c3e255cfe9edcfaa3940701c17f2083fbb251#code)
 
     Additionally, exchanges are also able to use the Metamask version of the swap.
     For devnet, this is available under https://swap.testnet.sh
