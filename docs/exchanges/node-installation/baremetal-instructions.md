@@ -114,7 +114,7 @@ If the process has started you will see a lot of messages like this (with actual
 [YYYY-DD-MM hh:mm:ss][DEBUG]: Delegate <delegate name> (<public key>) allowed to forge block <#> 👍
 ```
 
-> Synchronization of the blockchain can take upwards of 10 hours so let it run, once its synchronized `allowed to forge block` messages will only pop-up every 8 seconds. A single round consists of 51 delegates each forging a single block.
+> Synchronization of the blockchain can take upwards of 10 hours so let it run, once its synchronized `allowed to forge block` messages will only pop-up every 8 seconds. A single round consists of 53 delegates each forging a single block.
 >
 > Ensure you properly restart the node process when editing your `.env` file. Use the `--update-env` flag, for example:
 >
