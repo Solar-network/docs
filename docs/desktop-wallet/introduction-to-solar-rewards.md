@@ -58,11 +58,11 @@ As previously stated, block rewards and transaction fees are awarded to the acti
 
 Reward sharing can vary wildly with delegates taking commissions of anywhere from 0-100% of the total rewards.
 
-You can also view current APN delegates with the official [Delegate Monitor](https://explorer.solar.io/delegate-monitor) inside the [SXP Explorer](https://explorer.solar.io/).
+You can also view current Solar delegates on the [Delegates](https://explorer.solar.org/delegates) page inside the [SXP Explorer](https://explorer.solar.org/).
 
 ## Becoming a Delegate
 
-Some SXP holders want to be more directly involved and participate in the network themselves, rather than delegate their influence to a third party. We highly encourage anyone who is interested in becoming a delegate to read our full guides on [How to Register or Resign a Delegate](https://solar.dev/docs/desktop-wallet/user-guides/how-to-register-or-resign-delegate) and [Installing a Core Node](/docs/core/installation/intro) to get started.
+Some SXP holders want to be more directly involved and participate in the network themselves, rather than delegate their influence to a third party. We highly encourage anyone who is interested in becoming a delegate to read our full guides on [How to Register or Resign a Delegate](https://docs.solar.org/desktop-wallet/user-guides/how-to-register-or-resign-delegate) and [Installing a Core Node](/docs/core/installation/intro) to get started.
 
 <livewire:page-reference path="/docs/desktop-wallet/user-guides/how-to-register-or-resign-delegate" />
 
@@ -70,4 +70,4 @@ Some SXP holders want to be more directly involved and participate in the networ
 
 ## Contact Us
 
-If you still have questions or need more information, please feel free to [Contact Us](https://solar.org/contact).
+If you still have questions or need more information, please feel free to ask [the community](https://solar.org/community).

@@ -23,6 +23,6 @@ The SXP Desktop Wallet allows you to both create new wallets and import existing
 ## Importing Your Wallet
 
 1. Provide the mnemonic of the wallet
-2. Fill the 
+2. Click on continue, and your wallet is imported!
 
 ![Import your wallet by providing its address, passphrase, or both](/desktop-wallet/assets/importwallet.png)
