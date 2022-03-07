@@ -14,7 +14,7 @@ Any new implemented Custom Transaction will be packed inside a core module and d
 
 A general overview of important classes supporting custom transaction development can be seen in the Class Diagram picture below. Abstract classes and methods in the class diagram are presented with _italic_ text_._
 
-![The Core GTI Engine Class Diagram Excerpt](/storage/docs/docs/core/assets/technical-overview.png)
+![The Core GTI Engine Class Diagram Excerpt](/core/assets/technical-overview.png)
 
 To develop a custom transaction type we need to implement code-contracts defined by **GTI interfaces and abstract classes** (the blue colored items in the class diagram above). Implementation is pretty straight forward. We override default transaction behavior and add custom business logic, by implementing the **Transaction**, **Builder** and **Handler** type classes (the green-colored items in the diagram above) by following the guides below:
 

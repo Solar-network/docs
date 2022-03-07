@@ -6,7 +6,7 @@ title: Wallet Navigation
 
 After opening the SXP Desktop Wallet application for the first time, you will be greeted with security instructions. Please read every slide, as each one provides essential details on how you can better protect your funds.
 
-![](/storage/docs/docs/desktop-wallet/assets/welcome.png)
+![](/desktop-wallet/assets/welcome.png)
 
 Once you've read through the welcome instructions, you will be presented a page on which you can create your first profile. This is a multiple-stepped process in which you enter or select:
 
@@ -16,28 +16,28 @@ Once you've read through the welcome instructions, you will be presented a page 
   * Which language to use for [12-word BIP39 Passphrase](https://en.bitcoin.it/wiki/Seed_phrase)
   * One of many amazing avatars
 
-![](/storage/docs/docs/desktop-wallet/assets/newprofile1.png)
+![](/desktop-wallet/assets/newprofile1.png)
 
 * **Network**
   * Which network to operate on, either the regular SXP network or the SXP Devnet (for developers)
 
-![](/storage/docs/docs/desktop-wallet/assets/newprofile2.png)
+![](/desktop-wallet/assets/newprofile2.png)
 
 * **Appearance**
   * The Light or Dark theme
   * Your favorite background design
 
-![](/storage/docs/docs/desktop-wallet/assets/newprofile3.png)
+![](/desktop-wallet/assets/newprofile3.png)
 
 Upon successfully creating your profile, you will be brought to the dashboard.
 
-![](/storage/docs/docs/desktop-wallet/assets/dashboard.png)
+![](/desktop-wallet/assets/dashboard.png)
 
 ## Wallet Interface
 
 The wallet interface page can be reached by clicking on the wallet icon in the navigation bar of the application. On it, you will be able to view your profile or an individual wallet's balance. Some shortcuts are also provided to create or import a wallet and see the details of one of your wallet.
 
-![](/storage/docs/docs/desktop-wallet/assets/mywallets.png)
+![](/desktop-wallet/assets/mywallets.png)
 
 ### Wallet Details
 
@@ -53,7 +53,7 @@ On the wallet detail page, which is accessed by clicking on the wallet's name or
 * Register a business
 * Register a bridgechain
 
-![](/storage/docs/docs/desktop-wallet/assets/mainwallet.png)
+![](/desktop-wallet/assets/mainwallet.png)
 
 ## Changing the Application's Settings
 
@@ -63,7 +63,7 @@ There's a bunch of options for how you may customize the look, behavior, and fee
 
 Network settings can be modified by clicking on the cloud icon in the navigation bar; bringing up a side menu. In the Network settings menu, you may select another peer to use for fetching transaction and wallet updates. Also, the menu offers some valuable information about the network and advanced configuration options in the **Network Overview** section.
 
-![](/storage/docs/docs/desktop-wallet/assets/networkoptions.png)
+![](/desktop-wallet/assets/networkoptions.png)
 
 ### Appearance Options
 
@@ -85,7 +85,7 @@ WARNING:
 Resetting the wallet's data should almost never be done. It will permanently delete all of your profiles, wallets, contacts, addresses and all other data associated with the application.
 </x-alert>
 
-![](/storage/docs/docs/desktop-wallet/assets/currentsettings.png)
+![](/desktop-wallet/assets/currentsettings.png)
 
 #### Changing Profile Settings
 
@@ -101,4 +101,4 @@ There are a few profile settings you can affect in this way, namely:
 * The default currency for this profile.
 * Which avatar to use for this profile.
 
-![](/storage/docs/docs/desktop-wallet/assets/profilesettings.png)
+![](/desktop-wallet/assets/profilesettings.png)

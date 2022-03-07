@@ -14,4 +14,4 @@ To download the application, you can visit the link below and select the appropr
 
 When you arrive on this page, you will see multiple download options. Select the one that reflects your operating system:
 
-![](/storage/docs/docs/desktop-wallet/assets/desktop-wallet-install.png)
+![](/desktop-wallet/assets/desktop-wallet-install.png)

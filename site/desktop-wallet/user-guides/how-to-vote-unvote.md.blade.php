@@ -32,26 +32,26 @@ You can also see the list of currently active delegates on our [delegate monitor
 
 ## Voting for a Delegate
 
-![Browse the list of registered delegates](/storage/docs/docs/desktop-wallet/assets/delegates.png)
+![Browse the list of registered delegates](/desktop-wallet/assets/delegates.png)
 
-![Choose the delegate you wish to vote for, review their statistics and click Vote](/storage/docs/docs/desktop-wallet/assets/delegatestats.png)
+![Choose the delegate you wish to vote for, review their statistics and click Vote](/desktop-wallet/assets/delegatestats.png)
 
-![Fill in the required vote transaction fields and click Next](/storage/docs/docs/desktop-wallet/assets/vote.png)
+![Fill in the required vote transaction fields and click Next](/desktop-wallet/assets/vote.png)
 
 <x-alert type="info">
 For more information about fees, please visit: [Transaction Fees](/docs/desktop-wallet/user-guides/transaction-fees)
 </x-alert>
 
-![Submit, discard or save the vote transaction by pressing either Send, Back or Save](/storage/docs/docs/desktop-wallet/assets/submitvote.png)
+![Submit, discard or save the vote transaction by pressing either Send, Back or Save](/desktop-wallet/assets/submitvote.png)
 
 ## Unvoting a Delegate
 
-![Open the list of registered delegates](/storage/docs/docs/desktop-wallet/assets/delegatelistunvote.png)
+![Open the list of registered delegates](/desktop-wallet/assets/delegatelistunvote.png)
 
-![Click on the Unvote button](/storage/docs/docs/desktop-wallet/assets/clickunvotebutton.png)
+![Click on the Unvote button](/desktop-wallet/assets/clickunvotebutton.png)
 
-![Review the delegate's stats and click the Unvote button](/storage/docs/docs/desktop-wallet/assets/reviewunvote.png)
+![Review the delegate's stats and click the Unvote button](/desktop-wallet/assets/reviewunvote.png)
 
-![Choose a transaction fee, enter your security details and click Next](/storage/docs/docs/desktop-wallet/assets/unvotedetails.png)
+![Choose a transaction fee, enter your security details and click Next](/desktop-wallet/assets/unvotedetails.png)
 
-![Submit the unvote transaction and Submit, Cancel or Save it by clicking either Send, Back or Save](/storage/docs/docs/desktop-wallet/assets/submitunvote.png)
+![Submit the unvote transaction and Submit, Cancel or Save it by clicking either Send, Back or Save](/desktop-wallet/assets/submitunvote.png)

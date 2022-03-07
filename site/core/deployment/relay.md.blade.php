@@ -41,7 +41,7 @@ Depending on your operating system you will connect to your server in different 
 
 Open PuTTy and place the `IP address` given to you by your provider in the `Host Name` field as shown below. You should probably save this host, so you don't have to enter it every time.
 
-![](/storage/docs/docs/core/assets/howtosetupanewserverimage1.jpeg)
+![](/core/assets/howtosetupanewserverimage1.jpeg)
 
 `MacOS / Linux`
 

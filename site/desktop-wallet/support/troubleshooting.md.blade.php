@@ -62,7 +62,7 @@ Common **error messages** associated with **connectivity** issues include—but 
 
 **Connectivity** issues are typically resolved by <u>**refreshing**</u> your **peer connection**.
 
-![Select the ‘cloud’ icon on the left sidebar. Then click the "Refresh" button of the Peer modal as shown above.](/storage/docs/docs/desktop-wallet/assets/troubleshooting-refresh-peer.jpg)
+![Select the ‘cloud’ icon on the left sidebar. Then click the "Refresh" button of the Peer modal as shown above.](/desktop-wallet/assets/troubleshooting-refresh-peer.jpg)
 
 ---
 
@@ -70,7 +70,7 @@ If the issue persists after **refreshing** the peer connection, you can also per
 
 This restarts all services related to the SXP Desktop Wallet, no data will be lost.
 
-![Select "Force Reload" from the "View" drop-down menu.](/storage/docs/docs/desktop-wallet/assets/troubleshooting-force-reload.jpeg)
+![Select "Force Reload" from the "View" drop-down menu.](/desktop-wallet/assets/troubleshooting-force-reload.jpeg)
 
 <x-alert type="info">
 If the **connection issues** are **not** resolved using the advice above, check that your connections are not being blocked by **Firewall** or **Antivirus Software**.
@@ -345,7 +345,7 @@ Sometimes, a **user** or **developer** may require **additional** information wh
 
 The easiest and most common way is to use the built-in **Dev Tools**, which **will** show additional **console** and **network** information.
 
-![Dev tools can be opened by selecting ‘**Toggle Dev Tools**’ from the "**View**" drop-down menu.](/storage/docs/docs/desktop-wallet/assets/troubleshooting-dev-tools.jpeg)
+![Dev tools can be opened by selecting ‘**Toggle Dev Tools**’ from the "**View**" drop-down menu.](/desktop-wallet/assets/troubleshooting-dev-tools.jpeg)
 
 <x-alert type="info">
 If your issue is not covered here, please contact us using the ‘Technical Support’ form found [here](https://solar.io/contact)!
