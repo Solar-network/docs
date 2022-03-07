@@ -10,8 +10,7 @@ The SXP Desktop Wallet is an application which allows you to manage SXP transact
 
 ## Getting Started
 
-To get started with th
-e SXP Desktop Wallet, follow the documentation below for guides on Installation, Wallet Navigation, Creating Wallets and more...
+To get started with the SXP Desktop Wallet, follow the documentation below for guides on Installation, Wallet Navigation, Creating Wallets and more...
 <x-link-collection
     :links="[
         ['path' => '/docs/desktop-wallet/user-guides/installation', 'name' => 'Installation'],
@@ -25,7 +24,7 @@ e SXP Desktop Wallet, follow the documentation below for guides on Installation,
 
 ## Transactions
 
-The SXP Desktop Wallet enables you to send a wide variety of transactions on the SXP Public Network and other Solar Core based Blockchains. Follow the guides below for information on each transaction.
+The SXP Desktop Wallet enables you to send a wide variety of transactions on the SXP Blockchain and other Solar Core based blockchains. Follow the guides below for information on each transaction.
 <x-link-collection
     :links="[
         ['path' => '/docs/desktop-wallet/user-guides/how-to-send', 'name' => 'Send SXP Transfer'],

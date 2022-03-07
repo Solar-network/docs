@@ -30,4 +30,3 @@ For demonstration purposes, the images below are shown from the perspective of a
 
 ![Enter the message to verify, the public key of the wallet which was used to sign the message and the resulting signature, then click Next](/desktop-wallet/assets/verifymessage.png)
 
-![See whether the message was successfully verified or not](/desktop-wallet/assets/verifiedmessage.png)

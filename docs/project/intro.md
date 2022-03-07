@@ -11,7 +11,7 @@ An ecosystem with open-source developers and community involvement.
 
 ### 1.2 Project Mission
 
-Solar is powered by Blockchain with its own native SXP coin.<br />
+Solar is a blockchain with its own native SXP coin.<br />
 The SXP blockchain offers a wide variety of features and tools that allows us to level with enterprise-grade applications.
 
 

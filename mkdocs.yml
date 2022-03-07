@@ -159,7 +159,7 @@ nav:
   - Wallets:
     - Desktop Wallet:
       - desktop-wallet/intro.md
-      - desktop-wallet/introduction-to-ark-rewards.md
+      - desktop-wallet/introduction-to-solar-rewards.md
       - User Guides:
         - desktop-wallet/user-guides/how-to-add-a-contact.md
         - desktop-wallet/user-guides/how-to-create-or-import-wallets.md
@@ -167,8 +167,7 @@ nav:
         - desktop-wallet/user-guides/how-to-register-second-passphrase.md
         - desktop-wallet/user-guides/how-to-send.md
         - desktop-wallet/user-guides/how-to-sign-and-verify.md
-        - desktop-wallet/user-guides/how-to-store-ipfs-hash.md
-        - desktop-wallet/user-guides/how-to-vote-unvote.md
+        - desktop-wallet/user-guides/how-to-vote.md
         - desktop-wallet/user-guides/transaction-fees.md
       - desktop-wallet/support/troubleshooting.md
   - Project:

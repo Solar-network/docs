@@ -12,8 +12,4 @@ The application provides you a neat interface to add addresses to your contact l
 
 ![Enter the contact's address and click Next](/desktop-wallet/assets/contactdetails.png)
 
-![(Optional) Enter a name for the contact and click Done](/desktop-wallet/assets/contactconfirmation.png)
-
-![You can now view that contact's activity](/desktop-wallet/assets/contactactivity.png)
-
 ![And have access to the contact's activity through the contact interface](/desktop-wallet/assets/contactinterface.png)

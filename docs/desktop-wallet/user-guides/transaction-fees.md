@@ -12,4 +12,4 @@ A user may enter a lower fee if desired, though there is no guarantee the transa
 
 Fortunately, rejected transactions do not forfeit the fee as with Ethereum and its "gas fee".
 
-Since the SXP transaction failed and funds never technically left the user's wallet, the Desktop Wallet and APN (SXP Public Network) simply behave as if the transaction never existed.
+Since the SXP transaction failed and funds never technically left the user's wallet, the Desktop Wallet and Solar simply behave as if the transaction never existed.
