@@ -8,8 +8,6 @@ The application provides you a neat interface to add addresses to your contact l
 
 ## Adding a Contact
 
-![You can access the contact creation menu by first clicking on the contact icon in the wallet's navigation bar which will expose your contact list.](/desktop-wallet/assets/contacts.png)
-
 ![Enter the contact's address and click Next](/desktop-wallet/assets/contactdetails.png)
 
 ![And have access to the contact's activity through the contact interface](/desktop-wallet/assets/contactinterface.png)

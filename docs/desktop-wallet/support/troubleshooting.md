@@ -7,7 +7,7 @@ title: Troubleshooting
 This page will cover common issues related to the SXP Desktop Wallet `v2.x`.
 
 <x-alert type="info">
-If your issue is not covered here, please contact us using the ‘Technical Support’ form found [here](https://solar.io/contact)!
+If your issue is not covered here, ask the community [here](https://solar.org/community)!
 </x-alert>
 
 ## Getting Started
@@ -18,12 +18,12 @@ A user experiencing unexpected errors should first check that their apps and sof
 
 First, check that the latest version of the SXP Desktop Wallet is installed.
 
-All official Desktop Wallet releases can be found at the following link:
-<livewire:embed-link url="https://solar.io/download#desktop-wallet" caption="SXP.io Downloads | Download Blockchain Software" />
+All official Desktop Wallet releases can be found [here](https://solar.org/desktop-wallet)
+<livewire:embed-link url="https://solar.org/download#desktop-wallet" caption="Solar Downloads" />
 
 ---
 
-### SXP Ledger App
+<!-- ### SXP Ledger App
 
 If the issue involves a <u>**Ledger Hardware Wallet**</u>, check that the **SXP App** <u>***and***</u> **Ledger Firmware** are up-to-date.
 
@@ -104,9 +104,7 @@ A mnemonic recovery passphrase should be all <u>**lower-case**</u> letters with 
 
 ---
 
-<!-- markdownlint-disable MD026 -->
 ### My Recovery Phrase Was Entered as Recorded!
-<!-- markdownlint-enable MD026 -->
 
 If the mnemonic passphrase was entered **exactly** as recorded, compare each word to the official list found here:<br>[BIP-39 Wordlist: https://raw.githubusercontent.com/bitcoin/bips/master/bip-0039/english.txt](https://raw.githubusercontent.com/bitcoin/bips/master/bip-0039/english.txt)
 
@@ -120,10 +118,7 @@ Tip: Enter your SXP Address at [explorer.solar.io](http://explorer.solar.io) to 
 
 ---
 
-<!-- markdownlint-disable MD026 -->
 ### My Recovery Phrase is Gone!
-<!-- markdownlint-enable MD026 -->
-
 In most cases, the above advice will help a user successfully recover their wallet.
 
 Unfortunately, no mechanism exists to recover a lost recovery mnemonic. This security design is a fundamental element of Blockchain technology.
@@ -160,9 +155,7 @@ Users should also check that they are not using the <u>**Mnemonic Passphrase**</
 
 ---
 
-<!-- markdownlint-disable MD026 -->
 ### My Encryption Password is Wrong!
-<!-- markdownlint-enable MD026 -->
 
 If only the **encryption password** is wrong.. **FUNDS SAFU!**
 
@@ -174,9 +167,7 @@ An encryption password **must** contain at least:<br>- 8 characters in total<br>
 
 ---
 
-<!-- markdownlint-disable MD026 -->
 ### My Recovery Phrase <u>Seems</u> Correct!
-<!-- markdownlint-enable MD026 -->
 
 If your **mnemonic passphrase** appears to be correct, check that it was **entered** correctly.
 
@@ -317,11 +308,7 @@ Users should also check that they are properly **connected** to a **valid networ
 Advice on troubleshooting a **network connection** can be found <u>[here](#resolving-connectivity-issues)</u>.
 </x-alert>
 
----
-
-<!-- markdownlint-disable MD026 -->
 ### My Ledger issue is still not resolved!
-<!-- markdownlint-enable MD026 -->
 
 Most **Ledger** **connectivity** and **transaction** issues will be resolved by following the advice above.
 
@@ -345,7 +332,7 @@ Sometimes, a **user** or **developer** may require **additional** information wh
 
 The easiest and most common way is to use the built-in **Dev Tools**, which **will** show additional **console** and **network** information.
 
-![Dev tools can be opened by selecting ‘**Toggle Dev Tools**’ from the "**View**" drop-down menu.](/desktop-wallet/assets/troubleshooting-dev-tools.jpeg)
+![Dev tools can be opened by selecting ‘**Toggle Dev Tools**’ from the "**View**" drop-down menu.](/desktop-wallet/assets/troubleshooting-dev-tools.jpeg) -->
 
 <x-alert type="info">
 If your issue is not covered here, please contact us using the ‘Technical Support’ form found [here](https://solar.io/contact)!
