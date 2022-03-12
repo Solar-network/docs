@@ -11,4 +11,5 @@ Please keep in mind that the Whitepaper will be updated with more detailed infor
 
 1. [English Whitepaper February 2022](/assets/documents/whitepaper-february-2022.pdf)
 2. [Korean Whitepaper February 2022](/assets/documents/kr-whitepaper-february-2022.pdf)
+3. [Turkish Whitepaper February 2022](/assets/documents/tr-whitepaper-february-2022.pdf)
 
