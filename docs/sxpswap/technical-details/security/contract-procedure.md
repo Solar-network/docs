@@ -50,14 +50,14 @@ Due to the validation by the backend program and the validation from the forging
     Below links will direct you to the contracts on Binance Smart Chain and Ethereum.
     
     Warning! Do no interact with the contract directly unless you know what you are doing.
-    Interacting with the contract directly or sending your tokens to the contract without attaching a mainnet address will result in losing your SXP tokens.
+    Interacting with the contract directly or sending your tokens to the contract without attaching a correct mainnet address will result in losing your SXP tokens.
 
-    ### Mainnet (Coming Soon)
+    ### Mainnet (Not active. Audit in progress.)
 
-    1. [BEP20 Token Contract] - link removed | audit in progress 
-    2. [ERC20 Token Contract] - link removed | audit in progress
-    3. [BEP20 Swap Contract] - link removed | audit in progress
-    4. [ERC20 Swap Contract] - link removed | audit in progress
+    1. [BEP20 Token Contract](https://bscscan.com/address/0x47BEAd2563dCBf3bF2c9407fEa4dC236fAbA485A#code)
+    2. [ERC20 Token Contract](https://etherscan.io/address/0x8CE9137d39326AD0cD6491fb5CC0CbA0e089b6A9#code)
+    3. [BEP20 Swap Contract](https://bscscan.com/address/0x7c6DfA12C43cBe528ebB75b8BC225DE4D6B2C12a#code)
+    4. [ERC20 Swap Contract](https://etherscan.io/address/0x7c6DfA12C43cBe528ebB75b8BC225DE4D6B2C12a#code)
 
     ### Devnet (BSC Testnet and Ethereum Kovan)
 
