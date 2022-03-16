@@ -19,11 +19,11 @@ from client import ArkClient
 from client.exceptions import ArkHTTPException
 from crypto.constants import TRANSACTION_TYPE_GROUP
 from crypto.configuration.network import set_network
-from crypto.networks.devnet import Devnet
+from crypto.networks.testnet import testnet
 from crypto.transactions.builder.transfer import Transfer
 
 # Set your network
-set_network(Devnet)
+set_network(Testnet)
 
 # Configure our API client
 client = ArkClient('https://sxp.testnet.sh/api')
@@ -63,11 +63,11 @@ from client import ArkClient
 from client.exceptions import ArkHTTPException
 from crypto.constants import TRANSACTION_TYPE_GROUP
 from crypto.configuration.network import set_network
-from crypto.networks.devnet import Devnet
+from crypto.networks.testnet import Testnet
 from crypto.transactions.builder.second_signature_registration import SecondSignatureRegistration
 
 # Set your network
-set_network(Devnet)
+set_network(Testnet)
 
 # Configure our API client
 client = ArkClient('https://sxp.testnet.sh/api')
@@ -100,11 +100,11 @@ from client import ArkClient
 from client.exceptions import ArkHTTPException
 from crypto.constants import TRANSACTION_TYPE_GROUP
 from crypto.configuration.network import set_network
-from crypto.networks.devnet import Devnet
+from crypto.networks.testnet import Testnet
 from crypto.transactions.builder.delegate_registration import DelegateRegistration
 
 # Set your network
-set_network(Devnet)
+set_network(Testnet)
 
 # Configure our API client
 client = ArkClient('https://sxp.testnet.sh/api')
@@ -137,11 +137,11 @@ from client import ArkClient
 from client.exceptions import ArkHTTPException
 from crypto.constants import TRANSACTION_TYPE_GROUP
 from crypto.configuration.network import set_network
-from crypto.networks.devnet import Devnet
+from crypto.networks.testnet import Testnet
 from crypto.transactions.builder.vote import Vote
 
 # Set your network
-set_network(Devnet)
+set_network(Testnet)
 
 # Configure our API client
 client = ArkClient('https://sxp.testnet.sh/api')
@@ -178,11 +178,11 @@ from client import ArkClient
 from client.exceptions import ArkHTTPException
 from crypto.constants import TRANSACTION_TYPE_GROUP
 from crypto.configuration.network import set_network
-from crypto.networks.devnet import Devnet
+from crypto.networks.testnet import Testnet
 from crypto.transactions.builder.vote import Vote
 
 # Set your network
-set_network(Devnet)
+set_network(Testnet)
 
 # Configure our API client
 client = ArkClient('https://sxp.testnet.sh/api')
@@ -219,11 +219,11 @@ from client import ArkClient
 from client.exceptions import ArkHTTPException
 from crypto.constants import TRANSACTION_TYPE_GROUP
 from crypto.configuration.network import set_network
-from crypto.networks.devnet import Devnet
+from crypto.networks.testnet import Testnet
 from crypto.transactions.builder.multi_signature_registration import MultiSignatureRegistration
 
 # Set your network
-set_network(Devnet)
+set_network(Testnet)
 
 # Configure our API client
 client = ArkClient('https://sxp.testnet.sh/api')
@@ -265,11 +265,11 @@ from client import ArkClient
 from client.exceptions import ArkHTTPException
 from crypto.constants import TRANSACTION_TYPE_GROUP
 from crypto.configuration.network import set_network
-from crypto.networks.devnet import Devnet
+from crypto.networks.testnet import Testnet
 from crypto.transactions.builder.ipfs import IPFS
 
 # Set your network
-set_network(Devnet)
+set_network(Testnet)
 
 # Configure our API client
 client = ArkClient('https://sxp.testnet.sh/api')
@@ -302,11 +302,11 @@ from client import ArkClient
 from client.exceptions import ArkHTTPException
 from crypto.constants import TRANSACTION_TYPE_GROUP
 from crypto.configuration.network import set_network
-from crypto.networks.devnet import Devnet
+from crypto.networks.testnet import Testnet
 from crypto.transactions.builder.multi_payment import MultiPayment
 
 # Set your network
-set_network(Devnet)
+set_network(Testnet)
 
 # Configure our API client
 client = ArkClient('https://sxp.testnet.sh/api')
@@ -341,11 +341,11 @@ from client import ArkClient
 from client.exceptions import ArkHTTPException
 from crypto.constants import TRANSACTION_TYPE_GROUP
 from crypto.configuration.network import set_network
-from crypto.networks.devnet import Devnet
+from crypto.networks.testnet import Testnet
 from crypto.transactions.builder.delegate_resignation import DelegateResignation
 
 # Set your network
-set_network(Devnet)
+set_network(Testnet)
 
 # Configure our API client
 client = ArkClient('https://sxp.testnet.sh/api')
@@ -382,12 +382,12 @@ from client import ArkClient
 from client.exceptions import ArkHTTPException
 from crypto.constants import TRANSACTION_TYPE_GROUP
 from crypto.configuration.network import set_network
-from crypto.networks.devnet import Devnet
+from crypto.networks.testnet import Testnet
 from crypto.transactions.builder.htlc_lock import HtlcLock
 import hashlib
 
 # Set your network
-set_network(Devnet)
+set_network(Testnet)
 
 # Configure our API client
 client = ArkClient('https://sxp.testnet.sh/api')
@@ -429,12 +429,12 @@ from client import ArkClient
 from client.exceptions import ArkHTTPException
 from crypto.constants import TRANSACTION_TYPE_GROUP
 from crypto.configuration.network import set_network
-from crypto.networks.devnet import Devnet
+from crypto.networks.testnet import Testnet
 from crypto.transactions.builder.htlc_claim import HtlcClaim
 import hashlib
 
 # Set your network
-set_network(Devnet)
+set_network(Testnet)
 
 # Configure our API client
 client = ArkClient('https://sxp.testnet.sh/api')
@@ -474,11 +474,11 @@ from client import ArkClient
 from client.exceptions import ArkHTTPException
 from crypto.constants import TRANSACTION_TYPE_GROUP
 from crypto.configuration.network import set_network
-from crypto.networks.devnet import Devnet
+from crypto.networks.testnet import Testnet
 from crypto.transactions.builder.htlc_refund import HtlcRefund
 
 # Set your network
-set_network(Devnet)
+set_network(Testnet)
 
 # Configure our API client
 client = ArkClient('https://sxp.testnet.sh/api')

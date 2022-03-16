@@ -11,8 +11,8 @@ In this chapter we will go trough process step by step and describe how to remov
 ```json
 {
     "data": {
-        "symbol": "dSXP",
-        "explorer": "http://dexplorer.solar.org",
+        "symbol": "tSXP",
+        "explorer": "http://texplorer.solar.org",
         "version": 30,
     }
 }
@@ -23,7 +23,7 @@ In this chapter we will go trough process step by step and describe how to remov
 ```json
 {
     "data": {
-        "symbol": "dSXP",
+        "symbol": "tSXP",
         "version": 30,
     }
 }

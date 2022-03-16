@@ -57,10 +57,10 @@ Managers.configManager.setFromPreset("mainnet");
 Managers.configManager.setHeight(11273000);
 ```
 
-### Devnet
+### Testnet
 
 ```typescript
-Managers.configManager.setFromPreset("devnet");
+Managers.configManager.setFromPreset("testnet");
 Managers.configManager.setHeight(4006000);
 ```
 
@@ -74,7 +74,7 @@ const { Connection } = require("@solar-network/client");
 const client = new Connection("https://sxp.testnet.sh/api");
 
 // Ensure AIP11 is enabled for the Crypto SDK
-Managers.configManager.setFromPreset("devnet");
+Managers.configManager.setFromPreset("testnet");
 Managers.configManager.setHeight(4006000);
 
 (async () => {
@@ -113,7 +113,7 @@ const { Connection } = require("@solar-network/client");
 const client = new Connection("https://sxp.testnet.sh/api");
 
 // Ensure AIP11 is enabled for the Crypto SDK
-Managers.configManager.setFromPreset("devnet");
+Managers.configManager.setFromPreset("testnet");
 Managers.configManager.setHeight(4006000);
 
 (async () => {
@@ -146,7 +146,7 @@ const { Connection } = require("@solar-network/client");
 const client = new Connection("https://sxp.testnet.sh/api");
 
 // Ensure AIP11 is enabled for the Crypto SDK
-Managers.configManager.setFromPreset("devnet");
+Managers.configManager.setFromPreset("testnet");
 Managers.configManager.setHeight(4006000);
 
 (async () => {
@@ -179,7 +179,7 @@ const { Connection } = require("@solar-network/client");
 const client = new Connection("https://sxp.testnet.sh/api");
 
 // Ensure AIP11 is enabled for the Crypto SDK
-Managers.configManager.setFromPreset("devnet");
+Managers.configManager.setFromPreset("testnet");
 Managers.configManager.setHeight(4006000);
 
 (async () => {
@@ -216,7 +216,7 @@ const { Connection } = require("@solar-network/client");
 const client = new Connection("https://sxp.testnet.sh/api");
 
 // Ensure AIP11 is enabled for the Crypto SDK
-Managers.configManager.setFromPreset("devnet");
+Managers.configManager.setFromPreset("testnet");
 Managers.configManager.setHeight(4006000);
 
 (async () => {
@@ -253,7 +253,7 @@ const { Connection } = require("@solar-network/client");
 const client = new Connection("https://sxp.testnet.sh/api");
 
 // Ensure AIP11 is enabled for the Crypto SDK
-Managers.configManager.setFromPreset("devnet");
+Managers.configManager.setFromPreset("testnet");
 Managers.configManager.setHeight(4006000);
 
 (async () => {
@@ -297,7 +297,7 @@ const { Connection } = require("@solar-network/client");
 const client = new Connection("https://sxp.testnet.sh/api");
 
 // Ensure AIP11 is enabled for the Crypto SDK
-Managers.configManager.setFromPreset("devnet");
+Managers.configManager.setFromPreset("testnet");
 Managers.configManager.setHeight(4006000);
 
 (async () => {
@@ -330,7 +330,7 @@ const { Connection } = require("@solar-network/client");
 const client = new Connection("https://sxp.testnet.sh/api");
 
 // Ensure AIP11 is enabled for the Crypto SDK
-Managers.configManager.setFromPreset("devnet");
+Managers.configManager.setFromPreset("testnet");
 Managers.configManager.setHeight(4006000);
 
 (async () => {
@@ -365,7 +365,7 @@ const { Connection } = require("@solar-network/client");
 const client = new Connection("https://sxp.testnet.sh/api");
 
 // Ensure AIP11 is enabled for the Crypto SDK
-Managers.configManager.setFromPreset("devnet");
+Managers.configManager.setFromPreset("testnet");
 Managers.configManager.setHeight(4006000);
 
 (async () => {
@@ -401,7 +401,7 @@ const { Connection } = require("@solar-network/client");
 const client = new Connection("https://sxp.testnet.sh/api");
 
 // Ensure AIP11 is enabled for the Crypto SDK
-Managers.configManager.setFromPreset("devnet");
+Managers.configManager.setFromPreset("testnet");
 Managers.configManager.setHeight(4006000);
 
 (async () => {
@@ -441,7 +441,7 @@ const { Connection } = require("@solar-network/client");
 const client = new Connection("https://sxp.testnet.sh/api");
 
 // Ensure AIP11 is enabled for the Crypto SDK
-Managers.configManager.setFromPreset("devnet");
+Managers.configManager.setFromPreset("testnet");
 Managers.configManager.setHeight(4006000);
 
 (async () => {
@@ -481,7 +481,7 @@ const { Connection } = require("@solar-network/client");
 const client = new Connection("https://sxp.testnet.sh/api");
 
 // Ensure AIP11 is enabled for the Crypto SDK
-Managers.configManager.setFromPreset("devnet");
+Managers.configManager.setFromPreset("testnet");
 Managers.configManager.setHeight(4006000);
 
 (async () => {

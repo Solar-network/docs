@@ -1129,7 +1129,7 @@ Get settings for all networks.
 public static findByName(name: NetworkName)
 ```
 
-Get settings for a selected network, default network is devnet.
+Get settings for a selected network, default network is testnet.
 
 #### Parameters
 

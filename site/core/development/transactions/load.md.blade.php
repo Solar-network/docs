@@ -47,7 +47,7 @@ Locate file `app.json`. We will add our plugin name to the list of the loaded pl
 
 Note that you will need to add the plugin under both `core` and `relay` keys, to have the custom transaction registered when you run a relay or a full node.
 
-Repeat the process if needed for other network configurations (devnet, mainnet).
+Repeat the process if needed for other network configurations (testnet, mainnet).
 
 A fully working example is available for you to examine, learn and download here.
 

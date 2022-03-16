@@ -45,7 +45,7 @@ The code sample below downloads the needed files from our official [GitHub Core 
 </x-alert>
 
 ```bash
-NETWORK=devnet
+NETWORK=testnet
 mkdir ~/$NETWORK
 cd ~/$NETWORK
 curl -sOJ https://raw.githubusercontent.com/ArkEcosystem/core/master/docker/production/$NETWORK/docker-compose.yml
@@ -55,7 +55,7 @@ curl -sOJ https://raw.githubusercontent.com/ArkEcosystem/core/master/docker/prod
 ### Running a Relay Node
 
 ```bash
-cd ~/$NETWORK     # (NETWORK = devnet || mainnet)
+cd ~/$NETWORK     # (NETWORK = testnet || mainnet)
 docker-compose up -d
 ```
 
@@ -169,7 +169,7 @@ git clone https://github.com/ArkEcosystem/core
 Custom Docker image builds of Solar Core are possible by using the file `docker-compose-build.yml`. Make your own modifications of Solar Core source code and run your custom container by executing:
 
 ```bash
-cd ~/core/docker/production/$NETWORK     # (NETWORK = devnet || mainnet)
+cd ~/core/docker/production/$NETWORK     # (NETWORK = testnet || mainnet)
 docker-compose -f docker-compose-build.yml up -d
 ```
 
@@ -241,7 +241,7 @@ git clone https://github.com/ArkEcosystem/core
 ```
 
 ```bash
-cd ~/core/docker/development/$NETWORK     # (NETWORK = testnet || devnet)
+cd ~/core/docker/development/$NETWORK     # (NETWORK = testnet || testnet)
 docker-compose up
 ```
 
@@ -265,7 +265,7 @@ Along with PostgreSQL container, now you also have a NodeJS container which moun
 </x-alert>
 
 ```bash
-cd ~/core/docker/development/$NETWORK      # (NETWORK = testnet || devnet)
+cd ~/core/docker/development/$NETWORK      # (NETWORK = testnet || testnet)
 docker-compose up -d
 ```
 

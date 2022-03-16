@@ -57,7 +57,7 @@ Set what network you want to use in the crypto library
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| Network | network_object | Yes | Testnet, Devnet, Mainnet |
+| Network | network_object | Yes | Testnet, Testnet, Mainnet |
 
 #### Return Value
 
@@ -69,7 +69,7 @@ Set what network you want to use in the crypto library
 def get_network():
 ```
 
-Get settings for a selected network, default network is devnet
+Get settings for a selected network, default network is testnet
 
 #### Return Value
 

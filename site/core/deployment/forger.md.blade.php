@@ -74,7 +74,7 @@ solar config:forger
     ✔ Writing BIP39 passphrase to configuration.
 ```
 
-> _Note:_ passphrase (encrypted or not) is saved in file delegates.json in: `/home/solar/.config/solar-core/<network>/delegates.json` (where you replace &lt;network&gt; with network you operate on (mainnet, devnet, testnet). You can also run command `solar env:paths` to get this information.
+> _Note:_ passphrase (encrypted or not) is saved in file delegates.json in: `/home/solar/.config/solar-core/<network>/delegates.json` (where you replace &lt;network&gt; with network you operate on (mainnet, testnet). You can also run command `solar env:paths` to get this information.
 
 ## Starting the Forger Process
 

@@ -17,7 +17,7 @@ Core Server can be run in the following general modes:
 If you want to start a node which consists of a `relay` and `forger` process you can use any of the following commands (inside `packages/core`).
 
 * `yarn core:mainnet` =&gt; `packages/core/bin/config/networks/mainnet`
-* `yarn core:devnet` =&gt; `packages/core/bin/config/networks/devnet`
+* `yarn core:testnet` =&gt; `packages/core/bin/config/networks/testnet`
 * `yarn core:testnet` =&gt; `packages/core/bin/config/networks/testnet`
 
 ### Starting a Relay
@@ -25,7 +25,7 @@ If you want to start a node which consists of a `relay` and `forger` process you
 If you want to start a `relay` you can use any of the following commands (inside `packages/core`).
 
 * `yarn relay:mainnet` =&gt; `packages/core/bin/config/networks/mainnet`
-* `yarn relay:devnet` =&gt; `packages/core/bin/config/networks/devnet`
+* `yarn relay:testnet` =&gt; `packages/core/bin/config/networks/testnet`
 * `yarn relay:testnet` =&gt; `packages/core/bin/config/networks/testnet`
 
 ### Starting a Forger
@@ -33,7 +33,7 @@ If you want to start a `relay` you can use any of the following commands (inside
 If you want to start a `forger`, you can use any of the following commands (inside `packages/core`).
 
 * `yarn forger:mainnet` =&gt; `packages/core/bin/config/networks/mainnet`
-* `yarn forger:devnet` =&gt; `packages/core/bin/config/networks/devnet`
+* `yarn forger:testnet` =&gt; `packages/core/bin/config/networks/testnet`
 * `yarn forger:testnet` =&gt; `packages/core/bin/config/networks/testnet`
 
 ## The Core Boot Process

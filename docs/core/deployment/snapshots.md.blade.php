@@ -48,7 +48,7 @@ After it’s done, you’ll see this message informing you that the process to c
 
 This is it! You just made a backup of the blockchain.
 
-You can see a list of all completed snapshots in this filepath (_replace_ _**&lt;network&gt;**_ _with the network you operate on — mainnet,devnet,testnet_):
+You can see a list of all completed snapshots in this filepath (_replace_ _**&lt;network&gt;**_ _with the network you operate on — mainnet,testnet,testnet_):
 
 ```bash
 ls /home/solar/.local/share/solar-core/<network>/snapshots

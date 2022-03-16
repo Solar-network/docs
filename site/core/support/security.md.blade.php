@@ -50,7 +50,7 @@ To be eligible for compensation for reporting of a valid security vulnerability,
 
 * In order to receive payment, a proper invoice and personal information must be provided.
 * The Researcher must never have publicly disclosed the exploit or vulnerability.
-* The Researcher must not maliciously initiate an exploit on SXP Public Network. If testing is required for a potential vulnerability or to reproduce it, please use [SXP Development Network](https://dexplorer.solar.io) or set up your own local SXP-based chain.
+* The Researcher must not maliciously initiate an exploit on SXP Public Network. If testing is required for a potential vulnerability or to reproduce it, please use [SXP Development Network](https://texplorer.solar.io) or set up your own local SXP-based chain.
 * The Researcher must be able to completely reproduce and demonstrate the vulnerability or provide valid instructions so that our development team can do the same. This will allow us to properly test any patches prior to release.
 * Before reporting a security vulnerability, the Researcher should review public branches and the latest commits to see if the team is currently aware of the vulnerability. If after review the Researcher believes the security vulnerability is still present, a report should be submitted.
 

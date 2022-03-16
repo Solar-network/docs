@@ -33,7 +33,7 @@ From the `explorer` root folder run`yarn install` command. This will build and i
 
 ## STEP 3: Run Your Local Explorer
 
-There are several run modes available for the Explorer package. You can run it as official Mainnet or Devnet explorer, or have it run as a simple local express server, it is up to your needs.
+There are several run modes available for the Explorer package. You can run it as official Mainnet or Testnet Explorer, or have it run as a simple local express server, it is up to your needs.
 
 <x-alert type="info">
 More detailed information about all possible running modes can be found in the [Explorer Documentation](/docs/explorer/running-your-own-explorer) section.

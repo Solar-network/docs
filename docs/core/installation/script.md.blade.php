@@ -35,7 +35,7 @@ pm2 logs
 ```
 
 <x-alert type="info">
-Installing **Devnet** via `install.sh` requires additional steps to ensure the latest `@next` version is used. Proceed to the '[Additional Devnet Steps](#additional-devnet-steps)' section for further instructions.
+Installing **Testnet** via `install.sh` requires additional steps to ensure the latest `@next` version is used. Proceed to the '[Additional Testnet Steps](#additional-testnet-steps)' section for further instructions.
 </x-alert>
 
 ## Step-by-Step Installation via the Script
@@ -131,17 +131,17 @@ The install process might take a while, don’t interrupt it, wait for it to fin
 
 Once the installation of dependencies and Solar Core is finished you will need to select which network you wish to operate on. This can be achieved by pressing the `up` or `down` arrow keys and confirming your selection by pressing `enter`.
 
-`Mainnet` is the public network, `Devnet` is the development network for testing, and `Testnet` is network used for private testing.
+`Mainnet` is the public network, `Testnet` is the development network for testing, and `Testnet` is network used for private testing.
 
 ```bash
 ? What network do you want to operate on? › - Use arrow-keys. Return to submit.
-❯   devnet
+❯   testnet
     mainnet
     testnet
 ```
 
 <x-alert type="info">
-Installing **Devnet** via `install.sh` requires additional steps to ensure the latest `@next` version is used. After the following steps are completed, proceed to the '[Additional Devnet Steps](#additional-devnet-steps)' section for further instructions.
+Installing **Testnet** via `install.sh` requires additional steps to ensure the latest `@next` version is used. After the following steps are completed, proceed to the '[Additional Testnet Steps](#additional-testnet-steps)' section for further instructions.
 </x-alert>
 
 After you have made your selection, you will need to confirm by pressing `y` and confirm again with `enter`
@@ -153,7 +153,7 @@ After you have made your selection, you will need to confirm by pressing `y` and
 At this point, Solar Core has been successfully installed with its configuration options properly published.
 
 <x-alert type="info">
-**Tinkering with 'Devnet'?** Create an Address using the [SXP Desktop Wallet](https://solar.io/download#desktop-wallet), then head over to the [ACF's](https://arkcommunity.fund) [Community Discord](https://discord.gg/arkecosystem) and visit the **`#community_bots`** channel. (_Use the **`!faucet`** command to receive DARK tokens_)
+**Tinkering with 'Testnet'?** Create an Address using the [SXP Desktop Wallet](https://solar.io/download#desktop-wallet), then head over to the [ACF's](https://arkcommunity.fund) [Community Discord](https://discord.gg/arkecosystem) and visit the **`#community_bots`** channel. (_Use the **`!faucet`** command to receive DARK tokens_)
 </x-alert>
 
 ### Step 6: Configuring the Core Database
@@ -184,13 +184,13 @@ Enter the database name: <network_name> # your chosen network name
 
 This will create a PostgreSQL role and database to be used for storing blockchain data.
 
-## Additional Devnet Steps
+## Additional Testnet Steps
 
-When installing **Devnet** via the `install.sh` script, you'll also need to enter the following commands into your terminal to ensure the latest `@next` version is used:
+When installing **Testnet** via the `install.sh` script, you'll also need to enter the following commands into your terminal to ensure the latest `@next` version is used:
 
 ```bash
 solar config:cli --channel=next
-rm -rf ~/.config/solar-core/ && solar config:publish --network=devnet --reset
+rm -rf ~/.config/solar-core/ && solar config:publish --network=testnet --reset
 ```
 
 If custom data were entered during the installation process, you also might need to update your database settings in the `.env` file.

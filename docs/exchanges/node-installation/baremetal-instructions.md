@@ -1,8 +1,8 @@
 ---
 title: Relay node installation instructions (Bare Metal or VM)
 ---
-(Only Devnet is currently available)
-# BareMetal or VM Install (APN | Mainnet)
+
+# BareMetal or VM Install
 
 ## Installation Using the Official `Installation Script`
 
@@ -16,14 +16,13 @@ Always ensure your server has the latest set of updates, due to performance and 
 sudo apt-get update && sudo apt-get upgrade
 ```
 
-### 2. Add a New User and Add to the Sudo Group
+### 2. Add a New User
 
-It is best to create a specific SXP-related user, which can later own the required databases as well.
+It is best to create a specific SXP-related user, which can later own the required databases as well. The user does not require sudo rights.
 
 ```bash
 # add 'solar' user
 sudo adduser solar
-sudo usermod -aG sudo solar
 ```
 
 ### 3. Switch to the New User
@@ -32,55 +31,30 @@ Switch to the new user account and go to the base directory.
 
 ```bash
 # change to solar user and solar directory
-sudo su - solar
-cd ~
+su -l solar
 ```
 
 ### 4. Install Dependencies and Solar Core
 
 We will use Solar installer script that will install all of the necessary dependencies, Solar Core onto your server and publish configuration files for it. To install essentials run this command.
 
-1. For Devnet
+1. Download and run install-script
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/solar-network/core/develop/install-next.sh)
+curl -o install.sh https://raw.githubusercontent.com/solar-network/core/develop/install.sh
+bash install.sh
 ```
-
-2. For Mainnet
-```bash
-bash <(curl -s https://raw.githubusercontent.com/solar-network/core/main/install.sh)
-```
-
-You will be asked to input your current users password for sudo privileges. Write or paste it and press enter to start installation process.
 
 Process might take a while, don't interrupt it and wait for it to finish.
 
 ### 5. Selecting Solar Core Network
 
-Once installation of dependencies and Solar Core is finished you will need to select on which network you wish to operate, since we are setting `mainnet` node select it (Only `devnet` is currently available). This can be achieved by pressing `up` or `down` arrow keys and confirming selection with `enter`.
+Once installation of dependencies and Solar Core is finished you will need to select on which network you wish to operate. 
+This can be achieved by pressing `up` or `down` arrow keys and confirming selection with `enter`.
 
 After you made your selection you will need to confirm by pressing `y` and confirm with `enter`.
 
-### 6. Configuring Solar Core Database
 
-Last step of the Solar Core essential configuration is to configure database parameters. You will be presented with a prompt:
-
-```bash
-Would you like to configure the database? [y/N]:
-```
-
-Press `y` and confirm with `enter`.
-
-You can input any custom database credentials you want to use or use the one provided below:
-
-```bash
-Enter the database username: solar
-Enter the database password: password
-Enter the database name: solar_mainnet # or solar_devnet
-```
-
-This will create PostgreSQL role and database to be used for storing blockchain data.
-
-### 7. Starting Solar Relay Process
+### 6. Starting Solar Relay Process
 
 To start Solar relay process and with it synchronization process with Solar blockchain we need to start relay process with our integrated CLI:
 
@@ -94,7 +68,7 @@ If the process has started you will get a message:
 Starting solar-relay... done
 ```
 
-### 8. Checking to See if Everything Is Working
+### 7. Checking to See if Everything Is Working
 
 Now we want to see if the Solar relay process has started the synchronization process you can do that by running one of these two commands
 

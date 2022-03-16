@@ -87,7 +87,7 @@ The DEC representation is the "base 10" interpretation of our PrivateKey and giv
 
 ### WIF (PrivateKey)
 
-WIF stands for "Wallet Import Format", and is a BASE58-encoded PrivateKey prepended by a network prefix-byte (`0xaa` for SXP Mainnet & Devnet Network). The compression byte indicates that SXP uses compressed PublicKeys.
+WIF stands for "Wallet Import Format", and is a BASE58-encoded PrivateKey prepended by a network prefix-byte (`0xaa` for SXP Mainnet & Testnet Network). The compression byte indicates that SXP uses compressed PublicKeys.
 
 ![WIF Encoding](/core/assets/wif_nologo.svg)
 
@@ -114,11 +114,11 @@ Since an address is derived from a PublicKey, that means it is also mathematical
 | Network | dec | hex | Prefix | Example address |
 | :--- | :---: | :---: | :---: | :--- |
 | Mainnet | 23 | `0x17` | `A` | `AewxfHQobSc49a4radHp74JZCGP8LRe4xA` |
-| Devnet | 30 | `0x1E` | `D` | `D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib` |
+| Testnet | 30 | `0x1E` | `D` | `D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib` |
 
 #### Address Prefix Table
 
-The following is a full prefix-byte table for custom Address construction and is provided for informational purposes. While this would not be used for SXP Mainnet or Devnet, it _CAN_ be used for custom networks.
+The following is a full prefix-byte table for custom Address construction and is provided for informational purposes. While this would not be used for SXP Mainnet or Testnet, it _CAN_ be used for custom networks.
 
 | dec | hex | Prefix |
 | :---: | :---: | :---: |

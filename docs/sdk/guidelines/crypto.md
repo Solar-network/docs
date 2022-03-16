@@ -71,7 +71,7 @@ Following these guidelines is required to provide a streamlined experience acros
 * **time** Get the time elapsed since network start.
 * **epoch** Get the timestamp of the network start.
 
-## Networks (Mainnet, Devnet & Testnet)
+## Networks (Mainnet, Testnet)
 
 * **epoch** Get the epoch of the network.
 * **version** Get the version of the network.
@@ -112,7 +112,6 @@ You can check [https://github.com/solar-network/php-crypto](https://github.com/s
 │   ├── PublicKey
 │   └── WIF
 ├── Networks
-│   ├── Devnet
 │   ├── Mainnet
 │   └── Testnet
 ├── Transactions

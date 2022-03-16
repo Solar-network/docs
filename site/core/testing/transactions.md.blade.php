@@ -9,7 +9,7 @@ Transactions are an integral component of the Solar Core Framework and requires 
 - **Transactions are sent successfully**
 - **The correct detail of each transaction is reported within the Explorer.**
 - **Balances are updated correctly in the Explorer.**
-- **Alternatively, you can check the API to check that details of the transactions are correct. You can find an example of a Send transaction [here](https://dexplorer.solar.io/transactions/19f2686523685e876e6db74a0518612d0cd526b8db506aaa753df92c7cfa2570)**
+- **Alternatively, you can check the API to check that details of the transactions are correct. You can find an example of a Send transaction [here](https://texplorer.solar.io/transactions/19f2686523685e876e6db74a0518612d0cd526b8db506aaa753df92c7cfa2570)**
 
 ## Prerequisites
 
@@ -35,7 +35,7 @@ The transfer transaction enables a user to broadcast a transaction to the networ
 
 ## Multipayment Transaction
 
-This type is designed to reduce the payload on the blockchain by enabling multiple payments to be combined and broadcast to the network as a single transaction. This benefits the end user and delegates by lowering transaction fees per payment and reducing congestion. Solar Core (devnet) will allow allow up to 128 payments to be combined within a single transaction.
+This type is designed to reduce the payload on the blockchain by enabling multiple payments to be combined and broadcast to the network as a single transaction. This benefits the end user and delegates by lowering transaction fees per payment and reducing congestion. Solar Core (testnet) will allow allow up to 128 payments to be combined within a single transaction.
 
 - Before sending a transaction, note the balances of the sender and recipients via the explorer or API
 - Using the desktop wallet, send a multipayment transaction to X amounts of recipients.
@@ -43,7 +43,7 @@ This type is designed to reduce the payload on the blockchain by enabling multip
 - Search for the Transaction ID via Explorer or API and ensure that all transaction details are displayed correctly.
 - Search for the Block ID and ensure all details are correct.
 - Repeat this process several times with and without utilizing the vendorField.
-- Devnet has a limit of 128 recipients for a multipayment. Advanced users can attempt to exceed this amount in a multipayment transaction using tools outside of the Desktop Wallet.
+- Testnet has a limit of 128 recipients for a multipayment. Advanced users can attempt to exceed this amount in a multipayment transaction using tools outside of the Desktop Wallet.
 
 ## Delegate Registration
 

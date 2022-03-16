@@ -166,7 +166,7 @@ solar forger:run
 
 Solar Core CLI allows you to configure your Core environment (CLI, database & forger) by using the `config` commands. For the purpose of this testing, we will just test the database and forger `config` commands.
 <x-alert type="warning">
-Completing the following CLI configuration commands will overwrite parameters in your `.env` and `delegates.json` file located in `~/.config/solar-core/devnet/`. **Please backup your current files before progressing if required.**
+Completing the following CLI configuration commands will overwrite parameters in your `.env` and `delegates.json` file located in `~/.config/solar-core/testnet/`. **Please backup your current files before progressing if required.**
 </x-alert>
 
 To configure your database, run the following command:
@@ -177,7 +177,7 @@ solar config:database
 
 - You should now be prompted to configure a database.
 - Configure up your database with your own custom values
-- Once completed, run `less .config/solar-core/devnet/.env` and check your database parameters have now updated correctly.
+- Once completed, run `less .config/solar-core/testnet/.env` and check your database parameters have now updated correctly.
 
 To configure your forger, run the following command:
 
@@ -186,7 +186,7 @@ solar config:forger
 ```
 
 - Follow the onscreen prompts to complete a BIP39 configuration
-- Once complete, run `less .config/solar-core/devnet/delegates.json` and check your delegate passphrase is updated correctly.
+- Once complete, run `less .config/solar-core/testnet/delegates.json` and check your delegate passphrase is updated correctly.
 - Run the command again and complete a BIP38 configuration
 - Once complete, start your forger process and ensure the correct delegate is loaded after entering password.
 

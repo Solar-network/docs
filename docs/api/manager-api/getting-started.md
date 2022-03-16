@@ -32,7 +32,7 @@ solar help
 You should see `manager` section under available commands.
 
 <x-alert type="info">
-Core plugins are installed per network configuration, which allows installation of different plugins and plugin versions per network. Use `--network=mainnet/devnet/testnet` flag on each command if you are using more than one network configuration.
+Core plugins are installed per network configuration, which allows installation of different plugins and plugin versions per network. Use `--network=mainnet/testnet` flag on each command if you are using more than one network configuration.
 </x-alert>
 
 ## Configuration
