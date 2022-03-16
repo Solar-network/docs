@@ -7,11 +7,11 @@
 <a id=__codelineno-0-2 name=__codelineno-0-2></a><span class=kn>from</span> <span class=nn>client.exceptions</span> <span class=kn>import</span> <span class=n>ArkHTTPException</span>
 <a id=__codelineno-0-3 name=__codelineno-0-3></a><span class=kn>from</span> <span class=nn>crypto.constants</span> <span class=kn>import</span> <span class=n>TRANSACTION_TYPE_GROUP</span>
 <a id=__codelineno-0-4 name=__codelineno-0-4></a><span class=kn>from</span> <span class=nn>crypto.configuration.network</span> <span class=kn>import</span> <span class=n>set_network</span>
-<a id=__codelineno-0-5 name=__codelineno-0-5></a><span class=kn>from</span> <span class=nn>crypto.networks.devnet</span> <span class=kn>import</span> <span class=n>Devnet</span>
+<a id=__codelineno-0-5 name=__codelineno-0-5></a><span class=kn>from</span> <span class=nn>crypto.networks.testnet</span> <span class=kn>import</span> <span class=n>testnet</span>
 <a id=__codelineno-0-6 name=__codelineno-0-6></a><span class=kn>from</span> <span class=nn>crypto.transactions.builder.transfer</span> <span class=kn>import</span> <span class=n>Transfer</span>
 <a id=__codelineno-0-7 name=__codelineno-0-7></a>
 <a id=__codelineno-0-8 name=__codelineno-0-8></a><span class=c1># Set your network</span>
-<a id=__codelineno-0-9 name=__codelineno-0-9></a><span class=n>set_network</span><span class=p>(</span><span class=n>Devnet</span><span class=p>)</span>
+<a id=__codelineno-0-9 name=__codelineno-0-9></a><span class=n>set_network</span><span class=p>(</span><span class=n>Testnet</span><span class=p>)</span>
 <a id=__codelineno-0-10 name=__codelineno-0-10></a>
 <a id=__codelineno-0-11 name=__codelineno-0-11></a><span class=c1># Configure our API client</span>
 <a id=__codelineno-0-12 name=__codelineno-0-12></a><span class=n>client</span> <span class=o>=</span> <span class=n>ArkClient</span><span class=p>(</span><span class=s1>&#39;https://sxp.testnet.sh/api&#39;</span><span class=p>)</span>
@@ -42,11 +42,11 @@
 <a id=__codelineno-1-2 name=__codelineno-1-2></a><span class=kn>from</span> <span class=nn>client.exceptions</span> <span class=kn>import</span> <span class=n>ArkHTTPException</span>
 <a id=__codelineno-1-3 name=__codelineno-1-3></a><span class=kn>from</span> <span class=nn>crypto.constants</span> <span class=kn>import</span> <span class=n>TRANSACTION_TYPE_GROUP</span>
 <a id=__codelineno-1-4 name=__codelineno-1-4></a><span class=kn>from</span> <span class=nn>crypto.configuration.network</span> <span class=kn>import</span> <span class=n>set_network</span>
-<a id=__codelineno-1-5 name=__codelineno-1-5></a><span class=kn>from</span> <span class=nn>crypto.networks.devnet</span> <span class=kn>import</span> <span class=n>Devnet</span>
+<a id=__codelineno-1-5 name=__codelineno-1-5></a><span class=kn>from</span> <span class=nn>crypto.networks.testnet</span> <span class=kn>import</span> <span class=n>Testnet</span>
 <a id=__codelineno-1-6 name=__codelineno-1-6></a><span class=kn>from</span> <span class=nn>crypto.transactions.builder.second_signature_registration</span> <span class=kn>import</span> <span class=n>SecondSignatureRegistration</span>
 <a id=__codelineno-1-7 name=__codelineno-1-7></a>
 <a id=__codelineno-1-8 name=__codelineno-1-8></a><span class=c1># Set your network</span>
-<a id=__codelineno-1-9 name=__codelineno-1-9></a><span class=n>set_network</span><span class=p>(</span><span class=n>Devnet</span><span class=p>)</span>
+<a id=__codelineno-1-9 name=__codelineno-1-9></a><span class=n>set_network</span><span class=p>(</span><span class=n>Testnet</span><span class=p>)</span>
 <a id=__codelineno-1-10 name=__codelineno-1-10></a>
 <a id=__codelineno-1-11 name=__codelineno-1-11></a><span class=c1># Configure our API client</span>
 <a id=__codelineno-1-12 name=__codelineno-1-12></a><span class=n>client</span> <span class=o>=</span> <span class=n>ArkClient</span><span class=p>(</span><span class=s1>&#39;https://sxp.testnet.sh/api&#39;</span><span class=p>)</span>
@@ -74,11 +74,11 @@
 <a id=__codelineno-2-2 name=__codelineno-2-2></a><span class=kn>from</span> <span class=nn>client.exceptions</span> <span class=kn>import</span> <span class=n>ArkHTTPException</span>
 <a id=__codelineno-2-3 name=__codelineno-2-3></a><span class=kn>from</span> <span class=nn>crypto.constants</span> <span class=kn>import</span> <span class=n>TRANSACTION_TYPE_GROUP</span>
 <a id=__codelineno-2-4 name=__codelineno-2-4></a><span class=kn>from</span> <span class=nn>crypto.configuration.network</span> <span class=kn>import</span> <span class=n>set_network</span>
-<a id=__codelineno-2-5 name=__codelineno-2-5></a><span class=kn>from</span> <span class=nn>crypto.networks.devnet</span> <span class=kn>import</span> <span class=n>Devnet</span>
+<a id=__codelineno-2-5 name=__codelineno-2-5></a><span class=kn>from</span> <span class=nn>crypto.networks.testnet</span> <span class=kn>import</span> <span class=n>Testnet</span>
 <a id=__codelineno-2-6 name=__codelineno-2-6></a><span class=kn>from</span> <span class=nn>crypto.transactions.builder.delegate_registration</span> <span class=kn>import</span> <span class=n>DelegateRegistration</span>
 <a id=__codelineno-2-7 name=__codelineno-2-7></a>
 <a id=__codelineno-2-8 name=__codelineno-2-8></a><span class=c1># Set your network</span>
-<a id=__codelineno-2-9 name=__codelineno-2-9></a><span class=n>set_network</span><span class=p>(</span><span class=n>Devnet</span><span class=p>)</span>
+<a id=__codelineno-2-9 name=__codelineno-2-9></a><span class=n>set_network</span><span class=p>(</span><span class=n>Testnet</span><span class=p>)</span>
 <a id=__codelineno-2-10 name=__codelineno-2-10></a>
 <a id=__codelineno-2-11 name=__codelineno-2-11></a><span class=c1># Configure our API client</span>
 <a id=__codelineno-2-12 name=__codelineno-2-12></a><span class=n>client</span> <span class=o>=</span> <span class=n>ArkClient</span><span class=p>(</span><span class=s1>&#39;https://sxp.testnet.sh/api&#39;</span><span class=p>)</span>
@@ -106,11 +106,11 @@
 <a id=__codelineno-3-2 name=__codelineno-3-2></a><span class=kn>from</span> <span class=nn>client.exceptions</span> <span class=kn>import</span> <span class=n>ArkHTTPException</span>
 <a id=__codelineno-3-3 name=__codelineno-3-3></a><span class=kn>from</span> <span class=nn>crypto.constants</span> <span class=kn>import</span> <span class=n>TRANSACTION_TYPE_GROUP</span>
 <a id=__codelineno-3-4 name=__codelineno-3-4></a><span class=kn>from</span> <span class=nn>crypto.configuration.network</span> <span class=kn>import</span> <span class=n>set_network</span>
-<a id=__codelineno-3-5 name=__codelineno-3-5></a><span class=kn>from</span> <span class=nn>crypto.networks.devnet</span> <span class=kn>import</span> <span class=n>Devnet</span>
+<a id=__codelineno-3-5 name=__codelineno-3-5></a><span class=kn>from</span> <span class=nn>crypto.networks.testnet</span> <span class=kn>import</span> <span class=n>Testnet</span>
 <a id=__codelineno-3-6 name=__codelineno-3-6></a><span class=kn>from</span> <span class=nn>crypto.transactions.builder.vote</span> <span class=kn>import</span> <span class=n>Vote</span>
 <a id=__codelineno-3-7 name=__codelineno-3-7></a>
 <a id=__codelineno-3-8 name=__codelineno-3-8></a><span class=c1># Set your network</span>
-<a id=__codelineno-3-9 name=__codelineno-3-9></a><span class=n>set_network</span><span class=p>(</span><span class=n>Devnet</span><span class=p>)</span>
+<a id=__codelineno-3-9 name=__codelineno-3-9></a><span class=n>set_network</span><span class=p>(</span><span class=n>Testnet</span><span class=p>)</span>
 <a id=__codelineno-3-10 name=__codelineno-3-10></a>
 <a id=__codelineno-3-11 name=__codelineno-3-11></a><span class=c1># Configure our API client</span>
 <a id=__codelineno-3-12 name=__codelineno-3-12></a><span class=n>client</span> <span class=o>=</span> <span class=n>ArkClient</span><span class=p>(</span><span class=s1>&#39;https://sxp.testnet.sh/api&#39;</span><span class=p>)</span>
@@ -138,11 +138,11 @@
 <a id=__codelineno-4-2 name=__codelineno-4-2></a><span class=kn>from</span> <span class=nn>client.exceptions</span> <span class=kn>import</span> <span class=n>ArkHTTPException</span>
 <a id=__codelineno-4-3 name=__codelineno-4-3></a><span class=kn>from</span> <span class=nn>crypto.constants</span> <span class=kn>import</span> <span class=n>TRANSACTION_TYPE_GROUP</span>
 <a id=__codelineno-4-4 name=__codelineno-4-4></a><span class=kn>from</span> <span class=nn>crypto.configuration.network</span> <span class=kn>import</span> <span class=n>set_network</span>
-<a id=__codelineno-4-5 name=__codelineno-4-5></a><span class=kn>from</span> <span class=nn>crypto.networks.devnet</span> <span class=kn>import</span> <span class=n>Devnet</span>
+<a id=__codelineno-4-5 name=__codelineno-4-5></a><span class=kn>from</span> <span class=nn>crypto.networks.testnet</span> <span class=kn>import</span> <span class=n>Testnet</span>
 <a id=__codelineno-4-6 name=__codelineno-4-6></a><span class=kn>from</span> <span class=nn>crypto.transactions.builder.vote</span> <span class=kn>import</span> <span class=n>Vote</span>
 <a id=__codelineno-4-7 name=__codelineno-4-7></a>
 <a id=__codelineno-4-8 name=__codelineno-4-8></a><span class=c1># Set your network</span>
-<a id=__codelineno-4-9 name=__codelineno-4-9></a><span class=n>set_network</span><span class=p>(</span><span class=n>Devnet</span><span class=p>)</span>
+<a id=__codelineno-4-9 name=__codelineno-4-9></a><span class=n>set_network</span><span class=p>(</span><span class=n>Testnet</span><span class=p>)</span>
 <a id=__codelineno-4-10 name=__codelineno-4-10></a>
 <a id=__codelineno-4-11 name=__codelineno-4-11></a><span class=c1># Configure our API client</span>
 <a id=__codelineno-4-12 name=__codelineno-4-12></a><span class=n>client</span> <span class=o>=</span> <span class=n>ArkClient</span><span class=p>(</span><span class=s1>&#39;https://sxp.testnet.sh/api&#39;</span><span class=p>)</span>
@@ -170,11 +170,11 @@
 <a id=__codelineno-5-2 name=__codelineno-5-2></a><span class=kn>from</span> <span class=nn>client.exceptions</span> <span class=kn>import</span> <span class=n>ArkHTTPException</span>
 <a id=__codelineno-5-3 name=__codelineno-5-3></a><span class=kn>from</span> <span class=nn>crypto.constants</span> <span class=kn>import</span> <span class=n>TRANSACTION_TYPE_GROUP</span>
 <a id=__codelineno-5-4 name=__codelineno-5-4></a><span class=kn>from</span> <span class=nn>crypto.configuration.network</span> <span class=kn>import</span> <span class=n>set_network</span>
-<a id=__codelineno-5-5 name=__codelineno-5-5></a><span class=kn>from</span> <span class=nn>crypto.networks.devnet</span> <span class=kn>import</span> <span class=n>Devnet</span>
+<a id=__codelineno-5-5 name=__codelineno-5-5></a><span class=kn>from</span> <span class=nn>crypto.networks.testnet</span> <span class=kn>import</span> <span class=n>Testnet</span>
 <a id=__codelineno-5-6 name=__codelineno-5-6></a><span class=kn>from</span> <span class=nn>crypto.transactions.builder.multi_signature_registration</span> <span class=kn>import</span> <span class=n>MultiSignatureRegistration</span>
 <a id=__codelineno-5-7 name=__codelineno-5-7></a>
 <a id=__codelineno-5-8 name=__codelineno-5-8></a><span class=c1># Set your network</span>
-<a id=__codelineno-5-9 name=__codelineno-5-9></a><span class=n>set_network</span><span class=p>(</span><span class=n>Devnet</span><span class=p>)</span>
+<a id=__codelineno-5-9 name=__codelineno-5-9></a><span class=n>set_network</span><span class=p>(</span><span class=n>Testnet</span><span class=p>)</span>
 <a id=__codelineno-5-10 name=__codelineno-5-10></a>
 <a id=__codelineno-5-11 name=__codelineno-5-11></a><span class=c1># Configure our API client</span>
 <a id=__codelineno-5-12 name=__codelineno-5-12></a><span class=n>client</span> <span class=o>=</span> <span class=n>ArkClient</span><span class=p>(</span><span class=s1>&#39;https://sxp.testnet.sh/api&#39;</span><span class=p>)</span>
@@ -211,11 +211,11 @@
 <a id=__codelineno-6-2 name=__codelineno-6-2></a><span class=kn>from</span> <span class=nn>client.exceptions</span> <span class=kn>import</span> <span class=n>ArkHTTPException</span>
 <a id=__codelineno-6-3 name=__codelineno-6-3></a><span class=kn>from</span> <span class=nn>crypto.constants</span> <span class=kn>import</span> <span class=n>TRANSACTION_TYPE_GROUP</span>
 <a id=__codelineno-6-4 name=__codelineno-6-4></a><span class=kn>from</span> <span class=nn>crypto.configuration.network</span> <span class=kn>import</span> <span class=n>set_network</span>
-<a id=__codelineno-6-5 name=__codelineno-6-5></a><span class=kn>from</span> <span class=nn>crypto.networks.devnet</span> <span class=kn>import</span> <span class=n>Devnet</span>
+<a id=__codelineno-6-5 name=__codelineno-6-5></a><span class=kn>from</span> <span class=nn>crypto.networks.testnet</span> <span class=kn>import</span> <span class=n>Testnet</span>
 <a id=__codelineno-6-6 name=__codelineno-6-6></a><span class=kn>from</span> <span class=nn>crypto.transactions.builder.ipfs</span> <span class=kn>import</span> <span class=n>IPFS</span>
 <a id=__codelineno-6-7 name=__codelineno-6-7></a>
 <a id=__codelineno-6-8 name=__codelineno-6-8></a><span class=c1># Set your network</span>
-<a id=__codelineno-6-9 name=__codelineno-6-9></a><span class=n>set_network</span><span class=p>(</span><span class=n>Devnet</span><span class=p>)</span>
+<a id=__codelineno-6-9 name=__codelineno-6-9></a><span class=n>set_network</span><span class=p>(</span><span class=n>Testnet</span><span class=p>)</span>
 <a id=__codelineno-6-10 name=__codelineno-6-10></a>
 <a id=__codelineno-6-11 name=__codelineno-6-11></a><span class=c1># Configure our API client</span>
 <a id=__codelineno-6-12 name=__codelineno-6-12></a><span class=n>client</span> <span class=o>=</span> <span class=n>ArkClient</span><span class=p>(</span><span class=s1>&#39;https://sxp.testnet.sh/api&#39;</span><span class=p>)</span>
@@ -243,11 +243,11 @@
 <a id=__codelineno-7-2 name=__codelineno-7-2></a><span class=kn>from</span> <span class=nn>client.exceptions</span> <span class=kn>import</span> <span class=n>ArkHTTPException</span>
 <a id=__codelineno-7-3 name=__codelineno-7-3></a><span class=kn>from</span> <span class=nn>crypto.constants</span> <span class=kn>import</span> <span class=n>TRANSACTION_TYPE_GROUP</span>
 <a id=__codelineno-7-4 name=__codelineno-7-4></a><span class=kn>from</span> <span class=nn>crypto.configuration.network</span> <span class=kn>import</span> <span class=n>set_network</span>
-<a id=__codelineno-7-5 name=__codelineno-7-5></a><span class=kn>from</span> <span class=nn>crypto.networks.devnet</span> <span class=kn>import</span> <span class=n>Devnet</span>
+<a id=__codelineno-7-5 name=__codelineno-7-5></a><span class=kn>from</span> <span class=nn>crypto.networks.testnet</span> <span class=kn>import</span> <span class=n>Testnet</span>
 <a id=__codelineno-7-6 name=__codelineno-7-6></a><span class=kn>from</span> <span class=nn>crypto.transactions.builder.multi_payment</span> <span class=kn>import</span> <span class=n>MultiPayment</span>
 <a id=__codelineno-7-7 name=__codelineno-7-7></a>
 <a id=__codelineno-7-8 name=__codelineno-7-8></a><span class=c1># Set your network</span>
-<a id=__codelineno-7-9 name=__codelineno-7-9></a><span class=n>set_network</span><span class=p>(</span><span class=n>Devnet</span><span class=p>)</span>
+<a id=__codelineno-7-9 name=__codelineno-7-9></a><span class=n>set_network</span><span class=p>(</span><span class=n>Testnet</span><span class=p>)</span>
 <a id=__codelineno-7-10 name=__codelineno-7-10></a>
 <a id=__codelineno-7-11 name=__codelineno-7-11></a><span class=c1># Configure our API client</span>
 <a id=__codelineno-7-12 name=__codelineno-7-12></a><span class=n>client</span> <span class=o>=</span> <span class=n>ArkClient</span><span class=p>(</span><span class=s1>&#39;https://sxp.testnet.sh/api&#39;</span><span class=p>)</span>
@@ -277,11 +277,11 @@
 <a id=__codelineno-8-2 name=__codelineno-8-2></a><span class=kn>from</span> <span class=nn>client.exceptions</span> <span class=kn>import</span> <span class=n>ArkHTTPException</span>
 <a id=__codelineno-8-3 name=__codelineno-8-3></a><span class=kn>from</span> <span class=nn>crypto.constants</span> <span class=kn>import</span> <span class=n>TRANSACTION_TYPE_GROUP</span>
 <a id=__codelineno-8-4 name=__codelineno-8-4></a><span class=kn>from</span> <span class=nn>crypto.configuration.network</span> <span class=kn>import</span> <span class=n>set_network</span>
-<a id=__codelineno-8-5 name=__codelineno-8-5></a><span class=kn>from</span> <span class=nn>crypto.networks.devnet</span> <span class=kn>import</span> <span class=n>Devnet</span>
+<a id=__codelineno-8-5 name=__codelineno-8-5></a><span class=kn>from</span> <span class=nn>crypto.networks.testnet</span> <span class=kn>import</span> <span class=n>Testnet</span>
 <a id=__codelineno-8-6 name=__codelineno-8-6></a><span class=kn>from</span> <span class=nn>crypto.transactions.builder.delegate_resignation</span> <span class=kn>import</span> <span class=n>DelegateResignation</span>
 <a id=__codelineno-8-7 name=__codelineno-8-7></a>
 <a id=__codelineno-8-8 name=__codelineno-8-8></a><span class=c1># Set your network</span>
-<a id=__codelineno-8-9 name=__codelineno-8-9></a><span class=n>set_network</span><span class=p>(</span><span class=n>Devnet</span><span class=p>)</span>
+<a id=__codelineno-8-9 name=__codelineno-8-9></a><span class=n>set_network</span><span class=p>(</span><span class=n>Testnet</span><span class=p>)</span>
 <a id=__codelineno-8-10 name=__codelineno-8-10></a>
 <a id=__codelineno-8-11 name=__codelineno-8-11></a><span class=c1># Configure our API client</span>
 <a id=__codelineno-8-12 name=__codelineno-8-12></a><span class=n>client</span> <span class=o>=</span> <span class=n>ArkClient</span><span class=p>(</span><span class=s1>&#39;https://sxp.testnet.sh/api&#39;</span><span class=p>)</span>
@@ -309,12 +309,12 @@
 <a id=__codelineno-9-2 name=__codelineno-9-2></a><span class=kn>from</span> <span class=nn>client.exceptions</span> <span class=kn>import</span> <span class=n>ArkHTTPException</span>
 <a id=__codelineno-9-3 name=__codelineno-9-3></a><span class=kn>from</span> <span class=nn>crypto.constants</span> <span class=kn>import</span> <span class=n>TRANSACTION_TYPE_GROUP</span>
 <a id=__codelineno-9-4 name=__codelineno-9-4></a><span class=kn>from</span> <span class=nn>crypto.configuration.network</span> <span class=kn>import</span> <span class=n>set_network</span>
-<a id=__codelineno-9-5 name=__codelineno-9-5></a><span class=kn>from</span> <span class=nn>crypto.networks.devnet</span> <span class=kn>import</span> <span class=n>Devnet</span>
+<a id=__codelineno-9-5 name=__codelineno-9-5></a><span class=kn>from</span> <span class=nn>crypto.networks.testnet</span> <span class=kn>import</span> <span class=n>Testnet</span>
 <a id=__codelineno-9-6 name=__codelineno-9-6></a><span class=kn>from</span> <span class=nn>crypto.transactions.builder.htlc_lock</span> <span class=kn>import</span> <span class=n>HtlcLock</span>
 <a id=__codelineno-9-7 name=__codelineno-9-7></a><span class=kn>import</span> <span class=nn>hashlib</span>
 <a id=__codelineno-9-8 name=__codelineno-9-8></a>
 <a id=__codelineno-9-9 name=__codelineno-9-9></a><span class=c1># Set your network</span>
-<a id=__codelineno-9-10 name=__codelineno-9-10></a><span class=n>set_network</span><span class=p>(</span><span class=n>Devnet</span><span class=p>)</span>
+<a id=__codelineno-9-10 name=__codelineno-9-10></a><span class=n>set_network</span><span class=p>(</span><span class=n>Testnet</span><span class=p>)</span>
 <a id=__codelineno-9-11 name=__codelineno-9-11></a>
 <a id=__codelineno-9-12 name=__codelineno-9-12></a><span class=c1># Configure our API client</span>
 <a id=__codelineno-9-13 name=__codelineno-9-13></a><span class=n>client</span> <span class=o>=</span> <span class=n>ArkClient</span><span class=p>(</span><span class=s1>&#39;https://sxp.testnet.sh/api&#39;</span><span class=p>)</span>
@@ -351,12 +351,12 @@
 <a id=__codelineno-10-2 name=__codelineno-10-2></a><span class=kn>from</span> <span class=nn>client.exceptions</span> <span class=kn>import</span> <span class=n>ArkHTTPException</span>
 <a id=__codelineno-10-3 name=__codelineno-10-3></a><span class=kn>from</span> <span class=nn>crypto.constants</span> <span class=kn>import</span> <span class=n>TRANSACTION_TYPE_GROUP</span>
 <a id=__codelineno-10-4 name=__codelineno-10-4></a><span class=kn>from</span> <span class=nn>crypto.configuration.network</span> <span class=kn>import</span> <span class=n>set_network</span>
-<a id=__codelineno-10-5 name=__codelineno-10-5></a><span class=kn>from</span> <span class=nn>crypto.networks.devnet</span> <span class=kn>import</span> <span class=n>Devnet</span>
+<a id=__codelineno-10-5 name=__codelineno-10-5></a><span class=kn>from</span> <span class=nn>crypto.networks.testnet</span> <span class=kn>import</span> <span class=n>Testnet</span>
 <a id=__codelineno-10-6 name=__codelineno-10-6></a><span class=kn>from</span> <span class=nn>crypto.transactions.builder.htlc_claim</span> <span class=kn>import</span> <span class=n>HtlcClaim</span>
 <a id=__codelineno-10-7 name=__codelineno-10-7></a><span class=kn>import</span> <span class=nn>hashlib</span>
 <a id=__codelineno-10-8 name=__codelineno-10-8></a>
 <a id=__codelineno-10-9 name=__codelineno-10-9></a><span class=c1># Set your network</span>
-<a id=__codelineno-10-10 name=__codelineno-10-10></a><span class=n>set_network</span><span class=p>(</span><span class=n>Devnet</span><span class=p>)</span>
+<a id=__codelineno-10-10 name=__codelineno-10-10></a><span class=n>set_network</span><span class=p>(</span><span class=n>Testnet</span><span class=p>)</span>
 <a id=__codelineno-10-11 name=__codelineno-10-11></a>
 <a id=__codelineno-10-12 name=__codelineno-10-12></a><span class=c1># Configure our API client</span>
 <a id=__codelineno-10-13 name=__codelineno-10-13></a><span class=n>client</span> <span class=o>=</span> <span class=n>ArkClient</span><span class=p>(</span><span class=s1>&#39;https://sxp.testnet.sh/api&#39;</span><span class=p>)</span>
@@ -387,11 +387,11 @@
 <a id=__codelineno-11-2 name=__codelineno-11-2></a><span class=kn>from</span> <span class=nn>client.exceptions</span> <span class=kn>import</span> <span class=n>ArkHTTPException</span>
 <a id=__codelineno-11-3 name=__codelineno-11-3></a><span class=kn>from</span> <span class=nn>crypto.constants</span> <span class=kn>import</span> <span class=n>TRANSACTION_TYPE_GROUP</span>
 <a id=__codelineno-11-4 name=__codelineno-11-4></a><span class=kn>from</span> <span class=nn>crypto.configuration.network</span> <span class=kn>import</span> <span class=n>set_network</span>
-<a id=__codelineno-11-5 name=__codelineno-11-5></a><span class=kn>from</span> <span class=nn>crypto.networks.devnet</span> <span class=kn>import</span> <span class=n>Devnet</span>
+<a id=__codelineno-11-5 name=__codelineno-11-5></a><span class=kn>from</span> <span class=nn>crypto.networks.testnet</span> <span class=kn>import</span> <span class=n>Testnet</span>
 <a id=__codelineno-11-6 name=__codelineno-11-6></a><span class=kn>from</span> <span class=nn>crypto.transactions.builder.htlc_refund</span> <span class=kn>import</span> <span class=n>HtlcRefund</span>
 <a id=__codelineno-11-7 name=__codelineno-11-7></a>
 <a id=__codelineno-11-8 name=__codelineno-11-8></a><span class=c1># Set your network</span>
-<a id=__codelineno-11-9 name=__codelineno-11-9></a><span class=n>set_network</span><span class=p>(</span><span class=n>Devnet</span><span class=p>)</span>
+<a id=__codelineno-11-9 name=__codelineno-11-9></a><span class=n>set_network</span><span class=p>(</span><span class=n>Testnet</span><span class=p>)</span>
 <a id=__codelineno-11-10 name=__codelineno-11-10></a>
 <a id=__codelineno-11-11 name=__codelineno-11-11></a><span class=c1># Configure our API client</span>
 <a id=__codelineno-11-12 name=__codelineno-11-12></a><span class=n>client</span> <span class=o>=</span> <span class=n>ArkClient</span><span class=p>(</span><span class=s1>&#39;https://sxp.testnet.sh/api&#39;</span><span class=p>)</span>

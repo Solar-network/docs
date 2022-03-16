@@ -110,7 +110,7 @@ will generate the following docker files inside our `core/docker` folder (see fo
 ```bash
 #core/docker tree in the cloned repository folder
 ├── development
-│   ├── devnet
+│   ├── testnet
 │   │   ├── Dockerfile
 │   │   ├── docker-compose.yml
 │   │   ├── entrypoint.sh
@@ -151,7 +151,7 @@ sudo -i -u postgres psql -c "CREATE DATABASE sxp_testnet WITH OWNER solar;"
 sudo -i -u postgres psql -c "CREATE DATABASE sxp_devnet WITH OWNER solar;"
 ```
 
-The commands above install PostgreSQL database locally and create databases for running testnet and devnet networks with user `solar` as the database owner. If you have skipped the Step 1: User setup, you have to change `solar` user to your development username, usually the logged in username.
+The commands above install PostgreSQL database locally and create databases for running testnet and testnet networks with user `solar` as the database owner. If you have skipped the Step 1: User setup, you have to change `solar` user to your development username, usually the logged in username.
 
 ## Start Core and Play With Public API
 

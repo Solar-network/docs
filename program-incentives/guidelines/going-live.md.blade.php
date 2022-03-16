@@ -14,7 +14,7 @@ To make sure that everything is working as intended you should follow these chec
 
 * Run tests and make sure CircleCI is passing
 * Sync from 0 on mainnet
-* Sync from 0 on devnet
+* Sync from 0 on testnet
 * Deploy a fresh network from 0
 * Test explorer with the `develop` branch of `core`
 * Test that whitelist features are still working

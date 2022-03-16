@@ -135,17 +135,17 @@ The install process might take a while, don’t interrupt it, wait for it to fin
 
 Once the installation of dependencies and Solar Core is finished you will need to select which network you wish to operate on. This can be achieved by pressing `up` or `down` arrow keys and confirming selection with `enter`.
 
-`Mainnet` is the public network, `Devnet` is the development network for testing, and `Testnet` is our private testing network.
+`Mainnet` is the public network, `Testnet` is the development network for testing, and `Testnet` is our private testing network.
 
 ```bash
 ? What network do you want to operate on? › - Use arrow-keys. Return to submit.
-    devnet
+    testnet
 ❯   mainnet
     testnet
 ```
 
 <x-alert type="info">
-Experimenting with `Devnet`? Create an Address using the [SXP Desktop Wallet](https://solar.io/download#desktop-wallet), then head over to the [ACF's](https://arkcommunity.fund) [Community Discord](https://discord.gg/arkecosystem) and visit the **`#community_bots`** channel. Use the **`!faucet`** command to receive DARK tokens.
+Experimenting with `Testnet`? Create an Address using the [SXP Desktop Wallet](https://solar.io/download#desktop-wallet), then head over to the [ACF's](https://arkcommunity.fund) [Community Discord](https://discord.gg/arkecosystem) and visit the **`#community_bots`** channel. Use the **`!faucet`** command to receive DARK tokens.
 </x-alert>
 
 After you have made your selection, you will need to confirm by pressing `y` and confirm again with `enter`
@@ -184,13 +184,13 @@ This will create a PostgreSQL role and database to be used for storing blockchai
 
 ## Step 10: Starting SXP Relay process
 
-_NOTE: if you are going to operate on Devnet, before you start relay you will need to run this command to switch NPM channels to latest release (do not run this on Mainnet):_
+_NOTE: if you are going to operate on Testnet, before you start relay you will need to run this command to switch NPM channels to latest release (do not run this on Mainnet):_
 
 ```bash
-# only run these on Devnet, before starting the relay process with 'solar relay:start'
+# only run these on Testnet, before starting the relay process with 'solar relay:start'
 # !!! DO NOT RUN THESE ON MAINNET !!!
 solar config:cli --channel=next
-rm -rf ~/.config/solar-core/ && solar config:publish --network=devnet --reset
+rm -rf ~/.config/solar-core/ && solar config:publish --network=testnet --reset
 ```
 
 ```bash

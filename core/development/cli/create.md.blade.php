@@ -119,7 +119,7 @@ solar help --network=testnet
 ```
 
 <x-alert type="info">
-To successfully load CLI plugin you need to provide --network flag, since plugins are installed for each network (testnet, devnet, mainnet) separately.
+To successfully load CLI plugin you need to provide --network flag, since plugins are installed for each network (testnet, mainnet) separately.
 
 Optionally you can also define custom data path using CORE_PATH_DATA env variable.
 </x-alert>

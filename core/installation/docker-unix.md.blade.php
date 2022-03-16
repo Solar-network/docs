@@ -58,7 +58,7 @@ PostgreSQL is run in a separate container and its port gets mapped to your local
 </x-alert>
 
 ```bash
-cd docker/development/$NETWORK     # (NETWORK = testnet || devnet)
+cd docker/development/$NETWORK     # (NETWORK = testnet || testnet)
 docker-compose up postgres
 ```
 
@@ -84,7 +84,7 @@ Along with PostgreSQL container, now you also have a NodeJS container which moun
 </x-alert>
 
 ```bash
-cd docker/development/$NETWORK      # (NETWORK = testnet || devnet)
+cd docker/development/$NETWORK      # (NETWORK = testnet || testnet)
 ```
 
 ```bash
@@ -112,7 +112,7 @@ yarn full:testnet
 
 // or
 
-yarn relay:devnet
+yarn relay:testnet
 ```
 
 _Need to start everything from scratch and make sure there are no remaining cached containers, images or volumes left? Just use the **purge_all.sh** script._
