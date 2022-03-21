@@ -65,14 +65,14 @@ Solidity Smart Contracts on the SXP Blockchain.<br />
 The Solar Core also enables dynamic forging rewards based on the position of a delegate.<br />
 
 
-## 3. SXP Token Overview & Use Cases
+## 3. SXP Coin Overview & Use Cases
 
 SXP utilizes a Delegated Proof of Stake concensus, from which the forging rewards are distributed to delegates.<br />
 The delegates are able to further distribute these rewards to their voters and keep a percentage as reward for the contribution to the network.<br />
 
 90% of the transaction fees are automatically burned on the network and 10% are rewarded to delegates that forge the block with the fees.<br />
 
-Users may use the SXP token in the following ways:
+Users may use the SXP coin in the following ways:
 
 - Payments
 - Create fungible and non-fungible tokens
