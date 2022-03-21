@@ -56,8 +56,8 @@ Due to the validation by the backend program and the validation from the forging
 
     1. [BEP20 Token Contract](https://bscscan.com/address/0x47BEAd2563dCBf3bF2c9407fEa4dC236fAbA485A#code)
     2. [ERC20 Token Contract](https://etherscan.io/address/0x8CE9137d39326AD0cD6491fb5CC0CbA0e089b6A9#code)
-    3. [BEP20 Swap Contract](https://bscscan.com/address/0x7c6DfA12C43cBe528ebB75b8BC225DE4D6B2C12a#code)
-    4. [ERC20 Swap Contract](https://etherscan.io/address/0x7c6DfA12C43cBe528ebB75b8BC225DE4D6B2C12a#code)
+    3. [BEP20 Swap Contract](https://bscscan.com/address/0x66b44a53b55d2e4d69976ccf196d6bed2861d5a6#code)
+    4. [ERC20 Swap Contract](https://etherscan.io/address/0x3996e6837d7f43b046a95517436d1aafc3bcc135#code)
 
     ### Testnet (BSC Testnet and Ethereum Kovan)
 
