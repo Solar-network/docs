@@ -13,7 +13,7 @@ On a fresh Ubuntu installation, follow these commands.
 Always ensure your server has the latest set of updates, due to performance and security considerations.
 
 ```bash
-sudo apt-get update && sudo apt-get upgrade
+apt-get update && apt-get upgrade
 ```
 
 ### 2. Add a New User
@@ -40,7 +40,7 @@ We will use Solar installer script that will install all of the necessary depend
 
 1. Download and run install-script
 ```bash
-curl -o install.sh https://raw.githubusercontent.com/solar-network/core/develop/install.sh
+wget -O install.sh https://raw.githubusercontent.com/solar-network/core/main/install.sh
 bash install.sh
 ```
 
