@@ -24,7 +24,7 @@ Read the instructions below to swap your ERC20/BEP20 SXP tokens to Mainnet SXP c
 1. Create a mainnet address using the [Solar Desktop Wallet](https://solar.org/desktop-wallet) or [click here to learn more about creating wallets](/desktop-wallet/user-guides/how-to-create-or-import-wallets/).
 2. Make sure to securely store your passphrase with additional backups. Do not share this passphrase with anyone. 
 3. Make sure to have the SXP tokens (BEP20 or ERC20) in your MetaMask wallet with gas to cover the fees for the swap.
-4. Visit the Swap Website and make sure that you are visiting the right domain. [https://swap.solar.org](https://swap.testnet.sh)
+4. Visit the Swap Website and make sure that you are visiting the right domain. [https://swap.solar.org](https://swap.solar.org)
 ![4](/sxpswap/assets/4.png)
 5. Connect to your MetaMask Wallet and click next.
 6. Select the network where you are holding your SXP tokens and click next.
