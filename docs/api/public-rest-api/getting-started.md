@@ -23,7 +23,7 @@ Requests that return multiple items will be paginated to 100 items by default. Y
 
 If you are not running a relay yourself you can test API calls using:
 
-* Mainnet: [https://sxp.mainnet.sh/api](https://sxp.mainnet.sh/api)
-* Testnet: [https://sxp.testnet.sh/api](https://sxp.testnet.sh/api)
+* Mainnet: [https://sxp.mainnet.sh](https://sxp.mainnet.sh)
+* Testnet: [https://sxp.testnet.sh](https://sxp.testnet.sh)
 
 Happy developing!

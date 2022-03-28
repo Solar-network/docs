@@ -14,4 +14,4 @@ Use the sidebar to navigate this section.
 
 A dedicated Promised NodeJS Module is available for exchanges that wish to you use a secure Public API for the exchange operations.
 [Click here for more information.](https://github.com/Solar-network/solar-js-sdk/)
-The endpoint for mainnet is https://sxp.mainnet.sh/api, please use https://sxp.testnet.sh/api" for the development network.
+The endpoint for mainnet is https://sxp.mainnet.sh, please use https://sxp.testnet.sh" for the development network.
