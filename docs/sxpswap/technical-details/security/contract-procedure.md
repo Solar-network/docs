@@ -52,22 +52,16 @@ Due to the validation by the backend program and the validation from the forging
     Warning! Do no interact with the contract directly unless you know what you are doing.
     Interacting with the contract directly or sending your tokens to the contract without attaching a correct mainnet address will result in losing your SXP tokens.
 
-    ### Mainnet (Not active. Audit in progress.)
+    ### Mainnet (Not active)
 
     1. [BEP20 Token Contract](https://bscscan.com/address/0x47BEAd2563dCBf3bF2c9407fEa4dC236fAbA485A#code)
     2. [ERC20 Token Contract](https://etherscan.io/address/0x8CE9137d39326AD0cD6491fb5CC0CbA0e089b6A9#code)
-    3. [BEP20 Swap Contract](https://bscscan.com/address/0x66b44a53b55d2e4d69976ccf196d6bed2861d5a6#code)
-    4. [ERC20 Swap Contract](https://etherscan.io/address/0x3996e6837d7f43b046a95517436d1aafc3bcc135#code)
-
-    ### Testnet (BSC Testnet and Ethereum Kovan)
-
-    1. [BEP20 Token Contract](https://testnet.bscscan.com/address/0x8b06059234080fcb3e5f32598bf256d6d911fc26#code)
-    2. [ERC20 Token Contract](https://kovan.etherscan.io/address/0x3DD5CfbC967593E8D7C7f391F131E44c0A8a6892#code)
-    3. [BEP20 Swap Contract](https://testnet.bscscan.com/address/0xB2C07186bF2a85f2a08C5354e02609eB3D7360eD#code)
-    4. [ERC20 Swap Contract](https://kovan.etherscan.io/address/0xb86c3e255cfe9edcfaa3940701c17f2083fbb251#code)
+    3. [BEP20 Swap Contract](https://bscscan.com/address/0x44cf30ea4e58818bfae4b8499be409cd4fdd5a20#code)
+    4. [ERC20 Swap Contract](https://etherscan.io/address/0x71f7505a78fd1e044ebf38ab6876700a907fc53a#code)
 
     Additionally, exchanges are also able to use the Metamask version of the swap.
     For testnet, this is available under https://swap.testnet.sh
+    For mainnet under https://swap.solar.org 
     Contact us if you wish to receive SXP testnet tokens on BSC Testnet or Ethereum Kovan.
 
 
