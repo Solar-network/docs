@@ -15,8 +15,8 @@ https://github.com/solar-network/python-client
 ## Creating and Broadcasting a Transfer
 
 ```python
-from client import ArkClient
-from client.exceptions import ArkHTTPException
+from client import SolarClient
+from client.exceptions import SolarHTTPException
 from crypto.constants import TRANSACTION_TYPE_GROUP
 from crypto.configuration.network import set_network
 from crypto.networks.testnet import testnet
@@ -26,7 +26,7 @@ from crypto.transactions.builder.transfer import Transfer
 set_network(Testnet)
 
 # Configure our API client
-client = ArkClient('https://sxp.testnet.sh/api')
+client = SolarClient('https://sxp.testnet.sh/api')
 
 # Step 1: Retrieve the incremental nonce of the sender wallet
 senderWallet = client.wallets.get('YOUR_SENDER_WALLET_ADDRESS')
@@ -45,7 +45,7 @@ transaction.schnorr_sign('this is a top secret passphrase')
 # Step 3: Broadcast the transaction
 try:
     broadcastResponse = client.transactions.create([transaction.to_dict()])
-except ArkHTTPException as exception:
+except SolarHTTPException as exception:
     print(exception.response.json())
 
 # Step 4: Log the response
@@ -59,8 +59,8 @@ The vendorField is optional and limited to a length of 255 characters. It can be
 ## Creating and Broadcasting a Second Signature
 
 ```python
-from client import ArkClient
-from client.exceptions import ArkHTTPException
+from client import SolarClient
+from client.exceptions import SolarHTTPException
 from crypto.constants import TRANSACTION_TYPE_GROUP
 from crypto.configuration.network import set_network
 from crypto.networks.testnet import Testnet
@@ -70,7 +70,7 @@ from crypto.transactions.builder.second_signature_registration import SecondSign
 set_network(Testnet)
 
 # Configure our API client
-client = ArkClient('https://sxp.testnet.sh/api')
+client = SolarClient('https://sxp.testnet.sh/api')
 
 # Step 1: Retrieve the incremental nonce of the sender wallet
 senderWallet = client.wallets.get('YOUR_SENDER_WALLET_ADDRESS')
@@ -86,7 +86,7 @@ transaction.schnorr_sign('this is a top secret passphrase')
 # Step 3: Broadcast the transaction
 try:
     broadcastResponse = client.transactions.create([transaction.to_dict()])
-except ArkHTTPException as exception:
+except SolarHTTPException as exception:
     print(exception.response.json())
 
 # Step 4: Log the response
@@ -96,8 +96,8 @@ print(broadcastResponse)
 ## Creating and Broadcasting a Delegate Registration
 
 ```python
-from client import ArkClient
-from client.exceptions import ArkHTTPException
+from client import SolarClient
+from client.exceptions import SolarHTTPException
 from crypto.constants import TRANSACTION_TYPE_GROUP
 from crypto.configuration.network import set_network
 from crypto.networks.testnet import Testnet
@@ -107,7 +107,7 @@ from crypto.transactions.builder.delegate_registration import DelegateRegistrati
 set_network(Testnet)
 
 # Configure our API client
-client = ArkClient('https://sxp.testnet.sh/api')
+client = SolarClient('https://sxp.testnet.sh/api')
 
 # Step 1: Retrieve the incremental nonce of the sender wallet
 senderWallet = client.wallets.get('YOUR_SENDER_WALLET_ADDRESS')
@@ -123,7 +123,7 @@ transaction.schnorr_sign('this is a top secret passphrase')
 # Step 3: Broadcast the transaction
 try:
     broadcastResponse = client.transactions.create([transaction.to_dict()])
-except ArkHTTPException as exception:
+except SolarHTTPException as exception:
     print(exception.response.json())
 
 # Step 4: Log the response
@@ -133,8 +133,8 @@ print(broadcastResponse)
 ## Creating and Broadcasting a Vote
 
 ```python
-from client import ArkClient
-from client.exceptions import ArkHTTPException
+from client import SolarClient
+from client.exceptions import SolarHTTPException
 from crypto.constants import TRANSACTION_TYPE_GROUP
 from crypto.configuration.network import set_network
 from crypto.networks.testnet import Testnet
@@ -144,7 +144,7 @@ from crypto.transactions.builder.vote import Vote
 set_network(Testnet)
 
 # Configure our API client
-client = ArkClient('https://sxp.testnet.sh/api')
+client = SolarClient('https://sxp.testnet.sh/api')
 
 # Step 1: Retrieve the incremental nonce of the sender wallet
 senderWallet = client.wallets.get('YOUR_SENDER_WALLET_ADDRESS')
@@ -160,7 +160,7 @@ transaction.schnorr_sign('this is a top secret passphrase')
 # Step 3: Broadcast the transaction
 try:
     broadcastResponse = client.transactions.create([transaction.to_dict()])
-except ArkHTTPException as exception:
+except SolarHTTPException as exception:
     print(exception.response.json())
 
 # Step 4: Log the response
@@ -174,8 +174,8 @@ Note the **plus** prefix for the public key that is passed to the **Vote** const
 ## Creating and Broadcasting an Unvote
 
 ```python
-from client import ArkClient
-from client.exceptions import ArkHTTPException
+from client import SolarClient
+from client.exceptions import SolarHTTPException
 from crypto.constants import TRANSACTION_TYPE_GROUP
 from crypto.configuration.network import set_network
 from crypto.networks.testnet import Testnet
@@ -185,7 +185,7 @@ from crypto.transactions.builder.vote import Vote
 set_network(Testnet)
 
 # Configure our API client
-client = ArkClient('https://sxp.testnet.sh/api')
+client = SolarClient('https://sxp.testnet.sh/api')
 
 # Step 1: Retrieve the incremental nonce of the sender wallet
 senderWallet = client.wallets.get('YOUR_SENDER_WALLET_ADDRESS')
@@ -201,7 +201,7 @@ transaction.schnorr_sign('this is a top secret passphrase')
 # Step 3: Broadcast the transaction
 try:
     broadcastResponse = client.transactions.create([transaction.to_dict()])
-except ArkHTTPException as exception:
+except SolarHTTPException as exception:
     print(exception.response.json())
 
 # Step 4: Log the response
@@ -215,8 +215,8 @@ Note the **minus** prefix for the public key that is passed to the **Vote** cons
 ## Creating and Broadcasting a Multi Signature
 
 ```python
-from client import ArkClient
-from client.exceptions import ArkHTTPException
+from client import SolarClient
+from client.exceptions import SolarHTTPException
 from crypto.constants import TRANSACTION_TYPE_GROUP
 from crypto.configuration.network import set_network
 from crypto.networks.testnet import Testnet
@@ -226,7 +226,7 @@ from crypto.transactions.builder.multi_signature_registration import MultiSignat
 set_network(Testnet)
 
 # Configure our API client
-client = ArkClient('https://sxp.testnet.sh/api')
+client = SolarClient('https://sxp.testnet.sh/api')
 
 # Step 1: Retrieve the incremental nonce of the sender wallet
 senderWallet = client.wallets.get('YOUR_SENDER_WALLET_ADDRESS')
@@ -251,7 +251,7 @@ transaction.schnorr_sign('this is a top secret passphrase')
 # Step 3: Broadcast the transaction
 try:
     broadcastResponse = client.transactions.create([transaction.to_dict()])
-except ArkHTTPException as exception:
+except SolarHTTPException as exception:
     print(exception.response.json())
 
 # Step 4: Log the response
@@ -261,8 +261,8 @@ print(broadcastResponse)
 ## Creating and Broadcasting a IPFS
 
 ```python
-from client import ArkClient
-from client.exceptions import ArkHTTPException
+from client import SolarClient
+from client.exceptions import SolarHTTPException
 from crypto.constants import TRANSACTION_TYPE_GROUP
 from crypto.configuration.network import set_network
 from crypto.networks.testnet import Testnet
@@ -272,7 +272,7 @@ from crypto.transactions.builder.ipfs import IPFS
 set_network(Testnet)
 
 # Configure our API client
-client = ArkClient('https://sxp.testnet.sh/api')
+client = SolarClient('https://sxp.testnet.sh/api')
 
 # Step 1: Retrieve the incremental nonce of the sender wallet
 senderWallet = client.wallets.get('YOUR_SENDER_WALLET_ADDRESS')
@@ -288,7 +288,7 @@ transaction.schnorr_sign('this is a top secret passphrase')
 # Step 3: Broadcast the transaction
 try:
     broadcastResponse = client.transactions.create([transaction.to_dict()])
-except ArkHTTPException as exception:
+except SolarHTTPException as exception:
     print(exception.response.json())
 
 # Step 4: Log the response
@@ -298,8 +298,8 @@ print(broadcastResponse)
 ## Creating and Broadcasting a Multi Payment
 
 ```python
-from client import ArkClient
-from client.exceptions import ArkHTTPException
+from client import SolarClient
+from client.exceptions import SolarHTTPException
 from crypto.constants import TRANSACTION_TYPE_GROUP
 from crypto.configuration.network import set_network
 from crypto.networks.testnet import Testnet
@@ -309,7 +309,7 @@ from crypto.transactions.builder.multi_payment import MultiPayment
 set_network(Testnet)
 
 # Configure our API client
-client = ArkClient('https://sxp.testnet.sh/api')
+client = SolarClient('https://sxp.testnet.sh/api')
 
 # Step 1: Retrieve the incremental nonce of the sender wallet
 senderWallet = client.wallets.get('YOUR_SENDER_WALLET_ADDRESS')
@@ -327,7 +327,7 @@ transaction.schnorr_sign('this is a top secret passphrase')
 # Step 3: Broadcast the transaction
 try:
     broadcastResponse = client.transactions.create([transaction.to_dict()])
-except ArkHTTPException as exception:
+except SolarHTTPException as exception:
     print(exception.response.json())
 
 # Step 4: Log the response
@@ -337,8 +337,8 @@ print(broadcastResponse)
 ## Creating and Broadcasting a Delegate Resignation
 
 ```python
-from client import ArkClient
-from client.exceptions import ArkHTTPException
+from client import SolarClient
+from client.exceptions import SolarHTTPException
 from crypto.constants import TRANSACTION_TYPE_GROUP
 from crypto.configuration.network import set_network
 from crypto.networks.testnet import Testnet
@@ -348,7 +348,7 @@ from crypto.transactions.builder.delegate_resignation import DelegateResignation
 set_network(Testnet)
 
 # Configure our API client
-client = ArkClient('https://sxp.testnet.sh/api')
+client = SolarClient('https://sxp.testnet.sh/api')
 
 # Step 1: Retrieve the incremental nonce of the sender wallet
 senderWallet = client.wallets.get('YOUR_SENDER_WALLET_ADDRESS')
@@ -364,7 +364,7 @@ transaction.schnorr_sign('this is a top secret passphrase')
 # Step 3: Broadcast the transaction
 try:
     broadcastResponse = client.transactions.create([transaction.to_dict()])
-except ArkHTTPException as exception:
+except SolarHTTPException as exception:
     print(exception.response.json())
 
 # Step 4: Log the response
@@ -378,8 +378,8 @@ A delegate resignation has to be sent from the delegate wallet itself to verify 
 ## Creating and Broadcasting a HTLC Lock
 
 ```python
-from client import ArkClient
-from client.exceptions import ArkHTTPException
+from client import SolarClient
+from client.exceptions import SolarHTTPException
 from crypto.constants import TRANSACTION_TYPE_GROUP
 from crypto.configuration.network import set_network
 from crypto.networks.testnet import Testnet
@@ -390,7 +390,7 @@ import hashlib
 set_network(Testnet)
 
 # Configure our API client
-client = ArkClient('https://sxp.testnet.sh/api')
+client = SolarClient('https://sxp.testnet.sh/api')
 
 # Step 1: Retrieve the incremental nonce of the sender wallet
 senderWallet = client.wallets.get('YOUR_SENDER_WALLET_ADDRESS')
@@ -415,7 +415,7 @@ transaction.schnorr_sign('this is a top secret passphrase')
 # Step 3: Broadcast the transaction
 try:
     broadcastResponse = client.transactions.create([transaction.to_dict()])
-except ArkHTTPException as exception:
+except SolarHTTPException as exception:
     print(exception.response.json())
 
 # Step 4: Log the response
@@ -425,8 +425,8 @@ print(broadcastResponse)
 ## Creating and Broadcasting a HTLC Claim
 
 ```python
-from client import ArkClient
-from client.exceptions import ArkHTTPException
+from client import SolarClient
+from client.exceptions import SolarHTTPException
 from crypto.constants import TRANSACTION_TYPE_GROUP
 from crypto.configuration.network import set_network
 from crypto.networks.testnet import Testnet
@@ -437,7 +437,7 @@ import hashlib
 set_network(Testnet)
 
 # Configure our API client
-client = ArkClient('https://sxp.testnet.sh/api')
+client = SolarClient('https://sxp.testnet.sh/api')
 
 # Step 1: Retrieve the incremental nonce of the sender wallet
 senderWallet = client.wallets.get('YOUR_SENDER_WALLET_ADDRESS')
@@ -456,7 +456,7 @@ transaction.schnorr_sign('this is a top secret passphrase')
 # Step 3: Broadcast the transaction
 try:
     broadcastResponse = client.transactions.create([transaction.to_dict()])
-except ArkHTTPException as exception:
+except SolarHTTPException as exception:
     print(exception.response.json())
 
 # Step 4: Log the response
@@ -470,8 +470,8 @@ The **unlockSecret** has to be a SHA256 hash of the plain text secret that you s
 ## Creating and Broadcasting a HTLC Refund
 
 ```python
-from client import ArkClient
-from client.exceptions import ArkHTTPException
+from client import SolarClient
+from client.exceptions import SolarHTTPException
 from crypto.constants import TRANSACTION_TYPE_GROUP
 from crypto.configuration.network import set_network
 from crypto.networks.testnet import Testnet
@@ -481,7 +481,7 @@ from crypto.transactions.builder.htlc_refund import HtlcRefund
 set_network(Testnet)
 
 # Configure our API client
-client = ArkClient('https://sxp.testnet.sh/api')
+client = SolarClient('https://sxp.testnet.sh/api')
 
 # Step 1: Retrieve the incremental nonce of the sender wallet
 senderWallet = client.wallets.get('YOUR_SENDER_WALLET_ADDRESS')
@@ -499,7 +499,7 @@ transaction.schnorr_sign('this is a top secret passphrase')
 # Step 3: Broadcast the transaction
 try:
     broadcastResponse = client.transactions.create([transaction.to_dict()])
-except ArkHTTPException as exception:
+except SolarHTTPException as exception:
     print(exception.response.json())
 
 # Step 4: Log the response

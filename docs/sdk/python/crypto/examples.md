@@ -31,7 +31,7 @@ tx = {
 
 ## Transactions
 
-A transaction is an object specifying the transfer of funds from the sender's wallet to the recipient's. Each transaction must be signed by the sender's private key to prove authenticity and origin. After broadcasting through the [client SDK](https://github.com/ArkEcosystem/gitbooks-sdk/tree/fcb399a02301c4ed91f0da34e9adbad8e0d2f3dc/python/client/api-documentation/README.md#initialization), a transaction is permanently incorporated in the blockchain by a Delegate Node.
+A transaction is an object specifying the transfer of funds from the sender's wallet to the recipient's. Each transaction must be signed by the sender's private key to prove authenticity and origin. After broadcasting through the [client SDK](https://github.com/Solar-network/python-client/blob/master/README.md), a transaction is permanently incorporated in the blockchain by a Delegate Node.
 
 ### Sign
 
