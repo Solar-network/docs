@@ -267,7 +267,8 @@ nav:
     - sxpswap/introduction.md
     - Swap / Migration:
       - Users:
-        - sxpswap/users/getting-started.md
+        - sxpswap/users/metamask.md
+        - sxpswap/users/trust-wallet.md
       - Exchanges:
         - sxpswap/exchanges/getting-started.md
     - Technical Details:
