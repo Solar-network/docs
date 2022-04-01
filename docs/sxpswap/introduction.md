@@ -12,7 +12,7 @@ Click on the following links to proceed with the swap.
 1. [Migration for MetaMask Users](/sxpswap/users/metamask)
 2. [Migration for Trust Wallet Users](/sxpswap/users/trust-wallet)
 3. [Migration for Exchanges](/sxpswap/exchanges/getting-started)
-4. [Technical Details](/sxpswap/technical-details/introduction)
+4. [Technical Details](/sxpswap/technical-details/security/introduction)
 
 
 
