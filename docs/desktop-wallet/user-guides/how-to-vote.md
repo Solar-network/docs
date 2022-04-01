@@ -21,14 +21,14 @@ The more SXP you hold, the more voting weight you possess. If you split your SXP
 Each transaction in the SXP network costs a certain amount of SXP. With the implementation of dynamic fees, this cost will become adjustable. You can choose how much you want to spend for each specific transaction, even for voting and for un-voting.
 
 <x-alert type="info">
-For more information about staking, please visit: [SXP Rewards (Staking)](/docs/desktop-wallet/introduction-to-solar-rewards)
+For more information about staking, please visit: [SXP Rewards (Staking)](/desktop-wallet/introduction-to-solar-rewards)
 </x-alert>
 
 ## Whom to Vote For?
 
 Visit [SXP Delegates](https://delegates.solar.org/), our community-run delegate resource, for more information on delegate proposals. From the current list of delegates, vote according to your preferences.
 
-You can also see the list of currently active delegates on our [delegate monitor](https://explorer.solar.io/delegateMonitor).
+You can also see the list of currently active delegates on our [delegate monitor](https://explorer.solar.org/delegates).
 
 ## Voting for a Delegate
 
@@ -39,7 +39,7 @@ You can also see the list of currently active delegates on our [delegate monitor
 ![Fill in the required vote transaction fields and click Next](/desktop-wallet/assets/vote.png)
 
 <x-alert type="info">
-For more information about fees, please visit: [Transaction Fees](/docs/desktop-wallet/user-guides/transaction-fees)
+For more information about fees, please visit: [Transaction Fees](/desktop-wallet/user-guides/transaction-fees)
 </x-alert>
 
 

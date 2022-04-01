@@ -14,7 +14,7 @@ Registering as a delegate is a simple transaction. It provides network nodes wit
 4. Minimum fee for delegate registration is 75 SXP!
 
 <x-alert type="info">
-For more information about fees, please visit: [Transaction Fees](/docs/desktop-wallet/user-guides/transaction-fees)
+For more information about fees, please visit: [Transaction Fees](/desktop-wallet/user-guides/transaction-fees)
 </x-alert>
 
 ## **Resign your Delegate**

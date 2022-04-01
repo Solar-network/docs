@@ -17,7 +17,7 @@ A user’s vote-weight adjusts automatically as funds are sent and received, and
 To change a vote, a user simply un-votes their current Validator and elects another by casting a new vote transaction.
 
 <x-alert type="info">
-For more information about voting and unvoting, please visit: [How to Vote or Unvote a Delegate](/docs/desktop-wallet/user-guides/how-to-vote-unvote)
+For more information about voting and unvoting, please visit: [How to Vote or Unvote a Delegate](/desktop-wallet/user-guides/how-to-vote)
 </x-alert>
 
 ## Staking Fees
