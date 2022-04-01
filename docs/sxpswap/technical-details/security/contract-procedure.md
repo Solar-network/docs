@@ -52,7 +52,7 @@ Due to the validation by the backend program and the validation from the forging
     Warning! Do no interact with the contract directly unless you know what you are doing.
     Interacting with the contract directly or sending your tokens to the contract without attaching a correct mainnet address will result in losing your SXP tokens.
 
-    ### Mainnet (Not active)
+    ### Mainnet
 
     1. [BEP20 Token Contract](https://bscscan.com/address/0x47BEAd2563dCBf3bF2c9407fEa4dC236fAbA485A#code)
     2. [ERC20 Token Contract](https://etherscan.io/address/0x8CE9137d39326AD0cD6491fb5CC0CbA0e089b6A9#code)
