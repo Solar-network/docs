@@ -29,7 +29,7 @@ There is no requirement to send or lock additional funds in order to participate
 This transaction fee is awarded to the Validator who forges the transaction in a given block.
 
 <x-alert type="info">
-For more information about fees, please visit: [Transaction Fees](/docs/desktop-wallet/user-guides/transaction-fees)
+For more information about fees, please visit: [Transaction Fees](/desktop-wallet/user-guides/transaction-fees)
 </x-alert>
 
 ## Block Rewards
@@ -60,13 +60,13 @@ Reward sharing can vary wildly with delegates taking commissions of anywhere fro
 
 You can also view current Solar delegates on the [Delegates](https://explorer.solar.org/delegates) page inside the [SXP Explorer](https://explorer.solar.org/).
 
+<!-- --hidden-- needs more detailed information
 ## Becoming a Delegate
 
-Some SXP holders want to be more directly involved and participate in the network themselves, rather than delegate their influence to a third party. We highly encourage anyone who is interested in becoming a delegate to read our full guides on [How to Register or Resign a Delegate](https://docs.solar.org/desktop-wallet/user-guides/how-to-register-or-resign-delegate) and [Installing a Core Node](/docs/core/installation/intro) to get started.
+Some SXP holders want to be more directly involved and participate in the network themselves, rather than delegate their influence to a third party. 
+We highly encourage anyone who is interested in becoming a delegate to read our full guides on [How to Register or Resign a Delegate](/desktop-wallet/user-guides/how-to-register-or-resign-delegate/) and [Installing a Core Node](/exchanges/intro/) to get started.
+-->
 
-<livewire:page-reference path="/docs/desktop-wallet/user-guides/how-to-register-or-resign-delegate" />
-
-<livewire:page-reference path="/docs/core/installation/intro" />
 
 ## Contact Us
 
