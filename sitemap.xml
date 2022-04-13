@@ -11,46 +11,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.solar.org/api/manager-api/getting-started/</loc>
-         <lastmod>2022-04-13</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.solar.org/api/manager-api/endpoints/configuration/</loc>
-         <lastmod>2022-04-13</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.solar.org/api/manager-api/endpoints/info/</loc>
-         <lastmod>2022-04-13</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.solar.org/api/manager-api/endpoints/log/</loc>
-         <lastmod>2022-04-13</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.solar.org/api/manager-api/endpoints/plugin/</loc>
-         <lastmod>2022-04-13</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.solar.org/api/manager-api/endpoints/process/</loc>
-         <lastmod>2022-04-13</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.solar.org/api/manager-api/endpoints/snapshots/</loc>
-         <lastmod>2022-04-13</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.solar.org/api/manager-api/endpoints/watcher/</loc>
-         <lastmod>2022-04-13</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://docs.solar.org/api/public-rest-api/getting-started/</loc>
          <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
