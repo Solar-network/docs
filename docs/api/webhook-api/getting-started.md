@@ -42,7 +42,9 @@ The `whitelist` property can be changed directly in the `app.json` file and is a
 {
     "package": "@solar-network/core-webhooks",
     "options": {
-        "whitelist": ["127.0.0.1", "::ffff:127.0.0.1"]
+        "server": {
+            "whitelist": ["127.0.0.1", "::ffff:127.0.0.1"]
+        }
     }
 },
 ```

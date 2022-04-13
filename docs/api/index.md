@@ -8,7 +8,6 @@ This is a reference guide for the available Core APIs. APIs expose different res
 
 1. [Public REST API](/api/public-rest-api/getting-started)
 2. [Webhook API](/api/webhook-api/getting-started)
-3. [Manager API](/api/manager-api/getting-started)
 
 <x-alert type="info">
 Each Core server (node) has its own internal blockchain and state, meaning it may have forked or be out of sync, causing queries to fail. Monitor your node by comparing it to different public nodes, such as the official [Mainnet Explorer](https://explorer.solar.org) or the [Testnet Explorer](https://texplorer.solar.org) to ensure you are in sync.<br /><br />
