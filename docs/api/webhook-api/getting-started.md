@@ -12,7 +12,7 @@ All HTTP requests have to be sent with the `Content-Type: application/json` head
 
 ## Installation
 
-The webhooks API comes by default with an installation of core. In case you don't have it installed, you can add it manually by running `yarn global add @arkecosystem/core-webhooks`.
+The webhooks API comes by default with an installation of core. In case you don't have it installed, you can add it manually by running `yarn global add @solar-network/core-webhooks`.
 
 ## Alias
 
@@ -20,11 +20,11 @@ The webhooks API comes by default with an installation of core. In case you don'
 
 ## Configuration
 
-The webhooks API requires the following configuration in your `app.json` file. Make sure to have this configuration listed after `@arkecosystem/core-blockchain`.
+The webhooks API requires the following configuration in your `app.json` file. Make sure to have this configuration listed after `@solar-network/core-blockchain`.
 
 ```javascript
 {
-    "package": "@arkecosystem/core-webhooks"
+    "package": "@solar-network/core-webhooks"
 },
 ```
 
@@ -40,7 +40,7 @@ The `whitelist` property can be changed directly in the `app.json` file and is a
 
 ```javascript
 {
-    "package": "@arkecosystem/core-webhooks",
+    "package": "@solar-network/core-webhooks",
     "options": {
         "whitelist": ["127.0.0.1", "::ffff:127.0.0.1"]
     }
