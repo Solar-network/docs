@@ -44,21 +44,11 @@ cd python-client
 ```
 
 <!-- markdownlint-disable MD029 -->
-6. Once inside the virtualenv, you can proceed to install the dependencies. These are listed inside the setup.py file.
+6. Once inside the virtualenv, you can proceed to install dependencies.
 <!-- markdownlint-enable MD029 -->
 
 ```bash
-   pip install \
-      requests \
-      backoff \
-      flake8 \
-      flake8-import-order \
-      flake8-print \
-      flake8-quotes \
-      pytest \
-      pytest-responses \
-      pytest-mock \
-      pytest-cov
+python -m pip install -e ."[dev]"
 ```
 
 <!-- markdownlint-disable MD029 -->
