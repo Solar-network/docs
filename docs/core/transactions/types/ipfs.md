@@ -60,6 +60,6 @@ ff033f0100000005000700000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b
 | :----------------- | :------------------: | :----------------------------------------------------------------------- |
 | **IPFS Hash**      |        **46**        | `QmYSK2JyM3RyDyB52caZCTKFR3HKniEcMnNJYdk8DQ6KKB`                         |
 | **Decoded Base58** |        **34**        | `0x12209608184d6cee2b9af8e6c2a46fc9318adf73329aeb8a86cf8472829fff5bb89e` |
-| **Hash Type**      |        **1_**        | `0x12`                                                                   |
-| **Hash Length**    |        **1_**        | `0x20`                                                                   |
+| **Hash Type**      |        **1**         | `0x12`                                                                   |
+| **Hash Length**    |        **1**         | `0x20`                                                                   |
 | **32-Byte Hash**   |        **32**        | `0x9608184d6cee2b9af8e6c2a46fc9318adf73329aeb8a86cf8472829fff5bb89e`     |
