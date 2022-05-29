@@ -150,8 +150,10 @@ markdown_extensions:
 nav:
   - Home: 
     - index.md
-#  - Core:
-#    - core/intro.md
+  - Core:
+    - core/intro.md
+    - Core Updates:
+      - core/updates/3.3.0.md
 #  - SLP:
 #    - slp/intro.md
 #  - API:
