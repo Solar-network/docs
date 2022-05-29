@@ -2,402 +2,412 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.solar.org/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/api/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/api/public-rest-api/getting-started/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/api/public-rest-api/modify-response/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/api/public-rest-api/troubleshooting/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/api/public-rest-api/endpoints/blockchain/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/api/public-rest-api/endpoints/blocks/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/api/public-rest-api/endpoints/delegates/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/api/public-rest-api/endpoints/intro/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/api/public-rest-api/endpoints/locks/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/api/public-rest-api/endpoints/node/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/api/public-rest-api/endpoints/peers/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/api/public-rest-api/endpoints/transactions/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/api/public-rest-api/endpoints/votes/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/api/public-rest-api/endpoints/wallets/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/api/webhook-api/endpoints/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/api/webhook-api/getting-started/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/api/webhook-api/usage/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/brand/intro/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.solar.org/core/intro/</loc>
+         <lastmod>2022-05-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.solar.org/core/updates/3.3.0/</loc>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/desktop-wallet/intro/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/desktop-wallet/introduction-to-solar-rewards/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/desktop-wallet/support/troubleshooting/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/desktop-wallet/user-guides/how-to-add-a-contact/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/desktop-wallet/user-guides/how-to-create-or-import-wallets/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/desktop-wallet/user-guides/how-to-register-or-resign-delegate/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/desktop-wallet/user-guides/how-to-register-second-passphrase/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/desktop-wallet/user-guides/how-to-send/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/desktop-wallet/user-guides/how-to-sign-and-verify/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/desktop-wallet/user-guides/how-to-vote/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/desktop-wallet/user-guides/transaction-fees/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/exchanges/configuring-rate-limits/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/exchanges/intro/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/exchanges/public-api-guide/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/exchanges/json-rpc/examples/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/exchanges/json-rpc/getting-started/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/exchanges/json-rpc/endpoints/blocks/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/exchanges/json-rpc/endpoints/intro/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/exchanges/json-rpc/endpoints/transactions/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/exchanges/json-rpc/endpoints/wallets/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/exchanges/node-installation/baremetal-instructions/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/exchanges/node-installation/hardware-requirements/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/project/intro/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/project/whitepaper/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/sdk/documentation/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/sdk/guidelines/client/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/sdk/guidelines/crypto/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/sdk/guidelines/documentation/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/sdk/javascript/installation/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/sdk/javascript/client/api-documentation/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/sdk/javascript/client/examples/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/sdk/javascript/client/intro/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/sdk/javascript/crypto/examples/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/sdk/javascript/crypto/intro/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/sdk/python/complementary-examples/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/sdk/python/installation/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/sdk/python/client/api-documentation/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/sdk/python/client/examples/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/sdk/python/client/getting-started/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/sdk/python/client/intro/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/sdk/python/crypto/api-documentation/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/sdk/python/crypto/examples/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/sdk/python/crypto/intro/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/sdk/typescript/complementary-examples/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/sdk/typescript/installation/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/sdk/typescript/client/api-documentation/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/sdk/typescript/client/examples/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/sdk/typescript/client/getting-started/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/sdk/typescript/client/intro/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/sdk/typescript/crypto/api-documentation/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/sdk/typescript/crypto/examples/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/sdk/typescript/crypto/getting-started/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/sdk/typescript/crypto/intro/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/sxpswap/introduction/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/sxpswap/exchanges/getting-started/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/sxpswap/technical-details/security/broadcast-procedure/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/sxpswap/technical-details/security/contract-procedure/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/sxpswap/technical-details/security/introduction/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/sxpswap/technical-details/security/mainnet-procedure/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/sxpswap/users/metamask/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.solar.org/sxpswap/users/trust-wallet/</loc>
-         <lastmod>2022-04-13</lastmod>
+         <lastmod>2022-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
