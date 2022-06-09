@@ -8,7 +8,7 @@ A Relay Node is a full node in the Solar network; it maintains a complete copy o
 
 ## Recommended Hardware Requirements
 
-NodeJS 16
+NodeJS 17
 
 | Relay Specification | Minimum | Recommended   |
 | :-----------------: | :-----: | :-----------: |
@@ -20,12 +20,12 @@ NodeJS 16
 
 | Supported OS | Release Version(s) |
 | :----------: | :----------------: |
-| **Ubuntu**   | 18.x / 20.x        |
+| **Ubuntu**   | 18.10 / 20.x / 22.x|
 
 ---
 
 <x-alert type="warning">
-Ubuntu 16.x and older is **no longer** supported.
+Ubuntu 18.04 and older are **no longer** supported.
 </x-alert>
 
 ---
@@ -39,6 +39,6 @@ SXP Nodes execute many query intensive operations. The most cost-effective appro
 
 | Service    | Port | Required | Enabled by default |                           Documentation                           |
 | :--------- | :--: | :------: | :----------------: | :---------------------------------------------------------------: |
-| p2p        | 6001 |     ✅    |          ✅         |     [reference](https://docs.solar.org/core/installation/variables#corep2pport)    |
-| public API | 6003 |     ❌    |          ✅         |    [reference](https://docs.solar.org/exchanges/public-api-guide)   |
+| p2p        | 6001 |     ✅    |          ✅         | [reference](https://docs.solar.org/core/installation/variables#corep2pport)    |
+| public API | 6003 |     ❌    |          ✅         | [reference](https://docs.solar.org/exchanges/public-api-guide)   |
 | webhook    | 6004 |     ❌    |          ❌         | [reference](https://docs.solar.org/api/webhook-api/getting-started) |
