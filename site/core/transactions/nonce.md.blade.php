@@ -53,9 +53,7 @@ A sequential nonce depends on the amount of transaction a specific wallet has se
 
 When you create a new transaction for that wallet, you will use the **current nonce and add 1** to it to get to the new nonce value.
 
-<x-alert type="info">
-If you retrieved a nonce value of **123** for a wallet, the next transaction will have to use nonce **124,** (current_nonce + 1). The API will increase the nonce value once a transaction has been forged for the wallet.
-</x-alert>
+> ℹ️ **INFO** - If you retrieved a nonce value of **123** for a wallet, the next transaction will have to use nonce **124,** (current_nonce + 1). The API will increase the nonce value once a transaction has been forged for the wallet.
 
 ### Sending Multiple Transactions
 
