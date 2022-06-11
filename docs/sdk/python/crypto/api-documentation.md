@@ -435,6 +435,24 @@ Set the nonce of the transaction.
 
 `<class 'NoneType'>`
 
+### `set_fee()`
+
+```python
+def set_fee(self, fee: int):
+```
+
+Set a fee
+
+#### Parameters
+
+| Type | Name | Required | Description |
+| :--- | :--- | :--- | :--- |
+| int | fee | Yes | Transaction fee |
+
+#### Return Value
+
+`<class 'NoneType'>`
+
 ### `set_amount()`
 
 ```python
