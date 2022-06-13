@@ -7,26 +7,34 @@ title: Examples
 ## Initialization
 
 ```python
-from crypto.transactions.builder.transfer import Transfer
+from solar_crypto.transactions.builder.transfer import Transfer
 ```
 
 The transaction object used for this section:
 
 ```python
 tx = {
-    'version': int,
-    'network': int,
-    'type': int,
-    'timestamp': int,
-    'senderPublicKey', str
-    'fee': int,
     'amount': int,
-    'expiration': int,
+    'asset': dict,
+    'fee': int,
+    'id': str,
+    'network': int,
     'recipientId': str,
+    'secondSignature': str,
+    'senderPublicKey': str,
     'signature': str,
-    'id': str
-    'serialized': str,
+    'signatures': list,
+    'signSignature': str,
+    'nonce': int,
+    'type': int,
+    'typeGroup': int,
+    'vendorField': str,
+    'version': int,
+    'lockTransactionId': str,
+    'lockSecret': str,
+    'expiration': int,
 }
+
 ```
 
 ## Transactions
@@ -40,7 +48,7 @@ The crypto SDK can sign a transaction using your private key or passphrase (from
 For serializing and deserializing, we must require the Transaction model:
 
 ```python
-from crypto.transactions.transaction import Transaction
+from solar_crypto.transactions.transaction import Transaction
 
 # Serializing
 transaction = Transaction(**tx)
@@ -55,7 +63,7 @@ Using the Transaction builder class.
 
 ```python
 transaction = Transfer(recipientId=str, amount=int)
-transaction.schnorr_sign('seedPass')
+transaction.sign('seedPass')
 ```
 
 ### Serialize (AIP11)
@@ -63,7 +71,7 @@ transaction.schnorr_sign('seedPass')
 > Serialization of a transaction object ensures it is compact and properly formatted to be incorporated in the SXP blockchain. If you are using the crypto SDK in combination with the public API SDK, you should not need to serialize manually.
 
 ```python
-from crypto.transactions.serializer import Serializer
+from solar_crypto.transactions.serializer import Serializer
 
 serialized_transaction = Serializer(tx).serialize()
 
@@ -75,7 +83,7 @@ serialized_transaction = Serializer(tx).serialize()
 > A serialized transaction may be deserialized for inspection purposes. The public API does not return serialized transactions, so you should only need to deserialize in exceptional circumstances.
 
 ```python
-from crypto.transactions.deserializer import Deserializer
+from solar_crypto.transactions.deserializer import Deserializer
 
 transaction_data = Deserializer(serialized_data).deserialize()
 
@@ -91,7 +99,7 @@ The crypto SDK not only supports transactions but can also work with other arbit
 > Signing a string works much like signing a transaction: in most implementations, the message is hashed, and the resulting hash is signed using the `private key` or `passphrase`.
 
 ```python
-from crypto.utils.message import Message
+from solar_crypto.utils.message import Message
 
 message = Message.sign(string, 'validSeedPass')
 
@@ -103,16 +111,13 @@ message = Message.sign(string, 'validSeedPass')
 > A message's signature can easily be verified by hash, without the private key that signed the message, by using the `verify` method.
 
 ```python
-from crypto.utils.message import Message
+from solar_crypto.utils.message import Message
 
 message = Message(
     message=str,
     signature=str,
-    public_key=str
+    publicKey=str
 )
-
-# Can also be used like this
-message = Message(str, 'validSignature', 'validPublicKey')
 
 message.verify()
 
@@ -126,7 +131,7 @@ message.verify()
 ### Derive the Address from a Passphrase
 
 ```python
-from crypto.identity.address import address_from_passphrase
+from solar_crypto.identity.address import address_from_passphrase
 
 address_from_passphrase('validSeedPass')
 
@@ -136,7 +141,7 @@ address_from_passphrase('validSeedPass')
 ### Derive the Address from a Public Key
 
 ```python
-from crypto.identity.address import address_from_public_key
+from solar_crypto.identity.address import address_from_public_key
 
 address_from_public_key('validPublicKey')
 
@@ -146,7 +151,7 @@ address_from_public_key('validPublicKey')
 ### Derive the Address from a Private Key
 
 ```python
-from crypto.identity.address import address_from_private_key
+from solar_crypto.identity.address import address_from_private_key
 
 address_from_private_key('validPrivateKey')
 
@@ -156,7 +161,7 @@ address_from_private_key('validPrivateKey')
 ### Validate an Address
 
 ```python
-from crypto.identity.address import validate_address
+from solar_crypto.identity.address import validate_address
 
 validate_address('validAddress')
 
@@ -170,7 +175,7 @@ validate_address('validAddress')
 ### Derive the Private Key from a Passphrase
 
 ```python
-from crypto.identity.private_key import PrivateKey
+from solar_crypto.identity.private_key import PrivateKey
 
 private_key = PrivateKey.from_passphrase('validSeedPass').to_hex()
 
@@ -180,7 +185,7 @@ private_key = PrivateKey.from_passphrase('validSeedPass').to_hex()
 ### Derive the Private Key Instance Object from a Hexadecimal Encoded String
 
 ```python
-from crypto.identity.private_key import PrivateKey
+from solar_crypto.identity.private_key import PrivateKey
 
 private_key = PrivateKey.from_hex(str)
 
@@ -200,7 +205,7 @@ This function has not been implemented in this client library.
 ### Derive the Public Key from a Passphrase
 
 ```python
-from crypto.identity.public_key import PublicKey
+from solar_crypto.identity.public_key import PublicKey
 
 public_key = PublicKey.from_passphrase('this is a top secret passphrase')
 
@@ -210,7 +215,7 @@ public_key = PublicKey.from_passphrase('this is a top secret passphrase')
 ### Derive the Public Key Instance Object from a Hexadecimal Encoded String
 
 ```python
-from crypto.identity.public_key import PublicKey
+from solar_crypto.identity.public_key import PublicKey
 
 public_key = PublicKey.from_hex(str)
 
@@ -230,7 +235,7 @@ This function has not been implemented in this client library.
 ### Derive the WIF from a Passphrase
 
 ```python
-from crypto.identity.wif import wif_from_passphrase
+from solar_crypto.identity.wif import wif_from_passphrase
 
 wif = wif_from_passphrase('validSeedPass')
 
