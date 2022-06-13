@@ -338,10 +338,10 @@ Convert the transaction to its JSON representation
 
 `<class 'dict'>`
 
-### `schnorr_sign()`
+### `sign()`
 
 ```python
-def schnorr_sign(self, passphrase):
+def sign(self, passphrase):
 ```
 
 Sign the transaction using the given passphrase
@@ -393,10 +393,10 @@ Sign the transaction using the given passphrase. A signature will be generated i
 
 `<class 'NoneType'>`
 
-### `verify_schnorr()`
+### `verify()`
 
 ```python
-def verify_schnorr(self):
+def verify(self):
 ```
 
 Verify the transaction validity
@@ -405,10 +405,10 @@ Verify the transaction validity
 
 `<class 'bool'>`
 
-### `schnorr_verify_multisig()`
+### `verify_multisig()`
 
 ```python
-def schnorr_verify_multisig(self):
+def verify_multisig(self):
 ```
 
 Verify the multisignature transaction validity
@@ -430,6 +430,24 @@ Set the nonce of the transaction.
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
 | int | nonce | Yes | Sequential Nonce of the transaction |
+
+#### Return Value
+
+`<class 'NoneType'>`
+
+### `set_fee()`
+
+```python
+def set_fee(self, fee: int):
+```
+
+Set a fee
+
+#### Parameters
+
+| Type | Name | Required | Description |
+| :--- | :--- | :--- | :--- |
+| int | fee | Yes | Transaction fee |
 
 #### Return Value
 
@@ -507,6 +525,26 @@ Set the type group of the transaction.
 
 `<class 'NoneType'>`
 
+## crypto.transactions.builder.burn.Burn
+
+### `__init__()`
+
+```python
+def __init__(self, amount):
+```
+
+Create a new Burn transaction instance
+
+#### Parameters
+
+| Type | Name | Required | Description |
+| :--- | :--- | :--- | :--- |
+| int | amount | Yes | Burn amount |
+
+#### Return Value
+
+`<class 'crypto.transactions.builder.burn.Burn'>`
+
 ## crypto.transactions.builder.delegate_registration.DelegateRegistration
 
 ### `__init__()`
@@ -578,12 +616,118 @@ Get the type group of the Transaction.
 
 `<class 'int'>`
 
+## crypto.transactions.builder.htlc_claim.HtlcClaim
+
+### `__init__()`
+
+```python
+def __init__(self, lock_transaction_id, unlock_secret, hash_type: HashingType = HashingType.SHA256, fee=None):
+```
+
+Create a new HtlcClaim transaction instance
+
+#### Parameters
+
+| Type | Name | Required | Description |
+| :--- | :--- | :--- | :--- |
+| str | lock_transaction_id | Yes | HTLC Lock transaction id |
+| str | unlock_secret | Yes | Transaction secret hash |
+| HashingType | hash_type | No | Hashing algorithm |
+| int | fee | No | Transaction fee |
+
+#### Return Value
+
+`<class 'crypto.transactions.builder.htlc_claim.HtlcClaim'>`
+
+### `get_type_group()`
+
+```python
+def get_type_group(self):
+```
+
+Get the type group of the Transaction.
+
+#### Return Value
+
+`<class 'int'>`
+
+## crypto.transactions.builder.htlc_lock.HtlcLock
+
+### `__init__()`
+
+```python
+def __init__(self, recipient_id, amount, secret_hash, expiration_type, expiration_value, vendorField=None, fee=None):
+```
+
+Create a new HtlcLock transaction instance
+
+#### Parameters
+
+| Type | Name | Required | Description |
+| :--- | :--- | :--- | :--- |
+| str | recipient_id | Yes | Transaction recipient |
+| int | amount | Yes | Transaction amount |
+| str | secret_hash | Yes | Transaction secret hash. The same hash must be used in the corresponding "claim" transaction |
+| int | expiration_type | Yes | Transaction expiration type. Either block height or network epoch timestamp based |
+| int | expiration_value | Yes | Transaction expiration value. The block-height or time when the transaction should expire |
+| str | vendorField | Yes | Transaction vendorfield |
+| int | fee | No | Transaction fee |
+
+#### Return Value
+
+`<class 'crypto.transactions.builder.htlc_lock.HtlcLock'>`
+
+### `get_type_group()`
+
+```python
+def get_type_group(self):
+```
+
+Get the type group of the Transaction.
+
+#### Return Value
+
+`<class 'int'>`
+
+## crypto.transactions.builder.htlc_refund.HtlcRefund
+
+### `__init__()`
+
+```python
+def __init__(self, lock_transaction_id, fee=None):
+```
+
+Create a new HtlcRefund transaction instance
+
+#### Parameters
+
+| Type | Name | Required | Description |
+| :--- | :--- | :--- | :--- |
+| str | lock_transaction_id | Yes | HTLC Lock transaction id |
+| int | fee | No | Transaction fee |
+
+#### Return Value
+
+`<class 'crypto.transactions.builder.htlc_refund.HtlcRefund'>`
+
+### `get_type_group()`
+
+```python
+def get_type_group(self):
+```
+
+Get the type group of the Transaction.
+
+#### Return Value
+
+`<class 'int'>`
+
 ## crypto.transactions.builder.ipfs.IPFS
 
 ### `__init__()`
 
 ```python
-def __init__(self, fee=None):
+def __init__(self, ipfs_cid=None, fee=None):
 ```
 
 Create a new IPFS transaction instance
@@ -592,6 +736,7 @@ Create a new IPFS transaction instance
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
+| str | ipfs_cid | No | Content identifier |
 | int | fee | No | Transaction fee |
 
 #### Return Value
@@ -610,12 +755,30 @@ Get the type group of the Transaction.
 
 `<class 'int'>`
 
+### `set_ipfs_cid()`
+
+```python
+set_ipfs_cid(self, cid: str):
+```
+
+Set the content identifier of the Transaction.
+
+#### Parameters
+
+| Type | Name | Required | Description |
+| :--- | :--- | :--- | :--- |
+| str | cid | Yes | Content identifier |
+
+#### Return Value
+
+`<class 'NoneType'>`
+
 ## crypto.transactions.builder.multi_payment.MultiPayment
 
 ### `__init__()`
 
 ```python
-def __init__(self, fee=None):
+def __init__(self, vendorField=None, fee=None):
 ```
 
 Create a new MultiPayment transaction instance
@@ -624,6 +787,7 @@ Create a new MultiPayment transaction instance
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
+| str | vendorField | No | Transaction vendorfield |
 | int | fee | No | Transaction fee |
 
 #### Return Value
@@ -756,109 +920,6 @@ Create a new SecondSignatureRegistration transaction instance
 
 `<class 'crypto.transactions.builder.second_signature_registration.SecondSignatureRegistration'>`
 
-## crypto.transactions.builder.htlc_lock.HtlcLock
-
-### `__init__()`
-
-```python
-def __init__(self, recipient_id, secret_hash, expiration_type, expiration_value, fee=None):
-```
-
-Create a new HtlcLock transaction instance
-
-#### Parameters
-
-| Type | Name | Required | Description |
-| :--- | :--- | :--- | :--- |
-| str | recipient_id | Yes | Transaction recipient |
-| str | secret_hash | Yes | Transaction secret hash. The same hash must be used in the corresponding "claim" transaction |
-| int | expiration_type | Yes | Transaction expiration type. Either block height or network epoch timestamp based |
-| int | expiration_value | Yes | Transaction expiration value. The block-height or time when the transaction should expire |
-| int | fee | No | Transaction fee |
-
-#### Return Value
-
-`<class 'crypto.transactions.builder.htlc_lock.HtlcLock'>`
-
-### `get_type_group()`
-
-```python
-def get_type_group(self):
-```
-
-Get the type group of the Transaction.
-
-#### Return Value
-
-`<class 'int'>`
-
-## crypto.transactions.builder.htlc_claim.HtlcClaim
-
-### `__init__()`
-
-```python
-def __init__(self, transaction_id, unlock_secret, fee=None):
-```
-
-Create a new HtlcClaim transaction instance
-
-#### Parameters
-
-| Type | Name | Required | Description |
-| :--- | :--- | :--- | :--- |
-| str | transaction_id | Yes | HTLC Lock transaction id |
-| str | unlock_secret | Yes | Transaction secret hash |
-| int | fee | No | Transaction fee |
-
-#### Return Value
-
-`<class 'crypto.transactions.builder.htlc_claim.HtlcClaim'>`
-
-### `get_type_group()`
-
-```python
-def get_type_group(self):
-```
-
-Get the type group of the Transaction.
-
-#### Return Value
-
-`<class 'int'>`
-
-## crypto.transactions.builder.htlc_refund.HtlcRefund
-
-### `__init__()`
-
-```python
-def __init__(self, transaction_id, fee=None):
-```
-
-Create a new HtlcRefund transaction instance
-
-#### Parameters
-
-| Type | Name | Required | Description |
-| :--- | :--- | :--- | :--- |
-| str | transaction_id | Yes | HTLC Lock transaction id |
-| int | fee | No | Transaction fee |
-
-#### Return Value
-
-`<class 'crypto.transactions.builder.htlc_refund.HtlcRefund'>`
-
-### `get_type_group()`
-
-```python
-def get_type_group(self):
-```
-
-Get the type group of the Transaction.
-
-#### Return Value
-
-`<class 'int'>`
-
 ## crypto.transactions.builder.Transfer.Transfer
 
 ### `__init__()`
@@ -887,7 +948,7 @@ Create a new Transfer transaction instance
 ### `__init__()`
 
 ```python
-def __init__(self, vote, fee=None):
+def __init__(self, vote=None, fee=None):
 ```
 
 Create a new Vote transaction instance
@@ -896,12 +957,30 @@ Create a new Vote transaction instance
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| str | vote | Yes | Vote |
+| str | vote | No | Vote |
 | int | fee | No | Transaction fee |
 
 #### Return Value
 
 `<class 'crypto.transactions.builder.vote.Vote'>`
+
+### `set_votes()`
+
+```python
+def set_votes(self, votes: typing.List[str]):
+```
+
+Set votes/unvotes
+
+#### Parameters
+
+| Type | Name | Required | Description |
+| :--- | :--- | :--- | :--- |
+| List[str] | votes | Yes | list of votes |
+
+#### Return Value
+
+`<class 'NoneType'>`
 
 ### `sign()`
 
@@ -921,7 +1000,7 @@ Sign the transaction using the given passphrase
 
 `<class 'NoneType'>`
 
-## crypto.transactions.deserializers.base
+## crypto.transactions.deserializers.base.BaseDeserializer
 
 ### `__init__()`
 
@@ -955,7 +1034,21 @@ Handle the deserialization of transaction data
 
 `NotImplementedError`
 
-## crypto.transactions.deserializers.delegate_registration
+## crypto.transactions.deserializers.burn.BurnDeserializer
+
+### `deserialize()`
+
+```python
+def deserialize(self):
+```
+
+Handle the deserialization of "burn" data
+
+#### Return Value
+
+`<class 'dict'>`
+
+## crypto.transactions.deserializers.delegate_registration.DelegateRegistrationDeserializer
 
 ### `deserialize()`
 
@@ -969,7 +1062,7 @@ Handle the deserialization of "delegate registration" data
 
 `<class 'dict'>`
 
-## crypto.transactions.deserializers.delegate_resignation
+## crypto.transactions.deserializers.delegate_resignation.DelegateResignationDeserializer
 
 ### `deserialize()`
 
@@ -983,21 +1076,7 @@ Handle the deserialization of "delegate resignation" data
 
 `<class 'dict'>`
 
-## crypto.transactions.deserializers.htlc_lock
-
-### `deserialize()`
-
-```python
-def deserialize(self):
-```
-
-Handle the deserialization of "HTLC Lock" data
-
-#### Return Value
-
-`<class 'dict'>`
-
-## crypto.transactions.deserializers.htlc_claim
+## crypto.transactions.deserializers.htlc_claim.HtlcClaimDeserializer
 
 ### `deserialize()`
 
@@ -1011,7 +1090,21 @@ Handle the deserialization of "HTLC Claim" data
 
 `<class 'dict'>`
 
-## crypto.transactions.deserializers.htlc_refund
+## crypto.transactions.deserializers.htlc_lock.HtlcLockDeserializer
+
+### `deserialize()`
+
+```python
+def deserialize(self):
+```
+
+Handle the deserialization of "HTLC Lock" data
+
+#### Return Value
+
+`<class 'dict'>`
+
+## crypto.transactions.deserializers.htlc_refund.HtlcRefundDeserializer
 
 ### `deserialize()`
 
@@ -1025,7 +1118,7 @@ Handle the deserialization of "HTLC refund" data
 
 `<class 'dict'>`
 
-## crypto.transactions.deserializers.ipfs
+## crypto.transactions.deserializers.ipfs.IPFSDeserializer
 
 ### `deserialize()`
 
@@ -1039,7 +1132,7 @@ Handle the deserialization of "IPFS" data
 
 `<class 'dict'>`
 
-## crypto.transactions.deserializers.multi_payment
+## crypto.transactions.deserializers.multi_payment.MultiPaymentDeserializer
 
 ### `deserialize()`
 
@@ -1053,7 +1146,7 @@ Handle the deserialization of "multi payments" data
 
 `<class 'dict'>`
 
-## crypto.transactions.deserializers.multi_signature_registration
+## crypto.transactions.deserializers.multi_signature_registration.MultiSignatureRegistrationDeserializer
 
 ### `deserialize()`
 
@@ -1067,7 +1160,7 @@ Handle the deserialization of "multi signature registration" data
 
 `<class 'dict'>`
 
-## crypto.transactions.deserializers.second_signature_registration
+## crypto.transactions.deserializers.second_signature_registration.SecondSignatureRegistrationDeserializer
 
 ### `deserialize()`
 
@@ -1081,7 +1174,7 @@ Handle the deserialization of "second signature" data.
 
 `<class 'dict'>`
 
-## crypto.transactions.deserializers.transfer
+## crypto.transactions.deserializers.transfer.TransferDeserializer
 
 ### `deserialize()`
 
@@ -1095,7 +1188,7 @@ Handle the deserialization of "transfer" data
 
 `<class 'dict'>`
 
-## crypto.transactions.deserializers.vote
+## crypto.transactions.deserializers.vote.VoteDeserializer
 
 ### `deserialize()`
 
@@ -1109,7 +1202,7 @@ Handle the deserialization of "vote" data.
 
 `<class 'dict'>`
 
-## crypto.transactions.serializers.base
+## crypto.transactions.serializers.base.BaseSerializer
 
 ### `__init__()`
 
@@ -1142,7 +1235,21 @@ Handle the serialization of transaction data
 
 `NotImplementedError`
 
-## crypto.transactions.serializers.delegate_registration
+## crypto.transactions.serializers.burn.BurnSerializer
+
+### `serialize`
+
+```python
+def serialize(self):
+```
+
+Handle the serialization of "burn" data
+
+#### Return Value
+
+`<class 'bytes'>`
+
+## crypto.transactions.serializers.delegate_registration.DelegateRegistrationSerializer
 
 ### `serialize`
 
@@ -1156,7 +1263,7 @@ Handle the serialization of "delegate registration" data
 
 `<class 'bytes'>`
 
-## crypto.transactions.serializers.delegate_resignation
+## crypto.transactions.serializers.delegate_resignationDelegateResignationSerializer
 
 ### `serialize`
 
@@ -1170,21 +1277,7 @@ Handle the serialization of "delegate resignation" data
 
 `<class 'bytes'>`
 
-## crypto.transactions.serializers.htlc_lock
-
-### `serialize()`
-
-```python
-def serialize(self):
-```
-
-Handle the serialization of "HTLC Lock" data
-
-#### Return Value
-
-`<class 'bytes'>`
-
-## crypto.transactions.serializers.htlc_claim
+## crypto.transactions.serializers.htlc_claim.HtlcClaimSerializer
 
 ### `serialize()`
 
@@ -1198,7 +1291,21 @@ Handle the serialization of "HTLC Claim" data
 
 `<class 'bytes'>`
 
-## crypto.transactions.serializers.htlc_refund
+## crypto.transactions.serializers.htlc_lock.HtlcLockSerializer
+
+### `serialize()`
+
+```python
+def serialize(self):
+```
+
+Handle the serialization of "HTLC Lock" data
+
+#### Return Value
+
+`<class 'bytes'>`
+
+## crypto.transactions.serializers.htlc_refund.HtlcRefundSerializer
 
 ### `serialize()`
 
@@ -1212,7 +1319,7 @@ Handle the serialization of "HTLC Refund" data
 
 `<class 'bytes'>`
 
-## crypto.transactions.serializers.ipfs
+## crypto.transactions.serializers.ipfs.IPFSSerializer
 
 ### `serialize`
 
@@ -1226,7 +1333,7 @@ Handle the serialization of "ipfs" data
 
 `<class 'bytes'>`
 
-## crypto.transactions.serializers.multi_payment
+## crypto.transactions.serializers.multi_payment.MultiPaymentSerializer
 
 ### `serialize`
 
@@ -1240,7 +1347,7 @@ Handle the serialization of "multi payment" data
 
 `<class 'bytes'>`
 
-## crypto.transactions.serializers.multi_signature_registration
+## crypto.transactions.serializers.multi_signature_registration.MultiSignatureSerializer
 
 ### `serialize`
 
@@ -1254,7 +1361,7 @@ Handle the serialization of "multi signature" data
 
 `<class 'bytes'>`
 
-## crypto.transactions.serializers.second_signature_registration
+## crypto.transactions.serializers.second_signature_registration.SecondSignatureRegistrationSerializer
 
 ### `serialize`
 
@@ -1268,7 +1375,7 @@ Handle the serialization of "second signature" data
 
 `<class 'bytes'>`
 
-## crypto.transactions.serializers.transfer
+## crypto.transactions.serializers.transfer.TransferSerializer
 
 ### `serialize`
 
@@ -1282,7 +1389,7 @@ Handle the serialization of "transfer" data
 
 `<class 'bytes'>`
 
-## crypto.transactions.serializers.vote
+## crypto.transactions.serializers.vote.VoteSerializer
 
 ### `serialize`
 
@@ -1296,7 +1403,7 @@ Handle the serialization of "vote" data
 
 `<class 'bytes'>`
 
-## crypto.transactions.deserializer
+## crypto.transactions.deserializer.Deserializer
 
 ### `__init__`
 
@@ -1347,25 +1454,7 @@ Handle the deserialization of transaction data
 
 `<class 'crypto.transactions.transaction.Transaction'>`
 
-### `_handle_version_two`
-
-```python
-def _handle_version_two(self, transaction):
-```
-
-Handle the deserialization of transaction data with a version of 2.0.
-
-#### Parameters
-
-| Type | Name | Required | Description |
-| :--- | :--- | :--- | :--- |
-| transaction.Transaction | transaction | Yes | Transaction |
-
-#### Return Value
-
-`<class 'NoneType'>`
-
-## crypto.transactions.serializer
+## crypto.transactions.serializer.Serializer
 
 ### `__init__`
 
@@ -1445,7 +1534,7 @@ Handle the serialization of "signatures" data
 
 `<class 'bytes'>`
 
-## crypto.transactions.transaction
+## crypto.transactions.transaction.Transaction
 
 ### `__init__`
 
@@ -1579,10 +1668,10 @@ Perform AIP11 compliant deserialization
 
 `<class 'str'>`
 
-### `verify_schnorr`
+### `verify`
 
 ```python
-def verify_schnorr(self):
+def verify(self):
 ```
 
 Verify the transaction. Method will raise an exception if invalid, if it's valid it will returns True
@@ -1591,13 +1680,37 @@ Verify the transaction. Method will raise an exception if invalid, if it's valid
 
 `<class 'bool'>`
 
-### `verify_schnorr_multisig`
+### `verify_secondsig`
 
 ```python
-def verify_schnorr_multisig(self):
+def verify_secondsig(self, secondPublicKey):
+```
+
+Verify the second signature. Method will raise an exception if invalid, if it's valid it will returns True
+
+#### Parameters
+
+| Type | Name | Required | Description |
+| :--- | :--- | :--- | :--- |
+| str | secondPublicKey | Yes | Second public key |
+
+#### Return Value
+
+`<class 'bool'>`
+
+### `verify_signatures`
+
+```python
+def verify_signatures(self, multi_signature_asset):
 ```
 
 Verify the multisignatures transaction. Method will raise an exception if invalid, it will returns True
+
+#### Parameters
+
+| Type | Name | Required | Description |
+| :--- | :--- | :--- | :--- |
+| dict | multi_signature_asset | Yes | Multisignature asset |
 
 #### Return Value
 
@@ -1642,12 +1755,98 @@ Handle the serialization of "signatures" data
 
 `<class 'bytes'>`
 
-## crypto.utils.message
+## crypto.utils.crypto
+
+### `sign_schnorr`
+
+```python
+def sign_schnorr(msg: bytes, private_key: PrivateKey, nonce: int = None) -> str:
+```
+
+Signs a message using Schnorr BIP340 and returns a hex string of the signature
+
+#### Parameters
+
+| Type | Name | Required | Description |
+| :--- | :--- | :--- | :--- |
+| bytes | msg | Yes | Message to be signed |
+| PrivateKey | private_key | Yes | Private key object |
+| int | nonce | No | Deterministic nonce |
+
+
+#### Return Value
+
+`<class 'str'>`
+
+### `sign_schnorr_legacy`
+
+```python
+def sign_schnorr_legacy(msg: bytes, private_key: PrivateKey) -> str:
+```
+
+Signs a message using Legacy Schnorr and returns a hex string of the signature
+
+#### Parameters
+
+| Type | Name | Required | Description |
+| :--- | :--- | :--- | :--- |
+| bytes | msg | Yes | Message to be signed |
+| PrivateKey | private_key | Yes | Private key object |
+| int | nonce | No | Deterministic nonce |
+
+
+#### Return Value
+
+`<class 'str'>`
+
+### `verify_schnorr`
+
+```python
+def verify_schnorr(msg: bytes, public_key: str, signature: str) -> bool:
+```
+
+Verifies a message using Schnorr BIP340
+
+#### Parameters
+
+| Type | Name | Required | Description |
+| :--- | :--- | :--- | :--- |
+| bytes | msg | Yes | Message to be verified |
+| str | public_key | Yes | Public key |
+| str | signature | Yes | Signature |
+
+
+#### Return Value
+
+`<class 'bool'>`
+
+### `verify_schnorr_legacy`
+
+```python
+def verify_schnorr_legacy(msg: bytes, public_key: str, signature: str) -> bool:
+```
+
+Verifies a message using Legacy Schnorr
+
+#### Parameters
+
+| Type | Name | Required | Description |
+| :--- | :--- | :--- | :--- |
+| bytes | msg | Yes | Message to be verified |
+| str | public_key | Yes | Public key |
+| str | signature | Yes | Signature |
+
+
+#### Return Value
+
+`<class 'bool'>`
+
+## crypto.utils.message.Message
 
 ### `__init__`
 
 ```python
-def __init__(self, message, signature, public_key):
+def __init__(self, **kwargs):
 ```
 
 Create a new message instance
@@ -1656,9 +1855,8 @@ Create a new message instance
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| str | message | Yes | Message |
-| str | signature | Yes | Signature |
-| str | public_key | Yes | Public key |
+| any | \*\*kwargs | No | ... |
+
 
 #### Return Value
 
