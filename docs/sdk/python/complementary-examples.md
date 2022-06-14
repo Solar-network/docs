@@ -388,10 +388,11 @@ A delegate resignation has to be sent from the delegate wallet itself to verify 
 ```python
 from solar_client import SolarClient
 from solar_client.exceptions import SolarHTTPException
-from solar_crypto.constants import TRANSACTION_TYPE_GROUP
+from solar_crypto.constants import TRANSACTION_TYPE_GROUP, HTLC_LOCK_EXPIRATION_TYPE
 from solar_crypto.configuration.network import set_network
 from solar_crypto.networks.testnet import Testnet
 from solar_crypto.transactions.builder.htlc_lock import HtlcLock
+from solar_crypto.utils.slot import get_time
 from hashlib import sha256
 
 # Set your network
@@ -409,13 +410,16 @@ secret = "super secret code that must be unique and entirely random"
 secret_code = sha256(secret.encode()).digest()
 secret_hash = sha256(secret_code).hexdigest()
 
+# Expiration value must be > lastBlock.data.timestamp + blocktime * activeDelegates
+expire_in = 600 # set to expire in 10 min.
+
 # Step 2: Create the transaction
 transaction = HtlcLock(
     recipient_id='RECIPIENT_WALLET_ADDRESS',
     amount=200000000,
     secret_hash=secret_hash,
-    expiration_type=1,
-    expiration_value=1573455822
+    expiration_type=HTLC_LOCK_EXPIRATION_TYPE.EPOCH_TIMESTAMP.value,
+    expiration_value=get_time() + expire_in
 )
 
 transaction.set_type_group(TRANSACTION_TYPE_GROUP.CORE)
@@ -455,7 +459,7 @@ nonce = int(senderWallet['data']['nonce']) + 1
 
 # Unlock secret is the sha256 hash of the original message
 secret = "super secret code that must be unique and entirely random"
-unlock_secret = hashlib.sha256('hello'.encode(secret)).hexdigest()
+unlock_secret = hashlib.sha256(secret.encode('utf-8')).hexdigest()
 
 # Step 2: Create the transaction
 transaction = HtlcClaim('LOCK_TRANSACTION_ID', unlock_secret, HashingType.SHA256)
