@@ -41,13 +41,12 @@ senderWallet = client.wallets.get('SENDER_WALLET_ADDRESS')
 nonce = int(senderWallet['data']['nonce']) + 1
 
 # Step 2: Create the transaction
-transaction = Transfer(
-    recipientId='RECIPIENT_WALLET_ADDRESS',
-    amount=200000000,
-    vendorField="Hello World"
-)
+transaction = Transfer()
+
 transaction.set_type_group(TRANSACTION_TYPE_GROUP.CORE)
 transaction.set_nonce(nonce)
+transaction.add_payment(1, 'RECIPIENT_WALLET_ADDRESS_1')
+transaction.add_payment(2, 'RECIPIENT_WALLET_ADDRESS_2')
 #transaction.set_version(3)
 transaction.sign('this is a top secret passphrase')
 
@@ -65,6 +64,46 @@ print(broadcastResponse)
 The vendorField is optional and limited to a length of 255 characters. It can be a good idea to add a vendor field to your transactions if you want to be able to easily track them in the future.<br>
 Rest of the examples assume V3 transactions as default. You must set the version explicity using `transaction.set_version(int)` otherwise.
 </x-alert>
+
+## Creating and Broadcasting a Legacy Transfer
+
+```python
+from solar_client import SolarClient
+from solar_client.exceptions import SolarHTTPException
+from solar_crypto.constants import TRANSACTION_TYPE_GROUP
+from solar_crypto.configuration.network import set_network
+from solar_crypto.networks.testnet import Testnet
+from solar_crypto.transactions.builder.legacy_transfer import LegacyTransfer
+
+# Set your network
+set_network(Testnet)
+
+# Configure our API client
+client = SolarClient('https://sxp.testnet.sh/api')
+
+# Step 1: Retrieve the incremental nonce of the sender wallet
+senderWallet = client.wallets.get('SENDER_WALLET_ADDRESS')
+nonce = int(senderWallet['data']['nonce']) + 1
+
+# Step 2: Create the transaction
+transaction = LegacyTransfer(
+    recipientId='RECIPIENT_WALLET_ADDRESS',
+    amount=200000000,
+    vendorField="Hello World"
+)
+transaction.set_type_group(TRANSACTION_TYPE_GROUP.CORE)
+transaction.set_nonce(nonce)
+transaction.sign('this is a top secret passphrase')
+
+# Step 3: Broadcast the transaction
+try:
+    broadcastResponse = client.transactions.create([transaction.to_dict()])
+except SolarHTTPException as exception:
+    print(exception.response.json())
+
+# Step 4: Log the response
+print(broadcastResponse)
+```
 
 ## Creating and Broadcasting a Second Signature
 
@@ -139,6 +178,47 @@ except SolarHTTPException as exception:
 # Step 4: Log the response
 print(broadcastResponse)
 ```
+
+## Creating and Broadcasting a Delegate Resignation
+
+```python
+from solar_client import SolarClient
+from solar_client.exceptions import SolarHTTPException
+from solar_crypto.constants import TRANSACTION_TYPE_GROUP
+from solar_crypto.configuration.network import set_network
+from solar_crypto.networks.testnet import Testnet
+from solar_crypto.transactions.builder.delegate_resignation import DelegateResignation
+
+# Set your network
+set_network(Testnet)
+
+# Configure our API client
+client = SolarClient('https://sxp.testnet.sh/api')
+
+# Step 1: Retrieve the incremental nonce of the sender wallet
+senderWallet = client.wallets.get('SENDER_WALLET_ADDRESS')
+nonce = int(senderWallet['data']['nonce']) + 1
+
+# Step 2: Create the transaction
+transaction = DelegateResignation()
+
+transaction.set_type_group(TRANSACTION_TYPE_GROUP.CORE)
+transaction.set_nonce(nonce)
+transaction.sign('this is a top secret passphrase')
+
+# Step 3: Broadcast the transaction
+try:
+    broadcastResponse = client.transactions.create([transaction.to_dict()])
+except SolarHTTPException as exception:
+    print(exception.response.json())
+
+# Step 4: Log the response
+print(broadcastResponse)
+```
+
+<x-alert type="info">
+A delegate resignation has to be sent from the delegate wallet itself to verify its identity.
+</x-alert>
 
 ## Creating and Broadcasting a Vote (Solar Version >= 3.4.0)
 
@@ -302,86 +382,6 @@ except SolarHTTPException as exception:
 # Step 4: Log the response
 print(broadcastResponse)
 ```
-
-## Creating and Broadcasting a Multi Payment
-
-```python
-from solar_client import SolarClient
-from solar_client.exceptions import SolarHTTPException
-from solar_crypto.constants import TRANSACTION_TYPE_GROUP
-from solar_crypto.configuration.network import set_network
-from solar_crypto.networks.testnet import Testnet
-from solar_crypto.transactions.builder.multi_payment import MultiPayment
-
-# Set your network
-set_network(Testnet)
-
-# Configure our API client
-client = SolarClient('https://sxp.testnet.sh/api')
-
-# Step 1: Retrieve the incremental nonce of the sender wallet
-senderWallet = client.wallets.get('SENDER_WALLET_ADDRESS')
-nonce = int(senderWallet['data']['nonce']) + 1
-
-# Step 2: Create the transaction
-transaction = MultiPayment()
-
-transaction.set_type_group(TRANSACTION_TYPE_GROUP.CORE)
-transaction.set_nonce(nonce)
-transaction.add_payment(1, 'RECIPIENT_WALLET_ADDRESS_1')
-transaction.add_payment(2, 'RECIPIENT_WALLET_ADDRESS_2')
-transaction.sign('this is a top secret passphrase')
-
-# Step 3: Broadcast the transaction
-try:
-    broadcastResponse = client.transactions.create([transaction.to_dict()])
-except SolarHTTPException as exception:
-    print(exception.response.json())
-
-# Step 4: Log the response
-print(broadcastResponse)
-```
-
-## Creating and Broadcasting a Delegate Resignation
-
-```python
-from solar_client import SolarClient
-from solar_client.exceptions import SolarHTTPException
-from solar_crypto.constants import TRANSACTION_TYPE_GROUP
-from solar_crypto.configuration.network import set_network
-from solar_crypto.networks.testnet import Testnet
-from solar_crypto.transactions.builder.delegate_resignation import DelegateResignation
-
-# Set your network
-set_network(Testnet)
-
-# Configure our API client
-client = SolarClient('https://sxp.testnet.sh/api')
-
-# Step 1: Retrieve the incremental nonce of the sender wallet
-senderWallet = client.wallets.get('SENDER_WALLET_ADDRESS')
-nonce = int(senderWallet['data']['nonce']) + 1
-
-# Step 2: Create the transaction
-transaction = DelegateResignation()
-
-transaction.set_type_group(TRANSACTION_TYPE_GROUP.CORE)
-transaction.set_nonce(nonce)
-transaction.sign('this is a top secret passphrase')
-
-# Step 3: Broadcast the transaction
-try:
-    broadcastResponse = client.transactions.create([transaction.to_dict()])
-except SolarHTTPException as exception:
-    print(exception.response.json())
-
-# Step 4: Log the response
-print(broadcastResponse)
-```
-
-<x-alert type="info">
-A delegate resignation has to be sent from the delegate wallet itself to verify its identity.
-</x-alert>
 
 ## Creating and Broadcasting a HTLC Lock
 

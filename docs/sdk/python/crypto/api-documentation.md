@@ -773,7 +773,7 @@ Set the content identifier of the Transaction.
 
 `<class 'NoneType'>`
 
-## crypto.transactions.builder.multi_payment.MultiPayment
+## crypto.transactions.builder.transfer.Transfer
 
 ### `__init__()`
 
@@ -781,7 +781,7 @@ Set the content identifier of the Transaction.
 def __init__(self, vendorField=None, fee=None):
 ```
 
-Create a new MultiPayment transaction instance
+Create a new Transfer transaction instance
 
 #### Parameters
 
@@ -792,7 +792,7 @@ Create a new MultiPayment transaction instance
 
 #### Return Value
 
-`<class 'crypto.transactions.builder.multi_payment.MultiPayment'>`
+`<class 'crypto.transactions.builder.transfer.Transfer'>`
 
 ### `get_type_group()`
 
@@ -810,6 +810,25 @@ Get the type group of the Transaction.
 
 ```python
 def add_payment(self, amount, recipient_id):
+```
+
+Add a payment to the Payments array of a Transaction. Deprecated - use new add_transfer() method.
+
+#### Parameters
+
+| Type | Name | Required | Description |
+| :--- | :--- | :--- | :--- |
+| int | amount | Yes | Transaction amount |
+| string | recipient_id | Yes | Transaction recipient |
+
+#### Return Value
+
+`<class 'NoneType'>`
+
+### `add_transfer()`
+
+```python
+def add_transfer(self, amount, recipient_id):
 ```
 
 Add a payment to the Payments array of a Transaction.
@@ -920,7 +939,7 @@ Create a new SecondSignatureRegistration transaction instance
 
 `<class 'crypto.transactions.builder.second_signature_registration.SecondSignatureRegistration'>`
 
-## crypto.transactions.builder.Transfer.Transfer
+## crypto.transactions.builder.legacy_transfer.LegacyTransfer
 
 ### `__init__()`
 
@@ -928,7 +947,7 @@ Create a new SecondSignatureRegistration transaction instance
 def __init__(self, recipientId, amount, vendorField=None, fee=None):
 ```
 
-Create a new Transfer transaction instance
+Create a new Legacy Transfer transaction instance
 
 #### Parameters
 
@@ -941,9 +960,9 @@ Create a new Transfer transaction instance
 
 #### Return Value
 
-`<class 'crypto.transactions.builder.transfer.Transfer'>`
+`<class 'crypto.transactions.builder.legacy_transfer.LegacyTransfer'>`
 
-## crypto.transactions.builder.vote.Vote
+## crypto.transactions.builder.legacy_vote.LegacyVote
 
 ### `__init__()`
 
@@ -951,18 +970,18 @@ Create a new Transfer transaction instance
 def __init__(self, vote=None, fee=None):
 ```
 
-Create a new Vote transaction instance
+Create a new Legacy Vote transaction instance
 
 #### Parameters
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| str | vote | No | Vote |
+| str | vote | No | Delegate address to vote for |
 | int | fee | No | Transaction fee |
 
 #### Return Value
 
-`<class 'crypto.transactions.builder.vote.Vote'>`
+`<class 'crypto.transactions.builder.legacy_vote.LegacyVote'>`
 
 ### `set_votes()`
 
@@ -970,7 +989,7 @@ Create a new Vote transaction instance
 def set_votes(self, votes: typing.List[str]):
 ```
 
-Set votes/unvotes
+Set legacy votes/unvotes
 
 #### Parameters
 
@@ -995,6 +1014,38 @@ Sign the transaction using the given passphrase
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
 | str | passphrase | Yes | Passphrase |
+
+#### Return Value
+
+`<class 'NoneType'>`
+
+## crypto.transactions.builder.vote.Vote
+
+### `__init__()`
+
+```python
+def __init__(self):
+```
+
+Create a new Vote transaction instance
+
+#### Return Value
+
+`<class 'crypto.transactions.builder.vote.Vote'>`
+
+### `set_votes()`
+
+```python
+def set_votes(self, votes: typing.Union[typing.List[str], typing.Dict[str, typing.Union[float, int]]] = dict):
+```
+
+Set votes
+
+#### Parameters
+
+| Type | Name | Required | Description |
+| :--- | :--- | :--- | :--- |
+| votes | votes | Yes | list of votes |
 
 #### Return Value
 
@@ -1132,7 +1183,7 @@ Handle the deserialization of "IPFS" data
 
 `<class 'dict'>`
 
-## crypto.transactions.deserializers.multi_payment.MultiPaymentDeserializer
+## crypto.transactions.deserializers.transfer.TransferDeserializer
 
 ### `deserialize()`
 
@@ -1140,7 +1191,7 @@ Handle the deserialization of "IPFS" data
 def deserialize(self):
 ```
 
-Handle the deserialization of "multi payments" data
+Handle the deserialization of "transfer" data
 
 #### Return Value
 
@@ -1174,7 +1225,7 @@ Handle the deserialization of "second signature" data.
 
 `<class 'dict'>`
 
-## crypto.transactions.deserializers.transfer.TransferDeserializer
+## crypto.transactions.deserializers.legacy_transfer.LegacyTransferDeserializer
 
 ### `deserialize()`
 
@@ -1182,7 +1233,21 @@ Handle the deserialization of "second signature" data.
 def deserialize(self):
 ```
 
-Handle the deserialization of "transfer" data
+Handle the deserialization of "legacy transfer" data
+
+#### Return Value
+
+`<class 'dict'>`
+
+## crypto.transactions.deserializers.legacy_vote.LegacyVoteDeserializer
+
+### `deserialize()`
+
+```python
+def deserialize(self):
+```
+
+Handle the deserialization of "legacy vote" data.
 
 #### Return Value
 
@@ -1333,7 +1398,7 @@ Handle the serialization of "ipfs" data
 
 `<class 'bytes'>`
 
-## crypto.transactions.serializers.multi_payment.MultiPaymentSerializer
+## crypto.transactions.serializers.transfer.TransferSerializer
 
 ### `serialize`
 
@@ -1341,7 +1406,7 @@ Handle the serialization of "ipfs" data
 def serialize(self):
 ```
 
-Handle the serialization of "multi payment" data
+Handle the serialization of "transfer" data
 
 #### Return Value
 
@@ -1375,7 +1440,7 @@ Handle the serialization of "second signature" data
 
 `<class 'bytes'>`
 
-## crypto.transactions.serializers.transfer.TransferSerializer
+## crypto.transactions.serializers.legacy_transfer.LegacyTransferSerializer
 
 ### `serialize`
 
@@ -1383,7 +1448,21 @@ Handle the serialization of "second signature" data
 def serialize(self):
 ```
 
-Handle the serialization of "transfer" data
+Handle the serialization of "legacy transfer" data
+
+#### Return Value
+
+`<class 'bytes'>`
+
+## crypto.transactions.serializers.legacy_vote.LegacyVoteSerializer
+
+### `serialize`
+
+```python
+def serialize(self):
+```
+
+Handle the serialization of "legacy vote" data
 
 #### Return Value
 
