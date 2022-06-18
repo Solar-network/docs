@@ -656,7 +656,7 @@ Get the type group of the Transaction.
 ### `__init__()`
 
 ```python
-def __init__(self, recipient_id, amount, secret_hash, expiration_type, expiration_value, vendorField=None, fee=None):
+def __init__(self, recipient_id, amount, secret_hash, expiration_type, expiration_value, memo=None, fee=None):
 ```
 
 Create a new HtlcLock transaction instance
@@ -670,7 +670,7 @@ Create a new HtlcLock transaction instance
 | str | secret_hash | Yes | Transaction secret hash. The same hash must be used in the corresponding "claim" transaction |
 | int | expiration_type | Yes | Transaction expiration type. Either block height or network epoch timestamp based |
 | int | expiration_value | Yes | Transaction expiration value. The block-height or time when the transaction should expire |
-| str | vendorField | Yes | Transaction vendorfield |
+| str | memo | Yes | Transaction memo (aka VendorField or SmartBridge)|
 | int | fee | No | Transaction fee |
 
 #### Return Value
@@ -778,7 +778,7 @@ Set the content identifier of the Transaction.
 ### `__init__()`
 
 ```python
-def __init__(self, vendorField=None, fee=None):
+def __init__(self, memo=None, fee=None):
 ```
 
 Create a new Transfer transaction instance
@@ -787,7 +787,7 @@ Create a new Transfer transaction instance
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| str | vendorField | No | Transaction vendorfield |
+| str | memo | No | Transaction memo |
 | int | fee | No | Transaction fee |
 
 #### Return Value
@@ -944,7 +944,7 @@ Create a new SecondSignatureRegistration transaction instance
 ### `__init__()`
 
 ```python
-def __init__(self, recipientId, amount, vendorField=None, fee=None):
+def __init__(self, recipientId, amount, memo=None, fee=None):
 ```
 
 Create a new Legacy Transfer transaction instance
@@ -955,7 +955,7 @@ Create a new Legacy Transfer transaction instance
 | :--- | :--- | :--- | :--- |
 | str | recipientId | Yes | Recipient identifier |
 | int | amount | Yes | Transaction amount |
-| str | vendorField | No | Transaction vendorfield |
+| str | memo | No | Transaction memo |
 | int | fee | No | Transaction fee |
 
 #### Return Value

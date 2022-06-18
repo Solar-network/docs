@@ -61,7 +61,7 @@ print(broadcastResponse)
 ```
 
 <x-alert type="info">
-The vendorField is optional and limited to a length of 255 characters. It can be a good idea to add a vendor field to your transactions if you want to be able to easily track them in the future.<br>
+The transaction memo (aka VendorField or SmartBridge) is optional and limited to a length of 255 characters. It can be a good idea to add a vendor field to your transactions if you want to be able to easily track them in the future.<br>
 Rest of the examples assume V3 transactions as default. You must set the version explicity using `transaction.set_version(int)` otherwise.
 </x-alert>
 
@@ -89,7 +89,7 @@ nonce = int(senderWallet['data']['nonce']) + 1
 transaction = LegacyTransfer(
     recipientId='RECIPIENT_WALLET_ADDRESS',
     amount=200000000,
-    vendorField="Hello World"
+    memo="Hello World"
 )
 transaction.set_type_group(TRANSACTION_TYPE_GROUP.CORE)
 transaction.set_nonce(nonce)

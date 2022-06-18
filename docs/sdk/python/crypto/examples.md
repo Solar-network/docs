@@ -28,7 +28,7 @@ tx = {
     'nonce': int,
     'type': int,
     'typeGroup': int,
-    'vendorField': str,
+    'memo': str,
     'version': int,
     'lockTransactionId': str,
     'lockSecret': str,
