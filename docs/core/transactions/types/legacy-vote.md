@@ -1,8 +1,10 @@
 ---
-title: Transaction Types - Vote / Unvote / Switchvote
+title: Transaction Types - Vote / Unvote / Switchvote _(**DEPRECATED**)_
 ---
 
-# Vote / Unvote / Switchvote
+# Vote / Unvote / Switchvote _(**DEPRECATED**)_
+
+> 🛑 Vote (Type 3) has been deprecated, please visit ['TypeGroup 2, Type 2: Vote'](/docs/core/transactions/types/vote) to see the updated transaction.
 
 | TypeGroup | Type  |
 | :-------: | :---: |
@@ -12,11 +14,11 @@ A key feature of the SXP DPoS model is that each address can vote for one delega
 
 Holders of SXP vote through their wallets for delegates who secure the network, insert blocks into the ledger, and create new SXP. The top 53 vote earners are named elected forging delegates. Number of delegates is related to DPOS mechanism configuration.
 
-| References           |                                                                                                                                                                                                                                                                |
-| :------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Improvement Proposal | [AIP11](https://github.com/ArkEcosystem/AIPs/blob/master/AIPS/aip-11.md), [AIP29](https://github.com/ArkEcosystem/AIPs/blob/master/AIPS/aip-29.md)                                                                                                             |
-| API Endpoints        | [Link](/docs/api/public-rest-api/endpoints/transactions)                                                                                                                                                                                                       |
-| AJV Schema           | [Base](https://github.com/Solar-network/core/blob/main/packages/crypto/src/transactions/types/schemas.ts#L17-L46) \| [Vote / Unvote / Switchvote](https://github.com/Solar-network/core/blob/main/packages/crypto/src/transactions/types/schemas.ts#L126-L148) |
+| References           |                                                                                                                                                                                                                                                                                                                                        |
+| :------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Improvement Proposal | [AIP11](https://github.com/ArkEcosystem/AIPs/blob/master/AIPS/aip-11.md), [AIP29](https://github.com/ArkEcosystem/AIPs/blob/master/AIPS/aip-29.md)                                                                                                                                                                                     |
+| API Endpoints        | [Link](/docs/api/public-rest-api/endpoints/transactions)                                                                                                                                                                                                                                                                               |
+| AJV Schema           | [Base](https://github.com/Solar-network/core/blob/0c03aaf1feebb77bd33117110c358636bf14d9c0/packages/crypto/src/transactions/types/schemas.ts#L17-L46) \| [Vote / Unvote / Switchvote](https://github.com/Solar-network/core/blob/0c03aaf1feebb77bd33117110c358636bf14d9c0/packages/crypto/src/transactions/types/schemas.ts#L126-L148) |
 
 ## Vote
 
@@ -30,7 +32,7 @@ Holders of SXP vote through their wallets for delegates who secure the network, 
     "type": 3,
     "nonce": "4",
     "senderPublicKey": "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192",
-    "fee": "10000000",
+    "fee": "5000000",
     "asset": {
         "count": 1,
         "votes": ["+cactus1549"]
@@ -41,7 +43,7 @@ Holders of SXP vote through their wallets for delegates who secure the network, 
 ### Serialized
 
 ```shell
-ff033f0100000003000400000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192809698000000000000010b0163616374757331353439
+ff033f0100000003000400000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192404b4c000000000000010b0163616374757331353439
 ```
 
 ### Deserialized
@@ -55,7 +57,7 @@ ff033f0100000003000400000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b
 | **Type:**               | **[7]**  |       **2**        | `0x0300`                                                               |
 | **Nonce:**              | **[9]**  |       **8**        | `0x0400000000000000`                                                   |
 | **SenderPublicKey:**    | **[17]** |       **33**       | `0x034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192` |
-| **Fee:**                | **[50]** |       **8**        | `0x8096980000000000`                                                   |
+| **Fee:**                | **[50]** |       **8**        | `0x404b4c0000000000`                                                   |
 | **VendorField Length:** | **[58]** |       **1**        | `0x00`                                                                 |
 | **Vote Count:**         | **[59]** |       **1**        | `0x01`                                                                 |
 | **Vote Length:**        | **[60]** |       **1**        | `0x0b`                                                                 |
@@ -74,7 +76,7 @@ ff033f0100000003000400000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b
     "type": 3,
     "nonce": "5",
     "senderPublicKey": "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192",
-    "fee": "10000000",
+    "fee": "5000000",
     "asset": {
         "count": 1,
         "votes": ["-cactus1549"]
@@ -85,7 +87,7 @@ ff033f0100000003000400000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b
 ### Serialized
 
 ```shell
-ff033f0100000003000500000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192809698000000000000010b0063616374757331353439
+ff033f0100000003000500000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192404b4c000000000000010b0063616374757331353439
 ```
 
 ### Deserialized
@@ -99,7 +101,7 @@ ff033f0100000003000500000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b
 | **Type:**               | **[7]**  |       **2**        | `0x0300`                                                               |
 | **Nonce:**              | **[9]**  |       **8**        | `0x0400000000000000`                                                   |
 | **SenderPublicKey:**    | **[17]** |       **33**       | `0x034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192` |
-| **Fee:**                | **[50]** |       **8**        | `0x8096980000000000`                                                   |
+| **Fee:**                | **[50]** |       **8**        | `0x404b4c0000000000`                                                   |
 | **VendorField Length:** | **[58]** |       **1**        | `0x00`                                                                 |
 | **Vote Count:**         | **[59]** |       **1**        | `0x01`                                                                 |
 | **Vote Length:**        | **[60]** |       **1**        | `0x0b`                                                                 |
@@ -117,7 +119,7 @@ ff033f0100000003000500000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b
     "type": 3,
     "nonce": "5",
     "senderPublicKey": "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192",
-    "fee": "10000000",
+    "fee": "5000000",
     "asset": {
         "count": 2,
         "votes": ["-cactus1549", "+sl33p"]
@@ -128,7 +130,7 @@ ff033f0100000003000500000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b
 ### Serialized
 
 ```shell
-ff033f0100000003000500000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192809698000000000000020b00636163747573313534390601736c333370
+ff033f0100000003000500000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192404b4c000000000000020b00636163747573313534390601736c333370
 ```
 
 ### Deserialized
@@ -142,7 +144,7 @@ ff033f0100000003000500000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b
 | **Type:**               | **[7]**  |       **2**        | `0x0300`                                                               |
 | **Nonce:**              | **[9]**  |       **8**        | `0x0200000000000000`                                                   |
 | **SenderPublicKey:**    | **[17]** |       **33**       | `0x034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192` |
-| **Fee:**                | **[50]** |       **8**        | `0x8096980000000000`                                                   |
+| **Fee:**                | **[50]** |       **8**        | `0x404b4c0000000000`                                                   |
 | **VendorField Length:** | **[58]** |       **1**        | `0x00`                                                                 |
 | **Vote Count:**         | **[59]** |       **1**        | `0x02`                                                                 |
 | **Vote 1 Length:**      | **[60]** |       **1**        | `0x0b`                                                                 |

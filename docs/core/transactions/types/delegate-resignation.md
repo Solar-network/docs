@@ -12,11 +12,11 @@ This transaction type enables delegates to block potential voters from voting fo
 
 This transaction acts as a "kill command" for delegates who wish to resign or retire their delegate. Activating a delegate resignation will mean delegates will no longer be able to receive any new votes. Plus, for actively forging delegates, enabling delegate resignation will mean they permanently drop out of the top 53. This provides a clean and simple way to retire a delegate.
 
-| References           |                                                                                                                                                                                                                                                          |
-| :------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Improvement Proposal | [AIP11](https://github.com/ArkEcosystem/AIPs/blob/master/AIPS/aip-11.md), [AIP29](https://github.com/ArkEcosystem/AIPs/blob/master/AIPS/aip-29.md)                                                                                                       |
-| API Endpoints        | [Link](/docs/api/public-rest-api/endpoints/transactions)                                                                                                                                                                                                 |
-| AJV Schema           | [Base](https://github.com/Solar-network/core/blob/main/packages/crypto/src/transactions/types/schemas.ts#L17-L46) \| [Delegate Resignation](https://github.com/Solar-network/core/blob/main/packages/crypto/src/transactions/types/schemas.ts#L374-L381) |
+| References           |                                                                                                                                                                                                                                                                                                                                  |
+| :------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Improvement Proposal | [AIP11](https://github.com/ArkEcosystem/AIPs/blob/master/AIPS/aip-11.md), [AIP29](https://github.com/ArkEcosystem/AIPs/blob/master/AIPS/aip-29.md)                                                                                                                                                                               |
+| API Endpoints        | [Link](/docs/api/public-rest-api/endpoints/transactions)                                                                                                                                                                                                                                                                         |
+| AJV Schema           | [Base](https://github.com/Solar-network/core/blob/0c03aaf1feebb77bd33117110c358636bf14d9c0/packages/crypto/src/transactions/types/schemas.ts#L17-L46) \| [Delegate Resignation](https://github.com/Solar-network/core/blob/0c03aaf1feebb77bd33117110c358636bf14d9c0/packages/crypto/src/transactions/types/schemas.ts#L374-L381) |
 
 ## Transaction Structure
 
@@ -30,14 +30,14 @@ This transaction acts as a "kill command" for delegates who wish to resign or re
     "type": 1,
     "nonce": "9",
     "senderPublicKey": "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192",
-    "fee": "50000000",
+    "fee": "0",
 }
 ```
 
 ### Serialized
 
 ```shell
-ff033f0100000002000900000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed19280f0fa020000000000eb08bf010000000005736c333370
+ff033f0100000002000900000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192000000000000000000eb08bf010000000005736c333370
 ```
 
 ### Deserialized
@@ -51,5 +51,5 @@ ff033f0100000002000900000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b
 | **Type:**               | **[7]**  |       **2**        | `0x0700`                                                               |
 | **Nonce:**              | **[9]**  |       **8**        | `0x0900000000000000`                                                   |
 | **SenderPublicKey:**    | **[17]** |       **33**       | `0x034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192` |
-| **Fee:**                | **[50]** |       **8**        | `0x80f0fa0200000000`                                                   |
+| **Fee:**                | **[50]** |       **8**        | `0x0000000000000000`                                                   |
 | **VendorField Length:** | **[58]** |       **1**        | `0x00`                                                                 |

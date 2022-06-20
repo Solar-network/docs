@@ -12,11 +12,11 @@ A Hashed Time-Lock Contract (HTLC) is a set of transaction types that permits a 
 
 The purpose of this transaction is to _**LOCK**_ funds of the sender and make them possible for retrieval by the recipient, if they know the shared secret.
 
-| References           |                                                                                                                                                                                                                                               |
-| :------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Improvement Proposal | [AIP102](https://github.com/ArkEcosystem/AIPs/blob/master/AIPS/aip-102.md)                                                                                                                                                                    |
-| API Endpoints        | [Link](/docs/api/public-rest-api/endpoints/transactions)                                                                                                                                                                                      |
-| AJV Schema           | [Base](https://github.com/Solar-network/core/blob/main/packages/crypto/src/transactions/types/schemas.ts#L17-L46) \| [HTLC Lock](https://github.com/Solar-network/core/blob/main/packages/crypto/src/transactions/types/schemas.ts#L266-L297) |
+| References           |                                                                                                                                                                                                                                                                                                                       |
+| :------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Improvement Proposal | [AIP102](https://github.com/ArkEcosystem/AIPs/blob/master/AIPS/aip-102.md)                                                                                                                                                                                                                                            |
+| API Endpoints        | [Link](/docs/api/public-rest-api/endpoints/transactions)                                                                                                                                                                                                                                                              |
+| AJV Schema           | [Base](https://github.com/Solar-network/core/blob/0c03aaf1feebb77bd33117110c358636bf14d9c0/packages/crypto/src/transactions/types/schemas.ts#L17-L46) \| [HTLC Lock](https://github.com/Solar-network/core/blob/0c03aaf1feebb77bd33117110c358636bf14d9c0/packages/crypto/src/transactions/types/schemas.ts#L266-L297) |
 
 ## JSON
 
@@ -28,7 +28,7 @@ The purpose of this transaction is to _**LOCK**_ funds of the sender and make th
     "type": 8,
     "nonce": "10",
     "senderPublicKey": "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192",
-    "fee": "10000000",
+    "fee": "5000000",
     "amount": "1",
     "recipientId": "SNAgA2XCRZDKfm5Vu9h4KR1bZw5xn9EiC3",
     "asset": {
@@ -46,7 +46,7 @@ The purpose of this transaction is to _**LOCK**_ funds of the sender and make th
 ## Serialized
 
 ```shell
-ff033f0100000008000a00000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed1928096980000000000000100000000000000029c1a3815d49e0c9f78b872bfb017e825ea2db708158b70815526a830c85912b401537bb1043f0995750207ecaf0ccf251c1265b92ad84f553662
+ff033f0100000008000a00000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192404b4c0000000000000100000000000000029c1a3815d49e0c9f78b872bfb017e825ea2db708158b70815526a830c85912b401537bb1043f0995750207ecaf0ccf251c1265b92ad84f553662
 ```
 
 ## Deserialized
@@ -60,7 +60,7 @@ ff033f0100000008000a00000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b
 | **Type:**               |  **[7]**  |       **2**        | `0x0800`                                                               |
 | **Nonce:**              |  **[9]**  |       **8**        | `0x0a00000000000000`                                                   |
 | **SenderPublicKey:**    | **[17]**  |       **33**       | `0x034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192` |
-| **Fee:**                | **[50]**  |       **8**        | `0x8096980000000000`                                                   |
+| **Fee:**                | **[50]**  |       **8**        | `0x404b4c0000000000`                                                   |
 | **VendorField Length:** | **[58]**  |       **1**        | `0x00`                                                                 |
 | **Amount:**             | **[59]**  |       **8**        | `0x0100000000000000`                                                   |
 | **Secret Hash Length:** | **[67]**  |       **8**        | `0x20`                                                                 |
