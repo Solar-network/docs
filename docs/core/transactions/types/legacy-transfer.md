@@ -10,7 +10,9 @@ title: Transaction Types - Transfer _(**DEPRECATED**)_
 | :-------: | :---: |
 |     1     |   0   |
 
-The transfer transaction enables a user to broadcast a transaction to the network sending SXP tokens from one SXP wallet to another. This transaction type provides the utility of store-of-value and value transfer. It also contains a special data field of 255 bytes called the vendor field, allowing raw data, code or plain text to be stored on the blockchain. The vendor field is public and immutable, and is also utilized in SXP SmartBridge Technology.
+The transfer transaction enables a user to broadcast a transaction to the network sending SXP tokens from one SXP wallet to another. This transaction type provides the utility of store-of-value and value transfer.
+
+All Solar transactions contain a special data field of 255 bytes called the Memo (formerly known as the vendorfield), allowing raw data, code or plain text to be stored on the blockchain. The Memo is public and immutable.
 
 | References           |                                                                                                                                                                                                                                                                                                                    |
 | :------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -29,7 +31,7 @@ The transfer transaction enables a user to broadcast a transaction to the networ
     "nonce": "1",
     "senderPublicKey": "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192",
     "fee": "5000000",
-    "vendorField": "This is a test vendorfield.",
+    "Memo": "This is a test Memo.",
     "amount": "100000000",
     "expiration": 0,
     "recipientId": "SNAgA2XCRZDKfm5Vu9h4KR1bZw5xn9EiC3"
@@ -44,18 +46,18 @@ ff033f0100000000000100000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b
 
 ## Deserialized
 
-| Key                     |   Pos.   | Size<br/>_(bytes)_ | Value<br/>_(hex)_                                                      |
-| :---------------------- | :------: | :----------------: | :--------------------------------------------------------------------- |
-| **Header Flag:**        | **[0]**  |       **1**        | `0xff`                                                                 |
-| **Version:**            | **[1]**  |       **1**        | `0x03`                                                                 |
-| **Network:**            | **[2]**  |       **1**        | `0x3f`                                                                 |
-| **Typegroup:**          | **[3]**  |       **4**        | `0x01000000`                                                           |
-| **Type:**               | **[7]**  |       **2**        | `0x0000`                                                               |
-| **Nonce:**              | **[9]**  |       **8**        | `0x0100000000000000`                                                   |
-| **SenderPublicKey:**    | **[17]** |       **33**       | `0x034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192` |
-| **Fee:**                | **[50]** |       **8**        | `0x404b4c0000000000`                                                   |
-| **VendorField Length:** | **[58]** |       **1**        | `0x1b`                                                                 |
-| **VendorField:**        | **[59]** |       **26**       | `0x54686973206973206120746573742076656e646f726669656c642e`             |
-| **Amount:**             | **[85]** |       **8**        | `0x00e1f50500000000`                                                   |
-| **Expiration:**         | **[93]** |       **4**        | `0x00000000`                                                           |
-| **Recipient:**          | **[97]** |       **21**       | `0x3f0995750207ecaf0ccf251c1265b92ad84f553662`                         |
+| Key                  |   Pos.   | Size<br/>_(bytes)_ | Value<br/>_(hex)_                                                      |
+| :------------------- | :------: | :----------------: | :--------------------------------------------------------------------- |
+| **Header Flag:**     | **[0]**  |       **1**        | `0xff`                                                                 |
+| **Version:**         | **[1]**  |       **1**        | `0x03`                                                                 |
+| **Network:**         | **[2]**  |       **1**        | `0x3f`                                                                 |
+| **Typegroup:**       | **[3]**  |       **4**        | `0x01000000`                                                           |
+| **Type:**            | **[7]**  |       **2**        | `0x0000`                                                               |
+| **Nonce:**           | **[9]**  |       **8**        | `0x0100000000000000`                                                   |
+| **SenderPublicKey:** | **[17]** |       **33**       | `0x034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192` |
+| **Fee:**             | **[50]** |       **8**        | `0x404b4c0000000000`                                                   |
+| **Memo Length:**     | **[58]** |       **1**        | `0x1b`                                                                 |
+| **Memo:**            | **[59]** |       **26**       | `0x54686973206973206120746573742076656e646f726669656c642e`             |
+| **Amount:**          | **[85]** |       **8**        | `0x00e1f50500000000`                                                   |
+| **Expiration:**      | **[93]** |       **4**        | `0x00000000`                                                           |
+| **Recipient:**       | **[97]** |       **21**       | `0x3f0995750207ecaf0ccf251c1265b92ad84f553662`                         |

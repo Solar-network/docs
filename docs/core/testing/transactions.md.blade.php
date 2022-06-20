@@ -24,7 +24,7 @@ As you progress through this document, you are encouraged to test scenarios that
 
 ## Send Transaction
 
-The transfer transaction enables a user to broadcast a transaction to the network sending SXP tokens from one SXP wallet to another. This transaction type provides the utility of store-of-value and value transfer. It also contains a special data field of 255 bytes called the vendor field, allowing raw data, code or plain text to be stored on the blockchain. The vendor field is public and immutable, and is also utilized in SXP SmartBridge Technology.
+The transfer transaction enables a user to broadcast a transaction to the network sending SXP tokens from one SXP wallet to another. This transaction type provides the utility of store-of-value and value transfer. It also contains a special data field of 255 bytes called the memo, allowing raw data, code or plain text to be stored on the blockchain. The memo is public and immutable, and is also utilized in SXP SmartBridge Technology.
 
 - Before sending a transaction, check the balances of the sender and recipient via the explorer or API
 - Using the Desktop Wallet, send a transaction between your wallets.
@@ -92,7 +92,7 @@ A new feature of Core V3 is that now you can unvote your current delegate and vo
 
 ## IPFS Transaction
 
-This transaction type utilizes a special data field similar to the vendor field to store Interplanetary File System data on the blockchain. This provides an easy way to timestamp and optionally encrypt and verify files. This implementation of the IPFS transaction type won’t allow storing data on the blockchain - for that, special IPFS nodes are needed.
+This transaction type utilizes a special data field similar to the memo to store Interplanetary File System data on the blockchain. This provides an easy way to timestamp and optionally encrypt and verify files. This implementation of the IPFS transaction type won’t allow storing data on the blockchain - for that, special IPFS nodes are needed.
 
 - Before sending a transaction, note the balances of the sender and recipient via the explorer or API.
 - Using the Desktop Wallet, store an IPFS hash on the blockchain with an IPFS Transaction.

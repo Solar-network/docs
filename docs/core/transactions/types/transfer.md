@@ -10,6 +10,8 @@ title: Transaction Types - Transfer
 
 This type--formerly called 'Multi-Payment'--is designed to reduce the payload on the blockchain by enabling multiple transfers to be combined and broadcast to the network as a single transaction. This benefits the end user and delegates by lowering transaction fees per payment and reducing congestion. Solar Core currently allows between 1 to 256 transfers in a single transaction.
 
+All Solar transactions contain a special data field of 255 bytes called the Memo (formerly known as the vendorfield), allowing raw data, code or plain text to be stored on the blockchain. The Memo is public and immutable.
+
 | References           |                                                                                                                                                                                                                                                                                                                       |
 | :------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Improvement Proposal | [AIP11](https://github.com/ArkEcosystem/AIPs/blob/master/AIPS/aip-11.md), [AIP29](https://github.com/ArkEcosystem/AIPs/blob/master/AIPS/aip-29.md)                                                                                                                                                                    |
@@ -92,7 +94,7 @@ ff033f0100000006000500000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b
 | **Nonce:**               |  **[9]**   |       **8**        | `0x0800000000000000`                                                   |
 | **SenderPublicKey:**     |  **[17]**  |       **33**       | `0x034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192` |
 | **Fee:**                 |  **[50]**  |       **8**        | `0x80f0fa0200000000`                                                   |
-| **VendorField Length:**  |  **[58]**  |       **1**        | `0x00`                                                                 |
+| **Memo Length:**         |  **[58]**  |       **1**        | `0x00`                                                                 |
 | **Number of Transfers:** |  **[59]**  |       **2**        | `0x2800`                                                               |
 | **Amount 1:**            |  **[61]**  |       **8**        | `0x0100000000000000`                                                   |
 | **Recipient 1:**         |  **[69]**  |       **21**       | `0x3f0995750207ecaf0ccf251c1265b92ad84f553662`                         |
