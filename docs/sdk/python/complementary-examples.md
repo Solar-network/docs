@@ -45,8 +45,8 @@ transaction = Transfer()
 
 transaction.set_type_group(TRANSACTION_TYPE_GROUP.CORE)
 transaction.set_nonce(nonce)
-transaction.add_payment(1, 'RECIPIENT_WALLET_ADDRESS_1')
-transaction.add_payment(2, 'RECIPIENT_WALLET_ADDRESS_2')
+transaction.add_transfer(1, 'RECIPIENT_WALLET_ADDRESS_1')
+transaction.add_transfer(2, 'RECIPIENT_WALLET_ADDRESS_2')
 #transaction.set_version(3)
 transaction.sign('this is a top secret passphrase')
 

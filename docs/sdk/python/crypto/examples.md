@@ -87,7 +87,7 @@ from solar_crypto.transactions.deserializer import Deserializer
 
 transaction_data = Deserializer(serialized_data).deserialize()
 
->>> <class 'crypto.transactions.transaction.Transaction'>
+>>> <class 'solar_crypto.transactions.transaction.Transaction'>
 ```
 
 ## Message
@@ -103,7 +103,7 @@ from solar_crypto.utils.message import Message
 
 message = Message.sign(string, 'validSeedPass')
 
->>> <class 'crypto.utils.message.Message'>
+>>> <class 'solar_crypto.utils.message.Message'>
 ```
 
 ### Verify
@@ -189,7 +189,7 @@ from solar_crypto.identity.private_key import PrivateKey
 
 private_key = PrivateKey.from_hex(str)
 
->>> <class 'crypto.identity.private_key.PrivateKey'>
+>>> <class 'solar_crypto.identity.private_key.PrivateKey'>
 ```
 
 ### Derive the Private Key from a WIF
@@ -219,7 +219,7 @@ from solar_crypto.identity.public_key import PublicKey
 
 public_key = PublicKey.from_hex(str)
 
->>> <class 'crypto.identity.public_key.PublicKey'>
+>>> <class 'solar_crypto.identity.public_key.PublicKey'>
 ```
 
 ### Validate a Public Key

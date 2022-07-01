@@ -9,7 +9,7 @@ title: API Documentation
 ### `get_fee()`
 
 ```python
-def get_fee(transaction_type):
+def get_fee(transaction_type, type_group):
 ```
 
 Get a fee for a given transaction type
@@ -19,6 +19,7 @@ Get a fee for a given transaction type
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
 | int | transaction_type | Yes | Transaction type for which we wish to get a fee |
+| int | type_group | Yes | transaction type group (TRANSACTION_TYPE_GROUP(Enum)) |
 
 #### Return Value
 
@@ -27,7 +28,7 @@ Get a fee for a given transaction type
 ### `set_fee()`
 
 ```python
-def set_fee(transaction_type, value):
+def set_fee(transaction_type, type_group, value):
 ```
 
 Set a fee
@@ -37,6 +38,7 @@ Set a fee
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
 | int | transaction_type | Yes | Transaction type for which we wish to set a fee |
+| int | type_group | Yes | transaction type group (TRANSACTION_TYPE_GROUP(Enum)) |
 | int | value | Yes | Fee for a given transaction type |
 
 #### Return Value
@@ -57,7 +59,7 @@ Set what network you want to use in the crypto library
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| Network | network_object | Yes | Testnet, Testnet, Mainnet |
+| Network | network_object | Yes | Testnet, Mainnet |
 
 #### Return Value
 
@@ -69,7 +71,7 @@ Set what network you want to use in the crypto library
 def get_network():
 ```
 
-Get settings for a selected network, default network is testnet
+Get settings for a selected network, default network is Testnet
 
 #### Return Value
 
@@ -94,6 +96,18 @@ Set custom network
 #### Return Value
 
 `<class 'NoneType'>`
+
+### `get_network_version()`
+
+```python
+def get_network_version():
+```
+
+Get currently set network version
+
+#### Return Value
+
+`<class 'Network'>`
 
 ## crypto.identity.address
 
@@ -175,10 +189,28 @@ Validate a given address
 
 ## crypto.identity.private_key.PrivateKey
 
+### `__init__()`
+
+```python
+def __init__(self, private_key):
+```
+
+Create a new PrivateKey instance
+
+#### Parameters
+
+| Type | Name | Required | Description |
+| :--- | :--- | :--- | :--- |
+| str | private_key | Yes | Hex private key |
+
+#### Return Value
+
+`<class 'solar_crypto.identity.private_key.PrivateKey'>`
+
 ### `sign()`
 
 ```python
-def sign(self, message):
+def sign(self, message, nonce=None):
 ```
 
 Sign a message with this private key object
@@ -188,10 +220,11 @@ Sign a message with this private key object
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
 | str | message | Yes | Bytes data you want to sign |
+| int | nonce | No | Deterministic nonce |
 
 #### Return Value
 
-`<class 'NoneType'>`
+`<class 'str'>`
 
 ### `to_hex()`
 
@@ -226,7 +259,7 @@ Create PrivateKey object from a given passphrase
 ### `from_hex()`
 
 ```python
-def from_hex(self, private_key):
+def from_hex(cls, private_key):
 ```
 
 Create PrivateKey object from a given hex private key
@@ -543,7 +576,7 @@ Create a new Burn transaction instance
 
 #### Return Value
 
-`<class 'crypto.transactions.builder.burn.Burn'>`
+`<class 'solar_crypto.transactions.builder.burn.Burn'>`
 
 ## crypto.transactions.builder.delegate_registration.DelegateRegistration
 
@@ -564,7 +597,7 @@ Create a new DelegateRegistration transaction instance
 
 #### Return Value
 
-`<class 'crypto.transactions.builder.delegate_registration.DelegateRegistration'>`
+`<class 'solar_crypto.transactions.builder.delegate_registration.DelegateRegistration'>`
 
 ### `sign()`
 
@@ -602,7 +635,7 @@ Create a new DelegateResignation transaction instance
 
 #### Return Value
 
-`<class 'crypto.transactions.builder.delegate_resignation.DelegateResignation'>`
+`<class 'solar_crypto.transactions.builder.delegate_resignation.DelegateResignation'>`
 
 ### `get_type_group()`
 
@@ -637,7 +670,7 @@ Create a new HtlcClaim transaction instance
 
 #### Return Value
 
-`<class 'crypto.transactions.builder.htlc_claim.HtlcClaim'>`
+`<class 'solar_crypto.transactions.builder.htlc_claim.HtlcClaim'>`
 
 ### `get_type_group()`
 
@@ -675,7 +708,7 @@ Create a new HtlcLock transaction instance
 
 #### Return Value
 
-`<class 'crypto.transactions.builder.htlc_lock.HtlcLock'>`
+`<class 'solar_crypto.transactions.builder.htlc_lock.HtlcLock'>`
 
 ### `get_type_group()`
 
@@ -708,7 +741,7 @@ Create a new HtlcRefund transaction instance
 
 #### Return Value
 
-`<class 'crypto.transactions.builder.htlc_refund.HtlcRefund'>`
+`<class 'solar_crypto.transactions.builder.htlc_refund.HtlcRefund'>`
 
 ### `get_type_group()`
 
@@ -741,7 +774,7 @@ Create a new IPFS transaction instance
 
 #### Return Value
 
-`<class 'crypto.transactions.builder.ipfs.IPFS'>`
+`<class 'solar_crypto.transactions.builder.ipfs.IPFS'>`
 
 ### `get_type_group()`
 
@@ -792,7 +825,7 @@ Create a new Transfer transaction instance
 
 #### Return Value
 
-`<class 'crypto.transactions.builder.transfer.Transfer'>`
+`<class 'solar_crypto.transactions.builder.transfer.Transfer'>`
 
 ### `get_type_group()`
 
@@ -806,32 +839,13 @@ Get the type group of the Transaction.
 
 `<class 'int'>`
 
-### `add_payment()`
-
-```python
-def add_payment(self, amount, recipient_id):
-```
-
-Add a payment to the Payments array of a Transaction. Deprecated - use new add_transfer() method.
-
-#### Parameters
-
-| Type | Name | Required | Description |
-| :--- | :--- | :--- | :--- |
-| int | amount | Yes | Transaction amount |
-| string | recipient_id | Yes | Transaction recipient |
-
-#### Return Value
-
-`<class 'NoneType'>`
-
 ### `add_transfer()`
 
 ```python
 def add_transfer(self, amount, recipient_id):
 ```
 
-Add a payment to the Payments array of a Transaction.
+Add a transfer to the Transfers array of a Transaction.
 
 #### Parameters
 
@@ -862,7 +876,7 @@ Create a new MultiSignatureRegistration transaction instance
 
 #### Return Value
 
-`<class 'crypto.transactions.builder.multi_signature_registration.MultiSignatureRegistration'>`
+`<class 'solar_crypto.transactions.builder.multi_signature_registration.MultiSignatureRegistration'>`
 
 ### `set_min()`
 
@@ -937,7 +951,7 @@ Create a new SecondSignatureRegistration transaction instance
 
 #### Return Value
 
-`<class 'crypto.transactions.builder.second_signature_registration.SecondSignatureRegistration'>`
+`<class 'solar_crypto.transactions.builder.second_signature_registration.SecondSignatureRegistration'>`
 
 ## crypto.transactions.builder.legacy_transfer.LegacyTransfer
 
@@ -960,7 +974,7 @@ Create a new Legacy Transfer transaction instance
 
 #### Return Value
 
-`<class 'crypto.transactions.builder.legacy_transfer.LegacyTransfer'>`
+`<class 'solar_crypto.transactions.builder.legacy_transfer.LegacyTransfer'>`
 
 ## crypto.transactions.builder.legacy_vote.LegacyVote
 
@@ -981,7 +995,7 @@ Create a new Legacy Vote transaction instance
 
 #### Return Value
 
-`<class 'crypto.transactions.builder.legacy_vote.LegacyVote'>`
+`<class 'solar_crypto.transactions.builder.legacy_vote.LegacyVote'>`
 
 ### `set_votes()`
 
@@ -1031,12 +1045,12 @@ Create a new Vote transaction instance
 
 #### Return Value
 
-`<class 'crypto.transactions.builder.vote.Vote'>`
+`<class 'solar_crypto.transactions.builder.vote.Vote'>`
 
 ### `set_votes()`
 
 ```python
-def set_votes(self, votes: typing.Union[typing.List[str], typing.Dict[str, typing.Union[float, int]]] = dict):
+def set_votes(self, votes: typing.Union[typing.List[str], typing.Dict[str, typing.Union[int, float, Decimal]]] = dict):
 ```
 
 Set votes
@@ -1071,7 +1085,7 @@ Create a new deserializer instance
 
 #### Return Value
 
-`<class 'crypto.transactions.deserializers.base.BaseDeserializer'>`
+`<class 'solar_crypto.transactions.deserializers.base.BaseDeserializer'>`
 
 ### `deserialize()`
 
@@ -1286,7 +1300,7 @@ Create a new serializer instance
 
 #### Return Value
 
-`<class 'crypto.transactions.serializers.base.BaseSerializer'>`
+`<class 'solar_crypto.transactions.serializers.base.BaseSerializer'>`
 
 ### `serialize`
 
@@ -1500,7 +1514,7 @@ Create a new deserializer instance
 
 #### Return Value
 
-`<class 'crypto.transactions.deserializer.Deserializer'>`
+`<class 'solar_crypto.transactions.deserializer.Deserializer'>`
 
 ### `deserialize`
 
@@ -1512,7 +1526,7 @@ Perform AIP11 compliant deserialization
 
 #### Return Value
 
-`<class 'crypto.transactions.transaction.Transaction'>`
+`<class 'solar_crypto.transactions.transaction.Transaction'>`
 
 ### `_handle_transaction_type`
 
@@ -1531,7 +1545,7 @@ Handle the deserialization of transaction data
 
 #### Return Value
 
-`<class 'crypto.transactions.transaction.Transaction'>`
+`<class 'solar_crypto.transactions.transaction.Transaction'>`
 
 ## crypto.transactions.serializer.Serializer
 
@@ -1551,7 +1565,7 @@ Create a new serializer instance
 
 #### Return Value
 
-`<class 'crypto.transactions.serializer.Serializer'>`
+`<class 'solar_crypto.transactions.serializer.Serializer'>`
 
 ### `serialize`
 
@@ -1632,7 +1646,7 @@ Create a new transaction instance
 
 #### Return Value
 
-`<class 'crypto.transactions.transaction.Transaction'>`
+`<class 'solar_crypto.transactions.transaction.Transaction'>`
 
 ### `get_id`
 
@@ -1939,7 +1953,7 @@ Create a new message instance
 
 #### Return Value
 
-`<class 'crypto.utils.message.Message'>`
+`<class 'solar_crypto.utils.message.Message'>`
 
 ### `sign`
 
@@ -1958,7 +1972,7 @@ Sign a message using the given passphrase
 
 #### Return Value
 
-`<class 'crypto.utils.message.Message'>`
+`<class 'solar_crypto.utils.message.Message'>`
 
 ### `verify`
 
