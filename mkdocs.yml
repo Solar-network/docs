@@ -153,6 +153,7 @@ nav:
   - Core:
     - core/intro.md
     - Core Updates:
+      - core/updates/4.0.0.md
       - core/updates/3.3.0.md
 #  - SLP:
 #    - slp/intro.md
