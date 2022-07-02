@@ -23,17 +23,17 @@ In the following sections basic transaction types and their structure is present
 ## List of Transaction Types
 
 * TypeGroup 1
-  * [Type 0: Legacy Transfer](/docs/core/transactions/types/legacy-transfer) _(**DEPRECATED**)_
-  * [Type 1: Second Signature Registration](/docs/core/transactions/types/second-signature)
-  * [Type 2: Delegate Registration](/docs/core/transactions/types/delegate-registration)
-  * [Type 3: Legacy Vote](/docs/core/transactions/types/legacy-vote) _(**DEPRECATED**)_
-  * [Type 4: MultiSignature Registration](/docs/core/transactions/types/multisignature-registration)
-  * [Type 5: IPFS](/docs/core/transactions/types/ipfs)
-  * [Type 6: Transfer](/docs/core/transactions/types/transfer)
-  * [Type 7: Delegate Resignation](/docs/core/transactions/types/delegate-resignation)
-  * [Type 8: HTLC Lock](/docs/core/transactions/types/htlc-lock)
-  * [Type 9: HTLC Claim](/docs/core/transactions/types/htlc-claim)
-  * [Type 10: HTLC Refund](/docs/core/transactions/types/htlc-refund)
+    * [Type 0: Legacy Transfer](/docs/core/transactions/types/legacy-transfer) _(**DEPRECATED**)_
+    * [Type 1: Second Signature Registration](/docs/core/transactions/types/second-signature)
+    * [Type 2: Delegate Registration](/docs/core/transactions/types/delegate-registration)
+    * [Type 3: Legacy Vote](/docs/core/transactions/types/legacy-vote) _(**DEPRECATED**)_
+    * [Type 4: MultiSignature Registration](/docs/core/transactions/types/multisignature-registration)
+    * [Type 5: IPFS](/docs/core/transactions/types/ipfs)
+    * [Type 6: Transfer](/docs/core/transactions/types/transfer)
+    * [Type 7: Delegate Resignation](/docs/core/transactions/types/delegate-resignation)
+    * [Type 8: HTLC Lock](/docs/core/transactions/types/htlc-lock)
+    * [Type 9: HTLC Claim](/docs/core/transactions/types/htlc-claim)
+    * [Type 10: HTLC Refund](/docs/core/transactions/types/htlc-refund)
 * TypeGroup 2
-  * [Type 0: Burn](/docs/core/transactions/types/burn)
-  * [Type 2: Vote](/docs/core/transactions/types/vote)
+    * [Type 0: Burn](/docs/core/transactions/types/burn)
+    * [Type 2: Vote](/docs/core/transactions/types/vote)

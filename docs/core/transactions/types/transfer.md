@@ -8,7 +8,7 @@ title: Transaction Types - Transfer
 | :-------: | :---: |
 |     1     |   6   |
 
-This type--formerly called 'Multi-Payment'--is designed to reduce the payload on the blockchain by enabling multiple transfers to be combined and broadcast to the network as a single transaction. This benefits the end user and delegates by lowering transaction fees per payment and reducing congestion. Solar Core currently allows between 1 to 256 transfers in a single transaction.
+A transfer allows one or multiple payments to be combined and broadcast to the network as a single transaction. This benefits the end user and delegates by lowering transaction fees per payment and reducing congestion. Solar Core allows up to 256 payments to be combined within a single transaction.
 
 All Solar transactions contain a special data field of 255 bytes called the Memo (formerly known as the vendorfield), allowing raw data, code or plain text to be stored on the blockchain. The Memo is public and immutable.
 

@@ -8,7 +8,7 @@ title: Transaction Types - Delegate Resignation
 | :-------: | :---: |
 |     1     |   7   |
 
-A 'Delegate Resignation' transaction allows a delegate to resign temporarily or permanently. While resigned, their ability to receive votes is blocked and, if ranked in the top 53 Delegates, are removed from their forging position immediately. 
+A 'Delegate Resignation' transaction allows a delegate to resign temporarily or permanently. While resigned, their ability to receive votes is blocked and, if ranked in the top 53 Delegates, are removed from their forging position immediately.
 
 A 'Permanent Resignation' is for delegates who wish to permanently retire their position as a delegate on the Solar Network. Once resigned permanently, a delegate cannot reinstate their candidacy, and their username will no longer be registrable.
 

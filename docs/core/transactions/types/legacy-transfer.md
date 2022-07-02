@@ -10,7 +10,7 @@ title: Transaction Types - Transfer _(**DEPRECATED**)_
 | :-------: | :---: |
 |     1     |   0   |
 
-The transfer transaction enables a user to broadcast a transaction to the network sending SXP tokens from one SXP wallet to another. This transaction type provides the utility of store-of-value and value transfer.
+The transfer transaction enables a user to broadcast a transaction to the network sending SXP tokens from one SXP wallet to another.
 
 All Solar transactions contain a special data field of 255 bytes called the Memo (formerly known as the vendorfield), allowing raw data, code or plain text to be stored on the blockchain. The Memo is public and immutable.
 
