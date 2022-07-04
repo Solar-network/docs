@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This guide will help you get started in using your Ledger hardware wallet with the Solar Desktop Wallet software. Your Ledger device uses an offline, or cold storage, method of generating private keys, making it among the most secure ways to store cryptoassets, including Solar (SXP). It enables you to sign transactions securely, so you can send SXP or vote for your favorite delegates without the need to enter your mnemonic recovery passphrase.
+This guide will help you get started in using your Ledger hardware wallet with the Solar Desktop Wallet software. Your Ledger device uses an offline, or cold storage, method of generating private keys, making it among the most secure ways to store cryptoassets, including Solar (SXP). It enables you to sign transactions securely, so you can send SXP or vote for your favourite delegates without the need to enter your mnemonic recovery passphrase.
 
 This guide covers the following topics:
 
@@ -42,7 +42,7 @@ To get started installing the Solar Ledger app, open Ledger Live Desktop and cli
 
 **2. Connect your Ledger device**
 
-Next, connect your Ledger device to your computer and unlock it using your pin.
+Next, connect your Ledger device to your computer and unlock it using your PIN.
 
 ![](/desktop-wallet/assets/ledger/ledger-pin-animation.gif)
 
@@ -70,7 +70,7 @@ Having multiple Ledger-supported applications opened at the same time on your co
 
 **2. Connect your Ledger device**
 
-If not already connected and unlocked, connect your Ledger device to your computer and unlock it using your pin.
+If not already connected and unlocked, connect your Ledger device to your computer and unlock it using your PIN.
 
 ![](/desktop-wallet/assets/ledger/ledger-pin-animation.gif)
 
@@ -84,7 +84,7 @@ Next, open the Solar Ledger app on your Ledger device.
 
 **4. Open the Solar Desktop Wallet**
 
-Once initialized, the Solar Desktop Wallet will load and display your Ledger wallets and their SXP balances.
+Once initialised, the Solar Desktop Wallet will load and display your Ledger wallets and their SXP balances.
 
 ![](/desktop-wallet/assets/ledger/my-wallet-overview.png)
 
@@ -136,7 +136,7 @@ Using the Solar Desktop Wallet, open the Solar (SXP) Ledger address from which y
 
 > _Make sure your Ledger device is connected and unlocked and that the Solar app is opened._
 
-**2. Enter the Transfer's Details**
+**2. Enter the Transfer Details**
 
 Enter the recipient's wallet address (or pick one from your address book) and the amount of SXP you'd like to send.
 
@@ -148,11 +148,11 @@ After entering and reviewing the information, click '**Next**' to proceed.
 
 **3. Confirm using your Ledger Device**
 
-You will now be required to review the transaction's details using your Ledger device.
+You will now be required to review the transaction details using your Ledger device.
 
 ![](/desktop-wallet/assets/ledger/transfer-waiting.gif)
 
-**Take your time** clicking through to verify that the transaction's details are correct, pay close attention to the recipient’s Solar address and the amount of SXP you're being shown. Make sure that it matches what you entered using the Solar Desktop Wallet.
+**Take your time** clicking through to verify that the transaction details are correct, pay close attention to the recipient’s Solar address and the amount of SXP you're being shown. Make sure that it matches what you entered using the Solar Desktop Wallet.
 
 If **everything** looks correct and you'd like to proceed with sending the transaction, click '**Approve**' using your Ledger device.
 
@@ -164,7 +164,7 @@ If the details don't match, you'd like to make a change before sending, or you'v
 
 **4. Confirm and Send**
 
-After reviewing and approving the transaction's details using your Ledger device, you'll have a third and final opportunity to review the transaction's details before broadcasting it to the network.
+After reviewing and approving the transaction details using your Ledger device, you'll have a third and final opportunity to review the transaction details before broadcasting it to the network.
 
 If everything looks good and you'd like to proceed with the transaction,  click the ‘**Send**’ button as shown below.
 
@@ -172,7 +172,7 @@ If everything looks good and you'd like to proceed with the transaction,  click 
 
 ## Voting / Staking Solar (SXP)
 
-You can perform nearly any transaction using your Solar Ledger wallet as you could using a traditional Solar (SXP) wallet, including voting for your favorite delegate to stake your SXP.
+You can perform nearly any transaction using your Solar Ledger wallet as you could using a traditional Solar (SXP) wallet, including voting for your favourite delegates to stake your SXP.
 
 > _Learn more about delegates and their proposals and contributions here: [https://delegates.solar.org](https://delegates.solar.org)_
 
@@ -184,21 +184,21 @@ Using the Solar Desktop Wallet, open the Solar (SXP) Ledger address from which y
 
 > _Make sure your Ledger device is connected and unlocked and that the Solar app is opened._
 
-**2. Select your favorite Delegate**
+**2. Select your favourite Delegates**
 
-Select your favorite delegate from the list--or search for them by name.
+Select your favourite delegates from the list--or search for them by name.
 
 ![](/desktop-wallet/assets/ledger/vote-2.gif)
 
-**3. Confirm the Vote's Details**
+**3. Confirm the Vote Details**
 
-After reviewing the vote's details, click '**Vote**'.
+After reviewing the vote details, click '**Vote**'.
 
 ![](/desktop-wallet/assets/ledger/vote-review.png)
 
-**4. Confirm the Vote's Fee**
+**4. Confirm the Vote Fee**
 
-You'll now be asked to confirms the vote's fee.
+You'll now be asked to confirms the vote fee.
 
 > It's recommended to leave this set to the default ("Average") fee,  
 > there's no need to adjust it at this time.
@@ -209,11 +209,11 @@ Click '**Next**' to proceed.
 
 **5. Confirm using your Ledger Device**
 
-You will now be required to review the vote's details using your Ledger device.
+You will now be required to review the vote details using your Ledger device.
 
 ![](/desktop-wallet/assets/ledger/vote-waiting.gif)
 
-**Take your time** clicking through to verify that the vote's details are correct. Make sure that the delegate's username matches the one selected using the Solar Desktop Wallet exactly.
+**Take your time** clicking through to verify that the vote details are correct. Make sure that the delegate's username matches the one selected using the Solar Desktop Wallet exactly.
 
 If **everything** looks correct and you'd like to proceed with voting, click '**Approve**' using your Ledger device.
 
@@ -225,7 +225,7 @@ If the details don't match, you'd like to change your vote before sending, or yo
 
 **6. Confirm and Send**
 
-After reviewing and approving the vote's details using your Ledger device, you'll have a third and final opportunity to review the vote transaction's details before broadcasting it to the network.
+After reviewing and approving the vote details using your Ledger device, you'll have a third and final opportunity to review the vote transaction details before broadcasting it to the network.
 
 If everything looks good and you'd like to proceed with voting, click the ‘**Send**’ button as shown below.
 

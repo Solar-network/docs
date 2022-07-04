@@ -2,7 +2,7 @@
 
 Install the Solar app on your Ledger device to manage and stake your SXP using the [Solar Desktop Wallet](https://solar.org/#wallet). The Solar app is developed and supported by the [Solar community](https://solar.org/community).
 
-> SXP accounts can not be added Ledger Live.
+> SXP accounts cannot be added to Ledger Live.
 
 # Before you start
 
