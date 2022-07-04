@@ -184,7 +184,7 @@ Using the Solar Desktop Wallet, open the Solar (SXP) Ledger address from which y
 
 > _Make sure your Ledger device is connected and unlocked and that the Solar app is opened._
 
-**2. Select your favourite Delegates**
+**2. Select your Favourite Delegates**
 
 Select your favourite delegates from the list--or search for them by name.
 
@@ -198,7 +198,7 @@ After reviewing the vote details, click '**Vote**'.
 
 **4. Confirm the Vote Fee**
 
-You'll now be asked to confirms the vote fee.
+You'll now be asked to confirm the vote fee.
 
 > It's recommended to leave this set to the default ("Average") fee,  
 > there's no need to adjust it at this time.
