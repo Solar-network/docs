@@ -166,7 +166,7 @@ If the details don't match, you'd like to make a change before sending, or you'v
 
 After reviewing and approving the transaction details using your Ledger device, you'll have a third and final opportunity to review the transaction details before broadcasting it to the network.
 
-If everything looks good and you'd like to proceed with the transaction,  click the ‘**Send**’ button as shown below.
+If everything looks good and you'd like to proceed with the transaction, click the ‘**Send**’ button as shown below.
 
 ![](/desktop-wallet/assets/ledger/transfer-3.gif)
 
