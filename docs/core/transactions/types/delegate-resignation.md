@@ -21,6 +21,7 @@ A 'Temporary Resignation' is for delegates who wish to halt their delegacy for a
 | Pull Request  | Core [#92](https://github.com/Solar-network/core/pull/92)                                                                                                                                                                                                                                                                         |
 | API Endpoints | [Link](/docs/api/public-rest-api/endpoints/transactions)                                                                                                                                                                                                                                                                          |
 | AJV Schema    | [Base](https://github.com/Solar-network/core/blob/0c03aaf1feebb77bd33117110c358636bf14d9c0/packages/crypto/src/transactions/types/schemas.ts#L17-L46) \| [Delegate Resignation](https://github.com/Solar-network/core/blob/31b910a624f2004f174a77896e88db1f7e9a670d/packages/crypto/src/transactions/types/schemas.ts#L357-#L370) |
+| Resign Types  | [Delegate Status](https://github.com/Solar-network/core/blob/31b910a624f2004f174a77896e88db1f7e9a670d/packages/crypto/src/enums.ts#L35-#L39)                                                                                                                                                                                      |
 
 ## Transaction Structure
 
