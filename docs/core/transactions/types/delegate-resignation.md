@@ -42,13 +42,13 @@ A 'Temporary Resignation' is for delegates who wish to halt their delegacy for a
 }
 ```
 
-### Serialized
+### Serialised
 
 ```shell
 ff033f0100000007000900000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192000000000000000000eb08bf010000000005736c33337001
 ```
 
-### Deserialized
+### Deserialised
 
 | Key                  |   Pos.   | Size<br/>_(bytes)_ | Value<br/>_(hex)_                                                      |
 | :------------------- | :------: | :----------------: | :--------------------------------------------------------------------- |

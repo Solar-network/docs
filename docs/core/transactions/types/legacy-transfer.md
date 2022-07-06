@@ -38,13 +38,13 @@ All Solar transactions contain a special data field of 255 bytes called the Memo
 }
 ```
 
-## Serialized
+## Serialised
 
 ```shell
 ff033f0100000000000100000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192404b4c00000000001b54686973206973206120746573742076656e646f726669656c642e00e1f50500000000000000003f0995750207ecaf0ccf251c1265b92ad84f553662
 ```
 
-## Deserialized
+## Deserialised
 
 | Key                  |   Pos.   | Size<br/>_(bytes)_ | Value<br/>_(hex)_                                                      |
 | :------------------- | :------: | :----------------: | :--------------------------------------------------------------------- |

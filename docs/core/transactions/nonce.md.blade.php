@@ -28,7 +28,7 @@ funky stuff here:
 
 ## How To Get Nonce Value For An Address?
 
-A sequential nonce depends on the amount of transaction a specific wallet has sent. You can find the current nonce for a wallet by utilizing the Public API, more specifically the [wallet endpoint](/docs/api/public-rest-api/endpoints/wallets#retrieve-a-wallet). The wallet endpoint returns the wallet details, including the current wallets nonce field, like below:
+A sequential nonce depends on the amount of transaction a specific wallet has sent. You can find the current nonce for a wallet by utilising the Public API, more specifically the [wallet endpoint](/docs/api/public-rest-api/endpoints/wallets#retrieve-a-wallet). The wallet endpoint returns the wallet details, including the current wallets nonce field, like below:
 
 ```javascript
 {

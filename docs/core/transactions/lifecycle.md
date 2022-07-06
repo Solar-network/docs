@@ -81,14 +81,14 @@ Blocks hold quite a lot of metadata on the SXP blockchain, like:
 The `Block.create` method uses the following algorithm to create a new block:
 
 1. Derive the delegate's public key from the function's `keys` parameter.
-2. Create a payload hash by serializing the block data into a binary-encoded format.
+2. Create a payload hash by serialising the block data into a binary-encoded format.
 3. Create a SHA256 hash by using the payload hash as input.
 4. Sign the SHA256 hash with the delegate's private key.
 5. Create a block ID using the hashed block data.
 6. Cast the data into a Block model using the new transaction and block ID.
 7. Return the cast Block object.
 
-Here, the cryptographic functions used by SXP to generate hashes are identical to those used by Bitcoin. These functions are battle-tested by years of use and analysis in Bitcoin. Resources to learn more about the block creation process can be found in [Bitcoin educational materials](https://github.com/bitcoinbook/bitcoinbook) as well as relevant SXP documentation on serialization.
+Here, the cryptographic functions used by SXP to generate hashes are identical to those used by Bitcoin. These functions are battle-tested by years of use and analysis in Bitcoin. Resources to learn more about the block creation process can be found in [Bitcoin educational materials](https://github.com/bitcoinbook/bitcoinbook) as well as relevant SXP documentation on serialisation.
 
 ### 5. Block Propagation
 

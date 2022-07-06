@@ -34,7 +34,7 @@ This transaction type enables a user to add an extra layer of security to their 
 
 ## Delegate Registration
 
-A user or organization can register their address to become a delegate and secure the network. Upon accumulating sufficient vote weight, the delegate will begin forging transactions and receiving block rewards. The delegate assigns a custom name to their address to differentiate it from other delegates.
+A user or organisation can register their address to become a delegate and secure the network. Upon accumulating sufficient vote weight, the delegate will begin forging transactions and receiving block rewards. The delegate assigns a custom name to their address to differentiate it from other delegates.
 
 - Before sending a Delegate Registration transaction, note the balances of the sender via the explorer or API
 - Using the desktop wallet, send a Delegate Registration transaction.
@@ -65,7 +65,7 @@ Holders of SXP vote through their wallets for delegates who secure the network, 
 
 ## IPFS Transaction
 
-This transaction type utilizes a special data field similar to the Memo to store Interplanetary File System data on the blockchain. This provides an easy way to timestamp and optionally encrypt and verify files. This implementation of the IPFS transaction type won’t allow storing data on the blockchain - for that, special IPFS nodes are needed.
+This transaction type utilises a special data field similar to the Memo to store Interplanetary File System data on the blockchain. This provides an easy way to timestamp and optionally encrypt and verify files. This implementation of the IPFS transaction type won’t allow storing data on the blockchain - for that, special IPFS nodes are needed.
 
 - Before sending a transaction, note the balances of the sender and recipient via the explorer or API.
 - Using the Desktop Wallet, store an IPFS hash on the blockchain with an IPFS Transaction.
@@ -85,7 +85,7 @@ All Solar transactions contain a special data field of 255 bytes called the Memo
 - Once forged, check the balances of the sender and recipients and ensure that they are now updated correctly.
 - Search for the Transaction ID via Explorer or API and ensure that all transaction details are displayed correctly.
 - Search for the Block ID and ensure all details are correct.
-- Repeat this process several times with and without utilizing the memo field.
+- Repeat this process several times with and without utilising the memo field.
 
 ## Delegate Resignation Transaction
 

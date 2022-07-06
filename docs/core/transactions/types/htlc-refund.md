@@ -38,13 +38,13 @@ The purpose of this transaction is for the sender to retrieve their locked funds
 }
 ```
 
-## Serialized
+## Serialised
 
 ```shell
 ff033f010000000a000b00000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed1920000000000000000003aade2b98391ba7230252530cdd5124183a9f4e582660666ae873da48173ea5f
 ```
 
-## Deserialized
+## Deserialised
 
 | Key                  |   Pos.   | Size<br/>_(bytes)_ | Value<br/>_(hex)_                                                      |
 | :------------------- | :------: | :----------------: | :--------------------------------------------------------------------- |

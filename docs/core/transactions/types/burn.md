@@ -32,13 +32,13 @@ This transaction type allows burning an arbirary amount of SXP tokens. The burne
 }
 ```
 
-## Serialized
+## Serialised
 
 ```shell
 ff033f0200000000000c00000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed19200000000000000000000e1f50500000000
 ```
 
-## Deserialized
+## Deserialised
 
 | Key                  |   Pos.   | Size<br/>_(bytes)_ | Value<br/>_(hex)_                                                      |
 | :------------------- | :------: | :----------------: | :--------------------------------------------------------------------- |
