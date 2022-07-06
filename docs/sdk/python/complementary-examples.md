@@ -47,6 +47,7 @@ transaction.set_type_group(TRANSACTION_TYPE_GROUP.CORE)
 transaction.set_nonce(nonce)
 transaction.add_transfer(1, 'RECIPIENT_WALLET_ADDRESS_1')
 transaction.add_transfer(2, 'RECIPIENT_WALLET_ADDRESS_2')
+transaction.set_memo("Hello World")
 #transaction.set_version(3)
 transaction.sign('this is a top secret passphrase')
 
@@ -61,7 +62,7 @@ print(broadcastResponse)
 ```
 
 <x-alert type="info">
-The transaction memo (aka VendorField or SmartBridge) is optional and limited to a length of 255 characters. It can be a good idea to add a vendor field to your transactions if you want to be able to easily track them in the future.<br>
+The transaction memo is optional and limited to a length of 255 characters. It can be a good idea to add memo to your transactions if you want to be able to easily track them in the future.<br>
 Rest of the examples assume V3 transactions as default. You must set the version explicity using `transaction.set_version(int)` otherwise.
 </x-alert>
 
@@ -220,7 +221,7 @@ print(broadcastResponse)
 A delegate resignation has to be sent from the delegate wallet itself to verify its identity.
 </x-alert>
 
-## Creating and Broadcasting a Vote (Solar Version >= 3.4.0)
+## Creating and Broadcasting a Vote (Solar Version >= 4.0.0)
 
 ```python
 from solar_client import SolarClient
@@ -240,11 +241,11 @@ senderWallet = client.wallets.get('SENDER_WALLET_ADDRESS')
 nonce = int(senderWallet['data']['nonce']) + 1
 
 # Step 2: Create the transaction
-transaction = Vote(
+transaction = Vote()
 transaction.set_votes({"asterix": 34.9, "obelix": 35.1, "getafix": 30.0}) # must tot up to 100.00
 transaction.set_votes(["+asterix", "-obelix", "+getafix"]) # will ignore obelix and distribute the wallet to asterix & getafix 50:50
-transaction.set_votes(["-obelix"]) # will ignore obelix and unvote from all
-transaction.set_votes({}) #unvote
+transaction.set_votes(["-obelix"]) # will ignore obelix and cancel vote
+transaction.set_votes({}) #cancel vote
 transaction.set_nonce(nonce)
 transaction.sign('this is a top secret passphrase')
 
@@ -258,7 +259,7 @@ except SolarHTTPException as exception:
 print(broadcastResponse)
 ```
 
-## Creating and Broadcasting a Legacy Vote (Solar Version >= 3.3.0 & < 3.4.0)
+## Creating and Broadcasting a Legacy Vote (Solar Version >= 3.3.0 & < 4.0.0)
 
 ```python
 from solar_client import SolarClient
@@ -280,7 +281,7 @@ nonce = int(senderWallet['data']['nonce']) + 1
 
 # Step 2: Create the transaction
 transaction = LegacyVote()
-transaction.set_votes(["-obelix"])  # unvote
+transaction.set_votes(["-obelix"])  # cancel vote
 transaction.set_votes(["+asterix"]) # vote
 transaction.set_votes(["-obelix", "+asterix"]) # switch vote
 transaction.set_type_group(TRANSACTION_TYPE_GROUP.CORE)
@@ -297,7 +298,7 @@ except SolarHTTPException as exception:
 print(broadcastResponse)
 ```
 
-## Creating and Broadcasting a Multi Signature
+## Creating and Broadcasting a MultiSignature Registration
 
 ```python
 from solar_client import SolarClient
@@ -330,9 +331,6 @@ transaction.set_public_keys([
 transaction.add_participant(
     'participant_3_pk'
 )
-transaction.multi_sign('participant_1_passphrase', 0)
-transaction.multi_sign('participant_2_passphrase', 1)
-transaction.multi_sign('participant_3_passphrase', 2)
 
 transaction.sign('this is a top secret passphrase')
 

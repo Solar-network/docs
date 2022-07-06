@@ -703,7 +703,7 @@ Create a new HtlcLock transaction instance
 | str | secret_hash | Yes | Transaction secret hash. The same hash must be used in the corresponding "claim" transaction |
 | int | expiration_type | Yes | Transaction expiration type. Either block height or network epoch timestamp based |
 | int | expiration_value | Yes | Transaction expiration value. The block-height or time when the transaction should expire |
-| str | memo | Yes | Transaction memo (aka VendorField or SmartBridge)|
+| str | memo | Yes | Transaction memo|
 | int | fee | No | Transaction fee |
 
 #### Return Value
@@ -1003,7 +1003,7 @@ Create a new Legacy Vote transaction instance
 def set_votes(self, votes: typing.List[str]):
 ```
 
-Set legacy votes/unvotes
+Set legacy votes/cancel vote
 
 #### Parameters
 
