@@ -8,9 +8,13 @@ title: Transaction Types - Vote
 | :-------: | :---: |
 |     2     |   2   |
 
-A key feature of the SXP DPoS model is that each address can vote for one delegate of their choosing to secure the network. A vote and unvote transaction type is therefore necessary to enable this functionality. Once an address votes for a delegate, funds can enter and leave the address as needed, and vote weight adjusts automatically. Voting does not send funds to the delegate’s SXP address in question - it only assigns vote weight
+A key feature of the Solar DPoS model is the ability to vote (or stake) for one or multiple delegates at once. Anywhere from 1 to 53 delegates in total may be voted for. The wallet's vote weight can be distributed evenly across their chosen delegates or customised by setting the distribution percentage as desired. Once a wallet is actively voting, funds can be sent and received freely and its vote weight adjusts accordingly.
 
-Holders of SXP vote through their wallets for delegates who secure the network, insert blocks into the ledger, and create new SXP. The top 53 vote earners are named elected forging delegates. Number of delegates is related to DPOS mechanism configuration.
+To vote for a new delegate or set of delegates, create a new vote transaction containing the list of delegates for which you'd like to vote.
+
+To stop voting altogether, simply create a new vote transaction containing an empty delegate list, also known as a '[Cancel Vote](#cancel-vote).'
+
+> Voting does _not_ require sending funds to the delegate or delegates - it only assigns the wallet's vote weight.
 
 | References    |                                                                                                                                                                                                                                                                                                                  |
 | :------------ | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -51,7 +55,7 @@ ff033f0200000002000d00000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b
 | **Header:**             | **[0]**  |       **1**       | `0xff`                                                                 |
 | **Version:**            | **[1]**  |       **1**       | `0x03`                                                                 |
 | **Network:**            | **[2]**  |       **1**       | `0x3f`                                                                 |
-| **Typegroup:**          | **[3]**  |       **4**       | `0x02000000`                                                           |
+| **TypeGroup:**          | **[3]**  |       **4**       | `0x02000000`                                                           |
 | **Type:**               | **[7]**  |       **2**       | `0x0200`                                                               |
 | **Nonce:**              | **[9]**  |       **8**       | `0x0d00000000000000`                                                   |
 | **SenderPublicKey:**    | **[17]** |      **33**       | `0x034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192` |
@@ -98,7 +102,7 @@ ff033f0100000003000e00000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b
 | **Header:**          | **[0]**  |       **1**        | `0xff`                                                                 |
 | **Version:**         | **[1]**  |       **1**        | `0x03`                                                                 |
 | **Network:**         | **[2]**  |       **1**        | `0x3f`                                                                 |
-| **Typegroup:**       | **[3]**  |       **4**        | `0x01000000`                                                           |
+| **TypeGroup:**       | **[3]**  |       **4**        | `0x01000000`                                                           |
 | **Type:**            | **[7]**  |       **2**        | `0x0300`                                                               |
 | **Nonce:**           | **[9]**  |       **8**        | `0x0e00000000000000`                                                   |
 | **SenderPublicKey:** | **[17]** |       **33**       | `0x034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192` |
