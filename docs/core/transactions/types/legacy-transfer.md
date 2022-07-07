@@ -10,15 +10,14 @@ title: Transaction Types - Transfer _(**DEPRECATED**)_
 | :-------: | :---: |
 |     1     |   0   |
 
-The transfer transaction enables a user to broadcast a transaction to the network sending SXP tokens from one SXP wallet to another.
+A Transfer transaction enables a user to broadcast a transaction to the network sending SXP tokens from one SXP wallet to another.
 
-All Solar transactions contain a special data field of 255 bytes called the Memo (formerly known as the vendorfield), allowing raw data, code or plain text to be stored on the blockchain. The Memo is public and immutable.
+All Solar transactions contain a special data field of 255 bytes known as the 'Memo.' This data field allows raw data, code, or plain text to be stored on the blockchain. The Memo is optional, public, and immutable.
 
-| References           |                                                                                                                                                                                                                                                                                                                    |
-| :------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Improvement Proposal | [AIP11](https://github.com/ArkEcosystem/AIPs/blob/master/AIPS/aip-11.md), [AIP29](https://github.com/ArkEcosystem/AIPs/blob/master/AIPS/aip-29.md)                                                                                                                                                                 |
-| API Endpoints        | [Link](/docs/api/public-rest-api/endpoints/transactions)                                                                                                                                                                                                                                                           |
-| AJV Schema           | [Base](https://github.com/Solar-network/core/blob/0c03aaf1feebb77bd33117110c358636bf14d9c0/packages/crypto/src/transactions/types/schemas.ts#L17-L46) \| [Transfer](https://github.com/Solar-network/core/blob/0c03aaf1feebb77bd33117110c358636bf14d9c0/packages/crypto/src/transactions/types/schemas.ts#L64-L74) |
+| References    |                                                                                                                                                                                                                                                                                                                    |
+| :------------ | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| API Endpoints | [Link](/docs/api/public-rest-api/endpoints/transactions)                                                                                                                                                                                                                                                           |
+| AJV Schema    | [Base](https://github.com/Solar-network/core/blob/0c03aaf1feebb77bd33117110c358636bf14d9c0/packages/crypto/src/transactions/types/schemas.ts#L17-L46) \| [Transfer](https://github.com/Solar-network/core/blob/0c03aaf1feebb77bd33117110c358636bf14d9c0/packages/crypto/src/transactions/types/schemas.ts#L64-L74) |
 
 ## Json
 
@@ -51,7 +50,7 @@ ff033f0100000000000100000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b
 | **Header Flag:**     | **[0]**  |       **1**        | `0xff`                                                                 |
 | **Version:**         | **[1]**  |       **1**        | `0x03`                                                                 |
 | **Network:**         | **[2]**  |       **1**        | `0x3f`                                                                 |
-| **Typegroup:**       | **[3]**  |       **4**        | `0x01000000`                                                           |
+| **TypeGroup:**       | **[3]**  |       **4**        | `0x01000000`                                                           |
 | **Type:**            | **[7]**  |       **2**        | `0x0000`                                                               |
 | **Nonce:**           | **[9]**  |       **8**        | `0x0100000000000000`                                                   |
 | **SenderPublicKey:** | **[17]** |       **33**       | `0x034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192` |

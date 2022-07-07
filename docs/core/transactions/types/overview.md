@@ -6,7 +6,7 @@ title: Transaction Types - Overview
 
 This sections describes Mainnet Transaction Types and its structure related to the `serde` process (serialisation and deserialisation of transactions).
 
-> ℹ️ **INFO** - Transactions are the heart of any blockchain, cryptocurrency or otherwise. They represent a transfer of value from one network participant to another. In SXP, transactions can be of one of multiple types, specified in AIP11, which can affect the content and data structure of each transaction's payload.
+> ℹ️ **INFO** - Transactions are the heart of any blockchain, cryptocurrency or otherwise. They represent a transfer of value from one network participant to another. In SXP, transactions can be of one of multiple types which can impact the content and data structure of each transaction's payload.
 
 Using the [SXP SDKs](/docs/sdk/documentation), developers can employ the programming language of their choice to build applications utilising the SXP blockchain. The SXP SDKs are split into two packages for each language: Client and Cryptography.
 

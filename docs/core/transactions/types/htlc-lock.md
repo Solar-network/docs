@@ -12,11 +12,10 @@ A Hashed Time-Lock Contract (HTLC) is a set of transaction types that permits a 
 
 The purpose of this transaction is to _**LOCK**_ funds of the sender and make them possible for retrieval by the recipient, if they know the shared secret.
 
-| References           |                                                                                                                                                                                                                                                                                                                       |
-| :------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Improvement Proposal | [AIP102](https://github.com/ArkEcosystem/AIPs/blob/master/AIPS/aip-102.md)                                                                                                                                                                                                                                            |
-| API Endpoints        | [Link](/docs/api/public-rest-api/endpoints/transactions)                                                                                                                                                                                                                                                              |
-| AJV Schema           | [Base](https://github.com/Solar-network/core/blob/0c03aaf1feebb77bd33117110c358636bf14d9c0/packages/crypto/src/transactions/types/schemas.ts#L17-L46) \| [HTLC Lock](https://github.com/Solar-network/core/blob/0c03aaf1feebb77bd33117110c358636bf14d9c0/packages/crypto/src/transactions/types/schemas.ts#L266-L297) |
+| References    |                                                                                                                                                                                                                                                                                                                       |
+| :------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| API Endpoints | [Link](/docs/api/public-rest-api/endpoints/transactions)                                                                                                                                                                                                                                                              |
+| AJV Schema    | [Base](https://github.com/Solar-network/core/blob/0c03aaf1feebb77bd33117110c358636bf14d9c0/packages/crypto/src/transactions/types/schemas.ts#L17-L46) \| [HTLC Lock](https://github.com/Solar-network/core/blob/0c03aaf1feebb77bd33117110c358636bf14d9c0/packages/crypto/src/transactions/types/schemas.ts#L266-L297) |
 
 ## JSON
 
@@ -56,7 +55,7 @@ ff033f0100000008000a00000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b
 | **Header:**             |  **[0]**  |       **1**        | `0xff`                                                                 |
 | **Version:**            |  **[1]**  |       **1**        | `0x03`                                                                 |
 | **Network:**            |  **[2]**  |       **1**        | `0x3f`                                                                 |
-| **Typegroup:**          |  **[3]**  |       **4**        | `0x01000000`                                                           |
+| **TypeGroup:**          |  **[3]**  |       **4**        | `0x01000000`                                                           |
 | **Type:**               |  **[7]**  |       **2**        | `0x0800`                                                               |
 | **Nonce:**              |  **[9]**  |       **8**        | `0x0a00000000000000`                                                   |
 | **SenderPublicKey:**    | **[17]**  |       **33**       | `0x034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192` |

@@ -8,13 +8,12 @@ title: Transaction Types - Burn
 | :-------: | :---: |
 |     2     |   0   |
 
-This transaction type allows burning an arbirary amount of SXP tokens. The burned amount is deducted from the sender's wallet as well as from the chain's circulating supply.
+This transaction type allows burning an arbitrary amount of SXP tokens. The burned amount is deducted from the sender's wallet as well as from the chain's circulating supply.
 
-| References                         |                                                                                                                                                                                                                                                                                                                   |
-| :--------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <!-- SXP Improvement Proposals --> | <!-- [AIP11](https://github.com/ArkEcosystem/AIPs/blob/master/AIPS/aip-11.md), [AIP29](https://github.com/ArkEcosystem/AIPs/blob/master/AIPS/aip-29.md) -->                                                                                                                                                       |
-| API Endpoints                      | [Link](/docs/api/public-rest-api/endpoints/transactions)                                                                                                                                                                                                                                                          |
-| AJV Schema                         | [Base](https://github.com/Solar-network/core/blob/0c03aaf1feebb77bd33117110c358636bf14d9c0/packages/crypto/src/transactions/types/schemas.ts#L17-L46) \| [Burn](https://github.com/Solar-network/core/blob/0c03aaf1feebb77bd33117110c358636bf14d9c0/packages/crypto/src/transactions/types/solar/burn.ts#L15-L25) |
+| References    |                                                                                                                                                                                                                                                                                                                   |
+| :------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| API Endpoints | [Link](/docs/api/public-rest-api/endpoints/transactions)                                                                                                                                                                                                                                                          |
+| AJV Schema    | [Base](https://github.com/Solar-network/core/blob/0c03aaf1feebb77bd33117110c358636bf14d9c0/packages/crypto/src/transactions/types/schemas.ts#L17-L46) \| [Burn](https://github.com/Solar-network/core/blob/0c03aaf1feebb77bd33117110c358636bf14d9c0/packages/crypto/src/transactions/types/solar/burn.ts#L15-L25) |
 
 ## Json
 
@@ -45,7 +44,7 @@ ff033f0200000000000c00000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b
 | **Header Flag:**     | **[0]**  |       **1**        | `0xff`                                                                 |
 | **Version:**         | **[1]**  |       **1**        | `0x03`                                                                 |
 | **Network:**         | **[2]**  |       **1**        | `0x3f`                                                                 |
-| **Typegroup:**       | **[3]**  |       **4**        | `0x02000000`                                                           |
+| **TypeGroup:**       | **[3]**  |       **4**        | `0x02000000`                                                           |
 | **Type:**            | **[7]**  |       **2**        | `0x0000`                                                               |
 | **Nonce:**           | **[9]**  |       **8**        | `0x0c00000000000000`                                                   |
 | **SenderPublicKey:** | **[17]** |       **33**       | `0x034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192` |

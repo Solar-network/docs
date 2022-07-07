@@ -10,11 +10,10 @@ title: Transaction Types - Multisignature Registration
 
 Multiple publicKeys can be aggregated into one creating a unique publicKey and address. This enables the creation of transactions that must be authorised by a minimum number of participants (signatures).
 
-| References           |                                                                                                                                                                                                                                                                                                                            |
-| :------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Improvement Proposal | [AIP18](https://github.com/ArkEcosystem/AIPs/blob/master/AIPS/aip-18.md)                                                                                                                                                                                                                                                   |
-| API Endpoints        | [Link](/docs/api/public-rest-api/endpoints/transactions)                                                                                                                                                                                                                                                                   |
-| AJV Schema           | [Base](https://github.com/Solar-network/core/blob/0c03aaf1feebb77bd33117110c358636bf14d9c0/packages/crypto/src/transactions/types/schemas.ts#L17-L46) \| [MultiSignature](https://github.com/Solar-network/core/blob/75e3aa11e3466956fc7a860671bd4dd870a9d9fa/packages/crypto/src/transactions/types/schemas.ts#L186-#L218) |
+| References    |                                                                                                                                                                                                                                                                                                                             |
+| :------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| API Endpoints | [Link](/docs/api/public-rest-api/endpoints/transactions)                                                                                                                                                                                                                                                                    |
+| AJV Schema    | [Base](https://github.com/Solar-network/core/blob/0c03aaf1feebb77bd33117110c358636bf14d9c0/packages/crypto/src/transactions/types/schemas.ts#L17-L46) \| [MultiSignature](https://github.com/Solar-network/core/blob/75e3aa11e3466956fc7a860671bd4dd870a9d9fa/packages/crypto/src/transactions/types/schemas.ts#L186-#L218) |
 
 ## JSON
 
@@ -54,7 +53,7 @@ ff033f0100000004000600000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b
 | **Header:**          |  **[0]**  |       **1**        | `0xff`                                                                 |
 | **Version:**         |  **[1]**  |       **1**        | `0x03`                                                                 |
 | **Network:**         |  **[2]**  |       **1**        | `0x3f`                                                                 |
-| **Typegroup:**       |  **[3]**  |       **4**        | `0x01000000`                                                           |
+| **TypeGroup:**       |  **[3]**  |       **4**        | `0x01000000`                                                           |
 | **Type:**            |  **[7]**  |       **2**        | `0x0400`                                                               |
 | **Nonce:**           |  **[9]**  |       **8**        | `0x0600000000000000`                                                   |
 | **SenderPublicKey:** | **[17]**  |       **33**       | `0x034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192` |
