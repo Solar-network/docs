@@ -4,7 +4,7 @@ title: Transaction Types - Vote / Unvote / Switchvote _(**DEPRECATED**)_
 
 # Vote / Unvote / Switchvote _(**DEPRECATED**)_
 
-> 🛑 Vote (Type 3) has been deprecated, please visit ['TypeGroup 2, Type 2: Vote'](/docs/core/transactions/types/vote) to see the updated transaction.
+> 🛑 Vote (Type 3) has been deprecated, please visit ['TypeGroup 2, Type 2: Vote'](/core/transactions/types/vote) to see the updated transaction.
 
 | TypeGroup | Type  |
 | :-------: | :---: |
@@ -16,7 +16,7 @@ Holders of SXP vote through their wallets for delegates who secure the network, 
 
 | References    |                                                                                                                                                                                                                                                                                                                                        |
 | :------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| API Endpoints | [Link](/docs/api/public-rest-api/endpoints/transactions)                                                                                                                                                                                                                                                                               |
+| API Endpoints | [Link](/api/public-rest-api/endpoints/transactions)                                                                                                                                                                                                                                                                                    |
 | AJV Schema    | [Base](https://github.com/Solar-network/core/blob/0c03aaf1feebb77bd33117110c358636bf14d9c0/packages/crypto/src/transactions/types/schemas.ts#L17-L46) \| [Vote / Unvote / Switchvote](https://github.com/Solar-network/core/blob/0c03aaf1feebb77bd33117110c358636bf14d9c0/packages/crypto/src/transactions/types/schemas.ts#L126-L148) |
 
 ## Vote

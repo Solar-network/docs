@@ -4,7 +4,7 @@ title: Transactions - Understanding the Nonce
 
 # Understanding the Transaction Nonce
 
-SXP transactions use a sequential nonce to protect against [double-spending](https://en.m.wikipedia.org/wiki/Double-spending), long-range attacks, key-leakage as a result of signature reuse, and [side-channel attacks](https://en.m.wikipedia.org/wiki/Side-channel_attack) associated with random nonces.
+SXP transactions use a sequential nonce to protect against [double-spending](https://wikipedia.org/wiki/Double-spending), long-range attacks, key-leakage as a result of signature reuse, and [side-channel attacks](https://wikipedia.org/wiki/Side-channel_attack) associated with random nonces.
 
 A sequential nonce effectively counts each outgoing transaction from a given wallet. This means that the first transaction from a wallet must have a nonce of **1**, the second transaction must have a nonce of **2**, and so on.
 
@@ -28,7 +28,7 @@ funky stuff here:
 
 ## How To Get Nonce Value For An Address?
 
-A sequential nonce depends on the amount of transaction a specific wallet has sent. You can find the current nonce for a wallet by utilising the Public API, more specifically the [wallet endpoint](/docs/api/public-rest-api/endpoints/wallets#retrieve-a-wallet). The wallet endpoint returns the wallet details, including the current wallets nonce field, like below:
+A sequential nonce depends on the amount of transaction a specific wallet has sent. You can find the current nonce for a wallet by utilising the Public API, more specifically the [wallet endpoint](/api/public-rest-api/endpoints/wallets#retrieve-a-wallet). The wallet endpoint returns the wallet details, including the current wallets nonce field, like below:
 
 ```javascript
 {

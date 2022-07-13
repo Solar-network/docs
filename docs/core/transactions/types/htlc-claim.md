@@ -8,13 +8,13 @@ title: Transaction Types - HTLC Claim
 | :-------: | :---: |
 |     1     |   9   |
 
-A Hashed Time-Lock Contract (HTLC) is a set of transaction types that permits a designated party (the "sender/seller") to [**LOCK**](/docs/core/transactions/types/htlc-lock) funds by disclosing the preimage (secret) of a hash. It also permits a second party (the "recipient/buyer") to **CLAIM** the funds, or after a timeout is reached enter a [**REFUND**](/docs/core/transactions/types/htlc-refund) situation.
+A Hashed Time-Lock Contract (HTLC) is a set of transaction types that permits a designated party (the "sender/seller") to [**LOCK**](/core/transactions/types/htlc-lock) funds by disclosing the preimage (secret) of a hash. It also permits a second party (the "recipient/buyer") to **CLAIM** the funds, or after a timeout is reached enter a [**REFUND**](/core/transactions/types/htlc-refund) situation.
 
 The purpose of this transaction is for the recipient to _**CLAIM**_ funds from the sender - if they know the shared secret.
 
 | References    |                                                                                                                                                                                                                                                                                                                        |
 | :------------ | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| API Endpoints | [Link](/docs/api/public-rest-api/endpoints/transactions)                                                                                                                                                                                                                                                               |
+| API Endpoints | [Link](/api/public-rest-api/endpoints/transactions)                                                                                                                                                                                                                                                                    |
 | AJV Schema    | [Base](https://github.com/Solar-network/core/blob/0c03aaf1feebb77bd33117110c358636bf14d9c0/packages/crypto/src/transactions/types/schemas.ts#L17-L46) \| [HTLC Claim](https://github.com/Solar-network/core/blob/0c03aaf1feebb77bd33117110c358636bf14d9c0/packages/crypto/src/transactions/types/schemas.ts#L299-L320) |
 
 ## JSON

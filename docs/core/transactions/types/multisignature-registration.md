@@ -12,7 +12,7 @@ Multiple publicKeys can be aggregated into one creating a unique publicKey and a
 
 | References    |                                                                                                                                                                                                                                                                                                                             |
 | :------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| API Endpoints | [Link](/docs/api/public-rest-api/endpoints/transactions)                                                                                                                                                                                                                                                                    |
+| API Endpoints | [Link](/api/public-rest-api/endpoints/transactions)                                                                                                                                                                                                                                                                         |
 | AJV Schema    | [Base](https://github.com/Solar-network/core/blob/0c03aaf1feebb77bd33117110c358636bf14d9c0/packages/crypto/src/transactions/types/schemas.ts#L17-L46) \| [MultiSignature](https://github.com/Solar-network/core/blob/75e3aa11e3466956fc7a860671bd4dd870a9d9fa/packages/crypto/src/transactions/types/schemas.ts#L186-#L218) |
 
 ## JSON

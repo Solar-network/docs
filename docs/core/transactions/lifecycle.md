@@ -8,7 +8,7 @@ Describing Transaction's Journey From Client to Core Server (Blockchain)
 
 > ✅ **SUCCESS** - A transaction is an atomic change in the state of the blockchain. The simplest form transfers value from address A to B, incorporating a fee for the processing. Transactions are bundled into a block. At that moment they are committed to the blockchain and become irreversible.
 
-All valid transactions are begin submitted as payload data via the [Public REST API](/docs/api/public-rest-api/getting-started). This valid transactions end as immutable history on the blockchain (are included in blocks). While the implementation specifics will depend on the platform used to submit the transaction, SXP's extensive [SDK](/docs/api/index) coverage ensures that developers experience a unified workflow across languages and platforms.
+All valid transactions are begin submitted as payload data via the [Public REST API](/api/public-rest-api/getting-started). This valid transactions end as immutable history on the blockchain (are included in blocks). While the implementation specifics will depend on the platform used to submit the transaction, SXP's extensive [SDK](/api) coverage ensures that developers experience a unified workflow across languages and platforms.
 
 In the next sections we will look into the transaction lifecycle from creation to final inclusion in the blocks.
 
@@ -16,11 +16,11 @@ In the next sections we will look into the transaction lifecycle from creation t
 
 ### 1. Create and Sign Transaction Locally
 
-Transactions are generated and signed locally with one of many available [SDK libraries](/docs/sdk/documentation). Locally generated and signed transactions are sent as a [POST request](/docs/api/public-rest-api/endpoints/transactions) with transaction data to the Core Server node.
+Transactions are generated and signed locally with one of many available [SDK libraries](/sdk/documentation). Locally generated and signed transactions are sent as a [POST request](/api/public-rest-api/endpoints/transactions) with transaction data to the Core Server node.
 
 > 🛑 **DANGER** - Core Server (node) will accept a valid transaction, signed with a valid signature from a private key. Make sure you invoke the SDK builder's **sign** method on your transaction object using the sender's private key.
 
-![](/docs/core/assets/send_to_node.png)
+![](/core/assets/send_to_node.png)
 
 ### 2. Receive and Validate Transaction on The Core Server
 
@@ -28,17 +28,17 @@ Transactions are received at the POST transactions endpoint of the Public API. F
 
 **Transaction flow in short:**
 
-1. Transaction Payload is received at the Core Server ([Public API Endpoint](/docs/api/public-rest-api/endpoints/intro))
-2. API Handler validates schema and sends transaction to the [TransactionProcessor](https://github.com/Solar-network/core/blob/main/packages/core-transaction-pool/src/processor.ts)
+1. Transaction Payload is received at the Core Server ([Public API Endpoint](/api/public-rest-api/endpoints/intro))
+2. API Handler validates schema and sends transaction to the [TransactionProcessor](https://github.com/Solar-network/core/blob/75e3aa11e3466956fc7a860671bd4dd870a9d9fa/packages/pool/src/processor.ts)
 3. TransactionProcessor performs additional transaction payload checks in relation to the blockchain protocol. If all check are valid, transaction is added to the Transaction Pool
 
-> ✅ **SUCCESS** - All Client SDKs already create API requests to conform to this standard, so following the [SDK guidelines](/docs/sdk/guidelines/crypto) will typically result in your transaction passing validation.
+> ✅ **SUCCESS** - All Client SDKs already create API requests to conform to this standard, so following the [SDK guidelines](/sdk/guidelines/crypto) will typically result in your transaction passing validation.
 
-Notably, no blockchain-level validation occurs at this earliest stage in the transaction lifecycle. Request validation ensures that your POST request can be understood by the network, not that the data it contains represents a valid transaction. This task falls to the next class to handle transaction requests: the [TransactionProcessor](https://github.com/Solar-network/core/blob/main/packages/core-transaction-pool/src/processor.ts) from the `core-transaction-pool` package.
+Notably, no blockchain-level validation occurs at this earliest stage in the transaction lifecycle. Request validation ensures that your POST request can be understood by the network, not that the data it contains represents a valid transaction. This task falls to the next class to handle transaction requests: the [TransactionProcessor](https://github.com/Solar-network/core/blob/75e3aa11e3466956fc7a860671bd4dd870a9d9fa/packages/pool/src/processor.ts) from the `core-transaction-pool` package.
 
 Assuming validation is successful, the posted transactions are processed by the request handler, which passes the data to the TransactionProcessor for validation.
 
-All transactions submitted to the **TransactionProcessor** [are returned in one of four arrays](/docs/api/public-rest-api/endpoints/transactions):
+All transactions submitted to the **TransactionProcessor** [are returned in one of four arrays](/api/public-rest-api/endpoints/transactions):
 
 * accept
 * broadcast
@@ -61,7 +61,7 @@ Transactions move out of the pool once a forging Delegate (a forger) is ready an
 
 Inside the `forge` method, all transaction values, fees, and IDs within the block are added together. The values and fees are used to calculate block metadata, while the hashed IDs are concatenated and used as the block's `payloadHash` property.
 
-![](/docs/core/assets/forger.png)
+![](/core/assets/forger.png)
 
 With this information in hand, the block data and sorted transactions are passed to the crypto library's `Block.create` method alongside the forging delegate's keys.
 
