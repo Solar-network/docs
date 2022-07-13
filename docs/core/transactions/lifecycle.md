@@ -4,11 +4,11 @@ title: Transactions - Understanding the Lifecycle
 
 # Understanding the Transaction Lifecycle
 
-Describing Transaction's Journey From Client to Core Server (Blockchain)
+Describing Transaction's Journey From Client to Core Node
 
 > ✅ **SUCCESS** - A transaction is an atomic change in the state of the blockchain. The simplest form transfers value from address A to B, incorporating a fee for the processing. Transactions are bundled into a block. At that moment they are committed to the blockchain and become irreversible.
 
-All valid transactions are begin submitted as payload data via the [Public REST API](/api/public-rest-api/getting-started). This valid transactions end as immutable history on the blockchain (are included in blocks). While the implementation specifics will depend on the platform used to submit the transaction, SXP's extensive [SDK](/api) coverage ensures that developers experience a unified workflow across languages and platforms.
+All valid transactions are submitted as payload data via the [Public REST API](/api/public-rest-api/getting-started) and are immutable once added to the blockchain (i.e., included in blocks). While the implementation specifics will depend on the platform used to submit the transaction, SXP's extensive [SDK](/api) coverage ensures that developers experience a unified workflow across languages and platforms.
 
 In the next sections we will look into the transaction lifecycle from creation to final inclusion in the blocks.
 
@@ -16,25 +16,25 @@ In the next sections we will look into the transaction lifecycle from creation t
 
 ### 1. Create and Sign Transaction Locally
 
-Transactions are generated and signed locally with one of many available [SDK libraries](/sdk/documentation). Locally generated and signed transactions are sent as a [POST request](/api/public-rest-api/endpoints/transactions) with transaction data to the Core Server node.
+Transactions are generated and signed locally with one of many available [SDK libraries](/sdk/documentation). Locally generated and signed transactions are sent as a [POST request](/api/public-rest-api/endpoints/transactions) with transaction data to a Core network node.
 
-> 🛑 **DANGER** - Core Server (node) will accept a valid transaction, signed with a valid signature from a private key. Make sure you invoke the SDK builder's **sign** method on your transaction object using the sender's private key.
+> 🛑 **DANGER** - Core will not accept transactions that are not signed. Make sure to invoke the SDK builder's **sign** method on your transaction object using the sender's private key.
 
 ![](/core/assets/send_to_node.png)
 
 ### 2. Receive and Validate Transaction on The Core Server
 
-Transactions are received at the POST transactions endpoint of the Public API. From there all requests are first validated by the API endpoint schema. Each endpoint schema defines the structure that requests should conform to.
+Transactions are received at the POST `/api/transactions` endpoint of the Public API. From there all requests are first validated by the API endpoint schema. Each endpoint schema defines the structure that requests should conform to.
 
 **Transaction flow in short:**
 
-1. Transaction Payload is received at the Core Server ([Public API Endpoint](/api/public-rest-api/endpoints/intro))
-2. API Handler validates schema and sends transaction to the [TransactionProcessor](https://github.com/Solar-network/core/blob/75e3aa11e3466956fc7a860671bd4dd870a9d9fa/packages/pool/src/processor.ts)
-3. TransactionProcessor performs additional transaction payload checks in relation to the blockchain protocol. If all check are valid, transaction is added to the Transaction Pool
+1. The transaction payload is received by Core ([Public API Endpoint](/api/public-rest-api/endpoints/intro))
+2. The API Handler validates the payload's schema and sends the transaction to the [TransactionProcessor](https://github.com/Solar-network/core/blob/75e3aa11e3466956fc7a860671bd4dd870a9d9fa/packages/pool/src/processor.ts)
+3. The transaction processor performs additional payload checks and, if valid, the transaction is added to the pool
 
-> ✅ **SUCCESS** - All Client SDKs already create API requests to conform to this standard, so following the [SDK guidelines](/sdk/guidelines/crypto) will typically result in your transaction passing validation.
+> ✅ **SUCCESS** - All Client SDKs already create API requests to conform to this standard, so following the [SDK guidelines](/sdk/guidelines/crypto) will typically result in the transaction passing validation.
 
-Notably, no blockchain-level validation occurs at this earliest stage in the transaction lifecycle. Request validation ensures that your POST request can be understood by the network, not that the data it contains represents a valid transaction. This task falls to the next class to handle transaction requests: the [TransactionProcessor](https://github.com/Solar-network/core/blob/75e3aa11e3466956fc7a860671bd4dd870a9d9fa/packages/pool/src/processor.ts) from the `core-transaction-pool` package.
+Notably, no blockchain-level validation occurs at this earliest stage in the transaction lifecycle. Request validation only ensures that the POST request can be understood by the network and does not validate the transaction itself. This task falls to the next class to handle transaction requests: the [TransactionProcessor](https://github.com/Solar-network/core/blob/75e3aa11e3466956fc7a860671bd4dd870a9d9fa/packages/pool/src/processor.ts) from Core's `pool` package.
 
 Assuming validation is successful, the posted transactions are processed by the request handler, which passes the data to the TransactionProcessor for validation.
 
@@ -87,8 +87,6 @@ The `Block.create` method uses the following algorithm to create a new block:
 5. Create a block ID using the hashed block data.
 6. Cast the data into a Block model using the new transaction and block ID.
 7. Return the cast Block object.
-
-Here, the cryptographic functions used by SXP to generate hashes are identical to those used by Bitcoin. These functions are battle-tested by years of use and analysis in Bitcoin. Resources to learn more about the block creation process can be found in [Bitcoin educational materials](https://github.com/bitcoinbook/bitcoinbook) as well as relevant SXP documentation on serialisation.
 
 ### 5. Block Propagation
 
