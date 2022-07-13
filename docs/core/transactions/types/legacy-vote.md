@@ -10,7 +10,7 @@ title: Transaction Types - Vote / Unvote / Switchvote _(**DEPRECATED**)_
 | :-------: | :---: |
 |     1     |   3   |
 
-The vote and unvote transaction types enable each address to vote for one delegate of their choosing to secure the network. Once an address votes for a delegate, funds can enter and leave the address as needed, and vote weight adjusts automatically. Voting does not send funds to the delegate’s SXP address in question - it only assigns vote weight
+The vote and unvote transaction types enable each address to vote for one delegate of their choosing to secure the network. Once an address votes for a delegate, funds can enter and leave the address as needed, and vote weight adjusts automatically. Voting does not send funds to the delegate’s SXP address in question - it only assigns vote weight.
 
 Holders of SXP vote through their wallets for delegates who secure the network, insert blocks into the ledger, and create new SXP. The top 53 vote earners are named elected forging delegates. Number of delegates is related to DPoS mechanism configuration.
 
