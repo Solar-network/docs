@@ -26,7 +26,6 @@ For more information about SDK implementations, visit the [SXP SDK documentation
         - [Type 1: Second Signature Registration](/core/transactions/types/second-signature)
         - [Type 2: Delegate Registration](/core/transactions/types/delegate-registration)
         - [Type 3: Legacy Vote](/core/transactions/types/legacy-vote) _(DEPRECATED)_
-        - [Type 4: MultiSignature Registration](/core/transactions/types/multisignature-registration)
         - [Type 5: IPFS](/core/transactions/types/ipfs)
         - [Type 6: Transfer](/core/transactions/types/transfer)
         - [Type 7: Delegate Resignation](/core/transactions/types/delegate-resignation)
