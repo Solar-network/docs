@@ -14,7 +14,7 @@ All Solar transactions contain a special data field of 255 bytes known as the 'M
 
 | References    |                                                                                                                                                                                                                                                                                                                       |
 | :------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| API Endpoints | [Link](/api/public-rest-api/endpoints/transactions)                                                                                                                                                                                                                                                                   |
+| API Endpoints | [Link](https://sxp.mainnet.sh/#/Transactions)                                                                                                                                                                                                                                                                         |
 | AJV Schema    | [Base](https://github.com/Solar-network/core/blob/0c03aaf1feebb77bd33117110c358636bf14d9c0/packages/crypto/src/transactions/types/schemas.ts#L17-L46) \| [Transfer](https://github.com/Solar-network/core/blob/fa3acf545f1bf257d8c2a089c2dd5d7a6f4a7943/packages/crypto/src/transactions/types/schemas.ts#L325-#L351) |
 
 ## JSON

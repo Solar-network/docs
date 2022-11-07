@@ -1,5 +1,5 @@
 ---
-title: Transactions - Introduction
+title: Introduction
 ---
 
 # Solar Core v3 Transactions

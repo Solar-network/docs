@@ -12,7 +12,7 @@ This transaction type enables a user to add an extra layer of security to their 
 
 | References    |                                                                                                                                                                                                                                                                                                                             |
 | :------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| API Endpoints | [Link](/api/public-rest-api/endpoints/transactions)                                                                                                                                                                                                                                                                         |
+| API Endpoints | [Link](https://sxp.mainnet.sh/#/Transactions)                                                                                                                                                                                                                                                                               |
 | AJV Schema    | [Base](https://github.com/Solar-network/core/blob/0c03aaf1feebb77bd33117110c358636bf14d9c0/packages/crypto/src/transactions/types/schemas.ts#L17-L46) \| [Second Signature](https://github.com/Solar-network/core/blob/0c03aaf1feebb77bd33117110c358636bf14d9c0/packages/crypto/src/transactions/types/schemas.ts#L77-L101) |
 
 ## Json

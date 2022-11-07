@@ -12,18 +12,11 @@ A 'Delegate Resignation' transaction allows a delegate to resign temporarily or 
 
 A 'Permanent Resignation' is for delegates who wish to permanently retire their position as a delegate on the Solar Network. Once resigned permanently, a delegate cannot reinstate their candidacy.
 
-> Because a delegate's username is permanently associated with their wallet's publicKey regardless of registration status, their username remains unregistrable by any other parties
-
-A 'Temporary Resignation' is for delegates who wish to halt their delegacy for a short time without negatively impacting the network (e.g., missing blocks) and can be for a variety of reasons, from temporary node maintenance to personal/private matters. While resigned temporarily, the delegate must wait for at least 106 blocks (two rounds) before 'Revoking' their resignation.
-
-> ℹ️ Only temporary resignations may be revoked.
-
-| References    |                                                                                                                                                                                                                                                                                                                                   |
-| :------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Pull Request  | Core [#92](https://github.com/Solar-network/core/pull/92)                                                                                                                                                                                                                                                                         |
-| API Endpoints | [Link](/api/public-rest-api/endpoints/transactions)                                                                                                                                                                                                                                                                               |
-| AJV Schema    | [Base](https://github.com/Solar-network/core/blob/0c03aaf1feebb77bd33117110c358636bf14d9c0/packages/crypto/src/transactions/types/schemas.ts#L17-L46) \| [Delegate Resignation](https://github.com/Solar-network/core/blob/31b910a624f2004f174a77896e88db1f7e9a670d/packages/crypto/src/transactions/types/schemas.ts#L357-#L370) |
-| Resign Types  | [Delegate Status](https://github.com/Solar-network/core/blob/31b910a624f2004f174a77896e88db1f7e9a670d/packages/crypto/src/enums.ts#L35-#L39)                                                                                                                                                                                      |
+| References           |                                                                                                                                                                                                                                                          |
+| :------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Improvement Proposal | [AIP11](https://github.com/ArkEcosystem/AIPs/blob/master/AIPS/aip-11.md), [AIP29](https://github.com/ArkEcosystem/AIPs/blob/master/AIPS/aip-29.md)                                                                                                       |
+| API Endpoints        | [Link](https://sxp.mainnet.sh/#/Transactions)                                                                                                                                                                                                            |
+| AJV Schema           | [Base](https://github.com/Solar-network/core/blob/main/packages/crypto/src/transactions/types/schemas.ts#L17-L46) \| [Delegate Resignation](https://github.com/Solar-network/core/blob/main/packages/crypto/src/transactions/types/schemas.ts#L374-L381) |
 
 ## Transaction Structure
 
@@ -69,8 +62,6 @@ ff033f0100000007000900000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b
 
 | Resignation Type | Value | Description                                                                                                                  |
 | ---------------- | :---: | :--------------------------------------------------------------------------------------------------------------------------- |
-| Temporary        |   0   | Resign only for a short time.
-Delegate will be removed from forging.
-*(the default when no resign type is declared)* |
+| Temporary        |   0   | Resign only for a short time. Delegate will be removed from forging. *(the default when no resign type is declared)*         |
 | Permanent        |   1   | Irreversible. Delegate will no longer be allowed to receive votes or forge.                                                  |
 | Revoke           |   2   | Reverses a temporary resignation.                                                                                            |

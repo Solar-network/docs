@@ -12,10 +12,11 @@ A Hashed Time-Lock Contract (HTLC) is a set of transaction types that permits a 
 
 The purpose of this transaction is to _**LOCK**_ funds of the sender and make them possible for retrieval by the recipient, if they know the shared secret.
 
-| References    |                                                                                                                                                                                                                                                                                                                       |
-| :------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| API Endpoints | [Link](/api/public-rest-api/endpoints/transactions)                                                                                                                                                                                                                                                                   |
-| AJV Schema    | [Base](https://github.com/Solar-network/core/blob/0c03aaf1feebb77bd33117110c358636bf14d9c0/packages/crypto/src/transactions/types/schemas.ts#L17-L46) \| [HTLC Lock](https://github.com/Solar-network/core/blob/0c03aaf1feebb77bd33117110c358636bf14d9c0/packages/crypto/src/transactions/types/schemas.ts#L266-L297) |
+| References           |                                                                                                                                                                                                                                               |
+| :------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Improvement Proposal | [AIP102](https://github.com/ArkEcosystem/AIPs/blob/master/AIPS/aip-102.md)                                                                                                                                                                    |
+| API Endpoints        | [Link](https://sxp.mainnet.sh/#/Transactions)                                                                                                                                                                                                 |
+| AJV Schema           | [Base](https://github.com/Solar-network/core/blob/main/packages/crypto/src/transactions/types/schemas.ts#L17-L46) \| [HTLC Lock](https://github.com/Solar-network/core/blob/main/packages/crypto/src/transactions/types/schemas.ts#L266-L297) |
 
 ## JSON
 

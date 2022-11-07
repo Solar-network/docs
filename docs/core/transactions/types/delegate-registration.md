@@ -10,10 +10,11 @@ title: Transaction Types - Delegate Registration
 
 A user or organisation can register their address to become a delegate and secure the network. Upon accumulating sufficient vote weight, the delegate will begin forging transactions and receiving block rewards. The delegate assigns a custom name to their address to differentiate it from other delegates.
 
-| References    |                                                                                                                                                                                                                                                                                                                                   |
-| :------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| API Endpoints | [Link](/api/public-rest-api/endpoints/transactions)                                                                                                                                                                                                                                                                               |
-| AJV Schema    | [Base](https://github.com/Solar-network/core/blob/0c03aaf1feebb77bd33117110c358636bf14d9c0/packages/crypto/src/transactions/types/schemas.ts#L17-L46) \| [Delegate Registration](https://github.com/Solar-network/core/blob/0c03aaf1feebb77bd33117110c358636bf14d9c0/packages/crypto/src/transactions/types/schemas.ts#L103-L124) |
+| References           |                                                                                                                                                                                                                                                           |
+| :------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Improvement Proposal | [AIP11](https://github.com/ArkEcosystem/AIPs/blob/master/AIPS/aip-11.md)                                                                                                                                                                                  |
+| API Endpoints        | [Link](https://sxp.mainnet.sh/#/Transactions)                                                                                                                                                                                                             |
+| AJV Schema           | [Base](https://github.com/Solar-network/core/blob/main/packages/crypto/src/transactions/types/schemas.ts#L17-L46) \| [Delegate Registration](https://github.com/Solar-network/core/blob/main/packages/crypto/src/transactions/types/schemas.ts#L103-L124) |
 
 ## Transaction Structure
 

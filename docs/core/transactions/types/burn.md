@@ -10,10 +10,11 @@ title: Transaction Types - Burn
 
 This transaction type allows burning an arbitrary amount of SXP tokens. The burned amount is deducted from the sender's wallet as well as from the chain's circulating supply.
 
-| References    |                                                                                                                                                                                                                                                                                                                   |
-| :------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| API Endpoints | [Link](/api/public-rest-api/endpoints/transactions)                                                                                                                                                                                                                                                               |
-| AJV Schema    | [Base](https://github.com/Solar-network/core/blob/0c03aaf1feebb77bd33117110c358636bf14d9c0/packages/crypto/src/transactions/types/schemas.ts#L17-L46) \| [Burn](https://github.com/Solar-network/core/blob/0c03aaf1feebb77bd33117110c358636bf14d9c0/packages/crypto/src/transactions/types/solar/burn.ts#L15-L25) |
+| References                         |                                                                                                                                                                                                                                           |
+| :--------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <!-- SXP Improvement Proposals --> | <!-- [AIP11](https://github.com/ArkEcosystem/AIPs/blob/master/AIPS/aip-11.md), [AIP29](https://github.com/ArkEcosystem/AIPs/blob/master/AIPS/aip-29.md) -->                                                                               |
+| API Endpoints                      | [Link](https://sxp.mainnet.sh/#/Transactions)                                                                                                                                                                                  |
+| AJV Schema                         | [Base](https://github.com/Solar-network/core/blob/main/packages/crypto/src/transactions/types/schemas.ts#L17-L46) \| [Burn](https://github.com/Solar-network/core/blob/main/packages/crypto/src/transactions/types/solar/burn.ts#L15-L25) |
 
 ## Json
 
