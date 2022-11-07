@@ -1,6 +1,3 @@
----
-title: Introduction
----
 
 # Solar Core v3 Transactions
 

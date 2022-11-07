@@ -1,6 +1,3 @@
----
-title: Transaction Types - HTLC Claim
----
 
 # HTLC Claim
 

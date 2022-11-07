@@ -1,6 +1,3 @@
----
-title: Transaction Types - IPFS
----
 
 # IPFS
 

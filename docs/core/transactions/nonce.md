@@ -1,8 +1,5 @@
----
-title: Understanding the Nonce
----
 
-# Understanding the Transaction Nonce
+# Understanding the Nonce
 
 SXP transactions use a sequential nonce to protect against [double-spending](https://wikipedia.org/wiki/Double-spending), long-range attacks, key-leakage as a result of signature reuse, and [side-channel attacks](https://wikipedia.org/wiki/Side-channel_attack) associated with random nonces.
 

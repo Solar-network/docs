@@ -1,13 +1,11 @@
----
-title: Understanding the Lifecycle
----
 
-# Understanding the Transaction Lifecycle
+# Understanding the Lifecycle
 
 Describing Transaction's Journey From Client to Core Server (Blockchain)
 
 > ✅ **SUCCESS** - A transaction is an atomic change in the state of the blockchain. The simplest form transfers value from address A to B, incorporating a fee for the processing. Transactions are bundled into a block. At that moment they are committed to the blockchain and become irreversible.
 
+All valid transactions are begin submitted as payload data via the [Public REST API](/api/public-rest-api/getting-started). This valid transactions end as immutable history on the blockchain (are included in blocks). While the implementation specifics will depend on the platform used to submit the transaction, SXP's extensive [SDK](/api/index) coverage ensures that developers experience a unified workflow across languages and platforms.
 
 In the next sections we will look into the transaction lifecycle from creation to final inclusion in the blocks.
 

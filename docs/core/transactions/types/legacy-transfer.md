@@ -1,6 +1,3 @@
----
-title: Transaction Types - Transfer _(**DEPRECATED**)_
----
 
 # Transfer _(**DEPRECATED**)_
 

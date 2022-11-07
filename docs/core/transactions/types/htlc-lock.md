@@ -1,6 +1,3 @@
----
-title: Transaction Types - HTLC Lock
----
 
 # HTLC Lock
 

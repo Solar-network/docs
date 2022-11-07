@@ -1,6 +1,3 @@
----
-title: Transaction Types - Second Signature Registration
----
 
 # Second Signature Registration
 

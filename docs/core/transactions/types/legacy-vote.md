@@ -1,6 +1,3 @@
----
-title: Transaction Types - Vote / Unvote / Switchvote _(**DEPRECATED**)_
----
 
 # Vote / Unvote / Switchvote _(**DEPRECATED**)_
 

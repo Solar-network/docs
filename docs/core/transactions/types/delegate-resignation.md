@@ -1,6 +1,3 @@
----
-title: Transaction Types - Delegate Resignation
----
 
 # Delegate Resignation
 
