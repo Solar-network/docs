@@ -12,7 +12,7 @@ The purpose of this transaction is for the recipient to _**CLAIM**_ funds from t
 | References           |                                                                                                                                                                                                                                                |
 | :------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Improvement Proposal | [AIP102](https://github.com/ArkEcosystem/AIPs/blob/master/AIPS/aip-102.md)                                                                                                                                                                     |
-| API Endpoints        | [Link](https://sxp.mainnet.sh/#/Transactions)                                                                                                                                                                                                  |
+| API Endpoints        | [Link](https://api.solar.org/#/Transactions)                                                                                                                                                                                                   |
 | AJV Schema           | [Base](https://github.com/Solar-network/core/blob/main/packages/crypto/src/transactions/types/schemas.ts#L17-L46) \| [HTLC Claim](https://github.com/Solar-network/core/blob/main/packages/crypto/src/transactions/types/schemas.ts#L299-L320) |
 
 ## JSON

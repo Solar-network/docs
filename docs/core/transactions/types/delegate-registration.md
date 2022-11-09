@@ -10,7 +10,7 @@ A user or organisation can register their address to become a delegate and secur
 | References           |                                                                                                                                                                                                                                                           |
 | :------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Improvement Proposal | [AIP11](https://github.com/ArkEcosystem/AIPs/blob/master/AIPS/aip-11.md)                                                                                                                                                                                  |
-| API Endpoints        | [Link](https://sxp.mainnet.sh/#/Transactions)                                                                                                                                                                                                             |
+| API Endpoints        | [Link](https://api.solar.org/#/Transactions)                                                                                                                                                                                                              |
 | AJV Schema           | [Base](https://github.com/Solar-network/core/blob/main/packages/crypto/src/transactions/types/schemas.ts#L17-L46) \| [Delegate Registration](https://github.com/Solar-network/core/blob/main/packages/crypto/src/transactions/types/schemas.ts#L103-L124) |
 
 ## Transaction Structure

@@ -13,7 +13,7 @@ In the next sections we will look into the transaction lifecycle from creation t
 
 ### 1. Create and Sign Transaction Locally
 
-Transactions are generated and signed locally with one of many available [SDK libraries](/sdk/documentation). Locally generated and signed transactions are sent as a <a href="https://sxp.mainnet.sh/#/Transactions/post_transactions" target="_blank" rel="noopener noreferrer">POST request</a> with transaction data to the Core Server node.
+Transactions are generated and signed locally with one of many available [SDK libraries](/sdk/documentation). Locally generated and signed transactions are sent as a <a href="https://api.solar.org/#/Transactions/post_transactions" target="_blank" rel="noopener noreferrer">POST request</a> with transaction data to the Core Server node.
 
 > 🛑 **DANGER** - Core Server (node) will accept a valid transaction, signed with a valid signature from a private key. Make sure you invoke the SDK builder's **sign** method on your transaction object using the sender's private key.
 
@@ -35,7 +35,7 @@ Notably, no blockchain-level validation occurs at this earliest stage in the tra
 
 Assuming validation is successful, the posted transactions are processed by the request handler, which passes the data to the TransactionProcessor for validation.
 
-All transactions submitted to the **TransactionProcessor** <a href="https://sxp.mainnet.sh/#/Transactions/post_transactions" target="_blank" rel="noopener noreferrer">are returned in one of four arrays</a>:
+All transactions submitted to the **TransactionProcessor** <a href="https://api.solar.org/#/Transactions/post_transactions" target="_blank" rel="noopener noreferrer">are returned in one of four arrays</a>:
 
 * accept
 * broadcast

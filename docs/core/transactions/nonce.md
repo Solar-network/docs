@@ -25,7 +25,7 @@ funky stuff here:
 
 ## How To Get Nonce Value For An Address?
 
-A sequential nonce depends on the amount of transaction a specific wallet has sent. You can find the current nonce for a wallet by utilizing the Public API, more specifically the <a href="https://sxp.mainnet.sh/#/Wallets/get_wallets__identifier_" target="_blank" rel="noopener noreferrer">wallet endpoint</a>. The wallet endpoint returns the wallet details, including the current wallets nonce field, like below:
+A sequential nonce depends on the amount of transaction a specific wallet has sent. You can find the current nonce for a wallet by utilizing the Public API, more specifically the <a href="https://api.solar.org/#/Wallets/get_wallets__identifier_" target="_blank" rel="noopener noreferrer">wallet endpoint</a>. The wallet endpoint returns the wallet details, including the current wallets nonce field, like below:
 
 ```javascript
 {
