@@ -3,7 +3,7 @@
 
 | TypeGroup | Type  |
 | :-------: | :---: |
-|     1     |   3   |
+|     1     |   2   |
 
 A user or organisation can register their address to become a delegate and secure the network. Upon accumulating sufficient vote weight, the delegate will begin forging transactions and receiving block rewards. The delegate assigns a custom name to their address to differentiate it from other delegates.
 
@@ -22,7 +22,7 @@ A user or organisation can register their address to become a delegate and secur
     "version": 3,
     "network": 63,
     "typeGroup": 1,
-    "type": 1,
+    "type": 2,
     "nonce": "3",
     "senderPublicKey": "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192",
     "fee": "7500000000",

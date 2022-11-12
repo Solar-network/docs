@@ -3,7 +3,7 @@
 
 | TypeGroup | Type  |
 | :-------: | :---: |
-|     1     |   3   |
+|     1     |  10   |
 
 A Hashed Time-Lock Contract (HTLC) is a set of transaction types that permits a designated party (the "sender/seller") to [**LOCK**](/core/transactions/types/htlc-lock) funds by disclosing the preimage (secret) of a hash. It also permits a second party (the "recipient/buyer") to [**CLAIM**](/core/transactions/types/htlc-claim) the funds, or after a timeout is reached enter a **REFUND** situation.
 
