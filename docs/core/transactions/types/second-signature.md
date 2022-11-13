@@ -1,3 +1,6 @@
+---
+title: Second Signature Registration
+---
 
 # Second Signature Registration
 

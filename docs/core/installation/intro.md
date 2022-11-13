@@ -1,8 +1,8 @@
 ---
-title: Introduction
+title: Overview
 ---
 
-# Introduction
+# Overview
 
 Solar Core is written in [TypeScript](https://github.com/microsoft/typescript), and it has been using [Lerna](https://github.com/lerna/lerna) to manage the development and publication of its packages and uses [Node.js](https://nodejs.org) as execution environment.
 

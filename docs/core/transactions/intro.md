@@ -1,9 +1,15 @@
+---
+title: Overview
+---
 
 # Solar Core v3 Transactions
 
 This section will help you learn about Solar Transactions as well as their structures and `serde` processes (serialisation and deserialisation of transactions).
 
-> ℹ️ **INFO** - Transactions are the heart of any blockchain, cryptocurrency, or otherwise. They represent a transfer of value from one network participant to another. In SXP, transactions can be of one of many types which can impact the content and data structure of each transaction's payload.
+<div class="admonition info">
+    <p class="admonition-title">info</p>
+    <p>Transactions are the heart of any blockchain, cryptocurrency, or otherwise. They represent a transfer of value from one network participant to another. In SXP, transactions can be of one of many types which can impact the content and data structure of each transaction's payload.</p>
+</div>
 
 Using the [SXP SDKs](/sdk/documentation), developers can employ the programming language of their choice to build applications utilising the SXP blockchain. The SXP SDKs are split into two packages for each language: Client and Cryptography.
 

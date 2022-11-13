@@ -1,3 +1,6 @@
+---
+title: Delegate Resignation
+---
 
 # Delegate Resignation
 

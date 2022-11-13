@@ -1,3 +1,6 @@
+---
+title: Vote
+---
 
 # Vote
 
@@ -11,7 +14,9 @@ To vote for a new delegate or set of delegates, create a new vote transaction co
 
 To stop voting altogether, simply create a new vote transaction containing an empty delegate list, also known as a '[Cancel Vote](#cancel-vote).'
 
-> Voting does _not_ require sending funds to the delegate or delegates - it only assigns the wallet's vote weight.
+<div class="admonition info">
+    <p>Voting does <b>not</b> require sending funds to the delegate or delegates - it only assigns the wallet's vote weight.</p>
+</div>
 
 | References    |                                                                                                                                                                                                                                                                                                                  |
 | :------------ | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

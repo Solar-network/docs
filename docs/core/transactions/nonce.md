@@ -2,9 +2,9 @@
 title: Understanding the Nonce
 ---
 
-# Understanding the Nonce
+# Understanding the Transaction Nonce
 
-SXP transactions use a sequential nonce to protect against [double-spending](https://wikipedia.org/wiki/Double-spending), long-range attacks, key-leakage as a result of signature reuse, and [side-channel attacks](https://wikipedia.org/wiki/Side-channel_attack) associated with random nonces.
+SXP transactions use a sequential nonce to protect against <a href="https://wikipedia.org/wiki/Double-spending" target="_blank" rel="noopener noreferrer">double-spending</a>, long-range attacks, key-leakage as a result of signature reuse, and <a href="https://wikipedia.org/wiki/Side-channel_attack" target="_blank" rel="noopener noreferrer">side-channel attacks</a> associated with random nonces.
 
 A sequential nonce effectively counts each outgoing transaction from a given wallet. This means that the first transaction from a wallet must have a nonce of **1**, the second transaction must have a nonce of **2**, and so on.
 
@@ -53,7 +53,10 @@ A sequential nonce depends on the amount of transaction a specific wallet has se
 
 When you create a new transaction for that wallet, you will use the **current nonce and add 1** to it to get to the new nonce value.
 
-> ℹ️ **INFO** - If you retrieved a nonce value of **123** for a wallet, the next transaction will have to use nonce **124,** (current_nonce + 1). The API will increase the nonce value once a transaction has been forged for the wallet.
+<div class="admonition info">
+    <p class="admonition-title">info</p>
+    <p>If you retrieved a nonce value of <b>123</b> for a wallet, the next transaction will have to use nonce <b>124</b>, (current_nonce + 1). The API will increase the nonce value once a transaction has been forged for the wallet.</p>
+</div>
 
 ### Sending Multiple Transactions
 

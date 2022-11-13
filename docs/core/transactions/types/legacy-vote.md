@@ -1,7 +1,13 @@
+---
+title: Vote (Legacy)
+---
 
 # Vote / Unvote / Switchvote _(**DEPRECATED**)_
 
-> 🛑 Vote (Type 3) has been deprecated, please visit ['TypeGroup 2, Type 2: Vote'](/core/transactions/types/vote) to see the updated transaction.
+<div class="admonition warning">
+    <p class="admonition-title">warning</p>
+    <p>Vote (Type 3) has been deprecated, please visit <a href="/core/transactions/types/vote">'TypeGroup 2, Type 2: Vote'</a> to see the updated transaction.</p>
+</div>
 
 | TypeGroup | Type  |
 | :-------: | :---: |

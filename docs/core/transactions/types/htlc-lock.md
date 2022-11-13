@@ -1,3 +1,6 @@
+---
+title: Lock
+---
 
 # HTLC Lock
 

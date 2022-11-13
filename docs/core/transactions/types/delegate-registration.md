@@ -1,3 +1,6 @@
+---
+title: Delegate Registration
+---
 
 # Delegate Registration
 
