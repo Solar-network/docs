@@ -91,14 +91,14 @@ GET /api/webhooks/{id}
 
 ## Create a Webhook
 
-It is recommended to have a backend service running that will handle your webhook calls, as you'll have to provide a `target` value when creating the webhook. To give you an idea of how this works, we created a couple of [example setups](/docs/api/webhook-api/usage#handling-webhooks) that you can use or get inspiration from. A webhook may be triggered by multiple conditions; as long as one of the conditions evaluates to `true`, the webhook will fire.
+It is recommended to have a backend service running that will handle your webhook calls, as you'll have to provide a `target` value when creating the webhook. To give you an idea of how this works, we created a couple of [example setups](/api/webhook-api/usage#handling-webhooks) that you can use or get inspiration from. A webhook may be triggered by multiple conditions; as long as one of the conditions evaluates to `true`, the webhook will fire.
 
 The returned `token` should be saved and used to validate the webhook origin. It is a secret value which should not be shared. For extra security, whitelist the IP of the node with your target service, ensuring other parties are not able to post webhook payloads.
 
 The `conditions` lists consists of an `array` of objects, with the following properties:
 
 * `key`: the key used on the object that is passed along with the specified event
-* `condition`: a [condition](/docs/api/webhook-api/endpoints#conditions) used to check the value against
+* `condition`: a [condition](/api/webhook-api/endpoints#conditions) used to check the value against
 * `value`: (Optional) a value used to check the `key` against. This is not needed for the `falsy` and `truthy` conditions. In case of `between` and `not-between`, you'll have to provide an object like this: `"value": { "min": "someValue", "max": "someValue" }`
 
 ### Endpoint
@@ -111,7 +111,7 @@ POST /api/webhooks
 
 | Name | Type | Description | Required |
 | :--- | :---: | :--- | :---: |
-| event | string | The name of the [event](/docs/api/webhook-api/endpoints#events) to be listened for. | Yes |
+| event | string | The name of the [event](/api/webhook-api/endpoints#events) to be listened for. | Yes |
 | target | string | The target URL for the HTTP payload. | Yes |
 | enabled | string | The value to enable or disable the webhook. | No |
 | conditions | array | The list of conditions required to trigger the webhook. | Yes |

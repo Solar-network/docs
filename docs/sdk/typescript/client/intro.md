@@ -1,5 +1,5 @@
 ---
-title: Getting Started
+title: Introduction
 ---
 
 # Client
@@ -12,11 +12,12 @@ yarn add @solar-network/client
 
 ## Development
 
-1. Fork the [package](https://github.com/ArkEcosystem/javascript-client).
+1. Fork the package: <a href="https://github.com/Solar-network/client/fork" target="_blank" rel="noopener noreferrer">github.com/Solar-network/client/fork</a>
+
 2. Clone your forked repository.
 
 ```bash
-git clone https://github.com/<githubusername>/typescript-client
+git clone https://github.com/<githubusername>/client
 ```
 
 <!-- markdownlint-disable MD029 -->
@@ -24,7 +25,7 @@ git clone https://github.com/<githubusername>/typescript-client
 <!-- markdownlint-enable MD029 -->
 
 ```bash
-cd typescript-client
+cd client
 ```
 
 <!-- markdownlint-disable MD029 -->

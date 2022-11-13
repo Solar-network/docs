@@ -2,13 +2,15 @@
 title: Documentation
 ---
 
-## Introduction
+# Documentation
 
 This file describes a general overview that must be adhered to when writing documentation for any of the SDKs (both Crypto and Client).
 
 Following these guidelines is required to provide a streamlined experience across different languages to make it easier for developers to read up on the SDK usage in their language of choice.
 
-> Carefully read those guidelines and abide by them while writing SDK documentation.
+<div class="admonition tip">
+    <p class="admonition-title">Carefully read those guidelines and abide by them while writing SDK documentation.</p>
+</div>
 
 ## Structure
 
@@ -42,7 +44,7 @@ This file is meant to show code examples on how to use the SDK. These examples s
 For the Crypto SDK, you could give examples of:
 
 - How to create a transaction with a builder
-- How to serialize / deserialize transactions
+- How to serialise / deserialise transactions
 - How to generate a private key / public key / address from a passphrase
 - ...
 

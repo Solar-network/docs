@@ -4,15 +4,16 @@ title: Client
 
 # Client Libraries
 
-<x-alert type="info">
-**The following is a guide for implementing a new SXP Client SDK. It covers the required functionalities as well as guidelines for how clients should typically look and behave.**
-</x-alert>
+<div class="admonition info">
+    <p class="admonition-title">info</p>
+    <p>The following is a guide for implementing a new SXP Client SDK. It covers the required functionalities as well as guidelines for how clients should typically look and behave.</p>
+</div>
 
 These guidelines are to be strictly followed if you are implementing or modifying an API client for the Solar Network.
 
 Following these guidelines is required to provide a streamlined experience across different languages to make it easier for new developers to get started with developing a new package or modify an existing one without lowering the quality of the already existing implementation.
 
-> Carefully read those guidelines and abide by them while developing an API client.
+**Carefully read those guidelines and abide by them while developing an API client**
 
 ## Required Functionality
 
@@ -52,7 +53,7 @@ Following these guidelines is required to provide a streamlined experience acros
 
 * If you need to use the `SXP` name, keep these 2 use-cases in mind. The first one is `SXP` which is used in financial contexts like `10 SXP`. The second is `SXP` which used for everything else that is not talking about `SXP`, the financial unit.
 * If you need to namespace something with a numerical value in it, write out the numerical value. An example would be `App\Versions\One` instead of `App\V1`._
-* If you work with a language that provides standard interfaces for HTTP messaging, implement them to provide a standardized and compliant interface which allows other developers to inject dependencies. _An example of this would be [PSR-7](https://www.php-fig.org/psr/psr-7/) for PHP which allows developers to create HTTP clients that follow a standardized interface which allows switching implementations while knowing it will work._
+* If you work with a language that provides standard interfaces for HTTP messaging, implement them to provide a standardised and compliant interface which allows other developers to inject dependencies. _An example of this would be [PSR-7](https://www.php-fig.org/psr/psr-7/) for PHP which allows developers to create HTTP clients that follow a standardised interface which allows switching implementations while knowing it will work._
 
 ## Implementation
 
@@ -64,5 +65,5 @@ There are already a few implementations of cryptography packages available, so t
 
 ### Object Oriented Programming
 
-* [https://github.com/solar-network/php-client](https://github.com/solar-network/php-client)
+* [https://github.com/solar-network/client](https://github.com/solar-network/client)
 * [https://github.com/solar-network/python-client](https://github.com/solar-network/python-client)

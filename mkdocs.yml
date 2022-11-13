@@ -152,32 +152,53 @@ nav:
     - index.md
   - Core:
     - core/intro.md
+    - Installation:
+      - core/installation/intro.md
+      - core/installation/requirements.md
+      - core/installation/variables.md
+      - core/installation/steps.md
+    - Transactions:
+      - core/transactions/lifecycle.md
+      - core/transactions/nonce.md
+      - core/transactions/types/overview.md
+      # - Types:
+      #   - core/transactions/types/overview.md
+      #   - core/transactions/types/legacy-tranfer.md
+      #   - core/transactions/types/second-signature.md
+      #   - core/transactions/types/delegate-registration.md
+      #   - core/transactions/types/legacy-vote.md
+      #   - core/transactions/types/ipfs.md
+      #   - core/transactions/types/transfer.md
+      #   - core/transactions/types/delegate-resignation.md
+      #   - core/transactions/types/htlc-lock.md
+      #   - core/transactions/types/htlc-claim.md
+      #   - core/transactions/types/htlc-refund.md
+      #   - core/transactions/types/burn.md
+      #   - core/transactions/types/vote.md
     - Core Updates:
-      - core/updates/4.0.1.md
       - core/updates/3.3.0.md
-#  - SLP:
-#    - slp/intro.md
-#  - API:
-#    - api/intro.md
-  - Wallets:
-    - Desktop Wallet:
-      - desktop-wallet/intro.md
-      - desktop-wallet/introduction-to-solar-rewards.md
-      - User Guides:
-        - desktop-wallet/user-guides/how-to-add-a-contact.md
-        - desktop-wallet/user-guides/how-to-create-or-import-wallets.md
-       # - desktop-wallet/user-guides/how-to-register-or-resign-delegate.md
-        - desktop-wallet/user-guides/how-to-register-second-passphrase.md
-        - desktop-wallet/user-guides/how-to-send.md
-        - desktop-wallet/user-guides/how-to-sign-and-verify.md
-        - desktop-wallet/user-guides/how-to-vote.md
-        - desktop-wallet/user-guides/transaction-fees.md
-      - desktop-wallet/support/troubleshooting.md
-  - Project:
-    - project/intro.md
-    - project/whitepaper.md
-  - Brand:
-    - brand/intro.md
+      - core/updates/4.0.1.md
+      - core/updates/4.1.1.md
+  - Exchange Integration:
+    - Introduction:
+      - exchanges/intro.md
+    - Core Node Introduction:
+      - exchanges/node-installation/requirements.md
+      - exchanges/node-installation/baremetal.md
+    - PUBLIC API:
+      - exchanges/api-guide.md
+      - exchanges/rate-limits.md
+  - API:
+    - api/index.md
+    - Public REST-API:
+      - api/public-rest-api/getting-started.md
+      - api/public-rest-api/endpoints.md
+      - api/public-rest-api/modify-response.md
+      - api/public-rest-api/troubleshooting.md
+    - WEBHOOK API:
+      - api/webhook-api/getting-started.md
+      - api/webhook-api/usage.md
+      - api/webhook-api/endpoints.md
   - SDK:
     - sdk/documentation.md
     - Guidelines:
@@ -209,53 +230,20 @@ nav:
         - sdk/python/crypto/api-documentation.md
         - sdk/python/crypto/examples.md
       - sdk/python/complementary-examples.md 
-    - Javascript:
-      - sdk/javascript/installation.md
-      - Client:
-        - sdk/javascript/client/intro.md
-        - sdk/javascript/client/api-documentation.md
-        - sdk/javascript/client/examples.md
-      - Crypto:
-        - sdk/javascript/crypto/intro.md
-        - sdk/javascript/crypto/examples.md
-  - Exchange Integration:
-    - Introduction:
-      - exchanges/intro.md
-    - Core Node Introduction:
-      - exchanges/node-installation/hardware-requirements.md
-      - exchanges/node-installation/baremetal-instructions.md
-    - JSON-RPC:
-      - exchanges/json-rpc/getting-started.md
-      - Endpoints: 
-        - exchanges/json-rpc/endpoints/blocks.md
-        - exchanges/json-rpc/endpoints/transactions.md
-        - exchanges/json-rpc/endpoints/wallets.md        
-      - Examples:
-        - exchanges/json-rpc/examples.md
-    - PUBLIC API:
-      - exchanges/public-api-guide.md
-      - exchanges/configuring-rate-limits.md
-  - API:
-    - api/index.md
-    - Public REST-API:
-      - api/public-rest-api/getting-started.md
-      - Endpoints:
-        - api/public-rest-api/endpoints/intro.md
-        - api/public-rest-api/endpoints/blockchain.md
-        - api/public-rest-api/endpoints/blocks.md
-        - api/public-rest-api/endpoints/delegates.md
-        - api/public-rest-api/endpoints/node.md
-        - api/public-rest-api/endpoints/peers.md
-        - api/public-rest-api/endpoints/transactions.md
-        - api/public-rest-api/endpoints/votes.md
-        # - api/public-rest-api/endpoints/locks.md
-        - api/public-rest-api/endpoints/wallets.md
-      - api/public-rest-api/modify-response.md
-      - api/public-rest-api/troubleshooting.md
-    - WEBHOOK API:
-      - api/webhook-api/getting-started.md
-      - api/webhook-api/usage.md
-      - api/webhook-api/endpoints.md
+  - Wallets:
+    - Desktop Wallet:
+      - desktop-wallet/intro.md
+      - desktop-wallet/rewards.md
+      - User Guides:
+        - desktop-wallet/user-guides/add-contact.md
+        - desktop-wallet/user-guides/create-import-wallets.md
+        # - desktop-wallet/user-guides/register-resign-delegate.md
+        - desktop-wallet/user-guides/register-second-passphrase.md
+        - desktop-wallet/user-guides/send.md
+        - desktop-wallet/user-guides/sign-verify.md
+        - desktop-wallet/user-guides/vote.md
+        - desktop-wallet/user-guides/transaction-fees.md
+      - desktop-wallet/support/troubleshooting.md
   - SXPSwap:
     - sxpswap/introduction.md
     - Swap / Migration:
@@ -270,4 +258,8 @@ nav:
         - sxpswap/technical-details/security/contract-procedure.md
         - sxpswap/technical-details/security/broadcast-procedure.md
         - sxpswap/technical-details/security/mainnet-procedure.md
-
+  - Brand:
+    - brand/intro.md
+  - Project:
+    - project/intro.md
+    - project/whitepaper.md

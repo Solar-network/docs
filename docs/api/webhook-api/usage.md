@@ -8,19 +8,19 @@ title: Usage
 
 With the release of Solar Core 2.0, a new feature was introduced, called [Webhooks](https://wikipedia.org/wiki/Webhook) which allows you to create more flexible and automated systems while also reducing traffic/load on your server.
 
-## Authorization
+## Authorisation
 
-Before we start working on the implementation of a webhook handler, we will take a look at handling authorization.
+Before we start working on the implementation of a webhook handler, we will take a look at handling authorisation.
 
-To guarantee that only your server is allowed to send data to your webhook handler, an authorization token is generated on creation of a webhook. **The generated token will only be returned once and not be visible again.**
+To guarantee that only your server is allowed to send data to your webhook handler, an authorisation token is generated on creation of a webhook. **The generated token will only be returned once and not be visible again.**
 
-To generate an authorization token, you need to [create a webhook](/docs/api/webhook-api/endpoints#create-a-webhook).
+To generate an authorisation token, you need to [create a webhook](/api/webhook-api/endpoints#create-a-webhook).
 
 Lets take the following token as an example `fe944e318edb02b979d6bf0c87978b640c8e74e1cbfe36404386d33a5bbd8b66` which is 64 characters long and breaks down into 2 parts at 32 characters length each.
 
 The first 32 characters will be stored in the database and sent to you as a header `Authorization: fe944e318edb02b979d6bf0c87978b64` via a POST request.
 
-The last 32 characters `0c8e74e1cbfe36404386d33a5bbd8b66` need to be stored by you and will serve as a way for you to verify that the request is authorized.
+The last 32 characters `0c8e74e1cbfe36404386d33a5bbd8b66` need to be stored by you and will serve as a way for you to verify that the request is authorised.
 
 ## Handling Webhooks
 
@@ -36,10 +36,10 @@ const verification = "0c8e74e1cbfe36404386d33a5bbd8b66";
 
 server.post("/blocks", jsonParser, (req, res) => {
   // This will be fe944e318edb02b979d6bf0c87978b64
-  const authorization = req.headers["authorization"];
+  const authorisation = req.headers["authorization"];
 
-  // This will be authorization + verification
-  const token = authorization + verification;
+  // This will be authorisation + verification
+  const token = authorisation + verification;
 
   // Make sure we block access if the token is invalid...
   if (token !== webhookToken) {
@@ -116,9 +116,9 @@ from functools import wraps
 app = Flask(__name__)
 
 def dump_webhook_token(token):
-    authorization = token[:32]  # "fe944e318edb02b979d6bf0c87978b64"
+    authorisation = token[:32]  # "fe944e318edb02b979d6bf0c87978b64"
     verification = token[32:]   # "0c8e74e1cbfe36404386d33a5bbd8b66"
-    filename = hashlib.md5(authorization.encode("utf-8")).hexdigest()
+    filename = hashlib.md5(authorisation.encode("utf-8")).hexdigest()
     with open(filename, "wb") as out:
         pickle.dump(
             {
@@ -129,15 +129,15 @@ def dump_webhook_token(token):
         )
 
 
-def check_webhook_token(authorization):
-    filename = hashlib.md5(authorization.encode("utf-8")).hexdigest()
+def check_webhook_token(authorisation):
+    filename = hashlib.md5(authorisation.encode("utf-8")).hexdigest()
     try:
         with open(filename, "rb") as in_:
             data = pickle.load(in_)
     except Exception:
         return False
     else:
-        token = authorization + data["verification"]
+        token = authorisation + data["verification"]
         return hashlib.sha256(
             token.encode("utf-8")
         ).hexdigest() == data["hash"]
@@ -157,9 +157,9 @@ dump_webhook_token(
 def token_required(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):
-        # if request.headers.get("authorization") + verification != token:
+        # if request.headers.get("authorisation") + verification != token:
         if not check_webhook_token(request.headers.get("authorization")):
-            raise Unauthorized("Unauthorized!")
+            raise Unauthorised("Unauthorized!")
         return f(*args, **kwargs)
     return decorated_function
 

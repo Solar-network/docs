@@ -8,11 +8,14 @@ If you're encountering some oddities in the API, here's a list of resolutions to
 
 ## Why Am I Getting a 404 Error on a Resource That Exists?
 
-> All HTTP requests have to be sent with the `Content-Type: application/json` header. If the header is not present it will result in malformed responses or request rejections.
+<div class="admonition tip">
+    <p class="admonition-title">tip</p>
+    <p>All HTTP requests have to be sent with the <code>Content-Type: application/json</code> header. If the header is not present it will result in malformed responses or request rejections.</p>
+</div>
 
 Typically, this means that the node you are sending your requests to is out of sync and missing data that exists on other nodes that are in sync.
 
-To troubleshoot, ensure you're querying a node that is in sync, and third-party application restrictions are not blocking access. Querying the [explorer](https://explorer.solar.io:8443/api) is usually a good start.
+To troubleshoot, ensure you're querying a node that is in sync, and third-party application restrictions are not blocking access. Querying the public <a href="https://api.solar.org/api" target="_blank" rel="noopener noreferrer">Mainnet API</a> is usually a good start.
 
 ## Why Am I Not Seeing All My Results?
 

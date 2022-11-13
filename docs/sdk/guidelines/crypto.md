@@ -4,9 +4,10 @@ title: Crypto
 
 # Crypto Libraries
 
-<x-alert type="info">
-**The following is a guide for implementing a new SXP Cryptography SDK. It covers the required functionalities as well as guidelines for how cryptography should typically look and behave.**
-</x-alert>
+<div class="admonition info">
+    <p class="admonition-title">info</p>
+    <p>The following is a guide for implementing a new SXP Cryptography SDK. It covers the required functionalities as well as guidelines for how cryptography should typically look and behave.</p>
+</div>
 
 These guidelines are to be strictly followed if you are implementing or modifying a cryptography package for the Solar Network.
 
@@ -88,15 +89,15 @@ Following these guidelines is required to provide a streamlined experience acros
 ## Terminology & Phrasing
 
 * If you need to use the `SXP` name, keep these 2 use-cases in mind. The first one is `SXP` which is used in financial contexts like `10 SXP`. The second is `SXP` which used for everything else that is not talking about `SXP`, the financial unit.
-* If you work with functions that require a `secret` or `passphrase` name the variables `passphrase` and `secondPassphrase`.
-* If you work with `serialization` use the American English `serialization` variant with `z` to name methods and variables.
-* If you work with `deserialization` use the American English `deserialization` variant with `z` to name methods and variables.
+* If you work with functions that require a `secret`, `passphrase`, or `mnemonic` name the variables `passphrase` and `secondPassphrase`.
+* If you work with `serialisation`, be sure to use the `serialisation` variant with `s` to name methods and variables.
+* If you work with `deserialisation`, be sure to use the `deserialisation` variant with `s` to name methods and variables.
 
 ## File & Directory Structure
 
 The structure outlined here should be followed as closely as possible. If you work with an **Object Oriented Programming Language** you should be able to implement this structure as is, small adjustments might be required for languages like Go as nested packages can get hacky.
 
-You can check [https://github.com/solar-network/php-crypto](https://github.com/solar-network/php-crypto) for an example of how this structure looks like when implemented and how it is reflected in the structure of tests.
+You can check [https://github.com/Solar-network/core/tree/main/packages/crypto](https://github.com/Solar-network/core/tree/main/packages/crypto) for an example of how this structure looks like when implemented and how it is reflected in the structure of tests.
 
 ```text
 [src | lib | crypto]
@@ -163,6 +164,6 @@ There are already a few implementations of cryptography packages available, so t
 
 ### Object Oriented Programming
 
-* [https://github.com/solar-network/php-crypto](https://github.com/solar-network/php-crypto)
+* [https://github.com/Solar-network/core/tree/main/packages/crypto](https://github.com/Solar-network/core/tree/main/packages/crypto)
 * [https://github.com/solar-network/python-crypto](https://github.com/solar-network/python-crypto)
 

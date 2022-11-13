@@ -1,17 +1,25 @@
 ---
-title: Introduction
+title: Welcome to Solar
 ---
 
-# Introduction
+# Welcome to Solar
 
-This section is tailored for institutional/production usage of Solar Core. Most exchanges and third-party services are familiar with `Bitcoind-RPC` when listing or adding a new cryptocurrency. Since SXP is a custom blockchain, some companies have had difficulty navigating through our GitHub and integrating Solar into their platform.
+<div class="admonition info">
+    <p class="admonition-title">This section is tailored for institutional/production usage of Solar Core</p>
+</div>
 
-The two most popular means of accessing the Solar blockchain are via the `Public API` and the `JSON-RPC`. Though the [JSON-RPC](/exchanges/json-rpc/getting-started/) is the recommended approach, we include instructions here on how to accomplish the most common tasks on both API surfaces.
+The Solar Blockchain provides a `Public API` for interacting with the chain and its native `SXP` token.
 
-We have added "quick guides" to walk you through the process of interacting with the Solar blockchain in each API.
+The proceeding pages describe the process of interacting with the Solar Blockchain and offers examples for accomplishing the most common chain-related tasks.
 
-Use the sidebar to navigate this section.
-
-A dedicated Promised NodeJS Module is available for exchanges that wish to you use a secure Public API for the exchange operations.
-[Click here for more information.](https://github.com/Solar-network/solar-js-sdk/)
-The endpoint for mainnet is https://sxp.mainnet.sh, please use https://sxp.testnet.sh" for the development network.
+<div class="admonition tip">
+    <p class="admonition-title">Try the Public APIs now!</p>
+    <ul>
+        <li>
+            <b>Mainnet</b> - <a href="https://api.solar.org" target="_blank" rel="noopener noreferrer">api.solar.org</a>
+        </li>
+        <li>
+            <b>Testnet</b> - <a href="https://tapi.solar.org" target="_blank" rel="noopener noreferrer">tapi.solar.org</a>
+        </li>
+    </ul>
+</div>

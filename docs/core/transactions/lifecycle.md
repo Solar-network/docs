@@ -1,3 +1,6 @@
+---
+title: Understanding the Lifecycle
+---
 
 # Understanding the Lifecycle
 
