@@ -4,11 +4,11 @@ title: Getting Started
 
 ## NodeJS installation
 
-NodeJS can be downloaded [here](https://nodejs.org/en/download/).
+NodeJS can be downloaded here: <a href="https://nodejs.org/en/download/" target="_blank" rel="noopener noreferrer">nodejs.org/en/download</a>
 
-Alternatively you can install NodeJS through your operating system [packager manager](https://nodejs.org/en/download/package-manager/).
+Alternatively you can install NodeJS through your operating system <a href="https://nodejs.org/en/download/package-manager/" target="_blank" rel="noopener noreferrer">packager manager</a>.
 
-An excellent way to manage your NodeJS installation and be able to work with multiple version is to go through [NVM](https://github.com/nvm-sh/nvm).
+An excellent way to manage your NodeJS installation and be able to work with multiple version is to go through <a href="https://github.com/nvm-sh/nvm" target="_blank" rel="noopener noreferrer">NVM</a>.
 
 ## Yarn
 
@@ -16,7 +16,7 @@ An excellent way to manage your NodeJS installation and be able to work with mul
 
 ### Install Yarn
 
-Instructions on how to install Yarn can be found [here](https://yarnpkg.com/en/docs/install)
+Instructions on how to install Yarn can be found here: <a href="https://yarnpkg.com/en/docs/install" target="_blank" rel="noopener noreferrer">yarnpkg.com/en/docs/install</a>
 
 ### Install package with Yarn
 
@@ -26,12 +26,12 @@ yarn add @solar-network/client
 
 ## Development
 
-1. Fork the [package](https://github.com/solar-network/javascript-client).
+1. Fork the package: <a href="https://github.com/Solar-network/client/fork" target="_blank" rel="noopener noreferrer">github.com/Solar-network/client/fork</a>
 
 2. Clone your forked repository.
 
 ```bash
-git clone https://github.com/<githubusername>/javascript-client
+git clone https://github.com/<githubusername>/client
 ```
 
 <!-- markdownlint-disable MD029 -->

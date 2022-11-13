@@ -213,6 +213,44 @@ Create a new RequestError class instance.
 | :--- | :--- | :--- | :--- |
 | string | error | Yes | Error |
 
+## Resources\Blockchain
+
+### `blockchain()`
+
+```typescript
+public async blockchain<T = any>(query?: Record<string, any>)
+```
+
+Get all blockchains.
+
+#### Parameters
+
+| Type | Name | Required | Description |
+| :--- | :--- | :--- | :--- |
+| Record | query | No | Query parameters |
+
+#### Return Value
+
+`Promise<IResponse<T>>`
+
+### `search()`
+
+```typescript
+public async search<T = any>(payload?: Record<string, any>)
+```
+
+Filter all blockchains by the given parameters.
+
+#### Parameters
+
+| Type | Name | Required | Description |
+| :--- | :--- | :--- | :--- |
+| Record | payload | No | Search parameters |
+
+#### Return Value
+
+`Promise<IResponse<T>>`
+
 ## Resources\Blocks
 
 ### `all()`
@@ -222,6 +260,42 @@ public async all<T = any>(query?: Record<string, any>)
 ```
 
 Get all blocks.
+
+#### Parameters
+
+| Type | Name | Required | Description |
+| :--- | :--- | :--- | :--- |
+| Record | query | No | Query parameters |
+
+#### Return Value
+
+`Promise<IResponse<T>>`
+
+### `first()`
+
+```typescript
+public async first<T = any>(query?: Record<string, any>)
+```
+
+Get the first block.
+
+#### Parameters
+
+| Type | Name | Required | Description |
+| :--- | :--- | :--- | :--- |
+| Record | query | No | Query parameters |
+
+#### Return Value
+
+`Promise<IResponse<T>>`
+
+### `last()`
+
+```typescript
+public async last<T = any>(query?: Record<string, any>)
+```
+
+Get the last (most recent) block.
 
 #### Parameters
 
@@ -270,144 +344,13 @@ Get all transactions by the given block.
 
 `Promise<IResponse<T>>`
 
-### `search()`
+### `missed()`
 
 ```typescript
-public async search<T = any>(payload?: Record<string, any>)
+public async missed<T = any>(payload?: Record<string, any>)
 ```
 
-Filter all blocks by the given parameters.
-
-#### Parameters
-
-| Type | Name | Required | Description |
-| :--- | :--- | :--- | :--- |
-| Record | payload | No | Search parameters |
-
-#### Return Value
-
-`Promise<IResponse<T>>`
-
-## Resources\Bridgechains
-
-### `all()`
-
-```typescript
-public async all<T = any>(query?: Record<string, any>)
-```
-
-Get all bridgechains.
-
-#### Parameters
-
-| Type | Name | Required | Description |
-| :--- | :--- | :--- | :--- |
-| Record | query | No | Query parameters |
-
-#### Return Value
-
-`Promise<IResponse<T>>`
-
-### `get()`
-
-```typescript
-public async get<T = any>(id: string)
-```
-
-Get a bridgechain by the given id.
-
-#### Parameters
-
-| Type | Name | Required | Description |
-| :--- | :--- | :--- | :--- |
-| string | id | Yes | Bridgechain identifier |
-
-#### Return Value
-
-`Promise<IResponse<T>>`
-
-### `search()`
-
-```typescript
-public async search<T = any>(payload?: Record<string, any>)
-```
-
-Search for a bridgechain with the given payload.
-
-#### Parameters
-
-| Type | Name | Required | Description |
-| :--- | :--- | :--- | :--- |
-| Record | payload | No | Search parameters |
-
-#### Return Value
-
-`Promise<IResponse<T>>`
-
-## Resources\Businesses
-
-### `all()`
-
-```typescript
-public async all<T = any>(query?: Record<string, any>)
-```
-
-Get all businesses.
-
-#### Parameters
-
-| Type | Name | Required | Description |
-| :--- | :--- | :--- | :--- |
-| Record | query | No | Query parameters |
-
-#### Return Value
-
-`Promise<IResponse<T>>`
-
-### `get()`
-
-```typescript
-public async get<T = any>(id: string)
-```
-
-Get a business by the given id.
-
-#### Parameters
-
-| Type | Name | Required | Description |
-| :--- | :--- | :--- | :--- |
-| string | id | Yes | Bridgechain identifier |
-
-#### Return Value
-
-`Promise<IResponse<T>>`
-
-### `bridgechains()`
-
-```typescript
-public async bridgechains<T = any>(id: string, query?: Record<string, any>)
-```
-
-Get all bridgechains for a business.
-
-#### Parameters
-
-| Type | Name | Required | Description |
-| :--- | :--- | :--- | :--- |
-| string | id | Yes | Business identifier |
-| Record | payload | No | Search parameters |
-
-#### Return Value
-
-`Promise<IResponse<T>>`
-
-### `search()`
-
-```typescript
-public async search<T = any>(payload?: Record<string, any>)
-```
-
-Search for a business with the given payload.
+Shows all the missed blocks by all delegates in the last 30 days
 
 #### Parameters
 
@@ -452,24 +395,6 @@ Get a lock by the given id.
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
 | string | id | Yes | Bridgechain identifier |
-
-#### Return Value
-
-`Promise<IResponse<T>>`
-
-### `search()`
-
-```typescript
-public async search<T = any>(payload?: Record<string, any>)
-```
-
-Search for locks with given payload.
-
-#### Parameters
-
-| Type | Name | Required | Description |
-| :--- | :--- | :--- | :--- |
-| Record | payload | No | Search parameters |
 
 #### Return Value
 
@@ -538,6 +463,25 @@ public async blocks<T = any>(id: string, query?: Record<string, any>)
 ```
 
 Get all blocks for the given delegate.
+
+#### Parameters
+
+| Type | Name | Required | Description |
+| :--- | :--- | :--- | :--- |
+| string | id | Yes | Delegate identifier |
+| Record | query | No | Query parameters |
+
+#### Return Value
+
+`Promise<IResponse<T>>`
+
+### `missed()`
+
+```typescript
+public async missed<T = any>(id: string, query?: Record<string, any>)
+```
+
+List Recent Missed Blocks of a Delegate
 
 #### Parameters
 
@@ -787,13 +731,13 @@ Get an unconfirmed transaction by the given id.
 
 `Promise<IResponse<T>>`
 
-### `search()`
+### `schemas()`
 
 ```typescript
 public async search<T = any>(payload: Record<string, any>)
 ```
 
-Filter all transactions by the given parameters.
+Get a list of transaction schemas.
 
 #### Parameters
 
@@ -1012,24 +956,6 @@ Get all wallets sorted by balance in descending order.
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
 | Record | query | Yes | Query parameters |
-
-#### Return Value
-
-`Promise<IResponse<T>>`
-
-### `search()`
-
-```typescript
-public async search<T = any>(payload: Record<string, any>)
-```
-
-Filter all wallets by the given parameters.
-
-#### Parameters
-
-| Type | Name | Required | Description |
-| :--- | :--- | :--- | :--- |
-| Record | payload | Yes | Search parameters |
 
 #### Return Value
 

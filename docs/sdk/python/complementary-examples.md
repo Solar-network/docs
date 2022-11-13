@@ -34,7 +34,7 @@ from solar_crypto.transactions.builder.transfer import Transfer
 set_network(Testnet)
 
 # Configure our API client
-client = SolarClient('https://sxp.testnet.sh/api')
+client = SolarClient('https://tapi.solar.org/api')
 
 # Step 1: Retrieve the incremental nonce of the sender wallet
 senderWallet = client.wallets.get('SENDER_WALLET_ADDRESS')
@@ -80,7 +80,7 @@ from solar_crypto.transactions.builder.legacy_transfer import LegacyTransfer
 set_network(Testnet)
 
 # Configure our API client
-client = SolarClient('https://sxp.testnet.sh/api')
+client = SolarClient('https://tapi.solar.org/api')
 
 # Step 1: Retrieve the incremental nonce of the sender wallet
 senderWallet = client.wallets.get('SENDER_WALLET_ADDRESS')
@@ -120,7 +120,7 @@ from solar_crypto.transactions.builder.second_signature_registration import Seco
 set_network(Testnet)
 
 # Configure our API client
-client = SolarClient('https://sxp.testnet.sh/api')
+client = SolarClient('https://tapi.solar.org/api')
 
 # Step 1: Retrieve the incremental nonce of the sender wallet
 senderWallet = client.wallets.get('SENDER_WALLET_ADDRESS')
@@ -157,7 +157,7 @@ from solar_crypto.transactions.builder.delegate_registration import DelegateRegi
 set_network(Testnet)
 
 # Configure our API client
-client = SolarClient('https://sxp.testnet.sh/api')
+client = SolarClient('https://tapi.solar.org/api')
 
 # Step 1: Retrieve the incremental nonce of the sender wallet
 senderWallet = client.wallets.get('SENDER_WALLET_ADDRESS')
@@ -194,7 +194,7 @@ from solar_crypto.transactions.builder.delegate_resignation import DelegateResig
 set_network(Testnet)
 
 # Configure our API client
-client = SolarClient('https://sxp.testnet.sh/api')
+client = SolarClient('https://tapi.solar.org/api')
 
 # Step 1: Retrieve the incremental nonce of the sender wallet
 senderWallet = client.wallets.get('SENDER_WALLET_ADDRESS')
@@ -234,7 +234,7 @@ from solar_crypto.transactions.builder.vote import Vote
 set_network(Testnet)
 
 # Configure our API client
-client = SolarClient('https://sxp.testnet.sh/api')
+client = SolarClient('https://tapi.solar.org/api')
 
 # Step 1: Retrieve the incremental nonce of the sender wallet
 senderWallet = client.wallets.get('SENDER_WALLET_ADDRESS')
@@ -273,7 +273,7 @@ from solar_crypto.transactions.builder.legacy_vote import LegacyVote
 set_network(Testnet)
 
 # Configure our API client
-client = SolarClient('https://sxp.testnet.sh/api')
+client = SolarClient('https://tapi.solar.org/api')
 
 # Step 1: Retrieve the incremental nonce of the sender wallet
 senderWallet = client.wallets.get('SENDER_WALLET_ADDRESS')
@@ -312,7 +312,7 @@ from solar_crypto.transactions.builder.multi_signature_registration import Multi
 set_network(Testnet)
 
 # Configure our API client
-client = SolarClient('https://sxp.testnet.sh/api')
+client = SolarClient('https://tapi.solar.org/api')
 
 # Step 1: Retrieve the incremental nonce of the sender wallet
 senderWallet = client.wallets.get('SENDER_WALLET_ADDRESS')
@@ -358,7 +358,7 @@ from solar_crypto.transactions.builder.ipfs import IPFS
 set_network(Testnet)
 
 # Configure our API client
-client = SolarClient('https://sxp.testnet.sh/api')
+client = SolarClient('https://tapi.solar.org/api')
 
 # Step 1: Retrieve the incremental nonce of the sender wallet
 senderWallet = client.wallets.get('SENDER_WALLET_ADDRESS')
@@ -397,7 +397,7 @@ from hashlib import sha256
 set_network(Testnet)
 
 # Configure our API client
-client = SolarClient('https://sxp.testnet.sh/api')
+client = SolarClient('https://tapi.solar.org/api')
 
 # Step 1: Retrieve the incremental nonce of the sender wallet
 senderWallet = client.wallets.get('SENDER_WALLET_ADDRESS')
@@ -449,7 +449,7 @@ import hashlib
 set_network(Testnet)
 
 # Configure our API client
-client = SolarClient('https://sxp.testnet.sh/api')
+client = SolarClient('https://tapi.solar.org/api')
 
 # Step 1: Retrieve the incremental nonce of the sender wallet
 senderWallet = client.wallets.get('SENDER_WALLET_ADDRESS')
@@ -494,7 +494,7 @@ from solar_crypto.transactions.builder.htlc_refund import HtlcRefund
 set_network(Testnet)
 
 # Configure our API client
-client = SolarClient('https://sxp.testnet.sh/api')
+client = SolarClient('https://tapi.solar.org/api')
 
 # Step 1: Retrieve the incremental nonce of the sender wallet
 senderWallet = client.wallets.get('SENDER_WALLET_ADDRESS')

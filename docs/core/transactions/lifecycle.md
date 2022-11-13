@@ -1,5 +1,5 @@
 ---
-title: Transactions - Understanding the Lifecycle
+title: Understanding the Lifecycle
 ---
 
 # Understanding the Transaction Lifecycle
@@ -16,7 +16,9 @@ In the next sections we will look into the transaction lifecycle from creation t
 
 ### 1. Create and Sign Transaction Locally
 
-Transactions are generated and signed locally with one of many available [SDK libraries](/docs/sdk/documentation). Locally generated and signed transactions are sent as a [POST request](/docs/api/public-rest-api/endpoints/transactions) with transaction data to the Core Server node.
+Transactions are generated and signed locally with one of many available [SDK libraries](/docs/sdk/documentation). Locally generated and signed transactions are sent as a <a href="https://api.solar.org/#/Transactions/post_transactions" target="_blank" rel="noopener noreferrer">POST request</a> with transaction data to the Core Server node.
+
+
 
 > 🛑 **DANGER** - Core Server (node) will accept a valid transaction, signed with a valid signature from a private key. Make sure you invoke the SDK builder's **sign** method on your transaction object using the sender's private key.
 
@@ -28,7 +30,7 @@ Transactions are received at the POST transactions endpoint of the Public API. F
 
 **Transaction flow in short:**
 
-1. Transaction Payload is received at the Core Server ([Public API Endpoint](/docs/api/public-rest-api/endpoints/intro))
+1. Transaction Payload is received at the Core Server ([Public API Endpoint](/docs/api/public-rest-api/endpoints))
 2. API Handler validates schema and sends transaction to the [TransactionProcessor](https://github.com/Solar-network/core/blob/main/packages/core-transaction-pool/src/processor.ts)
 3. TransactionProcessor performs additional transaction payload checks in relation to the blockchain protocol. If all check are valid, transaction is added to the Transaction Pool
 
@@ -38,7 +40,7 @@ Notably, no blockchain-level validation occurs at this earliest stage in the tra
 
 Assuming validation is successful, the posted transactions are processed by the request handler, which passes the data to the TransactionProcessor for validation.
 
-All transactions submitted to the **TransactionProcessor** [are returned in one of four arrays](/docs/api/public-rest-api/endpoints/transactions):
+All transactions submitted to the **TransactionProcessor** <a href="https://api.solar.org/#/Transactions/post_transactions" target="_blank" rel="noopener noreferrer">are returned in one of four arrays</a>:
 
 * accept
 * broadcast

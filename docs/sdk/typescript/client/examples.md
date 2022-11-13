@@ -14,7 +14,7 @@ const client = new Connection(`${server}/api`);
 
 ## Blocks
 
-This service API grants access to the [blocks resource](/docs/api/public-rest-api/endpoints/blocks). A block is a signed set of transactions created by a delegate and permanently committed to the SXP blockchain.
+This service API grants access to the <a href="https://api.solar.org/#/Blocks" target="_blank" rel="noopener noreferrer">blocks resource</a>. A block is a signed set of transactions created by a delegate and permanently committed to the SXP blockchain.
 
 > It is not possible to `POST` a block through the public API. Relay Nodes accept only blocks posted by a delegate at the correct time through the internal API.
 
@@ -116,7 +116,7 @@ const response = client.api("businesses").search({"businessId": "validId"});
 
 ## Delegates
 
-The client SDK can be used to query the [delegate resource](/docs/api/public-rest-api/endpoints/delegates).
+The client SDK can be used to query the <a href="https://api.solar.org/#/Delegates" target="_blank" rel="noopener noreferrer">delegate resource</a>.
 
 A delegate is a regular wallet that has broadcast a registration transaction, acquired a sufficient number of votes, and has a Relay Node configured to forge new blocks through a `forger` module. At any time only 51 delegates are active. They are cost-efficient miners running the SXP network.
 
@@ -192,7 +192,7 @@ const response = client.api("locks").unlocked({ids: [ "validId" ]});
 
 ## Node
 
-The SXP network consists of different anonymous nodes (servers), maintaining the public ledger, validating transactions and blocks and providing APIs. The [node resource](/docs/api/public-rest-api/endpoints/node) allows for querying the health and configurations of the node used by the instantiated client.
+The SXP network consists of different anonymous nodes (servers), maintaining the public ledger, validating transactions and blocks and providing APIs. The <a href="https://api.solar.org/#/Node" target="_blank" rel="noopener noreferrer">node resource</a> allows for querying the health and configurations of the node used by the instantiated client.
 
 ### Retrieve the Configuration
 
@@ -228,7 +228,7 @@ const response = client.api("node").fees();
 
 ## Peers
 
-Each node is connected to a set of peers, which are Relay or Delegate Nodes as well. The [peers resource](/docs/api/public-rest-api/endpoints/peers) provides access to all peers connected to our node.
+Each node is connected to a set of peers, which are Relay or Delegate Nodes as well. The <a href="https://tapi.solar.org/#/Node/get_peers" target="_blank" rel="noopener noreferrer">peers resource</a> provides access to all peers connected to our node.
 
 > Peers have made their Public API available for use; however for mission-critical queries and transaction posting you should use a node which is under your control.
 
@@ -262,7 +262,7 @@ const response = client.api("rounds").delegates(roundNumber);
 
 ## Transactions
 
-The heart of any blockchain is formed by its transactions; state-altering payloads signed by a wallet. Most likely you will be querying for transactions most often, using the [transaction resource](/docs/api/public-rest-api/endpoints/transactions).
+The heart of any blockchain is formed by its transactions; state-altering payloads signed by a wallet. Most likely you will be querying for transactions most often, using the <a href="https://tapi.solar.org/#/Transactions" target="_blank" rel="noopener noreferrer">transaction resource</a>.
 
 > A transaction is the only object which may be posted by a non-delegate. It requires a signature from a wallet containing a sufficient amount of SXP.
 
@@ -324,7 +324,7 @@ const response = client.api("transactions").types();
 
 ## Votes
 
-A [vote](/docs/api/public-rest-api/endpoints/votes) is a transaction sub-type, where the `asset` field contains a `votes` object and the `transaction.type` is `3`.
+A <a href="https://tapi.solar.org/#/Votes" target="_blank" rel="noopener noreferrer">vote</a> is a transaction sub-type, where the `asset` field contains a `votes` object and the `transaction.type` is `3`.
 
 ### List All Votes
 
@@ -344,7 +344,7 @@ const response = client.api("votes").get("validId");
 
 ## Wallets
 
-The [wallet resource](/docs/api/public-rest-api/endpoints/wallets#list-all-wallets) provides access to:
+The <a href="https://tapi.solar.org/#/Wallets/get_wallets" target="_blank" rel="noopener noreferrer">wallet resource</a> provides access to:
 
 * Wallets.
 * Incoming and outgoing transactions per wallet.

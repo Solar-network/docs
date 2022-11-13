@@ -14,11 +14,11 @@ To get started with the SXP Desktop Wallet, follow the documentation below for g
 <x-link-collection
     :links="[
         ['path' => '/docs/desktop-wallet/user-guides/installation', 'name' => 'Installation'],
-        ['path' => '/docs/desktop-wallet/user-guides/wallet-interface', 'name' => 'Wallet Navigation'],
-        ['path' => '/docs/desktop-wallet/user-guides/how-to-create-or-import-wallets', 'name' => 'Create or Import Wallets'],
-        ['path' => '/docs/desktop-wallet/user-guides/how-to-add-a-contact', 'name' => 'Add a Contact'],
-        ['path' => '/docs/desktop-wallet/introduction-to-solar-rewards', 'name' => 'SXP Rewards (Staking)'],
-        ['path' => '/docs/desktop-wallet/cryptoasset-integrations', 'name' => 'Cryptoasset Integrations'],
+        ['path' => '/docs/desktop-wallet/user-guides/interface', 'name' => 'Wallet Navigation'],
+        ['path' => '/docs/desktop-wallet/user-guides/create-import', 'name' => 'Create or Import Wallets'],
+        ['path' => '/docs/desktop-wallet/user-guides/add-contact', 'name' => 'Add a Contact'],
+        ['path' => '/docs/desktop-wallet/rewards', 'name' => 'SXP Rewards (Staking)'],
+        ['path' => '/docs/desktop-wallet/integrations', 'name' => 'Cryptoasset Integrations'],
     ]"
 />
 
@@ -27,12 +27,12 @@ To get started with the SXP Desktop Wallet, follow the documentation below for g
 The SXP Desktop Wallet enables you to send a wide variety of transactions on the SXP Blockchain and other Solar Core based blockchains. Follow the guides below for information on each transaction.
 <x-link-collection
     :links="[
-        ['path' => '/docs/desktop-wallet/user-guides/how-to-send', 'name' => 'Send SXP Transfer'],
-        ['path' => '/docs/desktop-wallet/user-guides/how-to-vote-unvote', 'name' => 'Vote or Unvote a Delegate'],
-        ['path' => '/docs/desktop-wallet/user-guides/how-to-register-or-resign-delegate', 'name' => 'Register or Resign a Delegate'],
-        ['path' => '/docs/desktop-wallet/user-guides/how-to-sign-and-verify', 'name' => 'Sign & Verify Messages'],
-        ['path' => '/docs/desktop-wallet/user-guides/how-to-register-second-passphrase', 'name' => 'Register a Second Passphrase'],
-        ['path' => '/docs/desktop-wallet/user-guides/how-to-store-ipfs-hash', 'name' => 'Store an IPFS Hash'],
+        ['path' => '/docs/desktop-wallet/user-guides/send', 'name' => 'Send SXP Transfer'],
+        ['path' => '/docs/desktop-wallet/user-guides/vote-unvote', 'name' => 'Vote or Unvote a Delegate'],
+        ['path' => '/docs/desktop-wallet/user-guides/register-resign-delegate', 'name' => 'Register or Resign a Delegate'],
+        ['path' => '/docs/desktop-wallet/user-guides/sign-verify', 'name' => 'Sign & Verify Messages'],
+        ['path' => '/docs/desktop-wallet/user-guides/register-second-passphrase', 'name' => 'Register a Second Passphrase'],
+        ['path' => '/docs/desktop-wallet/user-guides/ipfs-hash', 'name' => 'Store an IPFS Hash'],
         ['path' => '/docs/desktop-wallet/user-guides/transaction-fees', 'name' => 'Transactions Fees'],
     ]"
 />
@@ -42,9 +42,9 @@ The SXP Desktop Wallet enables you to send a wide variety of transactions on the
 The SXP Desktop Wallet offers a wide range of customization which empowers developers to create Plugins to enhance the experience within the Wallet from Games, Utilities and Theme's. Follow the guides below to get started with development within the SXP Desktop Wallet.
 <x-link-collection
     :links="[
-        ['path' => '/docs/desktop-wallet/developer-guides/how-to-build-from-source', 'name' => 'Build the Wallet from Source'],
-        ['path' => '/docs/desktop-wallet/developer-guides/developing-your-first-plugin', 'name' => 'Develop a Plugin'],
-        ['path' => '/docs/desktop-wallet/developer-guides/developing-a-wallet-theme', 'name' => 'Develop a Theme Plugin'],
+        ['path' => '/docs/desktop-wallet/developer-guides/build-source', 'name' => 'Build the Wallet from Source'],
+        ['path' => '/docs/desktop-wallet/developer-guides/plugin', 'name' => 'Develop a Plugin'],
+        ['path' => '/docs/desktop-wallet/developer-guides/wallet-theme', 'name' => 'Develop a Theme Plugin'],
         ['path' => '/docs/desktop-wallet/user-guides/security', 'name' => 'Security'],
     ]"
 />

@@ -6,7 +6,7 @@ title: Complementary Examples
 
 ## Prerequisites
 
-Before we get started we need to make sure that all of the required dependencies are installed. These dependencies are the [Crypto SDK](/docs/sdk/typescript/crypto/api-documentation) and [Client SDK](/docs/sdk/typescript/client/api-documentation). You can head on over to their documentations to read more about them but for now we are only concerned with installing them to get up and running.
+Before we get started we need to make sure that all of the required dependencies are installed. These dependencies are the [Crypto SDK](/sdk/typescript/crypto/api-documentation) and [Client SDK](/sdk/typescript/client/api-documentation). You can head on over to their documentations to read more about them but for now we are only concerned with installing them to get up and running.
 
 Open your project and execute the following commands to install both SDKs. Make sure that those complete without any errors. If you encounter any errors, please [open an issue](https://github.com/solar-network/core/issues/new) with as much information as you can provide so that our developers can have a look and get to the bottom of the issue.
 
@@ -39,9 +39,9 @@ The process of getting your transaction verified and persisted on the SXP Blockc
 
 1. Install the Client SDK and configure it to use a node of your choosing to broadcast your transactions to. Always make sure that you have a fallback node that you can use for broadcasting in case your primary node goes offline or acts strange otherwise.
 2. Install the Crypto SDK and configure it to match the configuration of the network. This is the most important part as misconfiguration can lead to a myriad of issues as Core will reject your transactions.
-3. Retrieve the nonce of the sender wallet and increase it by 1. You can read about what a sequential nonce is and why it is important [here](/docs/core/transactions/nonce).
-4. Create an instance of the builder for the type of transaction you want to create. This is the step where we actually create a transaction and sign it so that the SXP Blockchain can later on verify it and decide if it will be accepted, forged and finally. You can read the relevant [API documentation](/docs/sdk/typescript/crypto/api-documentation) if you want more detailed information about the design and usage.
-5. Turn the newly created transaction into JSON and broadcast it to the network through the Client SDK. You can read the relevant [API documentation](/docs/sdk/typescript/client/api-documentation) if you want more detailed information about the design and usage.
+3. Retrieve the nonce of the sender wallet and increase it by 1. You can read about what a sequential nonce is and why it is important [here](/core/transactions/nonce).
+4. Create an instance of the builder for the type of transaction you want to create. This is the step where we actually create a transaction and sign it so that the SXP Blockchain can later on verify it and decide if it will be accepted, forged and finally. You can read the relevant [API documentation](/sdk/typescript/crypto/api-documentation) if you want more detailed information about the design and usage.
+5. Turn the newly created transaction into JSON and broadcast it to the network through the Client SDK. You can read the relevant [API documentation](/sdk/typescript/client/api-documentation) if you want more detailed information about the design and usage.
 6. Process the API response and verify that your transaction was accepted. If the network rejects your transaction you'll receive the reason as to why that is the case in the response which might mean that you need to create a new transaction and broadcast it.
 
 ## Troubleshooting
@@ -54,28 +54,28 @@ The solution to this is to make sure that your Crypto SDK instance is properly c
 
 ```typescript
 Managers.configManager.setFromPreset("mainnet");
-Managers.configManager.setHeight(11273000);
+Managers.configManager.setHeight(2477000);
 ```
 
 ### Testnet
 
 ```typescript
 Managers.configManager.setFromPreset("testnet");
-Managers.configManager.setHeight(4006000);
+Managers.configManager.setHeight(972604);
 ```
 
-## Creating and Broadcasting a Transfer
+## Creating and Broadcasting a Transfer Transaction
 
 ```typescript
 const { Transactions, Managers, Utils } = require("@solar-network/crypto");
 const { Connection } = require("@solar-network/client");
 
 // Configure our API client
-const client = new Connection("https://sxp.testnet.sh/api");
+const client = new Connection("https://tapi.solar.org/api");
 
-// Ensure AIP11 is enabled for the Crypto SDK
+// Set the chain and height
 Managers.configManager.setFromPreset("testnet");
-Managers.configManager.setHeight(4006000);
+Managers.configManager.setHeight(972604);
 
 (async () => {
     // Step 1: Retrieve the incremental nonce of the sender wallet
@@ -84,11 +84,11 @@ Managers.configManager.setHeight(4006000);
 
     // Step 2: Create the transaction
     const transaction = Transactions.BuilderFactory.transfer()
-        .version(2)
         .nonce(senderNonce.toFixed())
-        .recipientId("Address of Recipient")
-        .amount(1 * 1e8)
-        .vendorField("Hello World")
+        .memo("This is an example memo")
+        .addTransfer("Address of Recipient Wallet 1", 1 * 1e8)
+        .addTransfer("Address of Recipient Wallet 2", 1 * 1e8)
+        .addTransfer("Address of Recipient Wallet 3", 1 * 1e8)
         .sign("this is a top secret passphrase");
 
     // Step 4: Broadcast the transaction
@@ -99,22 +99,23 @@ Managers.configManager.setHeight(4006000);
 })();
 ```
 
-<x-alert type="info">
-The vendorField is optional and limited to a length of 255 characters. It can be a good idea to add a vendor field to your transactions if you want to be able to easily track them in the future.
-</x-alert>
+<div class="admonition info">
+    <p class="admonition-title">info</p>
+    <p>The memo is optional and limited to a length of 255 characters. It can be a good idea to add a memo to your transactions if you want to be able to easily track or identify them in the future or include a personal message to the transaction's recipient(s).</p>
+</div>
 
-## Creating and Broadcasting a Second Signature
+## Creating and Broadcasting a Second Signature Registration Transaction
 
 ```typescript
 const { Transactions, Managers, Utils } = require("@solar-network/crypto");
 const { Connection } = require("@solar-network/client");
 
 // Configure our API client
-const client = new Connection("https://sxp.testnet.sh/api");
+const client = new Connection("https://tapi.solar.org/api");
 
-// Ensure AIP11 is enabled for the Crypto SDK
+// Set the chain and height
 Managers.configManager.setFromPreset("testnet");
-Managers.configManager.setHeight(4006000);
+Managers.configManager.setHeight(972604);
 
 (async () => {
     // Step 1: Retrieve the incremental nonce of the sender wallet
@@ -136,18 +137,18 @@ Managers.configManager.setHeight(4006000);
 })();
 ```
 
-## Creating and Broadcasting a Delegate Registration
+## Creating and Broadcasting a Delegate Registration Transaction
 
 ```typescript
 const { Transactions, Managers, Utils } = require("@solar-network/crypto");
 const { Connection } = require("@solar-network/client");
 
 // Configure our API client
-const client = new Connection("https://sxp.testnet.sh/api");
+const client = new Connection("https://tapi.solar.org/api");
 
-// Ensure AIP11 is enabled for the Crypto SDK
+// Set the chain and height
 Managers.configManager.setFromPreset("testnet");
-Managers.configManager.setHeight(4006000);
+Managers.configManager.setHeight(972604);
 
 (async () => {
     // Step 1: Retrieve the incremental nonce of the sender wallet
@@ -156,7 +157,6 @@ Managers.configManager.setHeight(4006000);
 
     // Step 2: Create the transaction
     const transaction = Transactions.BuilderFactory.delegateRegistration()
-        .version(2)
         .nonce(senderNonce.toFixed())
         .usernameAsset("johndoe")
         .sign("this is a top secret passphrase");
@@ -169,18 +169,18 @@ Managers.configManager.setHeight(4006000);
 })();
 ```
 
-## Creating and Broadcasting a Vote
+## Creating and Broadcasting a Vote Transaction
 
 ```typescript
 const { Transactions, Managers, Utils } = require("@solar-network/crypto");
 const { Connection } = require("@solar-network/client");
 
 // Configure our API client
-const client = new Connection("https://sxp.testnet.sh/api");
+const client = new Connection("https://tapi.solar.org/api");
 
-// Ensure AIP11 is enabled for the Crypto SDK
+// Set the chain and height
 Managers.configManager.setFromPreset("testnet");
-Managers.configManager.setHeight(4006000);
+Managers.configManager.setHeight(972604);
 
 (async () => {
     // Step 1: Retrieve the incremental nonce of the sender wallet
@@ -189,9 +189,10 @@ Managers.configManager.setHeight(4006000);
 
     // Step 2: Create the transaction
     const transaction = Transactions.BuilderFactory.vote()
-        .version(2)
         .nonce(senderNonce.toFixed())
-        .votesAsset(["+public_key_of_a_delegate_wallet"])
+        .votesAsset({"sl33p": 100})
+        // you can also vote for multiple delegates (up to 53 in total)
+        // .votesAsset({"sl33p": 50, "cactus1549": 50})
         .sign("this is a top secret passphrase");
 
     // Step 4: Broadcast the transaction
@@ -202,22 +203,23 @@ Managers.configManager.setHeight(4006000);
 })();
 ```
 
-<x-alert type="info">
-Note the **plus** prefix for the public key that is passed to the **votesAsset** function. This prefix denotes that this is a transaction to remove a vote from the given delegate.
-</x-alert>
+<div class="admonition info">
+    <p class="admonition-title">info</p>
+    <p>When voting for multiple delegates, the custom allocation amounts represent the vote-weight percentage to be applied.<br /><br />The total percentage must equal 100 to be valid.</p>
+</div>
 
-## Creating and Broadcasting an Unvote
+## Creating and Broadcasting an Unvote Transaction
 
 ```typescript
 const { Transactions, Managers, Utils } = require("@solar-network/crypto");
 const { Connection } = require("@solar-network/client");
 
 // Configure our API client
-const client = new Connection("https://sxp.testnet.sh/api");
+const client = new Connection("https://tapi.solar.org/api");
 
-// Ensure AIP11 is enabled for the Crypto SDK
+// Set the chain and height
 Managers.configManager.setFromPreset("testnet");
-Managers.configManager.setHeight(4006000);
+Managers.configManager.setHeight(972604);
 
 (async () => {
     // Step 1: Retrieve the incremental nonce of the sender wallet
@@ -226,9 +228,8 @@ Managers.configManager.setHeight(4006000);
 
     // Step 2: Create the transaction
     const transaction = Transactions.BuilderFactory.vote()
-        .version(2)
         .nonce(senderNonce.toFixed())
-        .votesAsset(["-public_key_of_a_delegate_wallet"])
+        .votesAsset({})
         .sign("this is a top secret passphrase");
 
     // Step 4: Broadcast the transaction
@@ -239,66 +240,23 @@ Managers.configManager.setHeight(4006000);
 })();
 ```
 
-<x-alert type="info">
-Note the **minus** prefix for the public key that is passed to the **votesAsset** function. This prefix denotes that this is a transaction to add a vote to the given delegate.
-</x-alert>
+<div class="admonition info">
+    <p class="admonition-title">info</p>
+    <p>Note that unvoting is simply the act of sending an empty votes object.</p>
+</div>
 
-## Creating and Broadcasting a Multi Signature
-
-```typescript
-const { Transactions, Managers, Utils } = require("@solar-network/crypto");
-const { Connection } = require("@solar-network/client");
-
-// Configure our API client
-const client = new Connection("https://sxp.testnet.sh/api");
-
-// Ensure AIP11 is enabled for the Crypto SDK
-Managers.configManager.setFromPreset("testnet");
-Managers.configManager.setHeight(4006000);
-
-(async () => {
-    // Step 1: Retrieve the incremental nonce of the sender wallet
-    const senderWallet = await client.api("wallets").get("YOUR_SENDER_WALLET_ADDRESS");
-    const senderNonce = Utils.BigNumber.make(senderWallet.body.data.nonce).plus(1);
-
-    // Step 2: Create the transaction
-    const transaction = Transactions.BuilderFactory.multiSignature()
-        .version(2)
-        .nonce(senderNonce.toFixed())
-        .multiSignatureAsset({
-            publicKeys: [
-                "039180ea4a8a803ee11ecb462bb8f9613fcdb5fe917e292dbcc73409f0e98f8f22",
-                "028d3611c4f32feca3e6713992ae9387e18a0e01954046511878fe078703324dc0",
-                "021d3932ab673230486d0f956d05b9e88791ee298d9af2d6df7d9ed5bb861c92dd",
-            ],
-            min: 2,
-        })
-        .senderPublicKey("039180ea4a8a803ee11ecb462bb8f9613fcdb5fe917e292dbcc73409f0e98f8f22")
-        .multiSign("this is a top secret passphrase 1", 0)
-        .multiSign("this is a top secret passphrase 2", 1)
-        .multiSign("this is a top secret passphrase 3", 2)
-        .sign("this is a top secret passphrase");
-
-    // Step 4: Broadcast the transaction
-    const broadcastResponse = await client.api("transactions").create({ transactions: [transaction.build().toJson()] });
-
-    // Step 5: Log the response
-    console.log(JSON.stringify(broadcastResponse.body.data, null, 4))
-})();
-```
-
-## Creating and Broadcasting a IPFS
+## Creating and Broadcasting an IPFS Transaction
 
 ```typescript
 const { Transactions, Managers, Utils } = require("@solar-network/crypto");
 const { Connection } = require("@solar-network/client");
 
 // Configure our API client
-const client = new Connection("https://sxp.testnet.sh/api");
+const client = new Connection("https://tapi.solar.org/api");
 
-// Ensure AIP11 is enabled for the Crypto SDK
+// Set the chain and height
 Managers.configManager.setFromPreset("testnet");
-Managers.configManager.setHeight(4006000);
+Managers.configManager.setHeight(972604);
 
 (async () => {
     // Step 1: Retrieve the incremental nonce of the sender wallet
@@ -307,7 +265,6 @@ Managers.configManager.setHeight(4006000);
 
     // Step 2: Create the transaction
     const transaction = Transactions.BuilderFactory.ipfs()
-        .version(2)
         .nonce(senderNonce.toFixed())
         .ipfsAsset("QmR45FmbVVrixReBwJkhEKde2qwHYaQzGxu4ZoDeswuF9w")
         .sign("this is a top secret passphrase");
@@ -320,53 +277,29 @@ Managers.configManager.setHeight(4006000);
 })();
 ```
 
-## Creating and Broadcasting a Multi Payment
+## Creating and Broadcasting a Delegate Resignation Transaction
+
+
+Previously, v2-style Delegate Resignation was a permanent action. There was no way for a resigned delegate to reinstate their eligibility to receive votes and produce blocks. This was only useful in cases where a delegate no longer wanted to participate in network consensus.
+
+Solar Core `4.x` adds a new 'Temporary' resignation option where their resigned status may be 'Revoked' after at least two rounds (~106 blocks). This is useful when a delegate may only wish to resign for a short time without negatively impacting the network (e.g., missing blocks) and can be for a variety of reasons, from temporary node maintenance to personal/private matters.
+
+| Resignation Type | Value | Description                                                                                                                                                 |
+| ---------------- | :---: | :---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Temporary        |   0   | Resign only for a short time.<br/>Delegate will be temporarily blocked from receiving votes or forging.<br/>_(the default when no resign type is declared)_ |
+| Permanent        |   1   | Irreversible. Delegate will no longer be allowed to receive votes or forge.                                                                                 |
+| Revoke           |   2   | Reverses a temporary resignation.                                                                                                                           |
 
 ```typescript
 const { Transactions, Managers, Utils } = require("@solar-network/crypto");
 const { Connection } = require("@solar-network/client");
 
 // Configure our API client
-const client = new Connection("https://sxp.testnet.sh/api");
+const client = new Connection("https://tapi.solar.org/api");
 
-// Ensure AIP11 is enabled for the Crypto SDK
+// Set the chain and height
 Managers.configManager.setFromPreset("testnet");
-Managers.configManager.setHeight(4006000);
-
-(async () => {
-    // Step 1: Retrieve the incremental nonce of the sender wallet
-    const senderWallet = await client.api("wallets").get("YOUR_SENDER_WALLET_ADDRESS");
-    const senderNonce = Utils.BigNumber.make(senderWallet.body.data.nonce).plus(1);
-
-    // Step 2: Create the transaction
-    const transaction = Transactions.BuilderFactory.multiPayment()
-        .version(2)
-        .nonce(senderNonce.toFixed())
-        .addPayment("Address of Recipient Wallet 1", 1 * 1e8)
-        .addPayment("Address of Recipient Wallet 2", 1 * 1e8)
-        .addPayment("Address of Recipient Wallet 3", 1 * 1e8)
-        .sign("this is a top secret passphrase");
-
-    // Step 4: Broadcast the transaction
-    const broadcastResponse = await client.api("transactions").create({ transactions: [transaction.build().toJson()] });
-
-    // Step 5: Log the response
-    console.log(JSON.stringify(broadcastResponse.body.data, null, 4))
-})();
-```
-
-## Creating and Broadcasting a Delegate Resignation
-
-```typescript
-const { Transactions, Managers, Utils } = require("@solar-network/crypto");
-const { Connection } = require("@solar-network/client");
-
-// Configure our API client
-const client = new Connection("https://sxp.testnet.sh/api");
-
-// Ensure AIP11 is enabled for the Crypto SDK
-Managers.configManager.setFromPreset("testnet");
-Managers.configManager.setHeight(4006000);
+Managers.configManager.setHeight(972604);
 
 (async () => {
     // Step 1: Retrieve the incremental nonce of the sender wallet
@@ -375,8 +308,8 @@ Managers.configManager.setHeight(4006000);
 
     // Step 2: Create the transaction
     const transaction = Transactions.BuilderFactory.delegateResignation()
-        .version(2)
         .nonce(senderNonce.toFixed())
+        .resignationTypeAsset(0)
         .sign("this is a top secret passphrase");
 
     // Step 4: Broadcast the transaction
@@ -387,22 +320,23 @@ Managers.configManager.setHeight(4006000);
 })();
 ```
 
-<x-alert type="info">
-A delegate resignation has to be sent from the delegate wallet itself to verify its identity.
-</x-alert>
+<div class="admonition info">
+    <p class="admonition-title">info</p>
+    <p>A delegate resignation has to be sent from the delegate wallet itself to verify its identity.</p>
+</div>
 
-## Creating and Broadcasting a HTLC Lock
+## Creating and Broadcasting a HTLC Lock Transaction
 
 ```typescript
 const { Transactions, Managers, Utils } = require("@solar-network/crypto");
 const { Connection } = require("@solar-network/client");
 
 // Configure our API client
-const client = new Connection("https://sxp.testnet.sh/api");
+const client = new Connection("https://tapi.solar.org/api");
 
-// Ensure AIP11 is enabled for the Crypto SDK
+// Set the chain and height
 Managers.configManager.setFromPreset("testnet");
-Managers.configManager.setHeight(4006000);
+Managers.configManager.setHeight(972604);
 
 (async () => {
     // Step 1: Retrieve the incremental nonce of the sender wallet
@@ -411,7 +345,6 @@ Managers.configManager.setHeight(4006000);
 
     // Step 2: Create the transaction
     const transaction = Transactions.BuilderFactory.htlcLock()
-        .version(2)
         .nonce(senderNonce.toFixed())
         .htlcLockAsset({
             secretHash: "0f128d401958b1b30ad0d10406f47f9489321017b4614e6cb993fc63913c5454",
@@ -431,18 +364,18 @@ Managers.configManager.setHeight(4006000);
 })();
 ```
 
-## Creating and Broadcasting a HTLC Claim
+## Creating and Broadcasting a HTLC Claim Transaction
 
 ```typescript
 const { Transactions, Managers, Utils } = require("@solar-network/crypto");
 const { Connection } = require("@solar-network/client");
 
 // Configure our API client
-const client = new Connection("https://sxp.testnet.sh/api");
+const client = new Connection("https://tapi.solar.org/api");
 
-// Ensure AIP11 is enabled for the Crypto SDK
+// Set the chain and height
 Managers.configManager.setFromPreset("testnet");
-Managers.configManager.setHeight(4006000);
+Managers.configManager.setHeight(972604);
 
 (async () => {
     // Step 1: Retrieve the incremental nonce of the sender wallet
@@ -451,9 +384,9 @@ Managers.configManager.setHeight(4006000);
 
     // Step 2: Create the transaction
     const transaction = Transactions.BuilderFactory.htlcClaim()
-        .version(2)
         .nonce(senderNonce.toFixed())
         .htlcClaimAsset({
+            hashType: 0
             lockTransactionId: "943c220691e711c39c79d437ce185748a0018940e1a4144293af9d05627d2eb4",
             unlockSecret: "c27f1ce845d8c29eebc9006be932b604fd06755521b1a8b0be4204c65377151a",
         })
@@ -467,22 +400,18 @@ Managers.configManager.setHeight(4006000);
 })();
 ```
 
-<x-alert type="info">
-The **unlockSecret** has to be a SHA256 hash of the plain text secret that you shared with the person that is allowed to claim the transaction.
-</x-alert>
-
-## Creating and Broadcasting a HTLC Refund
+## Creating and Broadcasting a HTLC Refund Transaction
 
 ```typescript
 const { Transactions, Managers, Utils } = require("@solar-network/crypto");
 const { Connection } = require("@solar-network/client");
 
 // Configure our API client
-const client = new Connection("https://sxp.testnet.sh/api");
+const client = new Connection("https://tapi.solar.org/api");
 
-// Ensure AIP11 is enabled for the Crypto SDK
+// Set the chain and height
 Managers.configManager.setFromPreset("testnet");
-Managers.configManager.setHeight(4006000);
+Managers.configManager.setHeight(972604);
 
 (async () => {
     // Step 1: Retrieve the incremental nonce of the sender wallet
@@ -491,11 +420,42 @@ Managers.configManager.setHeight(4006000);
 
     // Step 2: Create the transaction
     const transaction = Transactions.BuilderFactory.htlcRefund()
-        .version(2)
         .nonce(senderNonce.toFixed())
         .htlcRefundAsset({
             lockTransactionId: "943c220691e711c39c79d437ce185748a0018940e1a4144293af9d05627d2eb4",
         })
+        .sign("this is a top secret passphrase");
+
+    // Step 4: Broadcast the transaction
+    const broadcastResponse = await client.api("transactions").create({ transactions: [transaction.build().toJson()] });
+
+    // Step 5: Log the response
+    console.log(JSON.stringify(broadcastResponse.body.data, null, 4))
+})();
+```
+
+## Creating and Broadcasting a Burn Transaction
+
+```typescript
+const { Transactions, Managers, Utils } = require("@solar-network/crypto");
+const { Connection } = require("@solar-network/client");
+
+// Configure our API client
+const client = new Connection("https://tapi.solar.org/api");
+
+// Set the chain and height
+Managers.configManager.setFromPreset("testnet");
+Managers.configManager.setHeight(972604);
+
+(async () => {
+    // Step 1: Retrieve the incremental nonce of the sender wallet
+    const senderWallet = await client.api("wallets").get("YOUR_SENDER_WALLET_ADDRESS");
+    const senderNonce = Utils.BigNumber.make(senderWallet.body.data.nonce).plus(1);
+
+    // Step 2: Create the transaction
+    const transaction = Transactions.BuilderFactory.burn()
+        .nonce(senderNonce.toFixed())
+        .amount(100 * 1e8)
         .sign("this is a top secret passphrase");
 
     // Step 4: Broadcast the transaction

@@ -1,8 +1,8 @@
 ---
-title: Modify API response
+title: Modify API Response
 ---
 
-# Preface
+# Modify API Response
 
 In some cases users wants to alter existing HTTP API responses, by removing excess fields, changing content or modify result in any other way.
 

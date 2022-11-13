@@ -1,27 +1,24 @@
----
-title: Examples
----
 
 # Examples
 
-## Initialization
+## Initialisation
 
 ```typescript
 const { Identities } = require("@solar-network/crypto");
 
 // Throughout this document, the keys object used is:
-const keys = Identities.Keys.fromPassphrase("this is a top-secret passphrase");
+const keys = Identities.Keys.fromPassphrase("this is a top secret passphrase");
 
 // Throughout this document, the recipientId variable used is:
-const recipientId = Identities.Address.fromPassphrase("this is a top-secret passphrase");
+const recipientId = Identities.Address.fromPassphrase("this is a top secret passphrase");
 
 // Throughout this document, the senderPublicKey variable used is:
-const senderPublicKey = Identities.PublicKey.fromPassphrase("this is a top-secret passphrase");
+const senderPublicKey = Identities.PublicKey.fromPassphrase("this is a top secret passphrase");
 ```
 
 ## Transactions
 
-A transaction is an object specifying the transfer of funds from the sender's wallet to the recipient's. Each transaction must be signed by the sender's private key to prove authenticity and origin. After broadcasting through the [client SDK](/docs/sdk/typescript/client/api-documentation), a transaction is permanently incorporated in the blockchain by a Delegate Node.
+A transaction is an object specifying the transfer of funds from the sender's wallet to the recipient's. Each transaction must be signed by the sender's private key to prove authenticity and origin. After broadcasting through the [client SDK](/sdk/typescript/client/api-documentation), a transaction is permanently incorporated in the blockchain by a Delegate Node.
 
 ### Sign
 
@@ -45,34 +42,33 @@ Transactions.Signer.sign(transaction, keys);
 >>> string
 ```
 
-### Serialize (AIP11)
+### Serialise
 
-> Serialization of a transaction object ensures it is compact and properly formatted to be incorporated in the SXP blockchain. If you are using the crypto SDK in combination with the public API SDK, you should not need to serialize manually.
+> Serialisation of a transaction object ensures it is compact and properly formatted to be incorporated in the SXP blockchain. If you are using the crypto SDK in combination with the public API SDK, you should not need to serialise manually.
 
 ```typescript
 const { Transactions } = require("@solar-network/crypto");
 
-const transaction = Transactions.BuilderFactory
-  .transfer()
-  .amount(1000)
-  .fee(2000)
-  .recipientId(recipientId)
-  .senderPublicKey(senderPublicKey)
-  .sign("sender")
-  .build();
+const transaction = Transactions.BuilderFactory.transfer()
+    .nonce(senderNonce.toFixed())
+    .memo("This is an example memo")
+    .addTransfer("Address of Recipient Wallet 1", 1 * 1e8)
+    .addTransfer("Address of Recipient Wallet 2", 1 * 1e8)
+    .addTransfer("Address of Recipient Wallet 3", 1 * 1e8)
+    .sign("this is a top secret passphrase");
 
-const serialized = Transactions.Serializer.serialize(transaction).toString("hex");
+const serialised = Transactions.Serialiser.serialise(transaction).toString("hex");
 
 >>> string
 ```
 
-### Deserialize (AIP11)
+### Deserialise
 
-> A serialized transaction may be deserialized for inspection purposes. The public API does not return serialized transactions, so you should only need to deserialize in exceptional circumstances.
+> A serialised transaction may be deserialised for inspection purposes. The public API does not return serialised transactions, so you should only need to deserialise in exceptional circumstances.
 
 ```typescript
 const { Transactions } = require("@solar-network/crypto");
-const deserialized = Transactions.deserializer.deserialize(serialized);
+const deserialised = Transactions.deserialiser.deserialise(serialised);
 
 >>> ITransaction
 ```
@@ -206,7 +202,7 @@ Identities.Address.validate("validAddress");
 
 ## Private Key
 
-> As the name implies, private keys and passphrases are to remain private. Never store these unencrypted and minimize access to these secrets
+> As the name implies, private keys and passphrases are to remain private. Never store these unencrypted and minimise access to these secrets
 
 ### Derive the Private Key from a Passphrase
 

@@ -63,7 +63,7 @@ Generate Block object from JSON.
 ### `fromData()`
 
 ```typescript
-public static fromData(data: IBlockData, options: { deserializeTransactionsUnchecked?: boolean } = {})
+public static fromData(data: IBlockData, options: { deserialiseTransactionsUnchecked?: boolean } = {})
 ```
 
 Generate Block object from Block data.
@@ -79,7 +79,7 @@ Generate Block object from Block data.
 
 `IBlock`
 
-## Crypto\Blocks\Serializer
+## Crypto\Blocks\Serialiser
 
 ### `size()`
 
@@ -99,13 +99,13 @@ Get size of Block.
 
 `number`
 
-### `serializeWithTransactions()`
+### `serialiseWithTransactions()`
 
 ```typescript
-public static serializeWithTransactions(block: IBlockData)
+public static serialiseWithTransactions(block: IBlockData)
 ```
 
-Serialize Block with Transactions.
+Serialise Block with Transactions.
 
 #### Parameters
 
@@ -117,20 +117,20 @@ Serialize Block with Transactions.
 
 `Buffer`
 
-### `serialize()`
+### `serialise()`
 
 ```typescript
-public static serialize(block: IBlockData, includeSignature: boolean = true)
+public static serialise(block: IBlockData, includeSignature: boolean = true)
 ```
 
-Serialize Block without Transactions.
+Serialise Block without Transactions.
 
 #### Parameters
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
 | IBlockData | block | Yes | Block object |
-| boolean | includeSignature | Yes | Whether to include signature in serialization |
+| boolean | includeSignature | Yes | Whether to include signature in serialisation |
 
 #### Return Value
 
@@ -1141,22 +1141,22 @@ Get settings for a selected network, default network is testnet.
 
 `INetworkConfig`
 
-## Crypto\Transactions\Deserializer
+## Crypto\Transactions\Deserialiser
 
-### `deserialize()`
+### `deserialise()`
 
 ```typescript
-public static deserialize(serialized: string | Buffer, options: IDeserializeOptions = {})
+public static deserialise(serialised: string | Buffer, options: IDeserialiseOptions = {})
 ```
 
-Deserialize Transaction into object.
+Deserialise Transaction into object.
 
 #### Parameters
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| string, Buffer | serialized | Yes | Serialized transaction |
-| IDeserializeOptions | options | Yes | Options for deserializing |
+| string, Buffer | serialised | Yes | Serialised transaction |
+| IDeserialiseOptions | options | Yes | Options for deserialising |
 
 #### Return Value
 
@@ -1277,12 +1277,12 @@ Create Transaction object from Transaction data.
 
 `ITransaction`
 
-## Crypto\Transactions\Serializer
+## Crypto\Transactions\Serialiser
 
 ### `getBytes()`
 
 ```typescript
-public static getBytes(transaction: ITransactionData, options: ISerializeOptions = {})
+public static getBytes(transaction: ITransactionData, options: ISerialiseOptions = {})
 ```
 
 Convert the transaction to its byte representation.
@@ -1292,26 +1292,26 @@ Convert the transaction to its byte representation.
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
 | ITransactionData | transaction | Yes | Transaction |
-| ISerializeOptions | options | Yes | Options |
+| ISerialiseOptions | options | Yes | Options |
 
 #### Return Value
 
 `Buffer`
 
-### `serialize()`
+### `serialise()`
 
 ```typescript
-public static serialize(transaction: ITransaction, options: ISerializeOptions = {})
+public static serialise(transaction: ITransaction, options: ISerialiseOptions = {})
 ```
 
-Perform AIP11 compliant serialization.
+Perform AIP11 compliant serialisation.
 
 #### Parameters
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
 | ITransaction | transaction | Yes | Transaction |
-| ISerializeOptions | options | Yes | Options |
+| ISerialiseOptions | options | Yes | Options |
 
 #### Return Value
 
@@ -1322,7 +1322,7 @@ Perform AIP11 compliant serialization.
 ### `sign()`
 
 ```typescript
-public static sign(transaction: ITransactionData, keys: IKeyPair, options?: ISerializeOptions)
+public static sign(transaction: ITransactionData, keys: IKeyPair, options?: ISerialiseOptions)
 ```
 
 Sign the given transaction with the provided keys.
@@ -1333,7 +1333,7 @@ Sign the given transaction with the provided keys.
 | :--- | :--- | :--- | :--- |
 | ITransactionData | transaction | Yes | Transaction |
 | IKeyPair | keys | Yes | Keys |
-| ISerializeOptions | options | No | Options |
+| ISerialiseOptions | options | No | Options |
 
 #### Return Value
 
@@ -1401,7 +1401,7 @@ Convert Transaction object to Buffer.
 ### `toHash()`
 
 ```typescript
-public static toHash(transaction: ITransactionData, options?: ISerializeOptions)
+public static toHash(transaction: ITransactionData, options?: ISerialieOptions)
 ```
 
 Convert Transaction object to Hash.
@@ -1411,7 +1411,7 @@ Convert Transaction object to Hash.
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
 | ITransactionData | transaction | Yes | Transaction object |
-| ISerializeOptions | options | No | Serialization options for generating hash |
+| ISerialiseOptions | options | No | Serialisation options for generating hash |
 
 #### Return Value
 
@@ -1420,7 +1420,7 @@ Convert Transaction object to Hash.
 ### `getId()`
 
 ```typescript
-public static getId(transaction: ITransactionData, options: ISerializeOptions = {})
+public static getId(transaction: ITransactionData, options: ISerialiseOptions = {})
 ```
 
 Get Transaction ID of Transaction object.
@@ -1430,7 +1430,7 @@ Get Transaction ID of Transaction object.
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
 | ITransactionData | transaction | Yes | Transaction object |
-| ISerializeOptions | options | Yes | Serialization options for generating hash |
+| ISerialiseOptions | options | Yes | Serialisation options for generating hash |
 
 #### Return Value
 
@@ -2050,31 +2050,31 @@ Get transaction schema.
 
 `schemas.TransactionSchema`
 
-### `serialize()`
+### `serialise()`
 
 ```typescript
-public serialize(options?: ISerializeOptions)
+public serialise(options?: ISerialiseOptions)
 ```
 
-Handle the serialization of "delegate registration" data.
+Handle the serialisation of "delegate registration" data.
 
 #### Parameters
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| ISerializeOptions | options | No | Options |
+| ISerialiseOptions | options | No | Options |
 
 #### Return Value
 
 `ByteBuffer`
 
-### `deserialize()`
+### `deserialise()`
 
 ```typescript
-public deserialize(buf: ByteBuffer)
+public deserialise(buf: ByteBuffer)
 ```
 
-Handle the deserialization of "delegate registration" data.
+Handle the deserialisation of "delegate registration" data.
 
 #### Parameters
 
@@ -2112,31 +2112,31 @@ Verify transaction.
 
 `boolean`
 
-### `serialize()`
+### `serialise()`
 
 ```typescript
-public serialize(options?: ISerializeOptions)
+public serialise(options?: ISerialiseOptions)
 ```
 
-Handle the serialization of "delegate resignation" data.
+Handle the serialisation of "delegate resignation" data.
 
 #### Parameters
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| ISerializeOptions | options | No | Options |
+| ISerialiseOptions | options | No | Options |
 
 #### Return Value
 
 `ByteBuffer`
 
-### `deserialize()`
+### `deserialise()`
 
 ```typescript
-public deserialize(buf: ByteBuffer)
+public deserialise(buf: ByteBuffer)
 ```
 
-Handle the deserialization of "delegate resignation" data.
+Handle the deserialisation of "delegate resignation" data.
 
 #### Parameters
 
@@ -2150,13 +2150,13 @@ Handle the deserialization of "delegate resignation" data.
 
 ## Crypto\Transactions\Types\TransactionTypeFactory
 
-### `initialize()`
+### `initialise()`
 
 ```typescript
-public static initialize(transactionTypes: Map<InternalTransactionType, TransactionConstructor>)
+public static initialise(transactionTypes: Map<InternalTransactionType, TransactionConstructor>)
 ```
 
-Initialize new transaction types factory.
+Initialise new transaction types factory.
 
 #### Parameters
 
@@ -2227,37 +2227,37 @@ Verify transaction.
 
 `boolean`
 
-### `serialize()`
+### `serialise()`
 
 ```typescript
-public serialize(options?: ISerializeOptions)
+public serialise(options?: ISerialiseOptions)
 ```
 
-Serialize Transaction object.
+Serialise Transaction object.
 
 #### Parameters
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| ISerializeOptions | options | No | Serialization options |
+| ISerialiseOptions | options | No | Serialisation options |
 
 #### Return Value
 
 `ByteBuffer`
 
-### `deserialize()`
+### `deserialise()`
 
 ```typescript
-public deserialize(buf: ByteBuffer)
+public deserialise(buf: ByteBuffer)
 ```
 
-Deserialize into Transaction object.
+Deserialise into Transaction object.
 
 #### Parameters
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| ByteBuffer | buf | Yes | Buffer to deserialize |
+| ByteBuffer | buf | Yes | Buffer to deserialise |
 
 #### Return Value
 
@@ -2301,37 +2301,37 @@ Verify if the transaction contains a vendorfield.
 
 `boolean`
 
-### `serialize()`
+### `serialise()`
 
 ```typescript
-public serialize(options?: ISerializeOptions)
+public serialise(options?: ISerialiseOptions)
 ```
 
-Serialize a Transaction object.
+Serialise a Transaction object.
 
 #### Parameters
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| ISerializeOptions | options | No | Serialization options |
+| ISerialiseOptions | options | No | Serialisation options |
 
 #### Return Value
 
 `ByteBuffer`
 
-### `deserialize()`
+### `deserialise()`
 
 ```typescript
-public deserialize(buf: ByteBuffer)
+public deserialise(buf: ByteBuffer)
 ```
 
-Deserialize into a Transaction object.
+Deserialise into a Transaction object.
 
 #### Parameters
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| ByteBuffer | buf | Yes | Buffer to deserialize |
+| ByteBuffer | buf | Yes | Buffer to deserialise |
 
 #### Return Value
 
@@ -2363,37 +2363,37 @@ Verify transaction.
 
 `boolean`
 
-### `serialize()`
+### `serialise()`
 
 ```typescript
-public serialize(options?: ISerializeOptions)
+public serialise(options?: ISerialiseOptions)
 ```
 
-Serialize a Transaction object.
+Serialise a Transaction object.
 
 #### Parameters
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| ISerializeOptions | options | No | Serialization options |
+| ISerialiseOptions | options | No | Serialisation options |
 
 #### Return Value
 
 `ByteBuffer`
 
-### `deserialize()`
+### `deserialise()`
 
 ```typescript
-public deserialize(buf: ByteBuffer)
+public deserialise(buf: ByteBuffer)
 ```
 
-Deserialize into a Transaction object.
+Deserialise into a Transaction object.
 
 #### Parameters
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| ByteBuffer | buf | Yes | Buffer to deserialize |
+| ByteBuffer | buf | Yes | Buffer to deserialise |
 
 #### Return Value
 
@@ -2458,31 +2458,31 @@ Verify transaction.
 
 `boolean`
 
-### `serialize()`
+### `serialise()`
 
 ```typescript
-public serialize(options?: ISerializeOptions)
+public serialise(options?: ISerialiseOptions)
 ```
 
-Handle the serialization of "IPFS" data.
+Handle the serialisation of "IPFS" data.
 
 #### Parameters
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| ISerializeOptions | options | No | Options |
+| ISerialiseOptions | options | No | Options |
 
 #### Return Value
 
 `ByteBuffer`
 
-### `deserialize()`
+### `deserialise()`
 
 ```typescript
-public deserialize(buf: ByteBuffer)
+public deserialise(buf: ByteBuffer)
 ```
 
-Handle the deserialization of "IPFS" data.
+Handle the deserialisation of "IPFS" data.
 
 #### Parameters
 
@@ -2532,37 +2532,37 @@ Verify if the transaction contains a vendorfield.
 
 `boolean`
 
-### `serialize()`
+### `serialise()`
 
 ```typescript
-public serialize(options?: ISerializeOptions)
+public serialise(options?: ISerialiseOptions)
 ```
 
-Serialize a Transaction object.
+Serialise a Transaction object.
 
 #### Parameters
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| ISerializeOptions | options | No | Serialization options |
+| ISerialiseOptions | options | No | Serialisation options |
 
 #### Return Value
 
 `ByteBuffer`
 
-### `deserialize()`
+### `deserialise()`
 
 ```typescript
-public deserialize(buf: ByteBuffer)
+public deserialise(buf: ByteBuffer)
 ```
 
-Deserialize into a Transaction object.
+Deserialise into a Transaction object.
 
 #### Parameters
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| ByteBuffer | buf | Yes | Buffer to deserialize |
+| ByteBuffer | buf | Yes | Buffer to deserialise |
 
 #### Return Value
 
@@ -2612,37 +2612,37 @@ Verify transaction.
 
 `boolean`
 
-### `serialize()`
+### `serialise()`
 
 ```typescript
-public serialize(options?: ISerializeOptions)
+public serialise(options?: ISerialiseOptions)
 ```
 
-Serialize a Transaction object.
+Serialise a Transaction object.
 
 #### Parameters
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| ISerializeOptions | options | No | Serialization options |
+| ISerialiseOptions | options | No | Serialisation options |
 
 #### Return Value
 
 `ByteBuffer`
 
-### `deserialize()`
+### `deserialise()`
 
 ```typescript
-public deserialize(buf: ByteBuffer)
+public deserialise(buf: ByteBuffer)
 ```
 
-Deserialize into a Transaction object.
+Deserialise into a Transaction object.
 
 #### Parameters
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| ByteBuffer | buf | Yes | Buffer to deserialize |
+| ByteBuffer | buf | Yes | Buffer to deserialise |
 
 #### Return Value
 
@@ -2662,37 +2662,37 @@ Get transaction schema.
 
 `schemas.TransactionSchema`
 
-### `serialize()`
+### `serialise()`
 
 ```typescript
-public serialize(options?: ISerializeOptions)
+public serialise(options?: ISerialiseOptions)
 ```
 
-Serialize a Transaction object.
+Serialise a Transaction object.
 
 #### Parameters
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| ISerializeOptions | options | No | Serialization options |
+| ISerialiseOptions | options | No | Serialisation options |
 
 #### Return Value
 
 `ByteBuffer`
 
-### `deserialize()`
+### `deserialise()`
 
 ```typescript
-public deserialize(buf: ByteBuffer)
+public deserialise(buf: ByteBuffer)
 ```
 
-Deserialize into a Transaction object.
+Deserialise into a Transaction object.
 
 #### Parameters
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| ByteBuffer | buf | Yes | Buffer to deserialize |
+| ByteBuffer | buf | Yes | Buffer to deserialise |
 
 #### Return Value
 
@@ -2724,37 +2724,37 @@ Verify if the transaction contains a vendorfield.
 
 `boolean`
 
-### `serialize()`
+### `serialise()`
 
 ```typescript
-public serialize(options?: ISerializeOptions)
+public serialise(options?: ISerialiseOptions)
 ```
 
-Perform AIP11 compliant serialization.
+Perform AIP11 compliant serialisation.
 
 #### Parameters
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| ISerializeOptions | options | No | Serialization options |
+| ISerialiseOptions | options | No | Serialisation options |
 
 #### Return Value
 
 `ByteBuffer`
 
-### `deserialize()`
+### `deserialise()`
 
 ```typescript
-public deserialize(buf: ByteBuffer)
+public deserialise(buf: ByteBuffer)
 ```
 
-Perform AIP11 compliant deserialization.
+Perform AIP11 compliant deserialisation.
 
 #### Parameters
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| ByteBuffer | buf | Yes | Buffer to deserialize |
+| ByteBuffer | buf | Yes | Buffer to deserialise |
 
 #### Return Value
 
@@ -2774,37 +2774,37 @@ Get transaction schema.
 
 `schemas.TransactionSchema`
 
-### `serialize()`
+### `serialise()`
 
 ```typescript
-public serialize(options?: ISerializeOptions)
+public serialise(options?: ISerialiseOptions)
 ```
 
-Perform AIP11 compliant serialization.
+Perform AIP11 compliant serialisation.
 
 #### Parameters
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| ISerializeOptions | options | No | Serialization options |
+| ISerialiseOptions | options | No | Serialisation options |
 
 #### Return Value
 
 `ByteBuffer`
 
-### `deserialize()`
+### `deserialise()`
 
 ```typescript
-public deserialize(buf: ByteBuffer)
+public deserialise(buf: ByteBuffer)
 ```
 
-Perform AIP11 compliant deserialization.
+Perform AIP11 compliant deserialisation.
 
 #### Parameters
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| ByteBuffer | buf | Yes | Buffer to deserialize |
+| ByteBuffer | buf | Yes | Buffer to deserialise |
 
 #### Return Value
 

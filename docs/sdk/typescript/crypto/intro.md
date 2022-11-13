@@ -12,7 +12,8 @@ yarn add @solar-network/crypto
 
 ## Development
 
-1. Crypto package is part of our Solar Core repository. To make changes for our core repo.
+1. Crypto package is part of our Solar Core repository. Fork the package: <a href="https://github.com/Solar-network/core/fork" target="_blank" rel="noopener noreferrer">github.com/Solar-network/core/fork</a>
+
 2. Clone your forked repository.
 
 ```bash
