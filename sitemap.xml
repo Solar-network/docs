@@ -76,6 +76,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.solar.org/core/transactions/intro/</loc>
+         <lastmod>2022-11-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.solar.org/core/transactions/lifecycle/</loc>
          <lastmod>2022-11-14</lastmod>
          <changefreq>daily</changefreq>
@@ -121,17 +126,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.solar.org/core/transactions/types/multipayment/</loc>
+         <loc>https://docs.solar.org/core/transactions/types/legacy-transfer/</loc>
          <lastmod>2022-11-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.solar.org/core/transactions/types/multisignature-registration/</loc>
-         <lastmod>2022-11-14</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.solar.org/core/transactions/types/overview/</loc>
+         <loc>https://docs.solar.org/core/transactions/types/legacy-vote/</loc>
          <lastmod>2022-11-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -146,7 +146,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.solar.org/core/transactions/types/vote-unvote/</loc>
+         <loc>https://docs.solar.org/core/transactions/types/vote/</loc>
          <lastmod>2022-11-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
