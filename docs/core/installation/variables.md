@@ -18,7 +18,7 @@ This variable determines the host at which the API will listen for traffic.
 
 ## CORE_API_ESTIMATED_TOTAL_COUNT
 
-This variable determines if estimated counts should be used. This can hinder performance greatly and often yields inaccurate counts.
+This variable determines if estimated counts should be used. This can improve performance greatly but yields inaccurate counts.
 
 ## CORE_API_PORT
 
