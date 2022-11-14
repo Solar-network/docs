@@ -8,11 +8,10 @@ title: Transaction Types - Transfer
 | :-------: | :---: |
 |     1     |   0   |
 
-The transfer transaction enables a user to broadcast a transaction to the network sending SXP tokens from one SXP wallet to another. This transaction type provides the utility of store-of-value and value transfer. It also contains a special data field of 255 bytes called the vendor field, allowing raw data, code or plain text to be stored on the blockchain. The vendor field is public and immutable, and is also utilized in SXP SmartBridge Technology.
+The transfer transaction enables a user to broadcast a transaction to the network sending SXP tokens from one SXP wallet to another. This transaction type provides the utility of store-of-value and value transfer. It also contains a special data field of 255 bytes called the vendor field, allowing raw data, code or plain text to be stored on the blockchain. The vendor field is public and immutable, and is also utilised in SXP SmartBridge Technology.
 
 | References           |                                                                                                                                                                                                                                                                                                                  |
 | :------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Improvement Proposal | [AIP11](https://github.com/ArkEcosystem/AIPs/blob/master/AIPS/aip-11.md), [AIP29](https://github.com/ArkEcosystem/AIPs/blob/master/AIPS/aip-29.md)                                                                                                                                                               |
 | API Endpoints        | [Link](/docs/api/public-rest-api/endpoints/transactions)                                                                                                                                                                                                                                                         |
 | AJV Schema           | [Base](https://github.com/ArkEcosystem/core/blob/aef8a3848fdc91aa6f44248dd37643e0fe7926e7/packages/crypto/src/transactions/types/schemas.ts#L17-L45) \| [Transfer](https://github.com/ArkEcosystem/core/blob/aef8a3848fdc91aa6f44248dd37643e0fe7926e7/packages/crypto/src/transactions/types/schemas.ts#L64-L74) |
 
@@ -34,13 +33,13 @@ The transfer transaction enables a user to broadcast a transaction to the networ
 }
 ```
 
-## Serialized
+## Serialised
 
 ```shell
 ff033f0100000000000100000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192a0252600000000001b54686973206973206120746573742076656e646f726669656c642e00e1f50500000000000000003f0995750207ecaf0ccf251c1265b92ad84f553662
 ```
 
-## Deserialized
+## Deserialised
 
 | Key                     |   Pos.   | Size<br/>_(bytes)_ | Value<br/>_(hex)_                                                      |
 | :---------------------- | :------: | :----------------: | :--------------------------------------------------------------------- |

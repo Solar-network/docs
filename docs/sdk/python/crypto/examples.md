@@ -4,7 +4,7 @@ title: Examples
 
 # Examples
 
-## Initialization
+## Initialisation
 
 ```python
 from solar_crypto.transactions.builder.transfer import Transfer
@@ -45,18 +45,18 @@ A transaction is an object specifying the transfer of funds from the sender's wa
 
 The crypto SDK can sign a transaction using your private key or passphrase (from which the private key is generated). Ensure you are familiar with [digital signatures](https://en.wikipedia.org/wiki/Digital_signature) before using the crypto SDKs.
 
-For serializing and deserializing, we must require the Transaction model:
+For serialising and deserialising, we must require the Transaction model:
 
 ```python
 from solar_crypto.transactions.transaction import Transaction
 
-# Serializing
+# Serialising
 transaction = Transaction(**tx)
-transaction.serialize()
+transaction.serialise()
 
-# Deserializing
+# Deserialising
 transaction = Transaction()
-transaction.deserialize(**tx['serialized'])
+transaction.deserialise(**tx['serialised'])
 ```
 
 Using the Transaction builder class.
@@ -66,26 +66,26 @@ transaction = Transfer(recipientId=str, amount=int)
 transaction.sign('seedPass')
 ```
 
-### Serialize (AIP11)
+### Serialise
 
-> Serialization of a transaction object ensures it is compact and properly formatted to be incorporated in the SXP blockchain. If you are using the crypto SDK in combination with the public API SDK, you should not need to serialize manually.
+> Serialisation of a transaction object ensures it is compact and properly formatted to be incorporated in the SXP blockchain. If you are using the crypto SDK in combination with the public API SDK, you should not need to serialise manually.
 
 ```python
-from solar_crypto.transactions.serializer import Serializer
+from solar_crypto.transactions.serialiser import Serialiser
 
-serialized_transaction = Serializer(tx).serialize()
+serialised_transaction = Serialiser(tx).serialise()
 
 >>> <class 'str'>
 ```
 
-### Deserialize (AIP11)
+### Deserialise
 
-> A serialized transaction may be deserialized for inspection purposes. The public API does not return serialized transactions, so you should only need to deserialize in exceptional circumstances.
+> A serialised transaction may be deserialised for inspection purposes. The public API does not return serialised transactions, so you should only need to deserialise in exceptional circumstances.
 
 ```python
-from solar_crypto.transactions.deserializer import Deserializer
+from solar_crypto.transactions.deserialiser import Deserialiser
 
-transaction_data = Deserializer(serialized_data).deserialize()
+transaction_data = Deserialiser(serialised_data).deserialise()
 
 >>> <class 'solar_crypto.transactions.transaction.Transaction'>
 ```
@@ -170,7 +170,7 @@ validate_address('validAddress')
 
 ## Private Key
 
-> As the name implies, private keys and passphrases are to remain private. Never store these unencrypted and minimize access to these secrets
+> As the name implies, private keys and passphrases are to remain private. Never store these unencrypted and minimise access to these secrets
 
 ### Derive the Private Key from a Passphrase
 

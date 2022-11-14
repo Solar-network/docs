@@ -30,7 +30,7 @@ Make your css selectors specific and not too global. This means that if you need
 
 ### Dark Mode
 
-Most of our product come with a native dark mode. This is achieved by utilizing a `:dark` directive in Tailwind, and setting a `.theme-dark` class on the `div` that wraps the project's content. Keep this in mind when developing components that will be reused throughout projects, as they will likely need support for a dark variant of it. You can find a setup for this directive in our [frontend](https://github.com/ArkEcosystem/laravel-ui) repository.
+Most of our product come with a native dark mode. This is achieved by utilising a `:dark` directive in Tailwind, and setting a `.theme-dark` class on the `div` that wraps the project's content. Keep this in mind when developing components that will be reused throughout projects, as they will likely need support for a dark variant of it. You can find a setup for this directive in our [frontend](https://github.com/ArkEcosystem/laravel-ui) repository.
 
 ### Formatting
 
@@ -66,9 +66,9 @@ For example, a homepage could look like this:
 &commat;endcomponent
 ```
 
-By utilizing this approach, you keep the page layout itself simple, structured and easy to extend. It also allows to build new pages with ease by already having isolated components to work with. With Laravel it's quick to create a new component, as you will only have to create a file inside the `views/components` directory and you can immediately use it in your views with the `x-component-name` notation.
+By utilising this approach, you keep the page layout itself simple, structured and easy to extend. It also allows to build new pages with ease by already having isolated components to work with. With Laravel it's quick to create a new component, as you will only have to create a file inside the `views/components` directory and you can immediately use it in your views with the `x-component-name` notation.
 
-Keep components organized by grouping them together based on their use. In the example above you'll notice that the components are all prepended with `x-home`, indicating that these components are homepage-specific. Once you run into components that are being reused in multiple locations, we generally have a `general` folder to put them in, or have them live in the root of the `components` folder.
+Keep components organised by grouping them together based on their use. In the example above you'll notice that the components are all prepended with `x-home`, indicating that these components are homepage-specific. Once you run into components that are being reused in multiple locations, we generally have a `general` folder to put them in, or have them live in the root of the `components` folder.
 
 <x-alert type="info">
     Although possible, refrain from using `@ php` inside of blade templates. This usually indicates a need for a value that should have been passed to you from a controller or Livewire component!
@@ -78,15 +78,15 @@ Keep components organized by grouping them together based on their use. In the e
 
 We have plenty of icons that are used, and we prefer to make use of SVGs on webpages due to them always looking crisp on any screen resolution. Existing icons will all work out of the box by using the `@ svg` directive that's available in our projects, but when you get supplied a new icon or SVG image there are a few preparations needed before they can be used:
 
-1. Minimize / optimize the SVGs (we have [SVGO](https://github.com/svg/svgo) workflows for this in the repo). The SVG you receive is likely exported from Illustrator or a similar program and will contain a lot of unneeded metadata. Make sure to optimize the SVG to get rid of this, and this will usually rewrite the SVGs into a format that's better suited for webpage usage too (see point 2 for more on this).
-2. Once minimized, check the source of the SVG for any remaining `style` attributes. If present, these styles make use of generic ids like `st0`, but these will be reused across different SVGs. As a result, if you would make use of this SVG in its current state and have another on the same page that references the same id, their styles will clash. Therefore you should rewrite these ids to something unique; usually the name of the file followed by `-st0` will do. Alternatively you can open the icon in Adobe Illustrator and save it again, but with inline styles. Then the class styling should be removed and there is no risk of interference.
+1. Minimise / optimise the SVGs (we have [SVGO](https://github.com/svg/svgo) workflows for this in the repo). The SVG you receive is likely exported from Illustrator or a similar program and will contain a lot of unneeded metadata. Make sure to optimise the SVG to get rid of this, and this will usually rewrite the SVGs into a format that's better suited for webpage usage too (see point 2 for more on this).
+2. Once minimised, check the source of the SVG for any remaining `style` attributes. If present, these styles make use of generic ids like `st0`, but these will be reused across different SVGs. As a result, if you would make use of this SVG in its current state and have another on the same page that references the same id, their styles will clash. Therefore you should rewrite these ids to something unique; usually the name of the file followed by `-st0` will do. Alternatively you can open the icon in Adobe Illustrator and save it again, but with inline styles. Then the class styling should be removed and there is no risk of interference.
 3. When working with icons, make sure the code does not reference hardcoded color values but makes use of `currentColor` instead. This will allow us to set the colors to our liking when using them in the views.
 
 ### Dark mode SVG's
 
 You can prepare SVG's for dark mode by adding a class of `.light-dark-icon` to the SVG. We've created a list of color pairs that work well between light and dark mode. Also, by conforming to this list, we can keep consistency in these designs.
 
-Below you can find a reference table on how you van utilize this class. Please note that the hex color in the syntax varies on your theme. You'll need to replace it with the hex color value of the `light mode color`.
+Below you can find a reference table on how you van utilise this class. Please note that the hex color in the syntax varies on your theme. You'll need to replace it with the hex color value of the `light mode color`.
 
 | syntax | light mode color | dark mode color |
 | --- | --- | --- |

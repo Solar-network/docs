@@ -1304,7 +1304,7 @@ Convert the transaction to its byte representation.
 public static serialise(transaction: ITransaction, options: ISerialiseOptions = {})
 ```
 
-Perform AIP11 compliant serialisation.
+Perform serialisation.
 
 #### Parameters
 
@@ -2730,7 +2730,7 @@ Verify if the transaction contains a vendorfield.
 public serialise(options?: ISerialiseOptions)
 ```
 
-Perform AIP11 compliant serialisation.
+Perform serialisation.
 
 #### Parameters
 
@@ -2748,7 +2748,7 @@ Perform AIP11 compliant serialisation.
 public deserialise(buf: ByteBuffer)
 ```
 
-Perform AIP11 compliant deserialisation.
+Perform deserialisation.
 
 #### Parameters
 
@@ -2780,7 +2780,7 @@ Get transaction schema.
 public serialise(options?: ISerialiseOptions)
 ```
 
-Perform AIP11 compliant serialisation.
+Perform serialisation.
 
 #### Parameters
 
@@ -2798,7 +2798,7 @@ Perform AIP11 compliant serialisation.
 public deserialise(buf: ByteBuffer)
 ```
 
-Perform AIP11 compliant deserialisation.
+Perform deserialisation.
 
 #### Parameters
 

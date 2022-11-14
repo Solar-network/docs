@@ -12,7 +12,6 @@ This transaction type allows burning an arbirary amount of SXP tokens. The burne
 
 | References                         |                                                                                                                                                                                                                                           |
 | :--------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <!-- SXP Improvement Proposals --> | <!-- [AIP11](https://github.com/ArkEcosystem/AIPs/blob/master/AIPS/aip-11.md), [AIP29](https://github.com/ArkEcosystem/AIPs/blob/master/AIPS/aip-29.md) -->                                                                               |
 | API Endpoints                      | [Link](/docs/api/public-rest-api/endpoints/transactions)                                                                                                                                                                                  |
 | AJV Schema                         | [Base](https://github.com/Solar-network/core/blob/main/packages/crypto/src/transactions/types/schemas.ts#L17-L46) \| [Burn](https://github.com/Solar-network/core/blob/main/packages/crypto/src/transactions/types/solar/burn.ts#L15-L25) |
 
@@ -32,13 +31,13 @@ This transaction type allows burning an arbirary amount of SXP tokens. The burne
 }
 ```
 
-## Serialized
+## Serialised
 
 ```shell
 ff033f0200000000000c00000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed19200000000000000000000e1f50500000000
 ```
 
-## Deserialized
+## Deserialised
 
 | Key                     |   Pos.   | Size<br/>_(bytes)_ | Value<br/>_(hex)_                                                      |
 | :---------------------- | :------: | :----------------: | :--------------------------------------------------------------------- |

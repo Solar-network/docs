@@ -8,8 +8,8 @@ Using the Solar SDKs, developers can build applications utilising the Solar bloc
 
 **The SXP SDKs are split into two packages for each language: Client and Cryptography.**
 
-* **[Client SDKs](guidelines/client.md)** - help developers fetch information from the SXP blockchain about its current state: which delegates are currently forging, what transactions are associated with a given wallet, and so on.
-* **[Cryptography SDKs](guidelines/crypto.md)** - assist developers in working with transactions: signing, serialising, deserialising, etc.
+* **Client SDKs** - help developers fetch information from the SXP blockchain about its current state: which delegates are currently forging, what transactions are associated with a given wallet, and so on.
+* **Cryptography SDKs** - assist developers in working with transactions: signing, serialising, deserialising, etc.
 
 If your application doesn't involve sending transactions, you can most likely build your application using the Client SDK alone. Otherwise, applications looking to leverage the full spectrum of SXP APIs should make use of both Client and Cryptography SDKs.
 

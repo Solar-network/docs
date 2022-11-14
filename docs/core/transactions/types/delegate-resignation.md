@@ -14,7 +14,6 @@ This transaction acts as a "kill command" for delegates who wish to resign or re
 
 | References           |                                                                                                                                                                                                                                                          |
 | :------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Improvement Proposal | [AIP11](https://github.com/ArkEcosystem/AIPs/blob/master/AIPS/aip-11.md), [AIP29](https://github.com/ArkEcosystem/AIPs/blob/master/AIPS/aip-29.md)                                                                                                       |
 | API Endpoints        | [Link](/docs/api/public-rest-api/endpoints/transactions)                                                                                                                                                                                                 |
 | AJV Schema           | [Base](https://github.com/Solar-network/core/blob/main/packages/crypto/src/transactions/types/schemas.ts#L17-L46) \| [Delegate Resignation](https://github.com/Solar-network/core/blob/main/packages/crypto/src/transactions/types/schemas.ts#L374-L381) |
 
@@ -34,13 +33,13 @@ This transaction acts as a "kill command" for delegates who wish to resign or re
 }
 ```
 
-### Serialized
+### Serialised
 
 ```shell
 ff033f0100000002000900000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed19280f0fa020000000000eb08bf010000000005736c333370
 ```
 
-### Deserialized
+### Deserialised
 
 | Key                     |   Pos.   | Size<br/>_(bytes)_ | Value<br/>_(hex)_                                                      |
 | :---------------------- | :------: | :----------------: | :--------------------------------------------------------------------- |

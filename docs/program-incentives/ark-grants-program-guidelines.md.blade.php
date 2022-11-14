@@ -33,10 +33,10 @@ If you are uncomfortable providing any of these items or agreeing to the guideli
 
 ## Technologies
 
-Developers who have an approved project in the SXP Grants program should follow best practices as established by the SXP.io development team. That includes but is not limited to utilizing the following technologies, languages and libraries whenever possible:
+Developers who have an approved project in the SXP Grants program should follow best practices as established by the SXP.io development team. That includes but is not limited to utilising the following technologies, languages and libraries whenever possible:
 
 * Typescript is preferred.
-* Utilize SXP Logic & custom transaction types (not vendorField) when possible.
+* Utilise SXP Logic & custom transaction types (not vendorField) when possible.
 * Mobile Development should be done with Ionic/Angular.
 * Some of our favorites: NodeJS, VueJS, TailwindCSS, Laravel and Electron.
 * For other technology considerations, please get approval before you begin development.
@@ -74,7 +74,7 @@ Once the project review is completed, we will notify you with an official decisi
 
 Thank you for your interest in the SXP Grants program and we look forward to reading your proposals!
 
- **Please submit the completed application to [grants@solar.io](mailto:grants@solar.io) with the title "_ARK Grants Application_".**
+ **Please submit the completed application to [grants@solar.org](mailto:grants@solar.org) with the title "_ARK Grants Application_".**
 
 ## SXP Grants Application Template
 
@@ -115,4 +115,4 @@ For your final two milestones, please include one milestone for ‘Documentation
 
 Please provide any closing remarks and/or considerations for your project. This is an opportunity to give any additional details that may be relevant to the approval of your project and to sell us on why we should approve your application.
 
-**Please submit the completed application to [grants@solar.io](mailto:grants@solar.io) with the title "_ARK Grants Application_".**
+**Please submit the completed application to [grants@solar.org](mailto:grants@solar.org) with the title "_ARK Grants Application_".**

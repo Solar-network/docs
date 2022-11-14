@@ -77,7 +77,7 @@
   </x-alert>
 
   <x-alert type="success">
-  Tip: Enter your SXP Address at [explorer.solar.io](http://explorer.solar.io) to verify balances and transactions.
+  Tip: Enter your SXP Address at [explorer.solar.org](http://explorer.solar.org) to verify balances and transactions.
   </x-alert>
 
   ## Wallet Issues
@@ -113,7 +113,7 @@
   </x-alert>
 
   <x-alert type="success">
-  Tip: Enter your SXP Address at [explorer.solar.io](http://explorer.solar.io) to check that the balance and transaction history are as expected.
+  Tip: Enter your SXP Address at [explorer.solar.org](http://explorer.solar.org) to check that the balance and transaction history are as expected.
   </x-alert>
 
   ---
@@ -204,7 +204,7 @@
 
   All official releases can be found by visiting the following page:
 
-  <livewire:embed-link url="https://solar.io/download#desktop-wallet" caption="SXP.io Downloads | Download Blockchain Software" />
+  <livewire:embed-link url="https://solar.org/download#desktop-wallet" caption="SXP.io Downloads | Download Blockchain Software" />
   </details>
   {{--  --}}
 
@@ -286,7 +286,7 @@
 
   All official releases can be found by visiting the following page:
 
-  <livewire:embed-link url="https://solar.io/download#desktop-wallet" caption="SXP.io Downloads | Download Blockchain Software" />
+  <livewire:embed-link url="https://solar.org/download#desktop-wallet" caption="SXP.io Downloads | Download Blockchain Software" />
   </details>
   {{--  --}}
 

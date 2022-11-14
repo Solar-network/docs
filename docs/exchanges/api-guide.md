@@ -25,7 +25,7 @@ Put another way, the Crypto SDK structures your data in a format that all Solar 
 These quick actions will all assume you've loaded a Client instance with the IP address of your node and the API version you're requesting.
 
 ```typescript
-const { Connection } = require("@solar-network/client");
+import { Connection } from "@solar-network/client";
 const client = new Connection("https://sxp.testnet.sh/api");
 ```
 
@@ -97,8 +97,8 @@ After making one or more of these transaction objects, you can combine them into
 With all the steps together, here is an example of how to send a transaction for approval:
 
 ```typescript
-const { Transactions, Managers, Utils } = require("@solar-network/crypto");
-const { Connection } = require("@solar-network/client");
+import { Transactions, Managers, Utils } from "@solar-network/crypto";
+import { Connection } from "@solar-network/client";
 
 // Configure our API client
 const client = new Connection("https://sxp.testnet.sh/api");
@@ -115,10 +115,11 @@ Managers.configManager.setHeight(972604);
     // Step 2: Create the transaction
     const transaction = Transactions.BuilderFactory.transfer()
         .nonce(senderNonce.toFixed())
-        .memo("This is an example memo")
-        .addTransfer("Address of Recipient Wallet 1", 1 * 1e8)
-        .addTransfer("Address of Recipient Wallet 2", 1 * 1e8)
-        .addTransfer("Address of Recipient Wallet 3", 1 * 1e8)
+        .fee("30000000")
+        .memo("This is an example memo") // memo is optional
+        .addTransfer("Address of Recipient Wallet 1","100000000") // 1 SXP
+        .addTransfer("Address of Recipient Wallet 2","200000000") // 2 SXP
+        .addTransfer("Address of Recipient Wallet 3","300000000") // 3 SXP
         .sign("this is a top secret passphrase");
 
     // Step 4: Broadcast the transaction
@@ -201,6 +202,22 @@ If the transaction has been added to the blockchain, you'll receive the followin
 ```
 
 You can see that the `confirmations` key holds the number of confirmations this transaction has received from the network, in the above case 0. As the average block takes 8 seconds to forge, finality is typically established within a minute following a transaction's addition to the blockchain.
+
+## Listening For Transactions
+
+it is possible to retrieve all transactions of a wallet given its address and, optionally, add filters.
+
+```typescript
+// Getting all transaction of a wallet sent after height 2000000
+const transactions = await client.api("wallets").transactions("validAddress", {blockHeight: {from: 2000000}});
+
+console.log(transactions.body.data);
+```
+
+<div class="admonition info">
+    <p class="admonition-title">info</p>
+    <p>Transfer transactions can be either <b>LegacyTransfer</b> (typegroup 1, type 0) or <b>Transfer</b> (typegroup 1, type 6). When listening for incoming transactions, it is essential to monitor for both of these types of transfer.</p>
+</div>
 
 ## Check Node Status
 

@@ -46,9 +46,9 @@ Regular small tier pull requests that fix small bugs, improve existing functiona
 
 ### Custom — Tier 0
 
-If you want to work on much bigger changes or custom projects that you don’t think fit any of the above tiers contact us at [info@solar.io](mailto:info@solar.io).
+If you want to work on much bigger changes or custom projects that you don’t think fit any of the above tiers contact us at [info@solar.org](mailto:info@solar.org).
 
-Some examples of what a custom Tier 0 could cover — developing new modules for Core that bring in new functionalities (PoW module instead of DPoS), different voting systems, proxy voting, implementing AIPs, Wallet plugins, extended Explorer features, …
+Some examples of what a custom Tier 0 could cover — developing new modules for Core that bring in new functionalities (PoW module instead of DPoS), different voting systems, proxy voting, Wallet plugins, extended Explorer features, …
 
 ### Invoice & Payments
 

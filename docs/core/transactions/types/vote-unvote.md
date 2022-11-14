@@ -14,7 +14,6 @@ Holders of SXP vote through their wallets for delegates who secure the network, 
 
 | References           |                                                                                                                                                                                                                                                                |
 | :------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Improvement Proposal | [AIP11](https://github.com/ArkEcosystem/AIPs/blob/master/AIPS/aip-11.md), [AIP29](https://github.com/ArkEcosystem/AIPs/blob/master/AIPS/aip-29.md)                                                                                                             |
 | API Endpoints        | [Link](/api/public-rest-api/endpoints/transactions)                                                                                                                                                                                                       |
 | AJV Schema           | [Base](https://github.com/Solar-network/core/blob/main/packages/crypto/src/transactions/types/schemas.ts#L17-L46) \| [Vote / Unvote / Switchvote](https://github.com/Solar-network/core/blob/main/packages/crypto/src/transactions/types/schemas.ts#L126-L148) |
 
@@ -38,13 +37,13 @@ Holders of SXP vote through their wallets for delegates who secure the network, 
 }
 ```
 
-### Serialized
+### Serialised
 
 ```shell
 ff033f0100000003000400000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192809698000000000000010b0163616374757331353439
 ```
 
-### Deserialized
+### Deserialised
 
 | Key                     |   Pos.   | Size<br/>_(bytes)_ | Value<br/>_(hex)_                                                      |
 | :---------------------- | :------: | :----------------: | :--------------------------------------------------------------------- |
@@ -82,13 +81,13 @@ ff033f0100000003000400000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b
 }
 ```
 
-### Serialized
+### Serialised
 
 ```shell
 ff033f0100000003000500000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192809698000000000000010b0063616374757331353439
 ```
 
-### Deserialized
+### Deserialised
 
 | Key                     |   Pos.   | Size<br/>_(bytes)_ | Value<br/>_(hex)_                                                      |
 | :---------------------- | :------: | :----------------: | :--------------------------------------------------------------------- |
@@ -125,13 +124,13 @@ ff033f0100000003000500000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b
 }
 ```
 
-### Serialized
+### Serialised
 
 ```shell
 ff033f0100000003000500000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192809698000000000000020b00636163747573313534390601736c333370
 ```
 
-### Deserialized
+### Deserialised
 
 | Key                     |   Pos.   | Size<br/>_(bytes)_ | Value<br/>_(hex)_                                                      |
 | :---------------------- | :------: | :----------------: | :--------------------------------------------------------------------- |

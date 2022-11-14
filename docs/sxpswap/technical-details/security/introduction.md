@@ -4,7 +4,7 @@ title: Introduction
 
 # Introduction
 
-The SXPSwap tool is an entirely decentralized module to facilitate the migration from BEP20/ERC20 to mainnet SXP.<br />
+The SXPSwap tool is an entirely decentralised module to facilitate the migration from BEP20/ERC20 to mainnet SXP.<br />
 SXPSwap focuses on several security features that are important to facilitate a migration on protocol level.
 
 

@@ -12,7 +12,6 @@ This transaction type enables a user to add an extra layer of security to their 
 
 | References           |                                                                                                                                                                                                                                                     |
 | :------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Improvement Proposal | [AIP11](https://github.com/ArkEcosystem/AIPs/blob/master/AIPS/aip-11.md), [AIP29](https://github.com/ArkEcosystem/AIPs/blob/master/AIPS/aip-29.md)                                                                                                  |
 | API Endpoints        | [Link](/docs/api/public-rest-api/endpoints/transactions)                                                                                                                                                                                            |
 | AJV Schema           | [Base](https://github.com/Solar-network/core/blob/main/packages/crypto/src/transactions/types/schemas.ts#L17-L46) \| [Second Signature](https://github.com/Solar-network/core/blob/main/packages/crypto/src/transactions/types/schemas.ts#L77-L101) |
 
@@ -35,13 +34,13 @@ This transaction type enables a user to add an extra layer of security to their 
 }
 ```
 
-## Serialized
+## Serialised
 
 ```shell
 ff033f0100000001000200000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192a0252600000000000002877e4f35c76abaeb152b128670db0a7ae10b3999afcd28a42938b653fbf87ae9
 ```
 
-## Deserialized
+## Deserialised
 
 | Key                     |   Pos.   | Size<br/>_(bytes)_ | Value<br/>_(hex)_                                                      |
 | :---------------------- | :------: | :----------------: | :--------------------------------------------------------------------- |

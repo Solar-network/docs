@@ -8,11 +8,10 @@ title: Transaction Types - IPFS
 | :-------: | :---: |
 |     1     |   5   |
 
-This transaction type utilizes a special data field similar to the vendor field to store Interplanetary File System data on the blockchain. This provides an easy way to timestamp and optionally encrypt and verify files. This implementation of the IPFS transaction type won’t allow storing data on the blockchain - for that, special IPFS nodes are needed.
+This transaction type utilises a special data field similar to the vendor field to store Interplanetary File System data on the blockchain. This provides an easy way to timestamp and optionally encrypt and verify files. This implementation of the IPFS transaction type won’t allow storing data on the blockchain - for that, special IPFS nodes are needed.
 
 | References           |                                                                                                                                                                                                                                          |
 | :------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Improvement Proposal | [AIP11](https://github.com/ArkEcosystem/AIPs/blob/master/AIPS/aip-11.md), [AIP29](https://github.com/ArkEcosystem/AIPs/blob/master/AIPS/aip-29.md)                                                                                       |
 | API Endpoints        | [Link](/docs/api/public-rest-api/endpoints/transactions)                                                                                                                                                                                 |
 | AJV Schema           | [Base](https://github.com/Solar-network/core/blob/main/packages/crypto/src/transactions/types/schemas.ts#L17-L46) \| [IPFS](https://github.com/Solar-network/core/blob/main/packages/crypto/src/transactions/types/schemas.ts#L246-L264) |
 
@@ -33,13 +32,13 @@ This transaction type utilizes a special data field similar to the vendor field 
 }
 ```
 
-## Serialized
+## Serialised
 
 ```shell
 ff033f0100000005000700000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed1920065cd1d000000000012209608184d6cee2b9af8e6c2a46fc9318adf73329aeb8a86cf8472829fff5bb89e
 ```
 
-## Deserialized
+## Deserialised
 
 | Key                     |   Pos.   | Size<br/>_(bytes)_ | Value<br/>_(hex)_                                                        |
 | :---------------------- | :------: | :----------------: | :----------------------------------------------------------------------- |

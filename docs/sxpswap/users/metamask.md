@@ -29,10 +29,10 @@ Read the instructions below to swap your ERC20/BEP20 SXP tokens to Mainnet SXP c
 8. On the next page, enter your wallet address from the Solar Desktop Wallet. The mainnet SXP address starts with an S and is 34 characters long. 
 ![8](/sxpswap/assets/8.png)
 9. Click next after you've filled in your SXP mainnet wallet address. From this point, it won't be possible to recover your assets if you fill in the wrong address.
-10. Double check the details on this page and click on the "Approve Swap" button. You will now be asked to confirm the transactions which sends the tokens to a specialized contract.
+10. Double check the details on this page and click on the "Approve Swap" button. You will now be asked to confirm the transactions which sends the tokens to a specialised contract.
 ![10](/sxpswap/assets/10.png)
 <span style="color:red">Wait. Do not close this page. You are not done yet. 
-11. A new button will be available. Click on the button that says "Swap Now" and finalize the swap by confirming and signing the Swap transaction.
+11. A new button will be available. Click on the button that says "Swap Now" and finalise the swap by confirming and signing the Swap transaction.
 ![11](/sxpswap/assets/11.png)
 ![11-2](/sxpswap/assets/11-2.png)
 12. The swap is done. You can now view the transaction on the block explorer. The new SXP mainnet coins will arrive in your wallet within 30-minutes after receiving the required amount of confirmations.

@@ -34,7 +34,7 @@ Transactions are received at the POST transactions endpoint of the Public API. F
 2. API Handler validates schema and sends transaction to the [TransactionProcessor](https://github.com/Solar-network/core/blob/main/packages/core-transaction-pool/src/processor.ts)
 3. TransactionProcessor performs additional transaction payload checks in relation to the blockchain protocol. If all check are valid, transaction is added to the Transaction Pool
 
-> ✅ **SUCCESS** - All Client SDKs already create API requests to conform to this standard, so following the [SDK guidelines](/docs/sdk/guidelines/crypto) will typically result in your transaction passing validation.
+> ✅ **SUCCESS** - All [Client SDKs](/docs/sdk/documentation) already create API requests to conform to this standard, so will typically result in your transaction passing validation.
 
 Notably, no blockchain-level validation occurs at this earliest stage in the transaction lifecycle. Request validation ensures that your POST request can be understood by the network, not that the data it contains represents a valid transaction. This task falls to the next class to handle transaction requests: the [TransactionProcessor](https://github.com/Solar-network/core/blob/main/packages/core-transaction-pool/src/processor.ts) from the `core-transaction-pool` package.
 

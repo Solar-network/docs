@@ -8,11 +8,10 @@ title: Transaction Types - Delegate Registration
 | :-------: | :---: |
 |     1     |   3   |
 
-A user or organization can register their address to become a delegate and secure the network. Upon accumulating sufficient vote weight, the delegate will begin forging transactions and receiving block rewards. The delegate assigns a custom name to their address to differentiate it from other delegates.
+A user or organisation can register their address to become a delegate and secure the network. Upon accumulating sufficient vote weight, the delegate will begin forging transactions and receiving block rewards. The delegate assigns a custom name to their address to differentiate it from other delegates.
 
 | References           |                                                                                                                                                                                                                                                           |
 | :------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Improvement Proposal | [AIP11](https://github.com/ArkEcosystem/AIPs/blob/master/AIPS/aip-11.md)                                                                                                                                                                                  |
 | API Endpoints        | [Link](/docs/api/public-rest-api/endpoints/transactions)                                                                                                                                                                                                  |
 | AJV Schema           | [Base](https://github.com/Solar-network/core/blob/main/packages/crypto/src/transactions/types/schemas.ts#L17-L46) \| [Delegate Registration](https://github.com/Solar-network/core/blob/main/packages/crypto/src/transactions/types/schemas.ts#L103-L124) |
 
@@ -37,13 +36,13 @@ A user or organization can register their address to become a delegate and secur
 }
 ```
 
-### Serialized
+### Serialised
 
 ```shell
 ff033f0100000002000300000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed19200eb08bf010000000005736c333370
 ```
 
-### Deserialized
+### Deserialised
 
 | Key                     |   Pos.   | Size<br/>_(bytes)_ | Value<br/>_(hex)_                                                      |
 | :---------------------- | :------: | :----------------: | :--------------------------------------------------------------------- |

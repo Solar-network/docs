@@ -1065,223 +1065,223 @@ Set votes
 
 `<class 'NoneType'>`
 
-## crypto.transactions.deserializers.base.BaseDeserializer
+## crypto.transactions.deserialisers.base.BaseDeserialiser
 
 ### `__init__()`
 
 ```python
-def __init__(self, serialized, asset_offset, transaction):
+def __init__(self, serialised, asset_offset, transaction):
 ```
 
-Create a new deserializer instance
+Create a new deserialiser instance
 
 #### Parameters
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| ??? | serialized | Yes | Serialized |
+| ??? | serialised | Yes | Serialised |
 | ??? | asset_offset | Yes | Offset |
 | ??? | transaction | Yes | Transaction |
 
 #### Return Value
 
-`<class 'solar_crypto.transactions.deserializers.base.BaseDeserializer'>`
+`<class 'solar_crypto.transactions.deserialisers.base.BaseDeserialiser'>`
 
-### `deserialize()`
+### `deserialise()`
 
 ```python
-def deserialize(self):
+def deserialise(self):
 ```
 
-Handle the deserialization of transaction data
+Handle the deserialisation of transaction data
 
 #### Return Value
 
 `NotImplementedError`
 
-## crypto.transactions.deserializers.burn.BurnDeserializer
+## crypto.transactions.deserialisers.burn.BurnDeserialiser
 
-### `deserialize()`
+### `deserialise()`
 
 ```python
-def deserialize(self):
+def deserialise(self):
 ```
 
-Handle the deserialization of "burn" data
+Handle the deserialisation of "burn" data
 
 #### Return Value
 
 `<class 'dict'>`
 
-## crypto.transactions.deserializers.delegate_registration.DelegateRegistrationDeserializer
+## crypto.transactions.deserialisers.delegate_registration.DelegateRegistrationDeserialiser
 
-### `deserialize()`
+### `deserialise()`
 
 ```python
-def deserialize(self):
+def deserialise(self):
 ```
 
-Handle the deserialization of "delegate registration" data
+Handle the deserialisation of "delegate registration" data
 
 #### Return Value
 
 `<class 'dict'>`
 
-## crypto.transactions.deserializers.delegate_resignation.DelegateResignationDeserializer
+## crypto.transactions.deserialisers.delegate_resignation.DelegateResignationDeserialiser
 
-### `deserialize()`
+### `deserialise()`
 
 ```python
-def deserialize(self):
+def deserialise(self):
 ```
 
-Handle the deserialization of "delegate resignation" data
+Handle the deserialisation of "delegate resignation" data
 
 #### Return Value
 
 `<class 'dict'>`
 
-## crypto.transactions.deserializers.htlc_claim.HtlcClaimDeserializer
+## crypto.transactions.deserialisers.htlc_claim.HtlcClaimDeserialiser
 
-### `deserialize()`
+### `deserialise()`
 
 ```python
-def deserialize(self):
+def deserialise(self):
 ```
 
-Handle the deserialization of "HTLC Claim" data
+Handle the deserialisation of "HTLC Claim" data
 
 #### Return Value
 
 `<class 'dict'>`
 
-## crypto.transactions.deserializers.htlc_lock.HtlcLockDeserializer
+## crypto.transactions.deserialisers.htlc_lock.HtlcLockDeserialiser
 
-### `deserialize()`
+### `deserialise()`
 
 ```python
-def deserialize(self):
+def deserialise(self):
 ```
 
-Handle the deserialization of "HTLC Lock" data
+Handle the deserialisation of "HTLC Lock" data
 
 #### Return Value
 
 `<class 'dict'>`
 
-## crypto.transactions.deserializers.htlc_refund.HtlcRefundDeserializer
+## crypto.transactions.deserialisers.htlc_refund.HtlcRefundDeserialiser
 
-### `deserialize()`
+### `deserialise()`
 
 ```python
-def deserialize(self):
+def deserialise(self):
 ```
 
-Handle the deserialization of "HTLC refund" data
+Handle the deserialisation of "HTLC refund" data
 
 #### Return Value
 
 `<class 'dict'>`
 
-## crypto.transactions.deserializers.ipfs.IPFSDeserializer
+## crypto.transactions.deserialisers.ipfs.IPFSDeserialiser
 
-### `deserialize()`
+### `deserialise()`
 
 ```python
-def deserialize(self):
+def deserialise(self):
 ```
 
-Handle the deserialization of "IPFS" data
+Handle the deserialisation of "IPFS" data
 
 #### Return Value
 
 `<class 'dict'>`
 
-## crypto.transactions.deserializers.transfer.TransferDeserializer
+## crypto.transactions.deserialisers.transfer.TransferDeserialiser
 
-### `deserialize()`
+### `deserialise()`
 
 ```python
-def deserialize(self):
+def deserialise(self):
 ```
 
-Handle the deserialization of "transfer" data
+Handle the deserialisation of "transfer" data
 
 #### Return Value
 
 `<class 'dict'>`
 
-## crypto.transactions.deserializers.multi_signature_registration.MultiSignatureRegistrationDeserializer
+## crypto.transactions.deserialisers.multi_signature_registration.MultiSignatureRegistrationDeserialiser
 
-### `deserialize()`
+### `deserialise()`
 
 ```python
-def deserialize(self):
+def deserialise(self):
 ```
 
-Handle the deserialization of "multi signature registration" data
+Handle the deserialisation of "multi signature registration" data
 
 #### Return Value
 
 `<class 'dict'>`
 
-## crypto.transactions.deserializers.second_signature_registration.SecondSignatureRegistrationDeserializer
+## crypto.transactions.deserialisers.second_signature_registration.SecondSignatureRegistrationDeserialiser
 
-### `deserialize()`
+### `deserialise()`
 
 ```python
-def deserialize(self):
+def deserialise(self):
 ```
 
-Handle the deserialization of "second signature" data.
+Handle the deserialisation of "second signature" data.
 
 #### Return Value
 
 `<class 'dict'>`
 
-## crypto.transactions.deserializers.legacy_transfer.LegacyTransferDeserializer
+## crypto.transactions.deserialisers.legacy_transfer.LegacyTransferDeserialiser
 
-### `deserialize()`
+### `deserialise()`
 
 ```python
-def deserialize(self):
+def deserialise(self):
 ```
 
-Handle the deserialization of "legacy transfer" data
+Handle the deserialisation of "legacy transfer" data
 
 #### Return Value
 
 `<class 'dict'>`
 
-## crypto.transactions.deserializers.legacy_vote.LegacyVoteDeserializer
+## crypto.transactions.deserialisers.legacy_vote.LegacyVoteDeserialiser
 
-### `deserialize()`
+### `deserialise()`
 
 ```python
-def deserialize(self):
+def deserialise(self):
 ```
 
-Handle the deserialization of "legacy vote" data.
+Handle the deserialisation of "legacy vote" data.
 
 #### Return Value
 
 `<class 'dict'>`
 
-## crypto.transactions.deserializers.vote.VoteDeserializer
+## crypto.transactions.deserialisers.vote.VoteDeserialiser
 
-### `deserialize()`
+### `deserialise()`
 
 ```python
-def deserialize(self):
+def deserialise(self):
 ```
 
-Handle the deserialization of "vote" data.
+Handle the deserialisation of "vote" data.
 
 #### Return Value
 
 `<class 'dict'>`
 
-## crypto.transactions.serializers.base.BaseSerializer
+## crypto.transactions.serialisers.base.BaseSerialiser
 
 ### `__init__()`
 
@@ -1289,7 +1289,7 @@ Handle the deserialization of "vote" data.
 def __init__(self, transaction, byte_data=bytes()):
 ```
 
-Create a new serializer instance
+Create a new serialiser instance
 
 #### Parameters
 
@@ -1300,229 +1300,229 @@ Create a new serializer instance
 
 #### Return Value
 
-`<class 'solar_crypto.transactions.serializers.base.BaseSerializer'>`
+`<class 'solar_crypto.transactions.serialisers.base.BaseSerialiser'>`
 
-### `serialize`
+### `serialise`
 
 ```python
-def serialize(self):
+def serialise(self):
 ```
 
-Handle the serialization of transaction data
+Handle the serialisation of transaction data
 
 #### Return Value
 
 `NotImplementedError`
 
-## crypto.transactions.serializers.burn.BurnSerializer
+## crypto.transactions.serialisers.burn.BurnSerialiser
 
-### `serialize`
+### `serialise`
 
 ```python
-def serialize(self):
+def serialise(self):
 ```
 
-Handle the serialization of "burn" data
+Handle the serialisation of "burn" data
 
 #### Return Value
 
 `<class 'bytes'>`
 
-## crypto.transactions.serializers.delegate_registration.DelegateRegistrationSerializer
+## crypto.transactions.serialisers.delegate_registration.DelegateRegistrationSerialiser
 
-### `serialize`
+### `serialise`
 
 ```python
-def serialize(self):
+def serialise(self):
 ```
 
-Handle the serialization of "delegate registration" data
+Handle the serialisation of "delegate registration" data
 
 #### Return Value
 
 `<class 'bytes'>`
 
-## crypto.transactions.serializers.delegate_resignationDelegateResignationSerializer
+## crypto.transactions.serialisers.delegate_resignationDelegateResignationSerialiser
 
-### `serialize`
+### `serialise`
 
 ```python
-def serialize(self):
+def serialise(self):
 ```
 
-Handle the serialization of "delegate resignation" data
+Handle the serialisation of "delegate resignation" data
 
 #### Return Value
 
 `<class 'bytes'>`
 
-## crypto.transactions.serializers.htlc_claim.HtlcClaimSerializer
+## crypto.transactions.serialisers.htlc_claim.HtlcClaimSerialiser
 
-### `serialize()`
+### `serialise()`
 
 ```python
-def serialize(self):
+def serialise(self):
 ```
 
-Handle the serialization of "HTLC Claim" data
+Handle the serialisation of "HTLC Claim" data
 
 #### Return Value
 
 `<class 'bytes'>`
 
-## crypto.transactions.serializers.htlc_lock.HtlcLockSerializer
+## crypto.transactions.serialisers.htlc_lock.HtlcLockSerialiser
 
-### `serialize()`
+### `serialise()`
 
 ```python
-def serialize(self):
+def serialise(self):
 ```
 
-Handle the serialization of "HTLC Lock" data
+Handle the serialisation of "HTLC Lock" data
 
 #### Return Value
 
 `<class 'bytes'>`
 
-## crypto.transactions.serializers.htlc_refund.HtlcRefundSerializer
+## crypto.transactions.serialisers.htlc_refund.HtlcRefundSerialiser
 
-### `serialize()`
+### `serialise()`
 
 ```python
-def serialize(self):
+def serialise(self):
 ```
 
-Handle the serialization of "HTLC Refund" data
+Handle the serialisation of "HTLC Refund" data
 
 #### Return Value
 
 `<class 'bytes'>`
 
-## crypto.transactions.serializers.ipfs.IPFSSerializer
+## crypto.transactions.serialisers.ipfs.IPFSSerialiser
 
-### `serialize`
+### `serialise`
 
 ```python
-def serialize(self):
+def serialise(self):
 ```
 
-Handle the serialization of "ipfs" data
+Handle the serialisation of "ipfs" data
 
 #### Return Value
 
 `<class 'bytes'>`
 
-## crypto.transactions.serializers.transfer.TransferSerializer
+## crypto.transactions.serialisers.transfer.TransferSerialiser
 
-### `serialize`
+### `serialise`
 
 ```python
-def serialize(self):
+def serialise(self):
 ```
 
-Handle the serialization of "transfer" data
+Handle the serialisation of "transfer" data
 
 #### Return Value
 
 `<class 'bytes'>`
 
-## crypto.transactions.serializers.multi_signature_registration.MultiSignatureSerializer
+## crypto.transactions.serialisers.multi_signature_registration.MultiSignatureSerialiser
 
-### `serialize`
+### `serialise`
 
 ```python
-def serialize(self):
+def serialise(self):
 ```
 
-Handle the serialization of "multi signature" data
+Handle the serialisation of "multi signature" data
 
 #### Return Value
 
 `<class 'bytes'>`
 
-## crypto.transactions.serializers.second_signature_registration.SecondSignatureRegistrationSerializer
+## crypto.transactions.serialisers.second_signature_registration.SecondSignatureRegistrationSerialiser
 
-### `serialize`
+### `serialise`
 
 ```python
-def serialize(self):
+def serialise(self):
 ```
 
-Handle the serialization of "second signature" data
+Handle the serialisation of "second signature" data
 
 #### Return Value
 
 `<class 'bytes'>`
 
-## crypto.transactions.serializers.legacy_transfer.LegacyTransferSerializer
+## crypto.transactions.serialisers.legacy_transfer.LegacyTransferSerialiser
 
-### `serialize`
+### `serialise`
 
 ```python
-def serialize(self):
+def serialise(self):
 ```
 
-Handle the serialization of "legacy transfer" data
+Handle the serialisation of "legacy transfer" data
 
 #### Return Value
 
 `<class 'bytes'>`
 
-## crypto.transactions.serializers.legacy_vote.LegacyVoteSerializer
+## crypto.transactions.serialisers.legacy_vote.LegacyVoteSerialiser
 
-### `serialize`
+### `serialise`
 
 ```python
-def serialize(self):
+def serialise(self):
 ```
 
-Handle the serialization of "legacy vote" data
+Handle the serialisation of "legacy vote" data
 
 #### Return Value
 
 `<class 'bytes'>`
 
-## crypto.transactions.serializers.vote.VoteSerializer
+## crypto.transactions.serialisers.vote.VoteSerialiser
 
-### `serialize`
+### `serialise`
 
 ```python
-def serialize(self):
+def serialise(self):
 ```
 
-Handle the serialization of "vote" data
+Handle the serialisation of "vote" data
 
 #### Return Value
 
 `<class 'bytes'>`
 
-## crypto.transactions.deserializer.Deserializer
+## crypto.transactions.deserialiser.Deserialiser
 
 ### `__init__`
 
 ```python
-def __init__(self, serialized):
+def __init__(self, serialised):
 ```
 
-Create a new deserializer instance
+Create a new deserialiser instance
 
 #### Parameters
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| str | serialized | Yes | Serialized |
+| str | serialised | Yes | Serialised |
 
 #### Return Value
 
-`<class 'solar_crypto.transactions.deserializer.Deserializer'>`
+`<class 'solar_crypto.transactions.deserialiser.Deserialiser'>`
 
-### `deserialize`
+### `deserialise`
 
 ```python
-def deserialize(self):
+def deserialise(self):
 ```
 
-Perform AIP11 compliant deserialization
+Perform deserialisation
 
 #### Return Value
 
@@ -1534,7 +1534,7 @@ Perform AIP11 compliant deserialization
 def _handle_transaction_type(self, asset_offset, transaction):
 ```
 
-Handle the deserialization of transaction data
+Handle the deserialisation of transaction data
 
 #### Parameters
 
@@ -1547,7 +1547,7 @@ Handle the deserialization of transaction data
 
 `<class 'solar_crypto.transactions.transaction.Transaction'>`
 
-## crypto.transactions.serializer.Serializer
+## crypto.transactions.serialiser.Serialiser
 
 ### `__init__`
 
@@ -1555,7 +1555,7 @@ Handle the deserialization of transaction data
 def __init__(self, transaction):
 ```
 
-Create a new serializer instance
+Create a new serialiser instance
 
 #### Parameters
 
@@ -1565,23 +1565,23 @@ Create a new serializer instance
 
 #### Return Value
 
-`<class 'solar_crypto.transactions.serializer.Serializer'>`
+`<class 'solar_crypto.transactions.serialiser.Serialiser'>`
 
-### `serialize`
+### `serialise`
 
 ```python
-def serialize(self, skip_signature=True, skip_second_signature=True, skip_multi_signature=True, raw=False):
+def serialise(self, skip_signature=True, skip_second_signature=True, skip_multi_signature=True, raw=False):
 ```
 
-Perform AIP11 compliant serialization
+Perform serialisation
 
 #### Parameters
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| bool | skip_signature | No | Should we skip the serialization of the signature |
-| bool | skip_second_signature | No | Should we skip the serialization of the second signature |
-| bool | skip_multi_signature | No | Should we skip the serialization of multiple signatures |
+| bool | skip_signature | No | Should we skip the serialisation of the signature |
+| bool | skip_second_signature | No | Should we skip the serialisation of the second signature |
+| bool | skip_multi_signature | No | Should we skip the serialisation of multiple signatures |
 | bool | raw | No | Raw output |
 
 #### Return Value
@@ -1594,7 +1594,7 @@ Perform AIP11 compliant serialization
 def _handle_transaction_type(self, bytes_data):
 ```
 
-Handle the serialization of transaction data
+Handle the serialisation of transaction data
 
 #### Parameters
 
@@ -1612,16 +1612,16 @@ Handle the serialization of transaction data
 def _handle_signature(self, bytes_data, skip_signature, skip_second_signature, skip_multi_signature):
 ```
 
-Handle the serialization of "signatures" data
+Handle the serialisation of "signatures" data
 
 #### Parameters
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
 | bytes | bytes_data | Yes | ... |
-| bool | skip_signature | Yes | Should we skip the serialization of the signature |
-| bool | skip_second_signature | Yes | Should we skip the serialization of the second signature |
-| bool | skip_multi_signature | Yes | Should we skip the serialization of multiple signatures |
+| bool | skip_signature | Yes | Should we skip the serialisation of the signature |
+| bool | skip_second_signature | Yes | Should we skip the serialisation of the second signature |
+| bool | skip_multi_signature | Yes | Should we skip the serialisation of multiple signatures |
 
 #### Return Value
 
@@ -1707,7 +1707,7 @@ Convert the transaction to its byte representation
 ### `parse_signatures`
 
 ```python
-def parse_signatures(self, serialized, start_offset):
+def parse_signatures(self, serialised, start_offset):
 ```
 
 Parse the signature, second signature and multi signatures
@@ -1716,20 +1716,20 @@ Parse the signature, second signature and multi signatures
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| str | serialized | Yes | Serialized |
+| str | serialised | Yes | Serialised |
 | int | start_offset | Yes | Offset |
 
 #### Return Value
 
 `<class 'NoneType'>`
 
-### `serialize`
+### `serialise`
 
 ```python
-def serialize(self, skip_signature=True, skip_second_signature=True, skip_multi_signature=True):
+def serialise(self, skip_signature=True, skip_second_signature=True, skip_multi_signature=True):
 ```
 
-Perform AIP11 compliant serialization
+Perform serialisation
 
 #### Parameters
 
@@ -1743,19 +1743,19 @@ Perform AIP11 compliant serialization
 
 `<class 'str'>`
 
-### `deserialize`
+### `deserialise`
 
 ```python
-def deserialize(self, serialized):
+def deserialise(self, serialised):
 ```
 
-Perform AIP11 compliant deserialization
+Perform deserialisation
 
 #### Parameters
 
 | Type | Name | Required | Description |
 | :--- | :--- | :--- | :--- |
-| str | serialized | Yes | Serialized |
+| str | serialised | Yes | Serialised |
 
 #### Return Value
 
@@ -1833,7 +1833,7 @@ Handle each transaction type differently
 def _handle_signature(self, bytes_data, skip_signature, skip_second_signature, skip_multi_signature):
 ```
 
-Handle the serialization of "signatures" data
+Handle the serialisation of "signatures" data
 
 #### Parameters
 

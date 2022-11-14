@@ -1,45 +1,27 @@
 ---
-title: Introduction
+title: Getting Started
 ---
 
-# Client
+# Installation
 
-## Install package with Yarn
+## NodeJS installation
 
-```bash
-yarn add @solar-network/client
-```
+NodeJS can be downloaded here: <a href="https://nodejs.org/en/download" target="_blank" rel="noopener noreferrer">nodejs.org/en/download</a>
 
-## Development
+Alternatively you can install NodeJS through your operating system <a href="https://nodejs.org/en/download/package-manager" target="_blank" rel="noopener noreferrer">packager manager</a>.
 
-1. Fork the package: <a href="https://github.com/Solar-network/client/fork" target="_blank" rel="noopener noreferrer">github.com/Solar-network/client/fork</a>
+An excellent way to manage your NodeJS installation and be able to work with multiple version is to go through <a href="https://github.com/nvm-sh/nvm" target="_blank" rel="noopener noreferrer">NVM</a>.
 
-2. Clone your forked repository.
+## Install a Package Manager
 
-```bash
-git clone https://github.com/<githubusername>/client
-```
+Install a package manager for nodejs like pnpm, npm or yarn.
 
-<!-- markdownlint-disable MD029 -->
-3. Next, move into the fresh cloned directory.
-<!-- markdownlint-enable MD029 -->
+pnpm is recommended.
+
+Instructions on how to install pnpm can be found here: <a href="https://pnpm.io/installation" target="_blank" rel="noopener noreferrer">pnpm.io/installation</a>
+
+### Install package with pnpm
 
 ```bash
-cd client
-```
-
-<!-- markdownlint-disable MD029 -->
-4. Proceed to install the dependencies.
-<!-- markdownlint-enable MD029 -->
-
-```bash
-yarn install
-```
-
-<!-- markdownlint-disable MD029 -->
-5. Dependencies are now installed, you can now run the tests to see if everything is running as it should.
-<!-- markdownlint-enable MD029 -->
-
-```bash
-yarn test
+pnpm install @solar-network/client
 ```

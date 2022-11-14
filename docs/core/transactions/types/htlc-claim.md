@@ -14,7 +14,6 @@ The purpose of this transaction is for the recipient to _**CLAIM**_ funds from t
 
 | References           |                                                                                                                                                                                                                                                |
 | :------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Improvement Proposal | [AIP102](https://github.com/ArkEcosystem/AIPs/blob/master/AIPS/aip-102.md)                                                                                                                                                                     |
 | API Endpoints        | [Link](/docs/api/public-rest-api/endpoints/transactions)                                                                                                                                                                                       |
 | AJV Schema           | [Base](https://github.com/Solar-network/core/blob/main/packages/crypto/src/transactions/types/schemas.ts#L17-L46) \| [HTLC Claim](https://github.com/Solar-network/core/blob/main/packages/crypto/src/transactions/types/schemas.ts#L299-L320) |
 
@@ -38,13 +37,13 @@ The purpose of this transaction is for the recipient to _**CLAIM**_ funds from t
 }
 ```
 
-## Serialized
+## Serialised
 
 ```shell
 ff033f0100000009000b00000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192000000000000000000003aade2b98391ba7230252530cdd5124183a9f4e582660666ae873da48173ea5f20c27f1ce845d8c29eebc9006be932b604fd06755521b1a8b0be4204c65377151a
 ```
 
-## Deserialized
+## Deserialised
 
 | Key                       |   Pos.   | Size<br/>_(bytes)_ | Value<br/>_(hex)_                                                      |
 | :------------------------ | :------: | :----------------: | :--------------------------------------------------------------------- |

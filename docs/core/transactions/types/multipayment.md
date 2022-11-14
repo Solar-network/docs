@@ -12,7 +12,6 @@ This type is designed to reduce the payload on the blockchain by enabling multip
 
 | References           |                                                                                                                                                                                                                                                   |
 | :------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Improvement Proposal | [AIP11](https://github.com/ArkEcosystem/AIPs/blob/master/AIPS/aip-11.md), [AIP29](https://github.com/ArkEcosystem/AIPs/blob/master/AIPS/aip-29.md)                                                                                                |
 | API Endpoints        | [Link](/docs/api/public-rest-api/endpoints/transactions)                                                                                                                                                                                          |
 | AJV Schema           | [Base](https://github.com/Solar-network/core/blob/main/packages/crypto/src/transactions/types/schemas.ts#L17-L46) \| [Multi-Payment](https://github.com/Solar-network/core/blob/main/packages/crypto/src/transactions/types/schemas.ts#L344-L372) |
 
@@ -74,13 +73,13 @@ This type is designed to reduce the payload on the blockchain by enabling multip
 }
 ```
 
-## Serialized
+## Serialszed
 
 ```shell
 ff033f0100000006000800000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192809698000000000000280001000000000000003f0995750207ecaf0ccf251c1265b92ad84f55366201000000000000003ff13809c4c5fb2b3967a9b40efc70843f7db462ad01000000000000003f5f60e0594115b71d5b136cf929c8504082ac199d01000000000000003f5c2aaead4ce542788406c54e1ae31f1afdb7f08101000000000000003fc2308975254751ead4df705fc76aa84116c5e34e01000000000000003fc792d1958bb950596d0e7cd0bef325062009684801000000000000003f2031100e628422b8409810fdb438e874765846ba01000000000000003f6bd2c24bded5fdfd7888a28b3c6990503699b5e801000000000000003f009ffbb10efc47ad00a0a29cc2ef6e6c83d8c6ec01000000000000003fbe9147febbfe462cdbfda8575c18dabe85db4f5b01000000000000003f358634b58d88abf4aef3a6fe264b4ad18b74e98b01000000000000003f11745fc47a9c58c4e6f5a74eb59411ac102c6a8801000000000000003f5265ceb5d6102474ea7d0f401d6e6b9f13864a0501000000000000003f7617b5f3b82f153e388b4b200abd8636fff73dd501000000000000003f18f5df4fe3108277bfa4e39071fead9d59b35b8f01000000000000003fef283e95c3fdf0e2df9ba8321407c5621f98687601000000000000003f6af453a17439c9c258c25c707aa9fc1f3b59d9b401000000000000003f7e94f3954665ebd80ced3d434c67cd4351966f2b01000000000000003f8b8ee88e27291e33ce5403ea9b159235887dcfa901000000000000003f232a71b6b2586d5b02b6a72db08759066ba2a92b01000000000000003f28c4b220f14f3745f3fff6d3c066ba2353393eb601000000000000003fac67d5bfbef4a7ed8149727b93a01e903d84ee0c01000000000000003f3a537bef2ed296a54adc354967efe3a5e52cdfb801000000000000003f2c939e4633bd96ccc1d1509dbe794299603aad9901000000000000003f53ef9af027797e4827d708d9ed47c511f4ea552401000000000000003fe103c02fc06140aeac275f8e579f3397d041f81701000000000000003fa37d6366d765f5e446fc18ddcc3da3fa300cf6bb01000000000000003fe1671fea563be042824751a3465a7dbbc482794201000000000000003ff4d63847bf07a9faad83bd69fed408b3b734dce801000000000000003f888e092eba4cbd5eab9e10646661f5a440915f9d01000000000000003f5677152f9d640b175894c8da0b9f30bad3801aff01000000000000003fd34bb692e52d515398d00fd57ce2c8bfd348055401000000000000003fcfafad73ebddc38d53317c80cdbf6d343c331d6201000000000000003f7dbca0c01f96de655cf41eb53e1b8d5e2ffa260701000000000000003ff354c71350a110a7b45b5095ed0a4601bf4bbf9d01000000000000003f0ca0fbbfb8e3f615ec4eedaef6281d4d60a8f2b201000000000000003f2f885faaf6a3fcc38b1f35c652bf72f0fd7ac60301000000000000003f24e14548f3874b9413a28f258c2b73d35ec2b2f901000000000000003fe3f48b5211d1f21034bc15908259901ecf972be801000000000000003fccbb32ea36fad927cb2c46cbc63930db6cda829d
 ```
 
-## Deserialized
+## Deserialised
 
 | Key                     |    Pos.    | Size<br/>_(bytes)_ | Value<br/>_(hex)_                                                      |
 | :---------------------- | :--------: | :----------------: | :--------------------------------------------------------------------- |
