@@ -4,7 +4,7 @@
 
 ## 1. What is Solar? 
 
-A decentralized community-driven blockchain project.
+A decentralised community-driven blockchain project.
 Solar is focused on creating an ecosystem with true governance.
 An ecosystem with open-source developers and community involvement.
 
@@ -41,13 +41,13 @@ blockchain and a lot more.
 ### 2.2 Technical Infrastructure
 
 Solar is powered by Solar Core. A safe and secure Layer-1 Blockchain Framework.<br />
-Solar utilizes the Delegated Proof of Stake Consensus, also known as DPoS.<br />
-The Blockchain with its own native coin named SXP is fast, modular, sustainable, efficient and fully decentralized
+Solar utilises the Delegated Proof of Stake Consensus, also known as DPoS.<br />
+The Blockchain with its own native coin named SXP is fast, modular, sustainable, efficient and fully decentralised
 without the known issues and vulnerabilities from traditional Proof of Work (PoW) blockchains. <br />
 Issues and vulnerabilities such as being energy intensive or the risk of taking part in 51% attack vectors.<br />
 
 The Blockchain Framework has been forked from ARK Core.<br />
-Solar Core improved on the security of the Blockchain Framework by fully utilizing Schnorr for signatures. <br />
+Solar Core improved on the security of the Blockchain Framework by fully utilising Schnorr for signatures. <br />
 Solar Core entirely drops all support for ECDSA due to persistent signature malleability vectors.<br />
 Solar Core also provides a more robust block production routine to minimise the likelihood of nodes missing
 blocks and therefore creating a more stable and operational blockchain.<br />
@@ -67,7 +67,7 @@ The Solar Core also enables dynamic forging rewards based on the position of a d
 
 ## 3. SXP Coin Overview & Use Cases
 
-SXP utilizes a Delegated Proof of Stake concensus, from which the forging rewards are distributed to delegates.<br />
+SXP utilises a Delegated Proof of Stake concensus, from which the forging rewards are distributed to delegates.<br />
 The delegates are able to further distribute these rewards to their voters and keep a percentage as reward for the contribution to the network.<br />
 
 90% of the transaction fees are automatically burned on the network and 10% are rewarded to delegates that forge the block with the fees.<br />

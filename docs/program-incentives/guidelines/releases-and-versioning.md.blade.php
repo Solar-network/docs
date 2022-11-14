@@ -16,7 +16,7 @@ A common standard used for commits is [https://conventionalcommits.org/](https:/
 
 > In the world of software management there exists a dreaded place called "dependency hell." The bigger your system grows and the more packages you integrate into your software, the more likely you are to find yourself, one day, in this pit of despair.
 
-This paragraph is from the introduction section of [https://semver.org/](https://semver.org/). A spec that aims to make the life of software developers, and their projects' users, easier by providing a standardized approach to versioning.
+This paragraph is from the introduction section of [https://semver.org/](https://semver.org/). A spec that aims to make the life of software developers, and their projects' users, easier by providing a standardised approach to versioning.
 
 Good software needs to be correctly versioned to avoid any breaking changes for your users. This is mission critical if you provide software that can cost people large amounts of money by introducing a breaking change and not tagging a new major release.
 
@@ -44,6 +44,6 @@ However, as you made a change that changes the behavior of your project, it is n
 
 > People do. Whether consumers or developers, the end users of software are human beings, who care about what's in the software. When the software changes, people want to know why and how.
 
-Those paragraphs are from the introduction section of [https://keepachangelog.com/en/1.0.0/](https://keepachangelog.com/en/1.0.0/). A spec that provides a standardized approach to maintaining a changelog, making the life of software developers and that of the ones that use their projects easier Keeping a changelog is as important as versioning your software. You can do an excellent job at versioning your software, but if you do not document the changes that caused the increase of your version number they are as meaningless to your users as a lousy approach to versioning.
+Those paragraphs are from the introduction section of [https://keepachangelog.com/en/1.0.0/](https://keepachangelog.com/en/1.0.0/). A spec that provides a standardised approach to maintaining a changelog, making the life of software developers and that of the ones that use their projects easier Keeping a changelog is as important as versioning your software. You can do an excellent job at versioning your software, but if you do not document the changes that caused the increase of your version number they are as meaningless to your users as a lousy approach to versioning.
 
-**Keep a Changelog** provides you with a standardized approach to managing a changelog which in turn makes it easier for new developers to get into the project if they come from an environment where **Keep a Changelog** is already a standard.
+**Keep a Changelog** provides you with a standardised approach to managing a changelog which in turn makes it easier for new developers to get into the project if they come from an environment where **Keep a Changelog** is already a standard.

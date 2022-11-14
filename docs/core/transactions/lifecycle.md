@@ -39,7 +39,7 @@ Transactions are received at the POST `/api/transactions` endpoint of the Public
 
 <div class="admonition success">
     <p class="admonition-title"></p>
-    <p>All Client SDKs already create API requests to conform to this standard, so following the [SDK guidelines](/sdk/guidelines/crypto) will typically result in your transaction passing validation.</p>
+    <p>All <a href="/sdk/documentation">Client SDKs</a> already create API requests to conform to this standard so will typically result in your transaction passing validation.</p>
 </div>
 
 Notably, no blockchain-level validation occurs at this earliest stage in the transaction lifecycle. Request validation ensures that your POST request can be understood by the network, not that the data it contains represents a valid transaction. This task falls to the next class to handle transaction requests: the <a href="https://github.com/Solar-network/core/blob/75e3aa11e3466956fc7a860671bd4dd870a9d9fa/packages/pool/src/processor.ts" target="_blank" rel="noopener noreferrer">TransactionProcessor</a> from the `core-transaction-pool` package.
