@@ -4,7 +4,7 @@ title: Understanding the Nonce
 
 # Understanding the Transaction Nonce
 
-SXP wallets utilise a sequential nonce to protect against <a href="https://wikipedia.org/wiki/Double-spending" target="_blank" rel="noopener noreferrer">double-spending</a>, long-range attacks, key-leakage as a result of signature reuse, and <a href="https://wikipedia.org/wiki/Side-channel_attack" target="_blank" rel="noopener noreferrer">side-channel attacks</a> associated with random nonces. This wallet nonce increments with each outgoing transaction, ensuring every transaction and its associated signature are always unique.
+Wallets utilise a sequential nonce to protect against <a href="https://wikipedia.org/wiki/Double-spending" target="_blank" rel="noopener noreferrer">double-spending</a>, long-range attacks, key-leakage as a result of signature reuse, and <a href="https://wikipedia.org/wiki/Side-channel_attack" target="_blank" rel="noopener noreferrer">side-channel attacks</a> associated with random nonces. This wallet nonce increments with each outgoing transaction, ensuring every transaction and its associated signature are always unique.
 
 <div class="admonition abstract">
     <p class="admonition-title">Quick Facts</p>
@@ -23,7 +23,7 @@ SXP wallets utilise a sequential nonce to protect against <a href="https://wikip
 
 ## _"How do I find a wallet's nonce?"_
 
-You can find a wallet's current nonce by utilising the Public APIs <a href="https://api.solar.org/#/Wallets/get_wallets__identifier_" target="_blank" rel="noopener noreferrer">wallet</a> endpoint. This endpoint returns the details of a given wallet, including its nonce.
+You can find a wallet's current nonce by utilising the Public API's <a href="https://api.solar.org/#/Wallets/get_wallets__identifier_" target="_blank" rel="noopener noreferrer">wallet</a> endpoint. This endpoint returns the details of a given wallet, including its nonce.
 
 ```javascript
 {
@@ -44,7 +44,7 @@ You can find a wallet's current nonce by utilising the Public APIs <a href="http
 }
 ```
 
-## _"How do I determine a new transaction's nonce?"_
+## _"How do I determine the nonce of a new transaction?"_
 
 When creating a new transaction, find the wallet's current nonce and increment it by **1**.
 

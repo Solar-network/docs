@@ -12,10 +12,10 @@ This section will help you learn about Solar transactions, their structures and 
     <p class="admonition-title">Ready to start developing?</p>
     <p>Use the Solar SDKs to build applications utilising the Solar blockchain.</p>
     <div class="admonition abstract">
-        <p class="admonition-title">The SXP SDKs are split into two packages for each language:</p>
+        <p class="admonition-title">The Solar SDKs are split into two packages for each language:</p>
         <ul>
             <li>
-                <b>Client SDKs</b> - help developers fetch information from the SXP blockchain about its current state: which delegates are currently forging, what transactions are associated with a given wallet, and so on.
+                <b>Client SDKs</b> - help developers fetch information from the Solar blockchain about its current state: which delegates are currently forging, what transactions are associated with a given wallet, and so on.
             </li>
             <li>
                 <b>Cryptography SDKs</b> - assist developers in working with transactions: signing, serialising, deserialising, etc.
