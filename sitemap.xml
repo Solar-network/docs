@@ -256,21 +256,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.solar.org/sdk/guidelines/client/</loc>
-         <lastmod>2022-11-14</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.solar.org/sdk/guidelines/crypto/</loc>
-         <lastmod>2022-11-14</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.solar.org/sdk/guidelines/documentation/</loc>
-         <lastmod>2022-11-14</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://docs.solar.org/sdk/python/complementary-examples/</loc>
          <lastmod>2022-11-14</lastmod>
          <changefreq>daily</changefreq>
@@ -336,11 +321,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.solar.org/sdk/typescript/client/getting-started/</loc>
-         <lastmod>2022-11-14</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://docs.solar.org/sdk/typescript/client/intro/</loc>
          <lastmod>2022-11-14</lastmod>
          <changefreq>daily</changefreq>
@@ -352,11 +332,6 @@
     </url>
     <url>
          <loc>https://docs.solar.org/sdk/typescript/crypto/examples/</loc>
-         <lastmod>2022-11-14</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.solar.org/sdk/typescript/crypto/getting-started/</loc>
          <lastmod>2022-11-14</lastmod>
          <changefreq>daily</changefreq>
     </url>

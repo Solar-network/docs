@@ -5,7 +5,7 @@ title: Laravel & PHP
 # Laravel & PHP
 
 <x-alert type="info">
-**These guidelines are based on the [Laravel & PHP](https://spatie.be/guidelines/laravel-php) Guidelines by [Spatie](https://spatie.be/) as they provide a solid foundation for modern development.** Our guidelines contain slight modifications that are applicable to how we organize and develop projects in our day-to-day business operations.
+**These guidelines are based on the [Laravel & PHP](https://spatie.be/guidelines/laravel-php) Guidelines by [Spatie](https://spatie.be/) as they provide a solid foundation for modern development.** Our guidelines contain slight modifications that are applicable to how we organise and develop projects in our day-to-day business operations.
 </x-alert>
 
 ## Formatting
@@ -182,7 +182,7 @@ If you are working on a project that makes use of DDD you will either have to ke
 
 #### Blade component as an alternative
 
-While Livewire allows developers to quickly build interactive UIs, always using Livewire for UI components can be a bad practice -- Blade components combined with [Alpine.js](https://github.com/alpinejs/alpine) can also produce rich UI elements. If the component requires no interactivity (simply rendering an HTML), always prefer Blade before a Livewire component. An example is when a root Livewire component iterates over specific items and renders each of them as a UI component. If no item in the list requires any interactivity with the server-side then always prefer to componentize using Blade components.
+While Livewire allows developers to quickly build interactive UIs, always using Livewire for UI components can be a bad practice -- Blade components combined with [Alpine.js](https://github.com/alpinejs/alpine) can also produce rich UI elements. If the component requires no interactivity (simply rendering an HTML), always prefer Blade before a Livewire component. An example is when a root Livewire component iterates over specific items and renders each of them as a UI component. If no item in the list requires any interactivity with the server-side then always prefer to componentise using Blade components.
 
 Only using Livewire when it's needed lowers the performance overhead created by Livewire's boot time. Because Livewire has both front-end and back-end components, not using Livewire for every UI component can significantly improve the performance of the application. Other than performance overhead, this can help lessen the amount of [DOM diffing issues](https://laravel-livewire.com/docs/2.x/troubleshooting) and bugs created by nesting Livewire components.
 
@@ -232,7 +232,7 @@ class UpdateUserNameForm extends Component
 
 #### What counts as "state"
 
-If the Livewire component contains forms, all the input fields within the form will count as state, and always keep those in the `$state` property. Storing these fields as a separate property would result in potentially dozens of properties within the component and would produce a mess. In that case, it would be hard to visually differentiate which properties are form state and which properties are relevant component data.
+If the Livewire component contains forms, all the input fields within the form will count as state, and always keep those in the `$state` property. Storing these fields as a separate property would result in potentially dosens of properties within the component and would produce a mess. In that case, it would be hard to visually differentiate which properties are form state and which properties are relevant component data.
 
 If you're displaying a loading indicator, interacting with Eloquent models or resolving services, these can be safely stored as an additional property on the component.
 
@@ -257,11 +257,11 @@ class UpdateUserForm extends Component
 
 Always ensure to apply validation before performing an action that makes use of component state. This validation can be either performed in real-time or at the time of a method call. If a method is being executed based on events or instant feedback is executed it is recommended to use real-time validation for faster feedback for an improved UX.
 
-### Authorization
+### Authorisation
 
-If the component performs database queries to retrieve models, always make sure the user performing the request is authorized to retrieve the model. A good example is if you're locating a server model, but the constraint is that the server instance is tied to the user instance (through a one-to-many relationship), always retrieve the server model via the relationship. This prevents bugs where unauthorized users can perform illegal actions.
+If the component performs database queries to retrieve models, always make sure the user performing the request is authorised to retrieve the model. A good example is if you're locating a server model, but the constraint is that the server instance is tied to the user instance (through a one-to-many relationship), always retrieve the server model via the relationship. This prevents bugs where unauthorised users can perform illegal actions.
 
-On top of that, always ensure user has appropriate permissions to interact with the model, using policies, permissions or gates (depending on the application setup). To help you with that, Livewire offers you to import the `Illuminate\Foundation\Auth\Access\AuthorizesRequests` trait into the component and will properly handle all unauthorized responses. To read more, check out the [Livewire documentation](https://laravel-livewire.com/docs/2.x/authorization) on this topic.
+On top of that, always ensure user has appropriate permissions to interact with the model, using policies, permissions or gates (depending on the application setup). To help you with that, Livewire offers you to import the `Illuminate\Foundation\Auth\Access\AuthorizesRequests` trait into the component and will properly handle all unauthorised responses. To read more, check out the [Livewire documentation](https://laravel-livewire.com/docs/2.x/authorization) on this topic.
 
 ```php
 namespace App\Http\Livewire;
@@ -281,15 +281,15 @@ class DeleteServer extends Component
         // Good ✅
         $server = $this->user->servers()->findOrFail($serverId);
 
-        // Authorize against deletion...
+        // Authorise against deletion...
         $this->authorize('delete', $server);
     }
 }
 ```
 
-### Localization
+### Localisation
 
-For localization, we make use of `kebab-case` for keys that contain nested entries and `snake_case` for key value pairs. As for parameters, we use `camelCase`
+For localisation, we make use of `kebab-case` for keys that contain nested entries and `snake_case` for key value pairs. As for parameters, we use `camelCase`
 
 Use `@ lang()`, `trans()` and `__()` in that order of priority when possible.
 
