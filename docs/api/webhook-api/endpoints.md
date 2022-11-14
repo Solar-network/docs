@@ -162,12 +162,12 @@ POST /api/webhooks
 | block.reverted | Fires when a block is removed from the database (e.g. on a rollback) | Yes |
 | database.preConnect | Fires during the database pre-connection state | Yes |
 | database.postConnect | Fires during the database post-connection state | Yes |
-| database.preDisconnect | Fires during the database pre-diconnection state | Yes |
+| database.preDisconnect | Fires during the database pre-disconnection state | Yes |
 | database.postDisconnect | Fires during the database post-disconnection state | Yes |
 | delegate.productivityChanged | Fires after a delagates productivity has changed | Yes |
 | delegate.registered | Fires when a new delegate is registered | Yes |
 | delegate.resigned | Fires when a delegate resigns | Yes |
-| wallet.vote | Fires when a delegate resigns | Yes |
+| wallet.vote | Fires when a wallet votes | Yes |
 | forger.failed | Fires when the forger module fails to start | Yes |
 | forger.missing | Fires when it is detected that the forger module isn't running | Yes |
 | forger.started | Fires when the forger module forges a new block | No |
@@ -181,7 +181,7 @@ POST /api/webhooks
 | round.missed | Fires when a round has been missed | Yes |
 | state:builder.finished | Fires when the state builder has finished building | Yes |
 | state:started | Fires when the state builder has started building | No |
-| state:starting | Fires when the state builder is starting to build| Yes |
+| state:starting | Fires when the state builder is starting to build | Yes |
 | transaction.pool.added | Fires when transactions are added to the pool | Yes |
 | transaction.applied | Fires when a transaction is saved | Yes |
 | transaction.expired | Fires when an unconfirmed transaction expires | Yes |
