@@ -4,8 +4,6 @@ title: Overview
 
 # Solar Core v3 Transactions
 
-Transactions are the heart of any blockchain, traditionally representing a transfer of value from one network participant to another. In SXP, transactions can be of one of many types which can impact the content and data structure of each transaction's payload.
-
 This section will help you learn about Solar transactions, their structures and the processes of serialisating and deserialising transactions.
 
 ---
