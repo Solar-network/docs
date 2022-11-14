@@ -158,9 +158,9 @@ POST /api/webhooks
 | transaction.applied | Fires when a transaction is saved | Yes |
 | transaction.expired | Fires when an unconfirmed transaction expires | Yes |
 | transaction.forged | Fires when a transaction is forged by a delegate | Yes |
-| transaction.pool.added | Fires when transactions are added to the transaction pool | Yes |
-| transaction.pool.rejected | Fires when transactions are rejected and _not_ added to the transaction pool | Yes |
-| transaction.pool.removed | Fires when a transaction is removed from the transaction pool by its ID | Yes |
+| transaction.pool.added | Fires when transactions are added to the pool | Yes |
+| transaction.pool.rejected | Fires when transactions are rejected and _not_ added to the pool | Yes |
+| transaction.pool.removed | Fires when a transaction is removed from the pool by its ID | Yes |
 | transaction.reverted | Fires when a transaction is removed from the database | No |
 | wallet.saved | Fires when a wallet is updated (e.g. its balance changed, voted etc) | Yes |
 | wallet.created.cold | Fires when a wallet that never existed before is saved (e.g. received its first tx) | Yes |

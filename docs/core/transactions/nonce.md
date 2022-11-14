@@ -55,13 +55,13 @@ When you create a new transaction for that wallet, you will use the **current no
 
 <div class="admonition info">
     <p class="admonition-title">info</p>
-    <p>If you retrieved a nonce value of <b>123</b> for a wallet, the next transaction will have to use nonce <b>124</b>, (current_nonce + 1). The API will increase the nonce value once a transaction has been forged for the wallet.</p>
+    <p>If you retrieved a nonce value of <b>123</b> for a wallet, the next transaction will have to use nonce <b>124</b>, (current nonce + 1). The API will increase the nonce value once a transaction has been forged for the wallet.</p>
 </div>
 
 ### Sending Multiple Transactions
 
 You have to keep track locally of the next nonce value in case you intend to send multiple transactions in a single block.
 
-For example, we have a wallet with nonce 123 and want to send 3 transactions to be forged in the next block. These transactions will require nonce values 124, 125 and 126 respectively, and you will have to set the values, before creating transactions.
+For example, we have a wallet with nonce 123 and want to send 3 transactions to be forged in the next block. These transactions will require nonce values 124, 125 and 126 respectively, and you will have to set the values, before creating the transactions.
 
 After the block is forged, the API will report the _current_ nonce of the wallet to be 126.

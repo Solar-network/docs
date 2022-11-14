@@ -150,7 +150,7 @@ Let us look at the returned `data` object in more depth. It is composed of four 
 
 1. `accept` - a list of all accepted transactions
 2. `broadcast` - a list of all transactions broadcast to the network
-3. `excess` - if the node's transaction pool is full, this lists all excess transactions
+3. `excess` - if the node's pool is full, this lists all excess transactions
 4. `invalid` - a list of all transactions deemed invalid by the node
 
 Our sample code above submitted one transaction, which the node accepted and broadcast and thus the `accept` and `broadcast` arrays contain precisely one item each: the ID of the transaction we submitted.

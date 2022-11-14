@@ -13,7 +13,7 @@ This is the reference guide for the Public API. This API exposes all resources a
 
 <div class="admonition info">
     <p class="admonition-title">info</p>
-    <p>Each Core server (node) has its own internal blockchain and state, meaning it may have forked or be out of sync, causing queries to fail. Monitor your node by comparing it to different public nodes, such as the official Mainnet or Testnet Explorer to ensure you are in sync.</p>
+    <p>Each Core instance has its own internal blockchain and state, meaning it may have forked or be out of sync, causing queries to fail. Monitor your node by comparing it to different public nodes, such as the official Mainnet or Testnet Explorer to ensure you are in sync.</p>
     <ul>
         <li>
             <b>Mainnet Explorer</b> - <a href="https://explorer.solar.org" target="_blank" rel="noopener noreferrer">explorer.solar.org</a>

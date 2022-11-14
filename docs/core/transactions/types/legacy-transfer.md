@@ -2,7 +2,7 @@
 title: Transfer (Legacy)
 ---
 
-# Transfer _(**DEPRECATED**)_
+# Legacy Transfer _(**DEPRECATED**)_
 
 <div class="admonition warning">
     <p class="admonition-title">warning</p>
@@ -15,7 +15,7 @@ title: Transfer (Legacy)
 
 A Transfer transaction enables a user to broadcast a transaction to the network sending SXP tokens from one SXP wallet to another.
 
-All Solar transactions contain a special data field of 255 bytes known as the 'Memo.' This data field allows raw data, code, or plain text to be stored on the blockchain. The Memo is optional, public, and immutable.
+All Solar transactions contain a special data field of 255 bytes known as the 'Memo'. This data field allows raw data, code, or plain text to be stored on the blockchain. The Memo is optional, public, and immutable.
 
 | References    |                                                                                                                                                                                                                                                                                                                    |
 | :------------ | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

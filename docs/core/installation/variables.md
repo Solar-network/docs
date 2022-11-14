@@ -94,7 +94,7 @@ This variable determines where the log files are stored.
 
 ## CORE_MAX_TRANSACTIONS_IN_POOL
 
-This variable determines how many transactions can be in the transaction pool at any given time.
+This variable determines how many transactions can be in the pool at any given time.
 
 ## CORE_MANAGER_ARCHIVE_FORMAT
 
@@ -192,7 +192,7 @@ This variable determines the name of the token.
 
 ## CORE_TRANSACTION_POOL_DISABLED
 
-This variable determines if the transaction pool should be disabled.
+This variable determines if the pool should be disabled.
 
 ## CORE_TRANSACTION_POOL_MAX_PER_REQUEST
 
@@ -200,7 +200,7 @@ This variable determines how many transactions can be broadcast in a single requ
 
 ## CORE_TRANSACTION_POOL_MAX_PER_SENDER
 
-This variable determines how many transactions can be in the transaction pool by a single sender.
+This variable determines how many transactions can be in the pool by a single sender.
 
 ## CORE_WALLET_SYNC_ENABLED
 

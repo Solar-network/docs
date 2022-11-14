@@ -4,7 +4,7 @@ title: Overview
 
 # Solar Core v3 Transactions
 
-This section will help you learn about Solar Transactions as well as their structures and `serde` processes (serialisation and deserialisation of transactions).
+This section will help you learn about Solar transactions as well as their structures and `serde` processes (serialisation and deserialisation of transactions).
 
 <div class="admonition info">
     <p class="admonition-title">info</p>
