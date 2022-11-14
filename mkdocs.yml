@@ -186,7 +186,7 @@ nav:
     - Core Node Introduction:
       - exchanges/node-installation/requirements.md
       - exchanges/node-installation/baremetal.md
-    - PUBLIC API:
+    - Public API:
       - exchanges/api-guide.md
       - exchanges/rate-limits.md
   - API:

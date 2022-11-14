@@ -16,9 +16,9 @@ This variable determines if the API is enabled.
 
 This variable determines the host at which the API will listen for traffic.
 
-## CORE_API_NO_ESTIMATED_TOTAL_COUNT
+## CORE_API_ESTIMATED_TOTAL_COUNT
 
-This variable determines if estimated counts should be used. This greatly enhanced performance will yield in inaccurate counts.
+This variable determines if estimated counts should be used. This can hinder performance greatly and often yields inaccurate counts.
 
 ## CORE_API_PORT
 
@@ -96,46 +96,6 @@ This variable determines where the log files are stored.
 
 This variable determines how many transactions can be in the pool at any given time.
 
-## CORE_MANAGER_ARCHIVE_FORMAT
-
-This variable determines which archive format is used for storing logs.
-
-## CORE_MANAGER_DISABLED
-
-This variable determines if the Manager API is disabled.
-
-## CORE_MANAGER_HOST
-
-This variable determines the host at which the Manager API will be listening for traffic.
-
-## CORE_MANAGER_PORT
-
-This variable determines the port at which the Manager API will be listening for traffic.
-
-## CORE_MANAGER_PUBLIC_IP
-
-This variable determines the public ip of host.
-
-## CORE_MANAGER_SSL
-
-This variable determines if SSL (HTTPS) is enabled for the Manager API.
-
-## CORE_MANAGER_SSL_CERT
-
-This variable determines where the SSL Certification is located.
-
-## CORE_MANAGER_SSL_HOST
-
-This variable determines the host at which the HTTPS Manager API will be listening for traffic.
-
-## CORE_MANAGER_SSL_KEY
-
-This variable determines where the SSL Key is located.
-
-## CORE_MANAGER_SSL_PORT
-
-This variable determines the port at which the HTTPS Manager API will be listening for traffic.
-
 ## CORE_NETWORK_NAME
 
 > This variable is exposed by core and cannot be manually configured.
@@ -205,50 +165,6 @@ This variable determines how many transactions can be in the pool by a single se
 ## CORE_WALLET_SYNC_ENABLED
 
 This variable determines if wallets should be synced to the database.
-
-## CORE_WATCH_BLOCKS_DISABLED
-
-This variable determines if monitoring of blocks is disabled.
-
-## CORE_WATCH_ERRORS_DISABLED
-
-This variable determines if monitoring of errors is disabled.
-
-## CORE_WATCH_LOGS_DISABLED
-
-This variable determines if monitoring of logs is disabled.
-
-## CORE_WATCH_QUERIES_DISABLED
-
-This variable determines if monitoring of queries is disabled.
-
-## CORE_WATCH_QUEUES_DISABLED
-
-This variable determines if monitoring of queues is disabled.
-
-## CORE_WATCH_ROUNDS_DISABLED
-
-This variable determines if monitoring of rounds is disabled.
-
-## CORE_WATCH_SCHEDULES_DISABLED
-
-This variable determines if monitoring of schedules is disabled.
-
-## CORE_WATCH_TRANSACTIONS_DISABLED
-
-This variable determines if monitoring of transactions is disabled.
-
-## CORE_WATCH_WALLETS_DISABLED
-
-This variable determines if monitoring of wallets is disabled.
-
-## CORE_WATCH_WEBHOOKS_DISABLED
-
-This variable determines if monitoring of webhooks is disabled.
-
-## CORE_WATCHER_ENABLED
-
-This variable determines if monitoring is enabled.
 
 ## CORE_WEBHOOKS_ENABLED
 
