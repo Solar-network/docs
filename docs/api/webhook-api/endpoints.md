@@ -164,7 +164,7 @@ POST /api/webhooks
 | database.postConnect | Fires during the database post-connection state | Yes |
 | database.preDisconnect | Fires during the database pre-diconnection state | Yes |
 | database.postDisconnect | Fires during the database post-disconnection state | Yes |
-| delegate.productivityChanged | Fireds after a delagates productivity has changed | Yes |
+| delegate.productivityChanged | Fires after a delagates productivity has changed | Yes |
 | delegate.registered | Fires when a new delegate is registered | Yes |
 | delegate.resigned | Fires when a delegate resigns | Yes |
 | wallet.vote | Fires when a delegate resigns | Yes |
