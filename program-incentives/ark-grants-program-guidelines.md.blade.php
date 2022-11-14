@@ -36,7 +36,7 @@ If you are uncomfortable providing any of these items or agreeing to the guideli
 Developers who have an approved project in the SXP Grants program should follow best practices as established by the SXP.io development team. That includes but is not limited to utilising the following technologies, languages and libraries whenever possible:
 
 * Typescript is preferred.
-* Utilise SXP Logic & custom transaction types (not memo) when possible.
+* Utilise SXP Logic & custom transaction types (not vendorField) when possible.
 * Mobile Development should be done with Ionic/Angular.
 * Some of our favorites: NodeJS, VueJS, TailwindCSS, Laravel and Electron.
 * For other technology considerations, please get approval before you begin development.
