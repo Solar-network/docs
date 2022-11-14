@@ -4,38 +4,33 @@ title: Understanding the Nonce
 
 # Understanding the Transaction Nonce
 
-SXP transactions use a sequential nonce to protect against [double-spending](https://en.m.wikipedia.org/wiki/Double-spending), long-range attacks, key-leakage as a result of signature reuse, and [side-channel attacks](https://en.m.wikipedia.org/wiki/Side-channel_attack) associated with random nonces.
+Wallets utilise a sequential nonce to protect against <a href="https://wikipedia.org/wiki/Double-spending" target="_blank" rel="noopener noreferrer">double-spending</a>, long-range attacks, key-leakage as a result of signature reuse, and <a href="https://wikipedia.org/wiki/Side-channel_attack" target="_blank" rel="noopener noreferrer">side-channel attacks</a> associated with random nonces. This wallet nonce increments with each outgoing transaction, ensuring every transaction and its associated signature are always unique.
 
-A sequential nonce effectively counts each outgoing transaction from a given wallet. This means that the first transaction from a wallet must have a nonce of **1**, the second transaction must have a nonce of **2**, and so on.
+<div class="admonition abstract">
+    <p class="admonition-title">Quick Facts</p>
+    <p>
+      <ul>
+        <li>A wallet's first transaction <b>must</b> have a nonce of <b>1</b></li>
+        <li>The nonce <b>must</b> increment for every new transaction</li>
+        <li>The nonce must <b>not</b> be reused</li>
+        <li>
+          A nonce must <b>not</b> be skipped
+            <ul><li><i>a transaction with a nonce of <u>5</u> originating from a wallet with a nonce of <u>4</u> will be rejected</i></li></ul>
+        </li>
+      </ul>
+    </p>
+</div>
 
-This ensures that the data contained within a particular transaction will always be unique and thus results in a distinct hash that will necessarily produce a unique signature.
+## _"How do I find a wallet's nonce?"_
 
-**key facts**:
-
-* The 1st transaction from a wallet **must** have a nonce of **1**.
-* The nonce **must** increment sequentially for every subsequent transaction being sent. (_e.g. 2, 3, 4, 5, 6, 7, ..._)
-* A nonce **cannot** be reused.
-* A nonce **cannot** be skipped. (_a transaction with a nonce of **5** originating from a wallet with a nonce of **3** will be rejected._)
-
-funky stuff here:
-
-* The 1st transaction from a wallet **must** have a nonce of **1**.
-* The nonce **must** increment sequentially for every subsequent transaction being sent.
-  * _e.g. 2, 3, 4, 5, 6, 7, ..._
-* A nonce **cannot** be skipped.
-  * _a transaction with a nonce of **5** originating from a wallet with a nonce of **3** will be rejected._
-* A nonce **cannot** be reused.
-
-## How To Get Nonce Value For An Address?
-
-A sequential nonce depends on the amount of transaction a specific wallet has sent. You can find the current nonce for a wallet by utilising the Public API, more specifically the <a href="https://api.solar.org/#/Wallets/get_wallets__identifier_" target="_blank" rel="noopener noreferrer">wallet endpoint</a>. The wallet endpoint returns the wallet details, including the current wallets nonce field, like below:
+You can find a wallet's current nonce by utilising the Public API's <a href="https://api.solar.org/#/Wallets/get_wallets__identifier_" target="_blank" rel="noopener noreferrer">wallet</a> endpoint. This endpoint returns the details of a given wallet, including its nonce.
 
 ```javascript
 {
     "data": {
         "address": "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
         "publicKey": "03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc",
-        "nonce": "123",  // THIS IS WALLETS CURRENT NONCE VALUE
+        "nonce": "123",  // <- The wallet's nonce value
         "balance": "7919999400",
         "attributes": {
             ...
@@ -49,16 +44,22 @@ A sequential nonce depends on the amount of transaction a specific wallet has se
 }
 ```
 
-## How To Set Nonce Value?
+## _"How do I determine the nonce of a new transaction?"_
 
-When you create a new transaction for that wallet, you will use the **current nonce and add 1** to it to get to the new nonce value.
+When creating a new transaction, find the wallet's current nonce and increment it by **1**.
 
-> ℹ️ **INFO** - If you retrieved a nonce value of **123** for a wallet, the next transaction will have to use nonce **124,** (current_nonce + 1). The API will increase the nonce value once a transaction has been forged for the wallet.
+<div class="admonition abstract">
+    <p class="admonition-title">Quick Facts</p>
+    <p>
+      <ul>
+        <li>If the wallet has a nonce of <i>'123'</i>, the next transaction should have a nonce of <i>'124'</i></li>
+        <li>A wallet's updated nonce value will only be reflected via API <i>after</i> a transaction has been forged</li>
+      </ul>
+    </p>
+</div>
 
-### Sending Multiple Transactions
+## _"Can I send multiple transactions?"_
 
-You have to keep track locally of the next nonce value in case you intend to send multiple transactions in a single block.
+You should track the wallet's nonce locally if you wish to send multiple transactions in a short period.
 
-For example, we have a wallet with nonce 123 and want to send 3 transactions to be forged in the next block. These transactions will require nonce values 124, 125 and 126 respectively, and you will have to set the values, before creating transactions.
-
-After the block is forged, the API will report the _current_ nonce of the wallet to be 126.
+For example, let's say you have a wallet with the nonce value of '123' and want to send three new transactions for inclusion in the next block. These transactions will require the nonce values '124', '125' and '126' and should be set respectively during each transaction's creation. After the block is forged, the API will report the wallet's current nonce as '126'.

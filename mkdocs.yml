@@ -158,23 +158,24 @@ nav:
       - core/installation/variables.md
       - core/installation/steps.md
     - Transactions:
+      - core/transactions/intro.md
       - core/transactions/lifecycle.md
       - core/transactions/nonce.md
-      - core/transactions/types/overview.md
-      # - Types:
-      #   - core/transactions/types/overview.md
-      #   - core/transactions/types/legacy-tranfer.md
-      #   - core/transactions/types/second-signature.md
-      #   - core/transactions/types/delegate-registration.md
-      #   - core/transactions/types/legacy-vote.md
-      #   - core/transactions/types/ipfs.md
-      #   - core/transactions/types/transfer.md
-      #   - core/transactions/types/delegate-resignation.md
-      #   - core/transactions/types/htlc-lock.md
-      #   - core/transactions/types/htlc-claim.md
-      #   - core/transactions/types/htlc-refund.md
-      #   - core/transactions/types/burn.md
-      #   - core/transactions/types/vote.md
+      - Types:
+        - core/transactions/types/transfer.md
+        - core/transactions/types/second-signature.md
+        - core/transactions/types/vote.md
+        - core/transactions/types/delegate-registration.md
+        - core/transactions/types/ipfs.md
+        - core/transactions/types/delegate-resignation.md
+        - HTLC:
+          - core/transactions/types/htlc-lock.md
+          - core/transactions/types/htlc-claim.md
+          - core/transactions/types/htlc-refund.md
+        - core/transactions/types/burn.md
+        - Deprecated:
+          - core/transactions/types/legacy-transfer.md
+          - core/transactions/types/legacy-vote.md
     - Core Updates:
       - core/updates/3.3.0.md
       - core/updates/4.0.1.md
@@ -185,7 +186,7 @@ nav:
     - Core Node Introduction:
       - exchanges/node-installation/requirements.md
       - exchanges/node-installation/baremetal.md
-    - PUBLIC API:
+    - Public API:
       - exchanges/api-guide.md
       - exchanges/rate-limits.md
   - API:

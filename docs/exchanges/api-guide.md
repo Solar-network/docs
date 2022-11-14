@@ -4,14 +4,14 @@ title: Public API Guide
 
 # Exchanges API Guide
 
-Connecting to the PUBLIC API is done via the [Crypto and Client SDKs](/sdk/documentation/). Many queries can be performed using the Client SDK alone, while the Crypto SDK performs any actions requiring cryptographic functionality (i.e., signing transactions).
+Connecting to the Public API is done via the [Crypto and Client SDKs](/sdk/documentation/). Many queries can be performed using the Client SDK alone, while the Crypto SDK performs any actions requiring cryptographic functionality (i.e., signing transactions).
 
 At a surface level, the two SDKs are separated by their functions and intended use cases:
 
 * The Crypto SDK provides the cryptographic functions necessary to verify and validate Solar transactions.
 * The Client SDK provides wrapper functions to unify and streamline API calls between your application and the Solar blockchain.
 
-Put another way, the Crypto SDK structures your data in a format that all Solar nodes can understand, while the Client SDK handles the actual communication between your application and an Solar node. Where the Crypto SDK is internal, the Client SDK is external, as the below diagram illustrates:
+Put another way, the Crypto SDK structures your data in a format that all Solar nodes can understand, while the Client SDK handles the actual communication between your application and a Solar node. Where the Crypto SDK is internal, the Client SDK is external, as the below diagram illustrates:
 
 ![clientCrypto](/exchanges/assets/client-crypto.png)
 
@@ -26,7 +26,7 @@ These quick actions will all assume you've loaded a Client instance with the IP 
 
 ```typescript
 import { Connection } from "@solar-network/client";
-const client = new Connection("https://sxp.testnet.sh/api");
+const client = new Connection("https://tapi.solar.org/api");
 ```
 
 ## Check Wallet Balance
@@ -101,7 +101,7 @@ import { Transactions, Managers, Utils } from "@solar-network/crypto";
 import { Connection } from "@solar-network/client";
 
 // Configure our API client
-const client = new Connection("https://sxp.testnet.sh/api");
+const client = new Connection("https://tapi.solar.org/api");
 
 // Set the network configuration
 Managers.configManager.setFromPreset("testnet");
@@ -150,7 +150,7 @@ Let us look at the returned `data` object in more depth. It is composed of four 
 
 1. `accept` - a list of all accepted transactions
 2. `broadcast` - a list of all transactions broadcast to the network
-3. `excess` - if the node's transaction pool is full, this lists all excess transactions
+3. `excess` - if the node's pool is full, this lists all excess transactions
 4. `invalid` - a list of all transactions deemed invalid by the node
 
 Our sample code above submitted one transaction, which the node accepted and broadcast and thus the `accept` and `broadcast` arrays contain precisely one item each: the ID of the transaction we submitted.
