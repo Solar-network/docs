@@ -8,10 +8,10 @@ Phase 3 relates to transactions from the Swap Master Address to the new SXP main
 <br />
 All nodes on mainnet are equipped with a plugin that validates and processes transactions sent by the Swap Master Address.<br />
 
-!!! vendorField on mainnet transaction
+!!! memo on mainnet transaction
 
-    Swaps can only occur from a specific master address. The forging nodes will only process transactions from this wallet if the data in the vendorField matches with the response from the API's.
-    Meaning that any other transactions sent from this wallet with a wrong address, wrong transaction ID or no vendorField at all, will be denied by the forging nodes.
+    Swaps can only occur from a specific master address. The forging nodes will only process transactions from this wallet if the data in the memo matches with the response from the API's.
+    Meaning that any other transactions sent from this wallet with a wrong address, wrong transaction ID or no memo at all, will be denied by the forging nodes.
     This also means that in case the private keys of this master address are leaked in the public or somehow obtained by a hacker, there is no way to move funds out of this wallet without matching data from SXPSwap.
     Even if it does contain matched data. Duplicate transactions with the same transaction ID are denied by the network.
 

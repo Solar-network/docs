@@ -37,8 +37,8 @@ Transactions are sent to the POST `/api/transactions` endpoint of the Public API
 2. API Handler validates schema and sends transaction to the <a href="https://github.com/Solar-network/core/blob/75e3aa11e3466956fc7a860671bd4dd870a9d9fa/packages/pool/src/processor.ts" target="_blank" rel="noopener noreferrer">TransactionProcessor</a>
 3. TransactionProcessor performs additional transaction payload checks in relation to the blockchain protocol. If all checks are valid, the transaction is added to the pool
 
-<div class="admonition success">
-    <p class="admonition-title"></p>
+<div class="admonition note">
+    <p class="admonition-title">note</p>
     <p>All <a href="/sdk/documentation">Client SDKs</a> already create API requests to conform to this standard so will typically result in your transaction passing validation.</p>
 </div>
 

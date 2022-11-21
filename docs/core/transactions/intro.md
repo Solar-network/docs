@@ -4,7 +4,7 @@ title: Overview
 
 # Solar Core v3 Transactions
 
-This section will help you learn about Solar transactions, their structures and the processes of serialisating and deserialising transactions.
+This section will help you learn about Solar transactions, their structures and the processes of serialising and deserialising transactions.
 
 ---
 

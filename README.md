@@ -1,58 +1,82 @@
 
+# Solar Network Documentation
+
 <p align="center">
+  <img src="./banner.png" />
   <strong>
-    <a href="https://docs.solar.org/">Documentation for Solar Network</a>
+    <a href="https://docs.solar.org/">https://docs.solar.org</a>
   </strong>
 </p>
 
+> Solar Network Documentation made with [MkDocs Material](https://squidfunk.github.io/mkdocs-material/)
 
 ## Requirements
 
-- Node 14.17.0
-- Python
+- Python >= 3.6
+
+## Installation
+
+Solar Network documentation development utilises [Python venv](https://docs.python.org/3/library/venv.html):
+
+### 1: Create the Python Virtual Environment and install dependencies
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
+<details><summary>Later on, you can exit the virtual environment using the '<code>deactivate</code>' command.</summary>
+
+```bash
+deactivate
+```
+
+</details><br />
 
 
-## Quick start
+<!-- > Later on, you can exit the Python Virtual Environment using the '`deactivate`' command.
+>
+> ```bash
+> deactivate
+> ``` -->
 
-Documentation can be installed with `pip`:
+### 2: Serve locally
 
-``` sh
-pip install mkdocs
-pip install mkdocs-material
+```shell
 mkdocs serve
 ```
 
-Push to production
+> Then visit: `http://127.0.0.1:8000`
+
+### 3: Deploy to GH Pages
+
+<details><summary>(admins-only)</summary>
 
 ``` sh
 mkdocs build
 mkdocs gh-deploy --force
 ```
 
+</details><br />
+
+<!-- <details><summary>3: Deploy to GH Pages (admins-only)</summary>
+
+``` sh
+mkdocs build
+mkdocs gh-deploy --force
+```
+
+</details> -->
+
+## Security
+
+If you discover a security vulnerability within any of these packages, please send an e-mail to security@solar.org. All security vulnerabilities will be promptly addressed.
+
+## Credits
+
+This project exists thanks to all the people who [contribute](../../contributors).
+
 ## License
 
-**MIT License**
-
-Copyright (c) 2022 Solar (solar.org)
-
-Credits | ArkEcosystem (ark.io)
-
-Author | Martin Donath - mkdocs - mkdocs material
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to
-deal in the Software without restriction, including without limitation the
-rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-sell copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-IN THE SOFTWARE.
+Please read the separate [LICENSE](LICENSE) file for details.
