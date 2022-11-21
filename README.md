@@ -14,6 +14,9 @@
 
 - Python >= 3.6
 
+> Some Debian/Ubuntu systems may need to install `python3-venv`:<br />
+> e.g., `apt install python3.10-venv`
+
 ## Installation
 
 Solar Network documentation development utilises [Python venv](https://docs.python.org/3/library/venv.html):
