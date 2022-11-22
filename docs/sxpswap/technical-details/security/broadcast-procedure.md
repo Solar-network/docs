@@ -19,9 +19,9 @@ If the transaction is fully confirmed, the backend program will run the followin
 <br />
 
 Once all validations are passed. The backend program will generate a transaction and broadcast it to mainnet to the address that was submitted in the contract.<br />
-Within this transaction, the vendorField will contain additional details regarding the SXPSwap transaction in the following format:<br />
+Within this transaction, the memo will contain additional details regarding the SXPSwap transaction in the following format:<br />
 
-!!! vendorField on mainnet transaction
+!!! memo on mainnet transaction
 
     bsc:0x4f7ce4430909fef471f30c4d7c74156bc9df8887c3b0f7d0c50d2085dcada254
 
@@ -34,8 +34,8 @@ Adding this note to mainnet transactions will provide transparency to incoming s
 The server that hosts the backend program has several security features in case of failures such as server hacks, server reboot, ddos attacks, DC issues or server maintenance.<br />
 <br />
 
-Swaps can only occur from a specific master address. The forging nodes will only process transactions from this wallet if the data in the vendorField matches with the response from the API's.<br />
-Meaning that any other transactions sent from this wallet with a wrong address, wrong transaction ID or no vendorField at all, will be denied by the forging nodes.<br />
+Swaps can only occur from a specific master address. The forging nodes will only process transactions from this wallet if the data in the memo matches with the response from the API's.<br />
+Meaning that any other transactions sent from this wallet with a wrong address, wrong transaction ID or no memo at all, will be denied by the forging nodes.<br />
 This also means that in case the private keys of this master address are leaked in the public or somehow obtained by a hacker, there is no way to move funds out of this wallet without matching data from SXPSwap.<br />
 Even if it does contain matched data. Duplicate transactions with the same transaction ID are denied by the network.
 

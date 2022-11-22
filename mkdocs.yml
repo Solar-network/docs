@@ -1,60 +1,51 @@
 # Copyright (c) 2016-2022 Solar Network <info@solar.org>
-
-# Permission is hereby granted, free of charge, to any person obtaining a copy
-# of this software and associated documentation files (the "Software"), to
-# deal in the Software without restriction, including without limitation the
-# rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-# sell copies of the Software, and to permit persons to whom the Software is
-# furnished to do so, subject to the following conditions:
-
-# The above copyright notice and this permission notice shall be included in
-# all copies or substantial portions of the Software.
-
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-# FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-# FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-# IN THE SOFTWARE.
+#
+#  This work is licensed under a Creative Commons Attribution-NoDerivatives
+#  4.0 International License.
+#
+#  Licensed under the Apache License, Version 2.0 (the "License");
+#  you may not use this file except in compliance with the License.
+#  You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+#  Unless required by applicable law or agreed to in writing, software
+#  distributed under the License is distributed on an "AS IS" BASIS,
+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#  See the License for the specific language governing permissions and
+#  limitations under the License.
 
 # Project information
-site_name: Documentation
+site_name: Solar Documentation
 site_url: https://docs.solar.org
-site_author: Nayiem Willems
+site_author: Nayiem Willems, sl33p
 site_description: >-
-  Documentation for the SXP Blockchain
+  Documentation for the Solar Blockchain
 
 # Repository
 repo_name: solar-network/docs
 repo_url: https://github.com/solar-network/docs
-edit_uri: ""
 
 # Copyright
 copyright: Copyright &copy; 2016 - 2022 solar.org
 
 # Configuration
 theme:
-  name: null
-  custom_dir: !ENV [THEME_DIR, "material"]
+  name: material
+  custom_dir: overrides
   extra_css:
   - stylesheets/extra.css
-
-  # Static files
-  static_templates:
-    - 404.html
 
   # Don't include MkDocs' JavaScript
   include_search_page: false
   search_index_only: true
 
-  # Default values, taken from mkdocs_theme.yml
+  # Defaults
   language: en
   features:
     - content.code.annotate
-    - content.tabs.link
     - header.autohide
-    #- navigation.expand
+    - navigation.expand
     - navigation.indexes
     - navigation.instant
     - navigation.sections
@@ -65,15 +56,17 @@ theme:
     - search.highlight
     - search.share
     - search.suggest
-    # - toc.integrate
+    - toc.follow
   palette:
-    - scheme: default
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
       primary: deep orange
       accent: deep orange
       toggle:
         icon: material/toggle-switch
         name: Switch to dark mode
-    - scheme: slate
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
       primary: red
       accent: red
       toggle:
@@ -82,74 +75,48 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-  favicon: assets/favicon.png
-  icon:
-    logo: material/library
+  favicon: assets/images/favicon.ico
+  logo: assets/images/logo.svg
 
 # Plugins
 plugins:
-  - swagger
-  - search
   - minify:
       minify_html: true
+  - search
 
 # Customization
 extra:
-  swagger_url: 'https://petstore.swagger.io/v2/swagger.json'
-  analytics:
-    provider: google
-    property: !ENV GOOGLE_ANALYTICS_KEY
+  # analytics:
+  #   provider: google
+  #   property: !ENV GOOGLE_ANALYTICS_KEY
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/solar-network
     - icon: fontawesome/brands/twitter
-      link: https://twitter.com/solar-network
+      link: https://twitter.solar.org
+    - icon: fontawesome/brands/discord
+      link: https://discord.solar.org
 
 # Extensions
 markdown_extensions:
-  - abbr
   - admonition
   - attr_list
   - def_list
-  - footnotes
   - meta
   - md_in_html
   - toc:
       permalink: true
-  - pymdownx.arithmatex:
-      generic: true
   - pymdownx.betterem:
       smart_enable: all
-  - pymdownx.caret
   - pymdownx.details
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
-  - pymdownx.highlight:
-      anchor_linenums: true
-  - pymdownx.inlinehilite
-  - pymdownx.keys
-  - pymdownx.magiclink:
-      repo_url_shorthand: true
-      user: solar-network
-      repo: docs
-  - pymdownx.mark
-  - pymdownx.smartsymbols
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.tabbed:
-      alternate_style: true
-  - pymdownx.tasklist:
-      custom_checkbox: true
-  - pymdownx.tilde
+      emoji_index: !!python/name:materialx.emoji.twemoji
+  - pymdownx.superfences
 
 # Page tree
 nav:
-  - Home: 
-    - index.md
+  - Home: index.md
   - Core:
     - core/intro.md
     - Installation:

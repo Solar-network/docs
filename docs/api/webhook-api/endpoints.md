@@ -109,12 +109,12 @@ POST /api/webhooks
 
 ### Body Parameters
 
-| Name | Type | Description | Required |
-| :--- | :---: | :--- | :---: |
-| event | string | The name of the [event](/api/webhook-api/endpoints#events) to be listened for. | Yes |
-| target | string | The target URL for the HTTP payload. | Yes |
-| enabled | string | The value to enable or disable the webhook. | No |
-| conditions | array | The list of conditions required to trigger the webhook. | Yes |
+| Name       |  Type  | Description                                                                    | Required |
+|:-----------|:------:|:-------------------------------------------------------------------------------|:--------:|
+| event      | string | The name of the [event](/api/webhook-api/endpoints#events) to be listened for. |   Yes    |
+| target     | string | The target URL for the HTTP payload.                                           |   Yes    |
+| enabled    | string | The value to enable or disable the webhook.                                    |    No    |
+| conditions | array  | The list of conditions required to trigger the webhook.                        |   Yes    |
 
 ### Response
 
@@ -139,77 +139,77 @@ POST /api/webhooks
 
 ### Events
 
-| Event | Description | Implemented |
-| :--- | :--- | :--- |
-| kernel.booted | Fires when the kernel has booted | Yes |
-| kernel.booting | Fires when the kernel is booting | Yes |
-| kernel.bootstrapper.bootstrapped | Fires when the bootstrapper has bootstrapped | Yes |
-| kernel.bootstrapper.bootstrapping | Fires when the bootstrapper is bootstrapping  | Yes |
-| kernel.serviceProvider.booted | Fires when the kernel service provider has booted | Yes |
-| kernel.serviceProvider.disposed | Fires when the kernel service provider has been disposed | Yes |
-| kernel.serviceProvider.registered | Fires when the kernel service provider has been registered | Yes |
-| cache.flushed | Fires when the cache has been flushed | Yes |
-| cache.forgotten | Fires when the cache has been forgotten | Yes |
-| cache.hit | Fires when the cache has been hit | Yes |
-| cache.missed | Fires when the cache has been missed | Yes |
-| cache.written | Fires when the cache has been written to | Yes |
-| crypto.milestone.changed | Fires when the crypto milestone has changed | Yes |
-| blockchain.synced | Fires when the blockchain has synced | Yes |
-| block.applied | Fires when a block is saved | Yes |
-| block.disregarded | Fires when a block is disregarded | Yes |
-| block.forged | Fires when a block is forged | Yes |
-| block.received | Fires when a block is incoming | Yes |
-| block.reverted | Fires when a block is removed from the database (e.g. on a rollback) | Yes |
-| database.preConnect | Fires during the database pre-connection state | Yes |
-| database.postConnect | Fires during the database post-connection state | Yes |
-| database.preDisconnect | Fires during the database pre-disconnection state | Yes |
-| database.postDisconnect | Fires during the database post-disconnection state | Yes |
-| delegate.productivityChanged | Fires after a delegate's productivity has changed | Yes |
-| delegate.registered | Fires when a new delegate is registered | Yes |
-| delegate.resigned | Fires when a delegate resigns | Yes |
-| wallet.vote | Fires when a wallet votes | Yes |
-| forger.failed | Fires when the forger module fails to start | Yes |
-| forger.missing | Fires when it is detected that the forger module isn't running | Yes |
-| forger.started | Fires when the forger module forges a new block | No |
-| peer.added | Fires when a peer is added | Yes |
-| peer.disconnect | Fires when a peer will disconnect | Yes |
-| peer.disconnected | Fires when a peer has disconnected | Yes |
-| peer.disconnecting | Fires when a peer is disconnecting | Yes |
-| peer.removed | Fires when a peer is removed | Yes |
-| round.applied | Fires when a new round has been applied | Yes |
-| round.created | Fires when a new round is created and saved to the database | Yes |
-| round.missed | Fires when a round has been missed | Yes |
-| state:builder.finished | Fires when the state builder has finished building | Yes |
-| state:started | Fires when the state builder has started building | No |
-| state:starting | Fires when the state builder is starting to build | Yes |
-| transaction.pool.added | Fires when transactions are added to the pool | Yes |
-| transaction.applied | Fires when a transaction is saved | Yes |
-| transaction.expired | Fires when an unconfirmed transaction expires | Yes |
-| transaction.forged | Fires when a transaction is forged by a delegate | Yes |
-| transaction.pool.rejected | Fires when transactions are rejected and _not_ added to the pool | Yes |
-| transaction.pool.removed | Fires when a transaction is removed from the pool by its ID | Yes |
-| transaction.reverted | Fires when a transaction is removed from the database | Yes |
-| schedule.blockJob.finished | Fires when a block job has finished running | Yes |
-| schedule.cronJob.finished | Fires when a cron job has finished running | Yes |
-| queue.finished | Fires when the queue has finished | Yes |
-| queue.failed | Fires when the queue has failed | Yes |
+| Event                             | Description                                                          | Implemented |
+|:----------------------------------|:---------------------------------------------------------------------|:------------|
+| kernel.booted                     | Fires when the kernel has booted                                     | Yes         |
+| kernel.booting                    | Fires when the kernel is booting                                     | Yes         |
+| kernel.bootstrapper.bootstrapped  | Fires when the bootstrapper has bootstrapped                         | Yes         |
+| kernel.bootstrapper.bootstrapping | Fires when the bootstrapper is bootstrapping                         | Yes         |
+| kernel.serviceProvider.booted     | Fires when the kernel service provider has booted                    | Yes         |
+| kernel.serviceProvider.disposed   | Fires when the kernel service provider has been disposed             | Yes         |
+| kernel.serviceProvider.registered | Fires when the kernel service provider has been registered           | Yes         |
+| cache.flushed                     | Fires when the cache has been flushed                                | Yes         |
+| cache.forgotten                   | Fires when the cache has been forgotten                              | Yes         |
+| cache.hit                         | Fires when the cache has been hit                                    | Yes         |
+| cache.missed                      | Fires when the cache has been missed                                 | Yes         |
+| cache.written                     | Fires when the cache has been written to                             | Yes         |
+| crypto.milestone.changed          | Fires when the crypto milestone has changed                          | Yes         |
+| blockchain.synced                 | Fires when the blockchain has synced                                 | Yes         |
+| block.applied                     | Fires when a block is saved                                          | Yes         |
+| block.disregarded                 | Fires when a block is disregarded                                    | Yes         |
+| block.forged                      | Fires when a block is forged                                         | Yes         |
+| block.received                    | Fires when a block is incoming                                       | Yes         |
+| block.reverted                    | Fires when a block is removed from the database (e.g. on a rollback) | Yes         |
+| database.preConnect               | Fires during the database pre-connection state                       | Yes         |
+| database.postConnect              | Fires during the database post-connection state                      | Yes         |
+| database.preDisconnect            | Fires during the database pre-disconnection state                    | Yes         |
+| database.postDisconnect           | Fires during the database post-disconnection state                   | Yes         |
+| delegate.productivityChanged      | Fires after a delegate's productivity has changed                    | Yes         |
+| delegate.registered               | Fires when a new delegate is registered                              | Yes         |
+| delegate.resigned                 | Fires when a delegate resigns                                        | Yes         |
+| wallet.vote                       | Fires when a wallet votes                                            | Yes         |
+| forger.failed                     | Fires when the forger module fails to start                          | Yes         |
+| forger.missing                    | Fires when it is detected that the forger module isn't running       | Yes         |
+| forger.started                    | Fires when the forger module forges a new block                      | No          |
+| peer.added                        | Fires when a peer is added                                           | Yes         |
+| peer.disconnect                   | Fires when a peer will disconnect                                    | Yes         |
+| peer.disconnected                 | Fires when a peer has disconnected                                   | Yes         |
+| peer.disconnecting                | Fires when a peer is disconnecting                                   | Yes         |
+| peer.removed                      | Fires when a peer is removed                                         | Yes         |
+| round.applied                     | Fires when a new round has been applied                              | Yes         |
+| round.created                     | Fires when a new round is created and saved to the database          | Yes         |
+| round.missed                      | Fires when a round has been missed                                   | Yes         |
+| state.builder.finished            | Fires when the state builder has finished building                   | Yes         |
+| state.started                     | Fires when the state builder has started building                    | No          |
+| state.starting                    | Fires when the state builder is starting to build                    | Yes         |
+| transaction.pool.added            | Fires when transactions are added to the pool                        | Yes         |
+| transaction.applied               | Fires when a transaction is saved                                    | Yes         |
+| transaction.expired               | Fires when an unconfirmed transaction expires                        | Yes         |
+| transaction.forged                | Fires when a transaction is forged by a delegate                     | Yes         |
+| transaction.pool.rejected         | Fires when transactions are rejected and _not_ added to the pool     | Yes         |
+| transaction.pool.removed          | Fires when a transaction is removed from the pool by its ID          | Yes         |
+| transaction.reverted              | Fires when a transaction is removed from the database                | Yes         |
+| schedule.blockJob.finished        | Fires when a block job has finished running                          | Yes         |
+| schedule.cronJob.finished         | Fires when a cron job has finished running                           | Yes         |
+| queue.finished                    | Fires when the queue has finished                                    | Yes         |
+| queue.failed                      | Fires when the queue has failed                                      | Yes         |
 
 ### Conditions
 
-| Condition | Description |
-| :--- | :--- |
-| between | Check if the given value is between min and max |
-| contains | Check if A contains B |
-| eq | Check if A equals B |
-| falsy | Check if the given value is false |
-| gt | Check if A is greater than B |
-| gte | Check if A is greater than or equal to B |
-| lt | Check if A is lesser than B |
-| lte | Check if A is lesser than or equal to B |
-| ne | Check if A does not equal B |
+| Condition   | Description                                         |
+|:------------|:----------------------------------------------------|
+| between     | Check if the given value is between min and max     |
+| contains    | Check if A contains B                               |
+| eq          | Check if A equals B                                 |
+| falsy       | Check if the given value is false                   |
+| gt          | Check if A is greater than B                        |
+| gte         | Check if A is greater than or equal to B            |
+| lt          | Check if A is lesser than B                         |
+| lte         | Check if A is lesser than or equal to B             |
+| ne          | Check if A does not equal B                         |
 | not-between | Check if the given value is not between min and max |
-| regexp | Check if the given value matches |
-| truthy | Check if the given value is true |
+| regexp      | Check if the given value matches                    |
+| truthy      | Check if the given value is true                    |
 
 ## Update a Webhook
 
@@ -223,18 +223,18 @@ PUT /api/webhooks/{id}
 
 ### Path Parameters
 
-| Name | Type | Description | Required |
-| :--- | :---: | :--- | :---: |
-| id | string | The identifier of the webhook to be updated. | Yes |
+| Name |  Type  | Description                                  | Required |
+|:-----|:------:|:---------------------------------------------|:--------:|
+| id   | string | The identifier of the webhook to be updated. |   Yes    |
 
 ### Body Parameters
 
-| Name | Type | Description | Required |
-| :--- | :---: | :--- | :---: |
-| event | string | The name of the event to be listened for. | No |
-| target | string | The target URL for the HTTP payload. | No |
-| enabled | string | The value to enable or disable the webhook. | No |
-| conditions | array | The list of conditions required to trigger the webhook. | No |
+| Name       |  Type  | Description                                             | Required |
+|:-----------|:------:|:--------------------------------------------------------|:--------:|
+| event      | string | The name of the event to be listened for.               |    No    |
+| target     | string | The target URL for the HTTP payload.                    |    No    |
+| enabled    | string | The value to enable or disable the webhook.             |    No    |
+| conditions | array  | The list of conditions required to trigger the webhook. |    No    |
 
 ### Response
 
@@ -255,9 +255,9 @@ DELETE /api/webhooks/{id}
 
 ### Path Parameters
 
-| Name | Type | Description | Required |
-| :--- | :---: | :--- | :---: |
-| id | string | The identifier of the webhook to be deleted. | Yes |
+| Name |  Type  | Description                                  | Required |
+|:-----|:------:|:---------------------------------------------|:--------:|
+| id   | string | The identifier of the webhook to be deleted. |   Yes    |
 
 ### Response
 

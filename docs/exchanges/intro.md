@@ -8,7 +8,7 @@ title: Welcome to Solar
     <p class="admonition-title">This section is tailored for institutional/production usage of Solar Core</p>
 </div>
 
-The Solar Blockchain provides a `Public API` for interacting with the chain and its native `SXP` token.
+The Solar Blockchain provides a `Public API` for interacting with the chain and its native `SXP` coin.
 
 The proceeding pages describe the process of interacting with the Solar Blockchain and offers examples for accomplishing the most common chain-related tasks.
 
