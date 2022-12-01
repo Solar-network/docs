@@ -15,10 +15,9 @@ Put another way, the Crypto SDK structures your data in a format that all Solar 
 
 ![clientCrypto](/exchanges/assets/client-crypto.png)
 
-<div class="admonition note">
-    <p class="admonition-title">note</p>
-    <p>The Public API is only available after a node has fully synced. This ensures your data on the blockchain is up to date.</p>
-</div>
+!!! note
+
+    The Public API is only available after a node has fully synced. This ensures your data on the blockchain is up to date.
 
 ## Setup
 
@@ -214,10 +213,9 @@ const transactions = await client.api("wallets").transactions("validAddress", {b
 console.log(transactions.body.data);
 ```
 
-<div class="admonition info">
-    <p class="admonition-title">info</p>
-    <p>Transfer transactions can be either <b>LegacyTransfer</b> (typegroup 1, type 0) or <b>Transfer</b> (typegroup 1, type 6). When listening for incoming transactions, it is essential to monitor for both of these types of transfer.</p>
-</div>
+!!! info
+
+    Transfer transactions can be either **LegacyTransfer** (typegroup 1, type 0) or **Transfer** (typegroup 1, type 6). When listening for incoming transactions, it is essential to monitor for both of these types of transfer.
 
 ## Check Node Status
 

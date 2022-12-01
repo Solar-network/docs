@@ -6,10 +6,10 @@ title: Getting Started
 
 The webhooks API allows you to register a webhook in a specific node, which will send a payload to a predefined target when certain conditions are met. Webhooks ensure that you do not need to poll the public API periodically and are a robust way to stay up-to-date with the blockchain state.
 
-<div class="admonition tip">
-    <p class="admonition-title">tip</p>
-    <p>All HTTP requests have to be sent with the <code>Content-Type: application/json</code> header. If the header is not present it will result in malformed responses or request rejections.</p>
-</div>
+!!! tip
+
+    All HTTP requests have to be sent with the `Content-Type: application/json` header.  
+    If the header is not present it will result in malformed responses or request rejections.
 
 ## Installation
 

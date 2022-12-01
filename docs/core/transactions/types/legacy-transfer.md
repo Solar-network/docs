@@ -4,10 +4,9 @@ title: Transfer (Legacy)
 
 # Legacy Transfer _(**DEPRECATED**)_
 
-<div class="admonition warning">
-    <p class="admonition-title">warning</p>
-    <p>Transfer (Type 0) has been deprecated, please visit <a href="/core/transactions/types/transfer">'TypeGroup 1, Type 6: Transfer'</a> to see the updated transaction.</p>
-</div>
+!!! warning
+
+    Transfer (Type 0) has been deprecated, please visit <a href="/core/transactions/types/transfer">'TypeGroup 1, Type 6: Transfer'</a> to see the updated transaction.
 
 | TypeGroup | Type  |
 | :-------: | :---: |

@@ -76,10 +76,9 @@ Type or copy-paste the following command into your terminal:
 sudo usermod -a -G sudo solar
 ```
 
-<div class="admonition info">
-    <p class="admonition-title">info</p>
-    <p>In this example we use <b>'solar'</b> for the name of the new user account, but you should use whatever username was set in the previous steps above.</p>
-</div>
+!!! info
+
+    In this example we use **'solar'** for the name of the new user account, but you should use whatever username was set in the previous steps above.
 
 ### Step 3: Login as the New User
 
@@ -114,6 +113,7 @@ bash install.sh
 
 Thanks for choosing to install Solar Core! Preparing the setup procedure...
 ```
+
 ### Step 5: Select the Core network
 
 Once the installation of dependencies and Solar Core is finished you will need to select which network you wish to operate on. This can be achieved by pressing the `up` or `down` arrow keys and confirming your selection by pressing `enter`.
@@ -149,10 +149,7 @@ Installing Solar Core for mainnet. This process may take a few minutes
   › Setting up database
 ```
 
-<div class="admonition warning">
-    <p class="admonition-title">warning</p>
-    <p>The install process might take a while, don’t interrupt it, wait for it to finish.</p>
-</div>
+!!! warning "The install process might take a while, don’t interrupt it, wait for it to finish."
 
 At this point, Solar Core has been successfully installed with its configuration options properly published.
 
@@ -176,9 +173,7 @@ See "man sudo_root" for details.
 
 ## Success
 
-<div class="admonition success">
-    <p class="admonition-title">Your installation is all set! 🎉</p>
-</div>
+!!! success "Your installation is all set! 🎉"
 
 That’s it, you may now start your relay and view its logs using the following command:
 
@@ -274,7 +269,10 @@ solar relay:start && pm2 logs
 ...
 ```
 
-<div class="admonition info">
-    <p class="admonition-title">info</p>
-    <p>Synchronisation of the blockchain can take some time.<br /><br />Once synchronised, the `allowed to forge block ...` messages will be logged every ~8 seconds — as opposed to milliseconds apart shown during sync.<br /><br />A single round consists of 53 delegates, each forging a single block.</p>
-</div>
+!!! info
+
+    Synchronisation of the blockchain can take some time.
+
+    Once synchronised, the `allowed to forge block ...` messages will be logged every ~8 seconds — as opposed to the millisecond intervals shown during sync.
+
+    A single round consists of 53 delegates, each forging a single block.

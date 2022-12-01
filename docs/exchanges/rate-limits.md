@@ -26,10 +26,9 @@ Excluding certain IP addresses from rate limiting can be achieved by setting `CO
 
 ## Use case 1: Disable Rate Limits  <a id="disable-rate-limits"></a>
 
-<div class="admonition warning">
-    <p class="admonition-title">warning</p>
-    <p>Make sure API is accessible only to your internal network and not visible to the outside world.</p>
-</div>
+!!! warning
+
+    - Make sure API is accessible only to your internal network and not visible to the outside world.
 
 ```javascript
 CORE_API_RATE_LIMIT_DISABLED=true
@@ -37,10 +36,9 @@ CORE_API_RATE_LIMIT_DISABLED=true
 
 ## Use case 2: Whitelisting  <a id="white-listing"></a>
 
-<div class="admonition info">
-    <p class="admonition-title">info</p>
-    <p>Instead of globally disabling rate limits it is possible to exclude certain IP addresses from rate limits and raise the global limits.</p>
-</div>
+!!! info
+
+    Instead of globally disabling rate limits it is possible to exclude certain IP addresses from rate limits and raise the global limits.
 
 ```javascript
 CORE_API_RATE_LIMIT_WHITELIST=127.0.0.1,192.168.1.1,172.31.255.1

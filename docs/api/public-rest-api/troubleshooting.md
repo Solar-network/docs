@@ -8,10 +8,10 @@ If you're encountering some oddities in the API, here's a list of resolutions to
 
 ## Why Am I Getting a 404 Error on a Resource That Exists?
 
-<div class="admonition tip">
-    <p class="admonition-title">tip</p>
-    <p>All HTTP requests have to be sent with the <code>Content-Type: application/json</code> header. If the header is not present it will result in malformed responses or request rejections.</p>
-</div>
+!!! tip
+
+    All HTTP requests have to be sent with the `Content-Type: application/json` header.  
+    If the header is not present it will result in malformed responses or request rejections.
 
 Typically, this means that the node you are sending your requests to is out of sync and missing data that exists on other nodes that are in sync.
 

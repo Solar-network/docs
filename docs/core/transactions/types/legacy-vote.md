@@ -4,10 +4,9 @@ title: Vote (Legacy)
 
 # Legacy Vote _(**DEPRECATED**)_
 
-<div class="admonition warning">
-    <p class="admonition-title">warning</p>
-    <p>Vote (Type 3) has been deprecated, please visit <a href="/core/transactions/types/vote">'TypeGroup 2, Type 2: Vote'</a> to see the updated transaction.</p>
-</div>
+!!! warning
+
+    Vote (Type 3) has been deprecated, please visit <a href="/core/transactions/types/vote">'TypeGroup 2, Type 2: Vote'</a> to see the updated transaction.
 
 | TypeGroup | Type  |
 | :-------: | :---: |

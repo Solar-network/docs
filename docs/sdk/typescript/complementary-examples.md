@@ -104,10 +104,9 @@ const client = new Connection("https://tapi.solar.org/api");
 })();
 ```
 
-<div class="admonition info">
-    <p class="admonition-title">info</p>
-    <p>The memo is optional and limited to a length of 255 characters. It can be a good idea to add a memo to your transactions if you want to be able to easily track or identify them in the future or include a personal message to the transaction's recipient(s).</p>
-</div>
+!!! info
+
+    The memo is optional and limited to a length of 255 characters. It can be a good idea to add a memo to your transactions if you want to be able to easily track or identify them in the future or include a personal message to the transaction's recipient(s).
 
 ## Creating and Broadcasting a Second Signature
 
@@ -215,10 +214,9 @@ const client = new Connection("https://tapi.solar.org/api");
 })();
 ```
 
-<div class="admonition info">
-    <p class="admonition-title">info</p>
-    <p>Note the <b>numbers</b> in the object that is passed on the <b>votesAsset</b> function represent the percentage of the wallet balance you want to vote towards the related delegate. This implies that the sum of all of them must be 100 or the object has to be empty for unvoting.</p>
-</div>
+!!! info
+
+    Note the **numbers** in the object that is passed on the **votesAsset** function represent the percentage of the wallet balance you want to vote towards the related delegate. This implies that the sum of all of them must be 100 or the object has to be empty for unvoting.
 
 ## Creating and Broadcasting a IPFS
 
@@ -290,14 +288,9 @@ const client = new Connection("https://tapi.solar.org/api");
 })();
 ```
 
-<div class="admonition info">
-    <p class="admonition-title">info</p>
-    <p>
-        A delegate resignation has to be sent from the delegate wallet itself to verify its identity.
-Resignation can be of 2 types:
-        <ul>
-            <li>0 meaning the resignation is only temporary and can be undone</li>
-            <li>1 meaning the resignation is permanent</li>
-        </ul>
-    </p>
-</div>
+!!! info "A delegate resignation <u>must</u> be sent from the corresponding delegate's wallet in order to verify their identity."
+
+!!! info "Resignation can be of 2 types:"
+
+    - 0 - meaning the resignation is only temporary and can be undone
+    - 1 - meaning the resignation is permanent

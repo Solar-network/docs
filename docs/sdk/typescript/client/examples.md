@@ -16,10 +16,9 @@ const client = new Connection(`${server}/api`);
 
 This service API grants access to the <a href="https://api.solar.org/#/Blocks" target="_blank" rel="noopener noreferrer">blocks resource</a>. A block is a signed set of transactions created by a delegate and permanently committed to the SXP blockchain.
 
-<div class="admonition info">
-    <p class="admonition-title">info</p>
-    <p>It is not possible to <code>POST</code> a block through the public API. Relay Nodes accept only blocks posted by a delegate at the correct time through the internal API.</p>
-</div>
+!!! info
+
+    It is not possible to `POST` a block through the public API. Relay Nodes accept only blocks posted by a delegate at the correct time through the internal API.
 
 ### List All Blocks
 
@@ -289,10 +288,9 @@ The client SDK can be used to query the <a href="https://api.solar.org/#/Delegat
 
 A delegate is a regular wallet that has broadcast a registration transaction, acquired a sufficient number of votes, and has a Relay Node configured to forge new blocks through a `forger` module. At any time only 53 delegates are active. They are cost-efficient miners running the SXP network.
 
-<div class="admonition info">
-    <p class="admonition-title">info</p>
-    <p>Voters are wallets which have broadcast a vote transaction on a delegate. A vote remains active until an un-vote transaction is sent (it does not have to be recast unless a wallet wishes to change from delegate). Voting for a delegate does not give the delegate access to the wallet nor does it lock the coins in it.</p>
-</div>
+!!! info
+
+    Voters are wallets which have broadcast a vote transaction on a delegate. A vote remains active until an un-vote transaction is sent (it does not have to be recast unless a wallet wishes to change from delegate). Voting for a delegate does not give the delegate access to the wallet nor does it lock the coins in it.
 
 ### List All Delegates
 
@@ -778,10 +776,9 @@ console.log(response.body);
 
 Each node is connected to a set of peers, which are Relay or Delegate Nodes as well. The <a href="https://tapi.solar.org/#/Node/get_peers" target="_blank" rel="noopener noreferrer">peers resource</a> provides access to all peers connected to our node.
 
-<div class="admonition info">
-    <p class="admonition-title">info</p>
-    <p>Peers have made their Public API available for use; however for mission-critical queries and transaction posting you should use a node which is under your control.</p>
-</div>
+!!! info
+
+    Peers have made their Public API available for use; however for mission-critical queries and transaction posting you should use a node which is under your control.
 
 ### List All Peers
 
@@ -899,10 +896,9 @@ console.log(response.body);
 
 The heart of any blockchain is formed by its transactions; state-altering payloads signed by a wallet. Most likely you will be querying for transactions most often, using the <a href="https://tapi.solar.org/#/Transactions" target="_blank" rel="noopener noreferrer">transaction resource</a>.
 
-<div class="admonition info">
-    <p class="admonition-title">info</p>
-    <p>A transaction is the only object which may be posted by a non-delegate. It requires a signature from a wallet containing a sufficient amount of SXP.</p>
-</div>
+!!! info
+
+    A transaction is the only object which may be posted by a non-delegate. It requires a signature from a wallet containing a sufficient amount of SXP.
 
 ### Create a Transaction
 
