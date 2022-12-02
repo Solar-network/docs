@@ -221,13 +221,13 @@ Existing webhooks may be updated. _Note that this is the equivalent of deleting 
 PUT /api/webhooks/{id}
 ```
 
-### Path Parameters
+### Path parameters
 
 | Name |  Type  | Description                                  | Required |
 |:-----|:------:|:---------------------------------------------|:--------:|
 | id   | string | The identifier of the webhook to be updated. |   Yes    |
 
-### Body Parameters
+### Body parameters
 
 | Name       |  Type  | Description                                             | Required |
 |:-----------|:------:|:--------------------------------------------------------|:--------:|
@@ -243,7 +243,7 @@ HTTP/1.1 204 No Content
 {}
 ```
 
-## Delete a Webhook
+## Delete a webhook
 
 A webhook may be deleted by ID. Delete unused webhooks to save machine resources.
 
@@ -253,7 +253,7 @@ A webhook may be deleted by ID. Delete unused webhooks to save machine resources
 DELETE /api/webhooks/{id}
 ```
 
-### Path Parameters
+### Path parameters
 
 | Name |  Type  | Description                                  | Required |
 |:-----|:------:|:---------------------------------------------|:--------:|

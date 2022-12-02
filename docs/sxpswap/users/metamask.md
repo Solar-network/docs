@@ -11,7 +11,7 @@ title: Swap/Migration for MetaMask users
     Visit our official website to download the latest [Solar Desktop Wallet](https://solar.org/desktop-wallet).
 
 
-## Swap Procedure
+## Swap procedure
 
 This guide is meant for users that have their ERC20/BEP20 SXP tokens in the Metamask Wallet.<br /> <br />
 Read the instructions below to swap your ERC20/BEP20 SXP tokens to Mainnet SXP coins:

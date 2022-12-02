@@ -16,4 +16,4 @@ For more information about fees, please visit: [Transaction Fees](/desktop-walle
 
 Upon clicking _**Next**_, you will have to review the transfer transaction's details and can proceed by clicking the "Continue" button.
 
-Enter your mnemonic or passsword and __voila!__
+Enter your mnemonic or password and __voila!__

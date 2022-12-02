@@ -6,7 +6,7 @@ title: Installation Steps
 
 A step-by-step guide on how to prepare a fully-functional environment using the install script.
 
-## Getting Started
+## Getting started
 
 The instructions on this page will guide you through creating a new user account with the correct privileges, installing and configuring Solar Core, then starting a relay instance and logging the output using the installation script.
 
@@ -25,11 +25,11 @@ solar relay:start
 pm2 logs
 ```
 
-## Step-by-Step Installation via the Script
+## Step-by-step installation via the install script
 
 If you are planning to setup a new server you can execute the following steps.
 
-### Step 1: Create a New Account
+### Step 1: Create a new account
 
 Create a new dedicated user account to manage SXP-related software.
 
@@ -66,7 +66,7 @@ Is the information correct? [Y/n] Y
 
 ---
 
-### Step 2: Grant Sudo Privileges
+### Step 2: Grant sudo privileges
 
 Next, we need to make sure that our user account has all of the necessary privileges to run Solar Core properly. This will give our user account `sudo` privileges.
 
@@ -80,7 +80,7 @@ sudo usermod -a -G sudo solar
 
     In this example we use **'solar'** for the name of the new user account, but you should use whatever username was set in the previous steps above.
 
-### Step 3: Login as the New User
+### Step 3: Login as the new user
 
 We now should switch to the user account created above, this will also land us in the user's base directory (`~/`).
 
@@ -92,7 +92,7 @@ su -l solar
 
 ---
 
-### Step 4: Run the Installation Script
+### Step 4: Run the installation script
 
 Here, we will use the `install.sh` script. This installs Solar Core and all of its dependencies onto your server, then publishes the configuration files for it.
 

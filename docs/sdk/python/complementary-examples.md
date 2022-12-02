@@ -22,7 +22,7 @@ pip3 install solar-crypto --upgrade
 ```
 <!--/email_off-->
 
-## Creating and Broadcasting a Transfer
+## Creating and broadcasting a transfer
 
 ```python
 from solar_client import SolarClient
@@ -68,7 +68,7 @@ The transaction memo is optional and limited to a length of 255 characters. It c
 Rest of the examples assume V3 transactions as default. You must set the version explicity using `transaction.set_version(int)` otherwise.
 </x-alert>
 
-## Creating and Broadcasting a Legacy Transfer
+## Creating and broadcasting a legacy transfer
 
 ```python
 from solar_client import SolarClient
@@ -108,7 +108,7 @@ except SolarHTTPException as exception:
 print(broadcastResponse)
 ```
 
-## Creating and Broadcasting a Second Signature
+## Creating and broadcasting a second signature
 
 ```python
 from solar_client import SolarClient
@@ -145,7 +145,7 @@ except SolarHTTPException as exception:
 print(broadcastResponse)
 ```
 
-## Creating and Broadcasting a Delegate Registration
+## Creating and broadcasting a delegate registration
 
 ```python
 from solar_client import SolarClient
@@ -182,7 +182,7 @@ except SolarHTTPException as exception:
 print(broadcastResponse)
 ```
 
-## Creating and Broadcasting a Delegate Resignation
+## Creating and broadcasting a delegate resignation
 
 ```python
 from solar_client import SolarClient
@@ -223,7 +223,7 @@ print(broadcastResponse)
 A delegate resignation has to be sent from the delegate wallet itself to verify its identity.
 </x-alert>
 
-## Creating and Broadcasting a Vote (Solar Version >= 4.0.0)
+## Creating and broadcasting a vote (Solar version >= 4.0.0)
 
 ```python
 from solar_client import SolarClient
@@ -261,7 +261,7 @@ except SolarHTTPException as exception:
 print(broadcastResponse)
 ```
 
-## Creating and Broadcasting a Legacy Vote (Solar Version >= 3.3.0 & < 4.0.0)
+## Creating and broadcasting a legacy vote (Solar version >= 3.3.0 & < 4.0.0)
 
 ```python
 from solar_client import SolarClient
@@ -300,7 +300,7 @@ except SolarHTTPException as exception:
 print(broadcastResponse)
 ```
 
-## Creating and Broadcasting a MultiSignature Registration
+## Creating and broadcasting a multisignature registration
 
 ```python
 from solar_client import SolarClient
@@ -346,7 +346,7 @@ except SolarHTTPException as exception:
 print(broadcastResponse)
 ```
 
-## Creating and Broadcasting a IPFS
+## Creating and broadcasting a ipfs
 
 ```python
 from solar_client import SolarClient
@@ -383,7 +383,7 @@ except SolarHTTPException as exception:
 print(broadcastResponse)
 ```
 
-## Creating and Broadcasting a HTLC Lock
+## Creating and broadcasting a htlc lock
 
 ```python
 from solar_client import SolarClient
@@ -436,7 +436,7 @@ except SolarHTTPException as exception:
 print(broadcastResponse)
 ```
 
-## Creating and Broadcasting a HTLC Claim
+## Creating and broadcasting a htlc claim
 
 ```python
 from solar_client import SolarClient
@@ -482,7 +482,7 @@ print(broadcastResponse)
 The **unlockSecret** has to be a SHA256 hash of the plain text secret that you shared with the person that is allowed to claim the transaction.
 </x-alert>
 
-## Creating and Broadcasting a HTLC Refund
+## Creating and broadcasting a htlc refund
 
 ```python
 from solar_client import SolarClient

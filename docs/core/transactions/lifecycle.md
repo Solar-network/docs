@@ -14,9 +14,9 @@ All valid transactions are submitted as payload data via the [Public REST API](/
 
 In the next sections we will look into the transaction lifecycle from creation to final inclusion in the blocks.
 
-## Transaction Journey From Client To Blockchain
+## Transaction journey from client To blockchain
 
-### 1. Create and Sign Transaction Locally
+### 1. Create and sign transaction locally
 
 Transactions are generated and signed locally with one of many available [SDK libraries](/sdk/documentation). Locally generated and signed transactions are sent as a <a href="https://api.solar.org/#/Transactions/post_transactions" target="_blank" rel="noopener noreferrer">POST request</a> with transaction data to a server running Core.
 
@@ -26,7 +26,7 @@ Transactions are generated and signed locally with one of many available [SDK li
 
 ![](/core/assets/send_to_node.png)
 
-### 2. Receive and Validate Transaction on a Server Running Core
+### 2. Receive and validate transaction on a server running Core
 
 Transactions are sent to the POST `/api/transactions` endpoint of the Public API. From there all requests are first validated by the API endpoint schema. Each endpoint schema defines the structure that requests should conform to.
 
@@ -63,7 +63,7 @@ Internally, the `TransactionProcessor` processes transactions in its `validate` 
 
     At this point, Core has a list of incoming transactions to add to the pool. TransactionProcessor now checks the pool to see whether it is at capacity. If so, it compares the incoming transactions against the pooled transactions and removes the transactions with the lowest fees.
 
-### 3. From TransactionPool To Transaction Inclusion Within Blocks
+### 3. From transaction pool to transaction inclusion within blocks
 
 Transactions move out of the pool once a forging delegate (block producer) is ready and eligible to forge it. At the moment of forging, transactions in the forger's pool are grouped into a potential block and passed to the delegate's `forge` method for inclusion in a block.
 
@@ -73,7 +73,7 @@ Inside the `forge` method, all transaction values, fees, and IDs within the bloc
 
 With this information in hand, the block data and sorted transactions are passed to the crypto library's `Block.create` method alongside the forging delegate's keys.
 
-### 4. Block Creation
+### 4. Block creation
 
 A block is a collection of transactions, but also it is the incremental unit of the blockchain. Every eight seconds, an active delegate produces a new block by bundling a bunch of transactions, verifying each transaction, and signing the block.
 
@@ -96,7 +96,7 @@ The `Block.create` method uses the following algorithm to create a new block:
 6. Cast the data into a Block model using the new transaction and block ID.
 7. Return the cast Block object.
 
-### 5. Block Propagation
+### 5. Block propagation
 
 With the forged block successfully returned to the forger library, the only remaining responsibility is to let the network know about the new block - block propagation.
 

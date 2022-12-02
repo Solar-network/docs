@@ -64,7 +64,7 @@ Managers.configManager.setFromPreset("testnet");
 Managers.configManager.setHeight(current_height);
 ```
 
-## Creating and Broadcasting a Transfer
+## Creating and broadcasting a transfer
 
 ```typescript
 import { Transactions, Managers, Utils } from "@solar-network/crypto";
@@ -108,7 +108,7 @@ const client = new Connection("https://tapi.solar.org/api");
 
     The memo is optional and limited to a length of 255 characters. It can be a good idea to add a memo to your transactions if you want to be able to easily track or identify them in the future or include a personal message to the transaction's recipient(s).
 
-## Creating and Broadcasting a Second Signature
+## Creating and broadcasting a second signature
 
 ```typescript
 import { Transactions, Managers, Utils } from "@solar-network/crypto";
@@ -144,7 +144,7 @@ const client = new Connection("https://tapi.solar.org/api");
 })();
 ```
 
-## Creating and Broadcasting a Delegate Registration
+## Creating and broadcasting a delegate registration
 
 ```typescript
 import { Transactions, Managers, Utils } from "@solar-network/crypto";
@@ -179,7 +179,7 @@ const client = new Connection("https://tapi.solar.org/api");
 })();
 ```
 
-## Creating and Broadcasting a Vote
+## Creating and broadcasting a vote
 
 ```typescript
 import { Transactions, Managers, Utils } from "@solar-network/crypto";
@@ -218,7 +218,7 @@ const client = new Connection("https://tapi.solar.org/api");
 
     Note the **numbers** in the object that is passed on the **votesAsset** function represent the percentage of the wallet balance you want to vote towards the related delegate. This implies that the sum of all of them must be 100 or the object has to be empty to cancel an existing vote.
 
-## Creating and Broadcasting a IPFS
+## Creating and broadcasting a IPFS
 
 ```typescript
 import { Transactions, Managers, Utils } from "@solar-network/crypto";
@@ -253,7 +253,7 @@ const client = new Connection("https://tapi.solar.org/api");
 })();
 ```
 
-## Creating and Broadcasting a Delegate Resignation
+## Creating and broadcasting a delegate resignation
 
 ```typescript
 import { Transactions, Managers, Utils } from "@solar-network/crypto";

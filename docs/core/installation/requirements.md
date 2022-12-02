@@ -2,7 +2,7 @@
 title: Requirements
 ---
 
-# Server Requirements
+# Server requirements
 
 | Supported OS | Release   |
 | :----------: | :-------: |

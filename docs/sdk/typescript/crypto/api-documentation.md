@@ -20,7 +20,7 @@ Generate Block object from HEX.
 | :--- | :--- | :--- | :--- |
 | string | hex | Yes | Block content |
 
-#### Return Value
+#### Return value
 
 `IBlock`
 
@@ -38,7 +38,7 @@ Generate Block object from a Buffer.
 | :--- | :--- | :--- | :--- |
 | Buffer | buffer | Yes | Block content |
 
-#### Return Value
+#### Return value
 
 `IBlock`
 
@@ -56,7 +56,7 @@ Generate Block object from JSON.
 | :--- | :--- | :--- | :--- |
 | IBlockJson | json | Yes | Block content |
 
-#### Return Value
+#### Return value
 
 `IBlock`
 
@@ -75,7 +75,7 @@ Generate Block object from Block data.
 | IBlockData | data | Yes | Block content |
 | object | options | Yes | Options used for parsing block data |
 
-#### Return Value
+#### Return value
 
 `IBlock`
 
@@ -95,7 +95,7 @@ Get size of Block.
 | :--- | :--- | :--- | :--- |
 | IBlock | block | Yes | Block object |
 
-#### Return Value
+#### Return value
 
 `number`
 
@@ -113,7 +113,7 @@ Serialise Block with Transactions.
 | :--- | :--- | :--- | :--- |
 | IBlockData | block | Yes | Block object |
 
-#### Return Value
+#### Return value
 
 `Buffer`
 
@@ -132,7 +132,7 @@ Serialise Block without Transactions.
 | IBlockData | block | Yes | Block object |
 | boolean | includeSignature | Yes | Whether to include signature in serialisation |
 
-#### Return Value
+#### Return value
 
 `Buffer`
 
@@ -152,7 +152,7 @@ Hash with RIPEMD-160.
 | :--- | :--- | :--- | :--- |
 | Buffer, string | buffer | Yes | String or Buffer to generate hash for |
 
-#### Return Value
+#### Return value
 
 `Buffer`
 
@@ -170,7 +170,7 @@ Hash with SHA-1.
 | :--- | :--- | :--- | :--- |
 | Buffer, string | buffer | Yes | String or Buffer to generate hash for |
 
-#### Return Value
+#### Return value
 
 `Buffer`
 
@@ -188,7 +188,7 @@ Hash with SHA-256.
 | :--- | :--- | :--- | :--- |
 | Buffer, string | buffer | Yes | String or Buffer to generate hash for |
 
-#### Return Value
+#### Return value
 
 `Buffer`
 
@@ -206,7 +206,7 @@ Hash with Hash160.
 | :--- | :--- | :--- | :--- |
 | Buffer, string | buffer | Yes | String or Buffer to generate hash for |
 
-#### Return Value
+#### Return value
 
 `Buffer`
 
@@ -224,7 +224,7 @@ Hash with Hash256.
 | :--- | :--- | :--- | :--- |
 | Buffer, string | buffer | Yes | String or Buffer to generate hash for |
 
-#### Return Value
+#### Return value
 
 `Buffer`
 
@@ -245,7 +245,7 @@ Sign hash with ECDSA.
 | Buffer | hash | Yes | Hash to sign |
 | IKeyPair | keys | Yes | Keys to sign hash with |
 
-#### Return Value
+#### Return value
 
 `string`
 
@@ -265,7 +265,7 @@ Verify ECDSA signature.
 | Buffer, string | signature | Yes | Signature of hash |
 | Buffer, string | publicKey | Yes | Public key of wallet which signed the hash |
 
-#### Return Value
+#### Return value
 
 `boolean`
 
@@ -284,7 +284,7 @@ Sign hash with Schnorr.
 | Buffer | hash | Yes | Hash to sign |
 | IKeyPair | keys | Yes | Keys to sign hash with |
 
-#### Return Value
+#### Return value
 
 `string`
 
@@ -304,7 +304,7 @@ Verify Schnorr signature.
 | Buffer, string | signature | Yes | Signature of hash |
 | Buffer, string | publicKey | Yes | Public key of wallet which signed the hash |
 
-#### Return Value
+#### Return value
 
 `boolean`
 
@@ -325,7 +325,7 @@ Generate BIP32 Wallet from mnemonic.
 | string | mnemonic | Yes | INSERT_DESCRIPTION |
 | string | passphrase | No | INSERT_DESCRIPTION |
 
-#### Return Value
+#### Return value
 
 `BIP32Interface`
 
@@ -344,7 +344,7 @@ Generate BIP32 Wallet from KeyPair.
 | IKeyPair | keys | Yes | INSERT_DESCRIPTION |
 | Buffer | chainCode | Yes | INSERT_DESCRIPTION |
 
-#### Return Value
+#### Return value
 
 `BIP32Interface`
 
@@ -362,7 +362,7 @@ Get keys for BIP32 Wallet.
 | :--- | :--- | :--- | :--- |
 | BIP32Interface | node | Yes | BIP32 Wallet to get keys for |
 
-#### Return Value
+#### Return value
 
 `IKeyPair`
 
@@ -381,7 +381,7 @@ Determine Slip44 for BIP32 Wallet.
 | BIP32Interface | root | Yes | BIP32 Wallet to determine Slip44 for |
 | boolean | hardened | Yes | INSERT_DESCRIPTION |
 
-#### Return Value
+#### Return value
 
 `BIP32Interface`
 
@@ -399,7 +399,7 @@ Determine Network for BIP32 Wallet.
 | :--- | :--- | :--- | :--- |
 | BIP32Interface | root | Yes | BIP32 Wallet to determine network for |
 
-#### Return Value
+#### Return value
 
 `BIP32Interface`
 
@@ -420,7 +420,7 @@ Sign a message using the given passphrase.
 | string | message | Yes | Message |
 | string | passphrase | Yes | Passphrase |
 
-#### Return Value
+#### Return value
 
 `IMessage`
 
@@ -440,7 +440,7 @@ Sign a message using the given WIF string.
 | string | wif | Yes | Network WIF |
 | INetwork | network | No | Network |
 
-#### Return Value
+#### Return value
 
 `IMessage`
 
@@ -458,7 +458,7 @@ Verify the message contents
 | :--- | :--- | :--- | :--- |
 | IMessage | object | Yes | Message |
 
-#### Return Value
+#### Return value
 
 `boolean`
 
@@ -478,7 +478,7 @@ Get the time diff between now and network start.
 | :--- | :--- | :--- | :--- |
 | number | time | No | Network start time |
 
-#### Return Value
+#### Return value
 
 `number`
 
@@ -490,7 +490,7 @@ public static getTimeInMsUntilNextSlot()
 
 Get the time (in milliseconds) until the start of the next slot.
 
-#### Return Value
+#### Return value
 
 `number`
 
@@ -508,7 +508,7 @@ Get the slot number.
 | :--- | :--- | :--- | :--- |
 | number | epoch | No | Epoch time |
 
-#### Return Value
+#### Return value
 
 `number`
 
@@ -526,7 +526,7 @@ Get the slot time.
 | :--- | :--- | :--- | :--- |
 | number | slot | Yes | Slot |
 
-#### Return Value
+#### Return value
 
 `number`
 
@@ -538,7 +538,7 @@ public static getNextSlot()
 
 Get the next slot.
 
-#### Return Value
+#### Return value
 
 `number`
 
@@ -556,7 +556,7 @@ Verify is forging is allowed.
 | :--- | :--- | :--- | :--- |
 | number | epoch | No | Epoch time |
 
-#### Return Value
+#### Return value
 
 `boolean`
 
@@ -577,7 +577,7 @@ Derive the address from the given passphrase.
 | string | passphrase | Yes | Passphrase |
 | number | networkVersion | No | Version of the network |
 
-#### Return Value
+#### Return value
 
 `string`
 
@@ -596,7 +596,7 @@ Derive a (multisig) address from a multi signature asset.
 | string | publicKey | Yes | Public key |
 | number | networkVersion | No | Version of the network |
 
-#### Return Value
+#### Return value
 
 `string`
 
@@ -615,7 +615,7 @@ Derive the address from a WIF string.
 | string | wif | Yes | WIF |
 | NetworkType | network | No | Network to generate address for |
 
-#### Return Value
+#### Return value
 
 `string`
 
@@ -634,7 +634,7 @@ Derive the address from the given multi signature asset.
 | IMultiSignatureAsset | asset | Yes | Address to validate |
 | number | networkVersion | No | Version of the network |
 
-#### Return Value
+#### Return value
 
 `string`
 
@@ -653,7 +653,7 @@ Derive the address from the given private key.
 | any | privateKey | Yes | Private key to derive address for |
 | number | networkVersion | No | Version of the network |
 
-#### Return Value
+#### Return value
 
 `string`
 
@@ -671,7 +671,7 @@ Derive the address from a Buffer.
 | :--- | :--- | :--- | :--- |
 | Buffer | buffer | Yes | Buffer to derive address from |
 
-#### Return Value
+#### Return value
 
 `string`
 
@@ -689,7 +689,7 @@ Convert address to a Buffer.
 | :--- | :--- | :--- | :--- |
 | string | address | Yes | Address to convert to buffer |
 
-#### Return Value
+#### Return value
 
 `{ addressBuffer: Buffer; addressError?: string }`
 
@@ -708,7 +708,7 @@ Validate the given address.
 | string | address | Yes | Address to validate |
 | number | networkVersion | No | Version of the network |
 
-#### Return Value
+#### Return value
 
 `boolean`
 
@@ -729,7 +729,7 @@ Derive the keys from the given passphrase.
 | string | passphrase | Yes | Passphrase |
 | boolean | compressed | Yes | Compression flag |
 
-#### Return Value
+#### Return value
 
 `IKeyPair`
 
@@ -748,7 +748,7 @@ Derive the keys from the given private key.
 | Buffer, string | privateKey | Yes | Private Key to derive keys from |  |
 | boolean | compressed | Yes | Compression flag |  |
 
-#### Return Value
+#### Return value
 
 `IKeyPair`
 
@@ -767,7 +767,7 @@ Derive the keys from the given WIF.
 | string | wifKey | Yes | Private key |
 | INetwork | network | No | Network |
 
-#### Return Value
+#### Return value
 
 `IKeyPair`
 
@@ -787,7 +787,7 @@ Derive the private key for the given passphrase.
 | :--- | :--- | :--- | :--- |
 | string | passphrase | Yes | Passphrase |
 
-#### Return Value
+#### Return value
 
 `string`
 
@@ -806,7 +806,7 @@ Create a private key instance from a hex string.
 | string | wif | Yes | Network WIF |
 | NetworkType | network | No | Network |
 
-#### Return Value
+#### Return value
 
 `string`
 
@@ -826,7 +826,7 @@ Derive the public key from the given passphrase.
 | :--- | :--- | :--- | :--- |
 | string | passphrase | Yes | Passphrase |
 
-#### Return Value
+#### Return value
 
 `string`
 
@@ -845,7 +845,7 @@ Derive the public key from the given WIF.
 | string | wif | Yes | WIF to derive public key from |
 | NetworkType | network | No | Network |
 
-#### Return Value
+#### Return value
 
 `string`
 
@@ -863,7 +863,7 @@ Derive the public key from the given multi signature asset.
 | :--- | :--- | :--- | :--- |
 | IMultiSignatureAsset | asset | Yes | Asset |
 
-#### Return Value
+#### Return value
 
 `string`
 
@@ -882,7 +882,7 @@ Validate the given public key.
 | string | publicKey | Yes | Public key |
 | number | networkVersion | No | Network version |
 
-#### Return Value
+#### Return value
 
 `boolean`
 
@@ -903,7 +903,7 @@ Derive the WIF from the given passphrase.
 | string | passphrase | Yes | Passphrase to derive WIF from |
 | INetwork | network | No | Network wif |
 
-#### Return Value
+#### Return value
 
 `string`
 
@@ -922,7 +922,7 @@ Derive the WIF from the given keys.
 | IKeyPair | keys | Yes | Keys |
 | INetwork | network | No | Network |
 
-#### Return Value
+#### Return value
 
 `string`
 
@@ -942,7 +942,7 @@ Set the configuration.
 | :--- | :--- | :--- | :--- |
 | INetworkConfig | config | Yes | Network configuration object |
 
-#### Return Value
+#### Return value
 
 `void`
 
@@ -960,7 +960,7 @@ Set the configuration from given presets.
 | :--- | :--- | :--- | :--- |
 | NetworkName | network | Yes | Preset |
 
-#### Return Value
+#### Return value
 
 `void`
 
@@ -978,7 +978,7 @@ Get configuration preset.
 | :--- | :--- | :--- | :--- |
 | NetworkName | network | Yes | Preset |
 
-#### Return Value
+#### Return value
 
 `INetworkConfig`
 
@@ -990,7 +990,7 @@ public all()
 
 Get all configs.
 
-#### Return Value
+#### Return value
 
 `INetworkConfig`
 
@@ -1009,7 +1009,7 @@ Set a value for the specified network config key.
 | string | key | Yes | Key to set |
 | T | value | Yes | Value to set |
 
-#### Return Value
+#### Return value
 
 `void`
 
@@ -1027,7 +1027,7 @@ Get key.
 | :--- | :--- | :--- | :--- |
 | string | key | Yes | Key to get |
 
-#### Return Value
+#### Return value
 
 `T`
 
@@ -1045,7 +1045,7 @@ Set network height.
 | :--- | :--- | :--- | :--- |
 | number | value | Yes | Network height |
 
-#### Return Value
+#### Return value
 
 `void`
 
@@ -1057,7 +1057,7 @@ public getHeight()
 
 Get network height.
 
-#### Return Value
+#### Return value
 
 `number`
 
@@ -1075,7 +1075,7 @@ Verify if current height contains a milestone.
 | :--- | :--- | :--- | :--- |
 | number | height | No | Height to check for milestone |
 
-#### Return Value
+#### Return value
 
 `boolean`
 
@@ -1093,7 +1093,7 @@ Get milestone.
 | :--- | :--- | :--- | :--- |
 | number | height | No | Network height |
 
-#### Return Value
+#### Return value
 
 `{ [key: string]: any }`
 
@@ -1105,7 +1105,7 @@ public getMilestones()
 
 Get all milestones.
 
-#### Return Value
+#### Return value
 
 `any`
 
@@ -1119,7 +1119,7 @@ public static all()
 
 Get settings for all networks.
 
-#### Return Value
+#### Return value
 
 `Record<NetworkName, INetworkConfig>`
 
@@ -1137,7 +1137,7 @@ Get settings for a selected network, default network is testnet.
 | :--- | :--- | :--- | :--- |
 | NetworkName | name | Yes | Network name |
 
-#### Return Value
+#### Return value
 
 `INetworkConfig`
 
@@ -1158,7 +1158,7 @@ Deserialise Transaction into object.
 | string, Buffer | serialised | Yes | Serialised transaction |
 | IDeserialiseOptions | options | Yes | Options for deserialising |
 
-#### Return Value
+#### Return value
 
 `ITransaction`
 
@@ -1176,7 +1176,7 @@ Modify transaction to be v1 compatible.
 | :--- | :--- | :--- | :--- |
 | ITransactionData | transaction | Yes | Transaction object |
 
-#### Return Value
+#### Return value
 
 `void`
 
@@ -1196,7 +1196,7 @@ Create Transaction object from HEX.
 | :--- | :--- | :--- | :--- |
 | string | hex | Yes | HEX of transaction |
 
-#### Return Value
+#### Return value
 
 `ITransaction`
 
@@ -1215,7 +1215,7 @@ Create Transaction object from Buffer.
 | Buffer | buffer | Yes | Transaction buffer |
 | boolean | strict | Yes | Strict creation from buffer |
 
-#### Return Value
+#### Return value
 
 `ITransaction`
 
@@ -1236,7 +1236,7 @@ NOTE: Only use this internally when it is safe to assume the buffer has already 
 | Buffer | buffer | Yes | Transaction buffer |
 | string | id | No | ID override |
 
-#### Return Value
+#### Return value
 
 `ITransaction`
 
@@ -1254,7 +1254,7 @@ Create Transaction object from JSON.
 | :--- | :--- | :--- | :--- |
 | ITransactionJson | json | Yes | Transaction JSON object |
 
-#### Return Value
+#### Return value
 
 `ITransaction`
 
@@ -1273,7 +1273,7 @@ Create Transaction object from Transaction data.
 | ITransactionData | data | Yes | Transaction object |
 | boolean | strict | Yes | Strict conversion |
 
-#### Return Value
+#### Return value
 
 `ITransaction`
 
@@ -1294,7 +1294,7 @@ Convert the transaction to its byte representation.
 | ITransactionData | transaction | Yes | Transaction |
 | ISerialiseOptions | options | Yes | Options |
 
-#### Return Value
+#### Return value
 
 `Buffer`
 
@@ -1313,7 +1313,7 @@ Perform serialisation.
 | ITransaction | transaction | Yes | Transaction |
 | ISerialiseOptions | options | Yes | Options |
 
-#### Return Value
+#### Return value
 
 `Buffer`
 
@@ -1335,7 +1335,7 @@ Sign the given transaction with the provided keys.
 | IKeyPair | keys | Yes | Keys |
 | ISerialiseOptions | options | No | Options |
 
-#### Return Value
+#### Return value
 
 `string`
 
@@ -1354,7 +1354,7 @@ Second sign the given transaction with the provided keys.
 | ITransactionData | transaction | Yes | Transaction |
 | IKeyPair | keys | Yes | Keys |
 
-#### Return Value
+#### Return value
 
 `string`
 
@@ -1374,7 +1374,7 @@ Multi sign the given transaction with the provided keys.
 | IKeyPair | keys | Yes | Keys |
 | number | index | Yes | Index |
 
-#### Return Value
+#### Return value
 
 `string`
 
@@ -1394,7 +1394,7 @@ Convert Transaction object to Buffer.
 | :--- | :--- | :--- | :--- |
 | ITransactionData | data | Yes | Transaction object |
 
-#### Return Value
+#### Return value
 
 `Buffer`
 
@@ -1413,7 +1413,7 @@ Convert Transaction object to Hash.
 | ITransactionData | transaction | Yes | Transaction object |
 | ISerialiseOptions | options | No | Serialisation options for generating hash |
 
-#### Return Value
+#### Return value
 
 `Buffer`
 
@@ -1432,7 +1432,7 @@ Get Transaction ID of Transaction object.
 | ITransactionData | transaction | Yes | Transaction object |
 | ISerialiseOptions | options | Yes | Serialisation options for generating hash |
 
-#### Return Value
+#### Return value
 
 `string`
 
@@ -1452,7 +1452,7 @@ Verify transaction.
 | :--- | :--- | :--- | :--- |
 | ITransactionData | data | Yes | Transaction object |
 
-#### Return Value
+#### Return value
 
 `boolean`
 
@@ -1471,7 +1471,7 @@ Verify second signature.
 | ITransactionData | transaction | Yes | Transaction object |
 | string | publicKey | Yes | Public key |
 
-#### Return Value
+#### Return value
 
 `boolean`
 
@@ -1490,7 +1490,7 @@ Verify the signatures of a Transaction object.
 | ITransactionData | transaction | Yes | Transaction object |
 | IMultiSignatureAsset | multiSignature | Yes | Asset for Multi-Signature wallets/transactions |
 
-#### Return Value
+#### Return value
 
 `boolean`
 
@@ -1508,7 +1508,7 @@ Verify transaction hash.
 | :--- | :--- | :--- | :--- |
 | ITransactionData | data | Yes | Transaction |
 
-#### Return Value
+#### Return value
 
 `boolean`
 
@@ -1527,7 +1527,7 @@ Verify transaction schema.
 | ITransactionData | data | Yes | Transaction |
 | boolean | strict | Yes | Strict flag |
 
-#### Return Value
+#### Return value
 
 `ISchemaValidationResult`
 
@@ -1541,7 +1541,7 @@ public static transfer()
 
 Initiate a Transfer transaction type.
 
-#### Return Value
+#### Return value
 
 `TransferBuilder`
 
@@ -1553,7 +1553,7 @@ public static secondSignature()
 
 Initiate a Second Signature transaction type.
 
-#### Return Value
+#### Return value
 
 `SecondSignatureBuilder`
 
@@ -1565,7 +1565,7 @@ public static delegateRegistration()
 
 Initiate a Delegate Resignation transaction type.
 
-#### Return Value
+#### Return value
 
 `DelegateRegistrationBuilder`
 
@@ -1577,7 +1577,7 @@ public static vote()
 
 Initiate a Vote transaction type.
 
-#### Return Value
+#### Return value
 
 `VoteBuilder`
 
@@ -1589,7 +1589,7 @@ public static multiSignature()
 
 Initiate a Multi-Signature transaction type.
 
-#### Return Value
+#### Return value
 
 `MultiSignatureBuilder`
 
@@ -1601,7 +1601,7 @@ public static ipfs()
 
 Initiate an IPFS transaction type.
 
-#### Return Value
+#### Return value
 
 `IPFSBuilder`
 
@@ -1613,7 +1613,7 @@ public static multiPayment()
 
 Initiate a Multi-Payment transaction type.
 
-#### Return Value
+#### Return value
 
 `MultiPaymentBuilder`
 
@@ -1625,7 +1625,7 @@ public static delegateResignation()
 
 Initiate a Delegate Resignation transaction type.
 
-#### Return Value
+#### Return value
 
 `DelegateResignationBuilder`
 
@@ -1637,7 +1637,7 @@ public static htlcLock()
 
 Initiate a HTLC Lock transaction type.
 
-#### Return Value
+#### Return value
 
 `HtlcLockBuilder`
 
@@ -1649,7 +1649,7 @@ public static htlcClaim()
 
 Initiate a HTLC Claim transaction type.
 
-#### Return Value
+#### Return value
 
 `HtlcClaimBuilder`
 
@@ -1661,7 +1661,7 @@ public static htlcRefund()
 
 Initiate a HTLC Refund transaction type.
 
-#### Return Value
+#### Return value
 
 `HtlcRefundBuilder`
 
@@ -1681,7 +1681,7 @@ Set the username to assign.
 | :--- | :--- | :--- | :--- |
 | string | username | Yes | Delegate username |
 
-#### Return Value
+#### Return value
 
 `DelegateRegistrationBuilder`
 
@@ -1693,7 +1693,7 @@ public getStruct()
 
 Get transaction structure.
 
-#### Return Value
+#### Return value
 
 `ITransactionData`
 
@@ -1707,7 +1707,7 @@ public getStruct()
 
 Get transaction structure.
 
-#### Return Value
+#### Return value
 
 `ITransactionData`
 
@@ -1727,7 +1727,7 @@ Specify the HTLC Claim asset data for the Transaction.
 | :--- | :--- | :--- | :--- |
 | IHtlcClaimAsset | claimAsset | Yes | Asset for a HTLC Claim |
 
-#### Return Value
+#### Return value
 
 `HtlcClaimBuilder`
 
@@ -1739,7 +1739,7 @@ public getStruct()
 
 Get transaction structure.
 
-#### Return Value
+#### Return value
 
 `ITransactionData`
 
@@ -1759,7 +1759,7 @@ Specify the HTLC Lock asset data for the Transaction.
 | :--- | :--- | :--- | :--- |
 | IHtlcLockAsset | lockAsset | Yes | Asset for a HTLC Lock |
 
-#### Return Value
+#### Return value
 
 `HtlcLockBuilder`
 
@@ -1771,7 +1771,7 @@ public getStruct()
 
 Get transaction structure.
 
-#### Return Value
+#### Return value
 
 `ITransactionData`
 
@@ -1791,7 +1791,7 @@ Specify the HTLC Refund asset data for the Transaction.
 | :--- | :--- | :--- | :--- |
 | IHtlcRefundAsset | refundAsset | Yes | Asset for a HTLC Refund |
 
-#### Return Value
+#### Return value
 
 `HtlcRefundBuilder`
 
@@ -1803,7 +1803,7 @@ public getStruct()
 
 Get transaction structure.
 
-#### Return Value
+#### Return value
 
 `ITransactionData`
 
@@ -1823,7 +1823,7 @@ Set IPFS asset.
 | :--- | :--- | :--- | :--- |
 | string | ipfsId | Yes | IPFS ID |
 
-#### Return Value
+#### Return value
 
 `IPFSBuilder`
 
@@ -1835,7 +1835,7 @@ public getStruct()
 
 Get transaction structure.
 
-#### Return Value
+#### Return value
 
 `ITransactionData`
 
@@ -1856,7 +1856,7 @@ Add a new payment to the collection.
 | string | recipientId | Yes | Recipient identifier |
 | string | amount | Yes | Transaction amount |
 
-#### Return Value
+#### Return value
 
 `MultiPaymentBuilder`
 
@@ -1868,7 +1868,7 @@ public getStruct()
 
 Get transaction structure.
 
-#### Return Value
+#### Return value
 
 `ITransactionData`
 
@@ -1888,7 +1888,7 @@ Add participant to multi signature transaction.
 | :--- | :--- | :--- | :--- |
 | string | publicKey | Yes | Public key |
 
-#### Return Value
+#### Return value
 
 `MultiSignatureBuilder`
 
@@ -1906,7 +1906,7 @@ Set the minimum required signatures.
 | :--- | :--- | :--- | :--- |
 | number | min | Yes | Minimum required signatures |
 
-#### Return Value
+#### Return value
 
 `MultiSignatureBuilder`
 
@@ -1924,7 +1924,7 @@ Derive the address from the given multi signature asset.
 | :--- | :--- | :--- | :--- |
 | IMultiSignatureAsset | multiSignature | Yes | Multi signature asset |
 
-#### Return Value
+#### Return value
 
 `MultiSignatureBuilder`
 
@@ -1936,7 +1936,7 @@ public getStruct()
 
 Get transaction structure.
 
-#### Return Value
+#### Return value
 
 `ITransactionData`
 
@@ -1956,7 +1956,7 @@ Specify the Second Signature asset data for the Transaction.
 | :--- | :--- | :--- | :--- |
 | string | secondPassphrase | Yes | Asset for a Second Signature |
 
-#### Return Value
+#### Return value
 
 `SecondSignatureBuilder`
 
@@ -1968,7 +1968,7 @@ public getStruct()
 
 Get transaction structure.
 
-#### Return Value
+#### Return value
 
 `ITransactionData`
 
@@ -1988,7 +1988,7 @@ Set Transfer expiration.
 | :--- | :--- | :--- | :--- |
 | number | expiration | Yes | The block-height or time when the transaction should expire |
 
-#### Return Value
+#### Return value
 
 `TransferBuilder`
 
@@ -2000,7 +2000,7 @@ public getStruct()
 
 Get transaction structure.
 
-#### Return Value
+#### Return value
 
 `ITransactionData`
 
@@ -2020,7 +2020,7 @@ Specify the Vote asset data for the Transaction.
 | :--- | :--- | :--- | :--- |
 | string | votes | Yes | Asset for a Vote |
 
-#### Return Value
+#### Return value
 
 `VoteBuilder`
 
@@ -2032,7 +2032,7 @@ public getStruct()
 
 Get transaction structure.
 
-#### Return Value
+#### Return value
 
 `ITransactionData`
 
@@ -2046,7 +2046,7 @@ public static getSchema()
 
 Get transaction schema.
 
-#### Return Value
+#### Return value
 
 `schemas.TransactionSchema`
 
@@ -2064,7 +2064,7 @@ Handle the serialisation of "delegate registration" data.
 | :--- | :--- | :--- | :--- |
 | ISerialiseOptions | options | No | Options |
 
-#### Return Value
+#### Return value
 
 `ByteBuffer`
 
@@ -2082,7 +2082,7 @@ Handle the deserialisation of "delegate registration" data.
 | :--- | :--- | :--- | :--- |
 | ByteBuffer | buf | Yes | Buffer |
 
-#### Return Value
+#### Return value
 
 `void`
 
@@ -2096,7 +2096,7 @@ public static getSchema()
 
 Get transaction schema.
 
-#### Return Value
+#### Return value
 
 `schemas.TransactionSchema`
 
@@ -2108,7 +2108,7 @@ public verify()
 
 Verify transaction.
 
-#### Return Value
+#### Return value
 
 `boolean`
 
@@ -2126,7 +2126,7 @@ Handle the serialisation of "delegate resignation" data.
 | :--- | :--- | :--- | :--- |
 | ISerialiseOptions | options | No | Options |
 
-#### Return Value
+#### Return value
 
 `ByteBuffer`
 
@@ -2144,7 +2144,7 @@ Handle the deserialisation of "delegate resignation" data.
 | :--- | :--- | :--- | :--- |
 | ByteBuffer | buf | Yes | Buffer |
 
-#### Return Value
+#### Return value
 
 `void`
 
@@ -2178,7 +2178,7 @@ Create new transaction type.
 | :--- | :--- | :--- | :--- |
 | ITransactionData | data | Yes | Transaction object |
 
-#### Return Value
+#### Return value
 
 `ITransaction`
 
@@ -2197,7 +2197,7 @@ Get a transaction type.
 | number | type | Yes | Transaction type |
 | number | typeGroup | No | Transaction group |
 
-#### Return Value
+#### Return value
 
 `TransactionConstructor`
 
@@ -2211,7 +2211,7 @@ public static getSchema()
 
 Get transaction schema.
 
-#### Return Value
+#### Return value
 
 `schemas.TransactionSchema`
 
@@ -2223,7 +2223,7 @@ public verify()
 
 Verify transaction.
 
-#### Return Value
+#### Return value
 
 `boolean`
 
@@ -2241,7 +2241,7 @@ Serialise Transaction object.
 | :--- | :--- | :--- | :--- |
 | ISerialiseOptions | options | No | Serialisation options |
 
-#### Return Value
+#### Return value
 
 `ByteBuffer`
 
@@ -2259,7 +2259,7 @@ Deserialise into Transaction object.
 | :--- | :--- | :--- | :--- |
 | ByteBuffer | buf | Yes | Buffer to deserialise |
 
-#### Return Value
+#### Return value
 
 `void`
 
@@ -2273,7 +2273,7 @@ public static getSchema()
 
 Get transaction schema.
 
-#### Return Value
+#### Return value
 
 `schemas.TransactionSchema`
 
@@ -2285,7 +2285,7 @@ public verify()
 
 Verify transaction.
 
-#### Return Value
+#### Return value
 
 `boolean`
 
@@ -2297,7 +2297,7 @@ public hasVendorField()
 
 Verify if the transaction contains a vendorfield.
 
-#### Return Value
+#### Return value
 
 `boolean`
 
@@ -2315,7 +2315,7 @@ Serialise a Transaction object.
 | :--- | :--- | :--- | :--- |
 | ISerialiseOptions | options | No | Serialisation options |
 
-#### Return Value
+#### Return value
 
 `ByteBuffer`
 
@@ -2333,7 +2333,7 @@ Deserialise into a Transaction object.
 | :--- | :--- | :--- | :--- |
 | ByteBuffer | buf | Yes | Buffer to deserialise |
 
-#### Return Value
+#### Return value
 
 `void`
 
@@ -2347,7 +2347,7 @@ public static getSchema()
 
 Get transaction schema.
 
-#### Return Value
+#### Return value
 
 `schemas.TransactionSchema`
 
@@ -2359,7 +2359,7 @@ public verify()
 
 Verify transaction.
 
-#### Return Value
+#### Return value
 
 `boolean`
 
@@ -2377,7 +2377,7 @@ Serialise a Transaction object.
 | :--- | :--- | :--- | :--- |
 | ISerialiseOptions | options | No | Serialisation options |
 
-#### Return Value
+#### Return value
 
 `ByteBuffer`
 
@@ -2395,7 +2395,7 @@ Deserialise into a Transaction object.
 | :--- | :--- | :--- | :--- |
 | ByteBuffer | buf | Yes | Buffer to deserialise |
 
-#### Return Value
+#### Return value
 
 `void`
 
@@ -2416,7 +2416,7 @@ Create new internal transaction type from existing type.
 | number | type | Yes | Transaction type |
 | number | typeGroup | No | Transaction group |
 
-#### Return Value
+#### Return value
 
 `InternalTransactionType`
 
@@ -2428,7 +2428,7 @@ public toString()
 
 Convert transaction type to a `group/type` string representation (E.g. 1/0)
 
-#### Return Value
+#### Return value
 
 `string`
 
@@ -2442,7 +2442,7 @@ public static getSchema()
 
 Get transaction schema.
 
-#### Return Value
+#### Return value
 
 `schemas.TransactionSchema`
 
@@ -2454,7 +2454,7 @@ public verify()
 
 Verify transaction.
 
-#### Return Value
+#### Return value
 
 `boolean`
 
@@ -2472,7 +2472,7 @@ Handle the serialisation of "IPFS" data.
 | :--- | :--- | :--- | :--- |
 | ISerialiseOptions | options | No | Options |
 
-#### Return Value
+#### Return value
 
 `ByteBuffer`
 
@@ -2490,7 +2490,7 @@ Handle the deserialisation of "IPFS" data.
 | :--- | :--- | :--- | :--- |
 | ByteBuffer | buf | Yes | Buffer |
 
-#### Return Value
+#### Return value
 
 `void`
 
@@ -2504,7 +2504,7 @@ public static getSchema()
 
 Get transaction schema.
 
-#### Return Value
+#### Return value
 
 `schemas.TransactionSchema`
 
@@ -2516,7 +2516,7 @@ public verify()
 
 Verify transaction.
 
-#### Return Value
+#### Return value
 
 `boolean`
 
@@ -2528,7 +2528,7 @@ public hasVendorField()
 
 Verify if the transaction contains a vendorfield.
 
-#### Return Value
+#### Return value
 
 `boolean`
 
@@ -2546,7 +2546,7 @@ Serialise a Transaction object.
 | :--- | :--- | :--- | :--- |
 | ISerialiseOptions | options | No | Serialisation options |
 
-#### Return Value
+#### Return value
 
 `ByteBuffer`
 
@@ -2564,7 +2564,7 @@ Deserialise into a Transaction object.
 | :--- | :--- | :--- | :--- |
 | ByteBuffer | buf | Yes | Buffer to deserialise |
 
-#### Return Value
+#### Return value
 
 `void`
 
@@ -2578,7 +2578,7 @@ public static getSchema()
 
 Get transaction schema.
 
-#### Return Value
+#### Return value
 
 `schemas.TransactionSchema`
 
@@ -2596,7 +2596,7 @@ Get the static fee for the Multi-Signature transaction type.
 | :--- | :--- | :--- | :--- |
 | object | feeContext | Yes | Context for determining the static fee |
 
-#### Return Value
+#### Return value
 
 `BigNumber`
 
@@ -2608,7 +2608,7 @@ public verify()
 
 Verify transaction.
 
-#### Return Value
+#### Return value
 
 `boolean`
 
@@ -2626,7 +2626,7 @@ Serialise a Transaction object.
 | :--- | :--- | :--- | :--- |
 | ISerialiseOptions | options | No | Serialisation options |
 
-#### Return Value
+#### Return value
 
 `ByteBuffer`
 
@@ -2644,7 +2644,7 @@ Deserialise into a Transaction object.
 | :--- | :--- | :--- | :--- |
 | ByteBuffer | buf | Yes | Buffer to deserialise |
 
-#### Return Value
+#### Return value
 
 `void`
 
@@ -2658,7 +2658,7 @@ public static getSchema()
 
 Get transaction schema.
 
-#### Return Value
+#### Return value
 
 `schemas.TransactionSchema`
 
@@ -2676,7 +2676,7 @@ Serialise a Transaction object.
 | :--- | :--- | :--- | :--- |
 | ISerialiseOptions | options | No | Serialisation options |
 
-#### Return Value
+#### Return value
 
 `ByteBuffer`
 
@@ -2694,7 +2694,7 @@ Deserialise into a Transaction object.
 | :--- | :--- | :--- | :--- |
 | ByteBuffer | buf | Yes | Buffer to deserialise |
 
-#### Return Value
+#### Return value
 
 `void`
 
@@ -2708,7 +2708,7 @@ public static getSchema()
 
 Get transaction schema.
 
-#### Return Value
+#### Return value
 
 `schemas.TransactionSchema`
 
@@ -2720,7 +2720,7 @@ public hasVendorField()
 
 Verify if the transaction contains a vendorfield.
 
-#### Return Value
+#### Return value
 
 `boolean`
 
@@ -2738,7 +2738,7 @@ Perform serialisation.
 | :--- | :--- | :--- | :--- |
 | ISerialiseOptions | options | No | Serialisation options |
 
-#### Return Value
+#### Return value
 
 `ByteBuffer`
 
@@ -2756,7 +2756,7 @@ Perform deserialisation.
 | :--- | :--- | :--- | :--- |
 | ByteBuffer | buf | Yes | Buffer to deserialise |
 
-#### Return Value
+#### Return value
 
 `void`
 
@@ -2770,7 +2770,7 @@ public static getSchema()
 
 Get transaction schema.
 
-#### Return Value
+#### Return value
 
 `schemas.TransactionSchema`
 
@@ -2788,7 +2788,7 @@ Perform serialisation.
 | :--- | :--- | :--- | :--- |
 | ISerialiseOptions | options | No | Serialisation options |
 
-#### Return Value
+#### Return value
 
 `ByteBuffer`
 
@@ -2806,7 +2806,7 @@ Perform deserialisation.
 | :--- | :--- | :--- | :--- |
 | ByteBuffer | buf | Yes | Buffer to deserialise |
 
-#### Return Value
+#### Return value
 
 `void`
 
@@ -2820,7 +2820,7 @@ public getInstance()
 
 Get an instance of the Validator object.
 
-#### Return Value
+#### Return value
 
 `Ajv.Ajv`
 
@@ -2839,7 +2839,7 @@ Validate a schema object.
 | string, boolean, object | schemaKeyRef | Yes | Schema to validate against |
 | T | data | Yes | Data to validate |
 
-#### Return Value
+#### Return value
 
 `ISchemaValidationResult<T>`
 
@@ -2858,7 +2858,7 @@ Validate a schema object for an exception.
 | string, boolean, object | schemaKeyRef | Yes | Schema to validate against |
 | T | data | Yes | Data to validate |
 
-#### Return Value
+#### Return value
 
 `ISchemaValidationResult<T>`
 
@@ -2877,7 +2877,7 @@ Add formatting definition used for validation.
 | string | name | Yes | Name of definition |
 | Ajv | format | Yes | Format definition |
 
-#### Return Value
+#### Return value
 
 `void`
 
@@ -2896,7 +2896,7 @@ Add keyword definition used for validation.
 | string | keyword | Yes | Name of definition |
 | Ajv | definition | Yes | Keyword definition |
 
-#### Return Value
+#### Return value
 
 `void`
 
@@ -2915,7 +2915,7 @@ Add schema used for validation.
 | object | schema | Yes | Name of schema |
 | string | key | No | Schema |
 
-#### Return Value
+#### Return value
 
 `void`
 
@@ -2933,7 +2933,7 @@ Remove keyword definition from validation.
 | :--- | :--- | :--- | :--- |
 | string | keyword | Yes | Name of definition |
 
-#### Return Value
+#### Return value
 
 `void`
 
@@ -2951,7 +2951,7 @@ Remove schema from validation.
 | :--- | :--- | :--- | :--- |
 | string, boolean, object, RegExp | schemaKeyRef | Yes | Schema to remove |
 
-#### Return Value
+#### Return value
 
 `void`
 

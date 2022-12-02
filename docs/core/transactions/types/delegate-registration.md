@@ -15,9 +15,7 @@ A user or organisation can register their address to become a delegate and secur
 | API Endpoints        | [Link](https://api.solar.org/#/Transactions)                                                                                                                                                                                                              |
 | AJV Schema           | [Base](https://github.com/Solar-network/core/blob/main/packages/crypto/src/transactions/types/schemas.ts#L17-L46) \| [Delegate Registration](https://github.com/Solar-network/core/blob/main/packages/crypto/src/transactions/types/schemas.ts#L103-L124) |
 
-## Transaction Structure
-
-### Json
+## Json
 
 ```json
 {
@@ -36,13 +34,13 @@ A user or organisation can register their address to become a delegate and secur
 }
 ```
 
-### Serialised
+## Serialised
 
 ```shell
 ff033f0100000002000300000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed19200eb08bf010000000005736c333370
 ```
 
-### Deserialised
+## Deserialised
 
 | Key                  |   Pos.   | Size<br/>_(bytes)_ | Value<br/>_(hex)_                                                      |
 | :------------------- | :------: | :----------------: | :--------------------------------------------------------------------- |

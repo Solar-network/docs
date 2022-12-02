@@ -15,7 +15,7 @@ If your application doesn't involve sending transactions, you can most likely bu
 
 Usage guides are included for each supported language, and examples of how to use these libraries can be found in the **Examples** section of each specific library.
 
-## Supported Languages & Frameworks
+## Supported languages & frameworks
 
 | Crypto                                     | Client                                     |
 | :----------------------------------------- | :----------------------------------------- |

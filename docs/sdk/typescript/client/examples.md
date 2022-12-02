@@ -20,7 +20,7 @@ This service API grants access to the <a href="https://api.solar.org/#/Blocks" t
 
     It is not possible to `POST` a block through the public API. Relay Nodes accept only blocks posted by a delegate at the correct time through the internal API.
 
-### List All Blocks
+### List all blocks
 
 ```typescript
 const response = await client.api("blocks").all();
@@ -80,7 +80,7 @@ console.log(response.body);
 }
 ```
 
-### Retrieve a Block
+### Retrieve a block
 
 ```typescript
 const response = await client.api("blocks").get("4dcbf9a09e8718683e2d1cf6e1cd6cd5e2e3c6e8195026736cf78db383c9e1b2"); //blockid
@@ -126,7 +126,7 @@ console.log(response.body);
 }
 ```
 
-### List All Transactions of a Block
+### List all transactions of a block
 
 ```typescript
 const response = await client.api("blocks").transactions("647d851e2abc5fc556a6ed6400da4dc46334ace10b6983f73f24100cdd9e44ad"); // blockid
@@ -177,7 +177,7 @@ console.log(response.body);
 }
 ```
 
-### Search last Block
+### Search last block
 
 ```typescript
 const response = await client.api("blocks").last();
@@ -223,7 +223,7 @@ console.log(response.body);
 }
 ```
 
-### Search All Blocks
+### Search all blocks
 
 ```typescript
 const response = await client.api("blocks").all({"height": 2000000});
@@ -292,7 +292,7 @@ A delegate is a regular wallet that has broadcast a registration transaction, ac
 
     Voters are wallets which have broadcast a vote transaction on a delegate. A vote remains active until an un-vote transaction is sent (it does not have to be recast unless a wallet wishes to change from delegate). Voting for a delegate does not give the delegate access to the wallet nor does it lock the coins in it.
 
-### List All Delegates
+### List all delegates
 
 ```typescript
 const response = await client.api("delegates").all();
@@ -345,7 +345,7 @@ console.log(response.body);
 }
 ```
 
-### Retrieve a Delegate
+### Retrieve a delegate
 
 ```typescript
 const response = await client.api("delegates").get("nayiem"); // username, address and publickey can be used
@@ -380,7 +380,7 @@ console.log(response.body);
 }
 ```
 
-### List All Blocks of a Delegate
+### List all blocks of a delegate
 
 ```typescript
 const response = await client.api("delegates").blocks("SNxmEDRVi1JGY26BFVCCQtf5GmaNm6zBcq"); // username, address and publickey can be used
@@ -440,7 +440,7 @@ console.log(response.body);
 }
 ```
 
-### List All Voters of a Delegate
+### List all voters of a delegate
 
 ```typescript
 const response = await client.api("delegates").voters("026c46df329504f258372b80dc38f86f7a71590a7d20fb6fe1bbc0ad00a463ce6f"); // username, address and publickey can be used
@@ -496,7 +496,7 @@ console.log(response.body);
 
 The SXP network consists of different anonymous nodes (servers), maintaining the public ledger, validating transactions and blocks and providing APIs. The <a href="https://api.solar.org/#/Node" target="_blank" rel="noopener noreferrer">node resource</a> allows for querying the health and configurations of the node used by the instantiated client.
 
-### Retrieve the Configuration
+### Retrieve the configuration
 
 ```typescript
 const response = await client.api("node").configuration();
@@ -663,7 +663,7 @@ console.log(response.body);
 }
 ```
 
-### Retrieve the Status
+### Retrieve the status
 
 ```typescript
 const response = await client.api("node").status();
@@ -682,7 +682,7 @@ console.log(response.body);
 }
 ```
 
-### Retrieve the Syncing Status
+### Retrieve the syncing status
 
 ```typescript
 const response = await client.api("node").syncing();
@@ -701,7 +701,7 @@ console.log(response.body);
 }
 ```
 
-### Retrieve the Fees
+### Retrieve the fees
 
 ```typescript
 const response = await client.api("node").fees(30);
@@ -780,7 +780,7 @@ Each node is connected to a set of peers, which are Relay or Delegate Nodes as w
 
     Peers have made their Public API available for use; however for mission-critical queries and transaction posting you should use a node which is under your control.
 
-### List All Peers
+### List all peers
 
 ```typescript
 const response = await client.api("peers").all();
@@ -829,7 +829,7 @@ console.log(response.body);
 }
 ```
 
-### Retrieve a Peer
+### Retrieve a peer
 
 ```typescript
 const response = await client.api("peers").get("135.181.76.96");
@@ -868,7 +868,7 @@ console.log(response.body);
 
 This service API grants access to the round resource. This can be used to access all round information for the network.
 
-### List Delegates for a Round
+### List delegates for a round
 
 ```typescript
 const response = await client.api("rounds").delegates(1000); // round number
@@ -900,7 +900,7 @@ The heart of any blockchain is formed by its transactions; state-altering payloa
 
     A transaction is the only object which may be posted by a non-delegate. It requires a signature from a wallet containing a sufficient amount of SXP.
 
-### Create a Transaction
+### Create a transaction
 
 ```typescript
 const response = await client.api("transactions").create([...]);
@@ -922,7 +922,7 @@ console.log(response.body);
 }
 ```
 
-### Retrieve a Transaction
+### Retrieve a transaction
 
 ```typescript
 const response = await client.api("transactions").get("f79b7f640bf1b2142cbe62d5a54a47f0eba6aebe75d2f263d998926ed3be9697"); // transaction id
@@ -964,7 +964,7 @@ console.log(response.body);
 }
 ```
 
-### List All Transactions
+### List all transactions
 
 ```typescript
 const response = await client.api("transactions").all();
@@ -1020,7 +1020,7 @@ console.log(response.body);
 }
 ```
 
-### List All Unconfirmed Transactions
+### List all unconfirmed transactions
 
 ```typescript
 const response = await client.api("transactions").allUnconfirmed();
@@ -1067,7 +1067,7 @@ console.log(response.body);
 }
 ```
 
-### Get Unconfirmed Transaction
+### Get unconfirmed transaction
 
 ```typescript
 const response = await client.api("transactions").getUnconfirmed("0b81d54e71daf12394cce82a1b9bd80cb7935e381e10092df02e72687d3facb5"); // transaction id
@@ -1101,7 +1101,7 @@ console.log(response.body);
 }
 ```
 
-### Search Transactions
+### Search transactions
 
 ```typescript
 const response = await client.api("transactions").all({"blockId": "65a8fdece83649c88d7e2232cd196ee2ca549c5f2892e4b227b6d7ded1ba9725"});
@@ -1156,7 +1156,7 @@ console.log(response.body);
 }
 ```
 
-### List Transaction Types
+### List transaction types
 
 ```typescript
 const response = await client.api("transactions").types();
@@ -1187,7 +1187,7 @@ console.log(response.body);
 
 A <a href="https://tapi.solar.org/#/Votes" target="_blank" rel="noopener noreferrer">vote</a> is a transaction sub-type, where the `asset` field contains a `votes` object and the `transaction.type` is `2` and `transaction.typeGroup` is `2`.
 
-### List All Votes
+### List all votes
 
 ```typescript
 const response = await client.api("votes").all();
@@ -1249,7 +1249,7 @@ console.log(response.body);
 }
 ```
 
-### Retrieve a Vote
+### Retrieve a vote
 
 ```typescript
 const response = await client.api("votes").get("a0709cffb1cc3ddce4bc0f07ecd24ef263af48b999ef6a91c0634ee8eaf82ff9"); // transaction id
@@ -1305,7 +1305,7 @@ The <a href="https://tapi.solar.org/#/Wallets/get_wallets" target="_blank" rel="
 * Incoming and outgoing transactions per wallet.
 * Each wallet's votes.
 
-### Retrieve All Wallets
+### Retrieve all wallets
 
 ```typescript
 const response = await client.api("wallets").all();
@@ -1340,7 +1340,7 @@ console.log(response.body);
 }
 ```
 
-### Retrieve a Wallet
+### Retrieve a wallet
 
 ```typescript
 const response = await client.api("wallets").get("SaaHfAgt76QLSMy67tornXq7jE5SsTHEok"); // username, address and publickey can be used
@@ -1388,7 +1388,7 @@ console.log(response.body);
 }
 ```
 
-### List All Transactions of a Wallet
+### List all transactions of a wallet
 
 ```typescript
 const response = await client.api("wallets").transactions("SaaHfAgt76QLSMy67tornXq7jE5SsTHEok"); // username, address and publickey can be used
@@ -1445,7 +1445,7 @@ console.log(response.body);
 }
 ```
 
-### List All Received Transactions of a Wallet
+### List all received transactions of a wallet
 
 ```typescript
 const response = await client.api("wallets").transactionsReceived("Sc6wHgx3VP3GN5gZznJesR8YSBQouhaKMe"); // username, address and publickey can be used
@@ -1501,7 +1501,7 @@ console.log(response.body);
 }
 ```
 
-### List All Sent Transactions of a Wallet
+### List all sent transactions of a wallet
 
 ```typescript
 const response = await client.api("wallets").transactionsSent("Sc6wHgx3VP3GN5gZznJesR8YSBQouhaKMe"); // username, address and publickey can be used
@@ -1557,7 +1557,7 @@ console.log(response.body);
 }
 ```
 
-### List All Votes of a Wallet
+### List all votes of a wallet
 
 ```typescript
 const response = await client.api("wallets").votes("Sc6wHgx3VP3GN5gZznJesR8YSBQouhaKMe"); // username, address and publickey can be used
@@ -1609,7 +1609,7 @@ console.log(response.body);
 }
 ```
 
-### List All Top Wallets
+### List all top wallets
 
 ```typescript
 const response = await client.api("wallets").top({page: 6, limit: 20}); // the query parameter is optional.
@@ -1657,7 +1657,7 @@ console.log(response.body);
 }
 ```
 
-### Search All Wallets
+### Search all wallets
 
 ```typescript
 const response = await client.api("wallets").all({"balance": {from: 30000000000000, to: 40000000000000}});

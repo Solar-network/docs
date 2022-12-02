@@ -33,7 +33,7 @@ A Relay Node is a full node in the Solar network; it maintains a complete copy o
 
 SXP Nodes execute many query intensive operations. The most cost-effective approach for running a high-performance node is choosing SSD over HDD. Increasing the total RAM improves cache performance.
 
-## Configuration Requirements
+## Configuration requirements
 
 * Stable internet connection
 * Access to multiple open ports (actual ports may be configured)

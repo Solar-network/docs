@@ -22,7 +22,7 @@ List All Blocks.
 | int | limit | No | Result limits |
 | any | \*\*kwargs | No | Query parameters |
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`
 
@@ -40,7 +40,7 @@ Retrieve a Block
 | :--- | :--- | :--- | :--- |
 | int | block_id | Yes | Block ID |
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`
 
@@ -60,7 +60,7 @@ List All Transactions of a Block
 | int | page | No | Pagination |
 | int | limit | No | Query parameters |
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`
 
@@ -80,7 +80,7 @@ Search All Blocks
 | int | page | No | Pagination |
 | int | limit | No | Result limit |
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`
 
@@ -102,7 +102,7 @@ List All Delegates
 | int | limit | No | Result limits |
 | any | \*\*kwargs | No | Query parameters |
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`
 
@@ -120,7 +120,7 @@ Retrieve a Delegate
 | :--- | :--- | :--- | :--- |
 | int | delegate_id | Yes | Delegate identifier |
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`
 
@@ -140,7 +140,7 @@ Search Delegates
 | int | page | No | Pagination |
 | int | limit | No | Result limits |
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`
 
@@ -160,7 +160,7 @@ List All Blocks of a Delegate
 | int | page | No | Pagination |
 | int | limit | No | Result limits |
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`
 
@@ -181,7 +181,7 @@ List All Voters of a Delegate
 | int | limit | No | Result limits |
 | any | \*\*kwargs | No | Query parameters |
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`
 
@@ -195,7 +195,7 @@ def configuration(self)
 
 Retrieve the Configuration
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`
 
@@ -207,7 +207,7 @@ def status(self)
 
 Retrieve the Status
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`
 
@@ -219,7 +219,7 @@ def syncing(self)
 
 Retrieve the Syncing Status
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`
 
@@ -237,7 +237,7 @@ Retrieve the Fees
 | :--- | :--- | :--- | :--- |
 | int | days | No | ... |
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`
 
@@ -263,7 +263,7 @@ List All Peers
 | int | page | No | Pagination |
 | int | limit | No | Result limit |
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`
 
@@ -281,7 +281,7 @@ Retrieve a Peer
 | :--- | :--- | :--- | :--- |
 | str | ip | Yes | IP address |
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`
 
@@ -301,7 +301,7 @@ Create a Transaction
 | :--- | :--- | :--- | :--- |
 | list | transactions | Yes | Transaction to broadcast |
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`
 
@@ -319,7 +319,7 @@ Retrieve a Transaction
 | :--- | :--- | :--- | :--- |
 | str | transaction_id | Yes | Transaction ID |
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`
 
@@ -339,7 +339,7 @@ List All Transactions
 | int | limit | No | Result limit |
 | any | \*\*kwargs | No | Query parameters |
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`
 
@@ -359,7 +359,7 @@ List All Unconfirmed Transactions
 | int | offset | No | Offset |
 | any | \*\*kwargs | No | Query parameters |
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`
 
@@ -377,7 +377,7 @@ Get Unconfirmed Transaction
 | :--- | :--- | :--- | :--- |
 | str | transaction_id | Yes | Transaction ID |
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`
 
@@ -397,7 +397,7 @@ Search Transactions
 | int | page | No | Pagination |
 | int | limit | No | Result limit |
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`
 
@@ -409,7 +409,7 @@ def types(self)
 
 List Transaction Types
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`
 
@@ -421,7 +421,7 @@ def fees(self)
 
 List Transaction Fees (Non-Dynamic)
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`
 
@@ -442,7 +442,7 @@ List All Votes
 | int | page | No | Pagination |
 | int | limit | No | Result limit |
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`
 
@@ -460,7 +460,7 @@ Retrieve a Vote
 | :--- | :--- | :--- | :--- |
 | str | vote_id | Yes | Vote IDs |
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`
 
@@ -481,7 +481,7 @@ Retrieve All Wallets
 | int | page | No | Pagination |
 | int | limit | No | Result limit |
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`
 
@@ -499,7 +499,7 @@ Retrieve a Wallet
 | :--- | :--- | :--- | :--- |
 | str | wallet_id | Yes | Wallet identifier |
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`
 
@@ -520,7 +520,7 @@ List All Transactions of a Wallet
 | int | limit | No | Result limit |
 | any | \*\*kwargs | No | Query parameters |
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`
 
@@ -540,7 +540,7 @@ List All Received Transactions of a Wallet
 | int | page | No | Pagination |
 | int | limit | No | Result limit |
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`
 
@@ -560,7 +560,7 @@ List All Sent Transactions of a Wallet
 | int | page | No | Pagination |
 | int | limit | No | Result limit |
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`
 
@@ -580,7 +580,7 @@ List All Votes of a Wallet
 | int | page | No | Pagination |
 | int | limit | No | Result limit |
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`
 
@@ -599,7 +599,7 @@ List All Top Wallets
 | int | page | No | Pagination |
 | int | limit | No | Result limit |
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`
 
@@ -619,6 +619,6 @@ Search All Wallets
 | int | page | No | Pagination |
 | int | limit | No | Result limit |
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`

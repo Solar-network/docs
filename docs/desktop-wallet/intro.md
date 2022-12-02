@@ -4,11 +4,11 @@ title: Introduction
 
 # Introduction
 
-## What Is It?
+## What is it?
 
 The SXP Desktop Wallet is an application which allows you to manage SXP transactions. It provides an extensive set of functionalities, including management of profiles and wallets, the creation of both online and offline transactions, wallet summary, stylistic customizations, multilingual support, various currency integrations including BTC and much more!
 
-## Getting Started
+## Getting started
 
 To get started with the SXP Desktop Wallet, follow the documentation below for guides on Installation, Wallet Navigation, Creating Wallets and more...
 <x-link-collection
@@ -37,7 +37,7 @@ The SXP Desktop Wallet enables you to send a wide variety of transactions on the
     ]"
 />
 
-## Developer Guides
+## Developer guides
 
 The SXP Desktop Wallet offers a wide range of customization which empowers developers to create Plugins to enhance the experience within the Wallet from Games, Utilities and Theme's. Follow the guides below to get started with development within the SXP Desktop Wallet.
 <x-link-collection

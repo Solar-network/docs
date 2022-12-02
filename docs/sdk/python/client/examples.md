@@ -18,7 +18,7 @@ This service API grants access to the <a href="https://api.solar.org/#/Blocks" t
 
 > It is not possible to `POST` a block through the public API. Relay Nodes accept only blocks posted by a delegate at the correct time through the internal API.
 
-### List All Blocks
+### List all blocks
 
 ```python
 blocks = client.blocks.all()
@@ -34,7 +34,7 @@ print(blocks)
 >>> {'meta': {'count': 10, ... }}
 ```
 
-### Retrieve a Block
+### Retrieve a block
 
 ```python
 block = client.blocks.get('validBlockId')
@@ -44,7 +44,7 @@ print(block)
 >>> {'data': {'id': 'validBlockId' ... }}
 ```
 
-### List All Transactions of a Block
+### List all transactions of a block
 
 ```python
 block_transactions = client.blocks.transactions('validBlockId')
@@ -57,7 +57,7 @@ print(block_transactions)
 >>> {'meta': {'count': 10, ... }}
 ```
 
-### Search All Blocks
+### Search all blocks
 
 ```python
 searched_blocks = client.blocks.search({"generatorPublicKey": "validPublicKey"})
@@ -81,7 +81,7 @@ A delegate is a regular wallet that has broadcast a registration transaction, ac
 
 > Voters are wallets which have broadcast a vote transaction on a delegate. A vote remains active until an un-vote transaction is sent (it does not have to be recast unless a wallet wishes to change from delegate). Voting for a delegate does not give the delegate access to the wallet nor does it lock the coins in it.
 
-### List All Delegates
+### List all delegates
 
 ```python
 delegates = client.delegates.all()
@@ -97,7 +97,7 @@ print(delegates)
 >>> {'meta': {'count': 20, ... }}
 ```
 
-### Retrieve a Delegate
+### Retrieve a delegate
 
 ```python
 delegate = client.delegates.get("delegateName")
@@ -107,7 +107,7 @@ print(delegate)
 >>> {'data': {'username': 'delegateName', ... }}
 ```
 
-### Search Delegates
+### Search delegates
 
 ```python
 searched_delegates = client.delegates.search("delegateName")
@@ -120,7 +120,7 @@ print(searched_delegates)
 >>> {'meta': {'count': 1, ... }}
 ```
 
-### List All Blocks of a Delegate
+### List all blocks of a delegate
 
 ```python
 delegate_blocks = client.delegates.blocks("delegateName")
@@ -133,7 +133,7 @@ print(delegate_blocks)
 >>> {'meta': {'count': 20, ... }}
 ```
 
-### List All Voters of a Delegate
+### List all voters of a delegate
 
 ```python
 delegate_voters = client.delegates.voters("delegateName")
@@ -150,7 +150,7 @@ print(delegate_voters)
 
 The SXP network consists of different anonymous nodes (servers), maintaining the public ledger, validating transactions and blocks and providing APIs. The <a href="https://api.solar.org/#/Node" target="_blank" rel="noopener noreferrer">node resource</a> allows for querying the health and configurations of the node used by the instantiated client.
 
-### Retrieve the Configuration
+### Retrieve the configuration
 
 ```python
 configuration = client.node.configuration()
@@ -160,7 +160,7 @@ print(configuration)
 >>> {'data': {'nethash': '6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988', ... }}
 ```
 
-### Retrieve the Status
+### Retrieve the status
 
 ```python
 status = client.node.status()
@@ -170,7 +170,7 @@ print(status)
 >>> {'data': {'synced': True, 'now': 6897158, 'blocksCount': -1}}
 ```
 
-### Retrieve the Syncing Status
+### Retrieve the syncing status
 
 ```python
 syncing_status = client.node.syncing()
@@ -180,7 +180,7 @@ print(syncing_status)
 >>> {'data': {'syncing': False, 'blocks': -1, 'height': 6897160, 'id': '12905037940821862953'}}
 ```
 
-### Retrieve the Node Fees
+### Retrieve the node fees
 
 ```python
 fees = client.node.fees()
@@ -196,7 +196,7 @@ Each node is connected to a set of peers, which are Relay or Delegate Nodes as w
 
 > Peers have made their Public API available for use; however for mission-critical queries and transaction posting you should use a node which is under your control. We provide a guide to setting up a Relay Node [here](/core/installation/intro).
 
-### List All Peers
+### List all peers
 
 ```python
 peers = client.peers.all()
@@ -209,7 +209,7 @@ print(peers)
 >>> {'meta': {'count': 10, ... }}
 ```
 
-### Retrieve a Peer
+### Retrieve a peer
 
 ```python
 peer = client.peers.get("peerIpAddress")
@@ -225,7 +225,7 @@ The heart of any blockchain is formed by its transactions; state-altering payloa
 
 > A transaction is the only object which may be posted by a non-delegate. It requires a signature from a wallet containing a sufficient amount of SXP.
 
-### Create a Transaction
+### Create a transaction
 
 ```python
 transaction = client.transactions.create([signed_transaction])
@@ -235,7 +235,7 @@ print(transaction)
 >>> <class 'dict'> # Need to update
 ```
 
-### Retrieve a Transaction
+### Retrieve a transaction
 
 ```python
 transaction = client.transactions.get("validTransactionId")
@@ -245,7 +245,7 @@ print(transaction)
 >>> <class 'dict'> # Need to update
 ```
 
-### List All Transactions
+### List all transactions
 
 ```python
 transactions = client.transactions.all()
@@ -259,7 +259,7 @@ transactions = client.transactions.all(page=1, limit=10, {"orderBy": "amount"})
 >>> {'meta': {'count': 10, ... }}
 ```
 
-### List All Unconfirmed Transactions
+### List all unconfirmed transactions
 
 ```python
 unconfirmed_transactions = client.transactions.all_unconfirmed()
@@ -275,7 +275,7 @@ print(unconfirmed_transactions)
 >>> {'meta': {'count': 10, ... }}
 ```
 
-### Get Unconfirmed Transaction
+### Get unconfirmed transaction
 
 ```python
 unconfirmed_transaction = client.transactions.get_unconfirmed("validTransactionId")
@@ -285,7 +285,7 @@ print(unconfirmed_transaction)
 >>> <class 'dict'> # Need to update
 ```
 
-### Search Transactions
+### Search transactions
 
 ```python
 transactions = client.transactions.search({"senderId": "validPublicKey"})
@@ -299,7 +299,7 @@ print(transactions)
 >>> {'meta': {'count': 10, ... }}
 ```
 
-### List Transaction Types
+### List transaction types
 
 ```python
 types = client.transactions.types()
@@ -309,7 +309,7 @@ print(types)
 >>> {"data":{...}}
 ```
 
-### List Transaction Fees (Non-Dynamic)
+### List transaction fees (non-dynamic)
 
 ```python
 fees = client.transactions.fees()
@@ -321,7 +321,7 @@ fees = client.transactions.fees()
 
 A <a href="https://api.solar.org/#/Votes" target="_blank" rel="noopener noreferrer">vote</a> is a transaction sub-type, where the `asset` field contains a `votes` object and the `transaction.type` is `3`.
 
-### List All Votes
+### List all votes
 
 ```python
 votes = client.votes.all()
@@ -334,7 +334,7 @@ print(votes)
 >>> {'meta': {'count': 10, ... }}
 ```
 
-### Retrieve a Vote
+### Retrieve a vote
 
 ```python
 vote = client.votes.get('validVoteId')
@@ -352,7 +352,7 @@ The <a href="https://api.solar.org/#/Wallets" target="_blank" rel="noopener nore
 * Incoming and outgoing transactions per wallet.
 * Each wallet's votes.
 
-### Retrieve All Wallets
+### Retrieve all wallets
 
 ```python
 wallets = client.wallets.all()
@@ -365,7 +365,7 @@ print(wallets)
 >>> {'meta': {'count': 10, ... }}
 ```
 
-### Retrieve a Wallet
+### Retrieve a wallet
 
 ```python
 wallet = client.wallets.get('validWalletId')
@@ -375,7 +375,7 @@ print(wallet)
 >>> {'data': {'id': 'validWalletId' ... }}
 ```
 
-### List All Transactions of a Wallet
+### List all transactions of a wallet
 
 ```python
 wallet_transactions = client.wallets.transactions('validWalletId')
@@ -389,7 +389,7 @@ print(wallet_transactions)
 >>> {'meta': {'count': 10, ... }}
 ```
 
-### List All Received Transactions of a Wallet
+### List all received transactions of a wallet
 
 ```python
 received_transactions = client.wallets.transactions_received('validWalletId')
@@ -405,7 +405,7 @@ print(received_transactions)
 >>> {'meta': {'count': 10, ... }}
 ```
 
-### List All Sent Transactions of a Wallet
+### List all sent transactions of a wallet
 
 ```python
 sent_transactions = client.wallets.transactions_sent('validWalletId')
@@ -421,7 +421,7 @@ print(sent_transactions)
 >>> {'meta': {'count': 10, ... }}
 ```
 
-### List All Votes of a Wallet
+### List all votes of a wallet
 
 ```python
 wallet_votes = client.wallets.votes('validWalletId')
@@ -434,7 +434,7 @@ print(wallet_votes)
 >>> {'meta': {'count': 10, ... }}
 ```
 
-### List All Top Wallets
+### List all top wallets
 
 ```python
 top_wallets = client.wallets.top()
@@ -447,7 +447,7 @@ print(top_wallets)
 >>> {'meta': {'count': 10, ... }}
 ```
 
-### Search All Wallets
+### Search all wallets
 
 ```python
 wallets = client.wallets.search({"publicKey": "validPublicKey"})

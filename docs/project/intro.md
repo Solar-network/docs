@@ -8,21 +8,18 @@ A decentralised community-driven blockchain project.
 Solar is focused on creating an ecosystem with true governance.
 An ecosystem with open-source developers and community involvement.
 
-
-### 1.2 Project Mission
+### 1.2 Project mission
 
 Solar is a blockchain with its own native SXP coin.<br />
 The SXP blockchain offers a wide variety of features and tools that allows us to level with enterprise-grade applications.
 
-
-### 1.3 Project Key Highlights
+### 1.3 Project key highlights
 
 - Community-focused
 - Competing with top tier crypto projects
 - Open-source tools with many use-cases
 - Scalable and secure using the latest blockchain technology
 - Deflationary and inflationary at the same time
-
 
 ## 2. Solar products and technical infrastructure
 
@@ -37,8 +34,7 @@ New desktop, mobile, and browser wallets are currently being developed to intera
 SXP blockchain has to offer, such as creating tokens, interacting with the metaverse, tools to monitor the
 blockchain and a lot more.
 
-
-### 2.2 Technical Infrastructure
+### 2.2 Technical infrastructure
 
 Solar is powered by Solar Core. A safe and secure Layer-1 Blockchain Framework.<br />
 Solar utilises the Delegated Proof of Stake Consensus, also known as DPoS.<br />
@@ -64,8 +60,7 @@ metadata and custom transaction types to allow “burning” and “SolContract�
 Solidity Smart Contracts on the SXP Blockchain.<br />
 The Solar Core also enables dynamic forging rewards based on the position of a delegate.<br />
 
-
-## 3. SXP Coin Overview & Use Cases
+## 3. SXP coin overview & use cases
 
 SXP utilises a Delegated Proof of Stake concensus, from which the forging rewards are distributed to delegates.<br />
 The delegates are able to further distribute these rewards to their voters and keep a percentage as reward for the contribution to the network.<br />

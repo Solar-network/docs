@@ -2,7 +2,7 @@
 title: Getting Started
 ---
 
-# Getting Started
+# Getting started
 
 !!! tip
 
@@ -23,7 +23,7 @@ This is the reference guide for the Public API. This API exposes all resources a
 
 Requests that return multiple items will be paginated to 100 items by default. You can specify further pages with the `?page` parameter. For some resources, you can also set a custom page size up to 100 with the `?limit` parameter. Note that for technical reasons not all endpoints respect the `?limit` parameter.
 
-## Public Testing Relay
+## Public testing relay
 
 If you are not running a relay yourself you can test API calls using:
 
@@ -35,7 +35,7 @@ If you are not running a relay yourself you can test API calls using:
 | :-------------------------------------------------------------------------------------------: |
 | <a href="https://tapi.solar.org" target="_blank" rel="noopener noreferrer">tapi.solar.org</a> |
 
-## Self-Hosted Relay Port
+## Self-hosted relay port
 
 When running a self-hosted Core relay instance, the default API port is `6003`.  
 (e.g., `<your_relay's_ip>:6003/api`).

@@ -2,8 +2,6 @@
 title: Broadcast Procedure
 ---
 
-
-
 ## Phase 2 - Backend Program Broadcasting Transaction
 
 In the second phase, the backend program listens for new transactions on BEP20/ERC20 SXPSwap contract.<br />
@@ -29,7 +27,7 @@ The prefix determines where the transaction originated from, either Binance Smar
 Adding this note to mainnet transactions will provide transparency to incoming swaps, but it's also for the forging nodes to run their own validations.<br />
 
 
-#### Security Notices
+#### Security notices
 
 The server that hosts the backend program has several security features in case of failures such as server hacks, server reboot, ddos attacks, DC issues or server maintenance.<br />
 <br />

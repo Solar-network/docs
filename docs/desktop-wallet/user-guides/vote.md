@@ -4,7 +4,7 @@ title: How to Vote or Unvote in the Desktop Wallet?
 
 # How to Vote in the Desktop Wallet?
 
-## General Information
+## General information
 
 You can use your SXP to vote or a delegate. Some basic voting info:
 
@@ -24,13 +24,13 @@ Each transaction in the SXP network costs a certain amount of SXP. With the impl
 For more information about staking, please visit: [SXP Rewards (Staking)](/desktop-wallet/introduction-to-solar-rewards)
 </x-alert>
 
-## Whom to Vote For?
+## Who to vote For?
 
 Visit [SXP Delegates](https://delegates.solar.org/), our community-run delegate resource, for more information on delegate proposals. From the current list of delegates, vote according to your preferences.
 
 You can also see the list of currently active delegates on our [delegate monitor](https://explorer.solar.org/delegates).
 
-## Voting for a Delegate
+## Voting for a delegate
 
 ![Browse the list of registered delegates](/desktop-wallet/assets/delegates.png)
 
@@ -41,6 +41,5 @@ You can also see the list of currently active delegates on our [delegate monitor
 <x-alert type="info">
 For more information about fees, please visit: [Transaction Fees](/desktop-wallet/user-guides/transaction-fees)
 </x-alert>
-
 
 Remember that you can always change your vote!

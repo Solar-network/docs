@@ -28,7 +28,7 @@ import { Connection } from "@solar-network/client";
 const client = new Connection("https://tapi.solar.org/api");
 ```
 
-## Check Wallet Balance
+## Check wallet balance
 
 Checking a wallet balance involves using the `wallets` resource to `GET` the wallet corresponding to a given Solar address.
 
@@ -38,7 +38,7 @@ const wallet = await client.api("wallets").get("SN52X5W9U2JWj3P6jd3ZHnSddUo7UJ4A
 console.log(wallet.body.data.balance);
 ```
 
-## Find Block Information
+## Find block information
 
 If you know the ID of the block you are looking for, you can use the `GET` method on the `blocks` resource to return information on that block.
 
@@ -79,7 +79,7 @@ const blocks = await client.api("blocks").all({
   console.log(blocks); // all blocks matching the search criteria
 ```
 
-## Create and Broadcast Transactions
+## Create and broadcast transactions
 
 To create transactions, make use of the **transactionBuilder** module of `@solar-network/crypto`. First, install the package from pnpm or equivalent:
 
@@ -160,7 +160,7 @@ The diagram below offers a top-level overview of the transaction submission proc
 
 ![Transaction Flow](/exchanges/assets/transaction-flow.png)
 
-## Check Transaction Confirmations
+## Check transaction confirmations
 
 Once a transaction has been created and added to the blockchain, you can access the number of confirmations it has by using the `transactions` resource to `get` the value matching the transaction ID.
 
@@ -202,7 +202,7 @@ If the transaction has been added to the blockchain, you'll receive the followin
 
 You can see that the `confirmations` key holds the number of confirmations this transaction has received from the network, in the above case 0. As the average block takes 8 seconds to forge, finality is typically established within a minute following a transaction's addition to the blockchain.
 
-## Listening For Transactions
+## Listening for transactions
 
 it is possible to retrieve all transactions of a wallet given its address and, optionally, add filters.
 
@@ -217,7 +217,7 @@ console.log(transactions.body.data);
 
     Transfer transactions can be either **LegacyTransfer** (typegroup 1, type 0) or **Transfer** (typegroup 1, type 6). When listening for incoming transactions, it is essential to monitor for both of these types of transfer.
 
-## Check Node Status
+## Check node status
 
 Checking node status can be done by using the `node` resource's `status` method:
 

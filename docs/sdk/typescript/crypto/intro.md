@@ -12,7 +12,7 @@ Alternatively you can install NodeJS through your operating system <a href="http
 
 An excellent way to manage your NodeJS installation and be able to work with multiple version is to go through <a href="https://github.com/nvm-sh/nvm" target="_blank" rel="noopener noreferrer">NVM</a>.
 
-## Install a Package Manager
+## Install a package manager
 
 Install a package manager for nodejs like pnpm, npm or yarn.
 
