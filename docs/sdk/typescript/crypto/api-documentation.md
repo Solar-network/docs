@@ -230,45 +230,6 @@ Hash with Hash256.
 
 ## Crypto\Crypto\Hash
 
-### `signECDSA()`
-
-```typescript
-public static signECDSA(hash: Buffer, keys: IKeyPair)
-```
-
-Sign hash with ECDSA.
-
-#### Parameters
-
-| Type | Name | Required | Description |
-| :--- | :--- | :--- | :--- |
-| Buffer | hash | Yes | Hash to sign |
-| IKeyPair | keys | Yes | Keys to sign hash with |
-
-#### Return value
-
-`string`
-
-### `verifyECDSA()`
-
-```typescript
-public static verifyECDSA(hash: Buffer, signature: Buffer | string, publicKey: Buffer | string)
-```
-
-Verify ECDSA signature.
-
-#### Parameters
-
-| Type | Name | Required | Description |
-| :--- | :--- | :--- | :--- |
-| Buffer | hash | Yes | Hash to verify |
-| Buffer, string | signature | Yes | Signature of hash |
-| Buffer, string | publicKey | Yes | Public key of wallet which signed the hash |
-
-#### Return value
-
-`boolean`
-
 ### `signSchnorr()`
 
 ```typescript
