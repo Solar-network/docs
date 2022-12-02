@@ -10,6 +10,7 @@ Before we get started we need to make sure that all of the required dependencies
 
 Open your project and execute the following commands to install both SDKs. Make sure that those complete without any errors. If you encounter any errors, please open an issue with as much information as you can provide so that our developers can have a look and get to the bottom of the issue.
 
+<!--email_off-->
 ```bash
 sudo apt update && sudo apt install python3-pip python3-dev python3-venv
 cd <PROJECT_DIR>
@@ -19,6 +20,7 @@ pip3 install wheel
 pip3 install git+https://github.com/Solar-network/python-client.git@master#egg=solar-client --upgrade
 pip3 install solar-crypto --upgrade
 ```
+<!--/email_off-->
 
 ## Creating and Broadcasting a Transfer
 
