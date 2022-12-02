@@ -10,9 +10,9 @@ You can quickly send a transfer by clicking on the _**Send**_ button in the head
 
 ![](/desktop-wallet/assets/transfer.png)
 
-<x-alert type="info">
-For more information about fees, please visit: [Transaction Fees](/desktop-wallet/user-guides/transaction-fees)
-</x-alert>
+!!! info
+
+    For more information about fees, please visit: [Transaction Fees](/desktop-wallet/user-guides/transaction-fees)
 
 Upon clicking _**Next**_, you will have to review the transfer transaction's details and can proceed by clicking the "Continue" button.
 

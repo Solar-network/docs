@@ -63,10 +63,11 @@ except SolarHTTPException as exception:
 print(broadcastResponse)
 ```
 
-<x-alert type="info">
-The transaction memo is optional and limited to a length of 255 characters. It can be a good idea to add memo to your transactions if you want to be able to easily track them in the future.<br>
-Rest of the examples assume V3 transactions as default. You must set the version explicity using `transaction.set_version(int)` otherwise.
-</x-alert>
+!!! info
+
+    The transaction memo is optional and limited to a length of 255 characters. It can be a good idea to add memo to your transactions if you want to be able to easily track them in the future.
+
+    Rest of the examples assume V3 transactions as default. You must set the version explicitly using `transaction.set_version(int)` otherwise.
 
 ## Creating and broadcasting a legacy transfer
 
@@ -219,9 +220,9 @@ except SolarHTTPException as exception:
 print(broadcastResponse)
 ```
 
-<x-alert type="info">
-A delegate resignation has to be sent from the delegate wallet itself to verify its identity.
-</x-alert>
+!!! info
+
+    A delegate resignation has to be sent from the delegate wallet itself to verify its identity.
 
 ## Creating and broadcasting a vote (Solar version >= 4.0.0)
 
@@ -478,9 +479,9 @@ except SolarHTTPException as exception:
 print(broadcastResponse)
 ```
 
-<x-alert type="info">
-The **unlockSecret** has to be a SHA256 hash of the plain text secret that you shared with the person that is allowed to claim the transaction.
-</x-alert>
+!!! info
+
+    The **unlockSecret** has to be a SHA256 hash of the plain text secret that you shared with the person that is allowed to claim the transaction.
 
 ## Creating and broadcasting a htlc refund
 

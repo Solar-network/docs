@@ -6,10 +6,6 @@ title: Troubleshooting
 
 This page will cover common issues related to the SXP Desktop Wallet `v2.x`.
 
-<x-alert type="info">
-If your issue is not covered here, ask the community [here](https://solar.org/community)!
-</x-alert>
-
 ## Getting started
 
 A user experiencing unexpected errors should first check that their apps and software are up-to-date.
@@ -71,13 +67,13 @@ This restarts all services related to the SXP Desktop Wallet, no data will be lo
 
 ![Select "Force Reload" from the "View" drop-down menu.](/desktop-wallet/assets/troubleshooting-force-reload.jpeg)
 
-<x-alert type="info">
-If the **connection issues** are **not** resolved using the advice above, check that your connections are not being blocked by **Firewall** or **Antivirus Software**.
-</x-alert>
+!!! info
 
-<x-alert type="success">
-Tip: Enter your SXP Address at [explorer.solar.org](http://explorer.solar.org) to verify balances and transactions.
-</x-alert>
+    If the **connection issues** are **not** resolved using the advice above, check that your connections are not being blocked by **Firewall** or **Antivirus Software**.
+
+!!! success
+
+    Tip: Enter your SXP Address at [explorer.solar.org](http://explorer.solar.org) to verify balances and transactions.
 
 ## Wallet Issues
 
@@ -97,9 +93,9 @@ Users having **Wallet** issues will typically experience the following:
 
 A word may have been misspelled or extra characters might have been entered by mistake.
 
-<x-alert type="info">
-A mnemonic recovery passphrase should be all <u>**lower-case**</u> letters with a <u>**single space**</u> between <u>**each**</u> word.
-</x-alert>
+!!! info
+
+    A mnemonic recovery passphrase should be all <u>**lower-case**</u> letters with a <u>**single space**</u> between <u>**each**</u> word.
 
 ---
 
@@ -107,13 +103,13 @@ A mnemonic recovery passphrase should be all <u>**lower-case**</u> letters with 
 
 If the mnemonic passphrase was entered **exactly** as recorded, compare each word to the official list found here:<br>[BIP-39 Wordlist: https://raw.githubusercontent.com/bitcoin/bips/master/bip-0039/english.txt](https://raw.githubusercontent.com/bitcoin/bips/master/bip-0039/english.txt)
 
-<x-alert type="info">
-The purpose of checking this wordlist is to ensure that similar words were not recorded inadvertently.<br>*e.g. "aim" vs "air"; "fine" vs "find"; "seek" vs "seed"*
-</x-alert>
+!!! info
 
-<x-alert type="success">
-Tip: Enter your SXP Address at [explorer.solar.org](http://explorer.solar.org) to check that the balance and transaction history are as expected.
-</x-alert>
+    The purpose of checking this wordlist is to ensure that similar words were not recorded inadvertently.<br>*e.g. "aim" vs "air"; "fine" vs "find"; "seek" vs "seed"*
+
+!!! success
+
+    Tip: Enter your SXP Address at [explorer.solar.org](http://explorer.solar.org) to check that the balance and transaction history are as expected.
 
 ---
 
@@ -124,9 +120,9 @@ Unfortunately, no mechanism exists to recover a lost recovery mnemonic. This sec
 
 It is <u>**always**</u> advised to write your recovery phrase down on paper, double and triple check that it is written down correctly, keep it safe and **share it with no one**.
 
-<x-alert type="danger">
-Your 12-word passphrase is <u>**your**</u> responsibility. If it is lost or stolen, you <u>**will**</u> lose access to your funds. Lost mnemonic recovery passphrases are <u>**NOT**</u> recoverable.
-</x-alert>
+!!! danger
+
+    Your 12-word passphrase is <u>**your**</u> responsibility. If it is lost or stolen, you <u>**will**</u> lose access to your funds. Lost mnemonic recovery passphrases are <u>**NOT**</u> recoverable.
 
 ## Signing Issues
 
@@ -148,9 +144,9 @@ Users having **Signing** issues will typically receive the following **error mes
 - a) using the correct <u>**encryption password**</u>
 - b) using the correct <u>**recovery passphrase**</u>
 
-<x-alert type="info">
-Users should also check that they are not using the <u>**Mnemonic Passphrase**</u> *as* the <u>**Encryption Password**</u>, or <u>**Encryption Password**</u> *as* the <u>**Mnemonic Passphrase**</u>.
-</x-alert>
+!!! info
+
+  Users should also check that they are not using the <u>**Mnemonic Passphrase**</u> *as* the <u>**Encryption Password**</u>, or <u>**Encryption Password**</u> *as* the <u>**Mnemonic Passphrase**</u>.
 
 ---
 
@@ -160,9 +156,9 @@ If only the **encryption password** is wrong.. **FUNDS SAFU!**
 
 The **encryption password** is only used to help "*hide*" your keys; try re-importing your wallet using its **mnemonic passphrase**.
 
-<x-alert type="warning">
-An encryption password **must** contain at least:<br>- 8 characters in total<br>- 1 upper-case character<br>- 1 lower-case character<br>- 1 number<br>- 1 special character
-</x-alert>
+!!! warning
+
+    An encryption password **must** contain at least:<br>- 8 characters in total<br>- 1 upper-case character<br>- 1 lower-case character<br>- 1 number<br>- 1 special character
 
 ---
 
@@ -172,9 +168,9 @@ If your **mnemonic passphrase** appears to be correct, check that it was **enter
 
 A word may have been misspelled or extra characters might have been entered by mistake.
 
-<x-alert type="info">
-If the mnemonic passphrase was entered exactly as recorded, refer to the section on checking a passphrase <u>[here](#resolving-wallet-issues)</u>.
-</x-alert>
+!!! info
+
+    If the mnemonic passphrase was entered exactly as recorded, refer to the section on checking a passphrase <u>[here](#resolving-wallet-issues)</u>.
 
 ## Ledger Hardware Wallet Issues
 
@@ -299,13 +295,13 @@ For guidance on <i><b>updating</b></i> <b>Ledger Apps</b>, refer to the followin
 </details>
 {{--  --}}
 
-<x-alert type="warning">
-Users should also check that they are properly **connected** to a **valid network peer**.
-</x-alert>
+!!! warning
 
-<x-alert type="info">
-Advice on troubleshooting a **network connection** can be found <u>[here](#resolving-connectivity-issues)</u>.
-</x-alert>
+    Users should also check that they are properly **connected** to a **valid network peer**.
+
+!!! info
+
+    Advice on troubleshooting a **network connection** can be found <u>[here](#resolving-connectivity-issues)</u>.
 
 ### My Ledger issue is still not resolved!
 
@@ -315,13 +311,13 @@ In rare cases, a user's profile may have become corrupted.
 
 A user is then advised to **restore** the SXP Desktop Wallet to its **default settings**, then **re-import** wallets and watch-addresses.
 
-<x-alert type="danger">
-This will **erase a user's** **profile data**, make sure <u>**all**</u> **mnemonic recovery phrases** and **watch-addresses** are **written down** and **saved properly**. Funds **will** be **lost** if your data is **not** backed up. <u>**This action cannot be undone**</u>.
-</x-alert>
+!!! danger
 
-<x-alert type="info">
-Note that **Ledger** wallets are imported <u>**only**</u> by **connecting** to the SXP Desktop Wallet. <u>**NEVER**</u> enter your 24-word Ledger recovery phrase into <u>**any**</u> software, apps or websites.
-</x-alert>
+    This will **erase a user's** **profile data**, make sure <u>**all**</u> **mnemonic recovery phrases** and **watch-addresses** are **written down** and **saved properly**. Funds **will** be **lost** if your data is **not** backed up. <u>**This action cannot be undone**</u>.
+
+!!! info
+
+    Note that **Ledger** wallets are imported <u>**only**</u> by **connecting** to the SXP Desktop Wallet. <u>**NEVER**</u> enter your 24-word Ledger recovery phrase into <u>**any**</u> software, apps or websites.
 
 ## Debugging Tips
 
@@ -333,6 +329,8 @@ The easiest and most common way is to use the built-in **Dev Tools**, which **wi
 
 ![Dev tools can be opened by selecting ‘**Toggle Dev Tools**’ from the "**View**" drop-down menu.](/desktop-wallet/assets/troubleshooting-dev-tools.jpeg) -->
 
-<x-alert type="info">
-If your issue is not covered here, please contact us using the ‘Technical Support’ form found [here](https://solar.org/contact)!
-</x-alert>
+!!! info
+
+    If your issue is not covered here, you can ask the community here: [solar.org/community](https://solar.org/community)
+
+    or contact us using the ‘Technical Support’ form found here: [solar.org/contact](https://solar.org/contact)

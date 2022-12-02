@@ -20,9 +20,9 @@ With a signed message, others can verify that a given message and signature comb
 
 To verify a message that was signed by a different wallet, you need the wallet's public key, the original message, and the resulting signature.
 
-<x-alert type="success">
-The public key of a wallet is much like the address, except it doesn't follow the same format and is not shown by default in the Desktop Wallet. You can view your wallet's public key by clicking the key icon next to your wallet's address in the wallet detail page's header.
-</x-alert>
+!!! success
+
+    The public key of a wallet is much like the address, except it doesn't follow the same format and is not shown by default in the Desktop Wallet. You can view your wallet's public key by clicking the key icon next to your wallet's address in the wallet detail page's header.
 
 The SXP network will only know your public key once you have sent a transaction.
 

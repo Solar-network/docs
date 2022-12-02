@@ -16,9 +16,9 @@ A user’s vote-weight adjusts automatically as funds are sent and received, and
 
 To change a vote, a user simply un-votes their current Validator and elects another by casting a new vote transaction.
 
-<x-alert type="info">
-For more information about voting and unvoting, please visit: [How to Vote or Unvote a Delegate](/desktop-wallet/user-guides/how-to-vote)
-</x-alert>
+!!! info
+
+    For more information about voting and unvoting, please visit: [How to Vote or Unvote a Delegate](/desktop-wallet/user-guides/how-to-vote)
 
 ## Staking fees
 
@@ -28,9 +28,9 @@ There is no requirement to send or lock additional funds in order to participate
 
 This transaction fee is awarded to the Validator who forges the transaction in a given block.
 
-<x-alert type="info">
-For more information about fees, please visit: [Transaction Fees](/desktop-wallet/user-guides/transaction-fees)
-</x-alert>
+!!! info
+
+    For more information about fees, please visit: [Transaction Fees](/desktop-wallet/user-guides/transaction-fees)
 
 ## Block rewards
 
@@ -52,9 +52,7 @@ On Solar, 100% of the block reward goes to the Validator.
 
 As previously stated, block rewards and transaction fees are awarded to the active delegate responsible for reporting a given block. We call this combination of the block reward and 10% of any fees the total reward. On Solar, many of these delegates choose to take a small commission from the total reward and share the remaining after commission reward (ACR) with their voters.
 
-<x-alert type="warning">
-**This form of reward sharing is completely optional and not all delegates will share their rewards.**
-</x-alert>
+!!! warning "This form of reward sharing is completely optional and not all delegates will share their rewards"
 
 Reward sharing can vary wildly with delegates taking commissions of anywhere from 0-100% of the total rewards.
 
