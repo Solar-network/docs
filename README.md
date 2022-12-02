@@ -37,13 +37,6 @@ deactivate
 
 </details><br />
 
-
-<!-- > Later on, you can exit the Python Virtual Environment using the '`deactivate`' command.
->
-> ```bash
-> deactivate
-> ``` -->
-
 ### 2: Serve locally
 
 ```shell
@@ -62,15 +55,6 @@ mkdocs gh-deploy --force
 ```
 
 </details><br />
-
-<!-- <details><summary>3: Deploy to GH Pages (admins-only)</summary>
-
-``` sh
-mkdocs build
-mkdocs gh-deploy --force
-```
-
-</details> -->
 
 ## Security
 
