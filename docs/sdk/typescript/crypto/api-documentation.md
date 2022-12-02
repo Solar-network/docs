@@ -1970,7 +1970,7 @@ Get transaction structure.
 ### `votesAsset()`
 
 ```typescript
-public votesAsset(votes: string[])
+public votesAsset(votes: { [vote: string]: number })
 ```
 
 Specify the Vote asset data for the Transaction.
