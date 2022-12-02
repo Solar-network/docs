@@ -216,7 +216,7 @@ const client = new Connection("https://tapi.solar.org/api");
 
 !!! info
 
-    Note the **numbers** in the object that is passed on the **votesAsset** function represent the percentage of the wallet balance you want to vote towards the related delegate. This implies that the sum of all of them must be 100 or the object has to be empty for unvoting.
+    Note the **numbers** in the object that is passed on the **votesAsset** function represent the percentage of the wallet balance you want to vote towards the related delegate. This implies that the sum of all of them must be 100 or the object has to be empty to cancel an existing vote.
 
 ## Creating and Broadcasting a IPFS
 
