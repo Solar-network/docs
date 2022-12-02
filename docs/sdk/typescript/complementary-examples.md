@@ -64,7 +64,7 @@ Managers.configManager.setFromPreset("testnet");
 Managers.configManager.setHeight(current_height);
 ```
 
-## Creating and broadcasting a transfer
+## Creating and broadcasting a transfer transaction
 
 ```typescript
 import { Transactions, Managers, Utils } from "@solar-network/crypto";
@@ -108,7 +108,7 @@ const client = new Connection("https://tapi.solar.org/api");
 
     The memo is optional and limited to a length of 255 characters. It can be a good idea to add a memo to your transactions if you want to be able to easily track or identify them in the future or include a personal message to the transaction's recipient(s).
 
-## Creating and broadcasting a second signature
+## Creating and broadcasting a second signature transaction
 
 ```typescript
 import { Transactions, Managers, Utils } from "@solar-network/crypto";
@@ -144,7 +144,7 @@ const client = new Connection("https://tapi.solar.org/api");
 })();
 ```
 
-## Creating and broadcasting a delegate registration
+## Creating and broadcasting a delegate registration transaction
 
 ```typescript
 import { Transactions, Managers, Utils } from "@solar-network/crypto";
@@ -179,7 +179,7 @@ const client = new Connection("https://tapi.solar.org/api");
 })();
 ```
 
-## Creating and broadcasting a vote
+## Creating and broadcasting a vote transaction
 
 ```typescript
 import { Transactions, Managers, Utils } from "@solar-network/crypto";
@@ -218,7 +218,7 @@ const client = new Connection("https://tapi.solar.org/api");
 
     Note the **numbers** in the object that is passed on the **votesAsset** function represent the percentage of the wallet balance you want to vote towards the related delegate. This implies that the sum of all of them must be 100 or the object has to be empty to cancel an existing vote.
 
-## Creating and broadcasting a IPFS
+## Creating and broadcasting an IPFS transaction
 
 ```typescript
 import { Transactions, Managers, Utils } from "@solar-network/crypto";
@@ -253,7 +253,7 @@ const client = new Connection("https://tapi.solar.org/api");
 })();
 ```
 
-## Creating and broadcasting a delegate resignation
+## Creating and broadcasting a delegate resignation transaction
 
 ```typescript
 import { Transactions, Managers, Utils } from "@solar-network/crypto";
