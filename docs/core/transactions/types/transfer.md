@@ -4,6 +4,15 @@ title: Transfer
 
 # Transfer
 
+!!! success "This page contains the latest <u>Type 6</u> Transfer"
+
+!!! danger "<u>Type 0</u> Transfers will be deprecated on December 31st, 2022 at block 3,000,000"
+
+    - <u>Type 0</u> Transfers will <u>**NOT**</u> be accepted by the Solar blockchain after block height 3,000,000 ❌
+    - <u>Type 6</u> Transfers should be used from now on ✅
+
+    _You can check the current block height via API at: <a href="https://api.solar.org/api/blockchain" target="_blank" rel="noopener noreferrer">api.solar.org/api/blockchain</a>_
+
 | TypeGroup | Type  |
 | :-------: | :---: |
 |     1     |   6   |
