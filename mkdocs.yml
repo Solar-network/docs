@@ -83,6 +83,9 @@ plugins:
   - minify:
       minify_html: true
   - search
+  - swagger-ui-tag:
+      supportedSubmitMethods: ["get", "post"]
+      validatorUrl: "https://validator.swagger.io/validator"
 
 # Customization
 extra:

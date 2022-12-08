@@ -4,6 +4,8 @@ title: Public API Guide
 
 # Exchanges API Guide
 
+!!! tip "Explore Solar Core's interactive REST API documentation here: [Solar Core API Endpoints](/api/public-rest-api/endpoints)"
+
 Connecting to the Public API is done via the [Crypto and Client SDKs](/sdk/documentation/). Many queries can be performed using the Client SDK alone, while the Crypto SDK performs any actions requiring cryptographic functionality (i.e., signing transactions).
 
 At a surface level, the two SDKs are separated by their functions and intended use cases:

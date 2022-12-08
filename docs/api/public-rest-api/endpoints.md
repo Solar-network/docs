@@ -1,10 +1,12 @@
 ---
 title: Endpoints
+hide: [toc]
 ---
 
 # Endpoints
 
-!!! success "See the full interactive list of API endpoints via the following links:"
+This section contains interactive documentation for Solar Core's public mainnet API and makes for a perfect companion for learning how to fetch blockchain data like node configurations, pending or confirmed transactions, wallet or voting information, and more without needing to run a Core node.
 
-    - **Mainnet** - <a href="https://api.solar.org" target="_blank" rel="noopener noreferrer">api.solar.org</a>
-    - **Testnet** - <a href="https://tapi.solar.org" target="_blank" rel="noopener noreferrer">tapi.solar.org</a>
+!!! tip "Explore the <u>testnet</u> API here: <a href="https://tapi.solar.org" target="_blank" rel="noopener noreferrer">tapi.solar.org</a>"
+
+<swagger-ui src="https://api.solar.org/api.json"/>
