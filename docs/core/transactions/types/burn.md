@@ -8,7 +8,7 @@ title: Burn
 | :-------: | :---: |
 |     2     |   0   |
 
-This transaction type allows burning an arbitrary amount of SXP tokens. The burned amount is deducted from the sender's wallet as well as from the chain's circulating supply.
+This transaction type allows burning an arbitrary amount of SXP coins. The burned amount is deducted from the sender's wallet as well as from the chain's circulating supply.
 
 | References                         |                                                                                                                                                                                                                                           |
 | :--------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

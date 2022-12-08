@@ -17,7 +17,7 @@ title: Transfer
 | :-------: | :---: |
 |     1     |   6   |
 
-A transfer allows one or multiple payments to be combined and broadcast to the network as a single transaction. This benefits the end user and delegates by lowering transaction fees per payment and reducing congestion. Solar Core allows up to 256 payments to be combined within a single transaction.
+A transfer allows one or multiple payments (sending SXP coins from one SXP wallet to another) to be combined and broadcast to the network as a single transaction. This benefits the end user and delegates by lowering transaction fees per payment and reducing congestion. Solar Core allows up to 256 payments to be combined within a single transaction.
 
 All Solar transactions contain a special data field of 255 bytes known as the 'Memo'. This data field allows raw data, code, or plain text to be stored on the blockchain. The Memo is optional, public, and immutable.
 
