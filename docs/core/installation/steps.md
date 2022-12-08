@@ -14,7 +14,6 @@ Directly below is a quick summary of these install commands:
 
 ```bash
 sudo adduser solar
-sudo usermod -a -G sudo solar
 su -l solar
 
 wget -O install.sh https://raw.githubusercontent.com/solar-network/core/main/install.sh
@@ -28,6 +27,8 @@ pm2 logs
 ## Step-by-step installation via the install script
 
 If you are planning to setup a new server you can execute the following steps.
+
+---
 
 ### Step 1: Create a new account
 
@@ -66,25 +67,15 @@ Is the information correct? [Y/n] Y
 
 ---
 
-### Step 2: Grant sudo privileges
+### Step 2: Login as the new user
 
-Next, we need to make sure that our user account has all of the necessary privileges to run Solar Core properly. This will give our user account `sudo` privileges.
-
-Type or copy-paste the following command into your terminal:
-
-```bash
-sudo usermod -a -G sudo solar
-```
+We now should switch to the user account created above, this will also land us in the user's base directory (`~/`).
 
 !!! info
 
     In this example we use **'solar'** for the name of the new user account, but you should use whatever username was set in the previous steps above.
 
-### Step 3: Login as the new user
-
-We now should switch to the user account created above, this will also land us in the user's base directory (`~/`).
-
-Type or copy-paste the following command into your terminal:
+Enter the following command into your terminal:
 
 ```bash
 su -l solar
@@ -92,7 +83,7 @@ su -l solar
 
 ---
 
-### Step 4: Run the installation script
+### Step 3: Run the installation script
 
 Here, we will use the `install.sh` script. This installs Solar Core and all of its dependencies onto your server, then publishes the configuration files for it.
 
@@ -114,7 +105,9 @@ bash install.sh
 Thanks for choosing to install Solar Core! Preparing the setup procedure...
 ```
 
-### Step 5: Select the Core network
+---
+
+### Step 4: Select the Core network
 
 Once the installation of dependencies and Solar Core is finished you will need to select which network you wish to operate on. This can be achieved by pressing the `up` or `down` arrow keys and confirming your selection by pressing `enter`.
 
@@ -170,6 +163,8 @@ Solar Core has been successfully installed! To get started, type solar
 To run a command as administrator (user "root"), use "sudo <command>".
 See "man sudo_root" for details.
 ```
+
+---
 
 ## Success
 
