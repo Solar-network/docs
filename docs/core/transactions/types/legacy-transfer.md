@@ -4,12 +4,10 @@ title: Transfer (Legacy)
 
 # Legacy Transfer _(**DEPRECATED**)_
 
-!!! danger "<u>Type 0</u> Transfers will be deprecated on December 31st, 2022 at block 3,000,000"
+!!! danger "<u>Type 0</u> Transfers will soon be deprecated"
 
-    - <u>Type 0</u> Transfers will <u>**NOT**</u> be accepted by the Solar blockchain after block height 3,000,000 ❌
+    - <u>Type 0</u> Transfers will <u>**NOT**</u> be accepted by the Solar blockchain after being deprecated ❌
     - <u>Type 6</u> Transfers should be used from now on ✅
-
-    _You can check the current block height via API at: <a href="https://api.solar.org/api/blockchain" target="_blank" rel="noopener noreferrer">api.solar.org/api/blockchain</a>_
 
 !!! tip "See the updated transaction type here: [Transfer (Type 6)](/core/transactions/types/transfer)"
 
