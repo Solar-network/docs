@@ -13,7 +13,7 @@ The instructions on this page will guide you through creating a new user account
 Directly below is a quick summary of these install commands:
 
 ```bash
-sudo adduser solar
+adduser solar
 su -l solar
 
 wget -O install.sh https://raw.githubusercontent.com/solar-network/core/main/install.sh
@@ -34,12 +34,12 @@ If you are planning to setup a new server you can execute the following steps.
 
 Create a new dedicated user account to manage SXP-related software.
 
-We’ll illustrate this command as **`sudo adduser solar`** to create a user by the name of **‘solar’**, but you can chose something else, if preferred.
+We’ll illustrate this command as **`adduser solar`** to create a user by the name of **‘solar’**, but you can chose something else, if preferred.
 
 On your server, type the following into the command line:
 
 ```bash
-sudo adduser solar
+adduser solar
 ```
 
 You'll be asked to create and confirm a new user password, and be prompted to enter the user’s full name and some other information. (_Feel free to leave them blank by pressing ‘enter’, they are all optional fields._)
@@ -160,8 +160,6 @@ Installing Solar Core for mainnet. This process may take a few minutes
   ✔ Setting up database
 
 Solar Core has been successfully installed! To get started, type solar
-To run a command as administrator (user "root"), use "sudo <command>".
-See "man sudo_root" for details.
 ```
 
 ---
