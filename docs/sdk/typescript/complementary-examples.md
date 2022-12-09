@@ -54,14 +54,14 @@ The solution to this is to make sure that your Crypto SDK instance is properly c
 
 ```typescript
 Managers.configManager.setFromPreset("mainnet");
-Managers.configManager.setHeight(current_height);
+Managers.configManager.setHeight("2400000);
 ```
 
 ### Testnet
 
 ```typescript
 Managers.configManager.setFromPreset("testnet");
-Managers.configManager.setHeight(current_height);
+Managers.configManager.setHeight(1000000);
 ```
 
 ## Creating and broadcasting a transfer transaction
@@ -80,7 +80,7 @@ const client = new Connection("https://tapi.solar.org/api");
 
     // Set the chain's presets and height
     Managers.configManager.setFromPreset("testnet");
-    Managers.configManager.setHeight(height);
+    Managers.configManager.setHeight(1000000);
 
 
     // Step 1: Retrieve the incremental nonce of the sender wallet
@@ -124,7 +124,7 @@ const client = new Connection("https://tapi.solar.org/api");
 
     // Set the chain's presets and height
     Managers.configManager.setFromPreset("testnet");
-    Managers.configManager.setHeight(height);
+    Managers.configManager.setHeight(1000000);
 
     // Step 1: Retrieve the incremental nonce of the sender wallet
     const senderWallet = await client.api("wallets").get("YOUR_SENDER_WALLET_ADDRESS");
@@ -159,7 +159,7 @@ const client = new Connection("https://tapi.solar.org/api");
 
     // Set the chain's presets and height
     Managers.configManager.setFromPreset("testnet");
-    Managers.configManager.setHeight(height);
+    Managers.configManager.setHeight(1000000);
 
     // Step 1: Retrieve the incremental nonce of the sender wallet
     const senderWallet = await client.api("wallets").get("YOUR_SENDER_WALLET_ADDRESS");
@@ -194,7 +194,7 @@ const client = new Connection("https://tapi.solar.org/api");
 
     // Set the chain's presets and height
     Managers.configManager.setFromPreset("testnet");
-    Managers.configManager.setHeight(height);
+    Managers.configManager.setHeight(1000000);
 
     // Step 1: Retrieve the incremental nonce of the sender wallet
     const senderWallet = await client.api("wallets").get("YOUR_SENDER_WALLET_ADDRESS");
@@ -233,7 +233,7 @@ const client = new Connection("https://tapi.solar.org/api");
 
     // Set the chain's presets and height
     Managers.configManager.setFromPreset("testnet");
-    Managers.configManager.setHeight(height);
+    Managers.configManager.setHeight(100000);
 
     // Step 1: Retrieve the incremental nonce of the sender wallet
     const senderWallet = await client.api("wallets").get("YOUR_SENDER_WALLET_ADDRESS");
@@ -268,7 +268,7 @@ const client = new Connection("https://tapi.solar.org/api");
 
     // Set the chain's presets and height
     Managers.configManager.setFromPreset("testnet");
-    Managers.configManager.setHeight(height);
+    Managers.configManager.setHeight(1000000);
 
     // Step 1: Retrieve the incremental nonce of the sender wallet
     const senderWallet = await client.api("wallets").get("YOUR_SENDER_WALLET_ADDRESS");

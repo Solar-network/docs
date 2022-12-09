@@ -30,12 +30,16 @@ import { Connection } from "@solar-network/client";
 const client = new Connection("https://tapi.solar.org/api");
 ```
 
+!!! tip
+
+    Use `https://api.solar.org/api` for Solar's mainnet, or enter your Core address.
+
 ## Check wallet balance
 
 Checking a wallet balance involves using the `wallets` resource to `GET` the wallet corresponding to a given Solar address.
 
 ```typescript
-const wallet = await client.api("wallets").get("SN52X5W9U2JWj3P6jd3ZHnSddUo7UJ4ASd");
+const wallet = await client.api("wallets").get("D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib");
 
 console.log(wallet.body.data.balance);
 ```
@@ -45,7 +49,7 @@ console.log(wallet.body.data.balance);
 If you know the ID of the block you are looking for, you can use the `GET` method on the `blocks` resource to return information on that block.
 
 ```typescript
-const block = await client.api("blocks").get("b67c1c27cd37254fbec29055abe609c61dda1aecfab991a2bb284463328eb427");
+const block = await client.api("blocks").get("405899a308c07aee8a7b4fb807d03ca4454ee5ba295365b302e30683c5c01be5");
 
 console.log(block);
 ```
@@ -69,8 +73,8 @@ For example, this code can be used to search all blocks between blockchain heigh
 ```typescript
 const blocks = await client.api("blocks").all({
     height: {
-      from: 720,
-      to: 735
+      from: 500000,
+      to: 800000
     },
     totalFee: {
       from: 0,
@@ -106,7 +110,7 @@ const client = new Connection("https://tapi.solar.org/api");
 
 // Set the network configuration
 Managers.configManager.setFromPreset("testnet");
-Managers.configManager.setHeight(972604);
+Managers.configManager.setHeight(1000000);
 
 (async () => {
     // Step 1: Retrieve the incremental nonce of the sender wallet
@@ -118,9 +122,9 @@ Managers.configManager.setHeight(972604);
         .nonce(senderNonce.toFixed())
         .fee("30000000")
         .memo("This is an example memo") // memo is optional
-        .addTransfer("Address of Recipient Wallet 1","100000000") // 1 SXP
-        .addTransfer("Address of Recipient Wallet 2","200000000") // 2 SXP
-        .addTransfer("Address of Recipient Wallet 3","300000000") // 3 SXP
+        .addTransfer("Address of Recipient Wallet 1","100000000") // 1 tSXP
+        .addTransfer("Address of Recipient Wallet 2","200000000") // 2 tSXP
+        .addTransfer("Address of Recipient Wallet 3","300000000") // 3 tSXP
         .sign("this is a top secret passphrase");
 
     // Step 4: Broadcast the transaction
@@ -167,7 +171,7 @@ The diagram below offers a top-level overview of the transaction submission proc
 Once a transaction has been created and added to the blockchain, you can access the number of confirmations it has by using the `transactions` resource to `get` the value matching the transaction ID.
 
 ```typescript
-const transaction = await client.api("transactions").get("2b327657495156f5a4f7ca5cefebb9d35a92c91a74debdd217a0c79110e24915");
+const transaction = await client.api("transactions").get("5ad7a65e68ac24821f90504202cb464fb845faa53736f16b94f6756a2dc2bea3");
 
 console.log(transaction);
 ```
@@ -176,28 +180,99 @@ If the transaction has been added to the blockchain, you'll receive the followin
 
 ```javascript
 {
-  data: {
-    id: "2b327657495156f5a4f7ca5cefebb9d35a92c91a74debdd217a0c79110e24915",
-    blockHeight: 2407559,
-    blockId: "0c83cde40ea873cf79ba3c747b6199512e24bf11aac262e10efe259da2588a74",
-    version: 3,
-    type: 0,
-    typeGroup: 1,
-    amount: "500000000000",
-    fee: "5000000",
-    burnedFee: "4500000",
-    sender: "SP77TpbBYC2nCpaCg3u1BBsYU7zqwqzGo7",
-    senderPublicKey: "02699ab620eb6088f9e88d2c1fa1fb0ea8a179c210a46de2314817dd11d3aa16a1",
-    recipient: "SS1yerXEXkf53KMvhkhNc4RUFSLu9SRR8V",
-    signature: "df15dae2b84bb19270a2d2cb15a14115b752d3967ce228e84918bdd8e90925627c4aae6b244a529303ca53777c6a81775ed8bad9ded7801b3df879ccbb388aef",
-    memo: "bsc:0x488cec5457eec7757984db50bf7d05972da1b1560cc440e2e6a4727ac762bb32",
-    confirmations: 1308,
-    timestamp: {
-      epoch: 19270904,
-      unix: 1667761304,
-      human: "2022-11-06T19:01:44.000Z"
+  "data": {
+    "id": "5ad7a65e68ac24821f90504202cb464fb845faa53736f16b94f6756a2dc2bea3",
+    "blockHeight": 1509707,
+    "blockId": "2d17c1ee22b01534de020d6e882ec23d8a66142619b35e447c69696a1191fe27",
+    "version": 3,
+    "type": 6,
+    "typeGroup": 1,
+    "amount": "1918575037",
+    "fee": "5174942",
+    "burnedFee": "4657447",
+    "sender": "D6nqkGkzyxWhqTvA1txgABHWexh4UMr8ff",
+    "senderPublicKey": "03aebd4e0ea4b0eb3ad5ce7870af32e709fcf4d65ed9c9cb383aea83c687e1e1fb",
+    "signature": "05b3652cf407261636a74e71c3d01c4e3bd09e5ec13fd54ff598319ae70d2fa0a915c5a318d6439c90df27aa18b6d844e9bc906636fb2b4da17f959469cf5aa7",
+    "memo": "friendsoflittleyus - Daily payout - thank you for your support",
+    "asset": {
+      "transfers": [
+        {
+          "amount": "264150058",
+          "recipientId": "DM5jxyfM2kj5LGT3sXaD5P2bpQJW56XnBq"
+        },
+        {
+          "amount": "269325000",
+          "recipientId": "DJ5JdUocNY6MxfcPBzKAoUo2k4JUACFrQA"
+        },
+        {
+          "amount": "38475000",
+          "recipientId": "DGymbo8YN2RJoa72ZJTkLfZTrh7LCTwFnx"
+        },
+        {
+          "amount": "1097266704",
+          "recipientId": "D646b6dx3sW5NAgMDTKAZ2hdC57K1BeRaK"
+        },
+        {
+          "amount": "124825386",
+          "recipientId": "DAWwtPkrCZ6kPKfuBfNMkXVZFcTu72QmNU"
+        },
+        {
+          "amount": "89640155",
+          "recipientId": "DM5jxyfM2kj5LGT3sXaD5P2bpQJW56XnBq"
+        },
+        {
+          "amount": "24416295",
+          "recipientId": "DJ5JdUocNY6MxfcPBzKAoUo2k4JUACFrQA"
+        },
+        {
+          "amount": "10016614",
+          "recipientId": "DEz9aPVTXCYPManZHSKL7zqkMn7hUVusGe"
+        },
+        {
+          "amount": "350460",
+          "recipientId": "DNd2nfU6FWs1CJdbDyWbm6nPAXZcSexGKL"
+        },
+        {
+          "amount": "39498",
+          "recipientId": "DEnWWJsWCvqfoTghim9PZgUMJZ2CaPEe7M"
+        },
+        {
+          "amount": "26664",
+          "recipientId": "DGpcLotbiUsQpXoD5m7MbhjVdspRgd6nuX"
+        },
+        {
+          "amount": "26646",
+          "recipientId": "DUALogApuf5Md38x5yv2uqVe4HoWzy2U1p"
+        },
+        {
+          "amount": "5334",
+          "recipientId": "DHm3eCeBWKdPwAc6JFUZoArLkrnTd1pnQz"
+        },
+        {
+          "amount": "5325",
+          "recipientId": "DL15Z3K8k2TCoqKPB8TZjTv89ApvDPoUZd"
+        },
+        {
+          "amount": "2697",
+          "recipientId": "DGSzda5FfkQDPUmFrM4Xodty2LWnamTpCk"
+        },
+        {
+          "amount": "2670",
+          "recipientId": "DEAH8FiXrxfGaoHE7PEHtgz8rxzpqRQMGT"
+        },
+        {
+          "amount": "531",
+          "recipientId": "DQYiSMyoftk7KibjtaD2ppUe1KnxF4MvCT"
+        }
+      ]
     },
-    nonce: "4546"
+    "confirmations": 189,
+    "timestamp": {
+      "epoch": 12258008,
+      "unix": 1670598008,
+      "human": "2022-12-09T15:00:08.000Z"
+    },
+    "nonce": "6168"
   }
 }
 ```
@@ -209,8 +284,8 @@ You can see that the `confirmations` key holds the number of confirmations this 
 it is possible to retrieve all transactions of a wallet given its address and, optionally, add filters.
 
 ```typescript
-// Getting all transaction of a wallet sent after height 2000000
-const transactions = await client.api("wallets").transactions("validAddress", {blockHeight: {from: 2000000}});
+// Getting all transaction of a wallet sent after height 1000000
+const transactions = await client.api("wallets").transactions("D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib", {blockHeight: {from: 1000000}});
 
 console.log(transactions.body.data);
 ```
@@ -232,11 +307,11 @@ By running this code, you'd see the output in your console resembling the follow
 
 ```javascript
 {
-  data: {
-    synced: true,       // whether this node is fully synchronised with the network
-    now: 2408921,       // the current network height of this node's blockchain
-    blocksCount: 0,     // if not synced, the number of blocks yet to be synced
-    timestamp: 19281807
+  "data": {
+    "synced": true,       // whether this node is fully synchronised with the network
+    "now": 1509905,       // the current network height of this node's blockchain
+    "blocksCount": 0,     // if not synced, the number of blocks yet to be synced
+    "timestamp": 12259598 // the node's current network (epoch) time
   }
 }
 ```
