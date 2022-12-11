@@ -6,9 +6,9 @@ title: Transfer
 
 !!! success "This page contains the latest <u>Type 6</u> Transfer"
 
-!!! danger "<u>Type 0</u> Transfers will soon be deprecated"
+!!! danger "<u>Type 0</u> Transfers will be deprecated on December 31st, 2022"
 
-    - <u>Type 0</u> Transfers will <u>**NOT**</u> be accepted by the Solar blockchain after being deprecated ❌
+    - <u>Type 0</u> Transfers will <u>**NOT**</u> be accepted by the Solar blockchain after 31/12/2022 ❌
     - <u>Type 6</u> Transfers should be used from now on ✅
 
 | TypeGroup | Type  |
@@ -107,3 +107,31 @@ ff033f0100000006000500000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b
 | **............**         |  **....**  |       **..**       | `..................`                                                   |
 | **Amount 40:**           | **[1192]** |       **8**        | `0x0100000000000000`                                                   |
 | **Recipient 40:**        | **[1200]** |       **21**       | `0x3fccbb32ea36fad927cb2c46cbc63930db6cda829d`                         |
+
+## Migrating from legacy (Type 0) Transfers
+
+The biggest change from legacy (<u>Type 0</u>) Transfers to the new <u>Type 6</u> Transfer is the ability to send to as many as 256 recipients in a single transaction.  This not only makes sending to multiple recipients easier and more intuitive, this also helps minimise filling up the Solar blockchain with unnecessary bloat.
+
+The steps needed to utilise the new Type 6 Transfer will depend heavily on what SDK you use and how your code is implementated, but it will generally require very few changes.
+
+!!! example
+
+    The code below demonstrates the changes that are neccessary when using the Solar TypeScript Crypto SDK:
+
+    ```diff
+    -        .recipientId("Address of Recipient")
+    -        .amount(100000000)
+    +        .addTransfer("Address of Recipient 1", 100000000)
+    ```
+
+!!! tip
+
+    See the full SDK examples of sending a Type 6 Transfer at the following links:
+
+    - Python: [Creating and broadcasting a transfer transaction](/sdk/python/complementary-examples/#creating-and-broadcasting-a-transfer-transaction)
+    - TypeScript: [Creating and broadcasting a transfer transaction](/sdk/python/complementary-examples/#creating-and-broadcasting-a-transfer-transaction)
+
+!!! warning "Make sure you are also using the latest SDK releases"
+
+    - Python SDK: <a href="https://pypi.org/project/solar-crypto" target="_blank" rel="noopener noreferrer">https://pypi.org/project/solar-crypto</a>
+    - TypeScript SDK: <a href="https://www.npmjs.com/package/@solar-network/crypto" target="_blank" rel="noopener noreferrer">https://www.npmjs.com/package/@solar-network/crypto</a>
