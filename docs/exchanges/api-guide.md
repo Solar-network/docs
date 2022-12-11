@@ -32,7 +32,9 @@ const client = new Connection("https://tapi.solar.org/api");
 
 !!! tip
 
-    Use `https://api.solar.org/api` for Solar's mainnet, or enter your Core address.
+    Use `https://api.solar.org/api` for the Solar Network mainnet.
+
+    _You can also use the IP address and port of any Core node that has the Public API enabled (e.g., `http://65.108.90.71:6003`)_.
 
 ## Check wallet balance
 
