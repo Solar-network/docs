@@ -6,9 +6,9 @@ title: Transfer
 
 !!! success "This page contains the latest <u>Type 6</u> Transfer"
 
-!!! danger "<u>Type 0</u> Transfers will be deprecated on December 31st, 2022"
+!!! danger "<u>Type 0</u> Transfers will be deprecated on 31st December 2022"
 
-    - <u>Type 0</u> Transfers will <u>**NOT**</u> be accepted by the Solar blockchain after 31/12/2022 ❌
+    - <u>Type 0</u> Transfers will <u>**NOT**</u> be accepted by the Solar blockchain after 2022-12-31 ❌
     - <u>Type 6</u> Transfers should be used from now on ✅
 
 | TypeGroup | Type  |
