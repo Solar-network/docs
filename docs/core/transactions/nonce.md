@@ -6,20 +6,13 @@ title: Understanding the Nonce
 
 Wallets utilise a sequential nonce to protect against <a href="https://wikipedia.org/wiki/Double-spending" target="_blank" rel="noopener noreferrer">double-spending</a>, long-range attacks, key-leakage as a result of signature reuse, and <a href="https://wikipedia.org/wiki/Side-channel_attack" target="_blank" rel="noopener noreferrer">side-channel attacks</a> associated with random nonces. This wallet nonce increments with each outgoing transaction, ensuring every transaction and its associated signature are always unique.
 
-<div class="admonition abstract">
-    <p class="admonition-title">Quick Facts</p>
-    <p>
-      <ul>
-        <li>A wallet's first transaction <b>must</b> have a nonce of <b>1</b></li>
-        <li>The nonce <b>must</b> increment for every new transaction</li>
-        <li>The nonce must <b>not</b> be reused</li>
-        <li>
-          A nonce must <b>not</b> be skipped
-            <ul><li><i>a transaction with a nonce of <u>5</u> originating from a wallet with a nonce of <u>4</u> will be rejected</i></li></ul>
-        </li>
-      </ul>
-    </p>
-</div>
+!!! abstract "Quick Facts"
+
+    - A wallet's first transaction **must** have a nonce of **1**
+    - The nonce **must** increment for every new transaction
+    - The nonce must **not** be reused
+    -  A nonce must **not** be skipped
+        -  *a transaction with a nonce of <u>5</u> originating from a wallet with a nonce of <u>4</u> will be rejected*
 
 ## _"How do I find a wallet's nonce?"_
 
@@ -48,15 +41,10 @@ You can find a wallet's current nonce by utilising the Public API's <a href="htt
 
 When creating a new transaction, find the wallet's current nonce and increment it by **1**.
 
-<div class="admonition abstract">
-    <p class="admonition-title">Quick Facts</p>
-    <p>
-      <ul>
-        <li>If the wallet has a nonce of <i>'123'</i>, the next transaction should have a nonce of <i>'124'</i></li>
-        <li>A wallet's updated nonce value will only be reflected via API <i>after</i> a transaction has been forged</li>
-      </ul>
-    </p>
-</div>
+!!! abstract "Quick Facts"
+
+    - If the wallet has a nonce of *'123'*, the next transaction should have a nonce of *'124'*
+    - A wallet's updated nonce value will only be reflected via API *after* a transaction has been forged
 
 ## _"Can I send multiple transactions?"_
 

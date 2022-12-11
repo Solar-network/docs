@@ -4,16 +4,18 @@ title: Transfer (Legacy)
 
 # Legacy Transfer _(**DEPRECATED**)_
 
-<div class="admonition warning">
-    <p class="admonition-title">warning</p>
-    <p>Transfer (Type 0) has been deprecated, please visit <a href="/core/transactions/types/transfer">'TypeGroup 1, Type 6: Transfer'</a> to see the updated transaction.</p>
-</div>
+!!! danger "<u>Type 0</u> Transfers will be deprecated on 31st December 2022"
+
+    - <u>Type 0</u> Transfers will <u>**NOT**</u> be accepted by the Solar blockchain after 2022-12-31 ❌
+    - <u>Type 6</u> Transfers should be used from now on ✅
+
+!!! tip "See the updated transaction type here: [Transfer (Type 6)](/core/transactions/types/transfer)"
 
 | TypeGroup | Type  |
 | :-------: | :---: |
 |     1     |   0   |
 
-A Transfer transaction enables a user to broadcast a transaction to the network sending SXP tokens from one SXP wallet to another.
+A Transfer transaction enables a user to broadcast a transaction to the network sending SXP coins from one SXP wallet to another.
 
 All Solar transactions contain a special data field of 255 bytes known as the 'Memo'. This data field allows raw data, code, or plain text to be stored on the blockchain. The Memo is optional, public, and immutable.
 

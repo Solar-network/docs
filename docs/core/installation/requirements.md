@@ -2,16 +2,14 @@
 title: Requirements
 ---
 
-# Server Requirements
+# Server requirements
 
 | Supported OS | Release   |
 | :----------: | :-------: |
 | **Ubuntu**   | `>= 20.x` |
 | **Debian**   | `>= 10.x` |
 
-<div class="admonition warning">
-    <p class="admonition-title"><b>Ubuntu</b> <code><= 18.x</code> and <b>Debian</b> <code><= 9</code> are no longer supported</p>
-</div>
+!!! warning "**Ubuntu** `<= 18.x` and **Debian** `<= 9` are no longer supported"
 
 | Relay Requirements | Recommended   | Minimum |
 | :----------------: | :-----------: | :-----: |

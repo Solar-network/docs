@@ -128,7 +128,7 @@ message.verify()
 
 > The identities class allows for the creation and inspection of keyPairs from `passphrases`. Here you find vital functions when creating transactions and managing wallets.
 
-### Derive the Address from a Passphrase
+### Derive the address from a passphrase
 
 ```python
 from solar_crypto.identity.address import address_from_passphrase
@@ -138,7 +138,7 @@ address_from_passphrase('validSeedPass')
 >>> <class 'str'>
 ```
 
-### Derive the Address from a Public Key
+### Derive the address from a public key
 
 ```python
 from solar_crypto.identity.address import address_from_public_key
@@ -148,7 +148,7 @@ address_from_public_key('validPublicKey')
 >>> <class 'str'>
 ```
 
-### Derive the Address from a Private Key
+### Derive the address from a private key
 
 ```python
 from solar_crypto.identity.address import address_from_private_key
@@ -158,7 +158,7 @@ address_from_private_key('validPrivateKey')
 >>> <class 'str'>
 ```
 
-### Validate an Address
+### Validate an address
 
 ```python
 from solar_crypto.identity.address import validate_address
@@ -172,7 +172,7 @@ validate_address('validAddress')
 
 > As the name implies, private keys and passphrases are to remain private. Never store these unencrypted and minimise access to these secrets
 
-### Derive the Private Key from a Passphrase
+### Derive the private key from a passphrase
 
 ```python
 from solar_crypto.identity.private_key import PrivateKey
@@ -182,7 +182,7 @@ private_key = PrivateKey.from_passphrase('validSeedPass').to_hex()
 >>> <class 'str'>
 ```
 
-### Derive the Private Key Instance Object from a Hexadecimal Encoded String
+### Derive the private key instance object from a hexadecimal encoded string
 
 ```python
 from solar_crypto.identity.private_key import PrivateKey
@@ -192,7 +192,7 @@ private_key = PrivateKey.from_hex(str)
 >>> <class 'solar_crypto.identity.private_key.PrivateKey'>
 ```
 
-### Derive the Private Key from a WIF
+### Derive the private key from a wif
 
 ```python
 This function has not been implemented in this client library.
@@ -202,7 +202,7 @@ This function has not been implemented in this client library.
 
 > Public Keys may be freely shared, and are included in transaction objects to validate the authenticity.
 
-### Derive the Public Key from a Passphrase
+### Derive the public key from a passphrase
 
 ```python
 from solar_crypto.identity.public_key import PublicKey
@@ -212,7 +212,7 @@ public_key = PublicKey.from_passphrase('this is a top secret passphrase')
 >>> <class 'str'>
 ```
 
-### Derive the Public Key Instance Object from a Hexadecimal Encoded String
+### Derive the public key instance object from a hexadecimal encoded string
 
 ```python
 from solar_crypto.identity.public_key import PublicKey
@@ -222,7 +222,7 @@ public_key = PublicKey.from_hex(str)
 >>> <class 'solar_crypto.identity.public_key.PublicKey'>
 ```
 
-### Validate a Public Key
+### Validate a public key
 
 ```python
 This function has not been implemented in this client library.
@@ -232,7 +232,7 @@ This function has not been implemented in this client library.
 
 > The WIF should remain secret, just like your `passphrase` and `private key`.
 
-### Derive the WIF from a Passphrase
+### Derive the wif from a passphrase
 
 ```python
 from solar_crypto.identity.wif import wif_from_passphrase

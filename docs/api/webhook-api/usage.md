@@ -22,7 +22,7 @@ The first 32 characters will be stored in the database and sent to you as a head
 
 The last 32 characters `0c8e74e1cbfe36404386d33a5bbd8b66` need to be stored by you and will serve as a way for you to verify that the request is authorised.
 
-## Handling Webhooks
+## Handling webhooks
 
 Now that we know how the token is structured and what it is used for we can continue with implementing a webhook handler.
 

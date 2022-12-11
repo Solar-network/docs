@@ -6,15 +6,14 @@ title: Installation Steps
 
 A step-by-step guide on how to prepare a fully-functional environment using the install script.
 
-## Getting Started
+## Getting started
 
 The instructions on this page will guide you through creating a new user account with the correct privileges, installing and configuring Solar Core, then starting a relay instance and logging the output using the installation script.
 
 Directly below is a quick summary of these install commands:
 
 ```bash
-sudo adduser solar
-sudo usermod -a -G sudo solar
+adduser solar
 su -l solar
 
 wget -O install.sh https://raw.githubusercontent.com/solar-network/core/main/install.sh
@@ -25,20 +24,22 @@ solar relay:start
 pm2 logs
 ```
 
-## Step-by-Step Installation via the Script
+## Step-by-step installation via the install script
 
 If you are planning to setup a new server you can execute the following steps.
 
-### Step 1: Create a New Account
+---
+
+### Step 1: Create a new account
 
 Create a new dedicated user account to manage SXP-related software.
 
-We’ll illustrate this command as **`sudo adduser solar`** to create a user by the name of **‘solar’**, but you can chose something else, if preferred.
+We’ll illustrate this command as **`adduser solar`** to create a user by the name of **‘solar’**, but you can chose something else, if preferred.
 
 On your server, type the following into the command line:
 
 ```bash
-sudo adduser solar
+adduser solar
 ```
 
 You'll be asked to create and confirm a new user password, and be prompted to enter the user’s full name and some other information. (_Feel free to leave them blank by pressing ‘enter’, they are all optional fields._)
@@ -66,26 +67,15 @@ Is the information correct? [Y/n] Y
 
 ---
 
-### Step 2: Grant Sudo Privileges
-
-Next, we need to make sure that our user account has all of the necessary privileges to run Solar Core properly. This will give our user account `sudo` privileges.
-
-Type or copy-paste the following command into your terminal:
-
-```bash
-sudo usermod -a -G sudo solar
-```
-
-<div class="admonition info">
-    <p class="admonition-title">info</p>
-    <p>In this example we use <b>'solar'</b> for the name of the new user account, but you should use whatever username was set in the previous steps above.</p>
-</div>
-
-### Step 3: Login as the New User
+### Step 2: Login as the new user
 
 We now should switch to the user account created above, this will also land us in the user's base directory (`~/`).
 
-Type or copy-paste the following command into your terminal:
+!!! info
+
+    In this example we use **'solar'** for the name of the new user account, but you should use whatever username was set in the previous steps above.
+
+Enter the following command into your terminal:
 
 ```bash
 su -l solar
@@ -93,7 +83,7 @@ su -l solar
 
 ---
 
-### Step 4: Run the Installation Script
+### Step 3: Run the installation script
 
 Here, we will use the `install.sh` script. This installs Solar Core and all of its dependencies onto your server, then publishes the configuration files for it.
 
@@ -114,7 +104,10 @@ bash install.sh
 
 Thanks for choosing to install Solar Core! Preparing the setup procedure...
 ```
-### Step 5: Select the Core network
+
+---
+
+### Step 4: Select the Core network
 
 Once the installation of dependencies and Solar Core is finished you will need to select which network you wish to operate on. This can be achieved by pressing the `up` or `down` arrow keys and confirming your selection by pressing `enter`.
 
@@ -149,10 +142,7 @@ Installing Solar Core for mainnet. This process may take a few minutes
   › Setting up database
 ```
 
-<div class="admonition warning">
-    <p class="admonition-title">warning</p>
-    <p>The install process might take a while, don’t interrupt it, wait for it to finish.</p>
-</div>
+!!! warning "The install process might take a while, don’t interrupt it, wait for it to finish."
 
 At this point, Solar Core has been successfully installed with its configuration options properly published.
 
@@ -170,15 +160,13 @@ Installing Solar Core for mainnet. This process may take a few minutes
   ✔ Setting up database
 
 Solar Core has been successfully installed! To get started, type solar
-To run a command as administrator (user "root"), use "sudo <command>".
-See "man sudo_root" for details.
 ```
+
+---
 
 ## Success
 
-<div class="admonition success">
-    <p class="admonition-title">Your installation is all set! 🎉</p>
-</div>
+!!! success "Your installation is all set! 🎉"
 
 That’s it, you may now start your relay and view its logs using the following command:
 
@@ -274,7 +262,10 @@ solar relay:start && pm2 logs
 ...
 ```
 
-<div class="admonition info">
-    <p class="admonition-title">info</p>
-    <p>Synchronisation of the blockchain can take some time.<br /><br />Once synchronised, the `allowed to forge block ...` messages will be logged every ~8 seconds — as opposed to milliseconds apart shown during sync.<br /><br />A single round consists of 53 delegates, each forging a single block.</p>
-</div>
+!!! info
+
+    Synchronisation of the blockchain can take some time.
+
+    Once synchronised, the `allowed to forge block ...` messages will be logged every ~8 seconds — as opposed to the millisecond intervals shown during sync.
+
+    A single round consists of 53 delegates, each forging a single block.

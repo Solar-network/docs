@@ -4,10 +4,7 @@ title: Refund
 
 # HTLC Refund
 
-<div class="admonition info">
-    <p class="admonition-title">info</p>
-    <p>HTLC transactions are not currently active on Solar's Mainnet.</p>
-</div>
+!!! warning "HTLC transactions are not currently active on Solar's Mainnet."
 
 | TypeGroup | Type  |
 | :-------: | :---: |

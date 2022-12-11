@@ -17,9 +17,7 @@ A 'Permanent Resignation' is for delegates who wish to permanently retire their 
 | API Endpoints        | [Link](https://api.solar.org/#/Transactions)                                                                                                                                                                                                             |
 | AJV Schema           | [Base](https://github.com/Solar-network/core/blob/main/packages/crypto/src/transactions/types/schemas.ts#L17-L46) \| [Delegate Resignation](https://github.com/Solar-network/core/blob/main/packages/crypto/src/transactions/types/schemas.ts#L374-L381) |
 
-## Transaction Structure
-
-### Json
+## Json
 
 ```json
 {
@@ -36,13 +34,13 @@ A 'Permanent Resignation' is for delegates who wish to permanently retire their 
 }
 ```
 
-### Serialised
+## Serialised
 
 ```shell
 ff033f0100000007000900000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192000000000000000000eb08bf010000000005736c33337001
 ```
 
-### Deserialised
+## Deserialised
 
 | Key                  |   Pos.   | Size<br/>_(bytes)_ | Value<br/>_(hex)_                                                      |
 | :------------------- | :------: | :----------------: | :--------------------------------------------------------------------- |
@@ -57,7 +55,7 @@ ff033f0100000007000900000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b
 | **Memo Length:**     | **[58]** |       **1**        | `0x00`                                                                 |
 | **Resignation Type** | **[59]** |       **1**        | `0x01`                                                                 |
 
-### Resignation Types
+## Resignation types
 
 | Resignation Type | Value | Description                                                                                                                  |
 | ---------------- | :---: | :--------------------------------------------------------------------------------------------------------------------------- |

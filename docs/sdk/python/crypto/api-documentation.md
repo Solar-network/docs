@@ -21,7 +21,7 @@ Get a fee for a given transaction type
 | int | transaction_type | Yes | Transaction type for which we wish to get a fee |
 | int | type_group | Yes | transaction type group (TRANSACTION_TYPE_GROUP(Enum)) |
 
-#### Return Value
+#### Return value
 
 `<class 'int'>`
 
@@ -41,7 +41,7 @@ Set a fee
 | int | type_group | Yes | transaction type group (TRANSACTION_TYPE_GROUP(Enum)) |
 | int | value | Yes | Fee for a given transaction type |
 
-#### Return Value
+#### Return value
 
 `<class 'NoneType'>`
 
@@ -61,7 +61,7 @@ Set what network you want to use in the crypto library
 | :--- | :--- | :--- | :--- |
 | Network | network_object | Yes | Testnet, Mainnet |
 
-#### Return Value
+#### Return value
 
 `<class 'NoneType'>`
 
@@ -73,7 +73,7 @@ def get_network():
 
 Get settings for a selected network, default network is Testnet
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`
 
@@ -93,7 +93,7 @@ Set custom network
 | int | version | Yes | Network version |
 | int | wif | Yes | Network WIF |
 
-#### Return Value
+#### Return value
 
 `<class 'NoneType'>`
 
@@ -105,7 +105,7 @@ def get_network_version():
 
 Get currently set network version
 
-#### Return Value
+#### Return value
 
 `<class 'Network'>`
 
@@ -126,7 +126,7 @@ Get an address from a public key
 | str | public_key | Yes | Public key |
 | int | network_version | No | Version of the network |
 
-#### Return Value
+#### Return value
 
 `<class 'str'>`
 
@@ -145,7 +145,7 @@ Get an address from private key
 | str | private_key | Yes | Private key |
 | int | network_version | No | Version of the network |
 
-#### Return Value
+#### Return value
 
 `<class 'str'>`
 
@@ -164,7 +164,7 @@ Get an address from passphrase
 | str | passphrase | Yes | Passphrase |
 | int | network_version | No | Version of the network |
 
-#### Return Value
+#### Return value
 
 `<class 'str'>`
 
@@ -183,7 +183,7 @@ Validate a given address
 | str | address | Yes | Address to validate |
 | int | network_version | No | Version of the network |
 
-#### Return Value
+#### Return value
 
 `<class 'bool'>`
 
@@ -203,7 +203,7 @@ Create a new PrivateKey instance
 | :--- | :--- | :--- | :--- |
 | str | private_key | Yes | Hex private key |
 
-#### Return Value
+#### Return value
 
 `<class 'solar_crypto.identity.private_key.PrivateKey'>`
 
@@ -222,7 +222,7 @@ Sign a message with this private key object
 | str | message | Yes | Bytes data you want to sign |
 | int | nonce | No | Deterministic nonce |
 
-#### Return Value
+#### Return value
 
 `<class 'str'>`
 
@@ -234,7 +234,7 @@ def to_hex(self):
 
 Returns a private key in hex format
 
-#### Return Value
+#### Return value
 
 `<class 'str'>`
 
@@ -252,7 +252,7 @@ Create PrivateKey object from a given passphrase
 | :--- | :--- | :--- | :--- |
 | str | passphrase | Yes | Passphrase |
 
-#### Return Value
+#### Return value
 
 `<class 'PrivateKey'>`
 
@@ -270,7 +270,7 @@ Create PrivateKey object from a given hex private key
 | :--- | :--- | :--- | :--- |
 | str | private_key | Yes | Private key |
 
-#### Return Value
+#### Return value
 
 `<class 'PrivateKey'>`
 
@@ -284,7 +284,7 @@ def to_hex(self):
 
 Returns a public key in hex format
 
-#### Return Value
+#### Return value
 
 `<class 'str'>`
 
@@ -302,7 +302,7 @@ Create PublicKey object from a given passphrase
 | :--- | :--- | :--- | :--- |
 | str | passphrase | Yes | Passphrase |
 
-#### Return Value
+#### Return value
 
 `<class 'PublicKey'>`
 
@@ -320,7 +320,7 @@ Create PublicKey object from a given hex private key
 | :--- | :--- | :--- | :--- |
 | str | public_key | Yes | Public key |
 
-#### Return Value
+#### Return value
 
 `<class 'PublicKey'>`
 
@@ -341,7 +341,7 @@ Get wif from passphrase
 | str | passphrase | Yes | Passphrase |
 | int | network_wif | No | Network WIF |
 
-#### Return Value
+#### Return value
 
 `<class 'str'>`
 
@@ -355,7 +355,7 @@ def to_dict(self):
 
 Convert the transaction to its dictionary representation.
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`
 
@@ -367,7 +367,7 @@ def to_json(self):
 
 Convert the transaction to its JSON representation
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`
 
@@ -385,7 +385,7 @@ Sign the transaction using the given passphrase
 | :--- | :--- | :--- | :--- |
 | str | passphrase | Yes | Passphrase associated with the account sending this transaction |
 
-#### Return Value
+#### Return value
 
 `<class 'NoneType'>`
 
@@ -403,7 +403,7 @@ Sign the transaction using the given second passphrase
 | :--- | :--- | :--- | :--- |
 | str | passphrase | Yes | Second passphrase associated with the account sending this transaction |
 
-#### Return Value
+#### Return value
 
 `<class 'NoneType'>`
 
@@ -422,7 +422,7 @@ Sign the transaction using the given passphrase. A signature will be generated i
 | str | passphrase | Yes | Passphrase associated with the account sending this transaction |
 | int | index | Yes | Index of the signature for the signatures array. Starts at 0. |
 
-#### Return Value
+#### Return value
 
 `<class 'NoneType'>`
 
@@ -434,7 +434,7 @@ def verify(self):
 
 Verify the transaction validity
 
-#### Return Value
+#### Return value
 
 `<class 'bool'>`
 
@@ -446,7 +446,7 @@ def verify_multisig(self):
 
 Verify the multisignature transaction validity
 
-#### Return Value
+#### Return value
 
 `<class 'bool'>`
 
@@ -464,7 +464,7 @@ Set the nonce of the transaction.
 | :--- | :--- | :--- | :--- |
 | int | nonce | Yes | Sequential Nonce of the transaction |
 
-#### Return Value
+#### Return value
 
 `<class 'NoneType'>`
 
@@ -482,7 +482,7 @@ Set a fee
 | :--- | :--- | :--- | :--- |
 | int | fee | Yes | Transaction fee |
 
-#### Return Value
+#### Return value
 
 `<class 'NoneType'>`
 
@@ -500,7 +500,7 @@ Set the amount of the transaction.
 | :--- | :--- | :--- | :--- |
 | int | amount | Yes | Amount of the transaction |
 
-#### Return Value
+#### Return value
 
 `<class 'NoneType'>`
 
@@ -518,7 +518,7 @@ Set the Public Key of the transaction.
 | :--- | :--- | :--- | :--- |
 | str | public_key | Yes | Public key of the transaction |
 
-#### Return Value
+#### Return value
 
 `<class 'NoneType'>`
 
@@ -536,7 +536,7 @@ Set the block-height or time when the transaction should expire.
 | :--- | :--- | :--- | :--- |
 | int, HTLC_LOCK_EXPIRATION_TYPE | expiration | Yes | Expiration of the transaction |
 
-#### Return Value
+#### Return value
 
 `<class 'NoneType'>`
 
@@ -554,7 +554,7 @@ Set the type group of the transaction.
 | :--- | :--- | :--- | :--- |
 | int, TRANSACTION_TYPE_GROUP | type_group | Yes | Type group of the transaction |
 
-#### Return Value
+#### Return value
 
 `<class 'NoneType'>`
 
@@ -574,7 +574,7 @@ Create a new Burn transaction instance
 | :--- | :--- | :--- | :--- |
 | int | amount | Yes | Burn amount |
 
-#### Return Value
+#### Return value
 
 `<class 'solar_crypto.transactions.builder.burn.Burn'>`
 
@@ -595,7 +595,7 @@ Create a new DelegateRegistration transaction instance
 | str | username | Yes | Delegate username |
 | int | fee | No | Transaction fee |
 
-#### Return Value
+#### Return value
 
 `<class 'solar_crypto.transactions.builder.delegate_registration.DelegateRegistration'>`
 
@@ -613,7 +613,7 @@ Sign the transaction using the given passphrase
 | :--- | :--- | :--- | :--- |
 | str | passphrase | Yes | Passphrase |
 
-#### Return Value
+#### Return value
 
 `<class 'NoneType'>`
 
@@ -633,7 +633,7 @@ Create a new DelegateResignation transaction instance
 | :--- | :--- | :--- | :--- |
 | int | fee | No | Transaction fee |
 
-#### Return Value
+#### Return value
 
 `<class 'solar_crypto.transactions.builder.delegate_resignation.DelegateResignation'>`
 
@@ -645,7 +645,7 @@ def get_type_group(self):
 
 Get the type group of the Transaction.
 
-#### Return Value
+#### Return value
 
 `<class 'int'>`
 
@@ -668,7 +668,7 @@ Create a new HtlcClaim transaction instance
 | HashingType | hash_type | No | Hashing algorithm |
 | int | fee | No | Transaction fee |
 
-#### Return Value
+#### Return value
 
 `<class 'solar_crypto.transactions.builder.htlc_claim.HtlcClaim'>`
 
@@ -680,7 +680,7 @@ def get_type_group(self):
 
 Get the type group of the Transaction.
 
-#### Return Value
+#### Return value
 
 `<class 'int'>`
 
@@ -706,7 +706,7 @@ Create a new HtlcLock transaction instance
 | str | memo | Yes | Transaction memo|
 | int | fee | No | Transaction fee |
 
-#### Return Value
+#### Return value
 
 `<class 'solar_crypto.transactions.builder.htlc_lock.HtlcLock'>`
 
@@ -718,7 +718,7 @@ def get_type_group(self):
 
 Get the type group of the Transaction.
 
-#### Return Value
+#### Return value
 
 `<class 'int'>`
 
@@ -739,7 +739,7 @@ Create a new HtlcRefund transaction instance
 | str | lock_transaction_id | Yes | HTLC Lock transaction id |
 | int | fee | No | Transaction fee |
 
-#### Return Value
+#### Return value
 
 `<class 'solar_crypto.transactions.builder.htlc_refund.HtlcRefund'>`
 
@@ -751,7 +751,7 @@ def get_type_group(self):
 
 Get the type group of the Transaction.
 
-#### Return Value
+#### Return value
 
 `<class 'int'>`
 
@@ -772,7 +772,7 @@ Create a new IPFS transaction instance
 | str | ipfs_cid | No | Content identifier |
 | int | fee | No | Transaction fee |
 
-#### Return Value
+#### Return value
 
 `<class 'solar_crypto.transactions.builder.ipfs.IPFS'>`
 
@@ -784,7 +784,7 @@ def get_type_group(self):
 
 Get the type group of the Transaction.
 
-#### Return Value
+#### Return value
 
 `<class 'int'>`
 
@@ -802,7 +802,7 @@ Set the content identifier of the Transaction.
 | :--- | :--- | :--- | :--- |
 | str | cid | Yes | Content identifier |
 
-#### Return Value
+#### Return value
 
 `<class 'NoneType'>`
 
@@ -823,7 +823,7 @@ Create a new Transfer transaction instance
 | str | memo | No | Transaction memo |
 | int | fee | No | Transaction fee |
 
-#### Return Value
+#### Return value
 
 `<class 'solar_crypto.transactions.builder.transfer.Transfer'>`
 
@@ -835,7 +835,7 @@ def get_type_group(self):
 
 Get the type group of the Transaction.
 
-#### Return Value
+#### Return value
 
 `<class 'int'>`
 
@@ -854,7 +854,7 @@ Add a transfer to the Transfers array of a Transaction.
 | int | amount | Yes | Transaction amount |
 | string | recipient_id | Yes | Transaction recipient |
 
-#### Return Value
+#### Return value
 
 `<class 'NoneType'>`
 
@@ -874,7 +874,7 @@ Create a new MultiSignatureRegistration transaction instance
 | :--- | :--- | :--- | :--- |
 | int | fee | No | Transaction fee |
 
-#### Return Value
+#### Return value
 
 `<class 'solar_crypto.transactions.builder.multi_signature_registration.MultiSignatureRegistration'>`
 
@@ -892,7 +892,7 @@ Set the minimum amount of participants of a Transaction.
 | :--- | :--- | :--- | :--- |
 | int | minimum_participants | Yes | Transaction minimum participants |
 
-#### Return Value
+#### Return value
 
 `<class 'NoneType'>`
 
@@ -910,7 +910,7 @@ Set the public keys of a Transaction.
 | :--- | :--- | :--- | :--- |
 | list | public_keys | Yes | Transaction public keys participants |
 
-#### Return Value
+#### Return value
 
 `<class 'NoneType'>`
 
@@ -928,7 +928,7 @@ Add a participant with his public key to the Transaction.
 | :--- | :--- | :--- | :--- |
 | str | public_key | Yes | Participant public key |
 
-#### Return Value
+#### Return value
 
 `<class 'NoneType'>`
 
@@ -949,7 +949,7 @@ Create a new SecondSignatureRegistration transaction instance
 | str | second_passphrase | No | Second passphrase |
 | int | fee | No | Transaction fee |
 
-#### Return Value
+#### Return value
 
 `<class 'solar_crypto.transactions.builder.second_signature_registration.SecondSignatureRegistration'>`
 
@@ -972,7 +972,7 @@ Create a new Legacy Transfer transaction instance
 | str | memo | No | Transaction memo |
 | int | fee | No | Transaction fee |
 
-#### Return Value
+#### Return value
 
 `<class 'solar_crypto.transactions.builder.legacy_transfer.LegacyTransfer'>`
 
@@ -993,7 +993,7 @@ Create a new Legacy Vote transaction instance
 | str | vote | No | Delegate address to vote for |
 | int | fee | No | Transaction fee |
 
-#### Return Value
+#### Return value
 
 `<class 'solar_crypto.transactions.builder.legacy_vote.LegacyVote'>`
 
@@ -1011,7 +1011,7 @@ Set legacy votes/cancel vote
 | :--- | :--- | :--- | :--- |
 | List[str] | votes | Yes | list of votes |
 
-#### Return Value
+#### Return value
 
 `<class 'NoneType'>`
 
@@ -1029,7 +1029,7 @@ Sign the transaction using the given passphrase
 | :--- | :--- | :--- | :--- |
 | str | passphrase | Yes | Passphrase |
 
-#### Return Value
+#### Return value
 
 `<class 'NoneType'>`
 
@@ -1043,7 +1043,7 @@ def __init__(self):
 
 Create a new Vote transaction instance
 
-#### Return Value
+#### Return value
 
 `<class 'solar_crypto.transactions.builder.vote.Vote'>`
 
@@ -1061,7 +1061,7 @@ Set votes
 | :--- | :--- | :--- | :--- |
 | votes | votes | Yes | list of votes |
 
-#### Return Value
+#### Return value
 
 `<class 'NoneType'>`
 
@@ -1083,7 +1083,7 @@ Create a new deserialiser instance
 | ??? | asset_offset | Yes | Offset |
 | ??? | transaction | Yes | Transaction |
 
-#### Return Value
+#### Return value
 
 `<class 'solar_crypto.transactions.deserialisers.base.BaseDeserialiser'>`
 
@@ -1095,7 +1095,7 @@ def deserialise(self):
 
 Handle the deserialisation of transaction data
 
-#### Return Value
+#### Return value
 
 `NotImplementedError`
 
@@ -1109,7 +1109,7 @@ def deserialise(self):
 
 Handle the deserialisation of "burn" data
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`
 
@@ -1123,7 +1123,7 @@ def deserialise(self):
 
 Handle the deserialisation of "delegate registration" data
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`
 
@@ -1137,7 +1137,7 @@ def deserialise(self):
 
 Handle the deserialisation of "delegate resignation" data
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`
 
@@ -1151,7 +1151,7 @@ def deserialise(self):
 
 Handle the deserialisation of "HTLC Claim" data
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`
 
@@ -1165,7 +1165,7 @@ def deserialise(self):
 
 Handle the deserialisation of "HTLC Lock" data
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`
 
@@ -1179,7 +1179,7 @@ def deserialise(self):
 
 Handle the deserialisation of "HTLC refund" data
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`
 
@@ -1193,7 +1193,7 @@ def deserialise(self):
 
 Handle the deserialisation of "IPFS" data
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`
 
@@ -1207,7 +1207,7 @@ def deserialise(self):
 
 Handle the deserialisation of "transfer" data
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`
 
@@ -1221,7 +1221,7 @@ def deserialise(self):
 
 Handle the deserialisation of "multi signature registration" data
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`
 
@@ -1235,7 +1235,7 @@ def deserialise(self):
 
 Handle the deserialisation of "second signature" data.
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`
 
@@ -1249,7 +1249,7 @@ def deserialise(self):
 
 Handle the deserialisation of "legacy transfer" data
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`
 
@@ -1263,7 +1263,7 @@ def deserialise(self):
 
 Handle the deserialisation of "legacy vote" data.
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`
 
@@ -1277,7 +1277,7 @@ def deserialise(self):
 
 Handle the deserialisation of "vote" data.
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`
 
@@ -1298,7 +1298,7 @@ Create a new serialiser instance
 | Transaction | transaction | Yes | Transaction |
 | bytes | byte_data | No | ... |
 
-#### Return Value
+#### Return value
 
 `<class 'solar_crypto.transactions.serialisers.base.BaseSerialiser'>`
 
@@ -1310,7 +1310,7 @@ def serialise(self):
 
 Handle the serialisation of transaction data
 
-#### Return Value
+#### Return value
 
 `NotImplementedError`
 
@@ -1324,7 +1324,7 @@ def serialise(self):
 
 Handle the serialisation of "burn" data
 
-#### Return Value
+#### Return value
 
 `<class 'bytes'>`
 
@@ -1338,7 +1338,7 @@ def serialise(self):
 
 Handle the serialisation of "delegate registration" data
 
-#### Return Value
+#### Return value
 
 `<class 'bytes'>`
 
@@ -1352,7 +1352,7 @@ def serialise(self):
 
 Handle the serialisation of "delegate resignation" data
 
-#### Return Value
+#### Return value
 
 `<class 'bytes'>`
 
@@ -1366,7 +1366,7 @@ def serialise(self):
 
 Handle the serialisation of "HTLC Claim" data
 
-#### Return Value
+#### Return value
 
 `<class 'bytes'>`
 
@@ -1380,7 +1380,7 @@ def serialise(self):
 
 Handle the serialisation of "HTLC Lock" data
 
-#### Return Value
+#### Return value
 
 `<class 'bytes'>`
 
@@ -1394,7 +1394,7 @@ def serialise(self):
 
 Handle the serialisation of "HTLC Refund" data
 
-#### Return Value
+#### Return value
 
 `<class 'bytes'>`
 
@@ -1408,7 +1408,7 @@ def serialise(self):
 
 Handle the serialisation of "ipfs" data
 
-#### Return Value
+#### Return value
 
 `<class 'bytes'>`
 
@@ -1422,7 +1422,7 @@ def serialise(self):
 
 Handle the serialisation of "transfer" data
 
-#### Return Value
+#### Return value
 
 `<class 'bytes'>`
 
@@ -1436,7 +1436,7 @@ def serialise(self):
 
 Handle the serialisation of "multi signature" data
 
-#### Return Value
+#### Return value
 
 `<class 'bytes'>`
 
@@ -1450,7 +1450,7 @@ def serialise(self):
 
 Handle the serialisation of "second signature" data
 
-#### Return Value
+#### Return value
 
 `<class 'bytes'>`
 
@@ -1464,7 +1464,7 @@ def serialise(self):
 
 Handle the serialisation of "legacy transfer" data
 
-#### Return Value
+#### Return value
 
 `<class 'bytes'>`
 
@@ -1478,7 +1478,7 @@ def serialise(self):
 
 Handle the serialisation of "legacy vote" data
 
-#### Return Value
+#### Return value
 
 `<class 'bytes'>`
 
@@ -1492,7 +1492,7 @@ def serialise(self):
 
 Handle the serialisation of "vote" data
 
-#### Return Value
+#### Return value
 
 `<class 'bytes'>`
 
@@ -1512,7 +1512,7 @@ Create a new deserialiser instance
 | :--- | :--- | :--- | :--- |
 | str | serialised | Yes | Serialised |
 
-#### Return Value
+#### Return value
 
 `<class 'solar_crypto.transactions.deserialiser.Deserialiser'>`
 
@@ -1524,7 +1524,7 @@ def deserialise(self):
 
 Perform deserialisation
 
-#### Return Value
+#### Return value
 
 `<class 'solar_crypto.transactions.transaction.Transaction'>`
 
@@ -1543,7 +1543,7 @@ Handle the deserialisation of transaction data
 | int | asset_offset | Yes | Offset |
 | transaction.Transaction | transaction | Yes | Transaction |
 
-#### Return Value
+#### Return value
 
 `<class 'solar_crypto.transactions.transaction.Transaction'>`
 
@@ -1563,7 +1563,7 @@ Create a new serialiser instance
 | :--- | :--- | :--- | :--- |
 | transaction.Transaction | transaction | Yes | Transaction |
 
-#### Return Value
+#### Return value
 
 `<class 'solar_crypto.transactions.serialiser.Serialiser'>`
 
@@ -1584,7 +1584,7 @@ Perform serialisation
 | bool | skip_multi_signature | No | Should we skip the serialisation of multiple signatures |
 | bool | raw | No | Raw output |
 
-#### Return Value
+#### Return value
 
 `<class 'str'>`
 
@@ -1602,7 +1602,7 @@ Handle the serialisation of transaction data
 | :--- | :--- | :--- | :--- |
 | bytes | bytes_data | Yes | ... |
 
-#### Return Value
+#### Return value
 
 `<class 'bytes'>`
 
@@ -1623,7 +1623,7 @@ Handle the serialisation of "signatures" data
 | bool | skip_second_signature | Yes | Should we skip the serialisation of the second signature |
 | bool | skip_multi_signature | Yes | Should we skip the serialisation of multiple signatures |
 
-#### Return Value
+#### Return value
 
 `<class 'bytes'>`
 
@@ -1644,7 +1644,7 @@ Create a new transaction instance
 | any | \*args | No | ... |
 | any | \*\*kwargs | No | ... |
 
-#### Return Value
+#### Return value
 
 `<class 'solar_crypto.transactions.transaction.Transaction'>`
 
@@ -1656,7 +1656,7 @@ def get_id(self):
 
 Convert the byte representation to a unique identifier
 
-#### Return Value
+#### Return value
 
 `<class 'str'>`
 
@@ -1668,7 +1668,7 @@ def to_dict(self):
 
 Convert the transaction to its dictionary representation.
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`
 
@@ -1680,7 +1680,7 @@ def to_json(self):
 
 Convert the transaction to its JSON representation
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`
 
@@ -1700,7 +1700,7 @@ Convert the transaction to its byte representation
 | bool | skip_second_signature | Yes | Skip second signature |
 | bool | skip_multi_signature | Yes | Skip multi signatures |
 
-#### Return Value
+#### Return value
 
 `<class 'bytes'>`
 
@@ -1719,7 +1719,7 @@ Parse the signature, second signature and multi signatures
 | str | serialised | Yes | Serialised |
 | int | start_offset | Yes | Offset |
 
-#### Return Value
+#### Return value
 
 `<class 'NoneType'>`
 
@@ -1739,7 +1739,7 @@ Perform serialisation
 | bool | skip_second_signature | Yes | Skip second signature |
 | bool | skip_multi_signature | Yes | Skip multi signatures |
 
-#### Return Value
+#### Return value
 
 `<class 'str'>`
 
@@ -1757,7 +1757,7 @@ Perform deserialisation
 | :--- | :--- | :--- | :--- |
 | str | serialised | Yes | Serialised |
 
-#### Return Value
+#### Return value
 
 `<class 'str'>`
 
@@ -1769,7 +1769,7 @@ def verify(self):
 
 Verify the transaction. Method will raise an exception if invalid, if it's valid it will returns True
 
-#### Return Value
+#### Return value
 
 `<class 'bool'>`
 
@@ -1787,7 +1787,7 @@ Verify the second signature. Method will raise an exception if invalid, if it's 
 | :--- | :--- | :--- | :--- |
 | str | secondPublicKey | Yes | Second public key |
 
-#### Return Value
+#### Return value
 
 `<class 'bool'>`
 
@@ -1805,7 +1805,7 @@ Verify the multisignatures transaction. Method will raise an exception if invali
 | :--- | :--- | :--- | :--- |
 | dict | multi_signature_asset | Yes | Multisignature asset |
 
-#### Return Value
+#### Return value
 
 `<class 'bool'>`
 
@@ -1823,7 +1823,7 @@ Handle each transaction type differently
 | :--- | :--- | :--- | :--- |
 | bytes | bytes_data | Yes | Input the bytes data to which you want to append new bytes |
 
-#### Return Value
+#### Return value
 
 `<class 'bytes'>`
 
@@ -1844,7 +1844,7 @@ Handle the serialisation of "signatures" data
 | bool | skip_second_signature | Yes | Skip second signature |
 | bool | skip_multi_signature | Yes | Skip multi signatures |
 
-#### Return Value
+#### Return value
 
 `<class 'bytes'>`
 
@@ -1867,7 +1867,7 @@ Signs a message using Schnorr BIP340 and returns a hex string of the signature
 | int | nonce | No | Deterministic nonce |
 
 
-#### Return Value
+#### Return value
 
 `<class 'str'>`
 
@@ -1888,7 +1888,7 @@ Signs a message using Legacy Schnorr and returns a hex string of the signature
 | int | nonce | No | Deterministic nonce |
 
 
-#### Return Value
+#### Return value
 
 `<class 'str'>`
 
@@ -1909,7 +1909,7 @@ Verifies a message using Schnorr BIP340
 | str | signature | Yes | Signature |
 
 
-#### Return Value
+#### Return value
 
 `<class 'bool'>`
 
@@ -1930,7 +1930,7 @@ Verifies a message using Legacy Schnorr
 | str | signature | Yes | Signature |
 
 
-#### Return Value
+#### Return value
 
 `<class 'bool'>`
 
@@ -1951,7 +1951,7 @@ Create a new message instance
 | any | \*\*kwargs | No | ... |
 
 
-#### Return Value
+#### Return value
 
 `<class 'solar_crypto.utils.message.Message'>`
 
@@ -1970,7 +1970,7 @@ Sign a message using the given passphrase
 | str | message | Yes | Message |
 | str | passphrase | Yes | Passphrase |
 
-#### Return Value
+#### Return value
 
 `<class 'solar_crypto.utils.message.Message'>`
 
@@ -1982,7 +1982,7 @@ def verify(self):
 
 Verify the message contents
 
-#### Return Value
+#### Return value
 
 `<class 'bool'>`
 
@@ -1994,7 +1994,7 @@ def to_dict(self):
 
 Convert the message to its dictionary representation
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`
 
@@ -2006,7 +2006,7 @@ def to_json(self):
 
 Convert the message to its JSON representation
 
-#### Return Value
+#### Return value
 
 `<class 'dict'>`
 
@@ -2020,7 +2020,7 @@ def get_time():
 
 Get the time diff between now and network start
 
-#### Return Value
+#### Return value
 
 `<class 'int'>`
 
@@ -2032,6 +2032,6 @@ def get_epoch():
 
 Get the network start epoch
 
-#### Return Value
+#### Return value
 
 `<class 'datetime'>`

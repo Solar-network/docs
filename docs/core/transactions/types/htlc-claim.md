@@ -4,10 +4,7 @@ title: Claim
 
 # HTLC Claim
 
-<div class="admonition info">
-    <p class="admonition-title">info</p>
-    <p>HTLC transactions are not currently active on Solar's Mainnet.</p>
-</div>
+!!! warning "HTLC transactions are not currently active on Solar's Mainnet."
 
 | TypeGroup | Type  |
 | :-------: | :---: |
@@ -66,7 +63,7 @@ ff033f0100000009000b00000000000000034151a3ec46b5670a682b0a63394f863587d1bc97483b
 | **Unlock Secret Length:** | **[92]** |       **1**        | `0x20`                                                                 |
 | **Unlock Secret:**        | **[93]** |       **32**       | `0xc27f1ce845d8c29eebc9006be932b604fd06755521b1a8b0be4204c65377151a`   |
 
-### Supported Hash Types
+## Supported hash types
 
 | Hash Type | Value |
 | --------- | :---: |

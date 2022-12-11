@@ -54,17 +54,17 @@ The solution to this is to make sure that your Crypto SDK instance is properly c
 
 ```typescript
 Managers.configManager.setFromPreset("mainnet");
-Managers.configManager.setHeight(current_height);
+Managers.configManager.setHeight("2400000);
 ```
 
 ### Testnet
 
 ```typescript
 Managers.configManager.setFromPreset("testnet");
-Managers.configManager.setHeight(current_height);
+Managers.configManager.setHeight(1000000);
 ```
 
-## Creating and Broadcasting a Transfer
+## Creating and broadcasting a transfer transaction
 
 ```typescript
 import { Transactions, Managers, Utils } from "@solar-network/crypto";
@@ -80,7 +80,7 @@ const client = new Connection("https://tapi.solar.org/api");
 
     // Set the chain's presets and height
     Managers.configManager.setFromPreset("testnet");
-    Managers.configManager.setHeight(height);
+    Managers.configManager.setHeight(1000000);
 
 
     // Step 1: Retrieve the incremental nonce of the sender wallet
@@ -104,12 +104,11 @@ const client = new Connection("https://tapi.solar.org/api");
 })();
 ```
 
-<div class="admonition info">
-    <p class="admonition-title">info</p>
-    <p>The memo is optional and limited to a length of 255 characters. It can be a good idea to add a memo to your transactions if you want to be able to easily track or identify them in the future or include a personal message to the transaction's recipient(s).</p>
-</div>
+!!! info
 
-## Creating and Broadcasting a Second Signature
+    The memo is optional and limited to a length of 255 characters. It can be a good idea to add a memo to your transactions if you want to be able to easily track or identify them in the future or include a personal message to the transaction's recipient(s).
+
+## Creating and broadcasting a second signature transaction
 
 ```typescript
 import { Transactions, Managers, Utils } from "@solar-network/crypto";
@@ -125,7 +124,7 @@ const client = new Connection("https://tapi.solar.org/api");
 
     // Set the chain's presets and height
     Managers.configManager.setFromPreset("testnet");
-    Managers.configManager.setHeight(height);
+    Managers.configManager.setHeight(1000000);
 
     // Step 1: Retrieve the incremental nonce of the sender wallet
     const senderWallet = await client.api("wallets").get("YOUR_SENDER_WALLET_ADDRESS");
@@ -145,7 +144,7 @@ const client = new Connection("https://tapi.solar.org/api");
 })();
 ```
 
-## Creating and Broadcasting a Delegate Registration
+## Creating and broadcasting a delegate registration transaction
 
 ```typescript
 import { Transactions, Managers, Utils } from "@solar-network/crypto";
@@ -160,7 +159,7 @@ const client = new Connection("https://tapi.solar.org/api");
 
     // Set the chain's presets and height
     Managers.configManager.setFromPreset("testnet");
-    Managers.configManager.setHeight(height);
+    Managers.configManager.setHeight(1000000);
 
     // Step 1: Retrieve the incremental nonce of the sender wallet
     const senderWallet = await client.api("wallets").get("YOUR_SENDER_WALLET_ADDRESS");
@@ -180,7 +179,7 @@ const client = new Connection("https://tapi.solar.org/api");
 })();
 ```
 
-## Creating and Broadcasting a Vote
+## Creating and broadcasting a vote transaction
 
 ```typescript
 import { Transactions, Managers, Utils } from "@solar-network/crypto";
@@ -195,7 +194,7 @@ const client = new Connection("https://tapi.solar.org/api");
 
     // Set the chain's presets and height
     Managers.configManager.setFromPreset("testnet");
-    Managers.configManager.setHeight(height);
+    Managers.configManager.setHeight(1000000);
 
     // Step 1: Retrieve the incremental nonce of the sender wallet
     const senderWallet = await client.api("wallets").get("YOUR_SENDER_WALLET_ADDRESS");
@@ -215,12 +214,11 @@ const client = new Connection("https://tapi.solar.org/api");
 })();
 ```
 
-<div class="admonition info">
-    <p class="admonition-title">info</p>
-    <p>Note the <b>numbers</b> in the object that is passed on the <b>votesAsset</b> function represent the percentage of the wallet balance you want to vote towards the related delegate. This implies that the sum of all of them must be 100 or the object has to be empty for unvoting.</p>
-</div>
+!!! info
 
-## Creating and Broadcasting a IPFS
+    Note the **numbers** in the object that is passed on the **votesAsset** function represent the percentage of the wallet balance you want to vote towards the related delegate. This implies that the sum of all of them must be 100 or the object has to be empty to cancel an existing vote.
+
+## Creating and broadcasting an IPFS transaction
 
 ```typescript
 import { Transactions, Managers, Utils } from "@solar-network/crypto";
@@ -235,7 +233,7 @@ const client = new Connection("https://tapi.solar.org/api");
 
     // Set the chain's presets and height
     Managers.configManager.setFromPreset("testnet");
-    Managers.configManager.setHeight(height);
+    Managers.configManager.setHeight(100000);
 
     // Step 1: Retrieve the incremental nonce of the sender wallet
     const senderWallet = await client.api("wallets").get("YOUR_SENDER_WALLET_ADDRESS");
@@ -255,7 +253,7 @@ const client = new Connection("https://tapi.solar.org/api");
 })();
 ```
 
-## Creating and Broadcasting a Delegate Resignation
+## Creating and broadcasting a delegate resignation transaction
 
 ```typescript
 import { Transactions, Managers, Utils } from "@solar-network/crypto";
@@ -270,7 +268,7 @@ const client = new Connection("https://tapi.solar.org/api");
 
     // Set the chain's presets and height
     Managers.configManager.setFromPreset("testnet");
-    Managers.configManager.setHeight(height);
+    Managers.configManager.setHeight(1000000);
 
     // Step 1: Retrieve the incremental nonce of the sender wallet
     const senderWallet = await client.api("wallets").get("YOUR_SENDER_WALLET_ADDRESS");
@@ -290,14 +288,9 @@ const client = new Connection("https://tapi.solar.org/api");
 })();
 ```
 
-<div class="admonition info">
-    <p class="admonition-title">info</p>
-    <p>
-        A delegate resignation has to be sent from the delegate wallet itself to verify its identity.
-Resignation can be of 2 types:
-        <ul>
-            <li>0 meaning the resignation is only temporary and can be undone</li>
-            <li>1 meaning the resignation is permanent</li>
-        </ul>
-    </p>
-</div>
+!!! info "A delegate resignation <u>must</u> be sent from the corresponding delegate's wallet in order to verify their identity."
+
+!!! info "Resignation can be of 2 types:"
+
+    - 0 - meaning the resignation is only temporary and can be undone
+    - 1 - meaning the resignation is permanent

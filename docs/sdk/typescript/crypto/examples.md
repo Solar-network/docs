@@ -117,7 +117,7 @@ const isVerified = Crypto.Hash.verifySchnorrBip340(
 
 > The identities class allows for the creation and inspection of keyPairs from `passphrases`. Here you find vital functions when creating transactions and managing wallets.
 
-### Derive the Address from a Passphrase
+### Derive the address from a passphrase
 
 ```typescript
 import { Identities } from "@solar-network/crypto";
@@ -126,7 +126,7 @@ Identities.Address.fromPassphrase("this is a top secret passphrase");
 >>> string
 ```
 
-### Derive the Address from a Public Key
+### Derive the address from a public key
 
 ```typescript
 import { Identities } from "@solar-network/crypto";
@@ -137,7 +137,7 @@ Identities.Address.fromPublicKey(
 >>> string
 ```
 
-### Derive the Address from a WIF
+### Derive the address from a wif
 
 ```typescript
 import { Identities } from "@solar-network/crypto";
@@ -148,7 +148,7 @@ Identities.Address.fromWIF(
 >>> string
 ```
 
-### Validate an Address
+### Validate an address
 
 ```typescript
 import { Identities } from "@solar-network/crypto";
@@ -157,11 +157,11 @@ Identities.Address.validate("validAddress");
 >>> boolean
 ```
 
-## Private Key
+## PrivateKey
 
-> As the name implies, private keys and passphrases are to remain private. Never store these unencrypted and minimise access to these secrets
+> As the name implies, privateKeys and passphrases are to remain private. Never store these unencrypted and minimise access to these secrets
 
-### Derive the Private Key from a Passphrase
+### Derive the privateKey from a passphrase
 
 ```typescript
 import { Identities } from "@solar-network/crypto";
@@ -170,7 +170,7 @@ Identities.PrivateKey.fromPassphrase("this is a top secret passphrase");
 >>> string
 ```
 
-### Derive the Private Key from a WIF
+### Derive the private key from a WIF
 
 ```typescript
 import { Identities } from "@solar-network/crypto";
@@ -181,11 +181,11 @@ Identities.PrivateKey.fromWIF(
 >>> string
 ```
 
-## Public Key
+## PublicKey
 
 > Public Keys may be freely shared, and are included in transaction objects to validate the authenticity.
 
-### Derive the Public Key from a Passphrase
+### Derive the publicKey from a passphrase
 
 ```typescript
 import { Identities } from "@solar-network/crypto";
@@ -194,7 +194,7 @@ Identities.PublicKey.fromPassphrase("this is a top secret passphrase");
 >>> string
 ```
 
-### Validate a Public Key
+### Validate a publicKey
 
 ```typescript
 import { Identities } from "@solar-network/crypto";
@@ -209,7 +209,7 @@ Identities.PublicKey.verify(
 
 > The WIF should remain secret, just like your `passphrase` and `private key`.
 
-### Derive the WIF from a Passphrase
+### Derive the WIF from a passphrase
 
 ```typescript
 import { Identities } from "@solar-network/crypto";

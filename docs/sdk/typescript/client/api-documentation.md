@@ -21,7 +21,7 @@ Connect to the given connection.
 | string | host | Yes | Node URL |
 | string | name | No | Network name |
 
-#### Return Value
+#### Return value
 
 `Connection`
 
@@ -39,7 +39,7 @@ Disconnect from the given connection.
 | :--- | :--- | :--- | :--- |
 | string | name | No | Network Name |
 
-#### Return Value
+#### Return value
 
 `void`
 
@@ -57,7 +57,7 @@ Get a connection instance.
 | :--- | :--- | :--- | :--- |
 | string | name | No | Network Name |
 
-#### Return Value
+#### Return value
 
 `Connection`
 
@@ -69,7 +69,7 @@ public getDefaultConnection()
 
 Get the default connection name.
 
-#### Return Value
+#### Return value
 
 `string`
 
@@ -87,7 +87,7 @@ Set the default connection name.
 | :--- | :--- | :--- | :--- |
 | string | name | No | Network Name |
 
-#### Return Value
+#### Return value
 
 `void`
 
@@ -99,7 +99,7 @@ public getConnections()
 
 Return all of the created connections.
 
-#### Return Value
+#### Return value
 
 `Record<string, Connection>`
 
@@ -133,7 +133,7 @@ Instantiate new Api.
 | :--- | :--- | :--- | :--- |
 | string | name | Yes | Network name |
 
-#### Return Value
+#### Return value
 
 `T`
 
@@ -155,7 +155,7 @@ Apply options to future connection requests.
 | :--- | :--- | :--- | :--- |
 | string | opts | Yes | Connection options |
 
-#### Return Value
+#### Return value
 
 `this`
 
@@ -174,7 +174,7 @@ Send a GET request with query parameters.
 | string | url | Yes | Endpoint |
 | Record | opts? | No | Query parameters |
 
-#### Return Value
+#### Return value
 
 `Promise<IResponse<T>>`
 
@@ -193,7 +193,7 @@ Send a POST request with JSON-encoded parameters.
 | string | url | Yes | Endpoint |
 | Record | opts? | No | Query parameters |
 
-#### Return Value
+#### Return value
 
 `Promise<IResponse<T>>`
 
@@ -229,7 +229,7 @@ Get all blockchains.
 | :--- | :--- | :--- | :--- |
 | Record | query | No | Query parameters |
 
-#### Return Value
+#### Return value
 
 `Promise<IResponse<T>>`
 
@@ -247,7 +247,7 @@ Filter all blockchains by the given parameters.
 | :--- | :--- | :--- | :--- |
 | Record | payload | No | Search parameters |
 
-#### Return Value
+#### Return value
 
 `Promise<IResponse<T>>`
 
@@ -267,7 +267,7 @@ Get all blocks.
 | :--- | :--- | :--- | :--- |
 | Record | query | No | Query parameters |
 
-#### Return Value
+#### Return value
 
 `Promise<IResponse<T>>`
 
@@ -285,7 +285,7 @@ Get the first block.
 | :--- | :--- | :--- | :--- |
 | Record | query | No | Query parameters |
 
-#### Return Value
+#### Return value
 
 `Promise<IResponse<T>>`
 
@@ -303,7 +303,7 @@ Get the last (most recent) block.
 | :--- | :--- | :--- | :--- |
 | Record | query | No | Query parameters |
 
-#### Return Value
+#### Return value
 
 `Promise<IResponse<T>>`
 
@@ -321,7 +321,7 @@ Get a block by the given id.
 | :--- | :--- | :--- | :--- |
 | string | id | Yes | Block ID |
 
-#### Return Value
+#### Return value
 
 `Promise<IResponse<T>>`
 
@@ -340,7 +340,7 @@ Get all transactions by the given block.
 | string | id | Yes | Block ID |
 | Record | query | No | Query parameters |
 
-#### Return Value
+#### Return value
 
 `Promise<IResponse<T>>`
 
@@ -358,7 +358,7 @@ Shows all the missed blocks by all delegates in the last 30 days
 | :--- | :--- | :--- | :--- |
 | Record | payload | No | Search parameters |
 
-#### Return Value
+#### Return value
 
 `Promise<IResponse<T>>`
 
@@ -378,7 +378,7 @@ Get all locks.
 | :--- | :--- | :--- | :--- |
 | Record | query | No | Query parameters |
 
-#### Return Value
+#### Return value
 
 `Promise<IResponse<T>>`
 
@@ -396,7 +396,7 @@ Get a lock by the given id.
 | :--- | :--- | :--- | :--- |
 | string | id | Yes | Bridgechain identifier |
 
-#### Return Value
+#### Return value
 
 `Promise<IResponse<T>>`
 
@@ -414,7 +414,7 @@ Search for unlocked locks.
 | :--- | :--- | :--- | :--- |
 | Record | payload | No | Search parameters |
 
-#### Return Value
+#### Return value
 
 `Promise<IResponse<T>>`
 
@@ -434,7 +434,7 @@ Get all accounts.
 | :--- | :--- | :--- | :--- |
 | Record | query | No | Query parameters |
 
-#### Return Value
+#### Return value
 
 `Promise<IResponse<T>>`
 
@@ -452,7 +452,7 @@ Get a delegate by the given id.
 | :--- | :--- | :--- | :--- |
 | string | id | Yes | Delegate identifier |
 
-#### Return Value
+#### Return value
 
 `Promise<IResponse<T>>`
 
@@ -471,7 +471,7 @@ Get all blocks for the given delegate.
 | string | id | Yes | Delegate identifier |
 | Record | query | No | Query parameters |
 
-#### Return Value
+#### Return value
 
 `Promise<IResponse<T>>`
 
@@ -490,7 +490,7 @@ List Recent Missed Blocks of a Delegate
 | string | id | Yes | Delegate identifier |
 | Record | query | No | Query parameters |
 
-#### Return Value
+#### Return value
 
 `Promise<IResponse<T>>`
 
@@ -509,7 +509,7 @@ Get all voters for the given delegate.
 | string | id | Yes | Delegate identifier |
 | Record | query | No | Query parameters |
 
-#### Return Value
+#### Return value
 
 `Promise<IResponse<T>>`
 
@@ -523,7 +523,7 @@ public async configuration<T = any>()
 
 Get the node configuration.
 
-#### Return Value
+#### Return value
 
 `Promise<IResponse<T>>`
 
@@ -535,7 +535,7 @@ public async status<T = any>()
 
 Get the node status.
 
-#### Return Value
+#### Return value
 
 `Promise<IResponse<T>>`
 
@@ -547,7 +547,7 @@ public async syncing<T = any>()
 
 Get the node syncing status.
 
-#### Return Value
+#### Return value
 
 `Promise<IResponse<T>>`
 
@@ -559,7 +559,7 @@ public async crypto<T = any>()
 
 Get the node crypto configuration.
 
-#### Return Value
+#### Return value
 
 `Promise<IResponse<T>>`
 
@@ -577,7 +577,7 @@ Get the node fee statistics.
 | :--- | :--- | :--- | :--- |
 | number | days | Yes | Days |
 
-#### Return Value
+#### Return value
 
 `Promise<IResponse<T>>`
 
@@ -597,7 +597,7 @@ Get all peers.
 | :--- | :--- | :--- | :--- |
 | Record | query | No | Query parameters |
 
-#### Return Value
+#### Return value
 
 `Promise<IResponse<T>>`
 
@@ -615,7 +615,7 @@ Get a peer by the given IP address.
 | :--- | :--- | :--- | :--- |
 | string | ip | Yes | IP address |
 
-#### Return Value
+#### Return value
 
 `Promise<IResponse<T>>`
 
@@ -635,7 +635,7 @@ Get delegates for a round.
 | :--- | :--- | :--- | :--- |
 | number | id | yes | Round number |
 
-#### Return Value
+#### Return value
 
 `Promise<IResponse<T>>`
 
@@ -655,7 +655,7 @@ Create a new transaction.
 | :--- | :--- | :--- | :--- |
 | object\[\] | payload | Yes | Transaction(s) to broadcast |
 
-#### Return Value
+#### Return value
 
 `Promise<IResponse<T>>`
 
@@ -673,7 +673,7 @@ Get a transaction by the given id.
 | :--- | :--- | :--- | :--- |
 | string | id | Yes | Transaction ID |
 
-#### Return Value
+#### Return value
 
 `Promise<IResponse<T>>`
 
@@ -691,7 +691,7 @@ Get all transactions.
 | :--- | :--- | :--- | :--- |
 | Record | query | No | Query parameters |
 
-#### Return Value
+#### Return value
 
 `Promise<IResponse<T>>`
 
@@ -709,7 +709,7 @@ Get all unconfirmed transactions.
 | :--- | :--- | :--- | :--- |
 | Record | query | No | Query parameters |
 
-#### Return Value
+#### Return value
 
 `Promise<IResponse<T>>`
 
@@ -727,7 +727,7 @@ Get an unconfirmed transaction by the given id.
 | :--- | :--- | :--- | :--- |
 | string | id | Yes | Transaction ID |
 
-#### Return Value
+#### Return value
 
 `Promise<IResponse<T>>`
 
@@ -745,7 +745,7 @@ Get a list of transaction schemas.
 | :--- | :--- | :--- | :--- |
 | Record | payload | Yes | Search parameters |
 
-#### Return Value
+#### Return value
 
 `Promise<IResponse<T>>`
 
@@ -757,7 +757,7 @@ public async types<T = any>()
 
 Get a list of valid transaction types.
 
-#### Return Value
+#### Return value
 
 `Promise<IResponse<T>>`
 
@@ -769,7 +769,7 @@ public async fees<T = any>(): Promise<IResponse<T>>
 
 Get the node fee statistics.
 
-#### Return Value
+#### Return value
 
 `Promise<IResponse<T>>`
 
@@ -789,7 +789,7 @@ Get all votes.
 | :--- | :--- | :--- | :--- |
 | Record | query | No | Query parameters |
 
-#### Return Value
+#### Return value
 
 `Promise<IResponse<T>>`
 
@@ -807,7 +807,7 @@ Get a vote by the given id.
 | :--- | :--- | :--- | :--- |
 | string | id | Yes | Vote ID |
 
-#### Return Value
+#### Return value
 
 `Promise<IResponse<T>>`
 
@@ -827,7 +827,7 @@ Get all wallets.
 | :--- | :--- | :--- | :--- |
 | Record | query | No | Query parameters |
 
-#### Return Value
+#### Return value
 
 `Promise<IResponse<T>>`
 
@@ -845,7 +845,7 @@ Get a wallet by the given id.
 | :--- | :--- | :--- | :--- |
 | string | id | Yes | Wallet identifier |
 
-#### Return Value
+#### Return value
 
 `Promise<IResponse<T>>`
 
@@ -864,7 +864,7 @@ Get a wallet by the given id.
 | string | id | Yes | Wallet identifier |
 | Record | query | No | Search parameters |
 
-#### Return Value
+#### Return value
 
 `Promise<IResponse<T>>`
 
@@ -883,7 +883,7 @@ Get all transactions for the given wallet.
 | string | id | Yes | Wallet identifier |
 | Record | query | Yes | Query parameters |
 
-#### Return Value
+#### Return value
 
 `Promise<IResponse<T>>`
 
@@ -902,7 +902,7 @@ Get all transactions received by the given wallet.
 | string | id | Yes | Wallet identifier |
 | Record | query | Yes | Query parameters |
 
-#### Return Value
+#### Return value
 
 `Promise<IResponse<T>>`
 
@@ -921,7 +921,7 @@ Get all transactions sent by the given wallet.
 | string | id | Yes | Wallet identifier |
 | Record | query | Yes | Query parameters |
 
-#### Return Value
+#### Return value
 
 `Promise<IResponse<T>>`
 
@@ -939,7 +939,7 @@ Get all votes by the given wallet.
 | :--- | :--- | :--- | :--- |
 | string | id | Yes | Wallet identifier |
 
-#### Return Value
+#### Return value
 
 `Promise<IResponse<T>>`
 
@@ -957,6 +957,6 @@ Get all wallets sorted by balance in descending order.
 | :--- | :--- | :--- | :--- |
 | Record | query | Yes | Query parameters |
 
-#### Return Value
+#### Return value
 
 `Promise<IResponse<T>>`

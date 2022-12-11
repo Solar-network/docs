@@ -26,7 +26,7 @@ These parameters are:<br />
 
 ### Validation
 
-#### New Wallet Address Validation
+#### New wallet address validation
 
 There are 4 validation controls for the SXP mainnet address that check for a 34 character address with the S prefix.<br />
 1. Validation on the frontend for Metamask users that are using the official SXPSwap tool.<br />
