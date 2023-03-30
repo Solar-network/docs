@@ -73,7 +73,7 @@ This restarts all services related to the SXP Desktop Wallet, no data will be lo
 
 !!! success
 
-    Tip: Enter your SXP Address at [explorer.solar.org](http://explorer.solar.org) to verify balances and transactions.
+    Tip: Enter your SXP address on <a href="https://solarscan.com" target="_blank" rel="noopener noreferrer">solarscan.com</a> to verify balances and transactions.
 
 ## Wallet Issues
 
@@ -109,7 +109,7 @@ If the mnemonic passphrase was entered **exactly** as recorded, compare each wor
 
 !!! success
 
-    Tip: Enter your SXP Address at [explorer.solar.org](http://explorer.solar.org) to check that the balance and transaction history are as expected.
+    Tip: Enter your SXP address on <a href="https://solarscan.com" target="_blank" rel="noopener noreferrer">solarscan.com</a> to verify balances and transactions.
 
 ---
 

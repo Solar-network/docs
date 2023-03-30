@@ -56,7 +56,7 @@ As previously stated, block rewards and transaction fees are awarded to the acti
 
 Reward sharing can vary wildly with delegates taking commissions of anywhere from 0-100% of the total rewards.
 
-You can also view current Solar delegates on the [Delegates](https://explorer.solar.org/delegates) page inside the [SXP Explorer](https://explorer.solar.org/).
+You can also view all registered block producers using Solarscan: <a href="https://solarscan.com/block-producers" target="_blank" rel="noopener noreferrer">solarscan.com/block-producers</a>
 
 <!-- --hidden-- needs more detailed information
 ## Becoming a Delegate
