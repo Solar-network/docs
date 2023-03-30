@@ -9,9 +9,6 @@ This section serves as a reference for the available Solar Core APIs. These APIs
 1. [Public REST API](/api/public-rest-api/getting-started)
 2. [Webhook API](/api/webhook-api/getting-started)
 
-!!! info
+!!! tip "The API can also help monitor and troubleshoot your own node"
 
-    Each Core instance has its own internal blockchain and state, meaning it may have forked or be out of sync, causing queries to fail. Monitor your node by comparing it to different public nodes, such as the official Mainnet or Testnet Explorer to ensure you are in sync.
-
-    - **Mainnet Block Explorer** - <a href="https://solarscan.com" target="_blank" rel="noopener noreferrer">solarscan.com</a>
-    - **Testnet Block Explorer** - <a href="https://testnet.solarscan.com" target="_blank" rel="noopener noreferrer">testnet.solarscan.com</a>
+    Since each Core instance operates with its own internal blockchain and state, it's possible for it to become out of sync or forked, which may result in query failures. This makes the Solar Core APIs a valuable resource for managing your node and troubleshooting issues by comparing its responses with those of other nodes.

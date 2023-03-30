@@ -28,7 +28,7 @@ Each transaction in the SXP network costs a certain amount of SXP. With the impl
 
 Visit [SXP Delegates](https://delegates.solar.org/), our community-run delegate resource, for more information on delegate proposals. From the current list of delegates, vote according to your preferences.
 
-You can also view all registered block producers using Solarscan: <a href="https://solarscan.com/block-producers" target="_blank" rel="noopener noreferrer">solarscan.com/block-producers</a>
+!!! tip "You can also view all registered block producers using the public [REST API](/api/public-rest-api/getting-started) or a block explorer"
 
 ## Voting for a delegate
 
