@@ -101,5 +101,3 @@ Click "Swap Now", then proceed with confirming and signing the transaction to pe
 Your new SXP mainnet coins will arrive in your wallet within 30 minutes after receiving the required amount of confirmations.
 
 ![step 10](/sxpswap/assets/tw10.png)
-
-You will also be able to view the transaction and your updated balance using the Solarscan block explorer (<a href="https://solarscan.com" target="_blank" rel="noopener noreferrer">solarscan.com</a>).
