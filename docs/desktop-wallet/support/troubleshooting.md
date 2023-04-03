@@ -71,10 +71,6 @@ This restarts all services related to the SXP Desktop Wallet, no data will be lo
 
     If the **connection issues** are **not** resolved using the advice above, check that your connections are not being blocked by **Firewall** or **Antivirus Software**.
 
-!!! success
-
-    Tip: Enter your SXP Address at [explorer.solar.org](http://explorer.solar.org) to verify balances and transactions.
-
 ## Wallet Issues
 
 <u>**Wallet**</u> issues are encountered while attempting to <u>**import**</u>/<u>**restore**</u> a wallet using a **mnemonic recovery passphrase**.
@@ -106,10 +102,6 @@ If the mnemonic passphrase was entered **exactly** as recorded, compare each wor
 !!! info
 
     The purpose of checking this wordlist is to ensure that similar words were not recorded inadvertently.<br>*e.g. "aim" vs "air"; "fine" vs "find"; "seek" vs "seed"*
-
-!!! success
-
-    Tip: Enter your SXP Address at [explorer.solar.org](http://explorer.solar.org) to check that the balance and transaction history are as expected.
 
 ---
 
