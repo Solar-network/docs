@@ -32,6 +32,8 @@ Make sure to write your mnemonic recovery phrase down on paper and keep it somew
 
 !!! danger "Do not lose this mnemonic recovery phrase and do not share it with anyone!"
 
+    If your mnemonic is ever lost, there is no way to recover it or restore your account.
+
 ### 3. Plan for gas fees
 
 Make sure the wallet holding your SXP tokens (BEP20 or ERC20) has enough gas to cover fees for both – the contract approval and the swap itself.
