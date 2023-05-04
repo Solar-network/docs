@@ -4,10 +4,12 @@ title: Transfer (Legacy)
 
 # Legacy Transfer _(**DEPRECATED**)_
 
-!!! danger "<u>Type 0</u> Transfers will be deprecated on 31st December 2022"
+!!! danger "<u>Type 0</u> Transfers are deprecated"
 
-    - <u>Type 0</u> Transfers will <u>**NOT**</u> be accepted by the Solar blockchain after 2022-12-31 ❌
+    - <u>Type 0</u> Transfers will not be accepted by the Solar blockchain soon* ❌
     - <u>Type 6</u> Transfers should be used from now on ✅
+
+    &emsp;&nbsp;<i>*exchanges should continue to detect and accept legacy (type 0) transfers for the time being</i>
 
 !!! tip "See the updated transaction type here: [Transfer (Type 6)](/core/transactions/types/transfer)"
 
