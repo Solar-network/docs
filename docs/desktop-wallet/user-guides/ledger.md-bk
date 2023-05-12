@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This guide will help you get started in using your Ledger hardware wallet with the Solar Desktop Wallet software. Your Ledger device uses an offline, or cold storage, method of generating private keys, making it among the most secure ways to store cryptoassets, including Solar (SXP). It enables you to sign transactions securely, so you can send SXP or vote for your favourite delegates without the need to enter your mnemonic recovery passphrase.
+This guide will help you get started in using your Ledger hardware wallet with the Solar Desktop Wallet software. Your Ledger device uses an offline, or cold storage, method of generating private keys, making it among the most secure ways to store cryptoassets, including Solar (SXP). It enables you to sign transactions securely, so you can send SXP or vote for your favourite block producer without the need to enter your mnemonic.
 
 This guide covers the following topics:
 
@@ -114,7 +114,7 @@ Finally, type in however many Solar Ledger wallets you'd like to have displayed 
 
 ## Receiving and Sending Solar (SXP)
 
-A Solar Ledger wallet works just like a traditional passphrase-protected Solar wallet.
+A Solar Ledger wallet works just like a traditional mnemonic-protected Solar wallet.
 
 ### Receiving Solar (SXP)
 
@@ -172,21 +172,21 @@ If everything looks good and you'd like to proceed with the transaction, click t
 
 ## Voting / Staking Solar (SXP)
 
-You can perform nearly any transaction using your Solar Ledger wallet as you could using a traditional Solar (SXP) wallet, including voting for your favourite delegates to stake your SXP.
+You can perform nearly any transaction using your Solar Ledger wallet as you could using a traditional Solar (SXP) wallet, including voting for your favourite block producers to stake your SXP.
 
-> _Learn more about delegates and their proposals and contributions here: [https://delegates.solar.org](https://delegates.solar.org)_
+> _Learn more about block producers and their proposals and contributions here: [https://delegates.solar.org](https://delegates.solar.org)_
 
 **1. Open a Solar (SXP) Ledger wallet**
 
-Using the Solar Desktop Wallet, open the Solar (SXP) Ledger address from which you'd like to vote. Then click the '**Delegates**' tab.
+Using the Solar Desktop Wallet, open the Solar (SXP) Ledger address from which you'd like to vote. Then click the '**Block Producers**' tab.
 
 ![](/desktop-wallet/assets/ledger/vote-1.gif)
 
 > _Make sure your Ledger device is connected and unlocked and that the Solar app is opened._
 
-**2. Select your Favourite Delegates**
+**2. Select your Favourite Block Producers**
 
-Select your favourite delegates from the list--or search for them by name.
+Select your favourite block producers from the list--or search for them by name.
 
 ![](/desktop-wallet/assets/ledger/vote-2.gif)
 
@@ -213,7 +213,7 @@ You will now be required to review the vote details using your Ledger device.
 
 ![](/desktop-wallet/assets/ledger/vote-waiting.gif)
 
-**Take your time** clicking through to verify that the vote details are correct. Make sure that the delegate's username matches the one selected using the Solar Desktop Wallet exactly.
+**Take your time** clicking through to verify that the vote details are correct. Make sure that the block producer's username matches the one selected using the Solar Desktop Wallet exactly.
 
 If **everything** looks correct and you'd like to proceed with voting, click '**Approve**' using your Ledger device.
 

@@ -10,16 +10,17 @@ The SXP Desktop Wallet allows you to both create new wallets and import existing
 
 ![Import your wallet by providing its address, passphrase, or both](/desktop-wallet/assets/newwallet.png)
 
-1. Go to your Portfolio
-2. Click on "Create" button
-3. Select SXP as Cryptoasset
+1. Go to your Profile
+2. Click on "Create Wallet" button
+3. Select one of the three created addresses or generate new ones
 4. Save your passphrase. Be sure it's a safe place!
 5. Confirm your passphrase, by selecting the prompted words.
 6. Great! You created a new wallet.
 
 ## Importing your wallet
 
-1. Provide the mnemonic of the wallet
-2. Click on continue, and your wallet is imported!
+1. Provide the mnemonic and/or address of the wallet, then click 'Next'
+2. Optional: encrypt wallet with a password. Or click 'Next'
+3. Optional: provide a wallet name. Click 'Next' and your wallet is imported!
 
 ![Import your wallet by providing its address, passphrase, or both](/desktop-wallet/assets/importwallet.png)

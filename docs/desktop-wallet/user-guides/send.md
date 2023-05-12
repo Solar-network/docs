@@ -14,6 +14,6 @@ You can quickly send a transfer by clicking on the _**Send**_ button in the head
 
     For more information about fees, please visit: [Transaction Fees](/desktop-wallet/user-guides/transaction-fees)
 
-Upon clicking _**Next**_, you will have to review the transfer transaction's details and can proceed by clicking the "Continue" button.
+Enter the address and amount to transfer, your desired transaction fee and your mnemonic or encryption password. Upon clicking _**Next**_, you will have to review the transfer transaction's details.
 
-Enter your mnemonic or password and __voila!__
+Proceed by clicking the "Send" button and __voila!__

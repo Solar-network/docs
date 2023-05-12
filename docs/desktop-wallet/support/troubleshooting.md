@@ -14,7 +14,7 @@ A user experiencing unexpected errors should first check that their apps and sof
 
 First, check that the latest version of the SXP Desktop Wallet is installed.
 
-All official Desktop Wallet releases can be found [here](https://solar.org/desktop-wallet)
+All official Desktop Wallet releases can be found [here](https://solar.org/desktop-wallet).
 
 ---
 
@@ -85,7 +85,7 @@ Users having **Wallet** issues will typically experience the following:
 
 ### Resolving Wallet Issues
 
-**Wallet** issues are commonly resolved by double-checking that your <u>**recovery passphrase**</u> is correct.
+**Wallet** issues are commonly resolved by double-checking that your <u>**mnemonic recovery passphrase**</u> is correct.
 
 A word may have been misspelled or extra characters might have been entered by mistake.
 
@@ -114,7 +114,7 @@ It is <u>**always**</u> advised to write your recovery phrase down on paper, dou
 
 !!! danger
 
-    Your 12-word passphrase is <u>**your**</u> responsibility. If it is lost or stolen, you <u>**will**</u> lose access to your funds. Lost mnemonic recovery passphrases are <u>**NOT**</u> recoverable.
+    Your 12-word mnemonic passphrase is <u>**your**</u> responsibility. If it is lost or stolen, you <u>**will**</u> lose access to your funds. Lost mnemonic recovery passphrases are <u>**NOT**</u> recoverable.
 
 ## Signing Issues
 
@@ -162,7 +162,7 @@ A word may have been misspelled or extra characters might have been entered by m
 
 !!! info
 
-    If the mnemonic passphrase was entered exactly as recorded, refer to the section on checking a passphrase <u>[here](#resolving-wallet-issues)</u>.
+    If the mnemonic passphrase was entered exactly as recorded, refer to the section on checking a mnemonic passphrase <u>[here](#resolving-wallet-issues)</u>.
 
 ## Ledger Hardware Wallet Issues
 
@@ -323,6 +323,6 @@ The easiest and most common way is to use the built-in **Dev Tools**, which **wi
 
 !!! info
 
-    If your issue is not covered here, you can ask the community here: [solar.org/community](https://solar.org/community)
+    If your issue is not covered here, you can ask the community on [Discord](https://discord.solar.org/), [Telegram](https://telegram.solar.org/).
 
-    or contact us using the ‘Technical Support’ form found here: [solar.org/contact](https://solar.org/contact)
+    or contact us using the ‘Technical Support’ form through [our website](https://solar.org/).

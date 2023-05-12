@@ -205,8 +205,8 @@ nav:
       - User Guides:
         - desktop-wallet/user-guides/add-contact.md
         - desktop-wallet/user-guides/create-import-wallets.md
-        # - desktop-wallet/user-guides/register-resign-delegate.md
-        - desktop-wallet/user-guides/register-second-passphrase.md
+        # - desktop-wallet/user-guides/register-resign-blockproducer.md
+        - desktop-wallet/user-guides/register-second-mnemonic.md
         - desktop-wallet/user-guides/send.md
         - desktop-wallet/user-guides/sign-verify.md
         - desktop-wallet/user-guides/vote.md
