@@ -4,7 +4,7 @@ title: An Introduction to SXP Rewards (Staking)
 
 # An Introduction to SXP Rewards (Staking)
 
-Solar is a sovereign blockchain with a native cryptoasset called SXP. It is based on the Delegated-Proof-of-Stake (DPoS) consensus mechanism and has 53 active Block Producers (otherwise known as delegates or validators) who secure the network. In this article, we will discuss how block rewards work within the Solar blockchain and how you can earn a portion of the rewards by becoming an active block producer or voting with your SXP coins.
+Solar is a sovereign blockchain with a native cryptoasset called SXP. It is based on the Delegated-Proof-of-Stake (DPoS) consensus mechanism and has 53 active Block Producers who secure the network. In this article, we will discuss how block rewards work within the Solar blockchain and how you can earn a portion of the rewards by becoming an active block producer or voting with your SXP coins.
 
 ## Staking considerations
 
@@ -14,11 +14,11 @@ When a user casts a vote, their votes are assigned to the network Block Producer
 
 A user’s votes adjusts automatically as funds are sent and received, and there is no need to re-vote or un-stake.
 
-To change a vote, a user simply un-votes their current Block Producer and elects another by casting a new vote transaction.
+To change a vote, a user simply casts a new vote transaction.
 
 !!! info
 
-    For more information about voting and unvoting, please visit: [How to Vote or Unvote a Block Producer](/desktop-wallet/user-guides/vote)
+    For more information about voting, please visit: [How to Vote for Block Producers in the Desktop Wallet](/desktop-wallet/user-guides/vote)
 
 ## Staking fees
 
@@ -26,7 +26,7 @@ The cost of a vote covers the transaction itself.
 
 There is no requirement to send or lock additional funds in order to participate in consensus.
 
-This transaction fee is awarded to the Block Producer who forges the transaction in a given block.
+This transaction fee is awarded to the Block Producer who adds the transaction to a given block.
 
 !!! info
 
@@ -38,13 +38,13 @@ Solar is a sovereign blockchain that is validated by 53 active Block Producers.
 
 Each Block Producers will submit one (1) block per round.
 
-A round consists of 53 blocks. Each block on Solar has a block time of 8 seconds.
+A round consists of 53 blocks. Each block on the Solar Network has a block time of 8 seconds.
 
-Each block awards the active Block Producers who submits the block a dynamic and rank-based block reward with the 10% any transaction fees from that block.
+A Block Producer, when active and submitting a particular block, earns a reward of 10% from the total transaction fees of that block, in addition to a dynamic, rank-based block reward.
 
 **Block Rewards** are inflationary coins, meaning the total SXP supply is increased by between 6.75 and 13.25 SXP every block. This serves as a form of consistent inflation that reduces over time due to the non-fluctuating rate of rewards.
 
-On Solar, 100% of the block reward goes to the Block Producer.
+On Solar, 10% of the block reward is donated to the development fund and the Solar Blockchain Foundation while 90% goes to the Block Producer.
 
 **Note: There are no "halvenings" of block rewards on Solar**.
 

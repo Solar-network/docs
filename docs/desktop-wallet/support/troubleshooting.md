@@ -4,7 +4,7 @@ title: Troubleshooting
 
 # Troubleshooting
 
-This page will cover common issues related to the SXP Desktop Wallet `v2.x`.
+This page will cover common issues related to the Solar Desktop Wallet `v2.x`.
 
 ## Getting started
 
@@ -12,7 +12,7 @@ A user experiencing unexpected errors should first check that their apps and sof
 
 ### Desktop wallet software
 
-First, check that the latest version of the SXP Desktop Wallet is installed.
+First, check that the latest version of the Solar Desktop Wallet is installed.
 
 All official Desktop Wallet releases can be found [here](https://solar.org/desktop-wallet).
 

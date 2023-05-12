@@ -4,7 +4,7 @@ title: Transaction Fees
 
 ## SXP Transaction Fees
 
-The fee associated with a transaction is awarded to the Block Producer who produces the transaction in a given block after 90% is burned automatically.
+90% of all transaction fees are automatically burned. The remaining 10% are allocated to the Block Producer responsible for adding the respective transaction to a particular block.
 
 Though dynamic fees allow setting a custom amount, there is no reason to increase a transaction fee above the ‘average’ at this time.
 

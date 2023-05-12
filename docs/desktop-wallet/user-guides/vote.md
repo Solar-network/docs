@@ -1,12 +1,12 @@
 ---
-title: How to Vote or Cancel vote in the Desktop Wallet?
+title: How to Vote for Block Producers in the Desktop Wallet?
 ---
 
 # How to Vote in the Desktop Wallet?
 
 ## General information
 
-You can use your SXP to vote for a block producer. Some basic voting info:
+You can use your SXP to vote for block producers. Some basic voting info:
 
 ### 1 SXP address can vote for up to 53 Block Producers at any time
 

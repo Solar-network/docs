@@ -23,7 +23,7 @@ To get started with the SXP Desktop Wallet, follow the documentation below for g
 
 ## Transactions
 
-The SXP Desktop Wallet enables you to send a wide variety of transactions on the SXP Blockchain and other Solar Core based blockchains. Follow the guides below for information on each transaction.
+The SXP Desktop Wallet enables you to send a wide variety of transactions on the Solar (SXP) blockchain. Follow the guides below for information on each transaction.
 <x-link-collection
     :links="[
         ['path' => '/docs/desktop-wallet/user-guides/send', 'name' => 'Send SXP Transfer'],
