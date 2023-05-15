@@ -6,7 +6,7 @@ title: Transfer (Legacy)
 
 !!! danger "<u>Type 0</u> Transfers are deprecated"
 
-    - <u>Type 0</u> Transfers will not be accepted by the Solar blockchain soon* ❌
+    - <u>Type 0</u> Transfers will not be accepted by the Solar blockchain starting at height 5,000,000* ❌
     - <u>Type 6</u> Transfers should be used from now on ✅
 
     &emsp;&nbsp;<i>*exchanges should continue to detect and accept legacy (type 0) transfers for the time being</i>
