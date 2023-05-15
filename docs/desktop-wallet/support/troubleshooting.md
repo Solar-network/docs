@@ -34,7 +34,7 @@ More information on updating a **Ledger Hardware Wallet** and **Ledger Apps** ca
 
 Some of the more common issues are related to **peer** and **network** <u>**connectivity**</u>.
 
-### Recognizing Connectivity Issues
+### Recognising Connectivity Issues
 
 Users having **connectivity** issues will typically experience the following:
 
@@ -47,7 +47,7 @@ Common **error messages** associated with **connectivity** issues include—but 
 - **"Cannot Connect"**
 - **"Failed to connect to peer"**
 - **"…fee is not valid"**
-- **"Initialization is taking longer than expected…"**
+- **"Initialisation is taking longer than expected…"**
 - **"…invalid seed nodes…"**
 - **"No internet connection"**
 - **"…transaction could not be created / sent / registered…"**
@@ -75,7 +75,7 @@ This restarts all services related to the SXP Desktop Wallet, no data will be lo
 
 <u>**Wallet**</u> issues are encountered while attempting to <u>**import**</u>/<u>**restore**</u> a wallet using a **mnemonic recovery passphrase**.
 
-### Recognizing Wallet Issues
+### Recognising Wallet Issues
 
 Users having **Wallet** issues will typically experience the following:
 
@@ -120,7 +120,7 @@ It is <u>**always**</u> advised to write your recovery phrase down on paper, dou
 
 <u>**Signing**</u> issues are encountered when attempting to <u>**sign a transaction**</u>.
 
-### Recognizing Signing Issues
+### Recognising Signing Issues
 
 Users having **Signing** issues will typically receive the following **error messages**:
 
@@ -168,7 +168,7 @@ A word may have been misspelled or extra characters might have been entered by m
 
 <u>**Ledger**</u> Hardware issues are mostly encountered when connecting a <u>**Ledger NanoS/NanoX**</u> or attempting to <u>**sign a transaction**</u>.
 
-### Recognizing Ledger Issues
+### Recognising Ledger Issues
 
 Users having **Ledger** issues when <u>**connecting**</u> a device will typically experience the following **behavior**:
 

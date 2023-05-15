@@ -30,7 +30,7 @@ Visit [SXP Block Producers](https://delegates.solar.org/), our community-run blo
 
 !!! tip "You can also view all registered block producers using the public [REST API](/api/public-rest-api/getting-started) or a block explorer"
 
-## Voting for a block producer
+## Voting for a Block Producer
 
 ![Browse the list of registered block producers](/desktop-wallet/assets/blockproducers.png)
 
