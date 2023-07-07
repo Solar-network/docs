@@ -2,14 +2,15 @@
 title: Whitepaper
 ---
 
-### Initial Whitepaper by Solar (February 2022)
+<!-- use h3 tag to preserve empty toc -->
+<h3>Solar Whitepaper V2 (July 2023)</h3>
 
-The following whitepaper is referred to goals and mission statements made by Solar.
+The following whitepaper refers to goals and mission statements made by the Solar Blockchain Foundation.
+
 Click on the link below to view or download the whitepaper.
 
-Please keep in mind that the Whitepaper will be updated with more detailed information upon mainnet release.
+- [English Whitepaper - July 2023](/assets/documents/whitepaper-july-2023.pdf)
 
-1. [English Whitepaper February 2022](/assets/documents/whitepaper-february-2022.pdf)
-2. [Korean Whitepaper February 2022](/assets/documents/kr-whitepaper-february-2022.pdf)
-3. [Turkish Whitepaper February 2022](/assets/documents/tr-whitepaper-february-2022.pdf)
-4. [Vietnamese Whitepaper February 2022](/assets/documents/vi-whitepaper-february-2022.pdf)
+!!! tip
+
+    If you wish to translate the whitepaper into your native language, please open a pull request in our <a href="https://github.com/Solar-network/docs/edit/main/docs/project/whitepaper.md" target="_blank" rel="noopener noreferrer">GitHub repository</a>.
