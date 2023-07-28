@@ -129,7 +129,7 @@ The steps needed to utilise the new Type 6 Transfer will depend heavily on what 
     See the full SDK examples of sending a Type 6 Transfer at the following links:
 
     - Python: [Creating and broadcasting a transfer transaction](/sdk/python/complementary-examples/#creating-and-broadcasting-a-transfer-transaction)
-    - TypeScript: [Creating and broadcasting a transfer transaction](/sdk/python/complementary-examples/#creating-and-broadcasting-a-transfer-transaction)
+    - TypeScript: [Creating and broadcasting a transfer transaction](/sdk/typescript/complementary-examples/#creating-and-broadcasting-a-transfer-transaction)
 
 !!! warning "Make sure you are also using the latest SDK releases"
 
