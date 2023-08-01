@@ -220,7 +220,6 @@ solar relay:start && pm2 logs
 1|solar-relay  | [2022-11-06 22:36:49.923] DEBUG: Database migration: Adding type, type_group index to transactions table
 1|solar-relay  | [2022-11-06 22:36:49.926] DEBUG: Updating database configuration 📚
 1|solar-relay  | [2022-11-06 22:36:49.928] DEBUG: Connection established
-1|solar-relay  | [2022-11-06 22:36:49.938] INFO: Loaded SXP Swap Plugin
 1|solar-relay  | [2022-11-06 22:36:50.192] WARNING: No block found in database 😯
 1|solar-relay  | [2022-11-06 22:36:50.236] NOTICE: Milestone change
 1|solar-relay  | [2022-11-06 22:36:50.303] INFO: P2P Server started at http://suitable-wagtail:6001
