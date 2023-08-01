@@ -6,10 +6,12 @@ title: Transfer
 
 !!! success "This page contains the latest <u>Type 6</u> Transfer"
 
-!!! danger "<u>Type 0</u> Transfers will be deprecated on 31st December 2022"
+!!! info "<u>Type 0</u> Transfers are deprecated"
 
-    - <u>Type 0</u> Transfers will <u>**NOT**</u> be accepted by the Solar blockchain after 2022-12-31 ❌
+    - <u>Type 0</u> Transfers will not be accepted on the Solar Network mainnet starting at height 5,000,000* ❌
     - <u>Type 6</u> Transfers should be used from now on ✅
+
+    &emsp;&nbsp;<i>*exchanges should continue to detect and accept legacy (type 0) transfers for the time being</i>
 
 | TypeGroup | Type  |
 | :-------: | :---: |
@@ -129,7 +131,7 @@ The steps needed to utilise the new Type 6 Transfer will depend heavily on what 
     See the full SDK examples of sending a Type 6 Transfer at the following links:
 
     - Python: [Creating and broadcasting a transfer transaction](/sdk/python/complementary-examples/#creating-and-broadcasting-a-transfer-transaction)
-    - TypeScript: [Creating and broadcasting a transfer transaction](/sdk/python/complementary-examples/#creating-and-broadcasting-a-transfer-transaction)
+    - TypeScript: [Creating and broadcasting a transfer transaction](/sdk/typescript/complementary-examples/#creating-and-broadcasting-a-transfer-transaction)
 
 !!! warning "Make sure you are also using the latest SDK releases"
 

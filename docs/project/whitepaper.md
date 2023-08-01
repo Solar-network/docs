@@ -10,6 +10,7 @@ The following whitepaper refers to goals and mission statements made by the Sola
 Click on the link below to view or download the whitepaper.
 
 - [English Whitepaper - July 2023](/assets/documents/whitepaper-july-2023.pdf)
+- [Vietnamese Whitepaper - July 2023](/assets/documents/vi-whitepaper-july-2023.pdf)
 
 !!! tip
 

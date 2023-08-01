@@ -4,11 +4,11 @@ title: Transaction Fees
 
 ## SXP Transaction Fees
 
-The fee associated with a transaction is awarded to the Validator who forges the transaction in a given block.
+90% of all transaction fees are automatically burned. The remaining 10% are allocated to the block producer responsible for adding the respective transaction to a particular block.
 
 Though dynamic fees allow setting a custom amount, there is no reason to increase a transaction fee above the ‘average’ at this time.
 
-A user may enter a lower fee if desired, though there is no guarantee the transaction will be forged.
+A user may enter a lower fee if desired, though there is no guarantee the transaction will be included in a block.
 
 Fortunately, rejected transactions do not forfeit the fee as with Ethereum and its "gas fee".
 

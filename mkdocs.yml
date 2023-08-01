@@ -147,6 +147,7 @@ nav:
           - core/transactions/types/legacy-vote.md
     - Core Updates:
       - core/updates/4.3.1.md
+      - core/updates/4.3.0.md
       - core/updates/4.2.1.md
       - core/updates/4.2.0.md
       - core/updates/4.1.3.md
@@ -206,27 +207,13 @@ nav:
       - User Guides:
         - desktop-wallet/user-guides/add-contact.md
         - desktop-wallet/user-guides/create-import-wallets.md
-        # - desktop-wallet/user-guides/register-resign-delegate.md
-        - desktop-wallet/user-guides/register-second-passphrase.md
+        - desktop-wallet/user-guides/register-resign-block-producer.md
+        - desktop-wallet/user-guides/register-second-mnemonic.md
         - desktop-wallet/user-guides/send.md
         - desktop-wallet/user-guides/sign-verify.md
         - desktop-wallet/user-guides/vote.md
         - desktop-wallet/user-guides/transaction-fees.md
       - desktop-wallet/support/troubleshooting.md
-  - SXPSwap:
-    - sxpswap/introduction.md
-    - Swap / Migration:
-      - Users:
-        - sxpswap/users/metamask.md
-        - sxpswap/users/trust-wallet.md
-      - Exchanges:
-        - sxpswap/exchanges/getting-started.md
-    - Technical Details:
-      - Security:
-        - sxpswap/technical-details/security/introduction.md
-        - sxpswap/technical-details/security/contract-procedure.md
-        - sxpswap/technical-details/security/broadcast-procedure.md
-        - sxpswap/technical-details/security/mainnet-procedure.md
   - Brand:
     - brand/intro.md
   - Project:
