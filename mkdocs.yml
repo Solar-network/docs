@@ -205,15 +205,16 @@ nav:
       - desktop-wallet/intro.md
       - desktop-wallet/rewards.md
       - User Guides:
-        - desktop-wallet/user-guides/add-contact.md
         - desktop-wallet/user-guides/create-import-wallets.md
-        - desktop-wallet/user-guides/register-resign-block-producer.md
+        - desktop-wallet/user-guides/ledger.md
+        - desktop-wallet/user-guides/add-contact.md
         - desktop-wallet/user-guides/register-second-mnemonic.md
         - desktop-wallet/user-guides/send.md
-        - desktop-wallet/user-guides/sign-verify.md
         - desktop-wallet/user-guides/vote.md
+        - desktop-wallet/user-guides/register-resign-block-producer.md
+        - desktop-wallet/user-guides/sign-verify.md
+        - desktop-wallet/support/troubleshooting.md
         - desktop-wallet/user-guides/transaction-fees.md
-      - desktop-wallet/support/troubleshooting.md
   - Brand:
     - brand/intro.md
   - Project:
