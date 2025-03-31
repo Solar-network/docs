@@ -1,8 +1,8 @@
 ---
-title: How to Vote for Block Producers in the Desktop Wallet?
+title: Voting for Block Producers
 ---
 
-# How to Vote in the Desktop Wallet?
+# Voting for Block Producers
 
 ## General information
 

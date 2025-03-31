@@ -1,8 +1,8 @@
 ---
-title: How to Create or Import a Wallet?
+title: Creating/Importing a wallet
 ---
 
-# How to Create or Import a Wallet?
+# Creating or importing a wallet
 
 The SXP Desktop Wallet allows you to both create new wallets and import existing ones. You can begin either process by clicking the appropriate button at the top of the sidebar when on the app dashboard.
 

@@ -1,12 +1,10 @@
 ---
-title: How to Register a Second Mnemonic?
+title: Registering a 2nd Mnemonic
 ---
 
-# How to Register a Second Mnemonic?
+# Registering a Second Mnemonic
 
 Security is critical. By issuing an extra signature transaction, you tell network nodes to verify that every transaction coming from your wallet is also signed by another mnemonic.
-
-## Register a second mnemonic
 
 ![Show more options in the wallet detail page by clicking the three dots](/desktop-wallet/assets/moreicon1.png)
 

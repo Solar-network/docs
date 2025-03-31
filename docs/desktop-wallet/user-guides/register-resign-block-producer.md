@@ -1,8 +1,8 @@
 ---
-title: How to Register or Resign a Block Producer?
+title: Registering/Resigning a Block Producer
 ---
 
-# How to Register or Resign a Block Producer?
+# Registering or Resigning a Block Producer
 
 ## Register as a Block Producer
 

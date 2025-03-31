@@ -54,15 +54,19 @@ The solution to this is to make sure that your Crypto SDK instance is properly c
 
 ```typescript
 Managers.configManager.setFromPreset("mainnet");
-Managers.configManager.setHeight("2400000);
+Managers.configManager.setHeight("11800000);
 ```
 
 ### Testnet
 
 ```typescript
 Managers.configManager.setFromPreset("testnet");
-Managers.configManager.setHeight(1000000);
+Managers.configManager.setHeight(8500000);
 ```
+
+!!! info
+
+    You may also configure the block height using Solar's REST API as shown in the following sections.
 
 ## Creating and broadcasting a transfer transaction
 
@@ -74,14 +78,12 @@ import { Connection } from "@solar-network/client";
 const client = new Connection("https://tapi.solar.org/api");
 
 (async () => {
-
     // Get current height
     const height = (await client.api("blockchain").blockchain()).body.data.block.height;
 
     // Set the chain's presets and height
     Managers.configManager.setFromPreset("testnet");
-    Managers.configManager.setHeight(1000000);
-
+    Managers.configManager.setHeight(height);
 
     // Step 1: Retrieve the incremental nonce of the sender wallet
     const senderWallet = await client.api("wallets").get("YOUR_SENDER_WALLET_ADDRESS");
@@ -91,9 +93,10 @@ const client = new Connection("https://tapi.solar.org/api");
     const transaction = Transactions.BuilderFactory.transfer()
         .nonce(senderNonce.toFixed())
         .fee("30000000")
-        .addTransfer("Address of Recipient 1", "100000000")
-        .addTransfer("Address of Recipient 2", "100000000")
-        .memo("Hello World") // Memo is optional
+        .memo("This is an example memo") // memo is optional
+        .addPayment("Address of Recipient Wallet 1","100000000") // 1 tSXP
+        .addPayment("Address of Recipient Wallet 2","200000000") // 2 tSXP
+        .addPayment("Address of Recipient Wallet 3","300000000") // 3 tSXP
         .sign("this is a top secret passphrase");
 
     // Step 4: Broadcast the transaction
@@ -118,13 +121,12 @@ import { Connection } from "@solar-network/client";
 const client = new Connection("https://tapi.solar.org/api");
 
 (async () => {
-
     // Get current height
     const height = (await client.api("blockchain").blockchain()).body.data.block.height;
 
     // Set the chain's presets and height
     Managers.configManager.setFromPreset("testnet");
-    Managers.configManager.setHeight(1000000);
+    Managers.configManager.setHeight(height);
 
     // Step 1: Retrieve the incremental nonce of the sender wallet
     const senderWallet = await client.api("wallets").get("YOUR_SENDER_WALLET_ADDRESS");
@@ -159,7 +161,7 @@ const client = new Connection("https://tapi.solar.org/api");
 
     // Set the chain's presets and height
     Managers.configManager.setFromPreset("testnet");
-    Managers.configManager.setHeight(1000000);
+    Managers.configManager.setHeight(height);
 
     // Step 1: Retrieve the incremental nonce of the sender wallet
     const senderWallet = await client.api("wallets").get("YOUR_SENDER_WALLET_ADDRESS");
@@ -194,7 +196,7 @@ const client = new Connection("https://tapi.solar.org/api");
 
     // Set the chain's presets and height
     Managers.configManager.setFromPreset("testnet");
-    Managers.configManager.setHeight(1000000);
+    Managers.configManager.setHeight(height);
 
     // Step 1: Retrieve the incremental nonce of the sender wallet
     const senderWallet = await client.api("wallets").get("YOUR_SENDER_WALLET_ADDRESS");
@@ -233,7 +235,7 @@ const client = new Connection("https://tapi.solar.org/api");
 
     // Set the chain's presets and height
     Managers.configManager.setFromPreset("testnet");
-    Managers.configManager.setHeight(100000);
+    Managers.configManager.setHeight(height);
 
     // Step 1: Retrieve the incremental nonce of the sender wallet
     const senderWallet = await client.api("wallets").get("YOUR_SENDER_WALLET_ADDRESS");
@@ -268,7 +270,7 @@ const client = new Connection("https://tapi.solar.org/api");
 
     // Set the chain's presets and height
     Managers.configManager.setFromPreset("testnet");
-    Managers.configManager.setHeight(1000000);
+    Managers.configManager.setHeight(height);
 
     // Step 1: Retrieve the incremental nonce of the sender wallet
     const senderWallet = await client.api("wallets").get("YOUR_SENDER_WALLET_ADDRESS");

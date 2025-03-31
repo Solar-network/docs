@@ -1,8 +1,8 @@
 ---
-title: How to Send an SXP Transfer?
+title: Sending SXP
 ---
 
-# How to Send an SXP Transfer?
+# Sending SXP
 
 Transferring SXP from your wallet is the most common type of transaction. A transfer transaction can transfer funds to one or multiple addresses.
 

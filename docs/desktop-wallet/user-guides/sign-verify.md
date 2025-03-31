@@ -1,8 +1,8 @@
 ---
-title: How to Sign and Verify Messages?
+title: Signing and Verifying Messages
 ---
 
-# How to Sign and Verify Messages?
+# Signing and Verifying Messages
 
 The wallet allows you to create and sign a message that other users will be able to verify as authentically yours.
 
