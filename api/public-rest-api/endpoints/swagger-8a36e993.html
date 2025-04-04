@@ -6,7 +6,6 @@
   <title>Swagger UI</title>
   <link rel="stylesheet" type="text/css" href="../../../assets/stylesheets/swagger-ui.css" />
   <link rel="stylesheet" type="text/css" id="slate-css" media="none" href="../../../assets/stylesheets/swagger-ui-dark.css" />
-  
 </head>
 
 <body style="overflow:hidden;background: ;">
@@ -16,19 +15,18 @@
   <script>
     window.onload = function () {
       window.ui = SwaggerUIBundle({
-        dom_id: "#swagger-ui",
+        dom_id: '#swagger-ui',
         onComplete: onComplete,
         presets: [
           SwaggerUIBundle.presets.apis,
           SwaggerUIStandalonePreset
         ],
         
-        url: "https://api.solar.org/api.json",
+        url: 'https://api.solar.org/api.json',
         
         
         "oauth2RedirectUrl": new URL("../../../assets/swagger-ui/oauth2-redirect.html",window.location.href).href,
         
-        "validatorUrl": "https://validator.swagger.io/validator",
         
     "docExpansion": "list",
     "filter": false,
@@ -38,7 +36,6 @@
         "post"
     ],
     "validatorUrl": "https://validator.swagger.io/validator",
-    "extra_css": [],
     "syntaxHighlight.theme": "agate"
 
       })
@@ -60,7 +57,7 @@
     }
 
     const resize_ob = new ResizeObserver(function(entries) {
-      parent.update_swagger_ui_iframe_height("1074459a");
+      parent.update_swagger_ui_iframe_height("8a36e993");
     });
 
     // start observing for resizing
