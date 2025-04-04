@@ -44,6 +44,7 @@ theme:
   language: en
   features:
     - content.code.annotate
+    - content.tabs.link
     - header.autohide
     - navigation.expand
     - navigation.indexes
@@ -115,6 +116,8 @@ markdown_extensions:
       emoji_generator: !!python/name:materialx.emoji.to_svg
       emoji_index: !!python/name:materialx.emoji.twemoji
   - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
 
 # Page tree
 nav:
@@ -213,8 +216,8 @@ nav:
         - desktop-wallet/user-guides/vote.md
         - desktop-wallet/user-guides/register-resign-block-producer.md
         - desktop-wallet/user-guides/sign-verify.md
-        - desktop-wallet/support/troubleshooting.md
         - desktop-wallet/user-guides/transaction-fees.md
+        - desktop-wallet/support/troubleshooting.md
   - Brand:
     - brand/intro.md
   - Project:
